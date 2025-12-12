@@ -1,0 +1,212 @@
+[
+  {
+    "en": "Brynhands Mark",
+    "cn": "布琳翰德印记 木棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/BrynhandsMark.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Frostbreath",
+    "cn": "霜息 细柄钉锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/Frostbreath.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Trenchtimbre",
+    "cn": "战壕砥柱 钝钉木棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/Trenchtimbre.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sculpted Suffering",
+    "cn": "雕琢的苦难 战镐",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/SculptedSuffering.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Seeing Stars",
+    "cn": "迷星之锤 板锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/SeeingStars.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Nebuloch",
+    "cn": "尼布洛克 秽咒之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/Nebuloch.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mjölner",
+    "cn": "沉默之雷 劫难战棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/Mjolner.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Olrovasara",
+    "cn": "欧罗瓦萨拉 劫难战棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/Olrovasara.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wooden Club",
+    "cn": "木棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Smithing Hammer",
+    "cn": "锻铸之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Slim Mace",
+    "cn": "细柄钉锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spiked Club",
+    "cn": "钝钉木棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warpick",
+    "cn": "战镐",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plated Mace",
+    "cn": "板锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Brigand Mace",
+    "cn": "驱灵之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Construct Hammer",
+    "cn": "施工锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Morning Star",
+    "cn": "流星锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jade Club",
+    "cn": "翠玉战棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lumen Mace",
+    "cn": "流明之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Execratus Hammer",
+    "cn": "秽咒之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Torment Club",
+    "cn": "劫难战棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kalguuran Forgehammer",
+    "cn": "卡古兰锻造锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Calescent Hammer",
+    "cn": "升温之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flared Mace",
+    "cn": "耀焰之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Battle Pick",
+    "cn": "战镐",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Marching Mace",
+    "cn": "行军之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bandit Mace",
+    "cn": "强盗之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Structured Hammer",
+    "cn": "构造之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flanged Mace",
+    "cn": "钉头锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crown Mace",
+    "cn": "冠首之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Molten Hammer",
+    "cn": "熔火之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Strife Pick",
+    "cn": "纷争之镐",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fortified Hammer",
+    "cn": "强固之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Marauding Mace",
+    "cn": "劫掠之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Akoyan Club",
+    "cn": "阿科扬战棒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Basetypes/1HMace10.webp",
+    "type": "base_item"
+  }
+]
