@@ -1,0 +1,104 @@
+[
+  {
+    "en": "Ethereal Blade",
+    "cn": "虚空飞刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Dagger1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Glass Shank",
+    "cn": "玻璃利片",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crone Knife",
+    "cn": "巫妪小刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Simple Dagger",
+    "cn": "朴实匕首",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Skinning Knife",
+    "cn": "剥皮刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Moon Dagger",
+    "cn": "月刃匕首",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Engraved Knife",
+    "cn": "雕纹小刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Obsidian Dagger",
+    "cn": "黑曜石匕首",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bloodletting Dagger",
+    "cn": "放血匕首",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mail Breaker",
+    "cn": "拆信刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kris Knife",
+    "cn": "波刃小刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Parrying Dagger",
+    "cn": "格挡匕首",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Arcane Dirk",
+    "cn": "秘术短匕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cinquedea",
+    "cn": "五指剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Daggers/Basetypes/Dagger13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Silent Shiv",
+    "cn": "暗里藏刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/criticaldaggerint.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Coated Knife",
+    "cn": "涂毒锋刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/criticaldaggerint.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Backstabbing",
+    "cn": "偷袭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/criticaldaggerint.webp",
+    "type": "base_item"
+  }
+]

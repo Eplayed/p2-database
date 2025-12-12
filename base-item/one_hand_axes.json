@@ -1,0 +1,80 @@
+[
+  {
+    "en": "Dull Hatchet",
+    "cn": "钝锋手斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hook Axe",
+    "cn": "钩斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bearded Axe",
+    "cn": "钩刃斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Extended Cleaver",
+    "cn": "长柄战斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bandit Hatchet",
+    "cn": "盗匪手斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crescent Axe",
+    "cn": "月牙斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Carving Hatchet",
+    "cn": "刨肉手斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrificial Axe",
+    "cn": "奉献之斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Boarding Hatchet",
+    "cn": "跳帮手斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fury Cleaver",
+    "cn": "暴怒战斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Battle Axe",
+    "cn": "鏖战之斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Profane Cleaver",
+    "cn": "亵渎战斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dread Hatchet",
+    "cn": "恐惧手斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandAxes/Basetypes/1HAxe13.webp",
+    "type": "base_item"
+  }
+]

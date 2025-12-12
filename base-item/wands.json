@@ -1,0 +1,80 @@
+[
+  {
+    "en": "Withered Wand",
+    "cn": "凋零法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bone Wand",
+    "cn": "钙石法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Attuned Wand",
+    "cn": "调谐法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Siphoning Wand",
+    "cn": "虹吸法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Volatile Wand",
+    "cn": "易变法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Galvanic Wand",
+    "cn": "电流法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Acrid Wand",
+    "cn": "刻薄法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Offering Wand",
+    "cn": "供奉法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Frigid Wand",
+    "cn": "严寒法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Torture Wand",
+    "cn": "煎熬法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Critical Wand",
+    "cn": "批判法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Primordial Wand",
+    "cn": "始源法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dueling Wand",
+    "cn": "决斗法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Wands/Basetypes/Wand13.webp",
+    "type": "base_item"
+  }
+]

@@ -1,0 +1,1136 @@
+[
+  {
+    "en": "Blacksmiths Whetstone",
+    "cn": "磨刀石",
+    "desc": "提升战斗武器的品质",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyWeaponQuality.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Arcanists Etcher",
+    "cn": "奥术师的铭刻",
+    "desc": "提高法杖、长杖或短杖的品质",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyWeaponMagicQuality.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Scroll of Wisdom",
+    "cn": "知识卷轴",
+    "desc": "鉴定一件指定物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyIdentification.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Chaos Orb",
+    "cn": "混沌石",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其随机获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyRerollRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Chaos Orb",
+    "cn": "高级混沌石",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其随机获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyRerollRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Chaos Orb",
+    "cn": "完美混沌石",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其随机获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyRerollRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Armourers Scrap",
+    "cn": "护甲片",
+    "desc": "提升护甲的品质",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyArmourQuality.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Mirror of Kalandra",
+    "cn": "卡兰德的魔镜",
+    "desc": "复制一件指定物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyDuplicate.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Hinekoras Lock",
+    "cn": "辛格拉的发辫",
+    "desc": "允许物品预示对其使用的下一个通货物品的结果 任何对物品的修改会移除该预示能力",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/HinekorasLock.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Orb of Alchemy",
+    "cn": "点金石",
+    "desc": "将一件普通或魔法物品升级为具有 4 个词缀的稀有物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeToRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Orb of Chance",
+    "cn": "机会石",
+    "desc": "把一件普通物品升级为传奇物品，或者将其摧毁，不可预料结果",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeToUnique.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Orb of Transmutation",
+    "cn": "蜕变石",
+    "desc": "将一件普通物品升级为具有 1 个词缀的魔法物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeToMagic.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Orb of Transmutation",
+    "cn": "高级蜕变石",
+    "desc": "将一件普通物品升级为具有 1 个词缀的魔法物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeToMagic.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Orb of Transmutation",
+    "cn": "完美蜕变石",
+    "desc": "将一件普通物品升级为具有 1 个词缀的魔法物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeToMagic.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Exalted Orb",
+    "cn": "崇高石",
+    "desc": "用一个新随机词缀强化一件稀有物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddModToRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Exalted Orb",
+    "cn": "高级崇高石",
+    "desc": "用一个新随机词缀强化一件稀有物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddModToRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Exalted Orb",
+    "cn": "完美崇高石",
+    "desc": "用一个新随机词缀强化一件稀有物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddModToRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Regal Orb",
+    "cn": "富豪石",
+    "desc": "将一件魔法物品升级为稀有物品，增加 1 个词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeMagicToRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Regal Orb",
+    "cn": "高级富豪石",
+    "desc": "将一件魔法物品升级为稀有物品，增加 1 个词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeMagicToRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Regal Orb",
+    "cn": "完美富豪石",
+    "desc": "将一件魔法物品升级为稀有物品，增加 1 个词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeMagicToRare.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Orb of Augmentation",
+    "cn": "增幅石",
+    "desc": "用一个新随机词缀强化一件魔法物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddModToMagic.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Orb of Augmentation",
+    "cn": "高级增幅石",
+    "desc": "用一个新随机词缀强化一件魔法物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddModToMagic.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Orb of Augmentation",
+    "cn": "完美增幅石",
+    "desc": "用一个新随机词缀强化一件魔法物品",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddModToMagic.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Glassblowers Bauble",
+    "cn": "玻璃弹珠",
+    "desc": "提升药剂的品质",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyFlaskQuality.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Gemcutters Prism",
+    "cn": "宝石匠的棱镜",
+    "desc": "提升技能宝石的品质",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyGemQuality.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Jewellers Orb",
+    "cn": "低等工匠石",
+    "desc": "使一个技能宝石拥有 3 个辅助宝石插槽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyRerollSocketNumbers01.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Jewellers Orb",
+    "cn": "高等工匠石",
+    "desc": "使一个技能宝石拥有 4 个辅助宝石插槽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyRerollSocketNumbers02.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Jewellers Orb",
+    "cn": "完美工匠石",
+    "desc": "使一个技能宝石拥有 5 个辅助宝石插槽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyRerollSocketNumbers03.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Artificers Orb",
+    "cn": "巧匠石",
+    "desc": "为战斗武器，法杖，长杖或护甲添加一个符文插槽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddEquipmentSocket.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Divine Orb",
+    "cn": "神圣石",
+    "desc": "重置一件物品上的属性的数值",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyModValues.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Transmutation Shard",
+    "cn": "蜕变石碎片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeToMagicShard.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Chance Shard",
+    "cn": "机会石碎片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeToUniqueShard.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Albino Rhoa Feather",
+    "cn": "白化的羽毛",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyRhoaFeather.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Vaal Orb",
+    "cn": "瓦尔宝珠",
+    "desc": "不可预测地修改一件物品，并腐化它",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyVaal.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Orb of Annulment",
+    "cn": "剥离石",
+    "desc": "随机移除物品上的一条属性",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/AnnullOrb.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Fracturing Orb",
+    "cn": "破溃宝珠",
+    "desc": "分裂一件具有至少 4 个词缀的稀有物品的一个随机词缀，使其锁定。",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/FracturingOrb.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Regal Shard",
+    "cn": "富豪石碎片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyUpgradeMagicToRareShard.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Artificers Shard",
+    "cn": "巧匠石碎片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/CurrencyAddEquipmentSocketShard.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Diluted Liquid Ire",
+    "cn": "稀释的液化愤怒",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/DilutedDistilledIre.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Diluted Liquid Guilt",
+    "cn": "稀释的液化内疚",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/DilutedDistilledGuilt.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Diluted Liquid Greed",
+    "cn": "稀释的液化贪婪",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/DilutedDistilledGreed.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Liquid Paranoia",
+    "cn": "液化偏执",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/DistilledParanoia.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Liquid Envy",
+    "cn": "液化嫉妒",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/DistilledEnvy.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Liquid Disgust",
+    "cn": "液化憎恶",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/DistilledDisgust.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Liquid Despair",
+    "cn": "液化绝望",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/DistilledDespair.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Concentrated Liquid Fear",
+    "cn": "浓缩的液化恐惧",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/ConcentratedDistilledFear.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Concentrated Liquid Suffering",
+    "cn": "浓缩的液化痛苦",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/ConcentratedDistilledSuffering.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Concentrated Liquid Isolation",
+    "cn": "浓缩的液化孤独",
+    "desc": "可与其他液化情感合用，为项链灌注 核心天赋，或为引路石灌注惊悸迷雾层数",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/DistilledEmotions/ConcentratedDistilledIsolation.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Exotic Coinage",
+    "cn": "异域铸币",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Expedition/BarterRefreshCurrency.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Broken Circle Artifact",
+    "cn": "裂环神器",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Expedition/Rune16.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Black Scythe Artifact",
+    "cn": "黑镰神器",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Expedition/Rune6.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Order Artifact",
+    "cn": "教团神器",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Expedition/Rune13.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Sun Artifact",
+    "cn": "烈日神器",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Expedition/Rune17.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Gold",
+    "cn": "金币",
+    "desc": "可在商贩处消费。",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Ruthless/CoinPileTier2.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Gnawed Jawbone",
+    "cn": "啃噬颚骨",
+    "desc": "渎灵一个稀有武器或箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/GnawedJawbone.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Preserved Jawbone",
+    "cn": "遗存颚骨",
+    "desc": "渎灵一个稀有武器或箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/PreservedJawbone.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Ancient Jawbone",
+    "cn": "远古颚骨",
+    "desc": "渎灵一个稀有武器或箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/AncientJawbone.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Gnawed Rib",
+    "cn": "啃噬肋骨",
+    "desc": "渎灵一个稀有护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/GnawedRibs.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Preserved Rib",
+    "cn": "遗存肋骨",
+    "desc": "渎灵一个稀有护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/PreservedRibs.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Ancient Rib",
+    "cn": "远古肋骨",
+    "desc": "渎灵一个稀有护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/AncientRibs.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Gnawed Collarbone",
+    "cn": "啃噬锁骨",
+    "desc": "渎灵一个稀有项链、戒指或腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/GnawedClavicle.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Preserved Collarbone",
+    "cn": "遗存锁骨",
+    "desc": "渎灵一个稀有项链、戒指或腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/PreservedCalvicle.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Ancient Collarbone",
+    "cn": "远古锁骨",
+    "desc": "渎灵一个稀有项链、戒指或腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/AncientClavicle.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Preserved Cranium",
+    "cn": "遗存头骨",
+    "desc": "渎灵一个稀有珠宝",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/PreservedCranium.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Preserved Vertebrae",
+    "cn": "遗存椎骨",
+    "desc": "渎灵一个稀有引路石",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Abyss/PreservedSpine.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of the Body",
+    "cn": "次级身躯精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LifeEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of the Mind",
+    "cn": "次级心灵精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ManaEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Enhancement",
+    "cn": "次级强化精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/DefencesEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Abrasion",
+    "cn": "次级磨蚀精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/PhysicalEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Flames",
+    "cn": "次级烈焰精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/FireEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Ice",
+    "cn": "次级冰霜精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ColdEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Electricity",
+    "cn": "次级电光精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LightningEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Ruin",
+    "cn": "次级摧灭精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ChaosEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Battle",
+    "cn": "次级激战精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttackEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Sorcery",
+    "cn": "次级魔法精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CasterEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Haste",
+    "cn": "次级急速精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/SpeedEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of the Infinite",
+    "cn": "次级永恒精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of the Body",
+    "cn": "身躯精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LifeEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of the Mind",
+    "cn": "心灵精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ManaEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Enhancement",
+    "cn": "强化精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/DefencesEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Abrasion",
+    "cn": "磨蚀精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/PhysicalEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Flames",
+    "cn": "烈焰精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/FireEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Ice",
+    "cn": "冰霜精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ColdEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Electricity",
+    "cn": "电光精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LightningEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Ruin",
+    "cn": "摧灭精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ChaosEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Battle",
+    "cn": "激战精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttackEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Sorcery",
+    "cn": "魔法精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CasterEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Haste",
+    "cn": "急速精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/SpeedEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of the Infinite",
+    "cn": "永恒精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of the Body",
+    "cn": "强效身躯精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterLifeEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of the Mind",
+    "cn": "强效心灵精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterManaEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Enhancement",
+    "cn": "强效增强精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterDefencesEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Abrasion",
+    "cn": "强效磨蚀精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterPhysicalEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Flames",
+    "cn": "强效火焰精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterFireEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Ice",
+    "cn": "强效冰霜精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterColdEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Electricity",
+    "cn": "强效电光精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterLightningEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Ruin",
+    "cn": "强效摧灭精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterChaosEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Battle",
+    "cn": "强效激战精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAttackEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Sorcery",
+    "cn": "强效魔法精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterCasterEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Haste",
+    "cn": "强效急速精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterSpeedEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of the Infinite",
+    "cn": "强效永恒精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAttributeEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of the Body",
+    "cn": "完美身躯精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LifeEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of the Mind",
+    "cn": "完美心灵精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ManaEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Enhancement",
+    "cn": "完美强化精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/DefencesEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Abrasion",
+    "cn": "完美磨蚀精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/PhysicalEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Flames",
+    "cn": "完美烈焰精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/FireEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Ice",
+    "cn": "完美冰霜精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ColdEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Electricity",
+    "cn": "完美电光精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LightningEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Ruin",
+    "cn": "完美摧灭精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ChaosEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Battle",
+    "cn": "完美激战精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttackEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Sorcery",
+    "cn": "完美魔法精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CasterEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Haste",
+    "cn": "完美急速精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/SpeedEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of the Infinite",
+    "cn": "完美永恒精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AttributeEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Seeking",
+    "cn": "次级寻觅精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CriticalEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Seeking",
+    "cn": "寻觅精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CriticalEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Seeking",
+    "cn": "强效寻觅精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterCriticalEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Seeking",
+    "cn": "完美寻觅精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CriticalEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Hysteria",
+    "cn": "浮夸精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CorruptedEssenceHysteria.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Delirium",
+    "cn": "谵妄精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CorruptedEssenceDelirium.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Horror",
+    "cn": "极恐精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CorruptedEssenceHorror.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Insanity",
+    "cn": "错乱精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/CorruptedEssenceInsanity.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of the Abyss",
+    "cn": "深渊精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AbyssalEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Insulation",
+    "cn": "次级绝缘精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/FireResistanceEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Insulation",
+    "cn": "绝缘精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/FireResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Insulation",
+    "cn": "强效绝缘精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterFireResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Insulation",
+    "cn": "完美绝缘精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/FireResistanceEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Thawing",
+    "cn": "次级熔解精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ColdResistanceEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Thawing",
+    "cn": "熔解精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ColdResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Thawing",
+    "cn": "强效熔解精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterColdResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Thawing",
+    "cn": "完美熔解精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/ColdResistanceEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Grounding",
+    "cn": "次级接地精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LightningResistanceEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Grounding",
+    "cn": "接地精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LightningResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Grounding",
+    "cn": "强效接地精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterLightningResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Grounding",
+    "cn": "完美接地精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/LightningResistanceEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Alacrity",
+    "cn": "次级迅捷精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/SpeedCasterEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Alacrity",
+    "cn": "迅捷精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/SpeedCasterEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Alacrity",
+    "cn": "强效迅捷精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterSpeedCasterEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Alacrity",
+    "cn": "完美迅捷精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/SpeedCasterEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Opulence",
+    "cn": "次级丰裕精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/RarityResistanceEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Opulence",
+    "cn": "丰裕精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/RarityResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Opulence",
+    "cn": "强效丰裕精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterRarityResistanceEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Opulence",
+    "cn": "完美丰裕精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/RarityResistanceEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Lesser Essence of Command",
+    "cn": "次级命令精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AllyEssenceLesser.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Essence of Command",
+    "cn": "命令精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AllyEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Greater Essence of Command",
+    "cn": "强效命令精华",
+    "desc": "将一件魔法物品升级为稀有物品，必定增加一项词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/GreaterAllyEssence.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Perfect Essence of Command",
+    "cn": "完美命令精华",
+    "desc": "移除一个随机词缀，并强化一件稀有物品，使其必定获得一个新词缀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Essence/AllyEssencePerfect.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Breach Splinter",
+    "cn": "裂隙碎片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachstoneSplinter.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Simulacrum Splinter",
+    "cn": "梦魇拟像裂片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Maps/DeliriumSplinter.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Petition Splinter",
+    "cn": "请愿碎片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Ritual/NewRitualSplinter.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Runic Splinter",
+    "cn": "符文碎片",
+    "desc": "",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Expedition/ExpeditionSplinter.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Flesh Catalyst",
+    "cn": "身躯催化剂",
+    "desc": "给戒指或项链添加品质，强化生命类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystLife.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Neural Catalyst",
+    "cn": "神经催化剂",
+    "desc": "给戒指或项链添加品质，强化魔力类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystMana.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Carapace Catalyst",
+    "cn": "甲壳催化剂",
+    "desc": "给戒指或项链添加品质，强化防御类词缀 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystDefences.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Uul-Netols Catalyst",
+    "cn": "乌尔尼多催化剂",
+    "desc": "给戒指或项链添加品质，强化物理类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystPhysical.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Xophs Catalyst",
+    "cn": "索伏催化剂",
+    "desc": "给戒指或项链添加品质，强化火焰类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystFire.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Tuls Catalyst",
+    "cn": "托沃催化剂",
+    "desc": "给戒指或项链添加品质，强化冰霜类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystCold.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Eshs Catalyst",
+    "cn": "艾许催化剂",
+    "desc": "给戒指或项链添加品质，强化闪电类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystLightning.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Chayulas Catalyst",
+    "cn": "夏乌拉催化剂",
+    "desc": "给戒指或项链添加品质，强化混沌类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystChaos.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Reaver Catalyst",
+    "cn": "袭击催化剂",
+    "desc": "给戒指或项链添加品质，强化攻击类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystAttack.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Sibilant Catalyst",
+    "cn": "嘶语催化剂",
+    "desc": "给戒指或项链添加品质，强化施法类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystCaster.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Skittering Catalyst",
+    "cn": "飞掠催化剂",
+    "desc": "给戒指或项链添加品质，强化速度类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystSpeed.webp",
+    "type": "currency"
+  },
+  {
+    "en": "Adaptive Catalyst",
+    "cn": "应变催化剂",
+    "desc": "给戒指或项链添加品质，强化属性类词缀。 取代其它品质类型",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/Breach/BreachCatalystAttribute.webp",
+    "type": "currency"
+  }
+]
