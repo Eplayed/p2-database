@@ -1,0 +1,212 @@
+[
+  {
+    "en": "Widowhail",
+    "cn": "遗孀之雹 粗制弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/Widowhail.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Quill Rain",
+    "cn": "骤雨之弦 短弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/QuillRain.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Splinterheart",
+    "cn": "裂心之弦 反曲弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/Splinterheart.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Doomfletch",
+    "cn": "灭世 复合弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/Doomfletch.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Deaths Harp",
+    "cn": "冥使之琴 双弦弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/DeathsHarp.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Slivertongue",
+    "cn": "白银之舌 狂热弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/Slivertongue.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fairgraves Curse",
+    "cn": "费尔的诅咒 轰击弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/DealersHand.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lioneyes Glare",
+    "cn": "狮眼的战弓 重装强弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/LioneyesGlare.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Voltaxic Rift",
+    "cn": "魔暴之痕 狂热之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Uniques/VoltaxicRift.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crude Bow",
+    "cn": "粗制弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shortbow",
+    "cn": "短弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warden Bow",
+    "cn": "监守弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Recurve Bow",
+    "cn": "反曲弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Composite Bow",
+    "cn": "复合弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dualstring Bow",
+    "cn": "双弦弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cultist Bow",
+    "cn": "教徒弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Zealot Bow",
+    "cn": "狂热弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Artillery Bow",
+    "cn": "轰击弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tribal Bow",
+    "cn": "部族弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Greatbow",
+    "cn": "巨弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Double Limb Bow",
+    "cn": "双臂弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heavy Bow",
+    "cn": "重装强弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Snakewood Shortbow",
+    "cn": "蛇纹短弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Protector Bow",
+    "cn": "保护者之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rider Bow",
+    "cn": "骑射之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Twin Bow",
+    "cn": "双生之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Adherent Bow",
+    "cn": "联排之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Militant Bow",
+    "cn": "军用战弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ironwood Shortbow",
+    "cn": "铁木短弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cavalry Bow",
+    "cn": "骑兵之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Guardian Bow",
+    "cn": "守护者之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gemini Bow",
+    "cn": "双子之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fanatic Bow",
+    "cn": "狂热之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warmonger Bow",
+    "cn": "寻战之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Obliterator Bow",
+    "cn": "毁灭者之弓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Bows/Basetypes/Bow09.webp",
+    "type": "base_item"
+  }
+]

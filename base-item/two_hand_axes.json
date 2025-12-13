@@ -1,0 +1,80 @@
+[
+  {
+    "en": "Splitting Greataxe",
+    "cn": "裂刃大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Light Halberd",
+    "cn": "轻装戟斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Executioner Greataxe",
+    "cn": "惩罚者大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Arched Greataxe",
+    "cn": "弧刃大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Glaive",
+    "cn": "典雅战刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Savage Greataxe",
+    "cn": "狂放大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rending Halberd",
+    "cn": "裂肉戟斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jagged Greataxe",
+    "cn": "锯齿大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Reaver Glaive",
+    "cn": "掠夺者战刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ember Greataxe",
+    "cn": "飞烬大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ceremonial Halberd",
+    "cn": "祭仪长戟",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Monument Greataxe",
+    "cn": "丰碑大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vile Greataxe",
+    "cn": "厄难大斧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandAxes/Basetypes/2HAxe13.webp",
+    "type": "base_item"
+  }
+]
