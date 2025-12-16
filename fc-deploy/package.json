@@ -1,0 +1,9 @@
+{
+  "name": "poe2-crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ali-oss": "^6.18.1",
+    "puppeteer": "^21.5.0"
+  }
+}

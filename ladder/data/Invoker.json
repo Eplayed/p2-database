@@ -1,0 +1,802 @@
+[
+  {
+    "rank": 1,
+    "name": "穿越化腾",
+    "level": 97,
+    "class": "Invoker",
+    "account": "l767965778-4770",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/l767965778-4770/%E7%A9%BF%E8%B6%8A%E5%8C%96%E8%85%BE"
+  },
+  {
+    "rank": 2,
+    "name": "DerekTwistingSparking",
+    "level": 96,
+    "class": "Invoker",
+    "account": "Derekao-2785",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Derekao-2785/DerekTwistingSparking"
+  },
+  {
+    "rank": 3,
+    "name": "Хочется_в_попочку",
+    "level": 96,
+    "class": "Invoker",
+    "account": "MegaS_Path-7793",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/MegaS_Path-7793/%D0%A5%D0%BE%D1%87%D0%B5%D1%82%D1%81%D1%8F_%D0%B2_%D0%BF%D0%BE%D0%BF%D0%BE%D1%87%D0%BA%D1%83"
+  },
+  {
+    "rank": 4,
+    "name": "我真不會閃打",
+    "level": 96,
+    "class": "Invoker",
+    "account": "1145141919810-2018",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/1145141919810-2018/%E6%88%91%E7%9C%9F%E4%B8%8D%E6%9C%83%E9%96%83%E6%89%93"
+  },
+  {
+    "rank": 5,
+    "name": "小賊快跑",
+    "level": 95,
+    "class": "Invoker",
+    "account": "K84080258-2262",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/K84080258-2262/%E5%B0%8F%E8%B3%8A%E5%BF%AB%E8%B7%91"
+  },
+  {
+    "rank": 6,
+    "name": "dorttohwoof",
+    "level": 95,
+    "class": "Invoker",
+    "account": "socksboi-7404",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/socksboi-7404/dorttohwoof"
+  },
+  {
+    "rank": 7,
+    "name": "Extra_Evil",
+    "level": 95,
+    "class": "Invoker",
+    "account": "GIGO228-2946",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/GIGO228-2946/Extra_Evil"
+  },
+  {
+    "rank": 8,
+    "name": "烟波辞",
+    "level": 95,
+    "class": "Invoker",
+    "account": "Seven7-7973",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Seven7-7973/%E7%83%9F%E6%B3%A2%E8%BE%9E"
+  },
+  {
+    "rank": 9,
+    "name": "榛果好吃",
+    "level": 95,
+    "class": "Invoker",
+    "account": "a276513011-3401",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/a276513011-3401/%E6%A6%9B%E6%9E%9C%E5%A5%BD%E5%90%83"
+  },
+  {
+    "rank": 10,
+    "name": "Eroquezz",
+    "level": 95,
+    "class": "Invoker",
+    "account": "yahleb-7274",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/yahleb-7274/Eroquezz"
+  },
+  {
+    "rank": 11,
+    "name": "tyrantsdie",
+    "level": 95,
+    "class": "Invoker",
+    "account": "tyrantheart-3254",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/tyrantheart-3254/tyrantsdie"
+  },
+  {
+    "rank": 12,
+    "name": "小柠檬没有坏心眼",
+    "level": 95,
+    "class": "Invoker",
+    "account": "alemon0123-6257",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/alemon0123-6257/%E5%B0%8F%E6%9F%A0%E6%AA%AC%E6%B2%A1%E6%9C%89%E5%9D%8F%E5%BF%83%E7%9C%BC"
+  },
+  {
+    "rank": 13,
+    "name": "HaveyouseenmycrownAwooo",
+    "level": 95,
+    "class": "Invoker",
+    "account": "Amusingz-6605",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Amusingz-6605/HaveyouseenmycrownAwooo"
+  },
+  {
+    "rank": 14,
+    "name": "NikoAP",
+    "level": 95,
+    "class": "Invoker",
+    "account": "Niko-4571",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Niko-4571/NikoAP"
+  },
+  {
+    "rank": 15,
+    "name": "anhhungiuuunuocc",
+    "level": 95,
+    "class": "Invoker",
+    "account": "ruabach9-3809",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/ruabach9-3809/anhhungiuuunuocc"
+  },
+  {
+    "rank": 16,
+    "name": "MELEEBASEDRANGEDCRINGE",
+    "level": 94,
+    "class": "Invoker",
+    "account": "RANGERZX-7638",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/RANGERZX-7638/MELEEBASEDRANGEDCRINGE"
+  },
+  {
+    "rank": 17,
+    "name": "XHCY",
+    "level": 94,
+    "class": "Invoker",
+    "account": "fpgzctks-4885",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/fpgzctks-4885/XHCY"
+  },
+  {
+    "rank": 18,
+    "name": "Alohaatwtvv",
+    "level": 94,
+    "class": "Invoker",
+    "account": "ll566847-3765",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/ll566847-3765/Alohaatwtvv"
+  },
+  {
+    "rank": 19,
+    "name": "iekkyiee",
+    "level": 94,
+    "class": "Invoker",
+    "account": "iekky-8909",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/iekky-8909/iekkyiee"
+  },
+  {
+    "rank": 20,
+    "name": "Sasukecun",
+    "level": 94,
+    "class": "Invoker",
+    "account": "Topichsova-3122",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Topichsova-3122/Sasukecun"
+  },
+  {
+    "rank": 21,
+    "name": "imkappaaa",
+    "level": 94,
+    "class": "Invoker",
+    "account": "imkappa-5804",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/imkappa-5804/imkappaaa"
+  },
+  {
+    "rank": 22,
+    "name": "Стартуем_без_рук",
+    "level": 94,
+    "class": "Invoker",
+    "account": "alexez54-7846",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/alexez54-7846/%D0%A1%D1%82%D0%B0%D1%80%D1%82%D1%83%D0%B5%D0%BC_%D0%B1%D0%B5%D0%B7_%D1%80%D1%83%D0%BA"
+  },
+  {
+    "rank": 23,
+    "name": "nanchnegcc",
+    "level": 94,
+    "class": "Invoker",
+    "account": "1259099169-3886",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/1259099169-3886/nanchnegcc"
+  },
+  {
+    "rank": 24,
+    "name": "大路德魯伊武僧",
+    "level": 94,
+    "class": "Invoker",
+    "account": "ChuiBig-6462",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/ChuiBig-6462/%E5%A4%A7%E8%B7%AF%E5%BE%B7%E9%AD%AF%E4%BC%8A%E6%AD%A6%E5%83%A7"
+  },
+  {
+    "rank": 25,
+    "name": "JDDDDDDJ",
+    "level": 94,
+    "class": "Invoker",
+    "account": "156279751-5692",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/156279751-5692/JDDDDDDJ"
+  },
+  {
+    "rank": 26,
+    "name": "iNotShadow",
+    "level": 94,
+    "class": "Invoker",
+    "account": "Shaaadow-0826",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Shaaadow-0826/iNotShadow"
+  },
+  {
+    "rank": 27,
+    "name": "FEAMOOONK",
+    "level": 94,
+    "class": "Invoker",
+    "account": "FeelThatBuzz-7152",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/FeelThatBuzz-7152/FEAMOOONK"
+  },
+  {
+    "rank": 28,
+    "name": "小手暖暖的",
+    "level": 94,
+    "class": "Invoker",
+    "account": "yuanshou1030-1886",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/yuanshou1030-1886/%E5%B0%8F%E6%89%8B%E6%9A%96%E6%9A%96%E7%9A%84"
+  },
+  {
+    "rank": 29,
+    "name": "閃電旋丰批",
+    "level": 93,
+    "class": "Invoker",
+    "account": "lisen-8051",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/lisen-8051/%E9%96%83%E9%9B%BB%E6%97%8B%E4%B8%B0%E6%89%B9"
+  },
+  {
+    "rank": 30,
+    "name": "betoesjmp",
+    "level": 93,
+    "class": "Invoker",
+    "account": "kidthinh1-2697",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/kidthinh1-2697/betoesjmp"
+  },
+  {
+    "rank": 31,
+    "name": "织田信长",
+    "level": 93,
+    "class": "Invoker",
+    "account": "02lv1-8679",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/02lv1-8679/%E7%BB%87%E7%94%B0%E4%BF%A1%E9%95%BF"
+  },
+  {
+    "rank": 32,
+    "name": "澤日生",
+    "level": 93,
+    "class": "Invoker",
+    "account": "abadjane-0223",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/abadjane-0223/%E6%BE%A4%E6%97%A5%E7%94%9F"
+  },
+  {
+    "rank": 33,
+    "name": "VAAL_EXECUTOR",
+    "level": 93,
+    "class": "Invoker",
+    "account": "akinoh-7927",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/akinoh-7927/VAAL_EXECUTOR"
+  },
+  {
+    "rank": 34,
+    "name": "Scathachg",
+    "level": 93,
+    "class": "Invoker",
+    "account": "1732925916-9031",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/1732925916-9031/Scathachg"
+  },
+  {
+    "rank": 35,
+    "name": "乌龙院第一高手",
+    "level": 93,
+    "class": "Invoker",
+    "account": "故事的小黄瓜-6600",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/%E6%95%85%E4%BA%8B%E7%9A%84%E5%B0%8F%E9%BB%84%E7%93%9C-6600/%E4%B9%8C%E9%BE%99%E9%99%A2%E7%AC%AC%E4%B8%80%E9%AB%98%E6%89%8B"
+  },
+  {
+    "rank": 36,
+    "name": "GZ_FATEOFTHEVAAL",
+    "level": 93,
+    "class": "Invoker",
+    "account": "cachualnk-5864",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/cachualnk-5864/GZ_FATEOFTHEVAAL"
+  },
+  {
+    "rank": 37,
+    "name": "Cleytinoo",
+    "level": 93,
+    "class": "Invoker",
+    "account": "cleytinho-6540",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/cleytinho-6540/Cleytinoo"
+  },
+  {
+    "rank": 38,
+    "name": "LittleJohnnyFrostbite",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Moggylaed-7612",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Moggylaed-7612/LittleJohnnyFrostbite"
+  },
+  {
+    "rank": 39,
+    "name": "RavenspireMonkman",
+    "level": 93,
+    "class": "Invoker",
+    "account": "LordRavenspire-5201",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/LordRavenspire-5201/RavenspireMonkman"
+  },
+  {
+    "rank": 40,
+    "name": "MercuryRemember",
+    "level": 93,
+    "class": "Invoker",
+    "account": "mercuryamber-9272",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/mercuryamber-9272/MercuryRemember"
+  },
+  {
+    "rank": 41,
+    "name": "Hzxlixiao",
+    "level": 93,
+    "class": "Invoker",
+    "account": "小小金-5851",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/%E5%B0%8F%E5%B0%8F%E9%87%91-5851/Hzxlixiao"
+  },
+  {
+    "rank": 42,
+    "name": "我秃子不配变身嘛",
+    "level": 93,
+    "class": "Invoker",
+    "account": "w1664763017-6245",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/w1664763017-6245/%E6%88%91%E7%A7%83%E5%AD%90%E4%B8%8D%E9%85%8D%E5%8F%98%E8%BA%AB%E5%98%9B"
+  },
+  {
+    "rank": 43,
+    "name": "絲瓜粉牛牛",
+    "level": 93,
+    "class": "Invoker",
+    "account": "丝瓜粉牛牛-2626",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/%E4%B8%9D%E7%93%9C%E7%B2%89%E7%89%9B%E7%89%9B-2626/%E7%B5%B2%E7%93%9C%E7%B2%89%E7%89%9B%E7%89%9B"
+  },
+  {
+    "rank": 44,
+    "name": "Reapmonkuwu",
+    "level": 93,
+    "class": "Invoker",
+    "account": "LShipley-6030",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/LShipley-6030/Reapmonkuwu"
+  },
+  {
+    "rank": 45,
+    "name": "SolsparkarOfRitual",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Rimalia-1369",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Rimalia-1369/SolsparkarOfRitual"
+  },
+  {
+    "rank": 46,
+    "name": "长江第一拖拉机",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Ameenorth-5324",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Ameenorth-5324/%E9%95%BF%E6%B1%9F%E7%AC%AC%E4%B8%80%E6%8B%96%E6%8B%89%E6%9C%BA"
+  },
+  {
+    "rank": 47,
+    "name": "罗卜丶青菜",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Lqingcai-4839",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Lqingcai-4839/%E7%BD%97%E5%8D%9C%E4%B8%B6%E9%9D%92%E8%8F%9C"
+  },
+  {
+    "rank": 48,
+    "name": "TennoHocus",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Hocus_on_sync-2142",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Hocus_on_sync-2142/TennoHocus"
+  },
+  {
+    "rank": 49,
+    "name": "BigBahonkasFan",
+    "level": 93,
+    "class": "Invoker",
+    "account": "0KYPbEP0-5377",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/0KYPbEP0-5377/BigBahonkasFan"
+  },
+  {
+    "rank": 50,
+    "name": "amesianyah",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Luhbus-0206",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Luhbus-0206/amesianyah"
+  },
+  {
+    "rank": 51,
+    "name": "aduczy",
+    "level": 93,
+    "class": "Invoker",
+    "account": "czydu-0487",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/czydu-0487/aduczy"
+  },
+  {
+    "rank": 52,
+    "name": "AcolyteXhz",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Drakness391-4940",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Drakness391-4940/AcolyteXhz"
+  },
+  {
+    "rank": 53,
+    "name": "帽帽猫_",
+    "level": 93,
+    "class": "Invoker",
+    "account": "1225817378-6528",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/1225817378-6528/%E5%B8%BD%E5%B8%BD%E7%8C%AB_"
+  },
+  {
+    "rank": 54,
+    "name": "IronShunFei",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Nullness-0390",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Nullness-0390/IronShunFei"
+  },
+  {
+    "rank": 55,
+    "name": "StillStaff",
+    "level": 93,
+    "class": "Invoker",
+    "account": "loggedbackin-0239",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/loggedbackin-0239/StillStaff"
+  },
+  {
+    "rank": 56,
+    "name": "Son_of_sobaka",
+    "level": 93,
+    "class": "Invoker",
+    "account": "TreDar43-4213",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/TreDar43-4213/Son_of_sobaka"
+  },
+  {
+    "rank": 57,
+    "name": "四斤橘",
+    "level": 93,
+    "class": "Invoker",
+    "account": "lmtmhlx-1415",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/lmtmhlx-1415/%E5%9B%9B%E6%96%A4%E6%A9%98"
+  },
+  {
+    "rank": 58,
+    "name": "Soragiii",
+    "level": 93,
+    "class": "Invoker",
+    "account": "castzin-1005",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/castzin-1005/Soragiii"
+  },
+  {
+    "rank": 59,
+    "name": "枝头薄雪尚存",
+    "level": 93,
+    "class": "Invoker",
+    "account": "a811348713-4793",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/a811348713-4793/%E6%9E%9D%E5%A4%B4%E8%96%84%E9%9B%AA%E5%B0%9A%E5%AD%98"
+  },
+  {
+    "rank": 60,
+    "name": "CloveMonk",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Clovelifec-7506",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Clovelifec-7506/CloveMonk"
+  },
+  {
+    "rank": 61,
+    "name": "发如雪唉",
+    "level": 93,
+    "class": "Invoker",
+    "account": "hero0304-1000",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/hero0304-1000/%E5%8F%91%E5%A6%82%E9%9B%AA%E5%94%89"
+  },
+  {
+    "rank": 62,
+    "name": "VENOMNEEDSUCK",
+    "level": 93,
+    "class": "Invoker",
+    "account": "retrogram-9326",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/retrogram-9326/VENOMNEEDSUCK"
+  },
+  {
+    "rank": 63,
+    "name": "rkklpo",
+    "level": 93,
+    "class": "Invoker",
+    "account": "chubaka-4875",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/chubaka-4875/rkklpo"
+  },
+  {
+    "rank": 64,
+    "name": "玩德鲁伊会毁了你整个赛季",
+    "level": 93,
+    "class": "Invoker",
+    "account": "GRSABBATH-6899",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/GRSABBATH-6899/%E7%8E%A9%E5%BE%B7%E9%B2%81%E4%BC%8A%E4%BC%9A%E6%AF%81%E4%BA%86%E4%BD%A0%E6%95%B4%E4%B8%AA%E8%B5%9B%E5%AD%A3"
+  },
+  {
+    "rank": 65,
+    "name": "LOD_RequiumInvoker",
+    "level": 93,
+    "class": "Invoker",
+    "account": "DarkGathering-1508",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/DarkGathering-1508/LOD_RequiumInvoker"
+  },
+  {
+    "rank": 66,
+    "name": "别烦我了",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Showmaker-9120",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Showmaker-9120/%E5%88%AB%E7%83%A6%E6%88%91%E4%BA%86"
+  },
+  {
+    "rank": 67,
+    "name": "FatOfTheVaal",
+    "level": 93,
+    "class": "Invoker",
+    "account": "iamTrashMan420-1282",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/iamTrashMan420-1282/FatOfTheVaal"
+  },
+  {
+    "rank": 68,
+    "name": "Nogard___",
+    "level": 93,
+    "class": "Invoker",
+    "account": "sincrownN-6169",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/sincrownN-6169/Nogard___"
+  },
+  {
+    "rank": 69,
+    "name": "Milkybeekybk",
+    "level": 93,
+    "class": "Invoker",
+    "account": "Josh_King-4356",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Josh_King-4356/Milkybeekybk"
+  },
+  {
+    "rank": 70,
+    "name": "KangFateVaal",
+    "level": 93,
+    "class": "Invoker",
+    "account": "kanghellen-3280",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/kanghellen-3280/KangFateVaal"
+  },
+  {
+    "rank": 71,
+    "name": "FallingwithFamily",
+    "level": 92,
+    "class": "Invoker",
+    "account": "FaeFairy-4540",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/FaeFairy-4540/FallingwithFamily"
+  },
+  {
+    "rank": 72,
+    "name": "Rogosmonkas",
+    "level": 92,
+    "class": "Invoker",
+    "account": "rooogos-2991",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/rooogos-2991/Rogosmonkas"
+  },
+  {
+    "rank": 73,
+    "name": "Muuluulu",
+    "level": 92,
+    "class": "Invoker",
+    "account": "muulu66-7464",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/muulu66-7464/Muuluulu"
+  },
+  {
+    "rank": 74,
+    "name": "FlickDaBell",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Korbyn21-9553",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Korbyn21-9553/FlickDaBell"
+  },
+  {
+    "rank": 75,
+    "name": "Glorpesst",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Xalan45-1249",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Xalan45-1249/Glorpesst"
+  },
+  {
+    "rank": 76,
+    "name": "DivinityFlickerr",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Divinity13-7197",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Divinity13-7197/DivinityFlickerr"
+  },
+  {
+    "rank": 77,
+    "name": "Monkuchihno",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Nevos818-6433",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Nevos818-6433/Monkuchihno"
+  },
+  {
+    "rank": 78,
+    "name": "PhrawstMonklemore",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Phrawstl-4954",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Phrawstl-4954/PhrawstMonklemore"
+  },
+  {
+    "rank": 79,
+    "name": "TailorSte",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Tailor-9604",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Tailor-9604/TailorSte"
+  },
+  {
+    "rank": 80,
+    "name": "貧僧法號買茶",
+    "level": 92,
+    "class": "Invoker",
+    "account": "mxy331-9589",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/mxy331-9589/%E8%B2%A7%E5%83%A7%E6%B3%95%E8%99%9F%E8%B2%B7%E8%8C%B6"
+  },
+  {
+    "rank": 81,
+    "name": "YouZIiiIX",
+    "level": 92,
+    "class": "Invoker",
+    "account": "YouZi-9523",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/YouZi-9523/YouZIiiIX"
+  },
+  {
+    "rank": 82,
+    "name": "AshGLG",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Ash-2312",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Ash-2312/AshGLG"
+  },
+  {
+    "rank": 83,
+    "name": "剑气长四世",
+    "level": 92,
+    "class": "Invoker",
+    "account": "JINMOJIN-9386",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/JINMOJIN-9386/%E5%89%91%E6%B0%94%E9%95%BF%E5%9B%9B%E4%B8%96"
+  },
+  {
+    "rank": 84,
+    "name": "Vagdus",
+    "level": 92,
+    "class": "Invoker",
+    "account": "WhyMOMGOSKY-1118",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/WhyMOMGOSKY-1118/Vagdus"
+  },
+  {
+    "rank": 85,
+    "name": "狼之僧",
+    "level": 92,
+    "class": "Invoker",
+    "account": "dhyang-4730",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/dhyang-4730/%E7%8B%BC%E4%B9%8B%E5%83%A7"
+  },
+  {
+    "rank": 86,
+    "name": "FLACPP",
+    "level": 92,
+    "class": "Invoker",
+    "account": "별라임-3738",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/%EB%B3%84%EB%9D%BC%EC%9E%84-3738/FLACPP"
+  },
+  {
+    "rank": 87,
+    "name": "FFFFFFKL",
+    "level": 92,
+    "class": "Invoker",
+    "account": "klfz-7690",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/klfz-7690/FFFFFFKL"
+  },
+  {
+    "rank": 88,
+    "name": "spearinvoc_froggy",
+    "level": 92,
+    "class": "Invoker",
+    "account": "LLLulu22-1281",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/LLLulu22-1281/spearinvoc_froggy"
+  },
+  {
+    "rank": 89,
+    "name": "HJRRR",
+    "level": 92,
+    "class": "Invoker",
+    "account": "18595800704-2920",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/18595800704-2920/HJRRR"
+  },
+  {
+    "rank": 90,
+    "name": "MIpMApp",
+    "level": 92,
+    "class": "Invoker",
+    "account": "BANЕK-5896",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/BAN%D0%95K-5896/MIpMApp"
+  },
+  {
+    "rank": 91,
+    "name": "猴王陈维维",
+    "level": 92,
+    "class": "Invoker",
+    "account": "break1-7876",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/break1-7876/%E7%8C%B4%E7%8E%8B%E9%99%88%E7%BB%B4%E7%BB%B4"
+  },
+  {
+    "rank": 92,
+    "name": "Rawbonk",
+    "level": 92,
+    "class": "Invoker",
+    "account": "xxcristixx24-2372",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/xxcristixx24-2372/Rawbonk"
+  },
+  {
+    "rank": 93,
+    "name": "Monksixsixsixx",
+    "level": 92,
+    "class": "Invoker",
+    "account": "donghg123-3636",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/donghg123-3636/Monksixsixsixx"
+  },
+  {
+    "rank": 94,
+    "name": "MelonwithChiip",
+    "level": 92,
+    "class": "Invoker",
+    "account": "LuckyMelon-3021",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/LuckyMelon-3021/MelonwithChiip"
+  },
+  {
+    "rank": 95,
+    "name": "HDSWSA",
+    "level": 92,
+    "class": "Invoker",
+    "account": "515774687-9578",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/515774687-9578/HDSWSA"
+  },
+  {
+    "rank": 96,
+    "name": "ПедроПиксель",
+    "level": 92,
+    "class": "Invoker",
+    "account": "yegorah-5357",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/yegorah-5357/%D0%9F%D0%B5%D0%B4%D1%80%D0%BE%D0%9F%D0%B8%D0%BA%D1%81%D0%B5%D0%BB%D1%8C"
+  },
+  {
+    "rank": 97,
+    "name": "TwoHandGovnoShredder",
+    "level": 92,
+    "class": "Invoker",
+    "account": "TappingMan-2007",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/TappingMan-2007/TwoHandGovnoShredder"
+  },
+  {
+    "rank": 98,
+    "name": "GrowlsThenLicksYourToes",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Bigtoughman-4493",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Bigtoughman-4493/GrowlsThenLicksYourToes"
+  },
+  {
+    "rank": 99,
+    "name": "InnerPeaceXX",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Moming520110-5071",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Moming520110-5071/InnerPeaceXX"
+  },
+  {
+    "rank": 100,
+    "name": "DupianEryczek",
+    "level": 92,
+    "class": "Invoker",
+    "account": "Dupian-0894",
+    "linkUrl": "https://poe.ninja/poe2/builds/vaal/character/Dupian-0894/DupianEryczek"
+  }
+]

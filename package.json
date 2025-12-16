@@ -1,0 +1,17 @@
+{
+  "name": "p2-database",
+  "version": "1.0.0",
+  "main": "merge_data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "https-proxy-agent": "^7.0.6",
+    "protobufjs": "^7.5.4",
+    "puppeteer": "^24.33.0"
+  }
+}
