@@ -1,0 +1,22 @@
+
+node_modules
+.DS_Store
+dist
+.npmrc
+.cache
+package-lock.json
+
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
