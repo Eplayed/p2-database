@@ -20,3 +20,5 @@ bin-release/
 *.air
 *.ipa
 *.apk
+
+oss-config.json

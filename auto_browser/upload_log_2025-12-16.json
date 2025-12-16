@@ -1,0 +1,18 @@
+{
+  "uploadTime": "2025-12-16T08:40:49.442Z",
+  "totalFiles": 1,
+  "successCount": 1,
+  "failCount": 0,
+  "results": [
+    {
+      "file": "all_ladders.json",
+      "remote": "poe2-ladders/all_ladders.json",
+      "result": {
+        "success": true,
+        "url": "https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/poe2-ladders/all_ladders.json",
+        "size": 82305,
+        "md5": "48f15e050f87e80f1a27069615aa5be3"
+      }
+    }
+  ]
+}
