@@ -141,14 +141,27 @@ async function main(forceRefresh = false) {
         // 2. 获取梯子数据
         log('\n🔍 开始获取梯子数据...', 'blue');
         
-        // 优先使用auto_ladder.js，如果没有则使用get_all_ladders.js
         const hasAutoLadder = checkFile('auto_ladder.js', '自动梯子脚本', true);
+        const hasFullCrawler = checkFile('auto_full_crawler.js', '完整爬虫脚本', true);
         
-        if (forceRefresh || (hasAutoLadder && !checkFile('../all_ladders.json', '项目根目录的合并数据文件'))) {
-            if (forceRefresh) {
-                log('🔄 强制刷新：重新获取梯子数据...', 'yellow');
-            }
+        if (forceRefresh) {
+            log('🔄 强制刷新：重新获取梯子数据...', 'yellow');
+        }
+        
+        // 决定使用哪种抓取方式
+        if (hasFullCrawler && (forceRefresh || !checkFile('data/all_data_full.json', '完整数据文件', true))) {
+            // 使用完整爬虫（抓取每个玩家的详细信息）
+            log('📊 使用完整爬虫抓取详细数据（装备/技能/天赋图）...', 'cyan');
+            await runCommand('node auto_full_crawler.js', '获取所有职业完整数据（auto_full_crawler.js）', false);
+            
+            // 将完整数据转换为标准格式
+            await convertFullDataToStandard();
+            
+        } else if (hasAutoLadder && (forceRefresh || !checkFile('../all_ladders.json', '项目根目录的合并数据文件'))) {
+            // 使用快速爬虫（只抓取Top 20玩家）
+            log('📋 使用快速爬虫抓取Top 20数据...', 'cyan');
             await runCommand('node auto_ladder.js', '获取所有职业梯子数据（auto_ladder.js）', false);
+            
         } else if (!hasAutoLadder) {
             await runCommand('node get_all_ladders.js', '获取所有职业梯子数据（get_all_ladders.js）');
         } else if (!forceRefresh) {
@@ -157,7 +170,8 @@ async function main(forceRefresh = false) {
         
         // 检查是否成功生成all_ladders.json
         const hasLadderData = checkFile('../all_ladders.json', '项目根目录的合并数据文件') || 
-                             checkFile('all_ladders.json', 'auto_browser目录的合并数据文件', true);
+                             checkFile('all_ladders.json', 'auto_browser目录的合并数据文件', true) ||
+                             checkFile('data/all_data_full.json', '完整数据文件', true);
         
         if (!hasLadderData) {
             log('❌ 数据获取失败，请检查错误信息', 'red');
@@ -184,6 +198,55 @@ async function main(forceRefresh = false) {
     }
 }
 
+// 将完整数据转换为标准格式
+async function convertFullDataToStandard() {
+    log('\n🔄 转换完整数据为标准格式...', 'blue');
+    
+    try {
+        const fullDataPath = path.join(__dirname, 'data', 'all_data_full.json');
+        if (fs.existsSync(fullDataPath)) {
+            const fullData = JSON.parse(fs.readFileSync(fullDataPath, 'utf8'));
+            
+            // 转换为标准格式
+            const standardLadders = {};
+            
+            if (fullData.ladders) {
+                Object.entries(fullData.ladders).forEach(([className, players]) => {
+                    standardLadders[className] = players.map(player => ({
+                        rank: player.rank || 1,
+                        name: player.name || '',
+                        level: player.info?.level || 1,
+                        class: className,
+                        account: player.info?.account || '',
+                        linkUrl: player.link || ''
+                    }));
+                });
+            }
+            
+            // 生成标准格式的all_ladders.json
+            const standardData = {
+                updateTime: fullData.updateTime || new Date().toISOString(),
+                totalClasses: Object.keys(standardLadders).length,
+                totalPlayers: Object.values(standardLadders).reduce((sum, data) => sum + data.length, 0),
+                classes: fullData.classes || [],
+                ladders: standardLadders
+            };
+            
+            const outputPath = path.join(__dirname, 'all_ladders.json');
+            fs.writeFileSync(outputPath, JSON.stringify(standardData, null, 2));
+            
+            log(`✅ 数据转换完成: ${Object.keys(standardLadders).length} 个职业`, 'green');
+            log(`   输出文件: all_ladders.json`, 'cyan');
+            
+        } else {
+            log('❌ 未找到完整数据文件', 'red');
+        }
+        
+    } catch (error) {
+        log(`❌ 数据转换失败: ${error.message}`, 'red');
+    }
+}
+
 // 生成执行报告
 function generateReport() {
     const timestamp = new Date().toISOString();
@@ -203,6 +266,8 @@ function generateReport() {
     const filesToCheck = [
         { path: 'all_ladders.json', desc: '项目根目录的合并数据文件' },
         { path: 'auto_browser/all_ladders.json', desc: 'auto_browser目录的合并数据文件' },
+        { path: 'auto_browser/data/all_data_full.json', desc: '完整数据文件' },
+        { path: 'auto_browser/data/classes.json', desc: '爬虫职业列表' },
         { path: 'ladder/data/classes.json', desc: 'ladder职业列表' },
         { path: 'auto_browser/class_list.json', desc: 'auto_browser职业列表' },
         { path: 'auto_browser/oss-config.json', desc: 'OSS配置' }
@@ -228,7 +293,7 @@ function generateReport() {
         } else {
             report.files[file.desc] = { exists: false };
             // 只有核心文件缺失才标记为失败
-            if (file.desc.includes('合并数据文件') || file.desc.includes('OSS配置')) {
+            if ((file.desc.includes('合并数据文件') && !file.desc.includes('完整数据文件')) || file.desc.includes('OSS配置')) {
                 report.summary.success = false;
             }
         }
@@ -269,13 +334,19 @@ function showHelp() {
     log('   1. 检查环境配置', 'white');
     log('   2. 获取职业列表', 'white');
     log('   3. 获取梯子数据', 'white');
-    log('   4. 上传到阿里云OSS', 'white');
-    log('   5. 生成执行报告', 'white');
+    log('      - 完整爬虫: 装备/技能/天赋图 + 详细信息', 'white');
+    log('      - 快速爬虫: Top 20玩家基本信息', 'white');
+    log('   4. 数据格式转换', 'white');
+    log('   5. 上传到阿里云OSS', 'white');
+    log('   6. 生成执行报告', 'white');
     log('\n📁 注意: 此脚本可在任何子目录中运行', 'yellow');
     log('   会自动检测项目根目录并在其中执行操作', 'yellow');
     log('\n📂 文件检测逻辑:', 'cyan');
     log('   - 优先使用 auto_browser/ 目录中的现有数据', 'white');
     log('   - 自动检测 class_list.json 和 all_ladders.json', 'white');
+    log('   - 支持完整爬虫(详细数据)和快速爬虫(Top 20)', 'white');
+    log('   - 完整爬虫: 装备/技能/天赋图Base64数据', 'white');
+    log('   - 快速爬虫: 玩家基本信息', 'white');
     log('   - 支持强制刷新模式重新获取所有数据', 'white');
 }
 

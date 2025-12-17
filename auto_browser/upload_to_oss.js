@@ -161,7 +161,9 @@ async function uploadLadderData() {
     // 1. 上传all_ladders.json (不添加日期戳)
     const allLaddersFile = 'all_ladders.json';
     if (fs.existsSync(allLaddersFile)) {
-        const remotePath = `${config.folder}/all_ladders.json`;
+        // 获取当前日期 20251217
+        const todayDate = new Date().toISOString().slice(0, 10).replace(/-/g, '')
+        const remotePath = `${config.folder}/all_ladders_${todayDate}.json`;
         filesToUpload.push({
             local: allLaddersFile,
             remote: remotePath

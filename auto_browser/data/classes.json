@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Pathfinder",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/pathfinder.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Pathfinder"
+  },
+  {
+    "name": "Shaman",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/shaman.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Shaman"
+  },
+  {
+    "name": "Oracle",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/oracle.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Oracle"
+  },
+  {
+    "name": "Stormweaver",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/stormweaver.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Stormweaver"
+  },
+  {
+    "name": "Amazon",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/amazon.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Amazon"
+  },
+  {
+    "name": "Blood Mage",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/blood-mage.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Blood%20Mage"
+  },
+  {
+    "name": "Deadeye",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/deadeye.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Deadeye"
+  },
+  {
+    "name": "Invoker",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/invoker.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Invoker"
+  },
+  {
+    "name": "Titan",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/titan.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Titan"
+  },
+  {
+    "name": "Disciple of Varashta",
+    "icon": "https://poe.ninja/poe2-assets/cdn/classes/disciple-of-varashta.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Disciple%20of%20Varashta"
+  }
+]

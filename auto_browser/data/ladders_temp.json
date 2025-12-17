@@ -1,0 +1,210 @@
+{
+  "Pathfinder": [],
+  "Shaman": [
+    {
+      "rank": 1,
+      "name": "GuanNiaoRV",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/Raven-9890/GuanNiaoRV?i=0&search=class%3DShaman",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/druidanimism.png"
+    },
+    {
+      "rank": 2,
+      "name": "싸먼늑드루",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/Chaos_W-2442/%EC%8B%B8%EB%A8%BC%EB%8A%91%EB%93%9C%EB%A3%A8?i=1&search=class%3DShaman",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGcm96ZW5DbGF3c1NraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/6f193a903c/DruidFrozenClawsSkillGem.png"
+    },
+    {
+      "rank": 3,
+      "name": "Kai_FotV",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/wongklun-2431/Kai_FotV?i=2&search=class%3DShaman",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png"
+    }
+  ],
+  "Oracle": [
+    {
+      "rank": 1,
+      "name": "oq_vaal",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/ovaqoo-7840/oq_vaal?i=0&search=class%3DOracle",
+      "level": 96,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneeldritchbattery.png"
+    },
+    {
+      "rank": 2,
+      "name": "druidmetw",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/prostokto-2557/druidmetw?i=1&search=class%3DOracle",
+      "level": 96,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    },
+    {
+      "rank": 3,
+      "name": "Celerrim",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/%EC%BC%80%EC%9D%B4%EA%B1%B4%EB%93%9C%EB%9D%BC%EC%B9%B4-1600/Celerrim?i=2&search=class%3DOracle",
+      "level": 96,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/totemmax.png"
+    }
+  ],
+  "Stormweaver": [
+    {
+      "rank": 1,
+      "name": "APEX_ShockedByMom",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/dreamgamer-1342/APEX_ShockedByMom?i=0&search=class%3DStormweaver",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    },
+    {
+      "rank": 2,
+      "name": "SvobodyTiankam",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/SvobodyTyankam-5005/SvobodyTiankam?i=1&search=class%3DStormweaver",
+      "level": 96,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    },
+    {
+      "rank": 3,
+      "name": "李寶瓶",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/Apollon-4478/%E6%9D%8E%E5%AF%B6%E7%93%B6?i=2&search=class%3DStormweaver",
+      "level": 96,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    }
+  ],
+  "Amazon": [
+    {
+      "rank": 1,
+      "name": "ResurrectTwiceAgain",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/heygyus-0416/ResurrectTwiceAgain?i=0&search=class%3DAmazon",
+      "level": 98,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    },
+    {
+      "rank": 2,
+      "name": "玉壶流转",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/A2714894977-5320/%E7%8E%89%E5%A3%B6%E6%B5%81%E8%BD%AC?i=1&search=class%3DAmazon",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/dancewithdeathkeystone.png"
+    },
+    {
+      "rank": 3,
+      "name": "pedalski_lowca_potworow",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/lua_dipaa-4786/pedalski_lowca_potworow?i=2&search=class%3DAmazon",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    }
+  ],
+  "Blood Mage": [
+    {
+      "rank": 1,
+      "name": "Frenari_Spark",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/Frenari-0571/Frenari_Spark?i=0&search=class%3DBlood%2BMage",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonebloodmagic.png"
+    },
+    {
+      "rank": 2,
+      "name": "ttv_RsFearless",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/RsFearless-1355/ttv_RsFearless?i=1&search=class%3DBlood%2BMage",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29tZXRTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/212d23c28b/CometSkillGem.png"
+    },
+    {
+      "rank": 3,
+      "name": "Asmo_CarryDeluxe",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/AsmodeusPOE-0579/Asmo_CarryDeluxe?i=2&search=class%3DBlood%2BMage",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonebloodmagic.png"
+    }
+  ],
+  "Deadeye": [
+    {
+      "rank": 1,
+      "name": "김우태",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/gksdjfmes-6995/%EA%B9%80%EC%9A%B0%ED%83%9C?i=0&search=class%3DDeadeye",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png"
+    },
+    {
+      "rank": 2,
+      "name": "APEX_ChiecCupThuBay",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/xunhchoy-7526/APEX_ChiecCupThuBay?i=1&search=class%3DDeadeye",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    },
+    {
+      "rank": 3,
+      "name": "APEX_Swervin",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/bancotaima1701-0994/APEX_Swervin?i=2&search=class%3DDeadeye",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    }
+  ],
+  "Invoker": [
+    {
+      "rank": 1,
+      "name": "DerekTwistingSparking",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/Derekao-2785/DerekTwistingSparking?i=0&search=class%3DInvoker",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/dancewithdeathkeystone.png"
+    },
+    {
+      "rank": 2,
+      "name": "穿越化腾",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/l767965778-4770/%E7%A9%BF%E8%B6%8A%E5%8C%96%E8%85%BE?i=1&search=class%3DInvoker",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvU2lwaG9uaW5nU3RyaWtlU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7fb30ade9d/SiphoningStrikeSkillGem.png"
+    },
+    {
+      "rank": 3,
+      "name": "我真不會閃打",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/1145141919810-2018/%E6%88%91%E7%9C%9F%E4%B8%8D%E6%9C%83%E9%96%83%E6%89%93?i=2&search=class%3DInvoker",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTGlnaHRuaW5nU3RyaWtlU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6308f8d347/LightningStrikeSkillGem.png"
+    }
+  ],
+  "Titan": [
+    {
+      "rank": 1,
+      "name": "Struja",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/strujax-4239/Struja?i=0&search=class%3DTitan",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQnJ1dGVTaGllbGRXYWxsU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b140211605/BruteShieldWallSkillGem.png"
+    },
+    {
+      "rank": 2,
+      "name": "grafitaaaoo",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/nextfirstingame-2373/grafitaaaoo?i=1&search=class%3DTitan",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQnJ1dGVTaGllbGRXYWxsU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b140211605/BruteShieldWallSkillGem.png"
+    },
+    {
+      "rank": 3,
+      "name": "WallyDropeaLiga",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/wiwa110-3997/WallyDropeaLiga?i=2&search=class%3DTitan",
+      "level": 97,
+      "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQnJ1dGVTaGllbGRXYWxsU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b140211605/BruteShieldWallSkillGem.png"
+    }
+  ],
+  "Disciple of Varashta": [
+    {
+      "rank": 1,
+      "name": "DJRTX",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/jimkok-3699/DJRTX?i=0&search=class%3DDisciple%2Bof%2BVarashta",
+      "level": 97,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    },
+    {
+      "rank": 2,
+      "name": "นะนะนะ",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/Natji-1306/%E0%B8%99%E0%B8%B0%E0%B8%99%E0%B8%B0%E0%B8%99%E0%B8%B0?i=1&search=class%3DDisciple%2Bof%2BVarashta",
+      "level": 96,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    },
+    {
+      "rank": 3,
+      "name": "MoosiesWoof",
+      "link": "https://poe.ninja/poe2/builds/vaal/character/dantcc-7416/MoosiesWoof?i=2&search=class%3DDisciple%2Bof%2BVarashta",
+      "level": 96,
+      "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png"
+    }
+  ]
+}
