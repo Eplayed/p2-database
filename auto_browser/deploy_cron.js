@@ -264,8 +264,8 @@ async function runTask() {
                   "stroke-dasharray",
                   "r",
                 ];
-                properties.forEach((p) => {
-                  const val = computed.getPropertyValue(prop);
+                properties.forEach((prop) => {
+                  const val = style.getPropertyValue(prop);
                   if (
                     val &&
                     val !== "none" &&
