@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const envConfig = require('./env-config');
 
 // 获取项目根目录
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -135,8 +136,10 @@ async function main(forceRefresh = false) {
         }
         
         // 检查是否已有数据文件（使用当前目录检查）
-        const hasClassList = checkFile('class_list.json', '当前目录的职业列表', true);
-        const hasAllLadders = checkFile('all_ladders.json', '当前目录的梯子数据', true);
+        const classListFileName = envConfig.getFileName('class_list');
+        const allLaddersFileName = envConfig.getFileName('all_ladders');
+        const hasClassList = checkFile(classListFileName, '当前目录的职业列表', true);
+        const hasAllLadders = checkFile(allLaddersFileName, '当前目录的梯子数据', true);
         
         // 2. 获取梯子数据
         log('\n🔍 开始获取梯子数据...', 'blue');
@@ -149,7 +152,8 @@ async function main(forceRefresh = false) {
         }
         
         // 决定使用哪种抓取方式
-        if (hasFullCrawler && (forceRefresh || !checkFile('data/all_data_full.json', '完整数据文件', true))) {
+        const allDataFullFileName = envConfig.getFileName('all_data_full');
+        if (hasFullCrawler && (forceRefresh || !checkFile(`data/${allDataFullFileName}`, '完整数据文件', true))) {
             // 使用完整爬虫（抓取每个玩家的详细信息）
             log('📊 使用完整爬虫抓取详细数据（装备/技能/天赋图）...', 'cyan');
             await runCommand('node auto_full_crawler.js', '获取所有职业完整数据（auto_full_crawler.js）', false);
@@ -157,7 +161,7 @@ async function main(forceRefresh = false) {
             // 将完整数据转换为标准格式
             await convertFullDataToStandard();
             
-        } else if (hasAutoLadder && (forceRefresh || !checkFile('../all_ladders.json', '项目根目录的合并数据文件'))) {
+        } else if (hasAutoLadder && (forceRefresh || !checkFile(`../${allLaddersFileName}`, '项目根目录的合并数据文件'))) {
             // 使用快速爬虫（只抓取Top 20玩家）
             log('📋 使用快速爬虫抓取Top 20数据...', 'cyan');
             await runCommand('node auto_ladder.js', '获取所有职业梯子数据（auto_ladder.js）', false);
@@ -168,10 +172,10 @@ async function main(forceRefresh = false) {
             log('✅ 梯子数据文件已存在，跳过获取', 'green');
         }
         
-        // 检查是否成功生成all_ladders.json
-        const hasLadderData = checkFile('../all_ladders.json', '项目根目录的合并数据文件') || 
-                             checkFile('all_ladders.json', 'auto_browser目录的合并数据文件', true) ||
-                             checkFile('data/all_data_full.json', '完整数据文件', true);
+        // 检查是否成功生成数据文件
+        const hasLadderData = checkFile(`../${allLaddersFileName}`, '项目根目录的合并数据文件') || 
+                             checkFile(allLaddersFileName, 'auto_browser目录的合并数据文件', true) ||
+                             checkFile(`data/${allDataFullFileName}`, '完整数据文件', true);
         
         if (!hasLadderData) {
             log('❌ 数据获取失败，请检查错误信息', 'red');
@@ -203,7 +207,9 @@ async function convertFullDataToStandard() {
     log('\n🔄 转换完整数据为标准格式...', 'blue');
     
     try {
-        const fullDataPath = path.join(__dirname, 'data', 'all_data_full.json');
+        const allDataFullFileName = envConfig.getFileName('all_data_full');
+        const fullDataPath = path.join(__dirname, 'data', allDataFullFileName);
+        
         if (fs.existsSync(fullDataPath)) {
             const fullData = JSON.parse(fs.readFileSync(fullDataPath, 'utf8'));
             
@@ -232,14 +238,15 @@ async function convertFullDataToStandard() {
                 ladders: standardLadders
             };
             
-            const outputPath = path.join(__dirname, 'all_ladders.json');
+            const allLaddersFileName = envConfig.getFileName('all_ladders');
+            const outputPath = path.join(__dirname, allLaddersFileName);
             fs.writeFileSync(outputPath, JSON.stringify(standardData, null, 2));
             
             log(`✅ 数据转换完成: ${Object.keys(standardLadders).length} 个职业`, 'green');
-            log(`   输出文件: all_ladders.json`, 'cyan');
+            log(`   输出文件: ${allLaddersFileName}`, 'cyan');
             
         } else {
-            log('❌ 未找到完整数据文件', 'red');
+            log(`❌ 未找到完整数据文件: ${allDataFullFileName}`, 'red');
         }
         
     } catch (error) {
@@ -262,14 +269,14 @@ function generateReport() {
         }
     };
     
-    // 检查各个文件
+    // 检查各个文件（使用环境配置的文件名）
     const filesToCheck = [
-        { path: 'all_ladders.json', desc: '项目根目录的合并数据文件' },
-        { path: 'auto_browser/all_ladders.json', desc: 'auto_browser目录的合并数据文件' },
-        { path: 'auto_browser/data/all_data_full.json', desc: '完整数据文件' },
-        { path: 'auto_browser/data/classes.json', desc: '爬虫职业列表' },
+        { path: envConfig.getFileName('all_ladders'), desc: '项目根目录的合并数据文件' },
+        { path: `auto_browser/${envConfig.getFileName('all_ladders')}`, desc: 'auto_browser目录的合并数据文件' },
+        { path: `auto_browser/data/${envConfig.getFileName('all_data_full')}`, desc: '完整数据文件' },
+        { path: `auto_browser/data/${envConfig.getFileName('classes')}`, desc: '爬虫职业列表' },
         { path: 'ladder/data/classes.json', desc: 'ladder职业列表' },
-        { path: 'auto_browser/class_list.json', desc: 'auto_browser职业列表' },
+        { path: `auto_browser/${envConfig.getFileName('class_list')}`, desc: 'auto_browser职业列表' },
         { path: 'auto_browser/oss-config.json', desc: 'OSS配置' }
     ];
     

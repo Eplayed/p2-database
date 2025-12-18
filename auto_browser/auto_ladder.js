@@ -1,9 +1,10 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const envConfig = require('./env-config');
 
 // 配置
-const INPUT_FILE = 'class_list.json'; // 上一步生成的文件
-const OUTPUT_FILE = 'all_ladders.json'; // 最终结果
+const INPUT_FILE = envConfig.getFileName('class_list'); // 上一步生成的文件
+const OUTPUT_FILE = envConfig.getFileName('all_ladders'); // 最终结果
 const MAX_RANK = 20; // 每个职业抓前多少名
 
 // 辅助函数：延迟等待
