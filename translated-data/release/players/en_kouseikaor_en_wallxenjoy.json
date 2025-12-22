@@ -13,7 +13,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "38% increased [Armour]\n+123 to maximum Life\n18% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Melee|Melee] Skills"
+      "desc": "(附魔) Allocates Greatest Defence\n(基底) 物品稀有度提高 18%\n[护甲]提高 38%\n+123 最大生命\n物品稀有度提高 18%\n+3 Level of all Melee Skills"
     },
     {
       "name": "Demon Ward (督军胸甲)",
@@ -21,7 +21,7 @@
       "baseType": "Warlord Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/23e350525b/BodyStr10.png",
       "rarity": 2,
-      "desc": "+233 to [Armour|Armour]\n41% increased [Armour|Armour]\n+261 to maximum Life\n+34% to [Resistances|Cold Resistance]\n+39% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 最大生命提高 6%\n(基底) +20% 的 护甲 也套用于 元素伤害\n+233 护甲\n护甲提高 41%\n+261 最大生命\n+34% 冰霜抗性\n+39% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "赤红护身符",
@@ -29,7 +29,7 @@
       "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 while Sprinting提高 7%"
     },
     {
       "name": "Honour Finger (金光戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 45 [Lightning] damage to [Attack|Attacks]\n+92 to maximum Life\n35% increased [ItemRarity|Rarity of Items] found\n+18% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 1 - 45 Attacks\n+92 最大生命\n物品稀有度提高 35%\n+18% all Elemental [Resistances]"
     },
     {
       "name": "Rage Barrier (要塞塔盾)",
@@ -45,7 +45,7 @@
       "baseType": "Fortress Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMDYiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/fae45edbc4/Tower06.png",
       "rarity": 2,
-      "desc": "+251 to [Armour|Armour]\n105% increased [Armour|Armour]\n+45% to [Resistances|Lightning Resistance]\n+26% to [Resistances|Chaos Resistance]\n+50% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+251 护甲\n护甲提高 105%\n+45% 闪电抗性\n+26% 混沌抗性\n+50% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Anarchy Stride (华丽胫甲)",
@@ -53,7 +53,7 @@
       "baseType": "Ornate Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f9e847d2b0/BootsStr04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+140 to maximum Life\n+41% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]\n+42% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+140 最大生命\n+41% 冰霜抗性\n+37% 闪电抗性\n+42% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Dread Ruin (构造之锤)",
@@ -61,7 +61,7 @@
       "baseType": "Structured Hammer",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQmFzZXR5cGVzLzFITWFjZTA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f0a2fc612b/1HMace08.png",
       "rarity": 2,
-      "desc": "Adds 27 to 36 [Cold|Cold] Damage\n88% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+5 to Level of all [Melee|Melee] Skills\n+26 to [Strength|Strength]\n[Gain] 19% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 8%\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 15%\n(基底) 40% chance to Hit\n附加 27 - 36 冰霜伤害\n元素伤害 with Attacks提高 88%\n+5 Level of all Melee Skills\n+26 力量\n[Gain] 19% of Damage as Extra [Physical] Damage"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+57 to maximum Life\n+33 to [Strength|Strength]\n+39 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +24% 火焰抗性\n(基底) 晕眩门槛提高 27%\n(基底) Has 3 [Charm] Slots\n+57 最大生命\n+33 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Damnation Caress (狂热者手套)",
@@ -77,7 +77,7 @@
       "baseType": "Zealot Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2d6c10dfcb/GlovesStrDex03.png",
       "rarity": 2,
-      "desc": "85% increased [Armour|Armour] and [Evasion|Evasion]\n+74 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n13% increased [Attack] Speed\n[LifeLeech|Leech] 8.14% of [Physical] [Attack] Damage as Life"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲 and 闪避值提高 85%\n+74 最大生命\n+2 Level of all Melee Skills\n[Attack] Speed提高 13%\nLeech 8.14% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Honour Whorl (三相戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 6 to 11 [Physical|Physical] Damage to [Attack|Attacks]\n+109 to maximum Life\n34% increased [ItemRarity|Rarity of Items] found\n[ManaLeech|Leech] 6.74% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +12% all Elemental [Resistances]\n附加 6 - 11 物理伤害 to Attacks\n+109 最大生命\n物品稀有度提高 34%\nLeech 6.74% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "惊险刺激",
@@ -93,7 +93,7 @@
       "baseType": "Spired Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhyaWxsc3RlZWwiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/5356ecced3/Thrillsteel.png",
       "rarity": 3,
-      "desc": "[Onslaught]"
+      "desc": "(符文) +80 最大生命\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n[Onslaught]\n(已腐化)"
     }
   ],
   "skills": [

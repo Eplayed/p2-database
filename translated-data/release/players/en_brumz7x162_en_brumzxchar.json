@@ -13,7 +13,7 @@
       "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 while Sprinting提高 8%"
     },
     {
       "name": "赤红护身符",
@@ -21,7 +21,7 @@
       "baseType": "Deflective Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) Deflection Rating提高 10%"
     },
     {
       "name": "Corpse Eye (紫晶戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "+112 to maximum Life\n+86 to maximum Mana\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+35% to [Resistances|Fire Resistance]\n[ManaLeech|Leech] 6.53% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +12% 混沌抗性\n+112 最大生命\n+86 最大魔力\n+16% all Elemental [Resistances]\n+35% 火焰抗性\nLeech 6.53% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Mind Nail (三相戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 18 to 25 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 31 to 52 [Fire] damage to [Attack|Attacks]\n+107 to maximum Life\n+35% to [Resistances|Fire Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +7% all Elemental [Resistances]\n附加 18 - 25 物理伤害 to Attacks\n附加 31 - 52 Attacks\n+107 最大生命\n+35% 火焰抗性\n+36% 闪电抗性"
     },
     {
       "name": "Hypnotic Spirit (Maji Talisman)",
@@ -45,7 +45,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "129% increased [Physical] Damage\nAdds 23 to 33 [Physical|Physical] Damage\n+487 to [Accuracy|Accuracy] Rating\n24% increased [Attack] Speed\n+7 to Level of all [Melee|Melee] Skills"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n(基底) +10 Maximum [Rage]\n[Physical] Damage提高 129%\n附加 23 - 33 物理伤害\n+487 Accuracy Rating\n[Attack] Speed提高 24%\n+7 Level of all Melee Skills\n(已腐化)"
     },
     {
       "name": "Entropy Spur (堡垒胫甲)",
@@ -53,7 +53,7 @@
       "baseType": "Bulwark Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/70eea32d34/BootsStr02.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+121 to [Armour|Armour]\n+129 to maximum Life\n+27% to [Resistances|Fire Resistance]\n+21% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 30%\n+121 护甲\n+129 最大生命\n+27% 火焰抗性\n+21% 混沌抗性"
     },
     {
       "name": "Fate Peak (帝国巨盔)",
@@ -61,7 +61,7 @@
       "baseType": "Imperial Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a455b9fc43/HelmetStr07.png",
       "rarity": 2,
-      "desc": "93% increased [Armour|Armour]\n+202 to maximum Life\n+38% to [Resistances|Cold Resistance]\n+18% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +4 Maximum [Rage]\n护甲提高 93%\n+202 最大生命\n+38% 冰霜抗性\n+18% 混沌抗性"
     },
     {
       "name": "Rage Vise (羽饰护手)",
@@ -69,7 +69,7 @@
       "baseType": "Feathered Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/30e916dc14/GlovesStr05.png",
       "rarity": 2,
-      "desc": "39% increased [Armour|Armour]\nAdds 17 to 28 [Physical|Physical] Damage to [Attack|Attacks]\n+42 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n[LifeLeech|Leech] 7.89% of [Physical] [Attack] Damage as Life"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲提高 39%\n附加 17 - 28 物理伤害 to Attacks\n+42 最大生命\n+2 Level of all Melee Skills\nLeech 7.89% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "命运之抗争",
@@ -77,7 +77,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "9% increased maximum Life\n+17 to [Strength|Strength]\n28% increased Mana Regeneration Rate\nRecover 32% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Vengeful Fury\n(基底) +13 敏捷\n最大生命提高 9%\n+17 力量\n魔力回复速度提高 28%\nRecover 32% of Missing Life before being Hit by an Enemy"
     },
     {
       "name": "猎首",
@@ -85,7 +85,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+36 to [Strength|Strength]\n+32 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 24%\n(基底) Has 2 [Charm] Slots\n+58 最大生命\n+36 力量\n+32 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Spirit Guardian (督军胸甲)",
@@ -93,7 +93,7 @@
       "baseType": "Warlord Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/23e350525b/BodyStr10.png",
       "rarity": 2,
-      "desc": "+259 to [Armour|Armour]\n92% increased [Armour|Armour]\n+23 to maximum Life\n+40% to [Resistances|Cold Resistance]\n+26% to [Resistances|Lightning Resistance]\n+50% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) 15% of Damage is taken from Mana before Life\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(符文) Bonded: 8% of Maximum Life Converted to 能量护盾\n(基底) +25% 的 护甲 也套用于 元素伤害\n+259 护甲\n护甲提高 92%\n+23 最大生命\n+40% 冰霜抗性\n+26% 闪电抗性\n+50% 的 护甲 也套用于 元素伤害\n(已腐化)"
     }
   ],
   "skills": [

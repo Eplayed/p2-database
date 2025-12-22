@@ -13,7 +13,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "Adds 30 to 45 [Physical|Physical] Damage\nAdds 3 to 253 [Lightning|Lightning] Damage\nGain 46 Life per enemy killed\n25% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) 附加 23 - 34 火焰伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 火焰抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +11 Maximum [Rage]\n附加 30 - 45 物理伤害\n附加 3 - 253 闪电伤害\nGain 46 Life per enemy killed\n25% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Miracle Torc (日曜护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "22% increased [Spell] Damage\n55% increased [Armour]\n+44 to [Spirit|Spirit]\n+2 to Level of all [Melee|Melee] Skills\n18% increased Cast Speed\n+35% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) Allocates Vengeful Fury\n(基底) +12 Spirit\n[Spell] Damage提高 22%\n[护甲]提高 55%\n+44 Spirit\n+2 Level of all Melee Skills\n施法速度提高 18%\n+35% 火焰抗性"
     },
     {
       "name": "邪眼之冠",
@@ -29,7 +29,7 @@
       "baseType": "Vermeil Circlet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ3Jvd25PZkV5ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/27fa23fd11/CrownOfEyes.png",
       "rarity": 3,
-      "desc": "122% increased [EnergyShield|Energy Shield]\n+191 to [Accuracy|Accuracy] Rating\n+13 to all [Attributes|Attributes]\n-10% to [Resistances|Fire Resistance]\nIncreases and Reductions to [Spell] damage also apply to [Attack|Attacks]"
+      "desc": "(附魔) +2% Maximum 冰霜抗性\n(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) +14% 冰霜抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 122%\n+191 Accuracy Rating\n+13 全属性\n-10% to 火焰抗性\nIncreases and Reductions to Attacks\n(已腐化)"
     },
     {
       "name": "Storm Span (瓦尔胫甲)",
@@ -37,7 +37,7 @@
       "baseType": "Vaal Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3bc62e552f/BootsStr05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n115% increased [Armour|Armour]\n+44% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]\n+22% to [Resistances|Chaos Resistance]\n+80 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n移动速度提高 35%\n护甲提高 115%\n+44% 冰霜抗性\n+43% 闪电抗性\n+22% 混沌抗性\n+80 晕眩门槛\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -45,7 +45,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+41 to maximum Life\n+25 to [Strength|Strength]\n+37 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +24% 冰霜抗性\n(基底) 晕眩门槛提高 25%\n(基底) Has 3 [Charm] Slots\n+41 最大生命\n+25 力量\n+37 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Morbid Cloak (督军胸甲)",
@@ -53,7 +53,7 @@
       "baseType": "Warlord Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/23e350525b/BodyStr10.png",
       "rarity": 2,
-      "desc": "+274 to [Armour|Armour]\n146% increased [Armour|Armour]\n+38 to maximum Life\n+34% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) +31 最大生命\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +20% 的 护甲 也套用于 元素伤害\n+274 护甲\n护甲提高 146%\n+38 最大生命\n+34% 火焰抗性\n+38% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Eagle Eye (裂隙戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "21% increased [Fire] Damage\n35% increased [Cold] Damage\n+26% to [Resistances|Fire Resistance]\n+20% to [Resistances|Chaos Resistance]\n51% increased Mana Regeneration Rate"
+      "desc": "(基底) Maximum [Quality] is 40%\n[Fire] Damage提高 21%\n[Cold] Damage提高 35%\n+26% 火焰抗性\n+20% 混沌抗性\n魔力回复速度提高 51%"
     },
     {
       "name": "Tempest Grasp (紫晶戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 4 to 10 [Fire] damage to [Attack|Attacks]\nAdds 2 to 56 [Lightning] damage to [Attack|Attacks]\n+120 to maximum Mana\n+33% to [Resistances|Fire Resistance]\n+32% to [Resistances|Lightning Resistance]\n+25% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +12% 混沌抗性\n附加 4 - 10 Attacks\n附加 2 - 56 Attacks\n+120 最大魔力\n+33% 火焰抗性\n+32% 闪电抗性\n+25% 混沌抗性"
     },
     {
       "name": "Woe Caress (华丽袖带)",
@@ -77,7 +77,7 @@
       "baseType": "Ornate Cuffs",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludFN0cjAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0e34625351/GlovesIntStr03.png",
       "rarity": 2,
-      "desc": "118% increased [Armour|Armour] and [EnergyShield|Energy Shield]\nAdds 7 to 15 [Physical|Physical] Damage to [Attack|Attacks]\n+49 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n+29 to [Dexterity|Dexterity]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲 and 能量护盾提高 118%\n附加 7 - 15 物理伤害 to Attacks\n+49 最大生命\n+2 Level of all Melee Skills\n+29 敏捷\n(已腐化)"
     }
   ],
   "skills": [

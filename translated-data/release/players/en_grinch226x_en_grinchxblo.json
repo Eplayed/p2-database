@@ -13,7 +13,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+95 to maximum [EnergyShield|Energy Shield]\n34% increased [EnergyShield|Energy Shield]\n+40% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+95 最大能量护盾\n能量护盾提高 34%\n+40% 火焰抗性\n+35% 冰霜抗性\n+32% 闪电抗性"
     },
     {
       "name": "Pandemonium Spire (收割长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "[Gain] 59% of Damage as Extra [Cold] Damage\n81% increased [Spell] Damage\n+75 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n101% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n42% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 59% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 81%\n+75 最大魔力\n+5 Level of all Spell Skills\n暴击率 for Spells提高 101%\n施法速度提高 42%"
     },
     {
       "name": "形单影只",
@@ -29,7 +29,7 @@
       "baseType": "Grand Visage",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvU29sdXNJcHNlIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/38fbfb8aa5/SolusIpse.png",
       "rarity": 3,
-      "desc": "157% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+92 to maximum Mana\n25% increased [LightRadius|Light Radius]\nEquipment and Skill Gems have 25% increased [Attributes|Attribute] Requirements\nYou can Socket 2 additional copies of each Lineage [SupportGem|Support Gem], in different Skills"
+      "desc": "(符文) +28% 闪电抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲, 闪避值 and 能量护盾提高 157%\n+92 最大魔力\nLight Radius提高 25%\nEquipment and Skill Gems have Attribute Requirements提高 25%\nYou can Socket 2 additional copies of each Lineage Support Gem, in different Skills\n(已腐化)"
     },
     {
       "name": "灵魂羁绊",
@@ -37,7 +37,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+56 to maximum [EnergyShield|Energy Shield]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(附魔) +25% 闪电抗性\n(基底) [Charm] Effect Duration提高 20%\n(基底) Has 3 [Charm] Slots\n+56 最大能量护盾\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "Entropy Circle (黄玉戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 2 to 3 [Physical|Physical] Damage to [Attack|Attacks]\n+342 to [Accuracy|Accuracy] Rating\n+63 to maximum Life\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+26% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +26% 闪电抗性\n附加 2 - 3 物理伤害 to Attacks\n+342 Accuracy Rating\n+63 最大生命\n+16% all Elemental [Resistances]\n+26% 火焰抗性\n+34% 冰霜抗性"
     },
     {
       "name": "灾变的种子",
@@ -53,7 +53,7 @@
       "baseType": "Lazuli Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TZWVkT2ZDYXRhY2x5c20iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4ae8a2cc6d/SeedOfCataclysm.png",
       "rarity": 3,
-      "desc": "52% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n60% increased [CriticalDamageBonus|Critical Spell Damage Bonus]\n+17% to [Resistances|Chaos Resistance]\n10% increased Mana Cost of Skills"
+      "desc": "(基底) +25 最大魔力\n暴击率 for Spells提高 52%\nCritical 法术伤害 Bonus提高 60%\n+17% 混沌抗性\nMana Cost of Skills提高 10%"
     },
     {
       "name": "Atziri's Acuity",
@@ -61,7 +61,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "92% increased [Armour|Armour]\n44% increased [Critical|Critical Hit] Chance\n+28 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Life Cost [Efficiency]提高 25%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n护甲提高 92%\n暴击率提高 44%\n+28 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "Demon Heart (日曜护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+76 to maximum [EnergyShield|Energy Shield]\n+85 to maximum Life\n+3 to Level of all [Spell|Spell] Skills\n32% increased [Critical|Critical Hit] Chance\n+33 to [Intelligence|Intelligence]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +12 Spirit\n+76 最大能量护盾\n+85 最大生命\n+3 Level of all Spell Skills\n暴击率提高 32%\n+33 智慧"
     },
     {
       "name": "Behemoth Urge (丝克玛便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n93% increased [EnergyShield|Energy Shield]\n+105 to maximum Life\n+31% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 30%\n能量护盾提高 93%\n+105 最大生命\n+31% 火焰抗性\n+37% 冰霜抗性"
     }
   ],
   "skills": [

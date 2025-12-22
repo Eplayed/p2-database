@@ -13,7 +13,7 @@
       "baseType": "Soaring Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIwNCIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5f32a7f996/1HSpear04.png",
       "rarity": 2,
-      "desc": "41% increased [Physical] Damage\n+83 to [Accuracy|Accuracy] Rating\n25% increased [Attack] Speed\n+4 to Level of all [Projectile] Skills\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Attack] Speed提高 15%\n[Physical] Damage提高 41%\n+83 Accuracy Rating\n[Attack] Speed提高 25%\n+4 Level of all [Projectile] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -21,7 +21,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+54 to maximum Life\n+21 to [Strength|Strength]\n+36 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +25% 冰霜抗性\n(基底) 晕眩门槛提高 27%\n(基底) Has 2 [Charm] Slots\n+54 最大生命\n+21 力量\n+36 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Demon Circle (潜能之戒)",
@@ -29,7 +29,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 9 to 22 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 28 to 38 [Cold] damage to [Attack|Attacks]\n17% increased [ItemRarity|Rarity of Items] found\n+37% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]\n[ManaLeech|Leech] 8.14% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 9 - 22 物理伤害 to Attacks\n附加 28 - 38 Attacks\n物品稀有度提高 17%\n+37% 火焰抗性\n+35% 闪电抗性\nLeech 8.14% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Rune Edge (飞行战矛)",
@@ -37,7 +37,7 @@
       "baseType": "Flying Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIwNSIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b176f54004/1HSpear05.png",
       "rarity": 2,
-      "desc": "Adds 81 to 121 [Cold|Cold] Damage\n+4.93% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) +5% Critical Damage Bonus\n(基底) 投射物速度 with this Weapon提高 32%\n附加 81 - 121 冰霜伤害\n+4.93% 暴击率\n+3 Level of all [Attack] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "残酷雕塑",
@@ -45,7 +45,7 @@
       "baseType": "Antler Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL1VuaXF1ZXMvRWZmaWd5T2ZDcnVlbHR5IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7dd73b151e/EffigyOfCruelty.png",
       "rarity": 3,
-      "desc": "+24 to maximum [EnergyShield|Energy Shield]\n52% increased [Spell] Damage\n+9 to [Intelligence|Intelligence]\n+6% to [Resistances|Chaos Resistance]\n[Critical|Critical Hits] with [Spell|Spells] apply 4 Stacks of [CriticalWeakness|Critical Weakness]"
+      "desc": "(符文) +10 敏捷\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+24 最大能量护盾\n[Spell] Damage提高 52%\n+9 智慧\n+6% 混沌抗性\nCritical Hits with Spells apply 4 Stacks of Critical Weakness\n(已腐化)"
     },
     {
       "name": "Blight Nails (丰裕手套)",
@@ -53,7 +53,7 @@
       "baseType": "Opulent Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8882887a8e/GlovesInt04.png",
       "rarity": 2,
-      "desc": "Adds 1 to 28 [Lightning] damage to [Attack|Attacks]\n+137 to maximum Life\n16% increased [Attack] Speed\n+35% to [Resistances|Cold Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 附加 8 - 19 物理伤害 to Attacks\n(符文) [Attack] Speed提高 12%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 48%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 24%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n(符文) Bonded: Fissure Skills have +3 [Limit]\n附加 1 - 28 Attacks\n+137 最大生命\n[Attack] Speed提高 16%\n+35% 冰霜抗性\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Foe Ward (滑布外衣)",
@@ -61,7 +61,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+149 to [Evasion] Rating\n+58 to maximum [EnergyShield|Energy Shield]\n144% increased [Evasion] and [EnergyShield|Energy Shield]\n+34% to [Resistances|Fire Resistance]\n+36% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+149 [闪避值] Rating\n+58 最大能量护盾\n能量护盾提高 144%\n+34% 火焰抗性\n+36% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "覆灭之兆",
@@ -69,7 +69,7 @@
       "baseType": "Secured Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VbmlxdWVzL1dha2VPZkRlc3RydWN0aW9uIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cca716f5a6/WakeOfDestruction.png",
       "rarity": 3,
-      "desc": "10% increased Movement Speed\n43% increased [Armour|Armour] and [EnergyShield|Energy Shield]\nAdds 1 to 50 [Lightning] damage to [Attack|Attacks]\nDrop [ShockedGround|Shocked Ground] while moving, lasting 8 seconds"
+      "desc": "(符文) +10% all Elemental [Resistances]\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 10%\n护甲 and 能量护盾提高 43%\n附加 1 - 50 Attacks\nDrop Shocked Ground while moving, lasting 8 seconds\n(已腐化)"
     },
     {
       "name": "Woe Finger (潜能之戒)",
@@ -77,7 +77,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 21 to 34 [Cold] damage to [Attack|Attacks]\n35% increased [ItemRarity|Rarity of Items] found\n+32% to [Resistances|Lightning Resistance]\n[ManaLeech|Leech] 7.57% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 21 - 34 Attacks\n物品稀有度提高 35%\n+32% 闪电抗性\nLeech 7.57% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Hypnotic Torc (月影护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "58% increased [Evasion|Evasion Rating]\n50% increased maximum [EnergyShield|Energy Shield]\n+31 to [Intelligence|Intelligence]\n+14% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) Allocates Stimulants\n(基底) +26 最大能量护盾\n闪避值 Rating提高 58%\n最大能量护盾提高 50%\n+31 智慧\n+14% all Elemental [Resistances]"
     },
     {
       "name": "Mind Crown (先祖冠冕)",
@@ -93,7 +93,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+61 to maximum [EnergyShield|Energy Shield]\n136% increased [EnergyShield|Energy Shield]\n+34 to maximum Mana\n14% increased [ItemRarity|Rarity of Items] found\n+44% to [Resistances|Fire Resistance]\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+61 最大能量护盾\n能量护盾提高 136%\n+34 最大魔力\n物品稀有度提高 14%\n+44% 火焰抗性\n+39% 闪电抗性\n(已腐化)"
     }
   ],
   "skills": [

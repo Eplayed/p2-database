@@ -13,7 +13,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9NaW5nc0hlYXJ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/aa98f01580/MingsHeart.png",
       "rarity": 3,
-      "desc": "20% reduced maximum Life\n[Gain] 48% of Damage as Extra [Chaos] Damage\n30% reduced Global [Defences]"
+      "desc": "(附魔) Damage提高 26%\n(基底) +13% 混沌抗性\n最大生命降低 20%\n[Gain] 48% of Damage as Extra [Chaos] Damage\nGlobal [Defences]降低 30%\n(已腐化)"
     },
     {
       "name": "Pain Song (毁灭者之弓)",
@@ -21,7 +21,7 @@
       "baseType": "Obliterator Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e62ea7f094/Bow09.png",
       "rarity": 2,
-      "desc": "159% increased [Physical] Damage\nAdds 18 to 41 [Physical|Physical] Damage\n[Gain] 20% of Damage as Extra [Lightning] Damage\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 18%\n(符文) Bow Attacks fire an additional Arrow\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: effect of Fully Broken 护甲提高 20%\n(基底) Projectile Range降低 50%\n[Physical] Damage提高 159%\n附加 18 - 41 物理伤害\n[Gain] 20% of Damage as Extra [Lightning] Damage\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "公理不存",
@@ -29,7 +29,7 @@
       "baseType": "Grand Manchettes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9TaW5lQWVxdW8iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e243b1f810/SineAequo.png",
       "rarity": 3,
-      "desc": "12% increased [SkillSpeed|Skill Speed]\n114% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n[Immobilised|Immobilise] enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\nSkill Speed提高 12%\n护甲, 闪避值 and 能量护盾提高 114%\nImmobilise enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage\n(已腐化)"
     },
     {
       "name": "Woe Dart (贯心箭袋)",
@@ -37,15 +37,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 20 to 30 [Cold] damage to [Attack|Attacks]\n44% increased Damage with Bow Skills\n39% increased [Projectile] Speed\n33% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage\n15% increased [Attack] Speed\n+27 to [Dexterity|Dexterity]"
-    },
-    {
-      "name": "Blood Brow (先祖冠冕)",
-      "originalName": "Blood Brow",
-      "baseType": "Ancestral Tiara",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
-      "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n72% increased [EnergyShield|Energy Shield]\n+31% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]\n27% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(基底) 暴击率 for Attacks提高 27%\n附加 20 - 30 Attacks\nDamage with Bow Skills提高 44%\n[Projectile] Speed提高 39%\nCritical Damage Bonus for [Attack] Damage提高 33%\n[Attack] Speed提高 15%\n+27 敏捷"
     },
     {
       "name": "Ming's Heart",
@@ -53,7 +45,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9NaW5nc0hlYXJ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/aa98f01580/MingsHeart.png",
       "rarity": 3,
-      "desc": "20% reduced maximum Life\n[Gain] 48% of Damage as Extra [Chaos] Damage\n30% reduced Global [Defences]"
+      "desc": "(附魔) Skill Speed提高 6%\n(基底) +8% 混沌抗性\n最大生命降低 20%\n[Gain] 48% of Damage as Extra [Chaos] Damage\nGlobal [Defences]降低 30%\n(已腐化)"
     },
     {
       "name": "Grim Skin (滑布外衣)",
@@ -61,7 +53,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+116 to [Evasion] Rating\n+46 to maximum [EnergyShield|Energy Shield]\n103% increased [Evasion] and [EnergyShield|Energy Shield]\n+33% to [Resistances|Fire Resistance]\n+29% to [Resistances|Cold Resistance]\n+230 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) effect of Curses on you降低 50%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(符文) Bonded: Magnitudes提高 8%\n+116 [闪避值] Rating\n+46 最大能量护盾\n能量护盾提高 103%\n+33% 火焰抗性\n+29% 冰霜抗性\n+230 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Demon Nails (贯心箭袋)",
@@ -69,7 +61,15 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 7 to 13 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 21 to 37 [Cold] damage to [Attack|Attacks]\n44% increased Damage with Bow Skills\n30% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage\n14% increased [Attack] Speed\n+23 to [Dexterity|Dexterity]"
+      "desc": "(基底) 暴击率 for Attacks提高 29%\n附加 7 - 13 物理伤害 to Attacks\n附加 21 - 37 Attacks\nDamage with Bow Skills提高 44%\nCritical Damage Bonus for [Attack] Damage提高 30%\n[Attack] Speed提高 14%\n+23 敏捷"
+    },
+    {
+      "name": "Sorrow Brow (先祖冠冕)",
+      "originalName": "Sorrow Brow",
+      "baseType": "Ancestral Tiara",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
+      "rarity": 2,
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+73 最大能量护盾\n能量护盾提高 78%\n+29% 火焰抗性\n+37% 闪电抗性\n能量护盾 Recharge Rate提高 45%\n(已腐化)"
     },
     {
       "name": "Armageddon Thirst (寻战之弓)",
@@ -77,7 +77,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "Adds 16 to 39 [Physical|Physical] Damage\nAdds 2 to 164 [Lightning|Lightning] Damage\n+3.84% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\nGrants 5 Life per Enemy [HitDamage|Hit]"
+      "desc": "(符文) +20 敏捷\n(符文) Bonded: 附加 12 - 20 物理伤害 to Attacks\n(符文) Bonded: 附加 2 - 32 Attacks\n附加 16 - 39 物理伤害\n附加 2 - 164 闪电伤害\n+3.84% 暴击率\n+3 Level of all [Attack] Skills\nGrants 5 Life per Enemy Hit"
     },
     {
       "name": "Fate Spur (沙誓鞋履)",
@@ -85,7 +85,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n95% increased [EnergyShield|Energy Shield]\n+40% to [Resistances|Fire Resistance]\n+42% to [Resistances|Lightning Resistance]\n43% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n能量护盾提高 95%\n+40% 火焰抗性\n+42% 闪电抗性\n能量护盾 Recharge Rate提高 43%"
     },
     {
       "name": "Torment Beads (琥珀护身符)",
@@ -93,7 +93,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "+100 to maximum [EnergyShield|Energy Shield]\n46% increased maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Projectile] Skills\n+14% to all [ElementalDamage|Elemental] [Resistances]\n+37% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +12 力量\n+100 最大能量护盾\n最大能量护盾提高 46%\n+3 Level of all [Projectile] Skills\n+14% all Elemental [Resistances]\n+37% 冰霜抗性"
     },
     {
       "name": "Shavronne's Satchel",
@@ -101,7 +101,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
       "rarity": 3,
-      "desc": "28% reduced [Flask] Life Recovery rate\n+21 to [Intelligence|Intelligence]\n24% increased [Flask|Flask] Charges gained\nLife Recovery from [Flask|Flasks] also applies to [EnergyShield|Energy Shield]"
+      "desc": "(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 28%\n+21 智慧\nFlask Charges gained提高 24%\nLife Recovery from Flasks also applies to 能量护盾\n(已腐化)"
     }
   ],
   "skills": [

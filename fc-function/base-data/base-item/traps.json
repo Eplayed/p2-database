@@ -1,0 +1,80 @@
+[
+  {
+    "en": "Clay Trap",
+    "cn": "黏土陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Clamping Trap",
+    "cn": "铁颚陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shrapnel Trap",
+    "cn": "破片陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/TrapRemote01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Urn Trap",
+    "cn": "古瓮陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Incense Trap",
+    "cn": "熏香陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/TrapRemote02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bladed Trap",
+    "cn": "利刃陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dart Trap",
+    "cn": "飞镖陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/TrapRemote03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spike Trap",
+    "cn": "尖刺陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Coiled Trap",
+    "cn": "盘曲陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/TrapRemote04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lead Trap",
+    "cn": "铅链陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Medallion Trap",
+    "cn": "纹章陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Intricate Trap",
+    "cn": "巧妙陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/TrapRemote05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Refined Trap",
+    "cn": "精工陷阱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Traps/Trap08.webp",
+    "type": "base_item"
+  }
+]

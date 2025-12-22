@@ -13,7 +13,7 @@
       "baseType": "Champion Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0JyYXNzRG9tZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e2c74f60ea/BrassDome.png",
       "rarity": 3,
-      "desc": "786% increased [Armour|Armour]\n-1% to all [MaximumResistances|Maximum Elemental Resistances]\n+223 to [StunThreshold|Stun Threshold]\nTake no Extra Damage from [Critical|Critical Hits]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Regenerate 1.5% of 最大生命 per second\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲提高 786%\n-1% to all Maximum 元素抗性\n+223 晕眩门槛\nTake no Extra Damage from Critical Hits\n(已腐化)"
     },
     {
       "name": "Demon Stride (塔萨里奥胫甲)",
@@ -21,7 +21,7 @@
       "baseType": "Tasalian Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c3e83f5cc/BootsStr06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+72 to maximum Life\n+100 to maximum Mana\n12% increased [ItemRarity|Rarity of Items] found\n+22% to [Resistances|Chaos Resistance]\n+92 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n+72 最大生命\n+100 最大魔力\n物品稀有度提高 12%\n+22% 混沌抗性\n+92 晕眩门槛"
     },
     {
       "name": "收缩指令",
@@ -29,7 +29,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+117 to maximum Life\n+12 to all [Attributes|Attributes]\n8.8 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(符文) +22% 混沌抗性\n+117 最大生命\n+12 全属性\n8.8 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded\n(已腐化)"
     },
     {
       "name": "Grim Band (蓝玉戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 19 to 31 [Fire] damage to [Attack|Attacks]\n3% increased [Fire] Damage\n+73 to maximum Life\n+10% to all [ElementalDamage|Elemental] [Resistances]\n+30% to [Resistances|Fire Resistance]\n[LifeLeech|Leech] 7.9% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +28% 冰霜抗性\n附加 19 - 31 Attacks\n[Fire] Damage提高 3%\n+73 最大生命\n+10% all Elemental [Resistances]\n+30% 火焰抗性\nLeech 7.9% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Soul Strap (嵌板腰带)",
@@ -45,7 +45,7 @@
       "baseType": "Plate Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/510a304252/Belt05.png",
       "rarity": 2,
-      "desc": "+143 to maximum Life\n+79 to maximum Mana\n+35% to [Resistances|Fire Resistance]\n+36% to [Resistances|Lightning Resistance]\n60 to 90 [Physical|Physical] [Thorns|Thorns] damage"
+      "desc": "(基底) +109 [护甲]\n(基底) Has 1 [Charm] Slot\n+143 最大生命\n+79 最大魔力\n+35% 火焰抗性\n+36% 闪电抗性\n60 to 90 Physical Thorns damage"
     },
     {
       "name": "Corruption Whorl (黄玉戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 19 to 31 [Cold] damage to [Attack|Attacks]\n+118 to maximum Life\n+175 to maximum Mana\n+31% to [Resistances|Lightning Resistance]\n+19% to [Resistances|Chaos Resistance]\n[ManaLeech|Leech] 6.45% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +29% 闪电抗性\n附加 19 - 31 Attacks\n+118 最大生命\n+175 最大魔力\n+31% 闪电抗性\n+19% 混沌抗性\nLeech 6.45% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Rune Roar (Jade Talisman)",
@@ -61,7 +61,7 @@
       "baseType": "Jade Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvTHVtYmVyaW5nVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75c7ed525d/LumberingTalisman.png",
       "rarity": 2,
-      "desc": "167% increased [Physical] Damage\nAdds 34 to 50 [Physical|Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 27% of Damage as Extra [Physical] Damage\n25% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 54%\n(符文) Bonded: effect of Fully Broken 护甲提高 60%\n[Physical] Damage提高 167%\n附加 34 - 50 物理伤害\n+5 Level of all [Attack] Skills\n[Gain] 27% of Damage as Extra [Physical] Damage\n25% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "公理不存",
@@ -69,7 +69,7 @@
       "baseType": "Grand Manchettes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9TaW5lQWVxdW8iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e243b1f810/SineAequo.png",
       "rarity": 3,
-      "desc": "14% increased [SkillSpeed|Skill Speed]\n133% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n[Immobilised|Immobilise] enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage"
+      "desc": "(符文) Gain 2 Rage on Hit\n(符文) Bonded: Warcry 冷却回复速度提高 30%\nSkill Speed提高 14%\n护甲, 闪避值 and 能量护盾提高 133%\nImmobilise enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage\n(已腐化)"
     },
     {
       "name": "命运之抗争",
@@ -77,7 +77,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "12% increased maximum Life\n+13 to [Strength|Strength]\n33% increased Mana Regeneration Rate\nRecover 36% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Voracious\n(基底) +14 敏捷\n最大生命提高 12%\n+13 力量\n魔力回复速度提高 33%\nRecover 36% of Missing Life before being Hit by an Enemy"
     }
   ],
   "skills": [

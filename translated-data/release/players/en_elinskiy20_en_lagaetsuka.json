@@ -13,7 +13,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n35% increased [Evasion] and [EnergyShield|Energy Shield]\n+30% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 21% of [Evasion|Evasion Rating]\n+78 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n能量护盾提高 35%\n+30% 火焰抗性\n+35% 闪电抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating\n+78 晕眩门槛"
     },
     {
       "name": "Morbid Grip (裂隙戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 25 to 40 [Fire] damage to [Attack|Attacks]\nAdds 21 to 33 [Cold] damage to [Attack|Attacks]\nAdds 5 to 86 [Lightning] damage to [Attack|Attacks]\n+28 to [Strength|Strength]\n+37% to [Resistances|Cold Resistance]\n[LifeLeech|Leech] 10.1% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 25 - 40 Attacks\n附加 21 - 33 Attacks\n附加 5 - 86 Attacks\n+28 力量\n+37% 冰霜抗性\nLeech 10.1% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Cadiro's Gambit",
@@ -29,7 +29,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9VbmlxdWVzL1BlcmFuZHVzVHVybnN0aWxlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/49f9f76fa9/PerandusTurnstile.png",
       "rarity": 3,
-      "desc": "Each Arrow fired is a [UniqueArrowModifierChain|Crescendo], [UniqueArrowModifierSplit|Splinter], [UniqueArrowModifierPierceReturn|Reversing], [UniqueArrowModifierCrit|Diamond], [UniqueArrowModifierRarity|Covetous], or [UniqueArrowModifierStun|Blunt] Arrow"
+      "desc": "(附魔) Skill Speed提高 5%\n(基底) [Attack] Speed提高 10%\nEach Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow\n(已腐化)"
     },
     {
       "name": "Loath Charm (帝金护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+89 to maximum Mana\n+46 to [Spirit|Spirit]\n17% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Projectile] Skills\n26% increased Global [Defences]"
+      "desc": "(附魔) Allocates Patient Barrier\n(基底) 物品稀有度提高 16%\n+89 最大魔力\n+46 Spirit\n物品稀有度提高 17%\n+2 Level of all [Projectile] Skills\nGlobal [Defences]提高 26%"
     },
     {
       "name": "Vengeance Cloak",
@@ -45,7 +45,7 @@
       "baseType": "Falconer's Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/512e4bd095/BodyDexInt06.png",
       "rarity": 2,
-      "desc": "+39 to [Evasion] Rating\n+15 to maximum [EnergyShield|Energy Shield]\n142% increased [Evasion] and [EnergyShield|Energy Shield]\n+33 to [Intelligence|Intelligence]\n+21% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 22% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 移动速度提高 5%\n+39 [闪避值] Rating\n+15 最大能量护盾\n能量护盾提高 142%\n+33 智慧\n+21% 闪电抗性\nGain Deflection Rating equal to 22% of 闪避值 Rating"
     },
     {
       "name": "Bramble Spike (精工箭袋)",
@@ -53,7 +53,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 10%\n(已腐化)"
     },
     {
       "name": "Gale Loop (蓝玉戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 21 to 28 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 27 to 42 [Fire] damage to [Attack|Attacks]\nAdds 3 to 80 [Lightning] damage to [Attack|Attacks]\n+25% to [Resistances|Fire Resistance]\n15.1 Life Regeneration per second\n59% increased Mana Regeneration Rate"
+      "desc": "(基底) +28% 冰霜抗性\n附加 21 - 28 物理伤害 to Attacks\n附加 27 - 42 Attacks\n附加 3 - 80 Attacks\n+25% 火焰抗性\n15.1 Life Regeneration per second\n魔力回复速度提高 59%"
     },
     {
       "name": "奇思妙想",
@@ -69,7 +69,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "14% increased [Charm] Charges gained\n3% reduced [Charm] Charges used\n30% increased bonuses gained from left Equipped Ring\n28% increased bonuses gained from right Equipped Ring"
+      "desc": "(附魔) 最大能量护盾提高 22%\n(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 14%\n[Charm] Charges used降低 3%\nbonuses gained from left Equipped Ring提高 30%\nbonuses gained from right Equipped Ring提高 28%\n(已腐化)"
     },
     {
       "name": "Damnation Nock (双子之弓)",
@@ -77,7 +77,7 @@
       "baseType": "Gemini Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0a606586d/Bow06.png",
       "rarity": 2,
-      "desc": "Adds 2 to 192 [Lightning|Lightning] Damage\n+532 to [Accuracy|Accuracy] Rating\n[Gain] 18% of Damage as Extra [Lightning] Damage\n+3 to Level of all [Attack] Skills\n22% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +50% Surpassing chance to fire an additional Arrow\n附加 2 - 192 闪电伤害\n+532 Accuracy Rating\n[Gain] 18% of Damage as Extra [Lightning] Damage\n+3 Level of all [Attack] Skills\n22% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "精华收割器",
@@ -85,7 +85,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "67% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 37 [Lightning] damage to [Attack|Attacks]\n+21 to [Intelligence|Intelligence]\n+37% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n能量护盾提高 67%\n附加 1 - 37 Attacks\n+21 智慧\n+37% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     },
     {
       "name": "Woe Visor (卡马萨冠冕)",
@@ -93,7 +93,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+69 to maximum [EnergyShield|Energy Shield]\n124% increased [EnergyShield|Energy Shield]\n+35 to maximum Mana\n+40% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+69 最大能量护盾\n能量护盾提高 124%\n+35 最大魔力\n+40% 火焰抗性\n+34% 冰霜抗性"
     }
   ],
   "skills": [

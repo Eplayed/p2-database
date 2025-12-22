@@ -1,0 +1,542 @@
+[
+  {
+    "en": "Golden Bracers",
+    "cn": "黄金臂甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/DemigodsTouch.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stocky Mitts",
+    "cn": "敦实护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Riveted Mitts",
+    "cn": "铆接护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tempered Mitts",
+    "cn": "淬炼护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bolstered Mitts",
+    "cn": "增固护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Moulded Mitts",
+    "cn": "铸锻护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Detailed Mitts",
+    "cn": "精工护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Titan Mitts",
+    "cn": "泰坦护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Mitts",
+    "cn": "堂皇护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Suede Bracers",
+    "cn": "绒皮护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Firm Bracers",
+    "cn": "牢固护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bound Bracers",
+    "cn": "缚革护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sectioned Bracers",
+    "cn": "截片护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spined Bracers",
+    "cn": "精纺护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fine Bracers",
+    "cn": "精工护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hardened Bracers",
+    "cn": "硬化护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Engraved Bracers",
+    "cn": "雕饰护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Torn Gloves",
+    "cn": "破碎手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sombre Gloves",
+    "cn": "肃穆手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stitched Gloves",
+    "cn": "缝合手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jewelled Gloves",
+    "cn": "宝石手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Intricate Gloves",
+    "cn": "精致手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pauascale Gloves",
+    "cn": "海灵鳞缀手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Embroidered Gloves",
+    "cn": "刺绣手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Adorned Gloves",
+    "cn": "华饰手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ringmail Gauntlets",
+    "cn": "环锁手甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Layered Gauntlets",
+    "cn": "垫层护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Doubled Gauntlets",
+    "cn": "合钢手甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plate Gauntlets",
+    "cn": "铁板护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Burnished Gauntlets",
+    "cn": "冷芒手甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ornate Gauntlets",
+    "cn": "华贵护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rope Cuffs",
+    "cn": "绳索袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Aged Cuffs",
+    "cn": "风霜袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Goldcast Cuffs",
+    "cn": "金索袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Verisium Cuffs",
+    "cn": "维金袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Righteous Cuffs",
+    "cn": "正义袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr05png.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Signet Cuffs",
+    "cn": "纹饰袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gauze Wraps",
+    "cn": "薄纱裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Linen Wraps",
+    "cn": "亚麻裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spiral Wraps",
+    "cn": "螺旋裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Buckled Wraps",
+    "cn": "扣带裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Furtive Wraps",
+    "cn": "鬼祟裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Utility Wraps",
+    "cn": "万用裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Manchettes",
+    "cn": "恢弘袖口",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plated Mitts",
+    "cn": "坚铁护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Mitts",
+    "cn": "优雅护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancient Mitts",
+    "cn": "远古护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Feathered Mitts",
+    "cn": "羽饰护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hunting Bracers",
+    "cn": "狩猎护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Swift Bracers",
+    "cn": "迅捷护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Refined Bracers",
+    "cn": "精制护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spiked Bracers",
+    "cn": "尖刺护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ominous Gloves",
+    "cn": "噩兆手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Embellished Gloves",
+    "cn": "华饰手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Baroque Gloves",
+    "cn": "巴洛克手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gold Gloves",
+    "cn": "黄金手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ironmail Gauntlets",
+    "cn": "铁甲手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Captain Gauntlets",
+    "cn": "队长手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Zealot Gauntlets",
+    "cn": "狂热者手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Braided Cuffs",
+    "cn": "编织袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heirloom Cuffs",
+    "cn": "传家袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ornate Cuffs",
+    "cn": "华丽袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bandage Wraps",
+    "cn": "绷带裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cambric Wraps",
+    "cn": "细麻布裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Adorned Wraps",
+    "cn": "华饰裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Knightly Mitts",
+    "cn": "骑士护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ornate Mitts",
+    "cn": "华丽护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Mitts",
+    "cn": "瓦尔护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Massive Mitts",
+    "cn": "巨型护手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stalking Bracers",
+    "cn": "潜行护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Bracers",
+    "cn": "宏伟护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Barbed Bracers",
+    "cn": "倒刺护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Polished Bracers",
+    "cn": "闪耀护腕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grim Gloves",
+    "cn": "冷酷手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Opulent Gloves",
+    "cn": "丰裕手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Gloves",
+    "cn": "瓦尔手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sirenscale Gloves",
+    "cn": "海妖之鳞手套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Steelmail Gauntlets",
+    "cn": "钢甲手甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Commander Gauntlets",
+    "cn": "军官手甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cultist Gauntlets",
+    "cn": "密会手甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blacksteel Gauntlets",
+    "cn": "黑钢手甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bound Cuffs",
+    "cn": "缚革袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancient Cuffs",
+    "cn": "远古袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gleaming Cuffs",
+    "cn": "闪亮袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Adherent Cuffs",
+    "cn": "信徒袖带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "War Wraps",
+    "cn": "战争裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Wraps",
+    "cn": "雅致裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Wraps",
+    "cn": "瓦尔裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Secured Wraps",
+    "cn": "坚固裹手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "DNT-UNUSED Hand Wraps",
+    "cn": "[DNT-UNUSED] Hand Wraps",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Basetypes/GlovesDexInt04.webp",
+    "type": "base_item"
+  }
+]

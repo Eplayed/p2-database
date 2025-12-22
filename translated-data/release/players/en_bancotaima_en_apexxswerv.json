@@ -13,7 +13,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+85 to [Evasion] Rating\n+32 to maximum [EnergyShield|Energy Shield]\n110% increased [Evasion] and [EnergyShield|Energy Shield]\n+23% to [Resistances|Cold Resistance]\nGain [Deflect|Deflection Rating] equal to 17% of [Evasion|Evasion Rating]\n60% reduced Duration of [Bleeding] on You"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+85 [闪避值] Rating\n+32 最大能量护盾\n能量护盾提高 110%\n+23% 冰霜抗性\nGain Deflection Rating equal to 17% of 闪避值 Rating\nDuration of [Bleeding] on You降低 60%"
     },
     {
       "name": "Doom Core (摧城弩)",
@@ -21,7 +21,7 @@
       "baseType": "Siege Crossbow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Dcm9zc2Jvd3MvMkhDcm9zc2JvdzA3IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7153259b14/2HCrossbow07.png",
       "rarity": 2,
-      "desc": "Adds 58 to 105 [Fire|Fire] Damage\nAdds 7 to 276 [Lightning|Lightning] Damage\n[Gain] 28% of Damage as Extra [Lightning] Damage\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile\n附加 58 - 105 火焰伤害\n附加 7 - 276 闪电伤害\n[Gain] 28% of Damage as Extra [Lightning] Damage\n+5 Level of all [Attack] Skills"
     },
     {
       "name": "Shavronne's Satchel",
@@ -29,7 +29,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
       "rarity": 3,
-      "desc": "21% reduced [Flask] Life Recovery rate\n+25 to [Intelligence|Intelligence]\n25% increased [Flask|Flask] Charges gained\nLife Recovery from [Flask|Flasks] also applies to [EnergyShield|Energy Shield]"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 21%\n+25 智慧\nFlask Charges gained提高 25%\nLife Recovery from Flasks also applies to 能量护盾"
     },
     {
       "name": "Damnation Salvation (先祖冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+65 to maximum [EnergyShield|Energy Shield]\n74% increased [EnergyShield|Energy Shield]\n+58 to [Accuracy|Accuracy] Rating\n16% increased [ItemRarity|Rarity of Items] found\n+33% to [Resistances|Cold Resistance]\n15% increased [LightRadius|Light Radius]"
+      "desc": "(附魔) Attribute Requirements降低 14%\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+65 最大能量护盾\n能量护盾提高 74%\n+58 Accuracy Rating\n物品稀有度提高 16%\n+33% 冰霜抗性\nLight Radius提高 15%\n(已腐化)"
     },
     {
       "name": "Ming's Heart",
@@ -45,7 +45,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9NaW5nc0hlYXJ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/aa98f01580/MingsHeart.png",
       "rarity": 3,
-      "desc": "20% reduced maximum Life\n[Gain] 48% of Damage as Extra [Chaos] Damage\n30% reduced Global [Defences]"
+      "desc": "(附魔) Damage提高 21%\n(基底) +14% 混沌抗性\n最大生命降低 20%\n[Gain] 48% of Damage as Extra [Chaos] Damage\nGlobal [Defences]降低 30%\n(已腐化)"
     },
     {
       "name": "Plague Trail (缚革鞋履)",
@@ -53,7 +53,7 @@
       "baseType": "Bound Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8a97a69384/BootsInt02.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+58 to maximum [EnergyShield|Energy Shield]\n+35% to [Resistances|Fire Resistance]\n+33% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n移动速度提高 30%\n+58 最大能量护盾\n+35% 火焰抗性\n+33% 冰霜抗性\n+38% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Ming's Heart",
@@ -61,7 +61,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9NaW5nc0hlYXJ0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/aa98f01580/MingsHeart.png",
       "rarity": 3,
-      "desc": "20% reduced maximum Life\n[Gain] 48% of Damage as Extra [Chaos] Damage\n30% reduced Global [Defences]"
+      "desc": "(附魔) Skill Speed提高 4%\n(基底) +9% 混沌抗性\n最大生命降低 20%\n[Gain] 48% of Damage as Extra [Chaos] Damage\nGlobal [Defences]降低 30%\n(已腐化)"
     },
     {
       "name": "Viper Paw (海灵鳞缀手套)",
@@ -69,7 +69,7 @@
       "baseType": "Pauascale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "+50 to maximum [EnergyShield|Energy Shield]\nAdds 10 to 15 [Physical|Physical] Damage to [Attack|Attacks]\n+32 to maximum Mana\n15% increased [Attack] Speed\n+37% to [Resistances|Fire Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+50 最大能量护盾\n附加 10 - 15 物理伤害 to Attacks\n+32 最大魔力\n[Attack] Speed提高 15%\n+37% 火焰抗性\n+34% 闪电抗性"
     },
     {
       "name": "Blood Scarab (血岩护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Bloodstone Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQmxvb2RzdG9uZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f8bbf74c8e/BloodstoneAmulet.png",
       "rarity": 2,
-      "desc": "+86 to maximum [EnergyShield|Energy Shield]\n58% increased maximum [EnergyShield|Energy Shield]\n36% increased [CriticalDamageBonus|Critical Damage Bonus]\n+17 to all [Attributes|Attributes]\n31% increased Global [Defences]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +39 最大生命\n+86 最大能量护盾\n最大能量护盾提高 58%\nCritical Damage Bonus提高 36%\n+17 全属性\nGlobal [Defences]提高 31%"
     }
   ],
   "skills": [

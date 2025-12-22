@@ -13,7 +13,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+50 to maximum Life\n+27 to [Strength|Strength]\n+39 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 28%\n(基底) Has 2 [Charm] Slots\n+50 最大生命\n+27 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Storm Grip (金光戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 27 to 40 [Fire] damage to [Attack|Attacks]\nAdds 25 to 39 [Cold] damage to [Attack|Attacks]\n34% increased [ItemRarity|Rarity of Items] found\n+17% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 27 - 40 Attacks\n附加 25 - 39 Attacks\n物品稀有度提高 34%\n+17% 混沌抗性"
     },
     {
       "name": "Victory Crown (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n40% increased [EnergyShield|Energy Shield]\n+44 to maximum Life\n17% increased [ItemRarity|Rarity of Items] found\n+31 to [Intelligence|Intelligence]\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+73 最大能量护盾\n能量护盾提高 40%\n+44 最大生命\n物品稀有度提高 17%\n+31 智慧\n+38% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Gale Idol (血岩护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Bloodstone Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQmxvb2RzdG9uZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f8bbf74c8e/BloodstoneAmulet.png",
       "rarity": 2,
-      "desc": "51% increased [Evasion|Evasion Rating]\n56% increased maximum [EnergyShield|Energy Shield]\n+32% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n+40% to [Resistances|Lightning Resistance]\n32% increased Global [Defences]"
+      "desc": "(附魔) Allocates Stormcharged\n(基底) +30 最大生命\n闪避值 Rating提高 51%\n最大能量护盾提高 56%\n+32% 火焰抗性\n+34% 冰霜抗性\n+40% 闪电抗性\nGlobal [Defences]提高 32%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -45,7 +45,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "67% increased [Evasion|Evasion] Rating\n24% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+13 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) +22% 混沌抗性\n闪避值 Rating提高 67%\n暴击率提高 24%\n[Attack] Speed提高 5%\n+13 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Soul Stride (骑兵长靴)",
@@ -53,7 +53,7 @@
       "baseType": "Cavalry Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5a8bec4689/BootsDex04.png",
       "rarity": 2,
-      "desc": "+96 to [Evasion] Rating\n95% increased [Evasion|Evasion] Rating\n+29% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]\n+24% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+96 [闪避值] Rating\n闪避值 Rating提高 95%\n+29% 火焰抗性\n+37% 冰霜抗性\n+24% 混沌抗性"
     },
     {
       "name": "Spirit Shelter (滑布外衣)",
@@ -61,7 +61,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+118 to [Evasion] Rating\n+46 to maximum [EnergyShield|Energy Shield]\n+31% to [Resistances|Fire Resistance]\n+31% to [Resistances|Cold Resistance]\nGain [Deflect|Deflection Rating] equal to 22% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n+118 [闪避值] Rating\n+46 最大能量护盾\n+31% 火焰抗性\n+31% 冰霜抗性\nGain Deflection Rating equal to 22% of 闪避值 Rating\n(已腐化)"
     },
     {
       "name": "Mind Circle (潜能之戒)",
@@ -69,7 +69,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 15 to 21 [Cold] damage to [Attack|Attacks]\nAdds 4 to 68 [Lightning] damage to [Attack|Attacks]\n36% increased [Cold] Damage\n+38% to [Resistances|Cold Resistance]\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 15 - 21 Attacks\n附加 4 - 68 Attacks\n[Cold] Damage提高 36%\n+38% 冰霜抗性\n+39% 闪电抗性"
     },
     {
       "name": "Maelström Mast (打击节杖)",
@@ -77,7 +77,7 @@
       "baseType": "Striking Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/23459cf5a8/Warstaff02.png",
       "rarity": 2,
-      "desc": "[Gain] 28% of Damage as Extra [Cold] Damage\n+4.87% to [Critical|Critical Hit] Chance\n23% increased [Attack] Speed\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) 附加 19 - 28 冰霜伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 冰霜抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) [Melee] [Strike] Range with this weapon提高 16%\n[Gain] 28% of Damage as Extra [Cold] Damage\n+4.87% 暴击率\n[Attack] Speed提高 23%\n+5 Level of all [Attack] Skills"
     }
   ],
   "skills": [

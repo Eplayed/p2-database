@@ -13,7 +13,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+121 to [Evasion] Rating\n+48 to maximum [EnergyShield|Energy Shield]\n+33% to [Resistances|Fire Resistance]\n+24% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 26% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n+121 [闪避值] Rating\n+48 最大能量护盾\n+33% 火焰抗性\n+24% 闪电抗性\nGain Deflection Rating equal to 26% of 闪避值 Rating\n(已腐化)"
     },
     {
       "name": "Brimstone Grip (军官手甲)",
@@ -21,7 +21,7 @@
       "baseType": "Commander Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cb6b02463/GlovesStrDex02.png",
       "rarity": 2,
-      "desc": "Adds 13 to 31 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 71 [Lightning] damage to [Attack|Attacks]\n27% increased [CriticalDamageBonus|Critical Damage Bonus]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 附加 8 - 19 物理伤害 to Attacks\n(符文) [Attack] Speed提高 12%\n(符文) +22% 闪电抗性\n(符文) Bonded: +16 最大生命\n(符文) Bonded: +16 最大魔力\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n(符文) Bonded: Fissure Skills have +3 [Limit]\n附加 13 - 31 物理伤害 to Attacks\n附加 2 - 71 Attacks\nCritical Damage Bonus提高 27%\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -37,7 +37,7 @@
       "baseType": "Gemini Crossbow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Dcm9zc2Jvd3MvMkhDcm9zc2JvdzA1IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/28ab8c9744/2HCrossbow05.png",
       "rarity": 2,
-      "desc": "[Gain] 32% of Damage as Extra [Cold] Damage\n+4.93% to [Critical|Critical Hit] Chance\n+5 to Level of all [Attack] Skills\n22% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Loads an additional bolt\n[Gain] 32% of Damage as Extra [Cold] Damage\n+4.93% 暴击率\n+5 Level of all [Attack] Skills\n22% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Bramble Peak (卡马萨冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n68% increased [EnergyShield|Energy Shield]\n+30 to [Intelligence|Intelligence]\n+36% to [Resistances|Lightning Resistance]\n+17% to [Resistances|Chaos Resistance]"
+      "desc": "(附魔) +27 Spirit\n(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+73 最大能量护盾\n能量护盾提高 68%\n+30 智慧\n+36% 闪电抗性\n+17% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Headhunter (重革腰带)",
@@ -53,7 +53,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiIsInJlbGljIjowfV0/7518a96138/Headhunter.png",
       "rarity": 9,
-      "desc": "+57 to maximum Life\n+30 to [Strength|Strength]\n+39 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +24% 火焰抗性\n(基底) 晕眩门槛提高 21%\n(基底) Has 2 [Charm] Slots\n+57 最大生命\n+30 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Armageddon Dash (龙皮长靴)",
@@ -61,7 +61,7 @@
       "baseType": "Drakeskin Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8da0bb2ea6/BootsDex06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+120 to maximum Life\n+31% to [Resistances|Fire Resistance]\n+25% to [Resistances|Chaos Resistance]\nGain [Deflect|Deflection Rating] equal to 21% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+120 最大生命\n+31% 火焰抗性\n+25% 混沌抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating"
     },
     {
       "name": "赤红护身符",
@@ -69,7 +69,7 @@
       "baseType": "Surefooted Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 Penalty from using Skills while moving降低 9%"
     },
     {
       "name": "赤红护身符",
@@ -77,7 +77,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 8%"
     },
     {
       "name": "赤红护身符",
@@ -85,7 +85,7 @@
       "baseType": "Commanding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) Presence Area of Effect提高 25%"
     },
     {
       "name": "Torment Spiral (金光戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 25 to 43 [Cold] damage to [Attack|Attacks]\nAdds 2 to 64 [Lightning] damage to [Attack|Attacks]\n19% increased [ItemRarity|Rarity of Items] found\n+19% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 物品稀有度提高 15%\n附加 25 - 43 Attacks\n附加 2 - 64 Attacks\n物品稀有度提高 19%\n+19% all Elemental [Resistances]"
     },
     {
       "name": "赤红护身符",
@@ -101,7 +101,7 @@
       "baseType": "Evasive Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 闪避值 Rating提高 28%"
     },
     {
       "name": "Entropy Medallion (日曜护身符)",
@@ -109,7 +109,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+41 to [Spirit|Spirit]\n+30 to [Strength|Strength]\n+22 to [Intelligence|Intelligence]\n30% increased Global [Defences]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +14 Spirit\n+41 Spirit\n+30 力量\n+22 智慧\nGlobal [Defences]提高 30%"
     }
   ],
   "skills": [
@@ -202,9 +202,9 @@
           "isSupport": false
         },
         {
-          "name": "Atziri's Impatience",
-          "originalName": "Atziri's Impatience",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0F0emlyaUltcGF0aWVuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d4b055488e/AtziriImpatience.png",
+          "name": "冷却回复 II",
+          "originalName": "Cooldown Recovery II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db29sZG93blJlZHVjdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/aeed090552/CooldownReductionSupportGem.png",
           "isSupport": true
         },
         {

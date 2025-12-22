@@ -13,7 +13,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "+64 to maximum Life\n9% increased maximum Mana\n+3 to Level of all [Spell|Spell] Skills\n22% increased [Critical|Critical Hit] Chance\n+26 to [Dexterity|Dexterity]"
+      "desc": "(附魔) Allocates Barbaric 力量\n(基底) +29 最大能量护盾\n+64 最大生命\n最大魔力提高 9%\n+3 Level of all Spell Skills\n暴击率提高 22%\n+26 敏捷"
     },
     {
       "name": "Foe Nail (裂隙戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+118 to maximum Life\n+245 to maximum Mana\n7% increased maximum Mana\n+38% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]\n+28% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n+118 最大生命\n+245 最大魔力\n最大魔力提高 7%\n+38% 火焰抗性\n+35% 冰霜抗性\n+28% 闪电抗性"
     },
     {
       "name": "Entropy Trail (沙誓鞋履)",
@@ -29,7 +29,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n99% increased [EnergyShield|Energy Shield]\n+111 to maximum Mana\n+33 to [Intelligence|Intelligence]\n+22% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +35 最大魔力\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 99%\n+111 最大魔力\n+33 智慧\n+22% 冰霜抗性"
     },
     {
       "name": "Behemoth Thirst (调谐法杖)",
@@ -37,7 +37,7 @@
       "baseType": "Attuned Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDAzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e3b38f8f2b/Wand03.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Cold] Damage\n70% increased [Spell] Damage\n+5 to Level of all [Cold|Cold] [Spell|Spell] Skills\n51% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n+33 to [Intelligence|Intelligence]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 70%\n+5 Level of all Cold Spell Skills\n暴击率 for Spells提高 51%\n+33 智慧"
     },
     {
       "name": "Armageddon Whorl (裂隙戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+130 to [Accuracy|Accuracy] Rating\n+239 to maximum Mana\n7% increased maximum Mana\n21% increased Cast Speed\n+13% to all [ElementalDamage|Elemental] [Resistances]\n+26% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n+130 Accuracy Rating\n+239 最大魔力\n最大魔力提高 7%\n施法速度提高 21%\n+13% all Elemental [Resistances]\n+26% 闪电抗性"
     },
     {
       "name": "血誓",
@@ -53,7 +53,7 @@
       "baseType": "Altar Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL1RoZUNvdmVuYW50IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/90335a8685/TheCovenant.png",
       "rarity": 3,
-      "desc": "116% increased [EnergyShield|Energy Shield]\n+129 to maximum Life\n10% of [Spell] Damage [LifeLeech|Leeched as Life]"
+      "desc": "(符文) +80 最大生命\n(符文) +14% 闪电抗性\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n能量护盾提高 116%\n+129 最大生命\n10% of Leeched as Life\n(已腐化)"
     },
     {
       "name": "Vortex Girdle (万用腰带)",
@@ -61,7 +61,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQxMCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d95952e174/Belt10.png",
       "rarity": 2,
-      "desc": "+137 to maximum Life\n+116 to maximum Mana\n+39% to [Resistances|Fire Resistance]\n+16% to [Resistances|Lightning Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) Has 3 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n+137 最大生命\n+116 最大魔力\n+39% 火焰抗性\n+16% 闪电抗性\n+19% 混沌抗性"
     },
     {
       "name": "Rage Halo (先祖冠冕)",
@@ -69,7 +69,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+72 to maximum [EnergyShield|Energy Shield]\n95% increased [EnergyShield|Energy Shield]\n+28 to [Intelligence|Intelligence]\n+22% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 最大魔力提高 3%\n(符文) +1 最大魔力 per 2 Item 能量护盾 on [Equipped] Helmet\n+72 最大能量护盾\n能量护盾提高 95%\n+28 智慧\n+22% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Atziri's Acuity",
@@ -77,7 +77,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "98% increased [Armour|Armour]\n49% increased [Critical|Critical Hit] Chance\n+29 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) +70 最大魔力\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲提高 98%\n暴击率提高 49%\n+29 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "Ghoul Crack (预兆短杖)",
@@ -85,7 +85,7 @@
       "baseType": "Omen Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d2cc9f0ac1/Sceptre04.png",
       "rarity": 2,
-      "desc": "88% increased [Spirit|Spirit]\n+196 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] have 20% increased [Critical|Critical Hit] Chance\n[Allies|Allies] in your [Presence|Presence] have +11% to all [ElementalDamage|Elemental] [Resistances|Resistances]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\nSpirit提高 88%\n+196 最大魔力\nAllies in your Presence have 暴击率提高 20%\nAllies in your Presence have +11% all 元素抗性"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Falconer's Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/512e4bd095/BodyDexInt06.png",
       "rarity": 2,
-      "desc": "+119 to [Evasion] Rating\n+46 to maximum [EnergyShield|Energy Shield]\n93% increased [Evasion] and [EnergyShield|Energy Shield]\n+58 to [Spirit|Spirit]\n+30 to [Dexterity|Dexterity]\n+39% to [Resistances|Fire Resistance]\n+185 to [StunThreshold|Stun Threshold]"
+      "desc": "(附魔) 3% additional [Physical] Damage Reduction\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 移动速度提高 5%\n+119 [闪避值] Rating\n+46 最大能量护盾\n能量护盾提高 93%\n+58 Spirit\n+30 敏捷\n+39% 火焰抗性\n+185 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Blight Scarab (血岩护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Bloodstone Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQmxvb2RzdG9uZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f8bbf74c8e/BloodstoneAmulet.png",
       "rarity": 2,
-      "desc": "4% increased [Spell] Damage\n+50 to [Spirit|Spirit]\n25% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Projectile] Skills\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) Allocates Kite Runner\n(基底) +40 最大生命\n[Spell] Damage提高 4%\n+50 Spirit\n物品稀有度提高 25%\n+2 Level of all [Projectile] Skills\n+33% 闪电抗性"
     },
     {
       "name": "Ghoul Band (珠玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "Adds 3 to 64 [Lightning] damage to [Attack|Attacks]\n17% increased [ItemRarity|Rarity of Items] found\n+27 to [Strength|Strength]\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+50% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 施法速度提高 10%\n附加 3 - 64 Attacks\n物品稀有度提高 17%\n+27 力量\n+16% all Elemental [Resistances]\n+50% 闪电抗性"
     },
     {
       "name": "Carrion Span (林奔者便鞋)",
@@ -37,7 +37,7 @@
       "baseType": "Treerunner Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f36ea8ace2/BootsDexInt03.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n26% increased [Evasion] and [EnergyShield|Energy Shield]\n+82 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n+42% to [Resistances|Fire Resistance]\n+31 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 35%\n能量护盾提高 26%\n+82 最大魔力\n物品稀有度提高 17%\n+42% 火焰抗性\n+31 晕眩门槛"
     },
     {
       "name": "猎首",
@@ -45,7 +45,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+30 to [Strength|Strength]\n+26 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 25%\n(基底) Has 3 [Charm] Slots\n+58 最大生命\n+30 力量\n+26 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Cadiro's Gambit",
@@ -53,7 +53,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9VbmlxdWVzL1BlcmFuZHVzVHVybnN0aWxlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/49f9f76fa9/PerandusTurnstile.png",
       "rarity": 3,
-      "desc": "Each Arrow fired is a [UniqueArrowModifierChain|Crescendo], [UniqueArrowModifierSplit|Splinter], [UniqueArrowModifierPierceReturn|Reversing], [UniqueArrowModifierCrit|Diamond], [UniqueArrowModifierRarity|Covetous], or [UniqueArrowModifierStun|Blunt] Arrow"
+      "desc": "(附魔) Skill Speed提高 5%\n(基底) [Attack] Speed提高 8%\nEach Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow\n(已腐化)"
     },
     {
       "name": "Eagle Breeze (寻战之弓)",
@@ -61,7 +61,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "209% increased [Physical] Damage\nAdds 30 to 66 [Physical|Physical] Damage\n+101 to [Accuracy|Accuracy] Rating\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 18%\n(符文) Bow Attacks fire an additional Arrow\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: effect of Fully Broken 护甲提高 20%\n[Physical] Damage提高 209%\n附加 30 - 66 物理伤害\n+101 Accuracy Rating\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Empyrean Knuckle (蓝玉戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 16 to 31 [Fire] damage to [Attack|Attacks]\nAdds 20 to 37 [Cold] damage to [Attack|Attacks]\n30% increased [Cold] Damage\n+37% to [Resistances|Cold Resistance]\n+31% to [Resistances|Lightning Resistance]\n+14% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +32% 冰霜抗性\n附加 16 - 31 Attacks\n附加 20 - 37 Attacks\n[Cold] Damage提高 30%\n+37% 冰霜抗性\n+31% 闪电抗性\n+14% 混沌抗性"
     },
     {
       "name": "Oblivion Brow (先祖冠冕)",
@@ -77,7 +77,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+71 to maximum [EnergyShield|Energy Shield]\n69% increased [EnergyShield|Energy Shield]\n35% reduced [Attributes|Attribute] Requirements\n+35 to [Intelligence|Intelligence]\n+23% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+71 最大能量护盾\n能量护盾提高 69%\nAttribute Requirements降低 35%\n+35 智慧\n+23% 火焰抗性"
     },
     {
       "name": "Rapture Fingers (华饰裹手)",
@@ -85,7 +85,7 @@
       "baseType": "Adorned Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleEludDAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bdc7c3c15d/GlovesDexInt03.png",
       "rarity": 2,
-      "desc": "Adds 10 to 24 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 13 to 29 [Fire] damage to [Attack|Attacks]\nAdds 2 to 43 [Lightning] damage to [Attack|Attacks]\n17% increased [ItemRarity|Rarity of Items] found\n20% reduced [Attributes|Attribute] Requirements\n+34% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n附加 10 - 24 物理伤害 to Attacks\n附加 13 - 29 Attacks\n附加 2 - 43 Attacks\n物品稀有度提高 17%\nAttribute Requirements降低 20%\n+34% 冰霜抗性"
     }
   ],
   "skills": [

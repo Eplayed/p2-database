@@ -1,0 +1,140 @@
+[
+  {
+    "en": "Twig Focus",
+    "cn": "枝条法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Woven Focus",
+    "cn": "织造法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Antler Focus",
+    "cn": "鹿角法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Engraved Focus",
+    "cn": "铭刻法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tonal Focus",
+    "cn": "音调法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crystal Focus",
+    "cn": "水晶法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Voodoo Focus",
+    "cn": "巫毒法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plumed Focus",
+    "cn": "彩羽法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Runed Focus",
+    "cn": "符文法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Whorl Focus",
+    "cn": "涡旋法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Focus",
+    "cn": "优雅法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Attuned Focus",
+    "cn": "协调法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Magus Focus",
+    "cn": "术士法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wreath Focus",
+    "cn": "花环法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Staghorn Focus",
+    "cn": "鹿角法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jingling Focus",
+    "cn": "铃鸣法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Arrayed Focus",
+    "cn": "排列法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cultist Focus",
+    "cn": "密会法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hallowed Focus",
+    "cn": "神圣法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Druidic Focus",
+    "cn": "德鲁伊法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Leyline Focus",
+    "cn": "荒凉原野法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacred Focus",
+    "cn": "圣洁法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tasalian Focus",
+    "cn": "塔萨里奥法器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Foci/Basetypes/Focus10.webp",
+    "type": "base_item"
+  }
+]

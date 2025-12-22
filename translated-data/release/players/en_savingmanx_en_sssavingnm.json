@@ -13,7 +13,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 3 to 57 [Lightning] damage to [Attack|Attacks]\n+136 to maximum Mana\n18% increased [ItemRarity|Rarity of Items] found\n32% increased Cast Speed\n+34% to [Resistances|Fire Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 3 - 57 Attacks\n+136 最大魔力\n物品稀有度提高 18%\n施法速度提高 32%\n+34% 火焰抗性\n+36% 闪电抗性"
     },
     {
       "name": "Victory Torc (日曜护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+46 to [Spirit|Spirit]\n+13% to all [ElementalDamage|Elemental] [Resistances]\n+37% to [Resistances|Cold Resistance]\n36% increased Global [Defences]"
+      "desc": "(基底) +14 Spirit\n+46 Spirit\n+13% all Elemental [Resistances]\n+37% 冰霜抗性\nGlobal [Defences]提高 36%"
     },
     {
       "name": "Horror Guardian (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+72 to maximum [EnergyShield|Energy Shield]\n135% increased [EnergyShield|Energy Shield]\n+38 to maximum Life\n17% increased [ItemRarity|Rarity of Items] found\n+35% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+72 最大能量护盾\n能量护盾提高 135%\n+38 最大生命\n物品稀有度提高 17%\n+35% 火焰抗性"
     },
     {
       "name": "Hate Spark (丝克玛便鞋)",
@@ -37,7 +37,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+56 to maximum [EnergyShield|Energy Shield]\n+21 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +5% all Elemental [Resistances]\n移动速度提高 30%\n+56 最大能量护盾\n+21 最大生命\n物品稀有度提高 16%\n+36% 冰霜抗性\n+37% 闪电抗性"
     },
     {
       "name": "Doom Chant (塔萨里奥法器)",
@@ -45,7 +45,7 @@
       "baseType": "Tasalian Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "+80 to maximum [EnergyShield|Energy Shield]\n84% increased [EnergyShield|Energy Shield]\n+2 to Level of all [Spell|Spell] Skills\n27% increased Cast Speed\n49% increased Mana Regeneration Rate"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+80 最大能量护盾\n能量护盾提高 84%\n+2 Level of all Spell Skills\n施法速度提高 27%\n魔力回复速度提高 49%"
     },
     {
       "name": "Adonia's Ego",
@@ -53,7 +53,7 @@
       "baseType": "Siphoning Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9VbmlxdWVzL0NvdXJ0bHlEaXNjb3JkIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/761ae3ed19/CourtlyDiscord.png",
       "rarity": 3,
-      "desc": "+126 to maximum Mana\n+3 to Level of all [Spell|Spell] Skills\n26% increased Cast Speed\n-10% to all [ElementalDamage|Elemental] [Resistances] per [Charges|Power Charge]\n+1 to Maximum [Charges|Power Charges]"
+      "desc": "(符文) [Gain] 10% of Damage as Extra [Cold] Damage\n(符文) Elements\n(符文) Bonded: Freeze Buildup提高 30%\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n+126 最大魔力\n+3 Level of all Spell Skills\n施法速度提高 26%\n-10% to all Elemental Power Charge\n+1 Maximum Power Charges\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+45 to maximum Life\n+27 to [Strength|Strength]\n+23 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 2 [Charm] Slots\n+45 最大生命\n+27 力量\n+23 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Storm Clutches (巴洛克手套)",
@@ -69,7 +69,7 @@
       "baseType": "Baroque Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8882887a8e/GlovesInt04.png",
       "rarity": 2,
-      "desc": "+58 to maximum [EnergyShield|Energy Shield]\n128% increased [EnergyShield|Energy Shield]\n+28 to maximum Life\n+26% to [Resistances|Fire Resistance]\n40% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n+58 最大能量护盾\n能量护盾提高 128%\n+28 最大生命\n+26% 火焰抗性\n能量护盾 Recharge Rate提高 40%"
     },
     {
       "name": "Oblivion Hold (黄玉戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 24 [Fire] damage to [Attack|Attacks]\n+168 to maximum Mana\n37% increased [ItemRarity|Rarity of Items] found\n28% increased Cast Speed"
+      "desc": "(基底) +29% 闪电抗性\n附加 14 - 24 Attacks\n+168 最大魔力\n物品稀有度提高 37%\n施法速度提高 28%"
     },
     {
       "name": "Empyrean Skin (邪恶束衣)",
@@ -85,7 +85,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+89 to maximum [EnergyShield|Energy Shield]\n110% increased [EnergyShield|Energy Shield]\n+30 to [Spirit|Spirit]\n35% reduced [Attributes|Attribute] Requirements\n+21% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+89 最大能量护盾\n能量护盾提高 110%\n+30 Spirit\nAttribute Requirements降低 35%\n+21% 火焰抗性"
     }
   ],
   "skills": [

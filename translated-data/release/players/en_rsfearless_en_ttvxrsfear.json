@@ -13,7 +13,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 37% of Damage as Extra [Fire] Damage\n+5 to Level of all [Spell|Spell] Skills"
+      "desc": "[Gain] 37% of Damage as Extra [Fire] Damage\n+5 Level of all Spell Skills"
     },
     {
       "name": "Atziri's Splendour",
@@ -21,7 +21,7 @@
       "baseType": "Sacrificial Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0F0emlyaXNTcGxlbmRvdXIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/27da3616c7/AtzirisSplendour.png",
       "rarity": 3,
-      "desc": "Only [SoulCore|Soul Cores] can be Socketed in this item\n207% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+17% to all [ElementalDamage|Elemental] [Resistances]\nSkills from [Corrupted] Gems have 42% of Mana Costs [StatConversion|Converted] to Life Costs"
+      "desc": "(符文) +30% all Elemental [Resistances]\n(基底) +1 Level of all [Corrupted] Skill Gems\nOnly Soul Cores can be Socketed in this item\n护甲 and 能量护盾提高 207%\n+17% all Elemental [Resistances]\nSkills from Converted to Life Costs\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -37,7 +37,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "89% increased [Armour|Armour]\n47% increased [Critical|Critical Hit] Chance\n+29 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) +10% all Elemental [Resistances]\n(符文) Life Cost [Efficiency]提高 25%\n护甲提高 89%\n暴击率提高 47%\n+29 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "Blight Post (收割长杖)",
@@ -45,7 +45,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "[Gain] 54% of Damage as Extra [Fire] Damage\n[Gain] 53% of Damage as Extra [Lightning] Damage\n+5 to Level of all [Spell|Spell] Skills\n102% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n40% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 54% of Damage as Extra [Fire] Damage\n[Gain] 53% of Damage as Extra [Lightning] Damage\n+5 Level of all Spell Skills\n暴击率 for Spells提高 102%\n施法速度提高 40%"
     },
     {
       "name": "Bramble Gorget (翠玉护身符)",
@@ -53,7 +53,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvSmFkZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac51014172/JadeAmulet.png",
       "rarity": 2,
-      "desc": "+95 to maximum Life\n+3 to Level of all [Spell|Spell] Skills\n33% increased Cast Speed\n+18% to [Resistances|Chaos Resistance]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +14 敏捷\n+95 最大生命\n+3 Level of all Spell Skills\n施法速度提高 33%\n+18% 混沌抗性"
     },
     {
       "name": "灾变的种子",
@@ -61,7 +61,7 @@
       "baseType": "Lazuli Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TZWVkT2ZDYXRhY2x5c20iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4ae8a2cc6d/SeedOfCataclysm.png",
       "rarity": 3,
-      "desc": "50% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n57% increased [CriticalDamageBonus|Critical Spell Damage Bonus]\n+17% to [Resistances|Chaos Resistance]\n10% increased Mana Cost of Skills"
+      "desc": "(附魔) Damage提高 30%\n(基底) +28 最大魔力\n暴击率 for Spells提高 50%\nCritical 法术伤害 Bonus提高 57%\n+17% 混沌抗性\nMana Cost of Skills提高 10%\n(已腐化)"
     },
     {
       "name": "灵魂羁绊",
@@ -69,7 +69,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+43 to maximum [EnergyShield|Energy Shield]\n+26 to [Intelligence|Intelligence]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(附魔) +20% 冰霜抗性\n(基底) [Charm] Effect Duration提高 16%\n(基底) Has 2 [Charm] Slots\n+43 最大能量护盾\n+26 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "谜容",
@@ -77,7 +77,7 @@
       "baseType": "Tribal Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhlVmVydGV4IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/baf0218c37/TheVertex.png",
       "rarity": 3,
-      "desc": "Has no [Attributes|Attribute] Requirements\n136% increased [Evasion] and [EnergyShield|Energy Shield]\n31% increased [Critical|Critical Hit] Chance\n[Equipment] has no [Attributes|Attribute] Requirements"
+      "desc": "(符文) +5% all Elemental [Resistances]\nHas no Attribute Requirements\n能量护盾提高 136%\n暴击率提高 31%\nAttribute Requirements\n(已腐化)"
     },
     {
       "name": "Torment Span (丝克玛便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n94% increased [EnergyShield|Energy Shield]\n+123 to maximum Life\n+38% to [Resistances|Fire Resistance]\n+24% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +10% all Elemental [Resistances]\n移动速度提高 30%\n能量护盾提高 94%\n+123 最大生命\n+38% 火焰抗性\n+24% 冰霜抗性\n+38% 闪电抗性\n(已腐化)"
     }
   ],
   "skills": [

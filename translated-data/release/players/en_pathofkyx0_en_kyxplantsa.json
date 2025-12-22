@@ -13,7 +13,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 53% of Damage as Extra [Lightning] Damage\n131% increased [Spell] Damage\n+5 to Level of all [Spell|Spell] Skills\n70% increased [Critical|Critical Hit Chance] for [Spell|Spells]\nGain 46 Life per enemy killed"
+      "desc": "[Gain] 53% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 131%\n+5 Level of all Spell Skills\n暴击率 for Spells提高 70%\nGain 46 Life per enemy killed"
     },
     {
       "name": "Bramble Noose (星辉护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "+84 to maximum [EnergyShield|Energy Shield]\n51% increased maximum [EnergyShield|Energy Shield]\n25% increased Cast Speed\n+32% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Allocates Material Solidification\n(基底) +6 全属性\n+84 最大能量护盾\n最大能量护盾提高 51%\n施法速度提高 25%\n+32% 冰霜抗性"
     },
     {
       "name": "Dread Halo (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+54 to maximum [EnergyShield|Energy Shield]\n100% increased [EnergyShield|Energy Shield]\n+35% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]\n36% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n+54 最大能量护盾\n能量护盾提高 100%\n+35% 火焰抗性\n+37% 冰霜抗性\n能量护盾 Recharge Rate提高 36%"
     },
     {
       "name": "Headhunter (重革腰带)",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiIsInJlbGljIjowfV0/7518a96138/Headhunter.png",
       "rarity": 9,
-      "desc": "+52 to maximum Life\n+26 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 23%\n(基底) Has 3 [Charm] Slots\n+52 最大生命\n+26 力量\n+38 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Rapture Shroud (圣礼束衣)",
@@ -45,7 +45,7 @@
       "baseType": "Sacramental Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e1702b49d8/BodyInt08.png",
       "rarity": 2,
-      "desc": "+93 to maximum [EnergyShield|Energy Shield]\n109% increased [EnergyShield|Energy Shield]\n+27% to [Resistances|Cold Resistance]\n23.2 Life Regeneration per second\n+174 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 50% faster start of 能量护盾 Recharge\n+93 最大能量护盾\n能量护盾提高 109%\n+27% 冰霜抗性\n23.2 Life Regeneration per second\n+174 晕眩门槛"
     },
     {
       "name": "残酷雕塑",
@@ -53,7 +53,7 @@
       "baseType": "Antler Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL1VuaXF1ZXMvRWZmaWd5T2ZDcnVlbHR5IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7dd73b151e/EffigyOfCruelty.png",
       "rarity": 3,
-      "desc": "+25 to maximum [EnergyShield|Energy Shield]\n49% increased [Spell] Damage\n+10 to [Intelligence|Intelligence]\n+7% to [Resistances|Chaos Resistance]\n[Critical|Critical Hits] with [Spell|Spells] apply 3 Stacks of [CriticalWeakness|Critical Weakness]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+25 最大能量护盾\n[Spell] Damage提高 49%\n+10 智慧\n+7% 混沌抗性\nCritical Hits with Spells apply 3 Stacks of Critical Weakness"
     },
     {
       "name": "Skull Barrier (圣洁法器)",
@@ -61,7 +61,7 @@
       "baseType": "Sacred Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/64fc1e2b9f/Focus08.png",
       "rarity": 2,
-      "desc": "+84 to maximum [EnergyShield|Energy Shield]\n102% increased [EnergyShield|Energy Shield]\n+25 to maximum Mana\n12% increased Cast Speed\n50% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+84 最大能量护盾\n能量护盾提高 102%\n+25 最大魔力\n施法速度提高 12%\n50% faster start of 能量护盾 Recharge"
     },
     {
       "name": "Corruption Tread (沙誓鞋履)",
@@ -69,7 +69,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "34% increased Movement Speed\n+59 to maximum [EnergyShield|Energy Shield]\n+69 to maximum Mana\n+43% to [Resistances|Fire Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 34%\n+59 最大能量护盾\n+69 最大魔力\n+43% 火焰抗性\n+34% 闪电抗性"
     },
     {
       "name": "Cataclysm Pole (收割长杖)",
@@ -77,7 +77,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "[Gain] 57% of Damage as Extra [Fire] Damage\n64% increased [Spell] Damage\n172% increased [Spell] [Physical] Damage\n+64 to maximum Mana\n42% increased Cast Speed"
+      "desc": "(符文) [Spell] Damage提高 30%\n(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Break Critical Hit with Spells equal to 12% of 物理伤害 dealt\n[Gain] 57% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 64%\n[Spell] [Physical] Damage提高 172%\n+64 最大魔力\n施法速度提高 42%"
     },
     {
       "name": "Bramble Band (三相戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 24 [Lightning] damage to [Attack|Attacks]\n+26 to [Evasion] Rating\n+162 to maximum Mana\n24% increased Cast Speed\n+15% to all [ElementalDamage|Elemental] [Resistances]\n54% increased Mana Regeneration Rate"
+      "desc": "(基底) +12% all Elemental [Resistances]\n附加 1 - 24 Attacks\n+26 [闪避值] Rating\n+162 最大魔力\n施法速度提高 24%\n+15% all Elemental [Resistances]\n魔力回复速度提高 54%"
     },
     {
       "name": "Morbid Nail (红玉戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "Adds 10 to 16 [Cold] damage to [Attack|Attacks]\n+144 to maximum Mana\n26% increased [ItemRarity|Rarity of Items] found\n24% increased Cast Speed\n+12% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) +31% 火焰抗性\n附加 10 - 16 Attacks\n+144 最大魔力\n物品稀有度提高 26%\n施法速度提高 24%\n+12% all Elemental [Resistances]"
     },
     {
       "name": "夜鳞",
@@ -101,7 +101,7 @@
       "baseType": "Pauascale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9OaWdodHNjYWxlIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/854d34c57b/Nightscale.png",
       "rarity": 3,
-      "desc": "76% increased [EnergyShield|Energy Shield]\n53% increased [Critical|Critical Hit] Chance\n+13 to [Intelligence|Intelligence]\n+27% to [Resistances|Cold Resistance]\n159% increased Mana Regeneration Rate if you've dealt a [Critical|Critical Hit] [Recently]\nCannot Regenerate Mana if you haven't dealt a [Critical|Critical Hit] [Recently]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 76%\n暴击率提高 53%\n+13 智慧\n+27% 冰霜抗性\n魔力回复速度 if you've dealt a Critical Hit [Recently]提高 159%\nCannot Regenerate Mana if you haven't dealt a Critical Hit [Recently]\n(已腐化)"
     }
   ],
   "skills": [

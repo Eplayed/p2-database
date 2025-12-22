@@ -13,7 +13,7 @@
       "baseType": "Enlightened Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL1NpbGtzT2ZWZW5lcmF0aW9uIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3c2151ad54/SilksOfVeneration.png",
       "rarity": 3,
-      "desc": "225% increased [EnergyShield|Energy Shield]\n+41 to [Spirit|Spirit]\n+20 to [Intelligence|Intelligence]\n59% increased [ESRechargeRate|Energy Shield Recharge Rate]\nCurrent [EnergyShield|Energy Shield] also grants [ElementalDamage|Elemental Damage] reduction"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 魔力回复速度提高 46%\n能量护盾提高 225%\n+41 Spirit\n+20 智慧\n能量护盾 Recharge Rate提高 59%\nCurrent 能量护盾 also grants 元素伤害 reduction\n(已腐化)"
     },
     {
       "name": "烈火繁花",
@@ -21,7 +21,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0ZpcmVmbG93ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9430446301/Fireflower.png",
       "rarity": 3,
-      "desc": "12% increased [ItemRarity|Rarity of Items] found\n32% increased Mana Regeneration Rate\nTake 127 [Fire] Damage when you [Ignite] an Enemy\n+6 to Level of all [Fire] Skills"
+      "desc": "(基底) +12 Spirit\n物品稀有度提高 12%\n魔力回复速度提高 32%\nTake 127 [Fire] Damage when you [Ignite] an Enemy\n+6 Level of all [Fire] Skills\n(已腐化)"
     },
     {
       "name": "永恒紧缩之戒",
@@ -29,7 +29,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9FdmVyZ3Jhc3BpbmdSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2e75de4433/EvergraspingRing.png",
       "rarity": 3,
-      "desc": "+65 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] [Gain] 23% of Damage as Extra [Chaos] Damage\nEnemies in your [Presence|Presence] [Gain] 6% of Damage as Extra [Chaos] Damage"
+      "desc": "(附魔) +10% all Elemental [Resistances]\n(基底) 施法速度提高 7%\n+65 最大魔力\nAllies in your Presence [Gain] 23% of Damage as Extra [Chaos] Damage\nEnemies in your Presence [Gain] 6% of Damage as Extra [Chaos] Damage\n(已腐化)"
     },
     {
       "name": "Brimstone Peak (先祖冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "108% increased [EnergyShield|Energy Shield]\n+29 to maximum Life\n+2 to Level of all [Minion|Minion] Skills\n+31% to [Resistances|Cold Resistance]\n+27% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 108%\n+29 最大生命\n+2 Level of all Minion Skills\n+31% 冰霜抗性\n+27% 闪电抗性"
     },
     {
       "name": "烈阳残片",
@@ -45,7 +45,7 @@
       "baseType": "Array Buckler",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1VuaXF1ZXMvU3Vuc3BsaW50ZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/40019131cb/Sunsplinter.png",
       "rarity": 3,
-      "desc": "104% increased [Evasion|Evasion] Rating\n+2% to [MaximumResistances|Maximum Fire Resistance]\n+3% to [MaximumResistances|Maximum Cold Resistance]\n+1% to [MaximumResistances|Maximum Lightning Resistance]\n+2 to Level of all [Cold] Skills\n+4 to Level of all [Fire] Skills\n+1 to Level of all [Lightning] Skills"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n闪避值 Rating提高 104%\n+2% Maximum 火焰抗性\n+3% Maximum 冰霜抗性\n+1% Maximum 闪电抗性\n+2 Level of all [Cold] Skills\n+4 Level of all [Fire] Skills\n+1 Level of all [Lightning] Skills\n(已腐化)"
     },
     {
       "name": "Empyrean Palm (瓦尔手套)",
@@ -53,7 +53,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "+57 to maximum [EnergyShield|Energy Shield]\n137% increased [EnergyShield|Energy Shield]\n+40 to maximum Life\n+28% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]\n36% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+57 最大能量护盾\n能量护盾提高 137%\n+40 最大生命\n+28% 冰霜抗性\n+34% 闪电抗性\n能量护盾 Recharge Rate提高 36%"
     },
     {
       "name": "赤红护身符",
@@ -61,7 +61,7 @@
       "baseType": "Guarding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Block] chance提高 12%"
     },
     {
       "name": "赤红护身符",
@@ -69,7 +69,7 @@
       "baseType": "Commanding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) Presence Area of Effect提高 25%"
     },
     {
       "name": "Maelström Sole (丝克玛便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+52 to maximum [EnergyShield|Energy Shield]\n+36% to [Resistances|Fire Resistance]\n+39% to [Resistances|Lightning Resistance]\n+316 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n+52 最大能量护盾\n+36% 火焰抗性\n+39% 闪电抗性\n+316 晕眩门槛"
     },
     {
       "name": "Loath Leash (宽大腰带)",
@@ -85,7 +85,7 @@
       "baseType": "Wide Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwMyIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3dcd330357/Belt03.png",
       "rarity": 2,
-      "desc": "+135 to [Armour]\n38% increased [Flask] Life Recovery rate\n+43% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]\n+39% to [Resistances|Lightning Resistance]\n97 to 127 [Physical|Physical] [Thorns|Thorns] damage"
+      "desc": "(基底) Has 1 [Charm] Slot\n(基底) Flask Charges gained提高 22%\n+135 [护甲]\n[Flask] Life Recovery rate提高 38%\n+43% 火焰抗性\n+44% 冰霜抗性\n+39% 闪电抗性\n97 to 127 Physical Thorns damage"
     },
     {
       "name": "永恒紧缩之戒",
@@ -93,7 +93,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9FdmVyZ3Jhc3BpbmdSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2e75de4433/EvergraspingRing.png",
       "rarity": 3,
-      "desc": "+70 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] [Gain] 28% of Damage as Extra [Chaos] Damage\nEnemies in your [Presence|Presence] [Gain] 14% of Damage as Extra [Chaos] Damage"
+      "desc": "(附魔) +8% all Elemental [Resistances]\n(基底) 施法速度提高 9%\n+70 最大魔力\nAllies in your Presence [Gain] 28% of Damage as Extra [Chaos] Damage\nEnemies in your Presence [Gain] 14% of Damage as Extra [Chaos] Damage\n(已腐化)"
     },
     {
       "name": "Blood Blow (圣地短杖)",
@@ -101,7 +101,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA2YSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a6a4d69a6b/Sceptre06a.png",
       "rarity": 2,
-      "desc": "21% increased [Spirit|Spirit]\n+28 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 87% increased Damage\n[Allies|Allies] in your [Presence|Presence] deal 22 to 34 added [Attack|Attack] [Fire|Fire] Damage\n+4 to Level of all [Minion|Minion] Skills\n+30 to [Strength|Strength]"
+      "desc": "(附魔) Attribute Requirements降低 14%\n(符文) Minions deal Damage with [Command] Skills提高 40%\nSpirit提高 21%\n+28 最大魔力\nAllies in your Presence deal Damage提高 87%\nAllies in your Presence deal 22 to 34 added Attack 火焰伤害\n+4 Level of all Minion Skills\n+30 力量\n(已腐化)"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+89 to maximum [EnergyShield|Energy Shield]\n106% increased [EnergyShield|Energy Shield]\n+42% to [Resistances|Lightning Resistance]\n+21% to [Resistances|Chaos Resistance]\n35.2 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) +14% 火焰抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+89 最大能量护盾\n能量护盾提高 106%\n+42% 闪电抗性\n+21% 混沌抗性\n35.2 Life Regeneration per second"
     },
     {
       "name": "Apocalypse Visor (卡马萨冠冕)",
@@ -21,7 +21,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "38% increased [EnergyShield|Energy Shield]\n+161 to maximum Mana\n+40% to [Resistances|Fire Resistance]\n+43% to [Resistances|Cold Resistance]\n+45% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) 魔力回复速度提高 30%\n(符文) 最大魔力提高 3%\n能量护盾提高 38%\n+161 最大魔力\n+40% 火焰抗性\n+43% 冰霜抗性\n+45% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Woe Branch (决斗法杖)",
@@ -29,7 +29,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Lightning] Damage\n+153 to maximum Mana\n26% increased Cast Speed\n61% increased Mana Regeneration Rate\n+5 to Level of all [Physical|Physical] [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Lightning] Damage\n+153 最大魔力\n施法速度提高 26%\n魔力回复速度提高 61%\n+5 Level of all Physical Spell Skills\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -45,7 +45,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "30% increased [Chaos] Damage\n+249 to maximum Mana\n5% increased maximum Mana\n105% increased Mana Regeneration Rate\n21% increased [LightRadius|Light Radius]"
+      "desc": "(基底) Maximum [Quality] is 40%\n[Chaos] Damage提高 30%\n+249 最大魔力\n最大魔力提高 5%\n魔力回复速度提高 105%\nLight Radius提高 21%"
     },
     {
       "name": "Spirit Dash (奢华便鞋)",
@@ -53,7 +53,7 @@
       "baseType": "Luxurious Slippers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e1c49a9d6d/BootsInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n84% increased [EnergyShield|Energy Shield]\n+102 to maximum Mana\n+27 to [Intelligence|Intelligence]\n+38% to [Resistances|Cold Resistance]\n22.8 Life Regeneration per second"
+      "desc": "(符文) Slowing Potency of Debuffs on You降低 15%\n移动速度提高 35%\n能量护盾提高 84%\n+102 最大魔力\n+27 智慧\n+38% 冰霜抗性\n22.8 Life Regeneration per second"
     },
     {
       "name": "奇思妙想",
@@ -61,7 +61,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "6% increased [Charm] Charges gained\n2% increased [Charm] Charges used\n29% increased bonuses gained from left Equipped Ring\n31% increased bonuses gained from right Equipped Ring"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 6%\n[Charm] Charges used提高 2%\nbonuses gained from left Equipped Ring提高 29%\nbonuses gained from right Equipped Ring提高 31%\n(已腐化)"
     },
     {
       "name": "Chimeric Rosary (琥珀护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "24% increased [Armour]\n+212 to maximum Mana\n+3 to Level of all [Spell|Spell] Skills\n28% increased [Critical|Critical Hit] Chance\n21% of Damage taken [Recoup|Recouped] as Mana"
+      "desc": "(附魔) Allocates Efficient Inscriptions\n(基底) +15 力量\n[护甲]提高 24%\n+212 最大魔力\n+3 Level of all Spell Skills\n暴击率提高 28%\n21% of Damage taken Recouped as Mana"
     },
     {
       "name": "Rapture Pith (荒凉原野法器)",
@@ -77,7 +77,7 @@
       "baseType": "Leyline Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a7c172ac69/Focus06.png",
       "rarity": 2,
-      "desc": "+86 to maximum [EnergyShield|Energy Shield]\n+163 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n+34% to [Resistances|Fire Resistance]\n+42% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+86 最大能量护盾\n+163 最大魔力\n+2 Level of all Spell Skills\n+34% 火焰抗性\n+42% 闪电抗性"
     },
     {
       "name": "Agony Claw (海妖之鳞手套)",
@@ -85,7 +85,7 @@
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "+54 to maximum [EnergyShield|Energy Shield]\n75% increased [EnergyShield|Energy Shield]\n+119 to maximum Mana\n+25 to [Intelligence|Intelligence]\n+33% to [Resistances|Cold Resistance]"
+      "desc": "(符文) effect of Arcane Surge on you提高 40%\n+54 最大能量护盾\n能量护盾提高 75%\n+119 最大魔力\n+25 智慧\n+33% 冰霜抗性"
     },
     {
       "name": "Fury Talisman",
@@ -93,7 +93,7 @@
       "baseType": "Fury Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) +10 Maximum [Rage]"
     }
   ],
   "skills": [

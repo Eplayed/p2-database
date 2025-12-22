@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "+264 to [Accuracy|Accuracy] Rating\n+188 to maximum Mana\n34% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Cold Resistance]"
+      "desc": "(基底) 物品稀有度提高 12%\n+264 Accuracy Rating\n+188 最大魔力\n物品稀有度提高 34%\n+36% 冰霜抗性"
     },
     {
       "name": "Gloom Shelter (邪恶束衣)",
@@ -21,7 +21,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+30 to maximum [EnergyShield|Energy Shield]\n150% increased [EnergyShield|Energy Shield]\n+32% to [Resistances|Fire Resistance]\n+30% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n+30 最大能量护盾\n能量护盾提高 150%\n+32% 火焰抗性\n+30% 闪电抗性\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -29,7 +29,7 @@
       "baseType": "Caster Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 施法速度提高 8%"
     },
     {
       "name": "Gloom Weaver (电流法杖)",
@@ -37,7 +37,7 @@
       "baseType": "Galvanic Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDA2IiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/ade4b84c31/Wand06.png",
       "rarity": 2,
-      "desc": "33% increased [Spell] Damage\n26% increased [Lightning] Damage\n+45 to maximum Mana\n+3 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n20% increased [CriticalDamageBonus|Critical Spell Damage Bonus]\n53% increased Mana Regeneration Rate"
+      "desc": "[Spell] Damage提高 33%\n[Lightning] Damage提高 26%\n+45 最大魔力\n+3 Level of all Lightning Spell Skills\nCritical 法术伤害 Bonus提高 20%\n魔力回复速度提高 53%"
     },
     {
       "name": "夜鳞",
@@ -45,7 +45,7 @@
       "baseType": "Pauascale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9OaWdodHNjYWxlIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/854d34c57b/Nightscale.png",
       "rarity": 3,
-      "desc": "65% increased [EnergyShield|Energy Shield]\n48% increased [Critical|Critical Hit] Chance\n+11 to [Intelligence|Intelligence]\n+30% to [Resistances|Cold Resistance]\n150% increased Mana Regeneration Rate if you've dealt a [Critical|Critical Hit] [Recently]\nCannot Regenerate Mana if you haven't dealt a [Critical|Critical Hit] [Recently]"
+      "desc": "(符文) 施法速度提高 8%\n(符文) +1% Maximum 火焰抗性\n(符文) Bonded: Mana Cost Low Mana提高 20%\n能量护盾提高 65%\n暴击率提高 48%\n+11 智慧\n+30% 冰霜抗性\n魔力回复速度 if you've dealt a Critical Hit [Recently]提高 150%\nCannot Regenerate Mana if you haven't dealt a Critical Hit [Recently]\n(已腐化)"
     },
     {
       "name": "Empyrean Noose (日曜护身符)",
@@ -53,7 +53,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+30 to [Spirit|Spirit]\n16% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Spell|Spell] Skills\n32% increased [CriticalDamageBonus|Critical Damage Bonus]"
+      "desc": "(附魔) Allocates Material Solidification\n(基底) +13 Spirit\n+30 Spirit\n物品稀有度提高 16%\n+3 Level of all Spell Skills\nCritical Damage Bonus提高 32%"
     },
     {
       "name": "Glyph Cowl (卡马萨冠冕)",
@@ -61,7 +61,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+70 to maximum [EnergyShield|Energy Shield]\n79% increased [EnergyShield|Energy Shield]\n28% increased [Critical|Critical Hit] Chance\n+35 to [Intelligence|Intelligence]\n44% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+70 最大能量护盾\n能量护盾提高 79%\n暴击率提高 28%\n+35 智慧\n能量护盾 Recharge Rate提高 44%"
     },
     {
       "name": "Skull Band (红玉戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "21% increased [Cold] Damage\n+188 to maximum Mana\n19% increased [ItemRarity|Rarity of Items] found\n+13% to all [ElementalDamage|Elemental] [Resistances]\n+40% to [Resistances|Lightning Resistance]\n60% increased Mana Regeneration Rate"
+      "desc": "(基底) +30% 火焰抗性\n[Cold] Damage提高 21%\n+188 最大魔力\n物品稀有度提高 19%\n+13% all Elemental [Resistances]\n+40% 闪电抗性\n魔力回复速度提高 60%"
     },
     {
       "name": "Foe Branch (鸣谐长杖)",
@@ -77,7 +77,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "154% increased [Spell] Damage\n265% increased [Spell] [Physical] Damage\n+297 to maximum Mana\n52% increased Cast Speed\n91% increased Mana Regeneration Rate\n+7 to Level of all [Physical|Physical] [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Spell] Damage提高 154%\n[Spell] [Physical] Damage提高 265%\n+297 最大魔力\n施法速度提高 52%\n魔力回复速度提高 91%\n+7 Level of all Physical Spell Skills"
     },
     {
       "name": "奇思妙想",
@@ -85,7 +85,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "16% increased [Charm] Charges gained\n9% reduced [Charm] Charges used\n28% increased bonuses gained from left Equipped Ring\n28% increased bonuses gained from right Equipped Ring"
+      "desc": "(附魔) 最大能量护盾提高 22%\n(基底) Has 3 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 16%\n[Charm] Charges used降低 9%\nbonuses gained from left Equipped Ring提高 28%\nbonuses gained from right Equipped Ring提高 28%\n(已腐化)"
     },
     {
       "name": "Onslaught Spark (沙誓鞋履)",
@@ -93,7 +93,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n99% increased [EnergyShield|Energy Shield]\n+33 to [Intelligence|Intelligence]\n+40% to [Resistances|Fire Resistance]\n+42% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 99%\n+33 智慧\n+40% 火焰抗性\n+42% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "残酷雕塑",
@@ -101,7 +101,7 @@
       "baseType": "Antler Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL1VuaXF1ZXMvRWZmaWd5T2ZDcnVlbHR5IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7dd73b151e/EffigyOfCruelty.png",
       "rarity": 3,
-      "desc": "+28 to maximum [EnergyShield|Energy Shield]\n43% increased [Spell] Damage\n+10 to [Intelligence|Intelligence]\n+13% to [Resistances|Chaos Resistance]\n[Critical|Critical Hits] with [Spell|Spells] apply 2 Stacks of [CriticalWeakness|Critical Weakness]"
+      "desc": "(符文) 魔力回复速度提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+28 最大能量护盾\n[Spell] Damage提高 43%\n+10 智慧\n+13% 混沌抗性\nCritical Hits with Spells apply 2 Stacks of Critical Weakness"
     }
   ],
   "skills": [

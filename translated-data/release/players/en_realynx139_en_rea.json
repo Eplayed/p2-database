@@ -13,7 +13,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 99 [Lightning] damage to [Attack|Attacks]\n37% increased [Lightning] Damage\n+39% to [Resistances|Fire Resistance]\n+43% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 1 - 99 Attacks\n[Lightning] Damage提高 37%\n+39% 火焰抗性\n+43% 冰霜抗性"
     },
     {
       "name": "Hyrri's Ire",
@@ -21,7 +21,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "225% increased [Evasion|Evasion] Rating\n[Gain] 25% of Damage as Extra [Cold] Damage\n+37 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(附魔) +13% 混沌抗性\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 34%\n闪避值 Rating提高 225%\n[Gain] 25% of Damage as Extra [Cold] Damage\n+37 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]\n(已腐化)"
     },
     {
       "name": "Kraken Brow (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "138% increased [EnergyShield|Energy Shield]\n+42 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n+39% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 138%\n+42 最大生命\n物品稀有度提高 16%\n+39% 火焰抗性\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+50 to maximum Life\n+24 to [Strength|Strength]\n+32 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 3 [Charm] Slots\n+50 最大生命\n+24 力量\n+32 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Demon Braid (日曜护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+84 to maximum [EnergyShield|Energy Shield]\n54% increased maximum [EnergyShield|Energy Shield]\n33% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Projectile] Skills"
+      "desc": "(附魔) Allocates Lasting Trauma\n(基底) +15 Spirit\n+84 最大能量护盾\n最大能量护盾提高 54%\n物品稀有度提高 33%\n+3 Level of all [Projectile] Skills"
     },
     {
       "name": "Bramble Gyre (金光戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "+109 to maximum Life\n33% increased [ItemRarity|Rarity of Items] found\n+37% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]"
+      "desc": "(基底) 物品稀有度提高 14%\n+109 最大生命\n物品稀有度提高 33%\n+37% 火焰抗性\n+35% 冰霜抗性"
     },
     {
       "name": "毒疫之指",
@@ -61,7 +61,7 @@
       "baseType": "Gauze Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QbGFndWVmaW5nZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f88ef1cca5/Plaguefinger.png",
       "rarity": 3,
-      "desc": "4% increased [Attack] Speed\n24% chance to [Poison|Poison] on [HitDamage|Hit]\n[DamageTypes|All Damage] from [HitDamage|Hits] [Contributes|Contributes] to [Poison] Magnitude"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Magnitude of Damaging Ailments you inflict提高 20%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 15%\n[Attack] Speed提高 4%\n24% chance to Poison on Hit\nAll Damage from Hits Contributes to [Poison] Magnitude\n(已腐化)"
     },
     {
       "name": "Beast Mark (毁灭者之弓)",
@@ -69,7 +69,7 @@
       "baseType": "Obliterator Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e62ea7f094/Bow09.png",
       "rarity": 2,
-      "desc": "144% increased [Physical] Damage\nAdds 6 to 177 [Lightning|Lightning] Damage\n+3 to Level of all [Attack] Skills\n22% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile Range降低 50%\n[Physical] Damage提高 144%\n附加 6 - 177 闪电伤害\n+3 Level of all [Attack] Skills\n22% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -77,7 +77,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 10%"
     },
     {
       "name": "赤红护身符",
@@ -85,7 +85,7 @@
       "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 while Sprinting提高 10%"
     },
     {
       "name": "Demon Skewer (贯心箭袋)",
@@ -93,7 +93,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 16 to 23 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 52 [Lightning] damage to [Attack|Attacks]\n49% increased Damage with Bow Skills\n33% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage\n16% increased [Attack] Speed"
+      "desc": "(基底) 暴击率 for Attacks提高 28%\n附加 16 - 23 物理伤害 to Attacks\n附加 2 - 52 Attacks\nDamage with Bow Skills提高 49%\nCritical Damage Bonus for [Attack] Damage提高 33%\n[Attack] Speed提高 16%"
     },
     {
       "name": "打击节杖",
@@ -101,7 +101,7 @@
       "baseType": "Striking Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/23459cf5a8/Warstaff02.png",
       "rarity": 1,
-      "desc": "Grants 2 Life per Enemy [HitDamage|Hit]"
+      "desc": "(基底) [Melee] [Strike] Range with this weapon提高 16%\nGrants 2 Life per Enemy Hit"
     },
     {
       "name": "Glyph Trail (丝克玛便鞋)",
@@ -109,7 +109,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "96% increased [EnergyShield|Energy Shield]\n+122 to maximum Life\n+44% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 96%\n+122 最大生命\n+44% 冰霜抗性\n+43% 闪电抗性"
     }
   ],
   "skills": [

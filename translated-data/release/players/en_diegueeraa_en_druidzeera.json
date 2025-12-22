@@ -13,7 +13,7 @@
       "baseType": "Ancestral Mail",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0xpZ2h0bmluZ0NvaWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c265ed86cd/LightningCoil.png",
       "rarity": 3,
-      "desc": "81% increased [Armour|Armour] and [Evasion|Evasion]\n+88 to maximum Life\n+20 to [Dexterity|Dexterity]\n-35% to [Resistances|Lightning Resistance]\n49% of [Physical] damage from [HitDamage|Hits] taken as [Lightning] damage"
+      "desc": "(附魔) 18% of Damage taken Recouped as Mana\n(符文) +33% 混沌抗性\n护甲 and 闪避值提高 81%\n+88 最大生命\n+20 敏捷\n-35% to 闪电抗性\n49% of Hits taken as [Lightning] damage\n(已腐化)"
     },
     {
       "name": "Fury of the King",
@@ -21,7 +21,7 @@
       "baseType": "Ashbark Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvVW5pcXVlcy9WZXNzZWxPZldyYXRoIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/c7bab22377/VesselOfWrath.png",
       "rarity": 3,
-      "desc": "Adds 587 to 685 [Fire|Fire] Damage\n15% reduced [Attack] Speed\n+40 to [Strength|Strength]\n[Bear] Skills [Conversion|Convert] 80% of [Physical] Damage to [Fire] Damage\nSkills which require [Glory] generate 5 [Glory] every 2 seconds\nEnemies in your [Presence|Presence] have [Exposure]"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Magnitude提高 69%\n附加 587 - 685 火焰伤害\n[Attack] Speed降低 15%\n+40 力量\nConvert 80% of [Physical] Damage to [Fire] Damage\nSkills which require [Glory] generate 5 [Glory] every 2 seconds\nEnemies in your Presence have [Exposure]\n(已腐化)"
     },
     {
       "name": "Agony Goad (塔萨里奥胫甲)",
@@ -29,7 +29,7 @@
       "baseType": "Tasalian Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c3e83f5cc/BootsStr06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n45% increased [Armour|Armour]\n+127 to maximum Life\n+40% to [Resistances|Cold Resistance]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n护甲提高 45%\n+127 最大生命\n+40% 冰霜抗性\n+33% 闪电抗性"
     },
     {
       "name": "Hypnotic Twirl (蓝玉戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "+105 to maximum Life\n32% increased [ItemRarity|Rarity of Items] found\n+33% to [Resistances|Fire Resistance]\n+48% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +31% 冰霜抗性\n+105 最大生命\n物品稀有度提高 32%\n+33% 火焰抗性\n+48% 冰霜抗性"
     },
     {
       "name": "Woe Hold (骑士护手)",
@@ -45,7 +45,7 @@
       "baseType": "Knightly Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/07026229f5/GlovesStr02.png",
       "rarity": 2,
-      "desc": "+132 to [Armour|Armour]\n81% increased [Armour|Armour]\n+140 to maximum Life\n+31% to [Resistances|Fire Resistance]\n[LifeLeech|Leech] 8.73% of [Physical] [Attack] Damage as Life\n[ManaLeech|Leech] 6.41% of [Physical] [Attack] Damage as Mana"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n+132 护甲\n护甲提高 81%\n+140 最大生命\n+31% 火焰抗性\nLeech 8.73% of [Physical] [Attack] Damage as Life\nLeech 6.41% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "命运之抗争",
@@ -53,7 +53,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "10% increased maximum Life\n+13 to [Strength|Strength]\n31% increased Mana Regeneration Rate\nRecover 36% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Ichlotl's Inferno\n(基底) +11 敏捷\n最大生命提高 10%\n+13 力量\n魔力回复速度提高 31%\nRecover 36% of Missing Life before being Hit by an Enemy"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+46 to maximum Life\n+40 to [Strength|Strength]\n+23 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 24%\n(基底) Has 2 [Charm] Slots\n+46 最大生命\n+40 力量\n+23 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Vengeance Call (圣地短杖)",
@@ -69,7 +69,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA2YyIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9c15e1e13e/Sceptre06c.png",
       "rarity": 2,
-      "desc": "43% increased [Spirit|Spirit]\n+19 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 38% increased Damage\n[Allies|Allies] in your [Presence|Presence] Regenerate 30.1 Life per second\n62% increased Mana Regeneration Rate\n15% increased [LightRadius|Light Radius]"
+      "desc": "(符文) Allies in your Presence have 攻击速度提高 24%\n(符文) Bonded: Skill Speed while Shapeshifted提高 30%\nSpirit提高 43%\n+19 最大魔力\nAllies in your Presence deal Damage提高 38%\nAllies in your Presence Regenerate 30.1 Life per second\n魔力回复速度提高 62%\nLight Radius提高 15%\n(已腐化)"
     },
     {
       "name": "Dread Circle (黄玉戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "19% increased [Chaos] Damage\n+119 to maximum Life\n18% increased [ItemRarity|Rarity of Items] found\n+40% to [Resistances|Fire Resistance]\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +28% 闪电抗性\n[Chaos] Damage提高 19%\n+119 最大生命\n物品稀有度提高 18%\n+40% 火焰抗性\n+39% 闪电抗性"
     },
     {
       "name": "赤红护身符",
@@ -85,7 +85,7 @@
       "baseType": "Caster Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 施法速度提高 7%"
     },
     {
       "name": "Torment Crest (典范巨盔)",
@@ -93,7 +93,7 @@
       "baseType": "Paragon Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/39a19d746e/HelmetStr05.png",
       "rarity": 2,
-      "desc": "+189 to [Armour|Armour]\n+155 to maximum Life\n+30% to [Resistances|Fire Resistance]\n+32% to [Resistances|Lightning Resistance]\n+26% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +4 Maximum [Rage]\n+189 护甲\n+155 最大生命\n+30% 火焰抗性\n+32% 闪电抗性\n+26% 混沌抗性"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "58% increased maximum [EnergyShield|Energy Shield]\n+98 to maximum Mana\n+3 to Level of all [Spell|Spell] Skills\n+30 to [Dexterity|Dexterity]\n19% of Damage taken [Recoup|Recouped] as Mana"
+      "desc": "(附魔) Allocates Mind Eraser\n(基底) +6 全属性\n最大能量护盾提高 58%\n+98 最大魔力\n+3 Level of all Spell Skills\n+30 敏捷\n19% of Damage taken Recouped as Mana"
     },
     {
       "name": "Empyrean Spire (鸣谐长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 53% of Damage as Extra [Lightning] Damage\n84% increased [Spell] Damage\n+263 to maximum Mana\n+6 to Level of all [Cold|Cold] [Spell|Spell] Skills\n50% increased Cast Speed"
+      "desc": "(符文) 暴击率 for Spells提高 48%\n(符文) Bonded: Critical Damage Bonus提高 50%\n[Gain] 53% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 84%\n+263 最大魔力\n+6 Level of all Cold Spell Skills\n施法速度提高 50%"
     },
     {
       "name": "Apocalypse Cry (鸣谐长杖)",
@@ -29,7 +29,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 52% of Damage as Extra [Fire] Damage\n[Gain] 56% of Damage as Extra [Lightning] Damage\n+229 to maximum Mana\n+7 to Level of all [Cold|Cold] [Spell|Spell] Skills\n77% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 52% of Damage as Extra [Fire] Damage\n[Gain] 56% of Damage as Extra [Lightning] Damage\n+229 最大魔力\n+7 Level of all Cold Spell Skills\n暴击率 for Spells提高 77%"
     },
     {
       "name": "Viper Twirl (三相戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "33% increased [Cold] Damage\n+120 to [Evasion] Rating\n35% increased [ItemRarity|Rarity of Items] found\n23% increased Cast Speed\n+33 to [Dexterity|Dexterity]"
+      "desc": "(基底) +12% all Elemental [Resistances]\n[Cold] Damage提高 33%\n+120 [闪避值] Rating\n物品稀有度提高 35%\n施法速度提高 23%\n+33 敏捷"
     },
     {
       "name": "Damnation League (丝克玛便鞋)",
@@ -45,7 +45,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n38% increased [EnergyShield|Energy Shield]\n+102 to maximum Mana\n+41% to [Resistances|Fire Resistance]\n+44% to [Resistances|Lightning Resistance]\n+88 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 38%\n+102 最大魔力\n+41% 火焰抗性\n+44% 闪电抗性\n+88 晕眩门槛"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -53,7 +53,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "61% increased [Evasion|Evasion] Rating\n27% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+18 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) effect of Arcane Surge on you提高 40%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 61%\n暴击率提高 27%\n[Attack] Speed提高 5%\n+18 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Bramble Mantle (邪恶束衣)",
@@ -61,7 +61,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+95 to maximum [EnergyShield|Energy Shield]\n94% increased [EnergyShield|Energy Shield]\n+35% to [Resistances|Fire Resistance]\n+40% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+95 最大能量护盾\n能量护盾提高 94%\n+35% 火焰抗性\n+40% 冰霜抗性\n+37% 闪电抗性"
     },
     {
       "name": "夜临",
@@ -69,7 +69,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9EYXJrbmVzc0VudGhyb25lZCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9bbef2f97f/DarknessEnthroned.png",
       "rarity": 3,
-      "desc": "This item gains bonuses from Socketed Items as though it was a Body Armour\n104% increased effect of Socketed Items"
+      "desc": "(符文) 能量护盾 Recharge Rate提高 102%\n(符文) effect of Curses on you降低 102%\n(符文) Bonded: 40% faster start of 能量护盾 Recharge\n(符文) Bonded: Magnitudes提高 16%\n(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\nThis item gains bonuses from Socketed Items as though it was a Body 护甲\neffect of Socketed Items提高 104%\n(已腐化)"
     },
     {
       "name": "蛇穴",
@@ -77,7 +77,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TbmFrZXBpdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b272f3e194/Snakepit.png",
       "rarity": 3,
-      "desc": "34% increased [Spell] Damage\n13% increased Cast Speed\nLeft ring slot: [Projectile|Projectiles] from [Spell|Spells] cannot [Chain]\nLeft ring slot: [Projectile|Projectiles] from [Spell|Spells] [Fork]\nRight ring slot: [Projectile|Projectiles] from [Spell|Spells] [Chain] +1 times\nRight ring slot: [Projectile|Projectiles] from [Spell|Spells] cannot [Fork]\n[Projectile|Projectiles] from [Spell|Spells] cannot [Pierce]"
+      "desc": "(基底) 施法速度提高 10%\n[Spell] Damage提高 34%\n施法速度提高 13%\nLeft ring slot: Projectiles from Spells cannot [Chain]\nLeft ring slot: Projectiles from Spells [Fork]\nRight ring slot: Projectiles from Spells [Chain] +1 times\nRight ring slot: Projectiles from Spells cannot [Fork]\nProjectiles from Spells cannot [Pierce]"
     },
     {
       "name": "Storm Dome (先祖冠冕)",
@@ -85,7 +85,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "32% increased [EnergyShield|Energy Shield]\n+122 to maximum Mana\n+40% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n+41% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 32%\n+122 最大魔力\n+40% 火焰抗性\n+34% 冰霜抗性\n+41% 闪电抗性"
     }
   ],
   "skills": [

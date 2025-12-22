@@ -13,7 +13,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TbmFrZXBpdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b272f3e194/Snakepit.png",
       "rarity": 3,
-      "desc": "27% increased [Spell] Damage\n18% increased Cast Speed\nLeft ring slot: [Projectile|Projectiles] from [Spell|Spells] cannot [Chain]\nLeft ring slot: [Projectile|Projectiles] from [Spell|Spells] [Fork]\nRight ring slot: [Projectile|Projectiles] from [Spell|Spells] [Chain] +1 times\nRight ring slot: [Projectile|Projectiles] from [Spell|Spells] cannot [Fork]\n[Projectile|Projectiles] from [Spell|Spells] cannot [Pierce]"
+      "desc": "(基底) 施法速度提高 12%\n[Spell] Damage提高 27%\n施法速度提高 18%\nLeft ring slot: Projectiles from Spells cannot [Chain]\nLeft ring slot: Projectiles from Spells [Fork]\nRight ring slot: Projectiles from Spells [Chain] +1 times\nRight ring slot: Projectiles from Spells cannot [Fork]\nProjectiles from Spells cannot [Pierce]"
     },
     {
       "name": "Agony Mantle (邪恶束衣)",
@@ -21,7 +21,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(已腐化)"
     },
     {
       "name": "Sorrow Hand (海妖之鳞手套)",
@@ -29,7 +29,7 @@
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "+44 to maximum [EnergyShield|Energy Shield]\n87% increased [EnergyShield|Energy Shield]\nAdds 10 to 16 [Physical|Physical] Damage to [Attack|Attacks]\n15% increased [ItemRarity|Rarity of Items] found\nGain 38 Mana per enemy killed"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n+44 最大能量护盾\n能量护盾提高 87%\n附加 10 - 16 物理伤害 to Attacks\n物品稀有度提高 15%\nGain 38 Mana per enemy killed"
     },
     {
       "name": "破碎传承者",
@@ -37,7 +37,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVW5pcXVlcy9TaXJlT2ZTaGFyZHMiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4d78611003/SireOfShards.png",
       "rarity": 3,
-      "desc": "100% increased [Spell] Damage\n19% increased Cast Speed\n+6% to all [ElementalDamage|Elemental] [Resistances]\n20% increased [LightRadius|Light Radius]\n[Spell|Spells] fire 4 additional [Projectile|Projectiles]\n[Spell|Spells] fire [Projectile|Projectiles] in a circle"
+      "desc": "[Spell] Damage提高 100%\n施法速度提高 19%\n+6% all Elemental [Resistances]\nLight Radius提高 20%\nSpells fire 4 additional Projectiles\nSpells fire Projectiles in a circle"
     },
     {
       "name": "Empyrean Ward (先祖冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+69 to maximum [EnergyShield|Energy Shield]\n79% increased [EnergyShield|Energy Shield]\n+36% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n+10% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+69 最大能量护盾\n能量护盾提高 79%\n+36% 火焰抗性\n+34% 冰霜抗性\n+10% 闪电抗性"
     },
     {
       "name": "Eagle Song (塔萨里奥法器)",
@@ -53,7 +53,7 @@
       "baseType": "Tasalian Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "+86 to maximum [EnergyShield|Energy Shield]\n102% increased [EnergyShield|Energy Shield]\n+27 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+86 最大能量护盾\n能量护盾提高 102%\n+27 最大魔力\n+2 Level of all Spell Skills\n+39% 闪电抗性"
     },
     {
       "name": "Armageddon Twirl (黄玉戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "17% increased [Cold] Damage\n+148 to maximum Mana\n24% increased Cast Speed\n+31% to [Resistances|Fire Resistance]\n+20% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +25% 闪电抗性\n[Cold] Damage提高 17%\n+148 最大魔力\n施法速度提高 24%\n+31% 火焰抗性\n+20% 冰霜抗性"
     },
     {
       "name": "Carrion Rosary (星辉护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "45% increased [Evasion|Evasion Rating]\n+52 to maximum Life\n+154 to maximum Mana\n15% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Spell|Spell] Skills\n+26 to [Dexterity|Dexterity]"
+      "desc": "(附魔) Allocates Conservative Casting\n(基底) +7 全属性\n闪避值 Rating提高 45%\n+52 最大生命\n+154 最大魔力\n物品稀有度提高 15%\n+2 Level of all Spell Skills\n+26 敏捷"
     },
     {
       "name": "Carrion Clasp (亚麻腰带)",
@@ -77,7 +77,7 @@
       "baseType": "Linen Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwMiIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/45c1e6bfa2/Belt02.png",
       "rarity": 2,
-      "desc": "+32 to maximum Mana\n27% increased [Flask] Mana Recovery rate\n+39% to [Resistances|Fire Resistance]\n+39% to [Resistances|Cold Resistance]\n+28% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Mana Recovery from Flasks提高 25%\n(基底) Has 2 [Charm] Slots\n+32 最大魔力\n[Flask] Mana Recovery rate提高 27%\n+39% 火焰抗性\n+39% 冰霜抗性\n+28% 闪电抗性"
     },
     {
       "name": "Horror Track (丝克玛便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n42% increased [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+39% to [Resistances|Fire Resistance]\n+228 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 42%\n物品稀有度提高 18%\n+39% 火焰抗性\n+228 晕眩门槛"
     },
     {
       "name": "Behemoth Roar (咆哮长杖)",
@@ -93,7 +93,7 @@
       "baseType": "Roaring Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 55% of Damage as Extra [Lightning] Damage\n78% increased [Spell] Damage\n+379 to maximum Mana\n+7 to Level of all [Cold|Cold] [Spell|Spell] Skills\n74% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n56% increased [Freeze|Freeze] Buildup"
+      "desc": "(符文) [Gain] 10% of Damage as Extra [Lightning] Damage\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: Magnitude of Shock you inflict提高 30%\n[Gain] 55% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 78%\n+379 最大魔力\n+7 Level of all Cold Spell Skills\n暴击率 for Spells提高 74%\nFreeze Buildup提高 56%"
     }
   ],
   "skills": [

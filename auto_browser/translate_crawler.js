@@ -1,3 +1,4 @@
+require("dotenv").config();
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
@@ -7,6 +8,7 @@ let dictBase = {},
   dictUnique = {},
   dictGem = {},
   dictPassive = {};
+dictStats = { keywords: {}, patterns: [] }; // 新增 dictStats
 try {
   const baseDataDir = path.join(__dirname, "../base-data/dist");
   dictBase = JSON.parse(
@@ -18,6 +20,11 @@ try {
   dictGem = JSON.parse(
     fs.readFileSync(path.join(baseDataDir, "dict_gem.json"), "utf8")
   );
+  // 尝试加载词缀字典，如果不存在则使用默认空对象
+  const statsPath = path.join(baseDataDir, "dict_stats.json");
+  if (fs.existsSync(statsPath)) {
+    dictStats = JSON.parse(fs.readFileSync(statsPath, "utf8"));
+  }
   console.log("✅ 翻译字典加载成功");
 } catch (e) {
   console.error("❌ 翻译字典加载失败", e);
@@ -25,11 +32,14 @@ try {
 
 // 配置
 const BASE_URL = "https://poe.ninja/poe2/builds";
+
 const isDev = process.env.NODE_ENV === "dev";
 const MAX_RANK = isDev ? 3 : 20; // 抓取数量
 // 根据环境变量，dev
 
-const OUTPUT_DIR = isDev ? path.join(__dirname, "../translated-data/dev") : path.join(__dirname, "../translated-data/release");
+const OUTPUT_DIR = isDev
+  ? path.join(__dirname, "../translated-data/dev")
+  : path.join(__dirname, "../translated-data/release");
 
 // 确保输出目录存在
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -106,47 +116,49 @@ function translateItemName(itemName, baseType, frameType) {
     if (uniqueInfo) {
       return uniqueInfo.cn;
     }
-    
+
     // 如果找不到精确匹配，尝试模糊匹配
     for (const [key, value] of Object.entries(dictUnique)) {
-      if (key.toLowerCase().includes(itemName.toLowerCase()) || 
-          itemName.toLowerCase().includes(key.toLowerCase())) {
+      if (
+        key.toLowerCase().includes(itemName.toLowerCase()) ||
+        itemName.toLowerCase().includes(key.toLowerCase())
+      ) {
         return value.cn;
       }
     }
-    
+
     return itemName;
   } else {
     // 普通物品翻译
-    
+
     // 1. 尝试精确匹配
     let cnBase = dictBase[baseType] || dictBase[itemName];
-    
+
     if (!cnBase) {
       // 2. 通过关键词推断物品类型
       const itemTypeMap = {
-        'Belt': ['腰带', '腰带的'],
-        'Amulet': ['护身符', '护符'],
-        'Ring': ['戒指'],
-        'Boots': ['靴子', '靴'],
-        'Gloves': ['手套'],
-        'Charm': ['护符', '符文'],
-        'Helm': ['头盔', '帽'],
-        'Chest': ['胸甲', '上衣'],
-        'Shield': ['盾牌', '盾'],
-        'Sword': ['剑'],
-        'Axe': ['斧'],
-        'Mace': ['锤', '权杖'],
-        'Bow': ['弓'],
-        'Staff': ['法杖', '杖'],
-        'Wand': ['法杖', '魔杖'],
+        Belt: ["腰带", "腰带的"],
+        Amulet: ["护身符", "护符"],
+        Ring: ["戒指"],
+        Boots: ["靴子", "靴"],
+        Gloves: ["手套"],
+        Charm: ["护符", "符文"],
+        Helm: ["头盔", "帽"],
+        Chest: ["胸甲", "上衣"],
+        Shield: ["盾牌", "盾"],
+        Sword: ["剑"],
+        Axe: ["斧"],
+        Mace: ["锤", "权杖"],
+        Bow: ["弓"],
+        Staff: ["法杖", "杖"],
+        Wand: ["法杖", "魔杖"],
       };
-      
+
       // 检查itemName中的关键词
       for (const [englishType, chineseTypes] of Object.entries(itemTypeMap)) {
         if (itemName.toLowerCase().includes(englishType.toLowerCase())) {
           // 找到对应的中文翻译
-          const baseExamples = Object.keys(dictBase).filter(key => 
+          const baseExamples = Object.keys(dictBase).filter((key) =>
             key.toLowerCase().includes(englishType.toLowerCase())
           );
           if (baseExamples.length > 0) {
@@ -155,19 +167,21 @@ function translateItemName(itemName, baseType, frameType) {
           }
         }
       }
-      
+
       // 如果还是没找到，尝试特定的物品名称映射
       if (!cnBase) {
         const specialMap = {
-          'Harness': '腰带',
-          'Hoof': '靴子', 
-          'Coil': '戒指',
-          'Touch': '手套',
-          'Charm': '护符',
-          'Maelström': '漩涡护符'
+          Harness: "腰带",
+          Hoof: "靴子",
+          Coil: "戒指",
+          Touch: "手套",
+          Charm: "护符",
+          Maelström: "漩涡护符",
         };
-        
-        for (const [specialKey, chineseTranslation] of Object.entries(specialMap)) {
+
+        for (const [specialKey, chineseTranslation] of Object.entries(
+          specialMap
+        )) {
           if (itemName.toLowerCase().includes(specialKey.toLowerCase())) {
             cnBase = chineseTranslation;
             break;
@@ -175,33 +189,79 @@ function translateItemName(itemName, baseType, frameType) {
         }
       }
     }
-    
+
     // 3. 如果还没找到，尝试模糊匹配
     if (!cnBase) {
       for (const [key, value] of Object.entries(dictBase)) {
-        if (key.toLowerCase().includes(itemName.toLowerCase()) || 
-            itemName.toLowerCase().includes(key.toLowerCase()) ||
-            (baseType && (key.toLowerCase().includes(baseType.toLowerCase()) || 
-                          baseType.toLowerCase().includes(key.toLowerCase())))) {
+        if (
+          key.toLowerCase().includes(itemName.toLowerCase()) ||
+          itemName.toLowerCase().includes(key.toLowerCase()) ||
+          (baseType &&
+            (key.toLowerCase().includes(baseType.toLowerCase()) ||
+              baseType.toLowerCase().includes(key.toLowerCase())))
+        ) {
           cnBase = value;
           break;
         }
       }
     }
-    
+
     if (cnBase) {
       // 构建最终翻译：物品前缀 + 基础类型
-      const prefix = itemName.split(' ')[0]; // 取第一个词作为前缀
+      const prefix = itemName.split(" ")[0]; // 取第一个词作为前缀
       if (prefix && cnBase && !cnBase.includes(prefix)) {
         // 如果有前缀且前缀不在翻译中，添加前缀
         return `${itemName} (${cnBase})`;
       }
       return cnBase || itemName;
     }
-    
+
     // 如果都没找到，返回原始名称
     return itemName;
   }
+}
+// 🔧 词缀翻译核心函数
+function translateMods(modList) {
+  if (!modList || modList.length === 0) return "";
+
+  const translatedLines = modList.map((line) => {
+    // 1. 清理 Ninja 的特殊格式
+    // 例如: "20% increased [EnergyShield|Energy Shield]" -> "20% increased Energy Shield"
+    let text = line.replace(/\[.*?\|(.*?)\]/g, "$1");
+
+    // 2. 关键词替换 (Keywords)
+    // 遍历字典中的关键词，将英文单词替换为中文
+    // 注意：这里只是替换名词，句子结构还没变
+    for (const [en, cn] of Object.entries(dictStats.keywords)) {
+      // 使用正则全局替换，注意转义特殊字符
+      // 单词边界保护 \b 防止部分匹配 (例如 'Life' 匹配到 'Life Regeneration')
+      // 但对于复合词，我们直接替换即可
+      if (text.includes(en)) {
+        text = text.split(en).join(cn);
+      }
+    }
+
+    // 3. 句式模版替换 (Patterns)
+    // 例如: "42% increased 能量护盾" -> "能量护盾提高 42%"
+    for (const pattern of dictStats.patterns) {
+      const regex = new RegExp(pattern.regex, "i"); // 'i' 忽略大小写
+      if (regex.test(text)) {
+        text = text.replace(regex, pattern.replace);
+        break; // 匹配到一个模式通常就可以了，跳出循环
+      }
+    }
+
+    // 4. 处理一些未能完全匹配但包含中文的句子，优化可读性
+    // 比如 "When you kill a 稀有 monster..." -> 简单的补丁
+    text = text.replace(/When you kill a/, "当你击败");
+    text = text.replace(/monster/, "怪物");
+    text = text.replace(/you gain its/, "你获得其");
+    text = text.replace(/for (\d+) seconds/, "持续 $1 秒");
+
+    return text;
+  });
+
+  return translatedLines.join("\n");
 }
 
 function translateGemName(gemName) {
@@ -523,23 +583,45 @@ async function runTask() {
             equipment: (capturedData.items || []).map((item) => {
               const i = item.itemData || item;
               const originalName = i.name || i.baseType;
-              const translatedName = translateItemName(i.name, i.baseType, i.frameType);
-              
+              const translatedName = translateItemName(
+                i.name,
+                i.baseType,
+                i.frameType
+              );
+              // --- 🔴 新增：处理词缀 ---
+              // 合并所有词缀类型
+              let allMods = [];
+
+              // 1. 附魔 (Enchants)
+              if (i.enchantMods)
+                allMods.push(...i.enchantMods.map((m) => `(附魔) ${m}`));
+              // 2. 符文 (Runes)
+              if (i.runeMods)
+                allMods.push(...i.runeMods.map((m) => `(符文) ${m}`));
+              // 3. 基底 (Implicit)
+              if (i.implicitMods)
+                allMods.push(...i.implicitMods.map((m) => `(基底) ${m}`));
+              // 4. 显式 (Explicit)
+              if (i.explicitMods) allMods.push(...i.explicitMods);
+              // 5. 腐化状态
+              if (i.corrupted) allMods.push("(已腐化)");
+              // 调用翻译函数
+              const translatedDesc = translateMods(allMods);
               return {
                 slot: item.inventoryId,
                 name: translatedName,
                 originalName: originalName, // 保留原英文名
-                baseType: i.baseType || '', // 保存baseType用于翻译调试
+                baseType: i.baseType || "", // 保存baseType用于翻译调试
                 icon: i.icon,
                 rarity: i.frameType,
-                desc: i.explicitMods?.join("\n") || "",
+                desc: translatedDesc, // 使用翻译后的文本
               };
             }),
             skills: (capturedData.skills || []).map((s) => ({
               gems: (s.allGems || []).map((g) => {
                 const originalName = g.name;
                 const translatedName = translateGemName(g.name);
-                
+
                 return {
                   name: translatedName,
                   originalName: originalName, // 保留原英文名
@@ -548,7 +630,7 @@ async function runTask() {
                 };
               }),
             })),
-            keystones: (capturedData.keystones || []).map(keystone => ({
+            keystones: (capturedData.keystones || []).map((keystone) => ({
               name: translateKeystoneName(keystone.name),
               originalName: keystone.name, // 保留原英文名
               icon: keystone.icon,

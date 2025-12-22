@@ -13,7 +13,7 @@
       "baseType": "Ornate Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f9e847d2b0/BootsStr04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+141 to [Armour|Armour]\n+43% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 移动速度提高 8%\n(符文) Slowing Potency of Debuffs on You降低 24%\n(符文) Bonded: 冷却回复速度提高 16%\n移动速度提高 30%\n+141 护甲\n+43% 的 护甲 也套用于 元素伤害\neffect of Socketed Items提高 60%"
     },
     {
       "name": "猎首",
@@ -21,7 +21,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+57 to maximum Life\n+27 to [Strength|Strength]\n+26 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 2 [Charm] Slots\n+57 最大生命\n+27 力量\n+26 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Brood Caress (军官手甲)",
@@ -29,7 +29,7 @@
       "baseType": "Commander Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cb6b02463/GlovesStrDex02.png",
       "rarity": 2,
-      "desc": "Adds 3 to 60 [Lightning] damage to [Attack|Attacks]\n+113 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n15% increased [Attack] Speed\n[ManaLeech|Leech] 6.61% of [Physical] [Attack] Damage as Mana"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n附加 3 - 60 Attacks\n+113 最大生命\n+2 Level of all Melee Skills\n[Attack] Speed提高 15%\nLeech 6.61% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Dread Shatter (纷争之镐)",
@@ -37,7 +37,7 @@
       "baseType": "Strife Pick",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQmFzZXR5cGVzLzFITWFjZTA1IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/9d05debfab/1HMace05.png",
       "rarity": 2,
-      "desc": "61% increased [Physical] Damage\nAdds 36 to 67 [Fire|Fire] Damage\n+144 to [Accuracy|Accuracy] Rating\n25% increased [Attack] Speed\n+5 to Level of all [Melee|Melee] Skills\n[Gain] 16% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 8%\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 15%\n(基底) +9% Critical Damage Bonus\n[Physical] Damage提高 61%\n附加 36 - 67 火焰伤害\n+144 Accuracy Rating\n[Attack] Speed提高 25%\n+5 Level of all Melee Skills\n[Gain] 16% of Damage as Extra [Physical] Damage"
     },
     {
       "name": "收缩指令",
@@ -45,7 +45,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+115 to maximum Life\n+15 to all [Attributes|Attributes]\n11.9 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(符文) +40% of 冰霜伤害\n+115 最大生命\n+15 全属性\n11.9 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded"
     },
     {
       "name": "无生之辱",
@@ -53,7 +53,7 @@
       "baseType": "Grand Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL01vcmlvckludmljdHVzX00iLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6674aa4ff6/MoriorInvictus_M.png",
       "rarity": 3,
-      "desc": "344% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+52 to maximum Life per Socket filled\n11% increased Global [Defences|Defences] per Socket filled\n+10% to all [Resistances|Elemental Resistances] per Socket filled"
+      "desc": "(符文) 最大生命提高 15%\n护甲, 闪避值 and 能量护盾提高 344%\n+52 最大生命 per Socket filled\nGlobal Defences per Socket filled提高 11%\n+10% all 元素抗性 per Socket filled\n(已腐化)"
     },
     {
       "name": "Dragon Nail (蓝玉戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "+438 to [Accuracy|Accuracy] Rating\n+161 to [Evasion] Rating\n+141 to maximum Life\n+33% to [Resistances|Lightning Resistance]\n[LifeLeech|Leech] 9.3% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +26% 冰霜抗性\n+438 Accuracy Rating\n+161 [闪避值] Rating\n+141 最大生命\n+33% 闪电抗性\nLeech 9.3% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Phoenix Emblem (塔赫亚塔盾)",
@@ -69,7 +69,7 @@
       "baseType": "Tawhoan Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMTAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8efda96f5b/Tower10.png",
       "rarity": 2,
-      "desc": "+255 to [Armour|Armour]\n39% increased [Armour|Armour]\n+37% to [Resistances|Fire Resistance]\n+37% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n+383 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+255 护甲\n护甲提高 39%\n+37% 火焰抗性\n+37% 的 护甲 也套用于 元素伤害\n+383 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Fate Locket (日曜护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+102 to maximum Mana\n+47 to [Spirit|Spirit]\n+3 to Level of all [Melee|Melee] Skills\n+32 to [Strength|Strength]"
+      "desc": "(附魔) Allocates Greatest Defence\n(基底) +15 Spirit\n+102 最大魔力\n+47 Spirit\n+3 Level of all Melee Skills\n+32 力量"
     },
     {
       "name": "Vortex Grasp (蓝玉戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 11 to 18 [Physical|Physical] Damage to [Attack|Attacks]\n+185 to [Accuracy|Accuracy] Rating\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+29% to [Resistances|Lightning Resistance]\n+17% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +30% 冰霜抗性\n附加 11 - 18 物理伤害 to Attacks\n+185 Accuracy Rating\n+16% all Elemental [Resistances]\n+29% 闪电抗性\n+17% 混沌抗性"
     }
   ],
   "skills": [

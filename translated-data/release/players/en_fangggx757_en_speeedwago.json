@@ -13,7 +13,7 @@
       "baseType": "Luxurious Slippers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e1c49a9d6d/BootsInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n65% increased [EnergyShield|Energy Shield]\n+45% to [Resistances|Fire Resistance]\n+33% to [Resistances|Lightning Resistance]\n42% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 65%\n+45% 火焰抗性\n+33% 闪电抗性\n能量护盾 Recharge Rate提高 42%"
     },
     {
       "name": "Corruption Twirl (蓝玉戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "27% increased [Lightning] Damage\n+145 to [Evasion] Rating\n+82 to maximum Mana\n+34% to [Resistances|Cold Resistance]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +21% 冰霜抗性\n[Lightning] Damage提高 27%\n+145 [闪避值] Rating\n+82 最大魔力\n+34% 冰霜抗性\n+33% 闪电抗性"
     },
     {
       "name": "猎首",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+48 to maximum Life\n+35 to [Strength|Strength]\n+17 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 27%\n(基底) Has 2 [Charm] Slots\n+48 最大生命\n+35 力量\n+17 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Wrath Scarab (翠玉护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvSmFkZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac51014172/JadeAmulet.png",
       "rarity": 2,
-      "desc": "+86 to maximum [EnergyShield|Energy Shield]\n39% increased maximum [EnergyShield|Energy Shield]\n+113 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n+38% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) Allocates Stormcharged\n(基底) +11 敏捷\n+86 最大能量护盾\n最大能量护盾提高 39%\n+113 最大魔力\n+2 Level of all Spell Skills\n+38% 火焰抗性"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -45,7 +45,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "71% increased [Evasion|Evasion] Rating\n25% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+15 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n闪避值 Rating提高 71%\n暴击率提高 25%\n[Attack] Speed提高 5%\n+15 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%"
     },
     {
       "name": "Corruption Ward (邪恶束衣)",
@@ -53,7 +53,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+80 to maximum [EnergyShield|Energy Shield]\n108% increased [EnergyShield|Energy Shield]\n+32% to [Resistances|Cold Resistance]\n50% [FasterESRechargeStart|faster start of Energy Shield Recharge]\n4.3 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+80 最大能量护盾\n能量护盾提高 108%\n+32% 冰霜抗性\n50% faster start of 能量护盾 Recharge\n4.3 Life Regeneration per second"
     },
     {
       "name": "Torment Grasp (三相戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "25% increased [Fire] Damage\n36% increased [Lightning] Damage\n+105 to maximum Mana\n+11 to all [Attributes|Attributes]\n+35% to [Resistances|Cold Resistance]\n+28% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +9% all Elemental [Resistances]\n[Fire] Damage提高 25%\n[Lightning] Damage提高 36%\n+105 最大魔力\n+11 全属性\n+35% 冰霜抗性\n+28% 闪电抗性"
     },
     {
       "name": "Golem Glance (卡马萨冠冕)",
@@ -69,7 +69,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "138% increased [EnergyShield|Energy Shield]\n+127 to maximum Mana\n+38% to [Resistances|Fire Resistance]\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 138%\n+127 最大魔力\n+38% 火焰抗性\n+32% 闪电抗性"
     },
     {
       "name": "未生巫妖",
@@ -77,7 +77,7 @@
       "baseType": "Ravenous Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVW5pcXVlcy9LdWxlbWFrc0JpcnRoIiwidyI6MSwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8460c512f8/KulemaksBirth.png",
       "rarity": 3,
-      "desc": "79% increased [Abyssalify|Desecrated Modifier] magnitudes"
+      "desc": "(附魔) 暴击率 for Spells提高 26%\n(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\nDesecrated Modifier magnitudes提高 79%\n(已腐化)"
     },
     {
       "name": "Skull Mast (鸣谐长杖)",
@@ -85,7 +85,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "101% increased [Spell] Damage\n+2 to Level of all [Chaos|Chaos] [Spell|Spell] Skills\n41% increased Cast Speed\n+5 to [Intelligence|Intelligence]"
+      "desc": "[Spell] Damage提高 101%\n+2 Level of all Chaos Spell Skills\n施法速度提高 41%\n+5 智慧"
     }
   ],
   "skills": [

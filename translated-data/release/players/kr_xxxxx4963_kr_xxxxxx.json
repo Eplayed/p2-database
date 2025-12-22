@@ -13,7 +13,7 @@
       "baseType": "Paragon Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/39a19d746e/HelmetStr05.png",
       "rarity": 2,
-      "desc": "+135 to [Armour|Armour]\n113% increased [Armour|Armour]\n+43 to maximum Life\n30% reduced [Attributes|Attribute] Requirements\n+2 to Level of all [Minion|Minion] Skills"
+      "desc": "(符文) [Reservation] [Efficiency] of [Minion] Skills提高 8%\n(符文) Bonded: Minions Revive 8% faster\n+135 护甲\n护甲提高 113%\n+43 最大生命\nAttribute Requirements降低 30%\n+2 Level of all Minion Skills"
     },
     {
       "name": "Entropy Grip (紫晶戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "+164 to [Evasion] Rating\n36% increased [ItemRarity|Rarity of Items] found\n+22% to [Resistances|Chaos Resistance]\n62% increased Mana Regeneration Rate"
+      "desc": "(基底) +10% 混沌抗性\n+164 [闪避值] Rating\n物品稀有度提高 36%\n+22% 混沌抗性\n魔力回复速度提高 62%"
     },
     {
       "name": "Dragon Cloak (咒者斗篷)",
@@ -29,7 +29,7 @@
       "baseType": "Conjurer Mantle",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludFN0cjA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3574a91ac4/BodyIntStr04.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n(基底) +30 Spirit\n(已腐化)"
     },
     {
       "name": "Rune Trap (生皮腰带)",
@@ -37,7 +37,7 @@
       "baseType": "Rawhide Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwMSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3232197e1f/Belt01.png",
       "rarity": 2,
-      "desc": "+170 to maximum Life\n+119 to maximum Mana\n32% increased [Flask] Mana Recovery rate\n+36% to [Resistances|Fire Resistance]\n+43% to [Resistances|Lightning Resistance]\n39% increased [Flask|Flask] Charges gained"
+      "desc": "(基底) Life Recovery from Flasks提高 21%\n(基底) Has 3 [Charm] Slots\n+170 最大生命\n+119 最大魔力\n[Flask] Mana Recovery rate提高 32%\n+36% 火焰抗性\n+43% 闪电抗性\nFlask Charges gained提高 39%"
     },
     {
       "name": "灵骸之履",
@@ -45,7 +45,7 @@
       "baseType": "Lattice Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VbmlxdWVzL0JvbmVzT2ZVbGxyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cae692c545/BonesOfUllr.png",
       "rarity": 3,
-      "desc": "10% increased Movement Speed\n54% increased [EnergyShield|Energy Shield]\n+20 to maximum Life\n+21 to maximum Mana\n30% increased [Reservation] [Efficiency] of Skills which create Undead [Minion|Minions]"
+      "desc": "(符文) +40% of 闪电伤害\n(符文) 移动速度 per 15 [Spirit], up to a maximum of 40%提高 1%\nOther Modifiers to 移动速度 except for Sprinting do not apply\n移动速度提高 10%\n能量护盾提高 54%\n+20 最大生命\n+21 最大魔力\nMinions提高 30%\n(已腐化)"
     },
     {
       "name": "Spirit Whorl (三相戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "+169 to [Evasion] Rating\n+113 to maximum Life\n+166 to maximum Mana\n+48% to [Resistances|Cold Resistance]\n59% increased Mana Regeneration Rate"
+      "desc": "(基底) +9% all Elemental [Resistances]\n+169 [闪避值] Rating\n+113 最大生命\n+166 最大魔力\n+48% 冰霜抗性\n魔力回复速度提高 59%"
     },
     {
       "name": "Kraken Call (罪孽短杖)",
@@ -61,7 +61,7 @@
       "baseType": "Rattling Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTAxIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2dc4b05095/Sceptre01.png",
       "rarity": 2,
-      "desc": "+154 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 81% increased Damage\n[Allies|Allies] in your [Presence|Presence] have 16% increased [Attack|Attack] Speed\n[Allies|Allies] in your [Presence|Presence] have +18% to all [ElementalDamage|Elemental] [Resistances|Resistances]"
+      "desc": "(符文) Allies in your Presence deal Damage提高 30%\n(符文) Bonded: Damage while Shapeshifted提高 40%\n+154 最大魔力\nAllies in your Presence deal Damage提高 81%\nAllies in your Presence have 攻击速度提高 16%\nAllies in your Presence have +18% all 元素抗性"
     },
     {
       "name": "Blight Beads (日曜护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "35% increased [Armour]\n+89 to maximum Life\n+3 to Level of all [Minion|Minion] Skills\n+34 to [Strength|Strength]\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) Allocates Commanding Rage\n(基底) +12 Spirit\n[护甲]提高 35%\n+89 最大生命\n+3 Level of all Minion Skills\n+34 力量\n+39% 闪电抗性"
     },
     {
       "name": "Sol Pith (塔萨里奥法器)",
@@ -77,7 +77,7 @@
       "baseType": "Tasalian Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "+90 to maximum [EnergyShield|Energy Shield]\n126% increased [EnergyShield|Energy Shield]\n+30 to maximum Mana\n+32% to [Resistances|Cold Resistance]\n46% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 30% faster start of 能量护盾 Recharge\n+90 最大能量护盾\n能量护盾提高 126%\n+30 最大魔力\n+32% 冰霜抗性\n能量护盾 Recharge Rate提高 46%"
     },
     {
       "name": "Pandemonium Palm (羽饰护手)",
@@ -85,7 +85,7 @@
       "baseType": "Feathered Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/30e916dc14/GlovesStr05.png",
       "rarity": 2,
-      "desc": "+159 to [Armour|Armour]\n+342 to [Accuracy|Accuracy] Rating\n+34% to [Resistances|Fire Resistance]\n+34% to [Resistances|Lightning Resistance]\n+41% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +40% of 火焰伤害\n+159 护甲\n+342 Accuracy Rating\n+34% 火焰抗性\n+34% 闪电抗性\n+41% 的 护甲 也套用于 元素伤害"
     }
   ],
   "skills": [

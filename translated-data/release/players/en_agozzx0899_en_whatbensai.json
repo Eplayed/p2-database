@@ -13,7 +13,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+44 to maximum [EnergyShield|Energy Shield]\n98% increased [EnergyShield|Energy Shield]\n+24% to [Resistances|Lightning Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(附魔) +23% 闪电抗性\n(符文) 移动速度提高 8%\n(符文) Bonded: 冷却回复速度提高 16%\n移动速度提高 35%\n+44 最大能量护盾\n能量护盾提高 98%\n+24% 闪电抗性\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Rage Claw (瓦尔手套)",
@@ -21,7 +21,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "Adds 14 to 22 [Fire] damage to [Attack|Attacks]\nAdds 1 to 47 [Lightning] damage to [Attack|Attacks]\n+2 to Level of all [Melee|Melee] Skills\n15% increased [Attack] Speed\n60% increased effect of Socketed Items"
+      "desc": "(附魔) Damage Penetrates 14% 冰霜抗性\n(符文) [Attack] Speed提高 12%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n附加 14 - 22 Attacks\n附加 1 - 47 Attacks\n+2 Level of all Melee Skills\n[Attack] Speed提高 15%\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Dread Hold (潜能之戒)",
@@ -29,7 +29,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 54 [Lightning] damage to [Attack|Attacks]\n+157 to [Evasion] Rating\n+33 to [Dexterity|Dexterity]\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+39% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 1 - 54 Attacks\n+157 [闪避值] Rating\n+33 敏捷\n+16% all Elemental [Resistances]\n+39% 冰霜抗性"
     },
     {
       "name": "Foe Finger (三相戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "27% increased [Cold] Damage\n+178 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n+31% to [Resistances|Lightning Resistance]\n[ManaLeech|Leech] 5.52% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +9% all Elemental [Resistances]\n[Cold] Damage提高 27%\n+178 最大魔力\n物品稀有度提高 17%\n+31% 闪电抗性\nLeech 5.52% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Loath Heart (月影护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "+94 to maximum [EnergyShield|Energy Shield]\n55% increased maximum [EnergyShield|Energy Shield]\n+2 to Level of all [Melee|Melee] Skills\n+16% to all [ElementalDamage|Elemental] [Resistances]\n30% increased Global [Defences]"
+      "desc": "(附魔) Allocates Stormcharged\n(基底) +36 最大能量护盾\n+94 最大能量护盾\n最大能量护盾提高 55%\n+2 Level of all Melee Skills\n+16% all Elemental [Resistances]\nGlobal [Defences]提高 30%"
     },
     {
       "name": "Dire Bane (刀锋节杖)",
@@ -53,7 +53,7 @@
       "baseType": "Razor Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwNyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/10760714ba/Warstaff07.png",
       "rarity": 2,
-      "desc": "155% increased [Physical] Damage\nAdds 49 to 92 [Physical|Physical] Damage\n119% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+5 to Level of all [Attack] Skills\n22% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 18%\n(符文) Elements\n(符文) Bonded: effect of Fully Broken 护甲提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 155%\n附加 49 - 92 物理伤害\n元素伤害 with Attacks提高 119%\n+5 Level of all [Attack] Skills\n22% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Sorrow Hide",
@@ -61,7 +61,7 @@
       "baseType": "Falconer's Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/512e4bd095/BodyDexInt06.png",
       "rarity": 2,
-      "desc": "+31 to [Evasion] Rating\n+12 to maximum [EnergyShield|Energy Shield]\n138% increased [Evasion] and [EnergyShield|Energy Shield]\n+37% to [Resistances|Fire Resistance]\nGain [Deflect|Deflection Rating] equal to 23% of [Evasion|Evasion Rating]\n52% reduced [Ignite|Ignite] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n(基底) 移动速度提高 5%\n+31 [闪避值] Rating\n+12 最大能量护盾\n能量护盾提高 138%\n+37% 火焰抗性\nGain Deflection Rating equal to 23% of 闪避值 Rating\nIgnite Duration on you降低 52%\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+40 to maximum Life\n+28 to [Strength|Strength]\n+26 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 3 [Charm] Slots\n+40 最大生命\n+28 力量\n+26 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Vengeance Halo (先祖冠冕)",
@@ -77,7 +77,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+72 to maximum [EnergyShield|Energy Shield]\n90% increased [EnergyShield|Energy Shield]\n15% increased [ItemRarity|Rarity of Items] found\n+33 to [Intelligence|Intelligence]\n+32% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+72 最大能量护盾\n能量护盾提高 90%\n物品稀有度提高 15%\n+33 智慧\n+32% 火焰抗性"
     }
   ],
   "skills": [

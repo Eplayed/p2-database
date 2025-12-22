@@ -13,7 +13,7 @@
       "baseType": "Bolting Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwNCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4329b881c1/Warstaff04.png",
       "rarity": 2,
-      "desc": "[Gain] 28% of Damage as Extra [Lightning] Damage\n107% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+4.99% to [Critical|Critical Hit] Chance\n+5 to Level of all [Attack] Skills\n25% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) 元素伤害 with Attacks提高 60%\n[Gain] 28% of Damage as Extra [Lightning] Damage\n元素伤害 with Attacks提高 107%\n+4.99% 暴击率\n+5 Level of all [Attack] Skills\n25% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Mind Brow (先祖冠冕)",
@@ -21,7 +21,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "73% increased [EnergyShield|Energy Shield]\n33% increased [ItemRarity|Rarity of Items] found\n+32 to [Intelligence|Intelligence]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) +1 Maximum Power Charges\n(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 73%\n物品稀有度提高 33%\n+32 智慧\n+33% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Cataclysm Skin (滑布外衣)",
@@ -29,7 +29,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+27 to [Evasion] Rating\n+11 to maximum [EnergyShield|Energy Shield]\n144% increased [Evasion] and [EnergyShield|Energy Shield]\n+33% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]\nGain [Deflect|Deflection Rating] equal to 23% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+27 [闪避值] Rating\n+11 最大能量护盾\n能量护盾提高 144%\n+33% 火焰抗性\n+38% 冰霜抗性\nGain Deflection Rating equal to 23% of 闪避值 Rating\n(已腐化)"
     },
     {
       "name": "Brimstone Collar (琥珀护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "+96 to maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Melee|Melee] Skills\n+11% to [Resistances|Fire Resistance]\n+28% to [Resistances|Cold Resistance]\n32% increased Global [Defences]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +13 力量\n+96 最大能量护盾\n+3 Level of all Melee Skills\n+11% 火焰抗性\n+28% 冰霜抗性\nGlobal [Defences]提高 32%"
     },
     {
       "name": "Torment Grip (裂隙戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 37 to 61 [Fire] damage to [Attack|Attacks]\nAdds 29 to 46 [Cold] damage to [Attack|Attacks]\nAdds 1 to 86 [Lightning] damage to [Attack|Attacks]\n+29 to [Intelligence|Intelligence]\n+37% to [Resistances|Fire Resistance]\n+28% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 37 - 61 Attacks\n附加 29 - 46 Attacks\n附加 1 - 86 Attacks\n+29 智慧\n+37% 火焰抗性\n+28% 闪电抗性"
     },
     {
       "name": "Vengeance Eye (潜能之戒)",
@@ -53,7 +53,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 12 to 20 [Cold] damage to [Attack|Attacks]\nAdds 1 to 75 [Lightning] damage to [Attack|Attacks]\n+11% to all [ElementalDamage|Elemental] [Resistances]\n+36% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 12 - 20 Attacks\n附加 1 - 75 Attacks\n+11% all Elemental [Resistances]\n+36% 冰霜抗性\n+34% 闪电抗性"
     },
     {
       "name": "Nemesis League (丝克玛便鞋)",
@@ -61,7 +61,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n58% increased [EnergyShield|Energy Shield]\n+28% to [Resistances|Fire Resistance]\n+33% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 58%\n+28% 火焰抗性\n+33% 冰霜抗性\n+35% 闪电抗性"
     },
     {
       "name": "Shavronne's Satchel",
@@ -69,7 +69,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
       "rarity": 3,
-      "desc": "29% reduced [Flask] Life Recovery rate\n+20 to [Intelligence|Intelligence]\n26% increased [Flask|Flask] Charges gained\nLife Recovery from [Flask|Flasks] also applies to [EnergyShield|Energy Shield]"
+      "desc": "(附魔) 最大能量护盾提高 18%\n(附魔) +23% 火焰抗性\n(基底) Has 2 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 29%\n+20 智慧\nFlask Charges gained提高 26%\nLife Recovery from Flasks also applies to 能量护盾\n(已腐化)"
     },
     {
       "name": "Sorrow Mitts (瓦尔裹手)",
@@ -77,7 +77,7 @@
       "baseType": "Vaal Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleEludDAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bdc7c3c15d/GlovesDexInt03.png",
       "rarity": 2,
-      "desc": "Adds 20 to 35 [Fire] damage to [Attack|Attacks]\nAdds 18 to 26 [Cold] damage to [Attack|Attacks]\n14% increased [Attack] Speed\n+35% to [Resistances|Fire Resistance]\nGain [Deflect|Deflection Rating] equal to 16% of [Evasion|Evasion Rating]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n附加 20 - 35 Attacks\n附加 18 - 26 Attacks\n[Attack] Speed提高 14%\n+35% 火焰抗性\nGain Deflection Rating equal to 16% of 闪避值 Rating"
     },
     {
       "name": "赤红护身符",
@@ -85,7 +85,7 @@
       "baseType": "Restorative Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 9% of Damage taken Recouped as Life"
     },
     {
       "name": "赤红护身符",
@@ -93,7 +93,7 @@
       "baseType": "Calm Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 魔力回复速度 while moving提高 28%"
     }
   ],
   "skills": [

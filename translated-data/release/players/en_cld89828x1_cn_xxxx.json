@@ -13,7 +13,7 @@
       "baseType": "Gauze Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QbGFndWVmaW5nZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f88ef1cca5/Plaguefinger.png",
       "rarity": 3,
-      "desc": "45% increased [Evasion] and [EnergyShield|Energy Shield]\n6% increased [Attack] Speed\n22% chance to [Poison|Poison] on [HitDamage|Hit]\n[DamageTypes|All Damage] from [HitDamage|Hits] [Contributes|Contributes] to [Poison] Magnitude"
+      "desc": "(附魔) Damage Penetrates 13% 冰霜抗性\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 45%\n[Attack] Speed提高 6%\n22% chance to Poison on Hit\nAll Damage from Hits Contributes to [Poison] Magnitude\n(已腐化)"
     },
     {
       "name": "Woe Breeze (毁灭者之弓)",
@@ -21,7 +21,7 @@
       "baseType": "Obliterator Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e62ea7f094/Bow09.png",
       "rarity": 2,
-      "desc": "163% increased [Physical] Damage\nAdds 19 to 39 [Physical|Physical] Damage\n+3.78% to [Critical|Critical Hit] Chance\n17% increased [Attack] Speed\n+133% [SurpassChance|Surpassing] chance to fire an additional Arrow"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile Range降低 50%\n[Physical] Damage提高 163%\n附加 19 - 39 物理伤害\n+3.78% 暴击率\n[Attack] Speed提高 17%\n+133% Surpassing chance to fire an additional Arrow"
     },
     {
       "name": "Sorrow Stride (蛇鳞长靴)",
@@ -29,7 +29,7 @@
       "baseType": "Serpentscale Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/316987efab/BootsDex05.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n23% increased [Evasion|Evasion] Rating\n+34% to [Resistances|Lightning Resistance]\n+18% to [Resistances|Chaos Resistance]\nGain [Deflect|Deflection Rating] equal to 21% of [Evasion|Evasion Rating]\n+37 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 30%\n闪避值 Rating提高 23%\n+34% 闪电抗性\n+18% 混沌抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating\n+37 晕眩门槛"
     },
     {
       "name": "Dread Gorget (日曜护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+48 to maximum [EnergyShield|Energy Shield]\n+46 to [Spirit|Spirit]\n12% increased [ItemRarity|Rarity of Items] found\n+40% to [Resistances|Cold Resistance]\n+24% to [Resistances|Lightning Resistance]\n16% of Damage taken [Recoup|Recouped] as Life"
+      "desc": "(附魔) Allocates Lasting Trauma\n(基底) +11 Spirit\n+48 最大能量护盾\n+46 Spirit\n物品稀有度提高 12%\n+40% 冰霜抗性\n+24% 闪电抗性\n16% of Damage taken Recouped as Life"
     },
     {
       "name": "Blood Twirl (紫晶戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 11 to 20 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 13 to 18 [Fire] damage to [Attack|Attacks]\nAdds 1 to 30 [Lightning] damage to [Attack|Attacks]\n+31 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]"
+      "desc": "(基底) +13% 混沌抗性\n附加 11 - 20 物理伤害 to Attacks\n附加 13 - 18 Attacks\n附加 1 - 30 Attacks\n+31 力量\n+38 敏捷"
     },
     {
       "name": "Honour Dart (贯心箭袋)",
@@ -53,7 +53,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) 暴击率 for Attacks提高 21%\n(已腐化)"
     },
     {
       "name": "Chimeric Band (三相戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 60 [Lightning] damage to [Attack|Attacks]\n+114 to maximum Life\n+37% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +8% all Elemental [Resistances]\n附加 1 - 60 Attacks\n+114 最大生命\n+37% 火焰抗性\n+37% 冰霜抗性\n+32% 闪电抗性"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+45 to [Strength|Strength]\n+46 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 21%\n(基底) Has 2 [Charm] Slots\n+58 最大生命\n+45 力量\n+46 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Maelström Carapace (滑击背心)",
@@ -77,7 +77,7 @@
       "baseType": "Slipstrike Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dd53d7b8d1/BodyDex06.png",
       "rarity": 2,
-      "desc": "+298 to [Evasion] Rating\n42% increased [Evasion|Evasion] Rating\n+40% to [Resistances|Fire Resistance]\n+17% to [Resistances|Chaos Resistance]\n56% reduced [Poison|Poison] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+298 [闪避值] Rating\n闪避值 Rating提高 42%\n+40% 火焰抗性\n+17% 混沌抗性\nPoison Duration on you降低 56%"
     },
     {
       "name": "Havoc Guardian (先祖冠冕)",
@@ -85,7 +85,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+69 to maximum [EnergyShield|Energy Shield]\n117% increased [EnergyShield|Energy Shield]\n+37 to maximum Mana\n+30% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+69 最大能量护盾\n能量护盾提高 117%\n+37 最大魔力\n+30% 冰霜抗性\n+36% 闪电抗性"
     }
   ],
   "skills": [

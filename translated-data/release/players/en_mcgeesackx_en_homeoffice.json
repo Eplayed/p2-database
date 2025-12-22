@@ -13,7 +13,7 @@
       "baseType": "Desert Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXgwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e2bcc2e1c1/HelmetDex04.png",
       "rarity": 2,
-      "desc": "+164 to [Evasion] Rating\n17% increased [ItemRarity|Rarity of Items] found\n26% increased [Critical|Critical Hit] Chance\n+43% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 22% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+164 [闪避值] Rating\n物品稀有度提高 17%\n暴击率提高 26%\n+43% 闪电抗性\nGain Deflection Rating equal to 22% of 闪避值 Rating"
     },
     {
       "name": "Tempest Hold (潜行护腕)",
@@ -21,7 +21,7 @@
       "baseType": "Stalking Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7a62d10b16/GlovesDex02.png",
       "rarity": 2,
-      "desc": "Adds 12 to 22 [Fire] damage to [Attack|Attacks]\nAdds 1 to 45 [Lightning] damage to [Attack|Attacks]\n15% increased [Attack] Speed\n+45% to [Resistances|Fire Resistance]\nGain [Deflect|Deflection Rating] equal to 23% of [Evasion|Evasion Rating]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 12 - 22 Attacks\n附加 1 - 45 Attacks\n[Attack] Speed提高 15%\n+45% 火焰抗性\nGain Deflection Rating equal to 23% of 闪避值 Rating"
     },
     {
       "name": "Fate Band (三相戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 15 to 36 [Fire] damage to [Attack|Attacks]\nAdds 2 to 73 [Lightning] damage to [Attack|Attacks]\n18% increased [ItemRarity|Rarity of Items] found\n+15% to all [ElementalDamage|Elemental] [Resistances]\n[LifeLeech|Leech] 9.14% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +9% all Elemental [Resistances]\n附加 15 - 36 Attacks\n附加 2 - 73 Attacks\n物品稀有度提高 18%\n+15% all Elemental [Resistances]\nLeech 9.14% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Torment Arrow (贯心箭袋)",
@@ -37,7 +37,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) 暴击率 for Attacks提高 30%\n(已腐化)"
     },
     {
       "name": "Demon Band (裂隙戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 16 to 37 [Physical|Physical] Damage to [Attack|Attacks]\n17% increased [ItemRarity|Rarity of Items] found\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+29% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 16 - 37 物理伤害 to Attacks\n物品稀有度提高 17%\n+16% all Elemental [Resistances]\n+29% 冰霜抗性"
     },
     {
       "name": "Sorrow League (龙皮长靴)",
@@ -53,7 +53,7 @@
       "baseType": "Drakeskin Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8da0bb2ea6/BootsDex06.png",
       "rarity": 2,
-      "desc": "+100 to [Evasion] Rating\n40% increased [Evasion|Evasion] Rating\n+32% to [Resistances|Fire Resistance]\n+42% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 23% of [Evasion|Evasion Rating]\n+112 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n+100 [闪避值] Rating\n闪避值 Rating提高 40%\n+32% 火焰抗性\n+42% 闪电抗性\nGain Deflection Rating equal to 23% of 闪避值 Rating\n+112 晕眩门槛"
     },
     {
       "name": "Hyrri's Ire",
@@ -61,7 +61,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "203% increased [Evasion|Evasion] Rating\n[Gain] 22% of Damage as Extra [Cold] Damage\n+31 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 33%\n闪避值 Rating提高 203%\n[Gain] 22% of Damage as Extra [Cold] Damage\n+31 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]"
     },
     {
       "name": "Kraken Heart (琥珀护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "34% increased [ItemRarity|Rarity of Items] found\n+38% to [Resistances|Cold Resistance]\n24% increased Global [Defences]"
+      "desc": "(附魔) Allocates Careful Consideration\n(基底) +12 力量\n物品稀有度提高 34%\n+38% 冰霜抗性\nGlobal [Defences]提高 24%"
     },
     {
       "name": "猎首",
@@ -77,7 +77,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+51 to maximum Life\n+22 to [Strength|Strength]\n+39 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 25%\n(基底) Has 3 [Charm] Slots\n+51 最大生命\n+22 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Phoenix Breeze (寻战之弓)",
@@ -85,7 +85,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "Adds 8 to 136 [Lightning|Lightning] Damage\n+627 to [Accuracy|Accuracy] Rating\n+4.74% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 8 - 136 闪电伤害\n+627 Accuracy Rating\n+4.74% 暴击率\n+3 Level of all [Attack] Skills"
     }
   ],
   "skills": [

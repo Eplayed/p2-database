@@ -13,7 +13,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 21 to 38 [Physical|Physical] Damage to [Attack|Attacks]\n+99 to maximum Life\n17% increased [ItemRarity|Rarity of Items] found\n+31% to [Resistances|Lightning Resistance]\n[LifeLeech|Leech] 8.5% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +12% 混沌抗性\n附加 21 - 38 物理伤害 to Attacks\n+99 最大生命\n物品稀有度提高 17%\n+31% 闪电抗性\nLeech 8.5% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Empyrean Noose (日曜护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+85 to maximum Life\n+45 to [Spirit|Spirit]\n+3 to Level of all [Melee|Melee] Skills\n+20% to all [ElementalDamage|Elemental] [Resistances]\n+27% to [Resistances|Chaos Resistance]"
+      "desc": "(附魔) Allocates Struck Through\n(基底) +15 Spirit\n+85 最大生命\n+45 Spirit\n+3 Level of all Melee Skills\n+20% all Elemental [Resistances]\n+27% 混沌抗性"
     },
     {
       "name": "Woe Finger (翡翠戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Emerald Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0VtZXJhbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/26e8b227bb/EmeraldRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 30 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 27 to 39 [Fire] damage to [Attack|Attacks]\n+117 to maximum Life\n+31 to [Intelligence|Intelligence]\n+38% to [Resistances|Fire Resistance]"
+      "desc": "(基底) +165 Accuracy Rating\n附加 14 - 30 物理伤害 to Attacks\n附加 27 - 39 Attacks\n+117 最大生命\n+31 智慧\n+38% 火焰抗性"
     },
     {
       "name": "Damnation Sole (使徒护腿)",
@@ -37,7 +37,7 @@
       "baseType": "Apostle Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnRTdHIwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d3128f0287/BootsIntStr02.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n34% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+103 to maximum Life\n+41% to [Resistances|Fire Resistance]\n+45% to [Resistances|Cold Resistance]\n+44% to [Resistances|Lightning Resistance]\n+68 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n护甲 and 能量护盾提高 34%\n+103 最大生命\n+41% 火焰抗性\n+45% 冰霜抗性\n+44% 闪电抗性\n+68 晕眩门槛"
     },
     {
       "name": "收缩指令",
@@ -45,7 +45,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+101 to maximum Life\n+11 to all [Attributes|Attributes]\n9.2 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(附魔) +27 Spirit\n(符文) +4 Maximum [Rage]\n+101 最大生命\n+11 全属性\n9.2 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded\n(已腐化)"
     },
     {
       "name": "无生之辱",
@@ -53,7 +53,7 @@
       "baseType": "Grand Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL01vcmlvckludmljdHVzX00iLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6674aa4ff6/MoriorInvictus_M.png",
       "rarity": 3,
-      "desc": "362% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+53 to maximum Life per Socket filled\nHits against you have 17% reduced [CriticalDamageBonus|Critical Damage Bonus] per Socket filled\n+14 to [Spirit|Spirit] per Socket filled"
+      "desc": "(符文) 最大生命提高 9%\n(符文) effect of Curses on you降低 50%\n(符文) +2 [护甲] per 1 [Spirit]\n(符文) Bonded: Magnitudes提高 8%\n护甲, 闪避值 and 能量护盾提高 362%\n+53 最大生命 per Socket filled\nHits against you have Critical Damage Bonus per Socket filled降低 17%\n+14 Spirit per Socket filled\n(已腐化)"
     },
     {
       "name": "Behemoth Caress (钢甲手甲)",
@@ -61,7 +61,7 @@
       "baseType": "Steelmail Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAxIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b26babb5f6/GlovesStrDex01.png",
       "rarity": 2,
-      "desc": "Adds 2 to 34 [Lightning] damage to [Attack|Attacks]\n+139 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n+38% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\nGain 5 Life per Enemy Hit with [Attack|Attacks]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 2 - 34 Attacks\n+139 最大生命\n+2 Level of all Melee Skills\n+38% 的 护甲 也套用于 元素伤害\nGain 5 Life per Enemy Hit with Attacks"
     },
     {
       "name": "Morbid Cry (Skullcrusher Quarterstaff)",
@@ -69,7 +69,7 @@
       "baseType": "Skullcrusher Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/fbbd584845/Warstaff09.png",
       "rarity": 2,
-      "desc": "Adds 39 to 68 [Physical|Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 33% of Damage as Extra [Physical] Damage\n22% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) 34% chance to Hit\n附加 39 - 68 物理伤害\n+5 Level of all [Attack] Skills\n[Gain] 33% of Damage as Extra [Physical] Damage\n22% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Plague Twine (万用腰带)",
@@ -77,7 +77,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQxMCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d95952e174/Belt10.png",
       "rarity": 2,
-      "desc": "+143 to [Armour]\n+153 to maximum Life\n31% increased [Charm] Effect Duration\n+33% to [Resistances|Fire Resistance]\n+40% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Has 3 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n+143 [护甲]\n+153 最大生命\n[Charm] Effect Duration提高 31%\n+33% 火焰抗性\n+40% 冰霜抗性"
     },
     {
       "name": "Agony Fang (Jade Talisman)",
@@ -85,7 +85,7 @@
       "baseType": "Jade Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvTHVtYmVyaW5nVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75c7ed525d/LumberingTalisman.png",
       "rarity": 2,
-      "desc": "Adds 33 to 73 [Physical|Physical] Damage\nAdds 5 to 10 [Cold|Cold] Damage\n+29 to [Strength|Strength]\n19% increased [Stun|Stun] Duration"
+      "desc": "附加 33 - 73 物理伤害\n附加 5 - 10 冰霜伤害\n+29 力量\nStun Duration提高 19%"
     }
   ],
   "skills": [

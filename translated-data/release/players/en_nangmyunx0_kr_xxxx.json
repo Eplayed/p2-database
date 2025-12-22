@@ -21,7 +21,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "38% increased maximum [EnergyShield|Energy Shield]\n+50 to [Spirit|Spirit]\n19% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Melee|Melee] Skills"
+      "desc": "(附魔) Allocates Sundering\n(基底) 物品稀有度提高 18%\n最大能量护盾提高 38%\n+50 Spirit\n物品稀有度提高 19%\n+3 Level of all Melee Skills"
     },
     {
       "name": "Maelström Paw (Fury Talisman)",
@@ -29,7 +29,7 @@
       "baseType": "Fury Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "Adds 10 to 16 [Physical|Physical] Damage\n23% increased [Attack] Speed"
+      "desc": "(基底) +12 Maximum [Rage]\n附加 10 - 16 物理伤害\n[Attack] Speed提高 23%"
     },
     {
       "name": "Empyrean Sole (龙鳞长靴)",
@@ -37,7 +37,7 @@
       "baseType": "Dragonscale Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/316987efab/BootsDex05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n98% increased [Evasion|Evasion] Rating\n+128 to maximum Life\n+45% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Slowing Potency of Debuffs on You降低 30%\n(符文) 移动速度提高 5%\n(符文) +11% 混沌抗性\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n闪避值 Rating提高 98%\n+128 最大生命\n+45% 火焰抗性\n+44% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Plague Grip (狂热者手套)",
@@ -45,7 +45,7 @@
       "baseType": "Zealot Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2d6c10dfcb/GlovesStrDex03.png",
       "rarity": 2,
-      "desc": "79% increased [Armour|Armour] and [Evasion|Evasion]\nAdds 7 to 14 [Cold] damage to [Attack|Attacks]\n17% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Melee|Melee] Skills\n[LifeLeech|Leech] 5.18% of [Physical] [Attack] Damage as Life"
+      "desc": "(附魔) +1 Level of all Melee Skills\n(附魔) Damage Penetrates 11% 冰霜抗性\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n护甲 and 闪避值提高 79%\n附加 7 - 14 Attacks\n物品稀有度提高 17%\n+2 Level of all Melee Skills\nLeech 5.18% of [Physical] [Attack] Damage as Life\n(已腐化)"
     },
     {
       "name": "Damnation Pole (Skullcrusher Quarterstaff)",
@@ -53,7 +53,7 @@
       "baseType": "Skullcrusher Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/fbbd584845/Warstaff09.png",
       "rarity": 2,
-      "desc": "Adds 47 to 91 [Physical|Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 32% of Damage as Extra [Physical] Damage\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n(基底) 44% chance to Hit\n附加 47 - 91 物理伤害\n+5 Level of all [Attack] Skills\n[Gain] 32% of Damage as Extra [Physical] Damage\n24% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "收缩指令",
@@ -61,7 +61,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+88 to maximum Life\n+13 to all [Attributes|Attributes]\n9.2 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(附魔) +30 Spirit\n(符文) +14% 火焰抗性\n(符文) +4 Maximum [Rage]\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+88 最大生命\n+13 全属性\n9.2 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded\n(已腐化)"
     },
     {
       "name": "巨铜之顶",
@@ -69,7 +69,7 @@
       "baseType": "Champion Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0JyYXNzRG9tZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e2c74f60ea/BrassDome.png",
       "rarity": 3,
-      "desc": "761% increased [Armour|Armour]\n-1% to all [MaximumResistances|Maximum Elemental Resistances]\n+208 to [StunThreshold|Stun Threshold]\nTake no Extra Damage from [Critical|Critical Hits]"
+      "desc": "(附魔) 13% of Damage taken Recouped as Life\n(符文) 最大生命提高 6%\n(符文) +11% 混沌抗性\n护甲提高 761%\n-1% to all Maximum 元素抗性\n+208 晕眩门槛\nTake no Extra Damage from Critical Hits\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -77,7 +77,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+59 to maximum Life\n+29 to [Strength|Strength]\n+37 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +20% 闪电抗性\n(基底) 晕眩门槛提高 22%\n(基底) Has 3 [Charm] Slots\n+59 最大生命\n+29 力量\n+37 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Dread Grip (蓝玉戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 9 to 20 [Physical|Physical] Damage to [Attack|Attacks]\n+93 to maximum Life\n35% increased [ItemRarity|Rarity of Items] found\n+19% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) Critical Damage Bonus提高 17%\n(附魔) Damage提高 28%\n(基底) +34% 冰霜抗性\n附加 9 - 20 物理伤害 to Attacks\n+93 最大生命\n物品稀有度提高 35%\n+19% all Elemental [Resistances]\n(已腐化)"
     }
   ],
   "skills": [

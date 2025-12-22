@@ -13,7 +13,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+109 to maximum Life\n+13 to all [Attributes|Attributes]\n9.4 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(符文) +5% all Elemental [Resistances]\n+109 最大生命\n+13 全属性\n9.4 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded"
     },
     {
       "name": "猎首",
@@ -21,7 +21,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+46 to maximum Life\n+20 to [Strength|Strength]\n+20 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 24%\n(基底) Has 3 [Charm] Slots\n+46 最大生命\n+20 力量\n+20 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Plague Grasp (瓦尔护手)",
@@ -29,7 +29,7 @@
       "baseType": "Vaal Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/30e916dc14/GlovesStr05.png",
       "rarity": 2,
-      "desc": "64% increased [Armour|Armour]\nAdds 11 to 21 [Physical|Physical] Damage to [Attack|Attacks]\n+29 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Melee|Melee] Skills\n+39% to [Resistances|Cold Resistance]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲提高 64%\n附加 11 - 21 物理伤害 to Attacks\n+29 最大生命\n物品稀有度提高 16%\n+2 Level of all Melee Skills\n+39% 冰霜抗性"
     },
     {
       "name": "巨铜之顶",
@@ -37,7 +37,7 @@
       "baseType": "Champion Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0JyYXNzRG9tZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e2c74f60ea/BrassDome.png",
       "rarity": 3,
-      "desc": "710% increased [Armour|Armour]\n-1% to all [MaximumResistances|Maximum Elemental Resistances]\n+241 to [StunThreshold|Stun Threshold]\nTake no Extra Damage from [Critical|Critical Hits]"
+      "desc": "(附魔) 护甲提高 21%\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲提高 710%\n-1% to all Maximum 元素抗性\n+241 晕眩门槛\nTake no Extra Damage from Critical Hits\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -53,7 +53,7 @@
       "baseType": "Dreaming Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYxMCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d836b3566d/Warstaff10.png",
       "rarity": 2,
-      "desc": "163% increased [Physical] Damage\nAdds 30 to 49 [Physical|Physical] Damage\n+5 to Level of all [Attack] Skills\n[ManaLeech|Leeches] 7.36% of [Physical|Physical] Damage as Mana\n[Gain] 33% of Damage as Extra [Physical] Damage\n21% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n[Physical] Damage提高 163%\n附加 30 - 49 物理伤害\n+5 Level of all [Attack] Skills\nLeeches 7.36% of 物理伤害 as Mana\n[Gain] 33% of Damage as Extra [Physical] Damage\n21% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Plague Circle (三相戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 38 [Physical|Physical] Damage to [Attack|Attacks]\n18% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]\n+27% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +8% all Elemental [Resistances]\n附加 14 - 38 物理伤害 to Attacks\n物品稀有度提高 18%\n+36% 火焰抗性\n+45% 闪电抗性\n+27% 混沌抗性"
     },
     {
       "name": "Dread Claw (Spiny Talisman)",
@@ -69,7 +69,7 @@
       "baseType": "Spiny Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvTmV0dGxlVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b5b9f39416/NettleTalisman.png",
       "rarity": 2,
-      "desc": "Adds 2 to 7 [Physical|Physical] Damage\nAdds 62 to 97 [Fire|Fire] Damage\n93% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+18% to [CriticalDamageBonus|Critical Damage Bonus]\n30% reduced [Attributes|Attribute] Requirements\nGain 8 Mana per enemy killed"
+      "desc": "附加 2 - 7 物理伤害\n附加 62 - 97 火焰伤害\n元素伤害 with Attacks提高 93%\n+18% Critical Damage Bonus\nAttribute Requirements降低 30%\nGain 8 Mana per enemy killed"
     },
     {
       "name": "Kraken Choker (翠玉护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvSmFkZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac51014172/JadeAmulet.png",
       "rarity": 2,
-      "desc": "+44 to [Spirit|Spirit]\n17% increased [ItemRarity|Rarity of Items] found\n+37% to [Resistances|Fire Resistance]\n29% increased Global [Defences]"
+      "desc": "(附魔) Allocates Tribal Fury\n(基底) +15 敏捷\n+44 Spirit\n物品稀有度提高 17%\n+37% 火焰抗性\nGlobal [Defences]提高 29%"
     },
     {
       "name": "Chimeric Dash (隐秘绑腿)",
@@ -85,7 +85,7 @@
       "baseType": "Cryptic Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnRTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/12efc4aaa8/BootsIntStr04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+86 to maximum Life\n+23 to maximum Mana\n14% increased [ItemRarity|Rarity of Items] found\n+44% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n+86 最大生命\n+23 最大魔力\n物品稀有度提高 14%\n+44% 冰霜抗性"
     }
   ],
   "skills": [

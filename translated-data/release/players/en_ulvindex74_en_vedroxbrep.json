@@ -13,7 +13,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(已腐化)"
     },
     {
       "name": "Dire Weaver (鸣谐长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 34% of Damage as Extra [Fire] Damage\n[Gain] 29% of Damage as Extra [Cold] Damage\n40% increased [Spell] Damage\n+48 to maximum Mana\n+6 to Level of all [Cold|Cold] [Spell|Spell] Skills\n46% increased Cast Speed"
+      "desc": "(符文) 暴击率 for Spells提高 48%\n(符文) Bonded: Critical Damage Bonus提高 50%\n[Gain] 34% of Damage as Extra [Fire] Damage\n[Gain] 29% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 40%\n+48 最大魔力\n+6 Level of all Cold Spell Skills\n施法速度提高 46%"
     },
     {
       "name": "Kalandra's Touch",
@@ -37,7 +37,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "26% increased [Spell] Damage\n42% increased maximum [EnergyShield|Energy Shield]\n+46 to [Spirit|Spirit]\n34% increased [Critical|Critical Hit] Chance\n+33 to [Intelligence|Intelligence]"
+      "desc": "(附魔) Allocates Barbaric 力量\n(基底) +13 Spirit\n[Spell] Damage提高 26%\n最大能量护盾提高 42%\n+46 Spirit\n暴击率提高 34%\n+33 智慧"
     },
     {
       "name": "Chimeric Vise (瓦尔手套)",
@@ -45,7 +45,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "+43 to maximum [EnergyShield|Energy Shield]\n81% increased [EnergyShield|Energy Shield]\n+80 to maximum Mana\n14% increased [ItemRarity|Rarity of Items] found\n24% increased [CriticalDamageBonus|Critical Damage Bonus]"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n+43 最大能量护盾\n能量护盾提高 81%\n+80 最大魔力\n物品稀有度提高 14%\nCritical Damage Bonus提高 24%"
     },
     {
       "name": "Apocalypse Span (缚革鞋履)",
@@ -53,7 +53,7 @@
       "baseType": "Bound Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8a97a69384/BootsInt02.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n41% increased [EnergyShield|Energy Shield]\n+101 to maximum Mana\n16% increased [ItemRarity|Rarity of Items] found\n+45% to [Resistances|Lightning Resistance]\n+111 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 41%\n+101 最大魔力\n物品稀有度提高 16%\n+45% 闪电抗性\n+111 晕眩门槛"
     },
     {
       "name": "Tempest Lash (嵌板腰带)",
@@ -61,7 +61,7 @@
       "baseType": "Plate Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/510a304252/Belt05.png",
       "rarity": 2,
-      "desc": "+114 to maximum Mana\n40% increased [Flask] Life Recovery rate\n25% increased [Charm] Effect Duration\n+45% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +126 [护甲]\n(基底) Has 2 [Charm] Slots\n+114 最大魔力\n[Flask] Life Recovery rate提高 40%\n[Charm] Effect Duration提高 25%\n+45% 火焰抗性\n+38% 冰霜抗性\n+35% 闪电抗性"
     },
     {
       "name": "Golem Whorl (珠玉戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "+188 to maximum Mana\n4% increased maximum Mana\n18% increased [ItemRarity|Rarity of Items] found\n24% increased Cast Speed\n+14% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 施法速度提高 10%\n+188 最大魔力\n最大魔力提高 4%\n物品稀有度提高 18%\n施法速度提高 24%\n+14% all Elemental [Resistances]"
     },
     {
       "name": "Ghoul Wish (德鲁伊法器)",
@@ -77,7 +77,7 @@
       "baseType": "Druidic Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7832c8858c/Focus03.png",
       "rarity": 2,
-      "desc": "+66 to maximum [EnergyShield|Energy Shield]\n89% increased [EnergyShield|Energy Shield]\n78% increased [Cold] Damage\n+2 to Level of all [Spell|Spell] Skills\n42% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+66 最大能量护盾\n能量护盾提高 89%\n[Cold] Damage提高 78%\n+2 Level of all Spell Skills\n暴击率 for Spells提高 42%"
     },
     {
       "name": "Blight Visage (丛林冠冕)",
@@ -85,7 +85,7 @@
       "baseType": "Jungle Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "108% increased [EnergyShield|Energy Shield]\n+39 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n+21 to [Intelligence|Intelligence]\n+26% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) +20 Spirit\n(符文) +14% 冰霜抗性\n(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n能量护盾提高 108%\n+39 最大魔力\n物品稀有度提高 17%\n+21 智慧\n+26% 火焰抗性\n(已腐化)"
     },
     {
       "name": "Behemoth Roar (咆哮长杖)",
@@ -93,7 +93,7 @@
       "baseType": "Roaring Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 51% of Damage as Extra [Cold] Damage\n86% increased [Spell] Damage\n+6 to Level of all [Cold|Cold] [Spell|Spell] Skills\n76% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n32% increased Cast Speed"
+      "desc": "(符文) [Spell] Damage提高 30%\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: Break Critical Hit with Spells equal to 12% of 物理伤害 dealt\n[Gain] 51% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 86%\n+6 Level of all Cold Spell Skills\n暴击率 for Spells提高 76%\n施法速度提高 32%"
     }
   ],
   "skills": [

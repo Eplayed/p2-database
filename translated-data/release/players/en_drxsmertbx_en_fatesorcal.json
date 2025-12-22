@@ -13,7 +13,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "25% increased [Lightning] Damage\n+246 to [Accuracy|Accuracy] Rating\n17% increased [ItemRarity|Rarity of Items] found\n28% increased Cast Speed\n+30 to [Intelligence|Intelligence]\n+15% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) +29% 闪电抗性\n[Lightning] Damage提高 25%\n+246 Accuracy Rating\n物品稀有度提高 17%\n施法速度提高 28%\n+30 智慧\n+15% all Elemental [Resistances]"
     },
     {
       "name": "猎首",
@@ -21,7 +21,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+40 to maximum Life\n+20 to [Strength|Strength]\n+34 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 30%\n(基底) Has 3 [Charm] Slots\n+40 最大生命\n+20 力量\n+34 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Vengeance Halo (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+68 to maximum [EnergyShield|Energy Shield]\n94% increased [EnergyShield|Energy Shield]\n17% increased [ItemRarity|Rarity of Items] found\n+38% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+68 最大能量护盾\n能量护盾提高 94%\n物品稀有度提高 17%\n+38% 冰霜抗性\n+34% 闪电抗性"
     },
     {
       "name": "Woe Carapace (邪恶束衣)",
@@ -37,7 +37,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(已腐化)"
     },
     {
       "name": "Mind Braid (赤红护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Crimson Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQ3JpbXNvbkFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6306715ae7/CrimsonAmulet.png",
       "rarity": 2,
-      "desc": "+79 to maximum [EnergyShield|Energy Shield]\n+33 to [Spirit|Spirit]\n+3 to Level of all [Spell|Spell] Skills\n37% increased [Critical|Critical Hit] Chance\n+28% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) Allocates Wasting Casts\n(基底) 2 Life Regeneration per second\n+79 最大能量护盾\n+33 Spirit\n+3 Level of all Spell Skills\n暴击率提高 37%\n+28% 闪电抗性"
     },
     {
       "name": "Dragon Pace (丝克玛便鞋)",
@@ -53,7 +53,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n135% increased [EnergyShield|Energy Shield]\n+43% to [Resistances|Fire Resistance]\n+30% to [Resistances|Cold Resistance]\n+327 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 135%\n+43% 火焰抗性\n+30% 冰霜抗性\n+327 晕眩门槛"
     },
     {
       "name": "Gloom Post (收割长杖)",
@@ -61,7 +61,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "150% increased [Spell] Damage\n+198 to maximum Mana\n+6 to Level of all [Spell|Spell] Skills\n83% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n44% increased Cast Speed"
+      "desc": "(符文) [Spell] Damage提高 60%\n(符文) Bonded: Break Critical Hit with Spells equal to 24% of 物理伤害 dealt\n[Spell] Damage提高 150%\n+198 最大魔力\n+6 Level of all Spell Skills\n暴击率 for Spells提高 83%\n施法速度提高 44%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -69,7 +69,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "60% increased [Evasion|Evasion] Rating\n22% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+17 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 能量护盾 Recharge starts after spending a total of\n 2000 Mana, no more than once every 2 seconds\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n闪避值 Rating提高 60%\n暴击率提高 22%\n[Attack] Speed提高 5%\n+17 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Hypnotic Eye (蓝玉戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "+156 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n28% increased Cast Speed\n+27% to [Resistances|Fire Resistance]\n+36% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +23% 冰霜抗性\n+156 最大魔力\n物品稀有度提高 17%\n施法速度提高 28%\n+27% 火焰抗性\n+36% 冰霜抗性"
     },
     {
       "name": "破碎传承者",
@@ -85,7 +85,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVW5pcXVlcy9TaXJlT2ZTaGFyZHMiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4d78611003/SireOfShards.png",
       "rarity": 3,
-      "desc": "103% increased [Spell] Damage\n10% increased Cast Speed\n+8% to all [ElementalDamage|Elemental] [Resistances]\n20% increased [LightRadius|Light Radius]\n[Spell|Spells] fire 4 additional [Projectile|Projectiles]\n[Spell|Spells] fire [Projectile|Projectiles] in a circle"
+      "desc": "[Spell] Damage提高 103%\n施法速度提高 10%\n+8% all Elemental [Resistances]\nLight Radius提高 20%\nSpells fire 4 additional Projectiles\nSpells fire Projectiles in a circle"
     }
   ],
   "skills": [

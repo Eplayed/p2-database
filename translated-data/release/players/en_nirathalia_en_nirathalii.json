@@ -13,7 +13,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+118 to maximum [EnergyShield|Energy Shield]\n144% increased [EnergyShield|Energy Shield]\n+34% to [Resistances|Cold Resistance]\n+40% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) 能量护盾 Recharge Rate提高 50%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(符文) Bonded: 20% faster start of 能量护盾 Recharge\n+118 最大能量护盾\n能量护盾提高 144%\n+34% 冰霜抗性\n+40% 闪电抗性"
     },
     {
       "name": "Kraken Weaver (收割长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "[Gain] 52% of Damage as Extra [Fire] Damage\n207% increased [Spell] Damage\n90% increased Mana Regeneration Rate\n+7 to Level of all [Physical|Physical] [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Gain additional 晕眩门槛 equal to 14% of 最大能量护盾\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Immobilisation buildup提高 30%\n[Gain] 52% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 207%\n魔力回复速度提高 90%\n+7 Level of all Physical Spell Skills\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -29,7 +29,7 @@
       "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 while Sprinting提高 7%"
     },
     {
       "name": "猎首",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+40 to maximum Life\n+28 to [Strength|Strength]\n+25 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 28%\n(基底) Has 2 [Charm] Slots\n+40 最大生命\n+28 力量\n+25 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -45,7 +45,7 @@
       "baseType": "Calm Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 魔力回复速度 while moving提高 27%"
     },
     {
       "name": "Mind Crown (先祖冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+70 to maximum [EnergyShield|Energy Shield]\n136% increased [EnergyShield|Energy Shield]\n+36 to maximum Mana\n16% increased [ItemRarity|Rarity of Items] found\n+40% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+70 最大能量护盾\n能量护盾提高 136%\n+36 最大魔力\n物品稀有度提高 16%\n+40% 冰霜抗性"
     },
     {
       "name": "Tempest Cloak (Maji Talisman)",
@@ -61,7 +61,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "37% increased [Physical] Damage\nAdds 9 to 16 [Fire|Fire] Damage\nAdds 2 to 5 [Cold|Cold] Damage\n+77 to [Accuracy|Accuracy] Rating\nGrants 5 Life per Enemy [HitDamage|Hit]\nCauses 77% increased [Stun|Stun] Buildup\n20% increased [Stun|Stun] Duration"
+      "desc": "(基底) +8 Maximum [Rage]\n[Physical] Damage提高 37%\n附加 9 - 16 火焰伤害\n附加 2 - 5 冰霜伤害\n+77 Accuracy Rating\nGrants 5 Life per Enemy Hit\nCauses Stun Buildup提高 77%\nStun Duration提高 20%"
     },
     {
       "name": "Golem Loop (金光戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "+180 to maximum Mana\n35% increased [ItemRarity|Rarity of Items] found\n+16% to all [ElementalDamage|Elemental] [Resistances]\n70% increased Mana Regeneration Rate"
+      "desc": "(基底) 物品稀有度提高 9%\n+180 最大魔力\n物品稀有度提高 35%\n+16% all Elemental [Resistances]\n魔力回复速度提高 70%"
     },
     {
       "name": "Rapture March (丝克玛便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+58 to maximum [EnergyShield|Energy Shield]\n+44% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+58 最大能量护盾\n+44% 火焰抗性\n+37% 冰霜抗性\n+34% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Golem Gorget (日曜护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "54% increased maximum [EnergyShield|Energy Shield]\n+148 to maximum Mana\n+50 to [Spirit|Spirit]\n38% increased [CriticalDamageBonus|Critical Damage Bonus]"
+      "desc": "(附魔) Allocates Patient Barrier\n(基底) +15 Spirit\n最大能量护盾提高 54%\n+148 最大魔力\n+50 Spirit\nCritical Damage Bonus提高 38%"
     },
     {
       "name": "Dread Loop (金光戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "+151 to maximum Mana\n37% increased [ItemRarity|Rarity of Items] found\n27% increased Cast Speed\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 11%\n+151 最大魔力\n物品稀有度提高 37%\n施法速度提高 27%\n+32% 闪电抗性"
     },
     {
       "name": "夜鳞",
@@ -101,7 +101,7 @@
       "baseType": "Pauascale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9OaWdodHNjYWxlIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/854d34c57b/Nightscale.png",
       "rarity": 3,
-      "desc": "58% increased [EnergyShield|Energy Shield]\n55% increased [Critical|Critical Hit] Chance\n+22 to [Intelligence|Intelligence]\n+22% to [Resistances|Cold Resistance]\n162% increased Mana Regeneration Rate if you've dealt a [Critical|Critical Hit] [Recently]\nCannot Regenerate Mana if you haven't dealt a [Critical|Critical Hit] [Recently]"
+      "desc": "(符文) 能量护盾 Recharge starts after spending a total of\n 2000 Mana, no more than once every 2 seconds\n能量护盾提高 58%\n暴击率提高 55%\n+22 智慧\n+22% 冰霜抗性\n魔力回复速度 if you've dealt a Critical Hit [Recently]提高 162%\nCannot Regenerate Mana if you haven't dealt a Critical Hit [Recently]\n(已腐化)"
     }
   ],
   "skills": [

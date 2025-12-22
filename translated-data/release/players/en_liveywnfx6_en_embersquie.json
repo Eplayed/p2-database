@@ -13,7 +13,7 @@
       "baseType": "Trapper Hood",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXgwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/367615d8a8/HelmetDex05.png",
       "rarity": 2,
-      "desc": "+173 to [Evasion] Rating\n77% increased [Evasion|Evasion] Rating\n+118 to maximum Mana\n+39% to [Resistances|Cold Resistance]\nGain [Deflect|Deflection Rating] equal to 21% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) +1 Item 闪避值 Rating on Equipped Helmet\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+173 [闪避值] Rating\n闪避值 Rating提高 77%\n+118 最大魔力\n+39% 冰霜抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating\n(已腐化)"
     },
     {
       "name": "Agony Twirl (紫晶戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 28 to 44 [Cold] damage to [Attack|Attacks]\nAdds 2 to 76 [Lightning] damage to [Attack|Attacks]\n+24 to [Intelligence|Intelligence]\n+13% to all [ElementalDamage|Elemental] [Resistances]\n+34% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +12% 混沌抗性\n附加 28 - 44 Attacks\n附加 2 - 76 Attacks\n+24 智慧\n+13% all Elemental [Resistances]\n+34% 冰霜抗性"
     },
     {
       "name": "Carrion Spur (束带长靴)",
@@ -29,7 +29,7 @@
       "baseType": "Cinched Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b82526a3d4/BootsDex02.png",
       "rarity": 2,
-      "desc": "25% increased Movement Speed\n+138 to [Evasion] Rating\n84% increased [Evasion|Evasion] Rating\n+39% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 21% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 25%\n+138 [闪避值] Rating\n闪避值 Rating提高 84%\n+39% 闪电抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating\n(已腐化)"
     },
     {
       "name": "Eagle Cloak (邪恶束衣)",
@@ -37,7 +37,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "75% increased [EnergyShield|Energy Shield]\n+50 to [Spirit|Spirit]\nHits against you have 49% reduced [CriticalDamageBonus|Critical Damage Bonus]\n+22% to [Resistances|Fire Resistance]\n54% reduced [Ignite|Ignite] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) +5% all Elemental [Resistances]\n(符文) +14% 闪电抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 75%\n+50 Spirit\nHits against you have Critical Damage Bonus降低 49%\n+22% 火焰抗性\nIgnite Duration on you降低 54%\n(已腐化)"
     },
     {
       "name": "Maelström Eye (黄玉戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 10 to 22 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 33 to 48 [Fire] damage to [Attack|Attacks]\nAdds 2 to 84 [Lightning] damage to [Attack|Attacks]\n+21% to [Resistances|Fire Resistance]\n+24% to [Resistances|Lightning Resistance]\n+21% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +21% 闪电抗性\n附加 10 - 22 物理伤害 to Attacks\n附加 33 - 48 Attacks\n附加 2 - 84 Attacks\n+21% 火焰抗性\n+24% 闪电抗性\n+21% 混沌抗性"
     },
     {
       "name": "赤红护身符",
@@ -53,7 +53,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 7%"
     },
     {
       "name": "Ghoul Fletch (寻战之弓)",
@@ -61,7 +61,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "63% increased [Physical] Damage\n+125 to [Accuracy|Accuracy] Rating\n+4.74% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Leeches 2.5% of 物理伤害 as Mana\n(符文) Elements\n(符文) Bonded: 最大魔力提高 5%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 63%\n+125 Accuracy Rating\n+4.74% 暴击率\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Fate Cloak (Alpha Talisman)",
@@ -69,7 +69,7 @@
       "baseType": "Alpha Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUHJpbWFsVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/abb37076d1/PrimalTalisman.png",
       "rarity": 2,
-      "desc": "Adds 52 to 69 [Fire|Fire] Damage\n+4.3% to [Critical|Critical Hit] Chance\n+5 to Level of all [Attack] Skills\nCauses 71% increased [Stun|Stun] Buildup"
+      "desc": "(基底) +11% [Block] chance\n附加 52 - 69 火焰伤害\n+4.3% 暴击率\n+5 Level of all [Attack] Skills\nCauses Stun Buildup提高 71%"
     },
     {
       "name": "Glyph Fingers (精制护腕)",
@@ -77,7 +77,7 @@
       "baseType": "Refined Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d8dac34445/GlovesDex04.png",
       "rarity": 2,
-      "desc": "Adds 10 to 16 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 26 to 44 [Fire] damage to [Attack|Attacks]\n34% increased [CriticalDamageBonus|Critical Damage Bonus]\n+31% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) +1 Maximum Frenzy Charges\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n附加 10 - 16 物理伤害 to Attacks\n附加 26 - 44 Attacks\nCritical Damage Bonus提高 34%\n+31% 火焰抗性\n+44% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -85,7 +85,7 @@
       "baseType": "Sturdy Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 晕眩门槛提高 21%"
     },
     {
       "name": "猎首",
@@ -93,7 +93,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+36 to maximum Life\n+43 to [Strength|Strength]\n+29 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 23%\n(基底) Has 2 [Charm] Slots\n+36 最大生命\n+43 力量\n+29 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Pandemonium Scarab (帝金护身符)",
@@ -101,7 +101,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "52% increased maximum [EnergyShield|Energy Shield]\n+2 to Level of all [Projectile] Skills\n+30 to [Dexterity|Dexterity]\n+26 to [Intelligence|Intelligence]"
+      "desc": "(附魔) Allocates Run and Gun\n(基底) 物品稀有度提高 17%\n最大能量护盾提高 52%\n+2 Level of all [Projectile] Skills\n+30 敏捷\n+26 智慧"
     },
     {
       "name": "Miracle Brand (贯心箭袋)",
@@ -109,7 +109,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 10 to 14 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 25 to 44 [Fire] damage to [Attack|Attacks]\n44% increased Damage with Bow Skills\n32% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage\n15% increased [Attack] Speed"
+      "desc": "(基底) 暴击率 for Attacks提高 23%\n附加 10 - 14 物理伤害 to Attacks\n附加 25 - 44 Attacks\nDamage with Bow Skills提高 44%\nCritical Damage Bonus for [Attack] Damage提高 32%\n[Attack] Speed提高 15%"
     }
   ],
   "skills": [

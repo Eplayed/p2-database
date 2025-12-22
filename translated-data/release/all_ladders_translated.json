@@ -1,5 +1,5 @@
 {
-  "updateTime": "2025-12-22T07:15:33.412Z",
+  "updateTime": "2025-12-22T10:13:38.507Z",
   "classes": [
     {
       "name": "Pathfinder",
@@ -80,7 +80,7 @@
         "level": 99,
         "account": "BansheesVeil-4479",
         "originalAccount": "BansheesVeil-4479",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQnJ1dGVTaGllbGRXYWxsU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b140211605/BruteShieldWallSkillGem.png",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonebloodmagic.png",
         "detailPath": "players/en_bansheesve_en_sotsunakup.json",
         "fileName": "en_bansheesve_en_sotsunakup.json"
       },
@@ -96,16 +96,6 @@
       },
       {
         "rank": 6,
-        "name": "ToxicFinder",
-        "level": 99,
-        "account": "Chaoslord93-3826",
-        "originalAccount": "Chaoslord93-3826",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvUmFuZ2VyUG9pc29uQXJyb3dTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0cefdc7620/RangerPoisonArrowSkillGem.png",
-        "detailPath": "players/en_chaoslord9_en_toxicfinde.json",
-        "fileName": "en_chaoslord9_en_toxicfinde.json"
-      },
-      {
-        "rank": 7,
         "name": "MASTER_VIET_I",
         "level": 99,
         "account": "masterviet-3827",
@@ -113,6 +103,16 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSWNlU2hvdFNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/32f9c0922d/IceShotSkillGem.png",
         "detailPath": "players/en_masterviet_en_masterxvie.json",
         "fileName": "en_masterviet_en_masterxvie.json"
+      },
+      {
+        "rank": 7,
+        "name": "ToxicFinder",
+        "level": 99,
+        "account": "Chaoslord93-3826",
+        "originalAccount": "Chaoslord93-3826",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvUmFuZ2VyUG9pc29uQXJyb3dTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0cefdc7620/RangerPoisonArrowSkillGem.png",
+        "detailPath": "players/en_chaoslord9_en_toxicfinde.json",
+        "fileName": "en_chaoslord9_en_toxicfinde.json"
       },
       {
         "rank": 8,
@@ -166,16 +166,6 @@
       },
       {
         "rank": 13,
-        "name": "MinionSprint",
-        "level": 98,
-        "account": "nut24305-2616",
-        "originalAccount": "nut24305-2616",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvUmFuZ2VyUG9pc29uQXJyb3dTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0cefdc7620/RangerPoisonArrowSkillGem.png",
-        "detailPath": "players/en_nut24305x2_en_minionspri.json",
-        "fileName": "en_nut24305x2_en_minionspri.json"
-      },
-      {
-        "rank": 14,
         "name": "IronPathFinder",
         "level": 98,
         "account": "huangwb-8517",
@@ -183,6 +173,16 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRXhwbG9zaXZlR3JlbmFkZU1lcmNHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/73e6e3cd9f/ExplosiveGrenadeMercGem.png",
         "detailPath": "players/en_huangwbx85_en_ironpathfi.json",
         "fileName": "en_huangwbx85_en_ironpathfi.json"
+      },
+      {
+        "rank": 14,
+        "name": "MinionSprint",
+        "level": 98,
+        "account": "nut24305-2616",
+        "originalAccount": "nut24305-2616",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvUmFuZ2VyUG9pc29uQXJyb3dTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0cefdc7620/RangerPoisonArrowSkillGem.png",
+        "detailPath": "players/en_nut24305x2_en_minionspri.json",
+        "fileName": "en_nut24305x2_en_minionspri.json"
       },
       {
         "rank": 15,
@@ -210,7 +210,7 @@
         "level": 98,
         "account": "ItsBigWoo-4108",
         "originalAccount": "ItsBigWoo-4108",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRXhwbG9zaXZlR3JlbmFkZU1lcmNHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/73e6e3cd9f/ExplosiveGrenadeMercGem.png",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvUG93ZXJTaG90SW5jZW5kaWFyeVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/91d811d5f7/PowerShotIncendiarySkillGem.png",
         "detailPath": "players/en_itsbigwoox_en_woopathfin.json",
         "fileName": "en_itsbigwoox_en_woopathfin.json"
       },
@@ -278,16 +278,6 @@
       },
       {
         "rank": 4,
-        "name": "Kai_FotV",
-        "level": 98,
-        "account": "wongklun-2431",
-        "originalAccount": "wongklun-2431",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
-        "detailPath": "players/en_wongklunx2_en_kaixfotv.json",
-        "fileName": "en_wongklunx2_en_kaixfotv.json"
-      },
-      {
-        "rank": 5,
         "name": "德鲁伊之父",
         "level": 98,
         "account": "SayMyName-5098",
@@ -295,6 +285,16 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGcm96ZW5DbGF3c1NraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/6f193a903c/DruidFrozenClawsSkillGem.png",
         "detailPath": "players/en_saymynamex_cn_xxxxx.json",
         "fileName": "en_saymynamex_cn_xxxxx.json"
+      },
+      {
+        "rank": 5,
+        "name": "Kai_FotV",
+        "level": 98,
+        "account": "wongklun-2431",
+        "originalAccount": "wongklun-2431",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
+        "detailPath": "players/en_wongklunx2_en_kaixfotv.json",
+        "fileName": "en_wongklunx2_en_kaixfotv.json"
       },
       {
         "rank": 6,
@@ -388,36 +388,6 @@
       },
       {
         "rank": 15,
-        "name": "ElFurrosteiga",
-        "level": 97,
-        "account": "Nekolito-5858",
-        "originalAccount": "Nekolito-5858",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneironreflexes.png",
-        "detailPath": "players/en_nekolitox5_en_elfurroste.json",
-        "fileName": "en_nekolitox5_en_elfurroste.json"
-      },
-      {
-        "rank": 16,
-        "name": "HabibiiiiiiiiBlocksberg",
-        "level": 97,
-        "account": "nitscheeeee-8102",
-        "originalAccount": "nitscheeeee-8102",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/druidanimism.png",
-        "detailPath": "players/en_nitscheeee_en_habibiiiii.json",
-        "fileName": "en_nitscheeee_en_habibiiiii.json"
-      },
-      {
-        "rank": 17,
-        "name": "SSSOLOBY",
-        "level": 97,
-        "account": "bigzaa1995-6250",
-        "originalAccount": "bigzaa1995-6250",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_bigzaa1995_en_sssoloby.json",
-        "fileName": "en_bigzaa1995_en_sssoloby.json"
-      },
-      {
-        "rank": 18,
         "name": "Brumz_CharityBear",
         "level": 97,
         "account": "brumz7-1626",
@@ -427,7 +397,17 @@
         "fileName": "en_brumz7x162_en_brumzxchar.json"
       },
       {
-        "rank": 19,
+        "rank": 16,
+        "name": "ElFurrosteiga",
+        "level": 97,
+        "account": "Nekolito-5858",
+        "originalAccount": "Nekolito-5858",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneironreflexes.png",
+        "detailPath": "players/en_nekolitox5_en_elfurroste.json",
+        "fileName": "en_nekolitox5_en_elfurroste.json"
+      },
+      {
+        "rank": 17,
         "name": "EnireDruid",
         "level": 97,
         "account": "Enirevlow-1690",
@@ -435,6 +415,26 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/druidanimism.png",
         "detailPath": "players/en_enirevlowx_en_eniredruid.json",
         "fileName": "en_enirevlowx_en_eniredruid.json"
+      },
+      {
+        "rank": 18,
+        "name": "SSSOLOBY",
+        "level": 97,
+        "account": "bigzaa1995-6250",
+        "originalAccount": "bigzaa1995-6250",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_bigzaa1995_en_sssoloby.json",
+        "fileName": "en_bigzaa1995_en_sssoloby.json"
+      },
+      {
+        "rank": 19,
+        "name": "HabibiiiiiiiiBlocksberg",
+        "level": 97,
+        "account": "nitscheeeee-8102",
+        "originalAccount": "nitscheeeee-8102",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/druidanimism.png",
+        "detailPath": "players/en_nitscheeee_en_habibiiiii.json",
+        "fileName": "en_nitscheeee_en_habibiiiii.json"
       },
       {
         "rank": 20,
@@ -490,16 +490,6 @@
       },
       {
         "rank": 5,
-        "name": "นายเจ๊กชาวจีน",
-        "level": 98,
-        "account": "Luminanc3-0008",
-        "originalAccount": "Luminanc3-0008",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneironreflexes.png",
-        "detailPath": "players/en_luminanc3x_th_xxxxxxxxxx.json",
-        "fileName": "en_luminanc3x_th_xxxxxxxxxx.json"
-      },
-      {
-        "rank": 6,
         "name": "网友许昊龙",
         "level": 98,
         "account": "milifrisk-8647",
@@ -507,6 +497,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/druidalternateenergyshield.png",
         "detailPath": "players/en_milifriskx_cn_xxxxx.json",
         "fileName": "en_milifriskx_cn_xxxxx.json"
+      },
+      {
+        "rank": 6,
+        "name": "นายเจ๊กชาวจีน",
+        "level": 98,
+        "account": "Luminanc3-0008",
+        "originalAccount": "Luminanc3-0008",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneironreflexes.png",
+        "detailPath": "players/en_luminanc3x_th_xxxxxxxxxx.json",
+        "fileName": "en_luminanc3x_th_xxxxxxxxxx.json"
       },
       {
         "rank": 7,
@@ -530,16 +530,6 @@
       },
       {
         "rank": 9,
-        "name": "重生狼德不好玩就撕裂乔纳森的嘴",
-        "level": 97,
-        "account": "1486579547-3747",
-        "originalAccount": "1486579547-3747",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/druidalternateenergyshield.png",
-        "detailPath": "players/en_1486579547_cn_xxxxxxxxxx.json",
-        "fileName": "en_1486579547_cn_xxxxxxxxxx.json"
-      },
-      {
-        "rank": 10,
         "name": "Nzrl",
         "level": 97,
         "account": "Nazrul-8654",
@@ -547,6 +537,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
         "detailPath": "players/en_nazrulx865_en_nzrl.json",
         "fileName": "en_nazrulx865_en_nzrl.json"
+      },
+      {
+        "rank": 10,
+        "name": "重生狼德不好玩就撕裂乔纳森的嘴",
+        "level": 97,
+        "account": "1486579547-3747",
+        "originalAccount": "1486579547-3747",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/druidalternateenergyshield.png",
+        "detailPath": "players/en_1486579547_cn_xxxxxxxxxx.json",
+        "fileName": "en_1486579547_cn_xxxxxxxxxx.json"
       },
       {
         "rank": 11,
@@ -610,16 +610,6 @@
       },
       {
         "rank": 17,
-        "name": "Predator_Druid",
-        "level": 97,
-        "account": "별포식자-5077",
-        "originalAccount": "별포식자-5077",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/liferegentoenergyshield.png",
-        "detailPath": "players/kr_xxxxx5077_en_predatorxd.json",
-        "fileName": "kr_xxxxx5077_en_predatorxd.json"
-      },
-      {
-        "rank": 18,
         "name": "KingOfTheDruid",
         "level": 97,
         "account": "DotaFu-3067",
@@ -629,7 +619,7 @@
         "fileName": "en_dotafux306_en_kingofthed.json"
       },
       {
-        "rank": 19,
+        "rank": 18,
         "name": "onlynec_druid",
         "level": 97,
         "account": "k01421-3690",
@@ -637,6 +627,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneelementalequilibrium.png",
         "detailPath": "players/en_k01421x369_en_onlynecxdr.json",
         "fileName": "en_k01421x369_en_onlynecxdr.json"
+      },
+      {
+        "rank": 19,
+        "name": "Predator_Druid",
+        "level": 97,
+        "account": "별포식자-5077",
+        "originalAccount": "별포식자-5077",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/liferegentoenergyshield.png",
+        "detailPath": "players/kr_xxxxx5077_en_predatorxd.json",
+        "fileName": "kr_xxxxx5077_en_predatorxd.json"
       },
       {
         "rank": 20,
@@ -702,16 +702,6 @@
       },
       {
         "rank": 6,
-        "name": "Kalroxa",
-        "level": 98,
-        "account": "VoidMaster11-4776",
-        "originalAccount": "VoidMaster11-4776",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonebloodmagic.png",
-        "detailPath": "players/en_voidmaster_en_kalroxa.json",
-        "fileName": "en_voidmaster_en_kalroxa.json"
-      },
-      {
-        "rank": 7,
         "name": "StickyDurp",
         "level": 98,
         "account": "flyinghigh42-0275",
@@ -721,7 +711,7 @@
         "fileName": "en_flyinghigh_en_stickydurp.json"
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "YPE",
         "level": 98,
         "account": "Phamhannii-0530",
@@ -729,6 +719,16 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvU3BhcmtTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a68f35ec94/SparkSkillGem.png",
         "detailPath": "players/en_phamhannii_en_ype.json",
         "fileName": "en_phamhannii_en_ype.json"
+      },
+      {
+        "rank": 8,
+        "name": "Kalroxa",
+        "level": 98,
+        "account": "VoidMaster11-4776",
+        "originalAccount": "VoidMaster11-4776",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonebloodmagic.png",
+        "detailPath": "players/en_voidmaster_en_kalroxa.json",
+        "fileName": "en_voidmaster_en_kalroxa.json"
       },
       {
         "rank": 9,
@@ -752,6 +752,16 @@
       },
       {
         "rank": 11,
+        "name": "Deeldoe",
+        "level": 98,
+        "account": "ДвойноеТройное-7307",
+        "originalAccount": "ДвойноеТройное-7307",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonebloodmagic.png",
+        "detailPath": "players/ru_xxxxxxxxxx_en_deeldoe.json",
+        "fileName": "ru_xxxxxxxxxx_en_deeldoe.json"
+      },
+      {
+        "rank": 12,
         "name": "EmmaRoseWitch",
         "level": 97,
         "account": "Kronodan-1864",
@@ -761,27 +771,7 @@
         "fileName": "en_kronodanx1_en_emmarosewi.json"
       },
       {
-        "rank": 12,
-        "name": "Deeldoe",
-        "level": 97,
-        "account": "ДвойноеТройное-7307",
-        "originalAccount": "ДвойноеТройное-7307",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonebloodmagic.png",
-        "detailPath": "players/ru_xxxxxxxxxx_en_deeldoe.json",
-        "fileName": "ru_xxxxxxxxxx_en_deeldoe.json"
-      },
-      {
         "rank": 13,
-        "name": "mngbyz",
-        "level": 97,
-        "account": "mngbyz-2913",
-        "originalAccount": "mngbyz-2913",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneelementalequilibrium.png",
-        "detailPath": "players/en_mngbyzx291_en_mngbyz.json",
-        "fileName": "en_mngbyzx291_en_mngbyz.json"
-      },
-      {
-        "rank": 14,
         "name": "Fate_Witch_X",
         "level": 97,
         "account": "JokerXannibal-4210",
@@ -789,6 +779,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneeldritchbattery.png",
         "detailPath": "players/en_jokerxanni_en_fatexwitch.json",
         "fileName": "en_jokerxanni_en_fatexwitch.json"
+      },
+      {
+        "rank": 14,
+        "name": "mngbyz",
+        "level": 97,
+        "account": "mngbyz-2913",
+        "originalAccount": "mngbyz-2913",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystoneelementalequilibrium.png",
+        "detailPath": "players/en_mngbyzx291_en_mngbyz.json",
+        "fileName": "en_mngbyzx291_en_mngbyz.json"
       },
       {
         "rank": 15,
@@ -822,13 +822,13 @@
       },
       {
         "rank": 18,
-        "name": "Nower_spark",
+        "name": "IFV_BM",
         "level": 97,
-        "account": "Nowerok-3479",
-        "originalAccount": "Nowerok-3479",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/heroicspirit.png",
-        "detailPath": "players/en_nowerokx34_en_nowerxspar.json",
-        "fileName": "en_nowerokx34_en_nowerxspar.json"
+        "account": "iraHeeL-4612",
+        "originalAccount": "iraHeeL-4612",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29tZXRTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/212d23c28b/CometSkillGem.png",
+        "detailPath": "players/en_iraheelx46_en_ifvxbm.json",
+        "fileName": "en_iraheelx46_en_ifvxbm.json"
       },
       {
         "rank": 19,
@@ -842,13 +842,13 @@
       },
       {
         "rank": 20,
-        "name": "IFV_BM",
+        "name": "Nower_spark",
         "level": 97,
-        "account": "iraHeeL-4612",
-        "originalAccount": "iraHeeL-4612",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29tZXRTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/212d23c28b/CometSkillGem.png",
-        "detailPath": "players/en_iraheelx46_en_ifvxbm.json",
-        "fileName": "en_iraheelx46_en_ifvxbm.json"
+        "account": "Nowerok-3479",
+        "originalAccount": "Nowerok-3479",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/heroicspirit.png",
+        "detailPath": "players/en_nowerokx34_en_nowerxspar.json",
+        "fileName": "en_nowerokx34_en_nowerxspar.json"
       }
     ],
     "Stormweaver": [
@@ -964,16 +964,6 @@
       },
       {
         "rank": 12,
-        "name": "InfusedYogg",
-        "level": 97,
-        "account": "Yogg-6073",
-        "originalAccount": "Yogg-6073",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_yoggx6073_en_infusedyog.json",
-        "fileName": "en_yoggx6073_en_infusedyog.json"
-      },
-      {
-        "rank": 13,
         "name": "Pissebombe",
         "level": 97,
         "account": "Paced-7931",
@@ -983,7 +973,7 @@
         "fileName": "en_pacedx7931_en_pissebombe.json"
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "benktsorc",
         "level": 97,
         "account": "watafak301-5413",
@@ -991,6 +981,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
         "detailPath": "players/en_watafak301_en_benktsorc.json",
         "fileName": "en_watafak301_en_benktsorc.json"
+      },
+      {
+        "rank": 14,
+        "name": "InfusedYogg",
+        "level": 97,
+        "account": "Yogg-6073",
+        "originalAccount": "Yogg-6073",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_yoggx6073_en_infusedyog.json",
+        "fileName": "en_yoggx6073_en_infusedyog.json"
       },
       {
         "rank": 15,
@@ -1004,13 +1004,13 @@
       },
       {
         "rank": 16,
-        "name": "Lamurra",
+        "name": "Ash_DiamondDust",
         "level": 97,
-        "account": "apica-5137",
-        "originalAccount": "apica-5137",
+        "account": "demeter94-5208",
+        "originalAccount": "demeter94-5208",
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_apicax5137_en_lamurra.json",
-        "fileName": "en_apicax5137_en_lamurra.json"
+        "detailPath": "players/en_demeter94x_en_ashxdiamon.json",
+        "fileName": "en_demeter94x_en_ashxdiamon.json"
       },
       {
         "rank": 17,
@@ -1024,13 +1024,13 @@
       },
       {
         "rank": 18,
-        "name": "Ash_DiamondDust",
+        "name": "Lamurra",
         "level": 97,
-        "account": "demeter94-5208",
-        "originalAccount": "demeter94-5208",
+        "account": "apica-5137",
+        "originalAccount": "apica-5137",
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_demeter94x_en_ashxdiamon.json",
-        "fileName": "en_demeter94x_en_ashxdiamon.json"
+        "detailPath": "players/en_apicax5137_en_lamurra.json",
+        "fileName": "en_apicax5137_en_lamurra.json"
       },
       {
         "rank": 19,
@@ -1096,16 +1096,6 @@
       },
       {
         "rank": 5,
-        "name": "瓦尔超越",
-        "level": 98,
-        "account": "yangcy-0206",
-        "originalAccount": "yangcy-0206",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_yangcyx020_cn_xxxx.json",
-        "fileName": "en_yangcyx020_cn_xxxx.json"
-      },
-      {
-        "rank": 6,
         "name": "瓦爾命途_嘆氣亞馬",
         "level": 98,
         "account": "o0931060781-1022",
@@ -1113,6 +1103,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
         "detailPath": "players/en_o093106078_cn_xxxxxxxxx.json",
         "fileName": "en_o093106078_cn_xxxxxxxxx.json"
+      },
+      {
+        "rank": 6,
+        "name": "瓦尔超越",
+        "level": 98,
+        "account": "yangcy-0206",
+        "originalAccount": "yangcy-0206",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_yangcyx020_cn_xxxx.json",
+        "fileName": "en_yangcyx020_cn_xxxx.json"
       },
       {
         "rank": 7,
@@ -1166,16 +1166,6 @@
       },
       {
         "rank": 12,
-        "name": "LimJiaAMZ",
-        "level": 98,
-        "account": "IntenzUwU-7862",
-        "originalAccount": "IntenzUwU-7862",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_intenzuwux_en_limjiaamz.json",
-        "fileName": "en_intenzuwux_en_limjiaamz.json"
-      },
-      {
-        "rank": 13,
         "name": "lagaetsuka",
         "level": 98,
         "account": "elinskiy2002-4257",
@@ -1185,7 +1175,7 @@
         "fileName": "en_elinskiy20_en_lagaetsuka.json"
       },
       {
-        "rank": 14,
+        "rank": 13,
         "name": "XeeFov",
         "level": 98,
         "account": "xehh1-6383",
@@ -1193,6 +1183,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
         "detailPath": "players/en_xehh1x6383_en_xeefov.json",
         "fileName": "en_xehh1x6383_en_xeefov.json"
+      },
+      {
+        "rank": 14,
+        "name": "LimJiaAMZ",
+        "level": 98,
+        "account": "IntenzUwU-7862",
+        "originalAccount": "IntenzUwU-7862",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_intenzuwux_en_limjiaamz.json",
+        "fileName": "en_intenzuwux_en_limjiaamz.json"
       },
       {
         "rank": 15,
@@ -1216,6 +1216,16 @@
       },
       {
         "rank": 17,
+        "name": "SwampBRA",
+        "level": 97,
+        "account": "eusougent-5505",
+        "originalAccount": "eusougent-5505",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_eusougentx_en_swampbra.json",
+        "fileName": "en_eusougentx_en_swampbra.json"
+      },
+      {
+        "rank": 18,
         "name": "IgorDebil",
         "level": 97,
         "account": "kraven17x-3792",
@@ -1225,7 +1235,7 @@
         "fileName": "en_kraven17xx_en_igordebil.json"
       },
       {
-        "rank": 18,
+        "rank": 19,
         "name": "かわいいミラーリング",
         "level": 97,
         "account": "xeemyy-7015",
@@ -1233,16 +1243,6 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTGlnaHRuaW5nQXJyb3dTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f803440d2b/LightningArrowSkillGem.png",
         "detailPath": "players/en_xeemyyx701_en_xxxxxxxxxx.json",
         "fileName": "en_xeemyyx701_en_xxxxxxxxxx.json"
-      },
-      {
-        "rank": 19,
-        "name": "SwampBRA",
-        "level": 97,
-        "account": "eusougent-5505",
-        "originalAccount": "eusougent-5505",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_eusougentx_en_swampbra.json",
-        "fileName": "en_eusougentx_en_swampbra.json"
       },
       {
         "rank": 20,
@@ -1278,13 +1278,13 @@
       },
       {
         "rank": 3,
-        "name": "西西里",
+        "name": "IDVagrantStory",
         "level": 97,
-        "account": "sicily1899-2636",
-        "originalAccount": "sicily1899-2636",
+        "account": "ID_VagrantStory-3294",
+        "originalAccount": "ID_VagrantStory-3294",
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_sicily1899_cn_xxx.json",
-        "fileName": "en_sicily1899_cn_xxx.json"
+        "detailPath": "players/en_idxvagrant_en_idvagrants.json",
+        "fileName": "en_idxvagrant_en_idvagrants.json"
       },
       {
         "rank": 4,
@@ -1298,6 +1298,16 @@
       },
       {
         "rank": 5,
+        "name": "西西里",
+        "level": 97,
+        "account": "sicily1899-2636",
+        "originalAccount": "sicily1899-2636",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_sicily1899_cn_xxx.json",
+        "fileName": "en_sicily1899_cn_xxx.json"
+      },
+      {
+        "rank": 6,
         "name": "RenSpanks",
         "level": 97,
         "account": "Renatakie-3749",
@@ -1305,16 +1315,6 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
         "detailPath": "players/en_renatakiex_en_renspanks.json",
         "fileName": "en_renatakiex_en_renspanks.json"
-      },
-      {
-        "rank": 6,
-        "name": "IDVagrantStory",
-        "level": 97,
-        "account": "ID_VagrantStory-3294",
-        "originalAccount": "ID_VagrantStory-3294",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_idxvagrant_en_idvagrants.json",
-        "fileName": "en_idxvagrant_en_idvagrants.json"
       },
       {
         "rank": 7,
@@ -1358,16 +1358,6 @@
       },
       {
         "rank": 11,
-        "name": "CastliVaal",
-        "level": 97,
-        "account": "title01-5969",
-        "originalAccount": "title01-5969",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_title01x59_en_castlivaal.json",
-        "fileName": "en_title01x59_en_castlivaal.json"
-      },
-      {
-        "rank": 12,
         "name": "xRITAMIx",
         "level": 97,
         "account": "MijjyNp-0415",
@@ -1375,6 +1365,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonewhispersofdoom.png",
         "detailPath": "players/en_mijjynpx04_en_xritamix.json",
         "fileName": "en_mijjynpx04_en_xritamix.json"
+      },
+      {
+        "rank": 12,
+        "name": "CastliVaal",
+        "level": 97,
+        "account": "title01-5969",
+        "originalAccount": "title01-5969",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_title01x59_en_castlivaal.json",
+        "fileName": "en_title01x59_en_castlivaal.json"
       },
       {
         "rank": 13,
@@ -1398,16 +1398,6 @@
       },
       {
         "rank": 15,
-        "name": "DuckySorFateoftheVaal",
-        "level": 97,
-        "account": "DuckReturN-5427",
-        "originalAccount": "DuckReturN-5427",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_duckreturn_en_duckysorfa.json",
-        "fileName": "en_duckreturn_en_duckysorfa.json"
-      },
-      {
-        "rank": 16,
         "name": "ZigglerVaal",
         "level": 97,
         "account": "immortalz001-5445",
@@ -1415,6 +1405,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
         "detailPath": "players/en_immortalz0_en_zigglervaa.json",
         "fileName": "en_immortalz0_en_zigglervaa.json"
+      },
+      {
+        "rank": 16,
+        "name": "DuckySorFateoftheVaal",
+        "level": 97,
+        "account": "DuckReturN-5427",
+        "originalAccount": "DuckReturN-5427",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_duckreturn_en_duckysorfa.json",
+        "fileName": "en_duckreturn_en_duckysorfa.json"
       },
       {
         "rank": 17,
@@ -1570,16 +1570,6 @@
       },
       {
         "rank": 12,
-        "name": "Kuma_Slam",
-        "level": 97,
-        "account": "Ioviz-5777",
-        "originalAccount": "Ioviz-5777",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQnJ1dGVTaGllbGRXYWxsU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b140211605/BruteShieldWallSkillGem.png",
-        "detailPath": "players/en_iovizx5777_en_kumaxslam.json",
-        "fileName": "en_iovizx5777_en_kumaxslam.json"
-      },
-      {
-        "rank": 13,
         "name": "Duckry",
         "level": 97,
         "account": "Duck13oy-6912",
@@ -1589,7 +1579,27 @@
         "fileName": "en_duck13oyx6_en_duckry.json"
       },
       {
+        "rank": 13,
+        "name": "Kuma_Slam",
+        "level": 97,
+        "account": "Ioviz-5777",
+        "originalAccount": "Ioviz-5777",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQnJ1dGVTaGllbGRXYWxsU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b140211605/BruteShieldWallSkillGem.png",
+        "detailPath": "players/en_iovizx5777_en_kumaxslam.json",
+        "fileName": "en_iovizx5777_en_kumaxslam.json"
+      },
+      {
         "rank": 14,
+        "name": "furufuru_FotV",
+        "level": 97,
+        "account": "esahi_superdry-6393",
+        "originalAccount": "esahi_superdry-6393",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGcm96ZW5DbGF3c1NraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/6f193a903c/DruidFrozenClawsSkillGem.png",
+        "detailPath": "players/en_esahixsupe_en_furufuruxf.json",
+        "fileName": "en_esahixsupe_en_furufuruxf.json"
+      },
+      {
+        "rank": 15,
         "name": "Vaal_reanjrrr",
         "level": 97,
         "account": "Reanjr-4995",
@@ -1599,7 +1609,7 @@
         "fileName": "en_reanjrx499_en_vaalxreanj.json"
       },
       {
-        "rank": 15,
+        "rank": 16,
         "name": "III_Zypher_III",
         "level": 97,
         "account": "Zypherlol-0654",
@@ -1607,16 +1617,6 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
         "detailPath": "players/en_zypherlolx_en_iiixzypher.json",
         "fileName": "en_zypherlolx_en_iiixzypher.json"
-      },
-      {
-        "rank": 16,
-        "name": "진짜밀리",
-        "level": 97,
-        "account": "Nangmyun-0904",
-        "originalAccount": "Nangmyun-0904",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGcm96ZW5DbGF3c1NraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/6f193a903c/DruidFrozenClawsSkillGem.png",
-        "detailPath": "players/en_nangmyunx0_kr_xxxx.json",
-        "fileName": "en_nangmyunx0_kr_xxxx.json"
       },
       {
         "rank": 17,
@@ -1630,6 +1630,16 @@
       },
       {
         "rank": 18,
+        "name": "진짜밀리",
+        "level": 97,
+        "account": "Nangmyun-0904",
+        "originalAccount": "Nangmyun-0904",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGcm96ZW5DbGF3c1NraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/6f193a903c/DruidFrozenClawsSkillGem.png",
+        "detailPath": "players/en_nangmyunx0_kr_xxxx.json",
+        "fileName": "en_nangmyunx0_kr_xxxx.json"
+      },
+      {
+        "rank": 19,
         "name": "alloalloalloxa",
         "level": 97,
         "account": "ALLOALLOXAXAXA-5426",
@@ -1637,16 +1647,6 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2hpcmxpbmdBc3NhdWx0U2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d01afe4f99/WhirlingAssaultSkillGem.png",
         "detailPath": "players/en_alloalloxa_en_alloalloal.json",
         "fileName": "en_alloalloxa_en_alloalloal.json"
-      },
-      {
-        "rank": 19,
-        "name": "furufuru_FotV",
-        "level": 97,
-        "account": "esahi_superdry-6393",
-        "originalAccount": "esahi_superdry-6393",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGcm96ZW5DbGF3c1NraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/6f193a903c/DruidFrozenClawsSkillGem.png",
-        "detailPath": "players/en_esahixsupe_en_furufuruxf.json",
-        "fileName": "en_esahixsupe_en_furufuruxf.json"
       },
       {
         "rank": 20,
@@ -1722,16 +1722,6 @@
       },
       {
         "rank": 7,
-        "name": "穿越化腾",
-        "level": 97,
-        "account": "l767965778-4770",
-        "originalAccount": "l767965778-4770",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvU2lwaG9uaW5nU3RyaWtlU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7fb30ade9d/SiphoningStrikeSkillGem.png",
-        "detailPath": "players/en_l767965778_cn_xxxx.json",
-        "fileName": "en_l767965778_cn_xxxx.json"
-      },
-      {
-        "rank": 8,
         "name": "DZACZKOFIKA",
         "level": 97,
         "account": "dzaczko-4924",
@@ -1739,6 +1729,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
         "detailPath": "players/en_dzaczkox49_en_dzaczkofik.json",
         "fileName": "en_dzaczkox49_en_dzaczkofik.json"
+      },
+      {
+        "rank": 8,
+        "name": "穿越化腾",
+        "level": 97,
+        "account": "l767965778-4770",
+        "originalAccount": "l767965778-4770",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvU2lwaG9uaW5nU3RyaWtlU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7fb30ade9d/SiphoningStrikeSkillGem.png",
+        "detailPath": "players/en_l767965778_cn_xxxx.json",
+        "fileName": "en_l767965778_cn_xxxx.json"
       },
       {
         "rank": 9,
@@ -1782,16 +1782,6 @@
       },
       {
         "rank": 13,
-        "name": "Monkizavrik",
-        "level": 97,
-        "account": "NoHesitation-0080",
-        "originalAccount": "NoHesitation-0080",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRmxpY2tlclN0cmlrZVRlbGVwb3J0U2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d82d8f10cb/FlickerStrikeTeleportSkillGem.png",
-        "detailPath": "players/en_nohesitati_en_monkizavri.json",
-        "fileName": "en_nohesitati_en_monkizavri.json"
-      },
-      {
-        "rank": 14,
         "name": "Muuluulu",
         "level": 97,
         "account": "muulu66-7464",
@@ -1801,7 +1791,7 @@
         "fileName": "en_muulu66x74_en_muuluulu.json"
       },
       {
-        "rank": 15,
+        "rank": 14,
         "name": "Borojhi_Druids",
         "level": 97,
         "account": "BorojhiCK-1881",
@@ -1811,7 +1801,27 @@
         "fileName": "en_borojhickx_en_borojhixdr.json"
       },
       {
+        "rank": 15,
+        "name": "Monkizavrik",
+        "level": 97,
+        "account": "NoHesitation-0080",
+        "originalAccount": "NoHesitation-0080",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRmxpY2tlclN0cmlrZVRlbGVwb3J0U2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d82d8f10cb/FlickerStrikeTeleportSkillGem.png",
+        "detailPath": "players/en_nohesitati_en_monkizavri.json",
+        "fileName": "en_nohesitati_en_monkizavri.json"
+      },
+      {
         "rank": 16,
+        "name": "MELEEBASEDRANGEDCRINGE",
+        "level": 97,
+        "account": "RANGERZX-7638",
+        "originalAccount": "RANGERZX-7638",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_rangerzxx7_en_meleebased.json",
+        "fileName": "en_rangerzxx7_en_meleebased.json"
+      },
+      {
+        "rank": 17,
         "name": "WhatBenSaid",
         "level": 97,
         "account": "Agozz-0899",
@@ -1821,7 +1831,7 @@
         "fileName": "en_agozzx0899_en_whatbensai.json"
       },
       {
-        "rank": 17,
+        "rank": 18,
         "name": "Doofus_Monk",
         "level": 97,
         "account": "doofus-9808",
@@ -1829,16 +1839,6 @@
         "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRmxpY2tlclN0cmlrZVRlbGVwb3J0U2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d82d8f10cb/FlickerStrikeTeleportSkillGem.png",
         "detailPath": "players/en_doofusx980_en_doofusxmon.json",
         "fileName": "en_doofusx980_en_doofusxmon.json"
-      },
-      {
-        "rank": 18,
-        "name": "MELEEBASEDRANGEDCRINGE",
-        "level": 97,
-        "account": "RANGERZX-7638",
-        "originalAccount": "RANGERZX-7638",
-        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_rangerzxx7_en_meleebased.json",
-        "fileName": "en_rangerzxx7_en_meleebased.json"
       },
       {
         "rank": 19,
@@ -1974,26 +1974,6 @@
       },
       {
         "rank": 12,
-        "name": "манг",
-        "level": 97,
-        "account": "BlueF771-1516",
-        "originalAccount": "BlueF771-1516",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvU2llZ2VDYXNjYWRlU3Rvcm1ibGFzdFNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/89de2e78cc/SiegeCascadeStormblastSkillGem.png",
-        "detailPath": "players/en_bluef771x1_ru_xxxx.json",
-        "fileName": "en_bluef771x1_ru_xxxx.json"
-      },
-      {
-        "rank": 13,
-        "name": "NuClearArrow",
-        "level": 97,
-        "account": "kyosung823-1806",
-        "originalAccount": "kyosung823-1806",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTGlnaHRuaW5nQXJyb3dTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f803440d2b/LightningArrowSkillGem.png",
-        "detailPath": "players/en_kyosung823_en_nucleararr.json",
-        "fileName": "en_kyosung823_en_nucleararr.json"
-      },
-      {
-        "rank": 14,
         "name": "Boom_Poison",
         "level": 97,
         "account": "quanhxinhvl-1840",
@@ -2003,17 +1983,17 @@
         "fileName": "en_quanhxinhv_en_boomxpoiso.json"
       },
       {
-        "rank": 15,
-        "name": "小丑清潔工",
+        "rank": 13,
+        "name": "манг",
         "level": 97,
-        "account": "ilybydnk-2644",
-        "originalAccount": "ilybydnk-2644",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
-        "detailPath": "players/en_ilybydnkx2_cn_xxxxx.json",
-        "fileName": "en_ilybydnkx2_cn_xxxxx.json"
+        "account": "BlueF771-1516",
+        "originalAccount": "BlueF771-1516",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvU2llZ2VDYXNjYWRlU3Rvcm1ibGFzdFNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/89de2e78cc/SiegeCascadeStormblastSkillGem.png",
+        "detailPath": "players/en_bluef771x1_ru_xxxx.json",
+        "fileName": "en_bluef771x1_ru_xxxx.json"
       },
       {
-        "rank": 16,
+        "rank": 14,
         "name": "아이에잉잉잉",
         "level": 97,
         "account": "WNSAH545-5875",
@@ -2023,7 +2003,17 @@
         "fileName": "en_wnsah545x5_kr_xxxxxx.json"
       },
       {
-        "rank": 17,
+        "rank": 15,
+        "name": "NuClearArrow",
+        "level": 97,
+        "account": "kyosung823-1806",
+        "originalAccount": "kyosung823-1806",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTGlnaHRuaW5nQXJyb3dTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f803440d2b/LightningArrowSkillGem.png",
+        "detailPath": "players/en_kyosung823_en_nucleararr.json",
+        "fileName": "en_kyosung823_en_nucleararr.json"
+      },
+      {
+        "rank": 16,
         "name": "HOST_MACHINE",
         "level": 97,
         "account": "r4yk1r4-6023",
@@ -2031,6 +2021,16 @@
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/dancewithdeathkeystone.png",
         "detailPath": "players/en_r4yk1r4x60_en_hostxmachi.json",
         "fileName": "en_r4yk1r4x60_en_hostxmachi.json"
+      },
+      {
+        "rank": 17,
+        "name": "小丑清潔工",
+        "level": 97,
+        "account": "ilybydnk-2644",
+        "originalAccount": "ilybydnk-2644",
+        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
+        "detailPath": "players/en_ilybydnkx2_cn_xxxxx.json",
+        "fileName": "en_ilybydnkx2_cn_xxxxx.json"
       },
       {
         "rank": 18,
@@ -2054,13 +2054,13 @@
       },
       {
         "rank": 20,
-        "name": "Hajimari_xbow",
+        "name": "kirichanbro",
         "level": 97,
-        "account": "machineff0-7107",
-        "originalAccount": "machineff0-7107",
-        "mainSkillIcon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRXhwbG9zaXZlR3JlbmFkZU1lcmNHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/73e6e3cd9f/ExplosiveGrenadeMercGem.png",
-        "detailPath": "players/en_machineff0_en_hajimarixx.json",
-        "fileName": "en_machineff0_en_hajimarixx.json"
+        "account": "besernersa-5983",
+        "originalAccount": "besernersa-5983",
+        "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
+        "detailPath": "players/en_besernersa_en_kirichanbr.json",
+        "fileName": "en_besernersa_en_kirichanbr.json"
       }
     ]
   },
@@ -2068,6 +2068,6 @@
     "baseItemsCount": 1009,
     "uniqueItemsCount": 390,
     "gemsCount": 760,
-    "translatedAt": "2025-12-22T07:15:33.421Z"
+    "translatedAt": "2025-12-22T10:13:38.512Z"
   }
 }

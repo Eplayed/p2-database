@@ -13,7 +13,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+97 to maximum Life\n+10 to all [Attributes|Attributes]\n9.7 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) +11% 混沌抗性\n(符文) Experience gain提高 2%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: +10% all Elemental [Resistances]\n+97 最大生命\n+10 全属性\n9.7 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded\n(已腐化)"
     },
     {
       "name": "Victory Girdle (环锁腰带)",
@@ -21,7 +21,7 @@
       "baseType": "Mail Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNyIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6d1108fb03/Belt07.png",
       "rarity": 2,
-      "desc": "+170 to maximum Life\n+106 to maximum Mana\n38% increased [Flask] Mana Recovery rate\n+35% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Flask Charges used降低 15%\n(基底) Has 3 [Charm] Slots\n+170 最大生命\n+106 最大魔力\n[Flask] Mana Recovery rate提高 38%\n+35% 冰霜抗性\n+37% 闪电抗性"
     },
     {
       "name": "Demon Circle (红玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "23% increased [Lightning] Damage\n+109 to maximum Life\n18% increased [ItemRarity|Rarity of Items] found\n+40% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]\n[LifeLeech|Leech] 7.83% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +27% 火焰抗性\n[Lightning] Damage提高 23%\n+109 最大生命\n物品稀有度提高 18%\n+40% 冰霜抗性\n+38% 闪电抗性\nLeech 7.83% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Phoenix Pendant (帝金护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+172 to maximum Life\n8% increased maximum Life\n15% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Melee|Melee] Skills\n38.9 Life Regeneration per second"
+      "desc": "(附魔) Allocates Greatest Defence\n(基底) 物品稀有度提高 15%\n+172 最大生命\n最大生命提高 8%\n物品稀有度提高 15%\n+3 Level of all Melee Skills\n38.9 Life Regeneration per second"
     },
     {
       "name": "Agony Grip (巨型护手)",
@@ -45,7 +45,7 @@
       "baseType": "Massive Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/20c9cbb22c/GlovesStr06.png",
       "rarity": 2,
-      "desc": "Adds 15 to 23 [Cold] damage to [Attack|Attacks]\nAdds 1 to 52 [Lightning] damage to [Attack|Attacks]\n+125 to maximum Life\n17% increased [ItemRarity|Rarity of Items] found"
+      "desc": "(附魔) Break 护甲提高 10%\n(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 15 - 23 Attacks\n附加 1 - 52 Attacks\n+125 最大生命\n物品稀有度提高 17%\n(已腐化)"
     },
     {
       "name": "Miracle Thresher (破军巨锤)",
@@ -53,7 +53,7 @@
       "baseType": "Disintegrating Maul",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvQmFzZXR5cGVzLzJITWFjZTA4IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e76cbc3836/2HMace08.png",
       "rarity": 2,
-      "desc": "65% increased [Physical] Damage\n+72 to [Accuracy|Accuracy] Rating\n35% reduced [Attributes|Attribute] Requirements\n[Gain] 30% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 24%\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 45%\n(基底) Causes Enemies to Explode on 物理伤害\n[Physical] Damage提高 65%\n+72 Accuracy Rating\nAttribute Requirements降低 35%\n[Gain] 30% of Damage as Extra [Physical] Damage\n(已腐化)"
     },
     {
       "name": "Hypnotic Knot (金光戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 2 to 46 [Lightning] damage to [Attack|Attacks]\n+127 to maximum Life\n19% increased [ItemRarity|Rarity of Items] found\n+35% to [Resistances|Cold Resistance]\n[ManaLeech|Leech] 6.19% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 2 - 46 Attacks\n+127 最大生命\n物品稀有度提高 19%\n+35% 冰霜抗性\nLeech 6.19% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Rapture Slippers (瓦尔胫甲)",
@@ -69,7 +69,7 @@
       "baseType": "Vaal Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3bc62e552f/BootsStr05.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n87% increased [Armour|Armour]\n+147 to maximum Life\n60% increased effect of Socketed Items"
+      "desc": "(符文) 移动速度提高 8%\n(符文) +8% all Elemental [Resistances]\n(符文) +17% 混沌抗性\n(符文) Bonded: 冷却回复速度提高 16%\n移动速度提高 30%\n护甲提高 87%\n+147 最大生命\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Morbid Guardian (士兵胸甲)",
@@ -77,7 +77,7 @@
       "baseType": "Soldier Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d5346c8ff4/BodyStr03.png",
       "rarity": 2,
-      "desc": "+260 to [Armour|Armour]\n+199 to maximum Life\n+36% to [Resistances|Cold Resistance]\n+21% to [Resistances|Chaos Resistance]\n+35% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(附魔) 10% of Damage taken Recouped as Mana\n(符文) 最大生命提高 9%\n+260 护甲\n+199 最大生命\n+36% 冰霜抗性\n+21% 混沌抗性\n+35% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "Ghoul Duty (塔赫亚塔盾)",
@@ -85,7 +85,7 @@
       "baseType": "Tawhoan Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMTAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8efda96f5b/Tower10.png",
       "rarity": 2,
-      "desc": "+247 to [Armour|Armour]\n107% increased [Armour|Armour]\n6% additional [Physical] Damage Reduction\n+24% to [Resistances|Fire Resistance]\n+29% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+247 护甲\n护甲提高 107%\n6% additional [Physical] Damage Reduction\n+24% 火焰抗性\n+29% 闪电抗性\n(已腐化)"
     }
   ],
   "skills": [

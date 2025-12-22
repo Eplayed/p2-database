@@ -13,7 +13,7 @@
       "baseType": "Fanatic Greathammer",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvQmFzZXR5cGVzLzJITWFjZTA1IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b68c491072/2HMace05.png",
       "rarity": 2,
-      "desc": "+167 to [Accuracy|Accuracy] Rating\n25% reduced [Attributes|Attribute] Requirements\n+8 to Level of all [Melee|Melee] Skills\n+26 to [Strength|Strength]\n[Gain] 32% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 16%\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 30%\n(基底) Strikes deal Splash Damage\n+167 Accuracy Rating\nAttribute Requirements降低 25%\n+8 Level of all Melee Skills\n+26 力量\n[Gain] 32% of Damage as Extra [Physical] Damage"
     },
     {
       "name": "Dusk Clutches (军官手甲)",
@@ -21,7 +21,7 @@
       "baseType": "Commander Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cb6b02463/GlovesStrDex02.png",
       "rarity": 2,
-      "desc": "+257 to [Accuracy|Accuracy] Rating\n+112 to maximum Life\n+73 to maximum Mana\n+2 to Level of all [Melee|Melee] Skills\n+20% to [Resistances|Fire Resistance]\n[ManaLeech|Leech] 5.42% of [Physical] [Attack] Damage as Mana"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+257 Accuracy Rating\n+112 最大生命\n+73 最大魔力\n+2 Level of all Melee Skills\n+20% 火焰抗性\nLeech 5.42% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Doom Whorl (蓝玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "+11 to [Evasion] Rating\n+114 to maximum Life\n+174 to maximum Mana\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+40% to [Resistances|Fire Resistance]"
+      "desc": "(基底) +22% 冰霜抗性\n+11 [闪避值] Rating\n+114 最大生命\n+174 最大魔力\n+16% all Elemental [Resistances]\n+40% 火焰抗性"
     },
     {
       "name": "Mind Hoof (塔萨里奥胫甲)",
@@ -37,7 +37,7 @@
       "baseType": "Tasalian Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c3e83f5cc/BootsStr06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+149 to maximum Life\n+108 to maximum Mana\n+27 to [Strength|Strength]\n+43% to [Resistances|Fire Resistance]\n+30% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+149 最大生命\n+108 最大魔力\n+27 力量\n+43% 火焰抗性\n+30% 闪电抗性"
     },
     {
       "name": "Beast Span (塔赫亚塔盾)",
@@ -45,7 +45,7 @@
       "baseType": "Tawhoan Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMTAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8efda96f5b/Tower10.png",
       "rarity": 2,
-      "desc": "105% increased [Armour|Armour]\n+3% to [MaximumResistances|Maximum Chaos Resistance]\n+36% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲提高 105%\n+3% Maximum 混沌抗性\n+36% 冰霜抗性\n+35% 闪电抗性"
     },
     {
       "name": "Hate Whorl (裂隙戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "26% increased [Cold] Damage\n21% increased [Chaos] Damage\n+10 to all [Attributes|Attributes]\n+42% to [Resistances|Lightning Resistance]\n[LifeLeech|Leech] 10.08% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) Maximum [Quality] is 40%\n[Cold] Damage提高 26%\n[Chaos] Damage提高 21%\n+10 全属性\n+42% 闪电抗性\nLeech 10.08% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Mind Lock (重革腰带)",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwOSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3299e86495/Belt09.png",
       "rarity": 2,
-      "desc": "+179 to [Armour]\n25% increased [Flask] Mana Recovery rate\n+24 to [Strength|Strength]\n+30% to [Resistances|Cold Resistance]\n+29% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 晕眩门槛提高 24%\n(基底) Has 1 [Charm] Slot\n+179 [护甲]\n[Flask] Mana Recovery rate提高 25%\n+24 力量\n+30% 冰霜抗性\n+29% 闪电抗性"
     },
     {
       "name": "收缩指令",
@@ -69,7 +69,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+80 to maximum Life\n+10 to all [Attributes|Attributes]\n10.5 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(附魔) 魔力回复速度提高 27%\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+80 最大生命\n+10 全属性\n10.5 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded\n(已腐化)"
     },
     {
       "name": "Loath Medallion (翠玉护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvSmFkZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac51014172/JadeAmulet.png",
       "rarity": 2,
-      "desc": "+81 to maximum [EnergyShield|Energy Shield]\n+134 to maximum Life\n+166 to maximum Mana\n+3 to Level of all [Melee|Melee] Skills\n+26 to [Strength|Strength]"
+      "desc": "(附魔) Allocates Acceleration\n(基底) +13 敏捷\n+81 最大能量护盾\n+134 最大生命\n+166 最大魔力\n+3 Level of all Melee Skills\n+26 力量"
     },
     {
       "name": "无生之辱",
@@ -85,7 +85,7 @@
       "baseType": "Grand Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL01vcmlvckludmljdHVzX00iLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6674aa4ff6/MoriorInvictus_M.png",
       "rarity": 3,
-      "desc": "362% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+12% to [Resistances|Chaos Resistance] per Socket filled\n9.7 Life Regeneration per second per Socket filled\n+56 to maximum Life per Socket filled"
+      "desc": "(符文) 最大生命提高 9%\n(符文) +10% all Elemental [Resistances]\n护甲, 闪避值 and 能量护盾提高 362%\n+12% 混沌抗性 per Socket filled\n9.7 Life Regeneration per second per Socket filled\n+56 最大生命 per Socket filled\n(已腐化)"
     }
   ],
   "skills": [

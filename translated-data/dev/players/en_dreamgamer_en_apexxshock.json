@@ -13,7 +13,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0ZpeGF0aW9uT2ZZaXgiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9ecf97e35/FixationOfYix.png",
       "rarity": 3,
-      "desc": "+100 to maximum Life\n[Allies|Allies] in your [Presence|Presence] have 41% increased [Critical|Critical Hit] Chance\n[Allies] in your [Presence] have 46% increased [CriticalDamageBonus|Critical Damage Bonus]\n[Allies|Allies] in your [Presence|Presence] have 17% increased [Attack|Attack] Speed\n[Allies|Allies] in your [Presence|Presence] have 10% increased Cast Speed\n50% reduced [Presence|Presence] Area of Effect"
+      "desc": "(附魔) Allocates Warlord Berserker\n(基底) +5 全属性\n+100 最大生命\nAllies in your Presence have 暴击率提高 41%\nCritical Damage Bonus\nAllies in your Presence have 攻击速度提高 17%\nAllies in your Presence have 施法速度提高 10%\nPresence Area of Effect降低 50%"
     },
     {
       "name": "仇恨熔炉",
@@ -21,7 +21,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9IYXRlZm9yZ2UiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/2e7a2f58b3/Hateforge.png",
       "rarity": 3,
-      "desc": "372% increased [Armour|Armour]\nGain 5 [Rage] on [HitDamage|Hit]\nGain a random [Charges|Charge] on reaching Maximum [Rage|Rage], no more than once every 5.6 seconds\nLose all [Rage|Rage] on reaching Maximum [Rage]\n-8 to Maximum [Rage]"
+      "desc": "(附魔) Damage Penetrates 12% 火焰抗性\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n护甲提高 372%\nGain 5 Hit\nGain a random Charge on reaching Maximum Rage, no more than once every 5.6 seconds\nLose all Rage on reaching Maximum [Rage]\n-8 to Maximum [Rage]\n(已腐化)"
     },
     {
       "name": "Gale Barb (电流法杖)",
@@ -29,7 +29,7 @@
       "baseType": "Galvanic Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDA2IiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/ade4b84c31/Wand06.png",
       "rarity": 2,
-      "desc": "[Gain] 29% of Damage as Extra [Lightning] Damage\n+148 to maximum Mana\n+3 to Level of all [Spell|Spell] Skills\n53% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n74% increased chance to [Shock]"
+      "desc": "(符文) [Gain] 20% of Damage as Extra [Lightning] Damage\n(符文) Bonded: Magnitude of Shock you inflict提高 60%\n[Gain] 29% of Damage as Extra [Lightning] Damage\n+148 最大魔力\n+3 Level of all Spell Skills\n暴击率 for Spells提高 53%\nchance to [Shock]提高 74%\n(已腐化)"
     },
     {
       "name": "Alpha's Howl",
@@ -37,7 +37,7 @@
       "baseType": "Armoured Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQWxwaGFzSG93bCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/172ece8af4/AlphasHowl.png",
       "rarity": 3,
-      "desc": "104% increased [Evasion|Evasion] Rating\n+112 to [Spirit|Spirit]\n+53% to [Resistances|Cold Resistance]\n[Presence] Radius is doubled"
+      "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n闪避值 Rating提高 104%\n+112 Spirit\n+53% 冰霜抗性\n[Presence] Radius is doubled\n(已腐化)"
     },
     {
       "name": "Fate Smasher (克己短杖)",
@@ -45,7 +45,7 @@
       "baseType": "Stoic Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fa0606497b/Sceptre02.png",
       "rarity": 2,
-      "desc": "+144 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 77% increased Damage\n[Allies|Allies] in your [Presence|Presence] deal 17 to 27 added [Attack|Attack] [Cold|Cold] Damage\n[Allies|Allies] in your [Presence|Presence] have 16% increased [Attack|Attack] Speed\n[Allies|Allies] in your [Presence|Presence] have +11% to all [ElementalDamage|Elemental] [Resistances|Resistances]"
+      "desc": "(符文) Critical Damage Bonus\n(符文) Bonded: 暴击率 while Shapeshifted提高 50%\n+144 最大魔力\nAllies in your Presence deal Damage提高 77%\nAllies in your Presence deal 17 to 27 added Attack 冰霜伤害\nAllies in your Presence have 攻击速度提高 16%\nAllies in your Presence have +11% all 元素抗性\n(已腐化)"
     },
     {
       "name": "永恒紧缩之戒",
@@ -53,7 +53,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9FdmVyZ3Jhc3BpbmdSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2e75de4433/EvergraspingRing.png",
       "rarity": 3,
-      "desc": "+84 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] [Gain] 30% of Damage as Extra [Chaos] Damage\nEnemies in your [Presence|Presence] [Gain] 12% of Damage as Extra [Chaos] Damage"
+      "desc": "(附魔) +13 力量\n(基底) 施法速度提高 7%\n+84 最大魔力\nAllies in your Presence [Gain] 30% of Damage as Extra [Chaos] Damage\nEnemies in your Presence [Gain] 12% of Damage as Extra [Chaos] Damage\n(已腐化)"
     },
     {
       "name": "Shavronne's Satchel",
@@ -61,7 +61,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
       "rarity": 3,
-      "desc": "29% reduced [Flask] Life Recovery rate\n+25 to [Intelligence|Intelligence]\n22% increased [Flask|Flask] Charges gained\nLife Recovery from [Flask|Flasks] also applies to [EnergyShield|Energy Shield]"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 29%\n+25 智慧\nFlask Charges gained提高 22%\nLife Recovery from Flasks also applies to 能量护盾\n(已腐化)"
     },
     {
       "name": "永恒紧缩之戒",
@@ -69,7 +69,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9FdmVyZ3Jhc3BpbmdSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2e75de4433/EvergraspingRing.png",
       "rarity": 3,
-      "desc": "+86 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] [Gain] 30% of Damage as Extra [Chaos] Damage\nEnemies in your [Presence|Presence] [Gain] 10% of Damage as Extra [Chaos] Damage"
+      "desc": "(附魔) +15 敏捷\n(基底) 施法速度提高 8%\n+86 最大魔力\nAllies in your Presence [Gain] 30% of Damage as Extra [Chaos] Damage\nEnemies in your Presence [Gain] 10% of Damage as Extra [Chaos] Damage\n(已腐化)"
     },
     {
       "name": "Plague Keep (邪恶束衣)",
@@ -77,7 +77,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+119 to maximum [EnergyShield|Energy Shield]\n146% increased [EnergyShield|Energy Shield]\n+33 to [Intelligence|Intelligence]\nHits against you have 44% reduced [CriticalDamageBonus|Critical Damage Bonus]\n+6% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+119 最大能量护盾\n能量护盾提高 146%\n+33 智慧\nHits against you have Critical Damage Bonus降低 44%\n+6% 混沌抗性"
     },
     {
       "name": "Ambush Span (丝克玛便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n93% increased [EnergyShield|Energy Shield]\n+35% to [Resistances|Fire Resistance]\n+222 to [StunThreshold|Stun Threshold]\n58% reduced [Shock|Shock] duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n能量护盾提高 93%\n+35% 火焰抗性\n+222 晕眩门槛\nShock duration on you降低 58%"
     },
     {
       "name": "Carrion Star (罪孽短杖)",
@@ -93,7 +93,7 @@
       "baseType": "Rattling Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTAxIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2dc4b05095/Sceptre01.png",
       "rarity": 2,
-      "desc": "71% increased [Spirit|Spirit]\n+101 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] Regenerate 20.9 Life per second\n[Minion|Minions] have 43% increased maximum Life"
+      "desc": "Spirit提高 71%\n+101 最大魔力\nAllies in your Presence Regenerate 20.9 Life per second\nMinions have 最大生命提高 43%"
     },
     {
       "name": "Viper Edge (Guardian Spear)",
@@ -101,7 +101,7 @@
       "baseType": "Guardian Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIwOSIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/fee22fbc3f/1HSpear09.png",
       "rarity": 2,
-      "desc": "Adds 79 to 129 [Fire|Fire] Damage\nAdds 34 to 56 [Cold|Cold] Damage\nAdds 6 to 169 [Lightning|Lightning] Damage\n24% increased [Attack] Speed\n35% reduced [Attributes|Attribute] Requirements\nCauses 52% increased [Stun|Stun] Buildup"
+      "desc": "(符文) 附加 2 - 60 闪电伤害\n(符文) Bonded: Magnitude of Shock you inflict提高 60%\n(基底) Prevent +7% of Damage from Deflected Hits\n附加 79 - 129 火焰伤害\n附加 34 - 56 冰霜伤害\n附加 6 - 169 闪电伤害\n[Attack] Speed提高 24%\nAttribute Requirements降低 35%\nCauses Stun Buildup提高 52%\n(已腐化)"
     }
   ],
   "skills": [
@@ -126,9 +126,9 @@
           "isSupport": true
         },
         {
-          "name": "过载",
-          "originalName": "Overcharge",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9PdmVyY2hhcmdlU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/fdbe270f66/OverchargeSupportGem.png",
+          "name": "快速攻击 III",
+          "originalName": "Rapid Attacks III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJBdHRhY2tTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/1824662136/FasterAttackSupportGem.png",
           "isSupport": true
         },
         {
@@ -138,9 +138,9 @@
           "isSupport": true
         },
         {
-          "name": "感电",
-          "originalName": "Shock",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25kdWN0aW9uU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/46c88be6de/ConductionSupportGem.png",
+          "name": "狂怒 III",
+          "originalName": "Rage III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9SYWdlU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a83c346043/RageSupportGem.png",
           "isSupport": true
         }
       ]

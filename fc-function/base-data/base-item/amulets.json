@@ -1,0 +1,98 @@
+[
+  {
+    "en": "Crimson Amulet",
+    "cn": "赤红护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/CrimsonAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Azure Amulet",
+    "cn": "碧蓝护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/AzureAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Amber Amulet",
+    "cn": "琥珀护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/AmberAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jade Amulet",
+    "cn": "翠玉护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/JadeAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lapis Amulet",
+    "cn": "海玉护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/LapisAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lunar Amulet",
+    "cn": "月影护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/LunarAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bloodstone Amulet",
+    "cn": "血岩护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/BloodstoneAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stellar Amulet",
+    "cn": "星辉护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/StellarAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Solar Amulet",
+    "cn": "日曜护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/SolarAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gold Amulet",
+    "cn": "帝金护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/GoldAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pearlescent Amulet",
+    "cn": "珠光项链",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/Basetypes/PearlescentAmulet.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dusk Amulet",
+    "cn": "暮色护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/HeistAmulet1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gloam Amulet",
+    "cn": "薄暮护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/HeistAmulet1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Penumbra Amulet",
+    "cn": "半影护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/HeistAmulet2.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tenebrous Amulet",
+    "cn": "暗黑护身符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/HeistAmulet2.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Distorted Amulet",
+    "cn": "扭曲项链",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Amulets/HeistAmulet2.webp",
+    "type": "base_item"
+  }
+]

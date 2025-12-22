@@ -13,7 +13,7 @@
       "baseType": "Luxurious Slippers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e1c49a9d6d/BootsInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+141 to maximum Life\n+105 to maximum Mana\n+22% to [Resistances|Cold Resistance]\n+22% to [Resistances|Chaos Resistance]\n57% reduced [Freeze|Freeze] Duration on you"
+      "desc": "(附魔) 移动速度提高 4%\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+141 最大生命\n+105 最大魔力\n+22% 冰霜抗性\n+22% 混沌抗性\nFreeze Duration on you降低 57%\n(已腐化)"
     },
     {
       "name": "Ghoul Weaver (鸣谐长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 48% of Damage as Extra [Cold] Damage\n86% increased [Spell] Damage\n+324 to maximum Mana\n+4 to Level of all [Spell|Spell] Skills\nGain 33 Mana per enemy killed\n75% increased [Flammability] [BuffMagnitude|Magnitude]"
+      "desc": "[Gain] 48% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 86%\n+324 最大魔力\n+4 Level of all Spell Skills\nGain 33 Mana per enemy killed\nMagnitude提高 75%"
     },
     {
       "name": "Phoenix Veil (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+61 to maximum [EnergyShield|Energy Shield]\n69% increased [EnergyShield|Energy Shield]\n26% increased [Critical|Critical Hit] Chance\n+37% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) Enemies you [Curse] take Damage提高 6%\n(符文) Bonded: Area of Effect of Curses提高 20%\n+61 最大能量护盾\n能量护盾提高 69%\n暴击率提高 26%\n+37% 冰霜抗性\n+37% 闪电抗性"
     },
     {
       "name": "猎首",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+52 to maximum Life\n+35 to [Strength|Strength]\n+27 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 23%\n(基底) Has 2 [Charm] Slots\n+52 最大生命\n+35 力量\n+27 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Glyph Collar (琥珀护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "26% increased [Spell] Damage\n+187 to maximum Mana\n+35 to [Spirit|Spirit]\n+2 to Level of all [Spell|Spell] Skills\n+35% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +15 力量\n[Spell] Damage提高 26%\n+187 最大魔力\n+35 Spirit\n+2 Level of all Spell Skills\n+35% 冰霜抗性"
     },
     {
       "name": "Vortex Nail (红玉戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "+82 to [Accuracy|Accuracy] Rating\n+206 to maximum Mana\n6% increased maximum Mana\n+32% to [Resistances|Fire Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +28% 火焰抗性\n+82 Accuracy Rating\n+206 最大魔力\n最大魔力提高 6%\n+32% 火焰抗性\n+36% 闪电抗性"
     },
     {
       "name": "Atziri's Acuity",
@@ -61,7 +61,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "81% increased [Armour|Armour]\n46% increased [Critical|Critical Hit] Chance\n+20 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) Life Cost [Efficiency]提高 25%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n护甲提高 81%\n暴击率提高 46%\n+20 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "Glyph Ward (邪恶束衣)",
@@ -69,7 +69,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+111 to maximum [EnergyShield|Energy Shield]\n133% increased [EnergyShield|Energy Shield]\n+25% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) effect of Curses on you降低 50%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(符文) Bonded: Magnitudes提高 8%\n+111 最大能量护盾\n能量护盾提高 133%\n+25% 火焰抗性\n+38% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Viper Bite (决斗法杖)",
@@ -77,7 +77,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Cold] Damage\n93% increased [Cold] Damage\n+162 to maximum Mana\n73% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Cold] Damage\n[Cold] Damage提高 93%\n+162 最大魔力\n暴击率 for Spells提高 73%"
     },
     {
       "name": "Horror Call (预兆短杖)",
@@ -85,7 +85,7 @@
       "baseType": "Omen Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d2cc9f0ac1/Sceptre04.png",
       "rarity": 2,
-      "desc": "80% increased [Spirit|Spirit]\n+201 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] have 14% increased [Attack|Attack] Speed\n+22 to [Intelligence|Intelligence]\n[Minion|Minions] have 42% increased maximum Life"
+      "desc": "(符文) Spirit提高 20%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 60%\nSpirit提高 80%\n+201 最大魔力\nAllies in your Presence have 攻击速度提高 14%\n+22 智慧\nMinions have 最大生命提高 42%\n(已腐化)"
     },
     {
       "name": "Maelström Nail (紫晶戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "30% increased [Cold] Damage\n+80 to maximum Life\n+195 to maximum Mana\n24% increased Cast Speed\n+22% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +9% 混沌抗性\n[Cold] Damage提高 30%\n+80 最大生命\n+195 最大魔力\n施法速度提高 24%\n+22% 闪电抗性"
     }
   ],
   "skills": [

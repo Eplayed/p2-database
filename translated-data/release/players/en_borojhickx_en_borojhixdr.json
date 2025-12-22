@@ -13,7 +13,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 15 to 22 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 1 to 62 [Lightning] damage to [Attack|Attacks]\n34% increased [Cold] Damage\n+21% to [Resistances|Fire Resistance]\nGain 43 Life per enemy killed"
+      "desc": "(基底) +10% all Elemental [Resistances]\n附加 15 - 22 物理伤害 to Attacks\n附加 1 - 62 Attacks\n[Cold] Damage提高 34%\n+21% 火焰抗性\nGain 43 Life per enemy killed"
     },
     {
       "name": "Rapture Curtain (滑布外衣)",
@@ -21,7 +21,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+140 to [Evasion] Rating\n+53 to maximum [EnergyShield|Energy Shield]\n145% increased [Evasion] and [EnergyShield|Energy Shield]\n+37% to [Resistances|Fire Resistance]\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+140 [闪避值] Rating\n+53 最大能量护盾\n能量护盾提高 145%\n+37% 火焰抗性\n+32% 闪电抗性"
     },
     {
       "name": "Foe Nail (三相戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 8 to 12 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 3 to 53 [Lightning] damage to [Attack|Attacks]\n30% increased [Cold] Damage\n+14% to all [ElementalDamage|Elemental] [Resistances]\n+23% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +12% all Elemental [Resistances]\n附加 8 - 12 物理伤害 to Attacks\n附加 3 - 53 Attacks\n[Cold] Damage提高 30%\n+14% all Elemental [Resistances]\n+23% 闪电抗性"
     },
     {
       "name": "Ghoul Scarab (帝金护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+96 to maximum [EnergyShield|Energy Shield]\n55% increased maximum [EnergyShield|Energy Shield]\n35% increased [Critical|Critical Hit] Chance\n+33 to [Strength|Strength]\n+27 to [Dexterity|Dexterity]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) 物品稀有度提高 19%\n+96 最大能量护盾\n最大能量护盾提高 55%\n暴击率提高 35%\n+33 力量\n+27 敏捷"
     },
     {
       "name": "奇思妙想",
@@ -45,7 +45,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "19% increased [Charm] Charges gained\n1% increased [Charm] Charges used\n26% increased bonuses gained from left Equipped Ring\n27% increased bonuses gained from right Equipped Ring"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 19%\n[Charm] Charges used提高 1%\nbonuses gained from left Equipped Ring提高 26%\nbonuses gained from right Equipped Ring提高 27%"
     },
     {
       "name": "赤红护身符",
@@ -53,7 +53,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 7%"
     },
     {
       "name": "赤红护身符",
@@ -61,7 +61,7 @@
       "baseType": "Calm Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 魔力回复速度 while moving提高 22%"
     },
     {
       "name": "Beast Halo (先祖冠冕)",
@@ -69,7 +69,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+67 to maximum [EnergyShield|Energy Shield]\n137% increased [EnergyShield|Energy Shield]\n+33 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n41% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+67 最大能量护盾\n能量护盾提高 137%\n+33 最大生命\n物品稀有度提高 16%\n能量护盾 Recharge Rate提高 41%"
     },
     {
       "name": "Spirit Slippers (捷足便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n97% increased [Evasion] and [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+25 to [Dexterity|Dexterity]\n+41% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 97%\n物品稀有度提高 18%\n+25 敏捷\n+41% 冰霜抗性"
     },
     {
       "name": "Behemoth Mitts (瓦尔裹手)",
@@ -85,7 +85,7 @@
       "baseType": "Vaal Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleEludDAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bdc7c3c15d/GlovesDexInt03.png",
       "rarity": 2,
-      "desc": "+56 to [Evasion] Rating\n+24 to maximum [EnergyShield|Energy Shield]\nAdds 11 to 17 [Fire] damage to [Attack|Attacks]\nAdds 12 to 19 [Cold] damage to [Attack|Attacks]\n+2 to Level of all [Melee|Melee] Skills\n28% increased [CriticalDamageBonus|Critical Damage Bonus]\n[ManaLeech|Leech] 5.29% of [Physical] [Attack] Damage as Mana"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+56 [闪避值] Rating\n+24 最大能量护盾\n附加 11 - 17 Attacks\n附加 12 - 19 Attacks\n+2 Level of all Melee Skills\nCritical Damage Bonus提高 28%\nLeech 5.29% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Victory Song (刀锋节杖)",
@@ -93,7 +93,7 @@
       "baseType": "Razor Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwNyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/10760714ba/Warstaff07.png",
       "rarity": 2,
-      "desc": "[Gain] 31% of Damage as Extra [Lightning] Damage\n+4.87% to [Critical|Critical Hit] Chance\n23% increased [Attack] Speed\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n[Gain] 31% of Damage as Extra [Lightning] Damage\n+4.87% 暴击率\n[Attack] Speed提高 23%\n+5 Level of all [Attack] Skills"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 19 to 37 [Physical|Physical] Damage to [Attack|Attacks]\n16% increased [ItemRarity|Rarity of Items] found\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+21% to [Resistances|Cold Resistance]"
+      "desc": "(基底) 物品稀有度提高 7%\n附加 19 - 37 物理伤害 to Attacks\n物品稀有度提高 16%\n+16% all Elemental [Resistances]\n+21% 冰霜抗性"
     },
     {
       "name": "Dragon Beam (梦境节杖)",
@@ -21,7 +21,7 @@
       "baseType": "Dreaming Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYxMCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d836b3566d/Warstaff10.png",
       "rarity": 2,
-      "desc": "16% increased [Physical] Damage\nAdds 61 to 95 [Fire|Fire] Damage\nAdds 28 to 45 [Cold|Cold] Damage\n+70 to [Accuracy|Accuracy] Rating\n27% increased [Attack] Speed\n21% increased [Stun|Stun] Duration\n15% increased [LightRadius|Light Radius]"
+      "desc": "[Physical] Damage提高 16%\n附加 61 - 95 火焰伤害\n附加 28 - 45 冰霜伤害\n+70 Accuracy Rating\n[Attack] Speed提高 27%\nStun Duration提高 21%\nLight Radius提高 15%\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+50 to maximum Life\n+33 to [Strength|Strength]\n+33 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 22%\n(基底) Has 3 [Charm] Slots\n+50 最大生命\n+33 力量\n+33 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Torment Twine (毁灭者之弓)",
@@ -37,7 +37,7 @@
       "baseType": "Obliterator Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e62ea7f094/Bow09.png",
       "rarity": 2,
-      "desc": "149% increased [Physical] Damage\n[Gain] 19% of Damage as Extra [Lightning] Damage\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 18%\n(符文) Bow Attacks fire an additional Arrow\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: effect of Fully Broken 护甲提高 20%\n(基底) Projectile Range降低 50%\n[Physical] Damage提高 149%\n[Gain] 19% of Damage as Extra [Lightning] Damage\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Gale Crown (先祖冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+64 to maximum [EnergyShield|Energy Shield]\n112% increased [EnergyShield|Energy Shield]\n+38 to maximum Mana\n16% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Fire Resistance]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+64 最大能量护盾\n能量护盾提高 112%\n+38 最大魔力\n物品稀有度提高 16%\n+36% 火焰抗性"
     },
     {
       "name": "Corpse Grasp (裂隙戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 21 [Physical|Physical] Damage to [Attack|Attacks]\n17% increased [ItemRarity|Rarity of Items] found\n+22% to all [ElementalDamage|Elemental] [Resistances]\n+54% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 14 - 21 物理伤害 to Attacks\n物品稀有度提高 17%\n+22% all Elemental [Resistances]\n+54% 闪电抗性"
     },
     {
       "name": "毒疫之指",
@@ -61,7 +61,7 @@
       "baseType": "Gauze Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QbGFndWVmaW5nZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f88ef1cca5/Plaguefinger.png",
       "rarity": 3,
-      "desc": "43% increased [Evasion] and [EnergyShield|Energy Shield]\n4% increased [Attack] Speed\n30% chance to [Poison|Poison] on [HitDamage|Hit]\n[DamageTypes|All Damage] from [HitDamage|Hits] [Contributes|Contributes] to [Poison] Magnitude"
+      "desc": "(符文) Magnitude of Damaging Ailments you inflict提高 20%\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 15%\n能量护盾提高 43%\n[Attack] Speed提高 4%\n30% chance to Poison on Hit\nAll Damage from Hits Contributes to [Poison] Magnitude"
     },
     {
       "name": "Hyrri's Ire",
@@ -69,7 +69,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "230% increased [Evasion|Evasion] Rating\n[Gain] 23% of Damage as Extra [Cold] Damage\n+38 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(附魔) 4% additional [Physical] Damage Reduction\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 37%\n闪避值 Rating提高 230%\n[Gain] 23% of Damage as Extra [Cold] Damage\n+38 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]\n(已腐化)"
     },
     {
       "name": "Sol Rod (贯心箭袋)",
@@ -77,7 +77,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 11 to 18 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 12 to 22 [Fire] damage to [Attack|Attacks]\n46% increased Damage with Bow Skills\n+2 to Level of all [Projectile] Skills\n+33 to [Dexterity|Dexterity]"
+      "desc": "(基底) 暴击率 for Attacks提高 30%\n附加 11 - 18 物理伤害 to Attacks\n附加 12 - 22 Attacks\nDamage with Bow Skills提高 46%\n+2 Level of all [Projectile] Skills\n+33 敏捷"
     },
     {
       "name": "Skull Urge (捷足便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n31% increased [Evasion] and [EnergyShield|Energy Shield]\n+38% to [Resistances|Fire Resistance]\n+39% to [Resistances|Cold Resistance]\n+366 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 31%\n+38% 火焰抗性\n+39% 冰霜抗性\n+366 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Foe Scarab (帝金护身符)",
@@ -93,7 +93,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+46 to [Spirit|Spirit]\n16% increased [ItemRarity|Rarity of Items] found\n+13% to all [ElementalDamage|Elemental] [Resistances]\n24% increased Global [Defences]"
+      "desc": "(附魔) Allocates Lasting Trauma\n(基底) 物品稀有度提高 17%\n+46 Spirit\n物品稀有度提高 16%\n+13% all Elemental [Resistances]\nGlobal [Defences]提高 24%"
     }
   ],
   "skills": [

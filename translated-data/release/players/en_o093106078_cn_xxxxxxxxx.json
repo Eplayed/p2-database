@@ -13,7 +13,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+93 to maximum [EnergyShield|Energy Shield]\n+49 to [Spirit|Spirit]\n17% increased [ItemRarity|Rarity of Items] found\n30% increased [Critical|Critical Hit] Chance"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +12 Spirit\n+93 最大能量护盾\n+49 Spirit\n物品稀有度提高 17%\n暴击率提高 30%"
     },
     {
       "name": "精华收割器",
@@ -21,7 +21,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "61% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 47 [Lightning] damage to [Attack|Attacks]\n+23 to [Intelligence|Intelligence]\n+33% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n能量护盾提高 61%\n附加 1 - 47 Attacks\n+23 智慧\n+33% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     },
     {
       "name": "Horror Peak (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "134% increased [EnergyShield|Energy Shield]\n+30 to maximum Mana\n15% increased [ItemRarity|Rarity of Items] found\n31% increased [Critical|Critical Hit] Chance\n21.9 Life Regeneration per second"
+      "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n能量护盾提高 134%\n+30 最大魔力\n物品稀有度提高 15%\n暴击率提高 31%\n21.9 Life Regeneration per second"
     },
     {
       "name": "Mind Skin (滑布外衣)",
@@ -37,7 +37,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+121 to [Evasion] Rating\n+46 to maximum [EnergyShield|Energy Shield]\n108% increased [Evasion] and [EnergyShield|Energy Shield]\n+154 to maximum Life\n+35% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+121 [闪避值] Rating\n+46 最大能量护盾\n能量护盾提高 108%\n+154 最大生命\n+35% 冰霜抗性\n+37% 闪电抗性"
     },
     {
       "name": "赤红护身符",
@@ -45,7 +45,7 @@
       "baseType": "Calm Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 魔力回复速度 while moving提高 25%"
     },
     {
       "name": "赤红护身符",
@@ -53,7 +53,7 @@
       "baseType": "Guarding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Block] chance提高 11%"
     },
     {
       "name": "赤红护身符",
@@ -61,7 +61,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 10%"
     },
     {
       "name": "赤红护身符",
@@ -69,7 +69,7 @@
       "baseType": "Evasive Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 闪避值 Rating提高 27%"
     },
     {
       "name": "Blood Grasp (裂隙戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 35 to 54 [Fire] damage to [Attack|Attacks]\n+14% to all [ElementalDamage|Elemental] [Resistances]\n+34% to [Resistances|Fire Resistance]\n[LifeLeech|Leech] 9.96% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 35 - 54 Attacks\n+14% all Elemental [Resistances]\n+34% 火焰抗性\nLeech 9.96% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Onslaught Edge (阿科扬战矛)",
@@ -85,7 +85,7 @@
       "baseType": "Akoyan Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIxMCIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/114525ad0e/1HSpear10.png",
       "rarity": 2,
-      "desc": "91% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+4.83% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n元素伤害 with Attacks提高 91%\n+4.83% 暴击率\n+3 Level of all [Attack] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Kalandra's Touch",
@@ -101,7 +101,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL1NhY3JlZEZsYW1lIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f6c6572ac6/SacredFlame.png",
       "rarity": 3,
-      "desc": "[Gain] 59% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.9% of their Maximum Life per second\n[Allies|Allies] in your [Presence|Presence] [Gain|Gain] 27% of Damage as Extra Fire Damage\nEnemies in your [Presence|Presence] Resist [ElementalDamage|Elemental Damage] based on their Lowest [Resistances|Resistance]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\n[Gain] 59% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.9% of their Maximum Life per second\nAllies in your Presence Gain 27% of Damage as Extra 火焰伤害\nEnemies in your Presence Resist 元素伤害 based on their Lowest Resistance"
     },
     {
       "name": "Torment Stride (丝克玛便鞋)",
@@ -109,7 +109,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n97% increased [EnergyShield|Energy Shield]\n17% increased [ItemRarity|Rarity of Items] found\n+43% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 97%\n物品稀有度提高 17%\n+43% 冰霜抗性\n+35% 闪电抗性\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -117,7 +117,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+59 to maximum Life\n+35 to [Strength|Strength]\n+37 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 2 [Charm] Slots\n+59 最大生命\n+35 力量\n+37 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     }
   ],
   "skills": [
@@ -234,9 +234,9 @@
           "isSupport": true
         },
         {
-          "name": "Rakiata's Flow",
-          "originalName": "Rakiata's Flow",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
+          "name": "竭力痛击",
+          "originalName": "Overextend",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9PdmVyZXh0ZW5kU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848f1bb2a1/OverextendSupportGem.png",
           "isSupport": true
         }
       ]
@@ -314,9 +314,9 @@
           "isSupport": true
         },
         {
-          "name": "竭力痛击",
-          "originalName": "Overextend",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9PdmVyZXh0ZW5kU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848f1bb2a1/OverextendSupportGem.png",
+          "name": "Rakiata's Flow",
+          "originalName": "Rakiata's Flow",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
           "isSupport": true
         }
       ]

@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 2 to 84 [Lightning] damage to [Attack|Attacks]\n+13% to all [ElementalDamage|Elemental] [Resistances]\n+54% to [Resistances|Lightning Resistance]\n[ManaLeech|Leech] 6.48% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) 物品稀有度提高 15%\n附加 2 - 84 Attacks\n+13% all Elemental [Resistances]\n+54% 闪电抗性\nLeech 6.48% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Blight Shelter (先祖冠冕)",
@@ -21,7 +21,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "99% increased [EnergyShield|Energy Shield]\n36% increased [ItemRarity|Rarity of Items] found\n+38% to [Resistances|Fire Resistance]\n+42% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 99%\n物品稀有度提高 36%\n+38% 火焰抗性\n+42% 冰霜抗性"
     },
     {
       "name": "Drillneck",
@@ -29,7 +29,7 @@
       "baseType": "Penetrating Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9VbmlxdWVzL0RyaWxsbmVjayIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d4a4a0617/Drillneck.png",
       "rarity": 3,
-      "desc": "+89 to maximum Life\n9% increased [Attack] Speed\nGain [Deflect|Deflection Rating] equal to 24% of [Evasion|Evasion Rating]\n[Attack] [Projectile|Projectiles] [Return] if they [Pierce|Pierced] at least 2 times\n[Projectile|Projectiles] deal 44% increased Damage with [HitDamage|Hits] for each time they have [Pierce|Pierced]\n[Projectile|Projectiles] have 62% increased [Critical|Critical Hit] chance for each time they have [Pierce|Pierced]"
+      "desc": "(附魔) Skill Speed提高 4%\n(附魔) Critical Damage Bonus提高 19%\n(基底) 100% chance to Pierce an Enemy\n+89 最大生命\n[Attack] Speed提高 9%\nGain Deflection Rating equal to 24% of 闪避值 Rating\nProjectiles Pierced at least 2 times\nProjectiles deal Damage with Hits for each time they have Pierced提高 44%\nProjectiles have Critical Hit chance for each time they have Pierced提高 62%\n(已腐化)"
     },
     {
       "name": "Victory Strike (毁灭者之弓)",
@@ -37,7 +37,7 @@
       "baseType": "Obliterator Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e62ea7f094/Bow09.png",
       "rarity": 2,
-      "desc": "Adds 21 to 39 [Physical|Physical] Damage\n+4.68% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile Range降低 50%\n附加 21 - 39 物理伤害\n+4.68% 暴击率\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "仇恨熔炉",
@@ -45,7 +45,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9IYXRlZm9yZ2UiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/2e7a2f58b3/Hateforge.png",
       "rarity": 3,
-      "desc": "371% increased [Armour|Armour]\nGain 4 [Rage] on [HitDamage|Hit]\nGain a random [Charges|Charge] on reaching Maximum [Rage|Rage], no more than once every 3.04 seconds\n+10 to Maximum [Rage]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲提高 371%\nGain 4 Hit\nGain a random Charge on reaching Maximum Rage, no more than once every 3.04 seconds\n+10 Maximum [Rage]\n(已腐化)"
     },
     {
       "name": "Hyrri's Ire",
@@ -53,7 +53,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "237% increased [Evasion|Evasion] Rating\n[Gain] 23% of Damage as Extra [Cold] Damage\n+37 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 33%\n闪避值 Rating提高 237%\n[Gain] 23% of Damage as Extra [Cold] Damage\n+37 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]"
     },
     {
       "name": "Kalandra's Touch",
@@ -69,7 +69,7 @@
       "baseType": "Charmed Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2c646ce419/BootsDexInt02.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n78% increased [Evasion] and [EnergyShield|Energy Shield]\n+132 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n+42% to [Resistances|Fire Resistance]\n+45% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 78%\n+132 最大生命\n物品稀有度提高 16%\n+42% 火焰抗性\n+45% 冰霜抗性"
     },
     {
       "name": "Eagle Clasp (日曜护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+50 to [Spirit|Spirit]\n37% increased [ItemRarity|Rarity of Items] found\n+19% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) Allocates Kite Runner\n(基底) +15 Spirit\n+50 Spirit\n物品稀有度提高 37%\n+19% all Elemental [Resistances]"
     },
     {
       "name": "Corruption Hope (Fury Talisman)",
@@ -85,7 +85,7 @@
       "baseType": "Fury Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "Adds 42 to 71 [Fire|Fire] Damage\n30% reduced [Attributes|Attribute] Requirements\n+4 to Level of all [Melee|Melee] Skills"
+      "desc": "(基底) +12 Maximum [Rage]\n附加 42 - 71 火焰伤害\nAttribute Requirements降低 30%\n+4 Level of all Melee Skills"
     },
     {
       "name": "猎首",
@@ -93,7 +93,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+50 to maximum Life\n+35 to [Strength|Strength]\n+36 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 23%\n(基底) Has 3 [Charm] Slots\n+50 最大生命\n+35 力量\n+36 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     }
   ],
   "skills": [

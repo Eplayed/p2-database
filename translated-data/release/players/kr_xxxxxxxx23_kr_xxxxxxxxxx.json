@@ -13,7 +13,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "98% increased [EnergyShield|Energy Shield]\n+42% to [Resistances|Fire Resistance]\n+42% to [Resistances|Cold Resistance]\n+42% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 98%\n+42% 火焰抗性\n+42% 冰霜抗性\n+42% 闪电抗性"
     },
     {
       "name": "Viper Circle (裂隙戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 21 to 30 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 85 [Lightning] damage to [Attack|Attacks]\n+11 to all [Attributes|Attributes]\n+15% to all [ElementalDamage|Elemental] [Resistances]\n+31% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 21 - 30 物理伤害 to Attacks\n附加 2 - 85 Attacks\n+11 全属性\n+15% all Elemental [Resistances]\n+31% 闪电抗性"
     },
     {
       "name": "毒疫之指",
@@ -29,7 +29,7 @@
       "baseType": "Gauze Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QbGFndWVmaW5nZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f88ef1cca5/Plaguefinger.png",
       "rarity": 3,
-      "desc": "21% chance to [Poison|Poison] on [HitDamage|Hit]\n[DamageTypes|All Damage] from [HitDamage|Hits] [Contributes|Contributes] to [Poison] Magnitude"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Magnitude of Damaging Ailments you inflict提高 20%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 15%\n21% chance to Poison on Hit\nAll Damage from Hits Contributes to [Poison] Magnitude\n(已腐化)"
     },
     {
       "name": "Behemoth Star (卡马萨冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "110% increased [EnergyShield|Energy Shield]\n+38 to maximum Mana\n24% increased [Critical|Critical Hit] Chance\n+36% to [Resistances|Cold Resistance]\n+31% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) +30 Spirit\n(附魔) +1% Maximum 冰霜抗性\n(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 110%\n+38 最大魔力\n暴击率提高 24%\n+36% 冰霜抗性\n+31% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Tempest Suit (滑布外衣)",
@@ -45,7 +45,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "109% increased [Evasion] and [EnergyShield|Energy Shield]\n+45% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]\n+44% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n能量护盾提高 109%\n+45% 火焰抗性\n+44% 冰霜抗性\n+44% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Spirit Beads (日曜护身符)",
@@ -53,7 +53,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+49 to [Spirit|Spirit]\n36% increased [Critical|Critical Hit] Chance\n18% of Damage taken [Recoup|Recouped] as Life\n34% increased Global [Defences]"
+      "desc": "(附魔) Allocates Patient Barrier\n(基底) +13 Spirit\n+49 Spirit\n暴击率提高 36%\n18% of Damage taken Recouped as Life\nGlobal [Defences]提高 34%"
     },
     {
       "name": "Dread Grasp (裂隙戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 95 [Lightning] damage to [Attack|Attacks]\n+32% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]\nGain 25 Mana per enemy killed"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 1 - 95 Attacks\n+32% 火焰抗性\n+38% 冰霜抗性\nGain 25 Mana per enemy killed"
     },
     {
       "name": "Empyrean Mark (寻战之弓)",
@@ -69,7 +69,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIiLCJkdXBsaWNhdGVkIjp0cnVlfV0/8ac0ef05be/Bow08.png",
       "rarity": 2,
-      "desc": "254% increased [Physical] Damage\n+187 to [Accuracy|Accuracy] Rating\n+5 to Level of all [Projectile] Skills\n+199% [SurpassChance|Surpassing] chance to fire an additional Arrow"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 254%\n+187 Accuracy Rating\n+5 Level of all [Projectile] Skills\n+199% Surpassing chance to fire an additional Arrow"
     },
     {
       "name": "猎首",
@@ -77,7 +77,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+53 to maximum Life\n+34 to [Strength|Strength]\n+39 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 27%\n(基底) Has 2 [Charm] Slots\n+53 最大生命\n+34 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Armageddon Barb (贯心箭袋)",
@@ -85,7 +85,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 13 to 29 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 4 to 69 [Lightning] damage to [Attack|Attacks]\n38% increased [Critical|Critical Hit Chance] for [Attack|Attacks]\n36% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage"
+      "desc": "(基底) 暴击率 for Attacks提高 27%\n附加 13 - 29 物理伤害 to Attacks\n附加 4 - 69 Attacks\n暴击率 for Attacks提高 38%\nCritical Damage Bonus for [Attack] Damage提高 36%"
     }
   ],
   "skills": [

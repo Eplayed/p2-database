@@ -13,7 +13,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "+91 to maximum Life\n+202 to maximum Mana\n21% increased Cast Speed\n+25% to [Resistances|Cold Resistance]\n63% increased Mana Regeneration Rate"
+      "desc": "(基底) +29% 闪电抗性\n+91 最大生命\n+202 最大魔力\n施法速度提高 21%\n+25% 冰霜抗性\n魔力回复速度提高 63%"
     },
     {
       "name": "Rage Pole (雷霆长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Voltaic Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDMiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8503cd2436/Staff03.png",
       "rarity": 2,
-      "desc": "[Gain] 56% of Damage as Extra [Fire] Damage\n82% increased [Spell] Damage\n+408 to maximum Mana\n+6 to Level of all [Spell|Spell] Skills\n31% increased Cast Speed\n82% increased Mana Regeneration Rate"
+      "desc": "(附魔) Magnitude提高 20%\n(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n[Gain] 56% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 82%\n+408 最大魔力\n+6 Level of all Spell Skills\n施法速度提高 31%\n魔力回复速度提高 82%\n(已腐化)"
     },
     {
       "name": "Entropy Wrap (咒者斗篷)",
@@ -29,7 +29,7 @@
       "baseType": "Conjurer Mantle",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludFN0cjA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3574a91ac4/BodyIntStr04.png",
       "rarity": 2,
-      "desc": "+129 to [Armour|Armour]\n+43 to maximum [EnergyShield|Energy Shield]\n+193 to maximum Life\n35% reduced [Attributes|Attribute] Requirements\n+31% to [Resistances|Fire Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) +14% 冰霜抗性\n(符文) +14% 闪电抗性\n(符文) 15% of Damage is taken from Mana before Life\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n(符文) Bonded: 8% of Maximum Life Converted to 能量护盾\n(基底) +28 Spirit\n+129 护甲\n+43 最大能量护盾\n+193 最大生命\nAttribute Requirements降低 35%\n+31% 火焰抗性\n+19% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Torment Visage (典范巨盔)",
@@ -37,7 +37,7 @@
       "baseType": "Paragon Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/39a19d746e/HelmetStr05.png",
       "rarity": 2,
-      "desc": "93% increased [Armour|Armour]\n+108 to maximum Life\n+119 to maximum Mana\n+35% to [Resistances|Fire Resistance]\n+40% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 最大魔力提高 3%\n(符文) Enemies you [Curse] take Damage提高 6%\n(符文) Enemies you Resistance\n(符文) Bonded: Area of Effect of Curses提高 20%\n护甲提高 93%\n+108 最大生命\n+119 最大魔力\n+35% 火焰抗性\n+40% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "Havoc Nails (巨型护手)",
@@ -45,7 +45,15 @@
       "baseType": "Massive Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/20c9cbb22c/GlovesStr06.png",
       "rarity": 2,
-      "desc": "+138 to maximum Life\n+87 to maximum Mana\n+38% to [Resistances|Cold Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) Magnitude of Non-Damaging Ailments you inflict提高 48%\n(符文) Withered Magnitude提高 32%\n(符文) Bonded: +11% 混沌抗性\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 24%\n+138 最大生命\n+87 最大魔力\n+38% 冰霜抗性\neffect of Socketed Items提高 60%\n(已腐化)"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Commanding Arm",
+      "baseType": "Commanding Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) Presence Area of Effect提高 23%"
     },
     {
       "name": "Loath Pole (鸣谐长杖)",
@@ -53,7 +61,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 48% of Damage as Extra [Fire] Damage\n[Gain] 30% of Damage as Extra [Lightning] Damage\n+145 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills"
+      "desc": "[Gain] 48% of Damage as Extra [Fire] Damage\n[Gain] 30% of Damage as Extra [Lightning] Damage\n+145 最大魔力\n+2 Level of all Spell Skills"
     },
     {
       "name": "Tempest Emblem (荒凉原野法器)",
@@ -61,7 +69,7 @@
       "baseType": "Leyline Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a7c172ac69/Focus06.png",
       "rarity": 2,
-      "desc": "+37 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n+28% to [Resistances|Lightning Resistance]\n51% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "+37 最大魔力\n+2 Level of all Spell Skills\n+28% 闪电抗性\n51% faster start of 能量护盾 Recharge"
     },
     {
       "name": "Miracle Ward (密会法器)",
@@ -69,7 +77,7 @@
       "baseType": "Cultist Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA3IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5111338008/Focus07.png",
       "rarity": 2,
-      "desc": "89% increased [Spell] Damage\n65% increased [Chaos] Damage\n+137 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n+32% to [Resistances|Fire Resistance]\n+30% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +5% all Elemental [Resistances]\n[Spell] Damage提高 89%\n[Chaos] Damage提高 65%\n+137 最大魔力\n+2 Level of all Spell Skills\n+32% 火焰抗性\n+30% 冰霜抗性"
     },
     {
       "name": "Corpse Knot (黄玉戒指)",
@@ -77,7 +85,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 16 to 29 [Cold] damage to [Attack|Attacks]\n+106 to maximum Life\n+97 to maximum Mana\n23% increased Cast Speed\n+31 to [Intelligence|Intelligence]\n57% increased Mana Regeneration Rate"
+      "desc": "(基底) +28% 闪电抗性\n附加 16 - 29 Attacks\n+106 最大生命\n+97 最大魔力\n施法速度提高 23%\n+31 智慧\n魔力回复速度提高 57%"
     },
     {
       "name": "Torment Hoof (瓦尔胫甲)",
@@ -85,7 +93,7 @@
       "baseType": "Vaal Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3bc62e552f/BootsStr05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+136 to maximum Life\n+95 to maximum Mana\n+20 to [Strength|Strength]\n+31% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) +11% 混沌抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+136 最大生命\n+95 最大魔力\n+20 力量\n+31% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Entropy Locket (碧蓝护身符)",
@@ -93,7 +101,7 @@
       "baseType": "Azure Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQXp1cmVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e49b170ba2/AzureAmulet.png",
       "rarity": 2,
-      "desc": "26% increased [Armour]\n9% increased maximum Life\n+34 to [Spirit|Spirit]\n+3 to Level of all [Spell|Spell] Skills\n+28 to [Dexterity|Dexterity]\n32.5 Life Regeneration per second"
+      "desc": "(附魔) Allocates Arcane Intensity\n(基底) 魔力回复速度提高 20%\n[护甲]提高 26%\n最大生命提高 9%\n+34 Spirit\n+3 Level of all Spell Skills\n+28 敏捷\n32.5 Life Regeneration per second"
     },
     {
       "name": "Armageddon Tether (精致腰带)",
@@ -101,7 +109,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQxMSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/10040b2473/Belt11.png",
       "rarity": 2,
-      "desc": "+166 to maximum Life\n+123 to maximum Mana\n28% increased [Flask] Life Recovery rate\n+35% to [Resistances|Lightning Resistance]\nOn Corruption, Item gains two Enchantments"
+      "desc": "(附魔) +31 最大生命\n(附魔) +10 敏捷\n(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n+166 最大生命\n+123 最大魔力\n[Flask] Life Recovery rate提高 28%\n+35% 闪电抗性\nOn Corruption, Item gains two Enchantments\n(已腐化)"
     }
   ],
   "skills": [

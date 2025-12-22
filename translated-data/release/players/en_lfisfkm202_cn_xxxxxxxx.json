@@ -13,7 +13,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 27% of Damage as Extra [Fire] Damage\n102% increased [Spell] Damage\n+4 to Level of all [Spell|Spell] Skills\n25% increased Cast Speed\n69% increased Mana Regeneration Rate"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 27% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 102%\n+4 Level of all Spell Skills\n施法速度提高 25%\n魔力回复速度提高 69%"
     },
     {
       "name": "Sol Pith (涡旋法器)",
@@ -21,7 +21,7 @@
       "baseType": "Whorl Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "+40 to maximum [EnergyShield|Energy Shield]\n67% increased [Spell] Damage\n52% increased [Spell] [Physical] Damage\n+2 to Level of all [Spell|Spell] Skills\n28% increased Cast Speed"
+      "desc": "(符文) 30% faster start of 能量护盾 Recharge\n+40 最大能量护盾\n[Spell] Damage提高 67%\n[Spell] [Physical] Damage提高 52%\n+2 Level of all Spell Skills\n施法速度提高 28%"
     },
     {
       "name": "Kraken Beads (星辉护身符)",
@@ -29,7 +29,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "26% increased [Spell] Damage\n44% increased maximum [EnergyShield|Energy Shield]\n+50 to [Spirit|Spirit]\n+2 to Level of all [Spell|Spell] Skills\n19% increased Cast Speed\n+16 to [Dexterity|Dexterity]"
+      "desc": "(附魔) Allocates Conservative Casting\n(基底) +7 全属性\n[Spell] Damage提高 26%\n最大能量护盾提高 44%\n+50 Spirit\n+2 Level of all Spell Skills\n施法速度提高 19%\n+16 敏捷"
     },
     {
       "name": "Skull Suit (邪恶束衣)",
@@ -37,7 +37,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+95 to maximum [EnergyShield|Energy Shield]\n99% increased [EnergyShield|Energy Shield]\n+49 to [Spirit|Spirit]\n+22 to [Intelligence|Intelligence]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n+95 最大能量护盾\n能量护盾提高 99%\n+49 Spirit\n+22 智慧"
     },
     {
       "name": "Empyrean Nail (珠玉戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "6% increased maximum Mana\n28% increased Cast Speed\n+31% to [Resistances|Lightning Resistance]\n56% increased Mana Regeneration Rate"
+      "desc": "(基底) 施法速度提高 12%\n最大魔力提高 6%\n施法速度提高 28%\n+31% 闪电抗性\n魔力回复速度提高 56%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -53,7 +53,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "66% increased [Evasion|Evasion] Rating\n30% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+18 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) effect of Arcane Surge on you提高 40%\n闪避值 Rating提高 66%\n暴击率提高 30%\n[Attack] Speed提高 5%\n+18 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%"
     },
     {
       "name": "Mind Trail (丝克玛便鞋)",
@@ -61,7 +61,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+44 to maximum [EnergyShield|Energy Shield]\n69% increased [EnergyShield|Energy Shield]\n+31 to [Intelligence|Intelligence]\n41% increased [ESRechargeRate|Energy Shield Recharge Rate]\n+172 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+44 最大能量护盾\n能量护盾提高 69%\n+31 智慧\n能量护盾 Recharge Rate提高 41%\n+172 晕眩门槛"
     },
     {
       "name": "Demon Coil (珠玉戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "+170 to maximum Mana\n6% increased maximum Mana\n+14% to all [ElementalDamage|Elemental] [Resistances]\n+21% to [Resistances|Cold Resistance]"
+      "desc": "(基底) 施法速度提高 9%\n+170 最大魔力\n最大魔力提高 6%\n+14% all Elemental [Resistances]\n+21% 冰霜抗性"
     },
     {
       "name": "Invasion Trap (嵌板腰带)",
@@ -77,7 +77,7 @@
       "baseType": "Plate Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/510a304252/Belt05.png",
       "rarity": 2,
-      "desc": "+95 to maximum Life\n+118 to maximum Mana\n+31% to [Resistances|Fire Resistance]\n+38% to [Resistances|Lightning Resistance]\nOn Corruption, Item gains two Enchantments\n136 to 166 [Physical|Physical] [Thorns|Thorns] damage"
+      "desc": "(附魔) +23% 火焰抗性\n(附魔) +25% 冰霜抗性\n(基底) +137 [护甲]\n(基底) Has 2 [Charm] Slots\n+95 最大生命\n+118 最大魔力\n+31% 火焰抗性\n+38% 闪电抗性\nOn Corruption, Item gains two Enchantments\n136 to 166 Physical Thorns damage\n(已腐化)"
     },
     {
       "name": "Agony Star (卡马萨冠冕)",
@@ -85,7 +85,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+65 to maximum [EnergyShield|Energy Shield]\n31% increased [EnergyShield|Energy Shield]\n+29 to maximum Life\n+38% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n+65 最大能量护盾\n能量护盾提高 31%\n+29 最大生命\n+38% 火焰抗性\n+34% 冰霜抗性\n+37% 闪电抗性"
     }
   ],
   "skills": [

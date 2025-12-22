@@ -13,7 +13,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+87 to maximum [EnergyShield|Energy Shield]\n19% of Damage taken [Recoup|Recouped] as Life\n62% increased Mana Regeneration Rate\n24% increased Global [Defences]"
+      "desc": "(基底) +13 Spirit\n+87 最大能量护盾\n19% of Damage taken Recouped as Life\n魔力回复速度提高 62%\nGlobal [Defences]提高 24%"
     },
     {
       "name": "Cataclysm Finger (裂隙戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 5 to 89 [Lightning] damage to [Attack|Attacks]\n+26 to [Strength|Strength]\n+32 to [Intelligence|Intelligence]\n+43% to [Resistances|Fire Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 5 - 89 Attacks\n+26 力量\n+32 智慧\n+43% 火焰抗性"
     },
     {
       "name": "Victory Grip (华丽护手)",
@@ -29,7 +29,7 @@
       "baseType": "Ornate Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/041d8df186/GlovesStr04.png",
       "rarity": 2,
-      "desc": "Adds 11 to 18 [Cold] damage to [Attack|Attacks]\nAdds 2 to 49 [Lightning] damage to [Attack|Attacks]\n16% increased [Attack] Speed\n+18% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) +40% of 火焰伤害\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n附加 11 - 18 Attacks\n附加 2 - 49 Attacks\n[Attack] Speed提高 16%\n+18% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "Wrath Trail (丝克玛便鞋)",
@@ -37,7 +37,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) +40% of 闪电伤害\n(已腐化)"
     },
     {
       "name": "Miracle Visage (帝国巨盔)",
@@ -45,7 +45,7 @@
       "baseType": "Imperial Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a455b9fc43/HelmetStr07.png",
       "rarity": 2,
-      "desc": "+190 to [Armour|Armour]\n38% increased [Armour|Armour]\n+80 to maximum Mana\n+34% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]\n+34% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +11% 混沌抗性\n+190 护甲\n护甲提高 38%\n+80 最大魔力\n+34% 火焰抗性\n+45% 闪电抗性\n+34% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Woe Knot (裂隙戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 18 to 32 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 71 [Lightning] damage to [Attack|Attacks]\n37% increased [Lightning] Damage\n+35% to [Resistances|Cold Resistance]\n+49% to [Resistances|Lightning Resistance]\n+18% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 18 - 32 物理伤害 to Attacks\n附加 2 - 71 Attacks\n[Lightning] Damage提高 37%\n+35% 冰霜抗性\n+49% 闪电抗性\n+18% 混沌抗性"
     },
     {
       "name": "Kraken Lock (万用腰带)",
@@ -61,7 +61,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQxMCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d95952e174/Belt10.png",
       "rarity": 2,
-      "desc": "+156 to maximum Life\n24% increased [Flask] Life Recovery rate\n+29% to [Resistances|Cold Resistance]\n+32% to [Resistances|Lightning Resistance]\n+23% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) Has 3 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n+156 最大生命\n[Flask] Life Recovery rate提高 24%\n+29% 冰霜抗性\n+32% 闪电抗性\n+23% 混沌抗性"
     },
     {
       "name": "Otherworldly Relic (Jade Talisman)",
@@ -69,7 +69,7 @@
       "baseType": "Jade Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvTHVtYmVyaW5nVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75c7ed525d/LumberingTalisman.png",
       "rarity": 2,
-      "desc": "Adds 14 to 267 [Lightning|Lightning] Damage\n24% increased [Attack] Speed\n+5 to Level of all [Attack] Skills\n23% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n附加 14 - 267 闪电伤害\n[Attack] Speed提高 24%\n+5 Level of all [Attack] Skills\n23% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Beast Pelt (狼皮斗篷)",
@@ -77,7 +77,7 @@
       "baseType": "Wolfskin Mantle",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludFN0cjAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/79f27dfa2e/BodyIntStr02.png",
       "rarity": 2,
-      "desc": "+165 to [Armour|Armour]\n+62 to maximum [EnergyShield|Energy Shield]\n42% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+38% to [Resistances|Fire Resistance]\n+24% to [Resistances|Cold Resistance]\n+40% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+165 护甲\n+62 最大能量护盾\n护甲 and 能量护盾提高 42%\n+38% 火焰抗性\n+24% 冰霜抗性\n+40% 的 护甲 也套用于 元素伤害"
     }
   ],
   "skills": [

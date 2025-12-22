@@ -13,7 +13,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "62% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 48 [Lightning] damage to [Attack|Attacks]\n+16 to [Intelligence|Intelligence]\n+35% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) [Accuracy] Rating提高 15%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n(符文) Bonded: [Charm] Charges gained提高 20%\n能量护盾提高 62%\n附加 1 - 48 Attacks\n+16 智慧\n+35% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     },
     {
       "name": "Gloom Edge (阿科扬战矛)",
@@ -21,7 +21,7 @@
       "baseType": "Akoyan Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIxMCIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/114525ad0e/1HSpear10.png",
       "rarity": 2,
-      "desc": "Adds 52 to 70 [Cold|Cold] Damage\nAdds 11 to 218 [Lightning|Lightning] Damage\n+3 to Level of all [Attack] Skills\n21% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) 附加 19 - 28 冰霜伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 冰霜抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 52 - 70 冰霜伤害\n附加 11 - 218 闪电伤害\n+3 Level of all [Attack] Skills\n21% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Dire Scarab (月影护身符)",
@@ -29,7 +29,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "+46 to [Spirit|Spirit]\n19% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Projectile] Skills\n35% increased [Critical|Critical Hit] Chance\n22% increased Cast Speed"
+      "desc": "(附魔) Allocates Stormcharged\n(基底) +27 最大能量护盾\n+46 Spirit\n物品稀有度提高 19%\n+3 Level of all [Projectile] Skills\n暴击率提高 35%\n施法速度提高 22%"
     },
     {
       "name": "Hate Spiral (金光戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 2 to 56 [Lightning] damage to [Attack|Attacks]\n34% increased [ItemRarity|Rarity of Items] found\n+27 to [Dexterity|Dexterity]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 12%\n附加 2 - 56 Attacks\n物品稀有度提高 34%\n+27 敏捷\n+34% 闪电抗性"
     },
     {
       "name": "Behemoth Brow (先祖冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+47 to maximum [EnergyShield|Energy Shield]\n100% increased [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+31 to [Intelligence|Intelligence]\n+39% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) +50 Accuracy Rating\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+47 最大能量护盾\n能量护盾提高 100%\n物品稀有度提高 18%\n+31 智慧\n+39% 火焰抗性\n(已腐化)"
     },
     {
       "name": "神圣之火",
@@ -53,7 +53,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL1NhY3JlZEZsYW1lIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f6c6572ac6/SacredFlame.png",
       "rarity": 3,
-      "desc": "[Gain] 60% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.3% of their Maximum Life per second\n[Allies|Allies] in your [Presence|Presence] [Gain|Gain] 23% of Damage as Extra Fire Damage\nEnemies in your [Presence|Presence] Resist [ElementalDamage|Elemental Damage] based on their Lowest [Resistances|Resistance]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\n[Gain] 60% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.3% of their Maximum Life per second\nAllies in your Presence Gain 23% of Damage as Extra 火焰伤害\nEnemies in your Presence Resist 元素伤害 based on their Lowest Resistance"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+61 to maximum Life\n+37 to [Strength|Strength]\n+29 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 25%\n(基底) Has 3 [Charm] Slots\n+61 最大生命\n+37 力量\n+29 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Rapture League (丝克玛便鞋)",
@@ -69,7 +69,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+50 to maximum [EnergyShield|Energy Shield]\n42% increased [EnergyShield|Energy Shield]\n+33% to [Resistances|Cold Resistance]\n+40% to [Resistances|Lightning Resistance]\n+134 to [StunThreshold|Stun Threshold]"
+      "desc": "(附魔) 能量护盾提高 25%\n(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+50 最大能量护盾\n能量护盾提高 42%\n+33% 冰霜抗性\n+40% 闪电抗性\n+134 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Dragon Knuckle (金光戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 12 to 19 [Cold] damage to [Attack|Attacks]\n+189 to [Evasion] Rating\n16% increased [ItemRarity|Rarity of Items] found\n+48% to [Resistances|Cold Resistance]\n[LifeLeech|Leech] 6.15% of [Physical] [Attack] Damage as Life\nGain 23 Mana per enemy killed"
+      "desc": "(基底) 物品稀有度提高 15%\n附加 12 - 19 Attacks\n+189 [闪避值] Rating\n物品稀有度提高 16%\n+48% 冰霜抗性\nLeech 6.15% of [Physical] [Attack] Damage as Life\nGain 23 Mana per enemy killed"
     },
     {
       "name": "Rune Carapace (邪恶束衣)",
@@ -85,7 +85,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+83 to maximum [EnergyShield|Energy Shield]\n110% increased [EnergyShield|Energy Shield]\n+36% to [Resistances|Cold Resistance]\n+32% to [Resistances|Lightning Resistance]\n+237 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+83 最大能量护盾\n能量护盾提高 110%\n+36% 冰霜抗性\n+32% 闪电抗性\n+237 晕眩门槛"
     }
   ],
   "skills": [

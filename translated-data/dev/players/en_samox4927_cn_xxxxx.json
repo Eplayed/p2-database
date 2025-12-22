@@ -13,7 +13,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "75% increased [Evasion|Evasion] Rating\n27% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+19 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 75%\n暴击率提高 27%\n[Attack] Speed提高 5%\n+19 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Brimstone Eye (三相戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "31% increased [Lightning] Damage\n+124 to maximum Mana\n37% increased [ItemRarity|Rarity of Items] found\n+45% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +9% all Elemental [Resistances]\n[Lightning] Damage提高 31%\n+124 最大魔力\n物品稀有度提高 37%\n+45% 闪电抗性"
     },
     {
       "name": "Damnation Circle (裂隙戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "29% increased [Cold] Damage\n30% increased [Lightning] Damage\n+194 to maximum Mana\n12% increased Cast Speed\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+43% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n[Cold] Damage提高 29%\n[Lightning] Damage提高 30%\n+194 最大魔力\n施法速度提高 12%\n+16% all Elemental [Resistances]\n+43% 冰霜抗性"
     },
     {
       "name": "Blood Gorget (月影护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "+43 to [Spirit|Spirit]\n+14% to all [ElementalDamage|Elemental] [Resistances]\n20.8 Life Regeneration per second\n32% increased Global [Defences]"
+      "desc": "(附魔) Allocates Mind Eraser\n(基底) +24 最大能量护盾\n+43 Spirit\n+14% all Elemental [Resistances]\n20.8 Life Regeneration per second\nGlobal [Defences]提高 32%"
     },
     {
       "name": "猎首",
@@ -45,7 +45,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+56 to maximum Life\n+27 to [Strength|Strength]\n+24 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) 最大能量护盾提高 20%\n(基底) 晕眩门槛提高 26%\n(基底) Has 3 [Charm] Slots\n+56 最大生命\n+27 力量\n+24 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Wrath Shell (邪恶束衣)",
@@ -53,7 +53,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+88 to maximum [EnergyShield|Energy Shield]\n104% increased [EnergyShield|Energy Shield]\n+32% to [Resistances|Fire Resistance]\n+29% to [Resistances|Cold Resistance]\n+123 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+88 最大能量护盾\n能量护盾提高 104%\n+32% 火焰抗性\n+29% 冰霜抗性\n+123 晕眩门槛"
     },
     {
       "name": "Miracle Chant (雷霆长杖)",
@@ -61,7 +61,7 @@
       "baseType": "Voltaic Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDMiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8503cd2436/Staff03.png",
       "rarity": 2,
-      "desc": "[Gain] 59% of Damage as Extra [Fire] Damage\n[Gain] 58% of Damage as Extra [Lightning] Damage\n229% increased [Spell] Damage\n+5 to Level of all [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 59% of Damage as Extra [Fire] Damage\n[Gain] 58% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 229%\n+5 Level of all Spell Skills"
     },
     {
       "name": "Agony Mast (鸣谐长杖)",
@@ -69,7 +69,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 46% of Damage as Extra [Fire] Damage\n118% increased [Fire] Damage\n18% increased Cast Speed\n+17 to [Intelligence|Intelligence]"
+      "desc": "[Gain] 46% of Damage as Extra [Fire] Damage\n[Fire] Damage提高 118%\n施法速度提高 18%\n+17 智慧"
     },
     {
       "name": "Sol Spark (丝克玛便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n(已腐化)"
     },
     {
       "name": "谜容",
@@ -85,7 +85,7 @@
       "baseType": "Tribal Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhlVmVydGV4IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/baf0218c37/TheVertex.png",
       "rarity": 3,
-      "desc": "Has no [Attributes|Attribute] Requirements\n112% increased [Evasion] and [EnergyShield|Energy Shield]\n29% increased [Critical|Critical Hit] Chance\n+15% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\nHas no Attribute Requirements\n能量护盾提高 112%\n暴击率提高 29%\n+15% 混沌抗性\n(已腐化)"
     }
   ],
   "skills": [

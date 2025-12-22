@@ -13,7 +13,7 @@
       "baseType": "Galvanic Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDA2IiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/ade4b84c31/Wand06.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Fire] Damage\n[Gain] 25% of Damage as Extra [Cold] Damage\n[Gain] 30% of Damage as Extra [Lightning] Damage\n28% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Fire] Damage\n[Gain] 25% of Damage as Extra [Cold] Damage\n[Gain] 30% of Damage as Extra [Lightning] Damage\n施法速度提高 28%"
     },
     {
       "name": "Rage Barb (调谐法杖)",
@@ -21,7 +21,7 @@
       "baseType": "Attuned Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDAzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e3b38f8f2b/Wand03.png",
       "rarity": 2,
-      "desc": "+3 to Level of all [Spell|Spell] Skills\n72% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n25% increased Cast Speed"
+      "desc": "(符文) 暴击率 for Spells提高 24%\n(符文) Bonded: Critical Damage Bonus提高 25%\n+3 Level of all Spell Skills\n暴击率 for Spells提高 72%\n施法速度提高 25%"
     },
     {
       "name": "Dread Veil (飘逸之衣)",
@@ -29,7 +29,7 @@
       "baseType": "Flowing Raiment",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f868a6a214/BodyInt06.png",
       "rarity": 2,
-      "desc": "+88 to maximum [EnergyShield|Energy Shield]\n+38% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]\n47% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n(基底) 魔力回复速度提高 44%\n+88 最大能量护盾\n+38% 冰霜抗性\n+36% 闪电抗性\n47% faster start of 能量护盾 Recharge\n(已腐化)"
     },
     {
       "name": "Eagle Finger (裂隙戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+224 to maximum Mana\n8% increased maximum Mana\n23% increased Cast Speed\n+37% to [Resistances|Fire Resistance]\n81% increased Mana Regeneration Rate"
+      "desc": "(基底) Maximum [Quality] is 40%\n+224 最大魔力\n最大魔力提高 8%\n施法速度提高 23%\n+37% 火焰抗性\n魔力回复速度提高 81%"
     },
     {
       "name": "残酷雕塑",
@@ -45,7 +45,7 @@
       "baseType": "Antler Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL1VuaXF1ZXMvRWZmaWd5T2ZDcnVlbHR5IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7dd73b151e/EffigyOfCruelty.png",
       "rarity": 3,
-      "desc": "+30 to maximum [EnergyShield|Energy Shield]\n40% increased [Spell] Damage\n+10 to [Intelligence|Intelligence]\n+9% to [Resistances|Chaos Resistance]\n[Critical|Critical Hits] with [Spell|Spells] apply 3 Stacks of [CriticalWeakness|Critical Weakness]"
+      "desc": "(符文) +28% 闪电抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+30 最大能量护盾\n[Spell] Damage提高 40%\n+10 智慧\n+9% 混沌抗性\nCritical Hits with Spells apply 3 Stacks of Critical Weakness\n(已腐化)"
     },
     {
       "name": "Loath Crest (先祖冠冕)",
@@ -53,7 +53,15 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+68 to maximum [EnergyShield|Energy Shield]\n39% increased [EnergyShield|Energy Shield]\n+37 to maximum Mana\n+32% to [Resistances|Fire Resistance]\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) [Exposure] Effect提高 25%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Magnitude of Non-Damaging Ailments you inflict提高 15%\n+68 最大能量护盾\n能量护盾提高 39%\n+37 最大魔力\n+32% 火焰抗性\n+32% 闪电抗性\n(已腐化)"
+    },
+    {
+      "name": "Ambush Hoof (丝克玛便鞋)",
+      "originalName": "Ambush Hoof",
+      "baseType": "Sekhema Sandals",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
+      "rarity": 2,
+      "desc": "(附魔) 晕眩门槛提高 29%\n(符文) 移动速度提高 8%\n(符文) Slowing Potency of Debuffs on You降低 24%\n(符文) Bonded: 冷却回复速度提高 16%\n+60 最大能量护盾\n+32 智慧\n+39% 火焰抗性\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "夜临",
@@ -61,7 +69,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9EYXJrbmVzc0VudGhyb25lZCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9bbef2f97f/DarknessEnthroned.png",
       "rarity": 3,
-      "desc": "This item gains bonuses from Socketed Items as though it was a Body Armour\n98% increased effect of Socketed Items"
+      "desc": "(附魔) +25% 冰霜抗性\n(符文) 能量护盾 Recharge Rate提高 99%\n(符文) effect of Curses on you降低 99%\n(符文) Bonded: 39% faster start of 能量护盾 Recharge\n(符文) Bonded: Magnitudes提高 15%\n(基底) Has 2 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\nThis item gains bonuses from Socketed Items as though it was a Body 护甲\neffect of Socketed Items提高 98%\n(已腐化)"
     },
     {
       "name": "Agony Band (珠玉戒指)",
@@ -69,7 +77,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "+179 to maximum Mana\n26% increased Cast Speed\n+37% to [Resistances|Lightning Resistance]\n66% increased Mana Regeneration Rate"
+      "desc": "(基底) 施法速度提高 12%\n+179 最大魔力\n施法速度提高 26%\n+37% 闪电抗性\n魔力回复速度提高 66%"
     },
     {
       "name": "Morbid Braid (日曜护身符)",
@@ -77,15 +85,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+3 to Level of all [Spell|Spell] Skills\n+36% to [Resistances|Fire Resistance]\n+36% to [Resistances|Cold Resistance]\n34% increased Global [Defences]"
-    },
-    {
-      "name": "Phoenix March (丝克玛便鞋)",
-      "originalName": "Phoenix March",
-      "baseType": "Sekhema Sandals",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
-      "rarity": 2,
-      "desc": "30% increased Movement Speed\n89% increased [EnergyShield|Energy Shield]\n+25 to [Intelligence|Intelligence]\n+37% to [Resistances|Fire Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(附魔) Allocates Infusion of Power\n(基底) +15 Spirit\n+3 Level of all Spell Skills\n+36% 火焰抗性\n+36% 冰霜抗性\nGlobal [Defences]提高 34%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -93,7 +93,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "75% increased [Evasion|Evasion] Rating\n29% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+11 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) effect of Arcane Surge on you提高 40%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 75%\n暴击率提高 29%\n[Attack] Speed提高 5%\n+11 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Sorrow Star (塔萨里奥法器)",
@@ -101,7 +101,7 @@
       "baseType": "Tasalian Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "+86 to maximum [EnergyShield|Energy Shield]\n83% increased [Spell] Damage\n+2 to Level of all [Spell|Spell] Skills\n29% increased Cast Speed\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 30% faster start of 能量护盾 Recharge\n+86 最大能量护盾\n[Spell] Damage提高 83%\n+2 Level of all Spell Skills\n施法速度提高 29%\n+39% 闪电抗性"
     }
   ],
   "skills": [

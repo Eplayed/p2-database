@@ -13,7 +13,7 @@
       "baseType": "Charmed Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2c646ce419/BootsDexInt02.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n122% increased [Evasion] and [EnergyShield|Energy Shield]\n17% increased [ItemRarity|Rarity of Items] found\n+43% to [Resistances|Fire Resistance]\n+32 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 122%\n物品稀有度提高 17%\n+43% 火焰抗性\n+32 晕眩门槛"
     },
     {
       "name": "Soul Twirl (金光戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 9 to 20 [Physical|Physical] Damage to [Attack|Attacks]\n+197 to [Accuracy|Accuracy] Rating\n+84 to [Evasion] Rating\n+43% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]\nGain 24 Mana per enemy killed"
+      "desc": "(基底) 物品稀有度提高 12%\n附加 9 - 20 物理伤害 to Attacks\n+197 Accuracy Rating\n+84 [闪避值] Rating\n+43% 冰霜抗性\n+43% 闪电抗性\nGain 24 Mana per enemy killed"
     },
     {
       "name": "猎首",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+59 to maximum Life\n+39 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 27%\n(基底) Has 2 [Charm] Slots\n+59 最大生命\n+39 力量\n+38 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Sol Collar (帝金护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "41% increased [Evasion|Evasion Rating]\n36% increased maximum [EnergyShield|Energy Shield]\n+151 to maximum Mana\n18% increased [ItemRarity|Rarity of Items] found\n+22% to [Resistances|Chaos Resistance]"
+      "desc": "(附魔) Allocates Impact Area\n(基底) 物品稀有度提高 18%\n闪避值 Rating提高 41%\n最大能量护盾提高 36%\n+151 最大魔力\n物品稀有度提高 18%\n+22% 混沌抗性"
     },
     {
       "name": "Woe Pelt (滑击背心)",
@@ -45,7 +45,7 @@
       "baseType": "Slipstrike Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dd53d7b8d1/BodyDex06.png",
       "rarity": 2,
-      "desc": "+58 to [Evasion] Rating\n140% increased [Evasion|Evasion] Rating\n+33% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]\n43% reduced [Poison|Poison] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n+58 [闪避值] Rating\n闪避值 Rating提高 140%\n+33% 冰霜抗性\n+38% 闪电抗性\nPoison Duration on you降低 43%\n(已腐化)"
     },
     {
       "name": "Blight Star (先祖冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n100% increased [EnergyShield|Energy Shield]\n+29 to [Intelligence|Intelligence]\n+28% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+73 最大能量护盾\n能量护盾提高 100%\n+29 智慧\n+28% 火焰抗性\n+37% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Gale Claw (尖刺护腕)",
@@ -61,7 +61,7 @@
       "baseType": "Spiked Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b6a93d2794/GlovesDex05.png",
       "rarity": 2,
-      "desc": "70% increased [Evasion|Evasion] Rating\nAdds 7 to 17 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 8 to 12 [Cold] damage to [Attack|Attacks]\n16% increased [ItemRarity|Rarity of Items] found\n15% increased [Attack] Speed\n+30% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) +11% 混沌抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n闪避值 Rating提高 70%\n附加 7 - 17 物理伤害 to Attacks\n附加 8 - 12 Attacks\n物品稀有度提高 16%\n[Attack] Speed提高 15%\n+30% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Bramble Nail (金光戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 18 to 29 [Fire] damage to [Attack|Attacks]\nAdds 2 to 45 [Lightning] damage to [Attack|Attacks]\n34% increased [ItemRarity|Rarity of Items] found\n+11 to [Intelligence|Intelligence]"
+      "desc": "(基底) 物品稀有度提高 9%\n附加 18 - 29 Attacks\n附加 2 - 45 Attacks\n物品稀有度提高 34%\n+11 智慧"
     },
     {
       "name": "Gloom Song (邪恶节杖)",
@@ -77,7 +77,7 @@
       "baseType": "Sinister Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac756ffc0d/Warstaff03.png",
       "rarity": 2,
-      "desc": "[Gain] 33% of Damage as Extra [Lightning] Damage\n+4.96% to [Critical|Critical Hit] Chance\n23% increased [Attack] Speed\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Gain] 33% of Damage as Extra [Lightning] Damage\n+4.96% 暴击率\n[Attack] Speed提高 23%\n+5 Level of all [Attack] Skills"
     }
   ],
   "skills": [

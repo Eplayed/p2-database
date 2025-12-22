@@ -13,7 +13,7 @@
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "36% increased [EnergyShield|Energy Shield]\n+39 to maximum Life\n29% increased [CriticalDamageBonus|Critical Damage Bonus]\n+39% to [Resistances|Cold Resistance]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +28% 冰霜抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 36%\n+39 最大生命\nCritical Damage Bonus提高 29%\n+39% 冰霜抗性\n+33% 闪电抗性"
     },
     {
       "name": "Vengeance Scarab (帝金护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "55% increased [Armour]\n27% increased Cast Speed\n+16% to all [ElementalDamage|Elemental] [Resistances]\n33% increased Global [Defences]"
+      "desc": "(附魔) Allocates Acceleration\n(基底) 物品稀有度提高 19%\n[护甲]提高 55%\n施法速度提高 27%\n+16% all Elemental [Resistances]\nGlobal [Defences]提高 33%"
     },
     {
       "name": "Anarchy League (丝克玛便鞋)",
@@ -29,7 +29,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "+42 to maximum [EnergyShield|Energy Shield]\n16% increased [ItemRarity|Rarity of Items] found\n+30 to [Intelligence|Intelligence]\n+45% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n+42 最大能量护盾\n物品稀有度提高 16%\n+30 智慧\n+45% 闪电抗性"
     },
     {
       "name": "Woe Mast (鸣谐长杖)",
@@ -37,7 +37,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 50% of Damage as Extra [Cold] Damage\n+59 to maximum Mana\n+4 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n75% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n46% increased Cast Speed"
+      "desc": "(符文) 暴击率 for Spells提高 48%\n(符文) Bonded: Critical Damage Bonus提高 50%\n[Gain] 50% of Damage as Extra [Cold] Damage\n+59 最大魔力\n+4 Level of all Lightning Spell Skills\n暴击率 for Spells提高 75%\n施法速度提高 46%"
     },
     {
       "name": "Beast Emblem (荒凉原野法器)",
@@ -45,7 +45,7 @@
       "baseType": "Leyline Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a7c172ac69/Focus06.png",
       "rarity": 2,
-      "desc": "+62 to maximum [EnergyShield|Energy Shield]\n69% increased [Spell] [Physical] Damage\n+2 to Level of all [Spell|Spell] Skills\n26% increased Cast Speed\n41% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+62 最大能量护盾\n[Spell] [Physical] Damage提高 69%\n+2 Level of all Spell Skills\n施法速度提高 26%\n41% faster start of 能量护盾 Recharge"
     },
     {
       "name": "猎首",
@@ -53,7 +53,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+41 to maximum Life\n+36 to [Strength|Strength]\n+31 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 25%\n(基底) Has 2 [Charm] Slots\n+41 最大生命\n+36 力量\n+31 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "残酷雕塑",
@@ -61,7 +61,7 @@
       "baseType": "Antler Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL1VuaXF1ZXMvRWZmaWd5T2ZDcnVlbHR5IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7dd73b151e/EffigyOfCruelty.png",
       "rarity": 3,
-      "desc": "+27 to maximum [EnergyShield|Energy Shield]\n40% increased [Spell] Damage\n+9 to [Intelligence|Intelligence]\n+9% to [Resistances|Chaos Resistance]\n[Critical|Critical Hits] with [Spell|Spells] apply 4 Stacks of [CriticalWeakness|Critical Weakness]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+27 最大能量护盾\n[Spell] Damage提高 40%\n+9 智慧\n+9% 混沌抗性\nCritical Hits with Spells apply 4 Stacks of Critical Weakness\n(已腐化)"
     },
     {
       "name": "Chimeric Glance (卡马萨冠冕)",
@@ -69,7 +69,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+70 to maximum [EnergyShield|Energy Shield]\n130% increased [EnergyShield|Energy Shield]\n+29 to maximum Mana\n+33 to [Intelligence|Intelligence]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) Remove a Damaging Ailment when you use a [Command] Skill\n+70 最大能量护盾\n能量护盾提高 130%\n+29 最大魔力\n+33 智慧\n+36% 闪电抗性"
     },
     {
       "name": "Blight Jack (邪恶束衣)",
@@ -77,7 +77,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+104 to maximum [EnergyShield|Energy Shield]\n39% increased [EnergyShield|Energy Shield]\n+35% to [Resistances|Fire Resistance]\n+31% to [Resistances|Cold Resistance]\n47% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+104 最大能量护盾\n能量护盾提高 39%\n+35% 火焰抗性\n+31% 冰霜抗性\n47% faster start of 能量护盾 Recharge\n(已腐化)"
     },
     {
       "name": "Mind Circle (裂隙戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+182 to [Evasion] Rating\n17% increased [ItemRarity|Rarity of Items] found\n32% increased Cast Speed\n+24% to [Resistances|Fire Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n+182 [闪避值] Rating\n物品稀有度提高 17%\n施法速度提高 32%\n+24% 火焰抗性\n+36% 闪电抗性"
     },
     {
       "name": "Mind Post (咆哮长杖)",
@@ -93,7 +93,7 @@
       "baseType": "Roaring Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 56% of Damage as Extra [Fire] Damage\n162% increased [Spell] Damage\n62% increased Mana Regeneration Rate\n+7 to Level of all [Physical|Physical] [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 56% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 162%\n魔力回复速度提高 62%\n+7 Level of all Physical Spell Skills"
     },
     {
       "name": "Plague Whorl (蓝玉戒指)",
@@ -101,7 +101,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "+142 to [Evasion] Rating\n32% increased [ItemRarity|Rarity of Items] found\n25% increased Cast Speed\n19% increased Mana Regeneration Rate\n15% increased [LightRadius|Light Radius]"
+      "desc": "(基底) +25% 冰霜抗性\n+142 [闪避值] Rating\n物品稀有度提高 32%\n施法速度提高 25%\n魔力回复速度提高 19%\nLight Radius提高 15%"
     }
   ],
   "skills": [

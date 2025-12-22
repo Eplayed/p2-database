@@ -13,7 +13,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4a30ba13fb/Belt04.png",
       "rarity": 2,
-      "desc": "+173 to maximum Life\n+50 to maximum Mana\n+18% to [Resistances|Fire Resistance]\n+30% to [Resistances|Cold Resistance]\n95 to 139 [Physical|Physical] [Thorns|Thorns] damage"
+      "desc": "(基底) [Charm] Effect Duration提高 20%\n(基底) Has 3 [Charm] Slots\n+173 最大生命\n+50 最大魔力\n+18% 火焰抗性\n+30% 冰霜抗性\n95 to 139 Physical Thorns damage"
     },
     {
       "name": "暴风之语",
@@ -21,7 +21,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0Nob2lyT2ZUaGVTdG9ybSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/59c9c7bfc8/ChoirOfTheStorm.png",
       "rarity": 3,
-      "desc": "+78% to [Resistances|Lightning Resistance]\n[Critical|Critical Hits] [IgnoreResistances|Ignore] Enemy Monster [Resistances|Lightning Resistance]\n[Trigger] Lightning Bolt Skill on [Critical|Critical Hit]"
+      "desc": "(附魔) Allocates Vulgar Methods\n(基底) +13 敏捷\n+78% 闪电抗性\nCritical Hits Ignore Enemy Monster 闪电抗性\nCritical Hit"
     },
     {
       "name": "Pain Track (魅力便鞋)",
@@ -29,7 +29,7 @@
       "baseType": "Charmed Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2c646ce419/BootsDexInt02.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n41% increased [Evasion] and [EnergyShield|Energy Shield]\n+119 to maximum Life\n+33% to [Resistances|Fire Resistance]\n+40% to [Resistances|Cold Resistance]\n+107 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +28% 火焰抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n移动速度提高 30%\n能量护盾提高 41%\n+119 最大生命\n+33% 火焰抗性\n+40% 冰霜抗性\n+107 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Kraken Post (鸣谐长杖)",
@@ -37,7 +37,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 46% of Damage as Extra [Lightning] Damage\n62% increased [Spell] Damage\n112% increased [Spell] [Physical] Damage\n+58 to maximum Mana\n47% increased Cast Speed\n+25 to [Intelligence|Intelligence]"
+      "desc": "[Gain] 46% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 62%\n[Spell] [Physical] Damage提高 112%\n+58 最大魔力\n施法速度提高 47%\n+25 智慧"
     },
     {
       "name": "Damnation Spell (雷霆长杖)",
@@ -45,7 +45,7 @@
       "baseType": "Voltaic Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDMiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8503cd2436/Staff03.png",
       "rarity": 2,
-      "desc": "[Gain] 57% of Damage as Extra [Fire] Damage\n[Gain] 51% of Damage as Extra [Cold] Damage\n146% increased [Spell] Damage\n31% increased Cast Speed"
+      "desc": "(符文) [Gain] 20% of Damage as Extra [Lightning] Damage\n(符文) Bonded: Magnitude of Shock you inflict提高 60%\n[Gain] 57% of Damage as Extra [Fire] Damage\n[Gain] 51% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 146%\n施法速度提高 31%"
     },
     {
       "name": "Phoenix Jack (邪恶束衣)",
@@ -53,7 +53,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+96 to maximum [EnergyShield|Energy Shield]\n29% increased [EnergyShield|Energy Shield]\n+26 to maximum Life\n+29 to [Intelligence|Intelligence]\n+34% to [Resistances|Lightning Resistance]\n+23% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+96 最大能量护盾\n能量护盾提高 29%\n+26 最大生命\n+29 智慧\n+34% 闪电抗性\n+23% 混沌抗性"
     },
     {
       "name": "贪欲之记",
@@ -61,7 +61,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9BbmR2YXJpdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/62ed73e3a0/Andvarius.png",
       "rarity": 3,
-      "desc": "67% increased [ItemRarity|Rarity of Items] found\n+10 to [Dexterity|Dexterity]\n-20% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 物品稀有度提高 10%\n物品稀有度提高 67%\n+10 敏捷\n-20% to all Elemental [Resistances]"
     },
     {
       "name": "血咒师面罩",
@@ -69,7 +69,7 @@
       "baseType": "Face Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvUGhhbnRvbUJsb29kIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/913957c654/PhantomBlood.png",
       "rarity": 3,
-      "desc": "+24 to [Evasion] Rating\n+13 to maximum [EnergyShield|Energy Shield]\n35% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n+13 to [Strength|Strength]\n+18 to [Intelligence|Intelligence]\n[BloodMagic|Blood Magic]"
+      "desc": "(符文) +22% 混沌抗性\n+24 [闪避值] Rating\n+13 最大能量护盾\n暴击率 for Spells提高 35%\n+13 力量\n+18 智慧\nBlood Magic\n(已腐化)"
     },
     {
       "name": "Maelström Band (红玉戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "29% increased [Lightning] Damage\n+309 to [Accuracy|Accuracy] Rating\n34% increased [ItemRarity|Rarity of Items] found\n+18% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) +29% 火焰抗性\n[Lightning] Damage提高 29%\n+309 Accuracy Rating\n物品稀有度提高 34%\n+18% all Elemental [Resistances]"
     },
     {
       "name": "Atziri's Acuity",
@@ -85,7 +85,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "91% increased [Armour|Armour]\n40% increased [Critical|Critical Hit] Chance\n+30 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) +22% 混沌抗性\n护甲提高 91%\n暴击率提高 40%\n+30 智慧\nCritical Hits is instant\n(已腐化)"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "66% increased [Evasion|Evasion] Rating\n25% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+11 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) effect of Arcane Surge on you提高 40%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n闪避值 Rating提高 66%\n暴击率提高 25%\n[Attack] Speed提高 5%\n+11 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Gloom Weaver (鸣谐长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "+147 to maximum Mana\n+5 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\nGain 81 Life per enemy killed\nGain 13 Mana per enemy killed"
+      "desc": "+147 最大魔力\n+5 Level of all Lightning Spell Skills\nGain 81 Life per enemy killed\nGain 13 Mana per enemy killed"
     },
     {
       "name": "Oblivion Finger (珠玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "Adds 12 to 19 [Cold] damage to [Attack|Attacks]\n+108 to maximum Mana\n12% increased [ItemRarity|Rarity of Items] found\n21% increased Cast Speed\n+26% to [Resistances|Fire Resistance]\n+43% to [Resistances|Cold Resistance]"
+      "desc": "(基底) 施法速度提高 9%\n附加 12 - 19 Attacks\n+108 最大魔力\n物品稀有度提高 12%\n施法速度提高 21%\n+26% 火焰抗性\n+43% 冰霜抗性"
     },
     {
       "name": "Horror Hide (邪恶束衣)",
@@ -37,7 +37,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "100% increased [EnergyShield|Energy Shield]\n+37% to [Resistances|Cold Resistance]\n+31% to [Resistances|Lightning Resistance]\n30.2 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n能量护盾提高 100%\n+37% 冰霜抗性\n+31% 闪电抗性\n30.2 Life Regeneration per second"
     },
     {
       "name": "Fate Pendant (琥珀护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "29% increased [Spell] Damage\n25% increased Cast Speed\n+25 to [Intelligence|Intelligence]\n36% increased Global [Defences]"
+      "desc": "(附魔) Allocates Spiral into Depression\n(基底) +14 力量\n[Spell] Damage提高 29%\n施法速度提高 25%\n+25 智慧\nGlobal [Defences]提高 36%"
     },
     {
       "name": "Soul Knuckle (金光戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 11 to 21 [Physical|Physical] Damage to [Attack|Attacks]\n18% increased [ItemRarity|Rarity of Items] found\n23% increased Cast Speed\n+18% to all [ElementalDamage|Elemental] [Resistances]\n+39% to [Resistances|Fire Resistance]"
+      "desc": "(基底) 物品稀有度提高 15%\n附加 11 - 21 物理伤害 to Attacks\n物品稀有度提高 18%\n施法速度提高 23%\n+18% all Elemental [Resistances]\n+39% 火焰抗性"
     },
     {
       "name": "Beast Mast (咆哮长杖)",
@@ -61,7 +61,7 @@
       "baseType": "Roaring Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 56% of Damage as Extra [Fire] Damage\n[Gain] 54% of Damage as Extra [Lightning] Damage\n171% increased [Spell] Damage\n+5 to Level of all [Spell|Spell] Skills\n51% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 56% of Damage as Extra [Fire] Damage\n[Gain] 54% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 171%\n+5 Level of all Spell Skills\n施法速度提高 51%"
     },
     {
       "name": "Carrion Road (麻布鞋履)",
@@ -69,7 +69,7 @@
       "baseType": "Flax Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n63% increased [EnergyShield|Energy Shield]\n16% increased [ItemRarity|Rarity of Items] found\n+34% to [Resistances|Lightning Resistance]\n+293 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 63%\n物品稀有度提高 16%\n+34% 闪电抗性\n+293 晕眩门槛\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -77,7 +77,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+40 to maximum Life\n+24 to [Strength|Strength]\n+37 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) 闪避值 Rating提高 20%\n(基底) 晕眩门槛提高 30%\n(基底) Has 2 [Charm] Slots\n+40 最大生命\n+24 力量\n+37 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Viper Halo (先祖冠冕)",
@@ -85,7 +85,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "136% increased [EnergyShield|Energy Shield]\n+39 to maximum Mana\n+33% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 136%\n+39 最大魔力\n+33% 火焰抗性\n+34% 冰霜抗性\n+36% 闪电抗性"
     }
   ],
   "skills": [

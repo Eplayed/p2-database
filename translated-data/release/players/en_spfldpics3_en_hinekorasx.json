@@ -13,7 +13,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "5% increased [Charm] Charges gained\n5% reduced [Charm] Charges used\n27% increased bonuses gained from left Equipped Ring\n29% increased bonuses gained from right Equipped Ring"
+      "desc": "(附魔) +20% 冰霜抗性\n(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 5%\n[Charm] Charges used降低 5%\nbonuses gained from left Equipped Ring提高 27%\nbonuses gained from right Equipped Ring提高 29%\n(已腐化)"
     },
     {
       "name": "Damnation Goad (捷足便鞋)",
@@ -21,7 +21,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+57 to [Evasion] Rating\n+25 to maximum [EnergyShield|Energy Shield]\n19.4 Life Regeneration per second\n60% increased effect of Socketed Items"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 28%\n(符文) Bonded: +16 最大生命\n(符文) Bonded: +16 最大魔力\n移动速度提高 30%\n+57 [闪避值] Rating\n+25 最大能量护盾\n19.4 Life Regeneration per second\neffect of Socketed Items提高 60%"
     },
     {
       "name": "Rift Ward (滑布外衣)",
@@ -29,7 +29,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "133% increased [Evasion] and [EnergyShield|Energy Shield]\n+26 to maximum Life\n+25 to [Dexterity|Dexterity]\n+36% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 133%\n+26 最大生命\n+25 敏捷\n+36% 冰霜抗性\n+35% 闪电抗性"
     },
     {
       "name": "Corpse Pendant (琥珀护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "25% increased [Spell] Damage\n+317 to [Accuracy|Accuracy] Rating\n47% increased maximum [EnergyShield|Energy Shield]\n+2 to Level of all [Projectile] Skills\n+21 to all [Attributes|Attributes]\n+17% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) Allocates Jack of all Trades\n(基底) +11 力量\n[Spell] Damage提高 25%\n+317 Accuracy Rating\n最大能量护盾提高 47%\n+2 Level of all [Projectile] Skills\n+21 全属性\n+17% all Elemental [Resistances]"
     },
     {
       "name": "Ghoul Core (摧城弩)",
@@ -45,7 +45,7 @@
       "baseType": "Siege Crossbow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Dcm9zc2Jvd3MvMkhDcm9zc2JvdzA3IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7153259b14/2HCrossbow07.png",
       "rarity": 2,
-      "desc": "163% increased [Physical] Damage\nAdds 23 to 59 [Physical|Physical] Damage\n+4.95% to [Critical|Critical Hit] Chance\n+6 to Level of all [Projectile] Skills\n+29 to [Strength|Strength]"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile\n[Physical] Damage提高 163%\n附加 23 - 59 物理伤害\n+4.95% 暴击率\n+6 Level of all [Projectile] Skills\n+29 力量"
     },
     {
       "name": "Morbid Shelter (丛林冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Jungle Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+66 to maximum [EnergyShield|Energy Shield]\n39% increased [EnergyShield|Energy Shield]\n+39 to maximum Mana\n+34% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]\n31% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+66 最大能量护盾\n能量护盾提高 39%\n+39 最大魔力\n+34% 冰霜抗性\n+35% 闪电抗性\n能量护盾 Recharge Rate提高 31%"
     },
     {
       "name": "Blight Knuckle (潜能之戒)",
@@ -61,7 +61,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 20 to 36 [Fire] damage to [Attack|Attacks]\nAdds 2 to 43 [Lightning] damage to [Attack|Attacks]\n28% increased [Cold] Damage\n+40% to [Resistances|Fire Resistance]\n+33% to [Resistances|Lightning Resistance]\n+27% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 20 - 36 Attacks\n附加 2 - 43 Attacks\n[Cold] Damage提高 28%\n+40% 火焰抗性\n+33% 闪电抗性\n+27% 混沌抗性"
     },
     {
       "name": "Rift Turn (潜能之戒)",
@@ -69,7 +69,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 8 to 14 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 3 to 57 [Lightning] damage to [Attack|Attacks]\n+178 to [Evasion] Rating\n+11% to all [ElementalDamage|Elemental] [Resistances]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 8 - 14 物理伤害 to Attacks\n附加 3 - 57 Attacks\n+178 [闪避值] Rating\n+11% all Elemental [Resistances]\n+36% 闪电抗性"
     },
     {
       "name": "Miracle Vise (坚固裹手)",
@@ -77,7 +77,7 @@
       "baseType": "Secured Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleEludDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f43ef07a0c/GlovesDexInt04.png",
       "rarity": 2,
-      "desc": "Adds 2 to 46 [Lightning] damage to [Attack|Attacks]\n+73 to maximum Mana\n+31 to [Dexterity|Dexterity]\n+42% to [Resistances|Fire Resistance]\n+25% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 2 - 46 Attacks\n+73 最大魔力\n+31 敏捷\n+42% 火焰抗性\n+25% 混沌抗性"
     }
   ],
   "skills": [

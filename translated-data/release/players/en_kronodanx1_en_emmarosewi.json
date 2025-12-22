@@ -13,7 +13,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "94% increased [Armour|Armour]\n46% increased [Critical|Critical Hit] Chance\n+30 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) +22% 混沌抗性\n护甲提高 94%\n暴击率提高 46%\n+30 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "血咒师面罩",
@@ -21,7 +21,7 @@
       "baseType": "Face Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvUGhhbnRvbUJsb29kIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/913957c654/PhantomBlood.png",
       "rarity": 3,
-      "desc": "+20 to [Evasion] Rating\n+14 to maximum [EnergyShield|Energy Shield]\n37% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n+18 to [Strength|Strength]\n+17 to [Intelligence|Intelligence]\n[BloodMagic|Blood Magic]"
+      "desc": "(符文) +22% 混沌抗性\n+20 [闪避值] Rating\n+14 最大能量护盾\n暴击率 for Spells提高 37%\n+18 力量\n+17 智慧\nBlood Magic\n(已腐化)"
     },
     {
       "name": "Morbid Hold (黄玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "23% increased [Fire] Damage\n21% increased [Lightning] Damage\n+107 to maximum Life\n24% increased Cast Speed\n+40% to [Resistances|Fire Resistance]\n+33% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +27% 闪电抗性\n[Fire] Damage提高 23%\n[Lightning] Damage提高 21%\n+107 最大生命\n施法速度提高 24%\n+40% 火焰抗性\n+33% 冰霜抗性"
     },
     {
       "name": "暴风之语",
@@ -37,7 +37,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0Nob2lyT2ZUaGVTdG9ybSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/59c9c7bfc8/ChoirOfTheStorm.png",
       "rarity": 3,
-      "desc": "+86% to [Resistances|Lightning Resistance]\n[Critical|Critical Hits] [IgnoreResistances|Ignore] Enemy Monster [Resistances|Lightning Resistance]\n[Trigger] Lightning Bolt Skill on [Critical|Critical Hit]"
+      "desc": "(附魔) Allocates Cooked\n(基底) +10 敏捷\n+86% 闪电抗性\nCritical Hits Ignore Enemy Monster 闪电抗性\nCritical Hit"
     },
     {
       "name": "Kraken Mast (麻痹长杖)",
@@ -45,7 +45,7 @@
       "baseType": "Paralysing Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 54% of Damage as Extra [Lightning] Damage\n175% increased [Lightning] Damage\n+7 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n50% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 54% of Damage as Extra [Lightning] Damage\n[Lightning] Damage提高 175%\n+7 Level of all Lightning Spell Skills\n施法速度提高 50%"
     },
     {
       "name": "破碎传承者",
@@ -53,7 +53,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVW5pcXVlcy9TaXJlT2ZTaGFyZHMiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4d78611003/SireOfShards.png",
       "rarity": 3,
-      "desc": "94% increased [Spell] Damage\n17% increased Cast Speed\n+6% to all [ElementalDamage|Elemental] [Resistances]\n20% increased [LightRadius|Light Radius]\n[Spell|Spells] fire 4 additional [Projectile|Projectiles]\n[Spell|Spells] fire [Projectile|Projectiles] in a circle"
+      "desc": "[Spell] Damage提高 94%\n施法速度提高 17%\n+6% all Elemental [Resistances]\nLight Radius提高 20%\nSpells fire 4 additional Projectiles\nSpells fire Projectiles in a circle"
     },
     {
       "name": "Wrath Cloak (邪恶束衣)",
@@ -61,7 +61,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+30 to maximum [EnergyShield|Energy Shield]\n139% increased [EnergyShield|Energy Shield]\n+37% to [Resistances|Fire Resistance]\n59% reduced [Poison|Poison] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 72%\n(符文) Bonded: +40 最大生命\n(符文) Bonded: +40 最大魔力\n+30 最大能量护盾\n能量护盾提高 139%\n+37% 火焰抗性\nPoison Duration on you降低 59%\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+42 to maximum Life\n+37 to [Strength|Strength]\n+27 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 2 [Charm] Slots\n+42 最大生命\n+37 力量\n+27 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Sol Grip (蓝玉戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "30% increased [Lightning] Damage\n+63 to [Accuracy|Accuracy] Rating\n+9 to [Evasion] Rating\n24% increased Cast Speed\n+35% to [Resistances|Cold Resistance]\n+23% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +29% 冰霜抗性\n[Lightning] Damage提高 30%\n+63 Accuracy Rating\n+9 [闪避值] Rating\n施法速度提高 24%\n+35% 冰霜抗性\n+23% 混沌抗性"
     },
     {
       "name": "Behemoth Dash (林奔者便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Treerunner Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f36ea8ace2/BootsDexInt03.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+142 to maximum Life\n+60 to maximum Mana\n+22% to [Resistances|Fire Resistance]\n+32% to [Resistances|Cold Resistance]\n40% reduced [Shock|Shock] duration on you"
+      "desc": "(附魔) +25% 火焰抗性\n(符文) +11% 混沌抗性\n移动速度提高 30%\n+142 最大生命\n+60 最大魔力\n+22% 火焰抗性\n+32% 冰霜抗性\nShock duration on you降低 40%\n(已腐化)"
     }
   ],
   "skills": [

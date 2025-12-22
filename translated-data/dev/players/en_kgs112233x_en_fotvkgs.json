@@ -13,7 +13,23 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+60 to maximum Life\n+34 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 28%\n(基底) Has 3 [Charm] Slots\n+60 最大生命\n+34 力量\n+38 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Combat Arm",
+      "baseType": "Combat Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) [Attack] Speed提高 7%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Sturdy Leg",
+      "baseType": "Sturdy Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 晕眩门槛提高 22%"
     },
     {
       "name": "Skull Medallion (日曜护身符)",
@@ -21,7 +37,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+92 to maximum [EnergyShield|Energy Shield]\n+28 to [Strength|Strength]\n+32 to [Intelligence|Intelligence]\n+16% to all [ElementalDamage|Elemental] [Resistances]\n32% increased Global [Defences]"
+      "desc": "(附魔) Allocates Hallowed\n(基底) +15 Spirit\n+92 最大能量护盾\n+28 力量\n+32 智慧\n+16% all Elemental [Resistances]\nGlobal [Defences]提高 32%"
     },
     {
       "name": "Damnation Knuckle (丰裕手套)",
@@ -29,7 +45,7 @@
       "baseType": "Opulent Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8882887a8e/GlovesInt04.png",
       "rarity": 2,
-      "desc": "+51 to maximum [EnergyShield|Energy Shield]\nAdds 7 to 17 [Physical|Physical] Damage to [Attack|Attacks]\n+124 to maximum Life\n41% increased [ESRechargeRate|Energy Shield Recharge Rate]\n60% increased effect of Socketed Items"
+      "desc": "(符文) [Attack] Speed提高 12%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 48%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 24%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n+51 最大能量护盾\n附加 7 - 17 物理伤害 to Attacks\n+124 最大生命\n能量护盾 Recharge Rate提高 41%\neffect of Socketed Items提高 60%"
     },
     {
       "name": "Apocalypse Keep (狼皮斗篷)",
@@ -37,7 +53,7 @@
       "baseType": "Wolfskin Mantle",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludFN0cjAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/79f27dfa2e/BodyIntStr02.png",
       "rarity": 2,
-      "desc": "+137 to [Armour|Armour]\n+43 to maximum [EnergyShield|Energy Shield]\n101% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+23 to [Intelligence|Intelligence]\n+31% to [Resistances|Cold Resistance]\n+37% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(附魔) 14% of Damage taken Recouped as Life\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+137 护甲\n+43 最大能量护盾\n护甲 and 能量护盾提高 101%\n+23 智慧\n+31% 冰霜抗性\n+37% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "Doom Grip (三相戒指)",
@@ -45,7 +61,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 56 [Lightning] damage to [Attack|Attacks]\n+116 to maximum Life\n+149 to maximum Mana\n+19% to all [ElementalDamage|Elemental] [Resistances]\n+18% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +9% all Elemental [Resistances]\n附加 1 - 56 Attacks\n+116 最大生命\n+149 最大魔力\n+19% all Elemental [Resistances]\n+18% 混沌抗性"
     },
     {
       "name": "Cataclysm Bite (Thunder Talisman)",
@@ -53,7 +69,7 @@
       "baseType": "Thunder Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvVm9sdGZhbmdUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0ab277d9d8/VoltfangTalisman.png",
       "rarity": 2,
-      "desc": "Adds 150 to 230 [Fire|Fire] Damage\nAdds 117 to 187 [Cold|Cold] Damage\n25% increased [Attack] Speed\n+5 to Level of all [Attack] Skills\nCauses 72% increased [Stun|Stun] Buildup"
+      "desc": "(符文) 附加 23 - 34 火焰伤害\n(符文) 附加 1 - 60 闪电伤害\n(符文) Rare or Unique Enemies提高 50%\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: +2% Maximum 火焰抗性\n(符文) Bonded: +2% Maximum 闪电抗性\n(基底) Magnitude of Shock you inflict提高 25%\n附加 150 - 230 火焰伤害\n附加 117 - 187 冰霜伤害\n[Attack] Speed提高 25%\n+5 Level of all [Attack] Skills\nCauses Stun Buildup提高 72%\n(已腐化)"
     },
     {
       "name": "Dusk March (丝克玛便鞋)",
@@ -61,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "+53 to maximum [EnergyShield|Energy Shield]\n84% increased [EnergyShield|Energy Shield]\n+21% to [Resistances|Lightning Resistance]\n+14% to [Resistances|Chaos Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 56%\n(符文) Bonded: +32 最大生命\n(符文) Bonded: +32 最大魔力\n+53 最大能量护盾\n能量护盾提高 84%\n+21% 闪电抗性\n+14% 混沌抗性\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Beast Salvation (先祖冠冕)",
@@ -69,7 +85,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+72 to maximum [EnergyShield|Energy Shield]\n99% increased [EnergyShield|Energy Shield]\n17% increased [ItemRarity|Rarity of Items] found\n+26 to [Intelligence|Intelligence]\n+36% to [Resistances|Fire Resistance]"
+      "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n+72 最大能量护盾\n能量护盾提高 99%\n物品稀有度提高 17%\n+26 智慧\n+36% 火焰抗性\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",

@@ -13,7 +13,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "20% increased [Chaos] Damage\n+84 to maximum Mana\n36% increased [ItemRarity|Rarity of Items] found\n+39% to [Resistances|Fire Resistance]"
+      "desc": "(基底) +28% 火焰抗性\n[Chaos] Damage提高 20%\n+84 最大魔力\n物品稀有度提高 36%\n+39% 火焰抗性"
     },
     {
       "name": "Kraken Gorget (碧蓝护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Azure Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQXp1cmVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e49b170ba2/AzureAmulet.png",
       "rarity": 2,
-      "desc": "15% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Spell|Spell] Skills\n+35% to [Resistances|Cold Resistance]\n28% increased Global [Defences]"
+      "desc": "(附魔) Allocates Conservative Casting\n(基底) 魔力回复速度提高 29%\n物品稀有度提高 15%\n+3 Level of all Spell Skills\n+35% 冰霜抗性\nGlobal [Defences]提高 28%"
     },
     {
       "name": "Victory Suit (飘逸之衣)",
@@ -29,7 +29,7 @@
       "baseType": "Flowing Raiment",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f868a6a214/BodyInt06.png",
       "rarity": 2,
-      "desc": "+95 to maximum [EnergyShield|Energy Shield]\n110% increased [EnergyShield|Energy Shield]\n+30% to [Resistances|Lightning Resistance]\n41% [FasterESRechargeStart|faster start of Energy Shield Recharge]\n33.7 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 魔力回复速度提高 40%\n+95 最大能量护盾\n能量护盾提高 110%\n+30% 闪电抗性\n41% faster start of 能量护盾 Recharge\n33.7 Life Regeneration per second\n(已腐化)"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -37,7 +37,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "75% increased [Evasion|Evasion] Rating\n29% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+10 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(附魔) Damage Penetrates 15% 火焰抗性\n(符文) effect of Arcane Surge on you提高 40%\n闪避值 Rating提高 75%\n暴击率提高 29%\n[Attack] Speed提高 5%\n+10 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "幻梦者之掌",
@@ -45,7 +45,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL09wZW5QYWxtT2ZUaGVEcmVhbWVyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fa5b4a4e00/OpenPalmOfTheDreamer.png",
       "rarity": 3,
-      "desc": "[Allies|Allies] in your [Presence|Presence] deal 17 to 28 added [Attack|Attack] [Chaos] Damage\n+9 to all [Attributes|Attributes]\n23% reduced [LightRadius|Light Radius]\n11% increased Skill Effect Duration\n[Gain] 27% of Damage as Extra [Chaos] Damage\nGrants effect of [UniqueShrineChaos|Dreaming Gloom Shrine]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\nAllies in your Presence deal 17 to 28 added Attack [Chaos] Damage\n+9 全属性\nLight Radius降低 23%\nSkill Effect Duration提高 11%\n[Gain] 27% of Damage as Extra [Chaos] Damage\nGrants effect of Dreaming Gloom Shrine\n(已腐化)"
     },
     {
       "name": "Horror Crest (卡马萨冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+72 to maximum [EnergyShield|Energy Shield]\n110% increased [EnergyShield|Energy Shield]\n+39 to maximum Life\n+21% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) [Exposure] Effect提高 25%\n(符文) Bonded: Magnitude of Non-Damaging Ailments you inflict提高 15%\n+72 最大能量护盾\n能量护盾提高 110%\n+39 最大生命\n+21% 冰霜抗性\n+35% 闪电抗性\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+41 to maximum Life\n+29 to [Strength|Strength]\n+30 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 21%\n(基底) Has 2 [Charm] Slots\n+41 最大生命\n+29 力量\n+30 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Rage Urge (沙誓鞋履)",
@@ -69,7 +69,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "+57 to maximum [EnergyShield|Energy Shield]\n50% increased [EnergyShield|Energy Shield]\n+40% to [Resistances|Cold Resistance]\n+32% to [Resistances|Lightning Resistance]\n12.4 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+57 最大能量护盾\n能量护盾提高 50%\n+40% 冰霜抗性\n+32% 闪电抗性\n12.4 Life Regeneration per second"
     },
     {
       "name": "Rage Band (金光戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "+60 to [Evasion] Rating\n+88 to maximum Mana\n16% increased [ItemRarity|Rarity of Items] found\n+30 to [Intelligence|Intelligence]\n+15% to all [ElementalDamage|Elemental] [Resistances]\n67% increased Mana Regeneration Rate"
+      "desc": "(基底) 物品稀有度提高 14%\n+60 [闪避值] Rating\n+88 最大魔力\n物品稀有度提高 16%\n+30 智慧\n+15% all Elemental [Resistances]\n魔力回复速度提高 67%"
     },
     {
       "name": "Oblivion Edge (调谐法杖)",
@@ -85,7 +85,7 @@
       "baseType": "Attuned Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDAzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e3b38f8f2b/Wand03.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Fire] Damage\n104% increased [Spell] Damage\n87% increased [Lightning] Damage\n+4 to Level of all [Spell|Spell] Skills"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n[Gain] 30% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 104%\n[Lightning] Damage提高 87%\n+4 Level of all Spell Skills\n(已腐化)"
     },
     {
       "name": "Kraken Spire (鸣谐长杖)",
@@ -93,7 +93,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 53% of Damage as Extra [Fire] Damage\n54% increased [Spell] Damage\n162% increased [Lightning] Damage\n+53 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n52% increased Cast Speed\nGain 20 Life per enemy killed"
+      "desc": "(符文) 暴击率 for Spells提高 48%\n(符文) Bonded: Critical Damage Bonus提高 50%\n[Gain] 53% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 54%\n[Lightning] Damage提高 162%\n+53 最大魔力\n+5 Level of all Spell Skills\n施法速度提高 52%\nGain 20 Life per enemy killed"
     }
   ],
   "skills": [
@@ -158,9 +158,9 @@
           "isSupport": true
         },
         {
-          "name": "闪电曝露",
-          "originalName": "Lightning Exposure",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaWdodG5pbmdFeHBvc3VyZVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1a75ff8edc/LightningExposureSupportGem.png",
+          "name": "Khatal's Rejuvenation",
+          "originalName": "Khatal's Rejuvenation",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0xpbmVhZ2VLaGF0YWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1006cc6339/LineageKhatal.png",
           "isSupport": true
         },
         {

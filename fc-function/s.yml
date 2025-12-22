@@ -1,0 +1,25 @@
+edition: 3.0.0
+name: poe2-translate-crawler-fc
+access: default
+
+resources:
+  poe2-translate-crawler:
+    component: fc3
+    props:
+      region: cn-hongkong
+      description: "流放之路2数据翻译爬虫"
+      functionName: poe2-translate-crawler
+      code: ./
+      handler: index.handler
+      runtime: nodejs16
+      memorySize: 2048
+      timeout: 600
+      environment:
+        variables:
+          MAX_RANK: '20'
+          NODE_ENV: 'production'
+      events:
+        - timer:
+            cronExpression: "0 0 2 * * *"
+            input: ""
+            enable: true

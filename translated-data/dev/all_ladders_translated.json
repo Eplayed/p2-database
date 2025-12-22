@@ -1,5 +1,5 @@
 {
-  "updateTime": "2025-12-22T06:47:13.289Z",
+  "updateTime": "2025-12-22T09:51:00.054Z",
   "classes": [
     {
       "name": "Pathfinder",
@@ -258,13 +258,13 @@
       },
       {
         "rank": 3,
-        "name": "西西里",
+        "name": "IDVagrantStory",
         "level": 97,
-        "account": "sicily1899-2636",
-        "originalAccount": "sicily1899-2636",
+        "account": "ID_VagrantStory-3294",
+        "originalAccount": "ID_VagrantStory-3294",
         "mainSkillIcon": "https://poe.ninja/poe2-assets/cdn/tree/passives/keystonechaosinoculation.png",
-        "detailPath": "players/en_sicily1899_cn_xxx.json",
-        "fileName": "en_sicily1899_cn_xxx.json"
+        "detailPath": "players/en_idxvagrant_en_idvagrants.json",
+        "fileName": "en_idxvagrant_en_idvagrants.json"
       }
     ],
     "Titan": [
@@ -368,6 +368,6 @@
     "baseItemsCount": 1009,
     "uniqueItemsCount": 390,
     "gemsCount": 760,
-    "translatedAt": "2025-12-22T06:47:13.291Z"
+    "translatedAt": "2025-12-22T09:51:00.055Z"
   }
 }

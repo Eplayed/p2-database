@@ -13,7 +13,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) +27% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Phoenix Twine (嵌板腰带)",
@@ -21,7 +21,7 @@
       "baseType": "Plate Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/510a304252/Belt05.png",
       "rarity": 2,
-      "desc": "+174 to maximum Life\n+117 to maximum Mana\n+42% to [Resistances|Cold Resistance]\n+26% to [Resistances|Chaos Resistance]\n28.4 Life Regeneration per second"
+      "desc": "(基底) +110 [护甲]\n(基底) Has 3 [Charm] Slots\n+174 最大生命\n+117 最大魔力\n+42% 冰霜抗性\n+26% 混沌抗性\n28.4 Life Regeneration per second"
     },
     {
       "name": "Pandemonium Claw (华丽护手)",
@@ -29,7 +29,7 @@
       "baseType": "Ornate Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/041d8df186/GlovesStr04.png",
       "rarity": 2,
-      "desc": "71% increased [Armour|Armour]\n+94 to maximum Life\n18% increased [CriticalDamageBonus|Critical Damage Bonus]\n+40% to [Resistances|Fire Resistance]\n+23% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲提高 71%\n+94 最大生命\nCritical Damage Bonus提高 18%\n+40% 火焰抗性\n+23% 混沌抗性"
     },
     {
       "name": "Corruption Spell (预兆短杖)",
@@ -37,7 +37,7 @@
       "baseType": "Omen Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d2cc9f0ac1/Sceptre04.png",
       "rarity": 2,
-      "desc": "89% increased [Spirit|Spirit]\n+38 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 17 to 28 added [Attack|Attack] [Cold|Cold] Damage\n[Allies|Allies] in your [Presence|Presence] Regenerate 29.6 Life per second\n73% increased [Presence|Presence] Area of Effect"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\nSpirit提高 89%\n+38 最大魔力\nAllies in your Presence deal 17 to 28 added Attack 冰霜伤害\nAllies in your Presence Regenerate 29.6 Life per second\nPresence Area of Effect提高 73%"
     },
     {
       "name": "Honour Cloak (华丽战铠)",
@@ -45,7 +45,7 @@
       "baseType": "Ornate Plate",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/9751abcb6d/BodyStr06.png",
       "rarity": 2,
-      "desc": "133% increased [Armour|Armour]\n+250 to maximum Life\n+38% to [Resistances|Fire Resistance]\n+18% to [Resistances|Chaos Resistance]\n+43% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Regenerate 2.15% of 最大生命 per second\n护甲提高 133%\n+250 最大生命\n+38% 火焰抗性\n+18% 混沌抗性\n+43% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Sorrow Hunger (Maji Talisman)",
@@ -53,7 +53,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "150% increased [Physical] Damage\nAdds 27 to 54 [Physical|Physical] Damage\n35% reduced [Attributes|Attribute] Requirements\n+5 to Level of all [Attack] Skills\n[Gain] 27% of Damage as Extra [Physical] Damage\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Rare or Unique Enemies提高 50%\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(基底) +11 Maximum [Rage]\n[Physical] Damage提高 150%\n附加 27 - 54 物理伤害\nAttribute Requirements降低 35%\n+5 Level of all [Attack] Skills\n[Gain] 27% of Damage as Extra [Physical] Damage\n24% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "邪眼之冠",
@@ -61,7 +61,7 @@
       "baseType": "Vermeil Circlet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ3Jvd25PZkV5ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/27fa23fd11/CrownOfEyes.png",
       "rarity": 3,
-      "desc": "119% increased [EnergyShield|Energy Shield]\n+200 to [Accuracy|Accuracy] Rating\n+13 to all [Attributes|Attributes]\n-10% to [Resistances|Fire Resistance]\nIncreases and Reductions to [Spell] damage also apply to [Attack|Attacks]"
+      "desc": "(符文) Experience gain提高 2%\n(符文) +4 Maximum [Rage]\n(符文) Bonded: +10% all Elemental [Resistances]\n能量护盾提高 119%\n+200 Accuracy Rating\n+13 全属性\n-10% to 火焰抗性\nIncreases and Reductions to Attacks\n(已腐化)"
     },
     {
       "name": "Corruption Knuckle (锻铁戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Iron Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0lyb25SaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/155a44583e/IronRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 26 [Physical|Physical] Damage to [Attack|Attacks]\n+76 to maximum Life\n+169 to maximum Mana\n+43% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 附加 1 - 4 物理伤害 to Attacks\n附加 14 - 26 物理伤害 to Attacks\n+76 最大生命\n+169 最大魔力\n+43% 冰霜抗性\n+35% 闪电抗性"
     },
     {
       "name": "Armageddon Span (塔萨里奥胫甲)",
@@ -77,7 +77,7 @@
       "baseType": "Tasalian Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c3e83f5cc/BootsStr06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n46% increased [Armour|Armour]\n+23% to [Resistances|Cold Resistance]\n+26% to [Resistances|Lightning Resistance]\n+38% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n护甲提高 46%\n+23% 冰霜抗性\n+26% 闪电抗性\n+38% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "命运之抗争",
@@ -85,7 +85,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "10% increased maximum Life\n+12 to [Strength|Strength]\n34% increased Mana Regeneration Rate\nRecover 30% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Dangerous Blossom\n(基底) +10 敏捷\n最大生命提高 10%\n+12 力量\n魔力回复速度提高 34%\nRecover 30% of Missing Life before being Hit by an Enemy"
     }
   ],
   "skills": [

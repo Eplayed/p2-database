@@ -13,7 +13,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "42% increased [EnergyShield|Energy Shield]\n+166 to maximum Life\n+33 to maximum Mana\n15% increased [ItemRarity|Rarity of Items] found\n+41% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 42%\n+166 最大生命\n+33 最大魔力\n物品稀有度提高 15%\n+41% 火焰抗性\n+45% 闪电抗性"
     },
     {
       "name": "Spirit Hold (瓦尔手套)",
@@ -21,7 +21,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "Adds 19 to 26 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 26 to 41 [Fire] damage to [Attack|Attacks]\n26% increased [CriticalDamageBonus|Critical Damage Bonus]\n+25 to [Intelligence|Intelligence]\n60% increased effect of Socketed Items"
+      "desc": "(符文) [Attack] Speed提高 12%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n附加 19 - 26 物理伤害 to Attacks\n附加 26 - 41 Attacks\nCritical Damage Bonus提高 26%\n+25 智慧\neffect of Socketed Items提高 60%"
     },
     {
       "name": "Maelström Finger (三相戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 15 to 24 [Physical|Physical] Damage to [Attack|Attacks]\n34% increased [ItemRarity|Rarity of Items] found\n+18% to all [ElementalDamage|Elemental] [Resistances]\n[ManaLeech|Leech] 6.8% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +12% all Elemental [Resistances]\n附加 15 - 24 物理伤害 to Attacks\n物品稀有度提高 34%\n+18% all Elemental [Resistances]\nLeech 6.8% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Kalandra's Touch",
@@ -45,7 +45,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "52% increased maximum [EnergyShield|Energy Shield]\n+112 to maximum Life\n30% increased [CriticalDamageBonus|Critical Damage Bonus]\n26% increased Global [Defences]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) 物品稀有度提高 20%\n最大能量护盾提高 52%\n+112 最大生命\nCritical Damage Bonus提高 30%\nGlobal [Defences]提高 26%"
     },
     {
       "name": "Brimstone Salvation (滑布外衣)",
@@ -53,7 +53,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+105 to [Evasion] Rating\n+39 to maximum [EnergyShield|Energy Shield]\n+198 to maximum Life\n+38% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\nGain [Deflect|Deflection Rating] equal to 25% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+105 [闪避值] Rating\n+39 最大能量护盾\n+198 最大生命\n+38% 火焰抗性\n+34% 冰霜抗性\nGain Deflection Rating equal to 25% of 闪避值 Rating"
     },
     {
       "name": "Woe Nails (贯心箭袋)",
@@ -61,7 +61,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 2 to 61 [Lightning] damage to [Attack|Attacks]\n49% increased Damage with Bow Skills\n33% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage\n15% increased [Attack] Speed"
+      "desc": "(基底) 暴击率 for Attacks提高 28%\n附加 2 - 61 Attacks\nDamage with Bow Skills提高 49%\nCritical Damage Bonus for [Attack] Damage提高 33%\n[Attack] Speed提高 15%"
     },
     {
       "name": "Woe Trail (龙皮长靴)",
@@ -69,7 +69,7 @@
       "baseType": "Drakeskin Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8da0bb2ea6/BootsDex06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n35% increased [Evasion|Evasion] Rating\n+145 to maximum Life\n+38% to [Resistances|Cold Resistance]\n+39% to [Resistances|Lightning Resistance]\n+72 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n闪避值 Rating提高 35%\n+145 最大生命\n+38% 冰霜抗性\n+39% 闪电抗性\n+72 晕眩门槛"
     },
     {
       "name": "猎首",
@@ -77,7 +77,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+40 to maximum Life\n+31 to [Strength|Strength]\n+32 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 29%\n(基底) Has 3 [Charm] Slots\n+40 最大生命\n+31 力量\n+32 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Phoenix Stinger (双子之弓)",
@@ -85,7 +85,7 @@
       "baseType": "Gemini Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0a606586d/Bow06.png",
       "rarity": 2,
-      "desc": "Adds 34 to 64 [Physical|Physical] Damage\n[Gain] 17% of Damage as Extra [Cold] Damage\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +50% Surpassing chance to fire an additional Arrow\n附加 34 - 64 物理伤害\n[Gain] 17% of Damage as Extra [Cold] Damage\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon"
     }
   ],
   "skills": [

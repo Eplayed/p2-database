@@ -13,7 +13,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(已腐化)"
     },
     {
       "name": "Ventor's Gamble",
@@ -21,7 +21,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9WZW50b3JzR2FtYmxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc113c96d9/VentorsGamble.png",
       "rarity": 3,
-      "desc": "+68 to maximum Life\n+20 to [Spirit|Spirit]\n21% increased [ItemRarity|Rarity of Items] found\n+3% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 7%\n+68 最大生命\n+20 Spirit\n物品稀有度提高 21%\n+3% 火焰抗性\n+38% 冰霜抗性\n+32% 闪电抗性"
     },
     {
       "name": "Rage Ward (邪恶束衣)",
@@ -29,7 +29,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+94 to maximum [EnergyShield|Energy Shield]\n+35% to [Resistances|Fire Resistance]\n+37% to [Resistances|Lightning Resistance]\n24.1 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+94 最大能量护盾\n+35% 火焰抗性\n+37% 闪电抗性\n24.1 Life Regeneration per second"
     },
     {
       "name": "Torment Choker (海玉护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Lapis Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTGFwaXNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/572eeaf30b/LapisAmulet.png",
       "rarity": 2,
-      "desc": "+46 to [Spirit|Spirit]\n16% increased [ItemRarity|Rarity of Items] found\n+28 to [Dexterity|Dexterity]\n30% increased Global [Defences]"
+      "desc": "(附魔) Allocates Warlord Leader\n(基底) +14 智慧\n+46 Spirit\n物品稀有度提高 16%\n+28 敏捷\nGlobal [Defences]提高 30%"
     },
     {
       "name": "奇思妙想",
@@ -45,7 +45,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "13% increased [Charm] Charges gained\n9% reduced [Charm] Charges used\n31% increased bonuses gained from left Equipped Ring\n26% increased bonuses gained from right Equipped Ring"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 13%\n[Charm] Charges used降低 9%\nbonuses gained from left Equipped Ring提高 31%\nbonuses gained from right Equipped Ring提高 26%\n(已腐化)"
     },
     {
       "name": "Cataclysm Salvation (卡马萨冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "114% increased [EnergyShield|Energy Shield]\n+46 to maximum Life\n15% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Minion|Minion] Skills\n+22% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 114%\n+46 最大生命\n物品稀有度提高 15%\n+2 Level of all Minion Skills\n+22% 火焰抗性"
     },
     {
       "name": "Corruption Paw (丰裕手套)",
@@ -61,7 +61,7 @@
       "baseType": "Opulent Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8882887a8e/GlovesInt04.png",
       "rarity": 2,
-      "desc": "+50 to maximum [EnergyShield|Energy Shield]\n73% increased [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+28 to [Dexterity|Dexterity]\n+30 to [Intelligence|Intelligence]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+50 最大能量护盾\n能量护盾提高 73%\n物品稀有度提高 18%\n+28 敏捷\n+30 智慧"
     },
     {
       "name": "Damnation Gnarl (罪孽短杖)",
@@ -69,7 +69,7 @@
       "baseType": "Rattling Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTAxIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2dc4b05095/Sceptre01.png",
       "rarity": 2,
-      "desc": "39% increased [Spirit|Spirit]\n[Allies|Allies] in your [Presence|Presence] deal 15 to 21 added [Attack|Attack] [Fire|Fire] Damage\n[Allies] in your [Presence] have 20% increased [CriticalDamageBonus|Critical Damage Bonus]\n68% increased [Presence|Presence] Area of Effect"
+      "desc": "(符文) Allies in your Presence have 暴击率提高 14%\n(符文) Bonded: 暴击率 while Shapeshifted提高 25%\nSpirit提高 39%\nAllies in your Presence deal 15 to 21 added Attack 火焰伤害\nCritical Damage Bonus\nPresence Area of Effect提高 68%"
     },
     {
       "name": "Ventor's Gamble",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9WZW50b3JzR2FtYmxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc113c96d9/VentorsGamble.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+20 to [Spirit|Spirit]\n22% increased [ItemRarity|Rarity of Items] found\n+24% to [Resistances|Fire Resistance]\n-2% to [Resistances|Cold Resistance]\n+26% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 8%\n+58 最大生命\n+20 Spirit\n物品稀有度提高 22%\n+24% 火焰抗性\n-2% to 冰霜抗性\n+26% 闪电抗性"
     },
     {
       "name": "Rapture Anthem (塔萨里奥法器)",
@@ -85,7 +85,7 @@
       "baseType": "Tasalian Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "46% increased [EnergyShield|Energy Shield]\n74% increased [Spell] Damage\n+10 to maximum Mana\n+34% to [Resistances|Cold Resistance]\n+21% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 46%\n[Spell] Damage提高 74%\n+10 最大魔力\n+34% 冰霜抗性\n+21% 闪电抗性"
     }
   ],
   "skills": [

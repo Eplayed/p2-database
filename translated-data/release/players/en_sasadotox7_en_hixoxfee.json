@@ -13,7 +13,7 @@
       "baseType": "Crown Mace",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQmFzZXR5cGVzLzFITWFjZTA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3f1f11ed25/1HMace06.png",
       "rarity": 2,
-      "desc": "Adds 18 to 29 [Physical|Physical] Damage\n+5 to Level of all [Melee|Melee] Skills\n[Gain] 18% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 18 - 29 物理伤害\n+5 Level of all Melee Skills\n[Gain] 18% of Damage as Extra [Physical] Damage"
     },
     {
       "name": "Rune Touch (尖刺护腕)",
@@ -21,7 +21,7 @@
       "baseType": "Spiked Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b6a93d2794/GlovesDex05.png",
       "rarity": 2,
-      "desc": "Adds 11 to 14 [Fire] damage to [Attack|Attacks]\n+140 to maximum Life\n+113 to maximum Mana\n+2 to Level of all [Melee|Melee] Skills\n+32% to [Resistances|Fire Resistance]\n[ManaLeech|Leech] 4.51% of [Physical] [Attack] Damage as Mana"
+      "desc": "(符文) +11% 混沌抗性\n附加 11 - 14 Attacks\n+140 最大生命\n+113 最大魔力\n+2 Level of all Melee Skills\n+32% 火焰抗性\nLeech 4.51% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Entropy Snare (亚麻腰带)",
@@ -29,7 +29,7 @@
       "baseType": "Linen Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwMiIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/45c1e6bfa2/Belt02.png",
       "rarity": 2,
-      "desc": "+174 to maximum Life\n+107 to maximum Mana\n+34 to [Strength|Strength]\n+27% to [Resistances|Cold Resistance]\n+24% to [Resistances|Chaos Resistance]\n138 to 185 [Physical|Physical] [Thorns|Thorns] damage"
+      "desc": "(基底) Mana Recovery from Flasks提高 30%\n(基底) Has 2 [Charm] Slots\n+174 最大生命\n+107 最大魔力\n+34 力量\n+27% 冰霜抗性\n+24% 混沌抗性\n138 to 185 Physical Thorns damage"
     },
     {
       "name": "Honour Wrap (督军胸甲)",
@@ -37,7 +37,7 @@
       "baseType": "Warlord Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/23e350525b/BodyStr10.png",
       "rarity": 2,
-      "desc": "+26% to [Resistances|Cold Resistance]\n+45% to [Resistances|Lightning Resistance]\n52% reduced [Poison|Poison] Duration on you\nAllocates [attributes115|Crystallised Immunities]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +22% 的 护甲 也套用于 元素伤害\n+26% 冰霜抗性\n+45% 闪电抗性\nPoison Duration on you降低 52%\nAllocates Crystallised Immunities"
     },
     {
       "name": "Ghoul Track (黑钢战靴)",
@@ -45,7 +45,7 @@
       "baseType": "Blacksteel Sabatons",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHJEZXgwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/865c3e428d/BootsStrDex04.png",
       "rarity": 2,
-      "desc": "+63 to [Armour|Armour]\n+57 to [Evasion] Rating\n+107 to maximum Life\n+28% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +22% 混沌抗性\n+63 护甲\n+57 [闪避值] Rating\n+107 最大生命\n+28% 火焰抗性\n+35% 冰霜抗性\n+39% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Soul Nail (金光戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 22 to 33 [Fire] damage to [Attack|Attacks]\n+128 to maximum Life\n17% increased [ItemRarity|Rarity of Items] found\n+38% to [Resistances|Fire Resistance]\n+21% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 10%\n附加 22 - 33 Attacks\n+128 最大生命\n物品稀有度提高 17%\n+38% 火焰抗性\n+21% 闪电抗性"
     },
     {
       "name": "Rune Knot (金光戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "27% increased [Chaos] Damage\n+128 to maximum Life\n15% increased [ItemRarity|Rarity of Items] found\n+32% to [Resistances|Cold Resistance]\n[LifeLeech|Leech] 8.49% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) 物品稀有度提高 14%\n[Chaos] Damage提高 27%\n+128 最大生命\n物品稀有度提高 15%\n+32% 冰霜抗性\nLeech 8.49% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "收缩指令",
@@ -69,7 +69,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+86 to maximum Life\n+12 to all [Attributes|Attributes]\n10.3 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(符文) +22% 混沌抗性\n+86 最大生命\n+12 全属性\n10.3 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded\n(已腐化)"
     },
     {
       "name": "Gloom Sanctuary (塔赫亚塔盾)",
@@ -77,7 +77,7 @@
       "baseType": "Tawhoan Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMTAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8efda96f5b/Tower10.png",
       "rarity": 2,
-      "desc": "+206 to [Armour|Armour]\n6% additional [Physical] Damage Reduction\n+33% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+206 护甲\n6% additional [Physical] Damage Reduction\n+33% 火焰抗性\n+35% 闪电抗性"
     },
     {
       "name": "Rift Collar (血岩护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Bloodstone Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQmxvb2RzdG9uZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f8bbf74c8e/BloodstoneAmulet.png",
       "rarity": 2,
-      "desc": "55% increased [Evasion|Evasion Rating]\n+44 to [Spirit|Spirit]\n+3 to Level of all [Melee|Melee] Skills\n+40% to [Resistances|Lightning Resistance]\n27% increased Global [Defences]"
+      "desc": "(附魔) Allocates Greatest Defence\n(基底) +36 最大生命\n闪避值 Rating提高 55%\n+44 Spirit\n+3 Level of all Melee Skills\n+40% 闪电抗性\nGlobal [Defences]提高 27%"
     }
   ],
   "skills": [

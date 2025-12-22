@@ -13,7 +13,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+52 to maximum Life\n+21 to [Strength|Strength]\n+21 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) 最大能量护盾提高 19%\n(基底) 晕眩门槛提高 24%\n(基底) Has 2 [Charm] Slots\n+52 最大生命\n+21 力量\n+21 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Rage Gyre (蓝玉戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 15 to 26 [Physical|Physical] Damage to [Attack|Attacks]\n+170 to maximum Mana\n35% increased [ItemRarity|Rarity of Items] found\n[LifeLeech|Leech] 7.46% of [Physical] [Attack] Damage as Life\n[ManaLeech|Leech] 6.54% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +28% 冰霜抗性\n附加 15 - 26 物理伤害 to Attacks\n+170 最大魔力\n物品稀有度提高 35%\nLeech 7.46% of [Physical] [Attack] Damage as Life\nLeech 6.54% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Lioneye's Glare",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1VuaXF1ZXMvTGlvbmV5ZXNHbGFyZSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c11ee6f9c/LioneyesGlare.png",
       "rarity": 3,
-      "desc": "240% increased [Physical] Damage\n+420 to [Accuracy|Accuracy] Rating\n10% increased [Attack] Speed\n+21 to [Dexterity|Dexterity]\n+2 metres to Dodge Roll distance if you haven't Dodge Rolled [Recently]\n-1 metre to Dodge Roll distance if you've Dodge Rolled [Recently]\nBarrageable [Attack|Attacks] with this Bow [Repeat] +2 times if no enemies are in your [Presence|Presence]"
+      "desc": "(附魔) Bow Attacks fire an additional Arrow\n(符文) +110 Accuracy Rating\n(符文) Bow Attacks fire an additional Arrow\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: Attacks have +1% 暴击率\n[Physical] Damage提高 240%\n+420 Accuracy Rating\n[Attack] Speed提高 10%\n+21 敏捷\n+2 metres to Dodge Roll distance if you haven't Dodge Rolled [Recently]\n-1 metre to Dodge Roll distance if you've Dodge Rolled [Recently]\nBarrageable Attacks with this Bow Presence\n(已腐化)"
     },
     {
       "name": "Armageddon Corona (先祖冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+67 to maximum [EnergyShield|Energy Shield]\n38% increased [EnergyShield|Energy Shield]\n+35 to maximum Life\n18% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Fire Resistance]\n+26% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+67 最大能量护盾\n能量护盾提高 38%\n+35 最大生命\n物品稀有度提高 18%\n+36% 火焰抗性\n+26% 闪电抗性"
     },
     {
       "name": "Hate League (丝克玛便鞋)",
@@ -45,7 +45,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "114% increased [EnergyShield|Energy Shield]\n+38% to [Resistances|Fire Resistance]\n+28% to [Resistances|Cold Resistance]\n+42% to [Resistances|Lightning Resistance]\n+91 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 114%\n+38% 火焰抗性\n+28% 冰霜抗性\n+42% 闪电抗性\n+91 晕眩门槛"
     },
     {
       "name": "精华收割器",
@@ -53,7 +53,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "68% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 47 [Lightning] damage to [Attack|Attacks]\n+17 to [Intelligence|Intelligence]\n+26% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(附魔) Damage Penetrates 15% 闪电抗性\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n能量护盾提高 68%\n附加 1 - 47 Attacks\n+17 智慧\n+26% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     },
     {
       "name": "Victory Veil (邪恶束衣)",
@@ -61,7 +61,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "79% increased [EnergyShield|Energy Shield]\n+52 to [Spirit|Spirit]\n+33% to [Resistances|Fire Resistance]\n+41% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 79%\n+52 Spirit\n+33% 火焰抗性\n+41% 冰霜抗性\n+43% 闪电抗性"
     },
     {
       "name": "Morbid Scarab (帝金护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "57% increased maximum [EnergyShield|Energy Shield]\n16% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Projectile] Skills\n+22% to [Resistances|Cold Resistance]\n36% increased Global [Defences]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) 物品稀有度提高 17%\n最大能量护盾提高 57%\n物品稀有度提高 16%\n+2 Level of all [Projectile] Skills\n+22% 冰霜抗性\nGlobal [Defences]提高 36%"
     },
     {
       "name": "Cadiro's Gambit",
@@ -77,7 +77,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9VbmlxdWVzL1BlcmFuZHVzVHVybnN0aWxlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/49f9f76fa9/PerandusTurnstile.png",
       "rarity": 3,
-      "desc": "Each Arrow fired is a [UniqueArrowModifierChain|Crescendo], [UniqueArrowModifierSplit|Splinter], [UniqueArrowModifierPierceReturn|Reversing], [UniqueArrowModifierCrit|Diamond], [UniqueArrowModifierRarity|Covetous], or [UniqueArrowModifierStun|Blunt] Arrow"
+      "desc": "(附魔) Projectiles have 17% chance to [Chain] an additional time from terrain\n(基底) [Attack] Speed提高 9%\nEach Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow\n(已腐化)"
     },
     {
       "name": "库勒马克之握",
@@ -85,7 +85,7 @@
       "baseType": "Abyssal Signet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9Ub2tlbk9mUGFzc2FnZTA1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/ccd3997a06/TokenOfPassage05.png",
       "rarity": 3,
-      "desc": "[Gain] 12% of Damage as Extra [Lightning] Damage\n38% increased maximum [EnergyShield|Energy Shield]\n32% increased [Critical|Critical Hit] Chance\n26% reduced [Presence|Presence] Area of Effect\n26% reduced [LightRadius|Light Radius]\nYou and [Allies|Allies] in your [Presence|Presence] have 8% increased [Attack] Speed"
+      "desc": "(基底) Inflict Abyssal Wasting on Hit\n[Gain] 12% of Damage as Extra [Lightning] Damage\n最大能量护盾提高 38%\n暴击率提高 32%\nPresence Area of Effect降低 26%\nLight Radius降低 26%\nYou and Allies in your Presence have [Attack] Speed提高 8%"
     }
   ],
   "skills": [

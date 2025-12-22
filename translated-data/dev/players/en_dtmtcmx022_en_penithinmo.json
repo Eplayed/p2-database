@@ -13,15 +13,7 @@
       "baseType": "Gemini Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0a606586d/Bow06.png",
       "rarity": 2,
-      "desc": "139% increased [Physical] Damage\nAdds 23 to 40 [Physical|Physical] Damage\n+460 to [Accuracy|Accuracy] Rating\n+3.69% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\n25% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
-    },
-    {
-      "name": "Dusk Guardian (沙漠帽)",
-      "originalName": "Dusk Guardian",
-      "baseType": "Desert Cap",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXgwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e2bcc2e1c1/HelmetDex04.png",
-      "rarity": 2,
-      "desc": "+116 to [Evasion] Rating\n140% increased [Evasion|Evasion] Rating\n+43 to maximum Life\n+30 to [Dexterity|Dexterity]\n+27% to [Resistances|Fire Resistance]"
+      "desc": "(符文) +110 Accuracy Rating\n(符文) Bow Attacks fire an additional Arrow\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: Attacks have +1% 暴击率\n(基底) +50% Surpassing chance to fire an additional Arrow\n[Physical] Damage提高 139%\n附加 23 - 40 物理伤害\n+460 Accuracy Rating\n+3.69% 暴击率\n+3 Level of all [Attack] Skills\n25% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Empyrean Brand (贯心箭袋)",
@@ -29,7 +21,15 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 3 to 52 [Lightning] damage to [Attack|Attacks]\n48% increased Damage with Bow Skills\n39% increased [Projectile] Speed\n+2 to Level of all [Projectile] Skills\n16% increased [Attack] Speed"
+      "desc": "(基底) 暴击率 for Attacks提高 21%\n附加 3 - 52 Attacks\nDamage with Bow Skills提高 48%\n[Projectile] Speed提高 39%\n+2 Level of all [Projectile] Skills\n[Attack] Speed提高 16%"
+    },
+    {
+      "name": "Honour Corona (沙漠帽)",
+      "originalName": "Honour Corona",
+      "baseType": "Desert Cap",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXgwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e2bcc2e1c1/HelmetDex04.png",
+      "rarity": 2,
+      "desc": "(符文) +1 Item 闪避值 Rating on Equipped Helmet\n+171 [闪避值] Rating\n闪避值 Rating提高 135%\n+32 最大魔力\n+31% 火焰抗性\nGain Deflection Rating equal to 22% of 闪避值 Rating"
     },
     {
       "name": "Wrath Jack (邪恶束衣)",
@@ -37,7 +37,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+74 to maximum [EnergyShield|Energy Shield]\n103% increased [EnergyShield|Energy Shield]\n+33 to [Intelligence|Intelligence]\n+35% to [Resistances|Fire Resistance]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+74 最大能量护盾\n能量护盾提高 103%\n+33 智慧\n+35% 火焰抗性\n+33% 闪电抗性"
     },
     {
       "name": "Eagle Rosary (日曜护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+49 to [Spirit|Spirit]\n+30 to [Dexterity|Dexterity]\n+15% to all [ElementalDamage|Elemental] [Resistances]\n33% increased Global [Defences]"
+      "desc": "(附魔) Allocates Ancient Aegis\n(基底) +15 Spirit\n+49 Spirit\n+30 敏捷\n+15% all Elemental [Resistances]\nGlobal [Defences]提高 33%"
     },
     {
       "name": "Nemesis Hoof (龙皮长靴)",
@@ -53,7 +53,7 @@
       "baseType": "Drakeskin Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8da0bb2ea6/BootsDex06.png",
       "rarity": 2,
-      "desc": "+124 to [Evasion] Rating\n98% increased [Evasion|Evasion] Rating\n18% increased [ItemRarity|Rarity of Items] found\n+33% to [Resistances|Cold Resistance]\nGain [Deflect|Deflection Rating] equal to 21% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+124 [闪避值] Rating\n闪避值 Rating提高 98%\n物品稀有度提高 18%\n+33% 冰霜抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating"
     },
     {
       "name": "Loath Spiral (翡翠戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Emerald Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0VtZXJhbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/26e8b227bb/EmeraldRing.png",
       "rarity": 2,
-      "desc": "Adds 3 to 69 [Lightning] damage to [Attack|Attacks]\n24% increased [Fire] Damage\n36% increased [Lightning] Damage\n+19% to all [ElementalDamage|Elemental] [Resistances]\n+44% to [Resistances|Lightning Resistance]\n+23% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +127 Accuracy Rating\n附加 3 - 69 Attacks\n[Fire] Damage提高 24%\n[Lightning] Damage提高 36%\n+19% all Elemental [Resistances]\n+44% 闪电抗性\n+23% 混沌抗性"
     },
     {
       "name": "Vortex Nails (潜行护腕)",
@@ -69,7 +69,7 @@
       "baseType": "Stalking Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7a62d10b16/GlovesDex02.png",
       "rarity": 2,
-      "desc": "+124 to [Evasion] Rating\n128% increased [Evasion|Evasion] Rating\n+31 to maximum Life\n+35% to [Resistances|Cold Resistance]\nGain [Deflect|Deflection Rating] equal to 15% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+124 [闪避值] Rating\n闪避值 Rating提高 128%\n+31 最大生命\n+35% 冰霜抗性\nGain Deflection Rating equal to 15% of 闪避值 Rating"
     },
     {
       "name": "Carrion Spiral (金光戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 7 to 17 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 49 [Lightning] damage to [Attack|Attacks]\n37% increased [ItemRarity|Rarity of Items] found\n24% increased Cast Speed\n+19% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 物品稀有度提高 14%\n附加 7 - 17 物理伤害 to Attacks\n附加 2 - 49 Attacks\n物品稀有度提高 37%\n施法速度提高 24%\n+19% all Elemental [Resistances]"
     },
     {
       "name": "猎首",
@@ -85,7 +85,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+26 to [Strength|Strength]\n+32 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 22%\n(基底) Has 2 [Charm] Slots\n+58 最大生命\n+26 力量\n+32 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     }
   ],
   "skills": [

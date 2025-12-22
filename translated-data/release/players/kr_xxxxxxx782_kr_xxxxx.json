@@ -13,7 +13,7 @@
       "baseType": "Luxurious Slippers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e1c49a9d6d/BootsInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n100% increased [EnergyShield|Energy Shield]\n+45% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]\n+17% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 100%\n+45% 冰霜抗性\n+36% 闪电抗性\n+17% 混沌抗性\n(已腐化)"
     },
     {
       "name": "卫道之袍",
@@ -21,7 +21,7 @@
       "baseType": "Havoc Raiment",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0Nsb2FrT2ZEZWZpYW5jZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a7be13f435/CloakOfDefiance.png",
       "rarity": 3,
-      "desc": "100% increased [EnergyShield|Energy Shield]\n+143 to maximum Mana\n92% increased Mana Regeneration Rate\n50% of Damage is taken from Mana before Life"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) 15% of Damage is taken from Mana before Life\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: 8% of Maximum Life Converted to 能量护盾\n能量护盾提高 100%\n+143 最大魔力\n魔力回复速度提高 92%\n50% of Damage is taken from Mana before Life"
     },
     {
       "name": "奇思妙想",
@@ -29,7 +29,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "18% increased [Charm] Charges gained\n9% reduced [Charm] Charges used\n26% increased bonuses gained from left Equipped Ring\n20% increased bonuses gained from right Equipped Ring"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 18%\n[Charm] Charges used降低 9%\nbonuses gained from left Equipped Ring提高 26%\nbonuses gained from right Equipped Ring提高 20%\n(已腐化)"
     },
     {
       "name": "Sol Loop (裂隙戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 16 to 31 [Fire] damage to [Attack|Attacks]\n+228 to maximum Mana\n8% increased maximum Mana\n+31% to [Resistances|Fire Resistance]\n+24% to [Resistances|Chaos Resistance]\n89% increased Mana Regeneration Rate"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 16 - 31 Attacks\n+228 最大魔力\n最大魔力提高 8%\n+31% 火焰抗性\n+24% 混沌抗性\n魔力回复速度提高 89%"
     },
     {
       "name": "Kraken Peak (先祖冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+59 to maximum [EnergyShield|Energy Shield]\n95% increased [EnergyShield|Energy Shield]\n+127 to maximum Mana\n+40% to [Resistances|Fire Resistance]\n+40% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +1 最大魔力 per 2 Item 能量护盾 on [Equipped] Helmet\n+59 最大能量护盾\n能量护盾提高 95%\n+127 最大魔力\n+40% 火焰抗性\n+40% 冰霜抗性\n+38% 闪电抗性"
     },
     {
       "name": "Plague Hold (丰裕手套)",
@@ -53,7 +53,7 @@
       "baseType": "Opulent Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8882887a8e/GlovesInt04.png",
       "rarity": 2,
-      "desc": "65% increased [EnergyShield|Energy Shield]\nAdds 17 to 25 [Physical|Physical] Damage to [Attack|Attacks]\n+113 to maximum Mana\n+35% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]\n+22% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n能量护盾提高 65%\n附加 17 - 25 物理伤害 to Attacks\n+113 最大魔力\n+35% 冰霜抗性\n+36% 闪电抗性\n+22% 混沌抗性"
     },
     {
       "name": "Rapture Spiral (裂隙戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 9 to 17 [Fire] damage to [Attack|Attacks]\n+242 to maximum Mana\n8% increased maximum Mana\n+30 to [Intelligence|Intelligence]\n+42% to [Resistances|Fire Resistance]\n92% increased Mana Regeneration Rate"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 9 - 17 Attacks\n+242 最大魔力\n最大魔力提高 8%\n+30 智慧\n+42% 火焰抗性\n魔力回复速度提高 92%"
     },
     {
       "name": "Brimstone Medallion (碧蓝护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Azure Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQXp1cmVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e49b170ba2/AzureAmulet.png",
       "rarity": 2,
-      "desc": "32% increased [Armour]\n+118 to maximum Mana\n+44 to [Spirit|Spirit]\n+2 to Level of all [Spell|Spell] Skills\n+30 to [Dexterity|Dexterity]\n63% increased Mana Regeneration Rate"
+      "desc": "(附魔) Allocates Lightning Rod\n(基底) 魔力回复速度提高 32%\n[护甲]提高 32%\n+118 最大魔力\n+44 Spirit\n+2 Level of all Spell Skills\n+30 敏捷\n魔力回复速度提高 63%"
     },
     {
       "name": "Spirit Pillar (鸣谐长杖)",
@@ -77,7 +77,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 58% of Damage as Extra [Fire] Damage\n[Gain] 57% of Damage as Extra [Cold] Damage\n+328 to maximum Mana\n+7 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n77% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) [Spell] Damage提高 60%\n(符文) Bonded: Break Critical Hit with Spells equal to 24% of 物理伤害 dealt\n[Gain] 58% of Damage as Extra [Fire] Damage\n[Gain] 57% of Damage as Extra [Cold] Damage\n+328 最大魔力\n+7 Level of all Lightning Spell Skills\n暴击率 for Spells提高 77%"
     }
   ],
   "skills": [

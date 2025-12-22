@@ -13,7 +13,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 17 to 30 [Physical|Physical] Damage to [Attack|Attacks]\n+102 to maximum Life\n35% increased [ItemRarity|Rarity of Items] found\n+43% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +10% all Elemental [Resistances]\n附加 17 - 30 物理伤害 to Attacks\n+102 最大生命\n物品稀有度提高 35%\n+43% 冰霜抗性"
     },
     {
       "name": "Honour Gorget (琥珀护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "40% increased maximum [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Projectile] Skills\n30% increased Global [Defences]"
+      "desc": "(附魔) Allocates Lasting Trauma\n(基底) +12 力量\n最大能量护盾提高 40%\n物品稀有度提高 18%\n+3 Level of all [Projectile] Skills\nGlobal [Defences]提高 30%"
     },
     {
       "name": "Plague Pelt (滑击背心)",
@@ -29,7 +29,7 @@
       "baseType": "Slipstrike Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dd53d7b8d1/BodyDex06.png",
       "rarity": 2,
-      "desc": "+310 to [Evasion] Rating\n151% increased [Evasion|Evasion] Rating\n+31 to [Dexterity|Dexterity]\n+42% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+310 [闪避值] Rating\n闪避值 Rating提高 151%\n+31 敏捷\n+42% 火焰抗性\n(已腐化)"
     },
     {
       "name": "Loath Hold (瓦尔裹手)",
@@ -37,7 +37,7 @@
       "baseType": "Vaal Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleEludDAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bdc7c3c15d/GlovesDexInt03.png",
       "rarity": 2,
-      "desc": "69% increased [Evasion] and [EnergyShield|Energy Shield]\n+142 to maximum Life\n27% increased [CriticalDamageBonus|Critical Damage Bonus]\n60% increased effect of Socketed Items"
+      "desc": "(符文) [Attack] Speed提高 12%\n(符文) Magnitude of Damaging Ailments you inflict提高 32%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 24%\n能量护盾提高 69%\n+142 最大生命\nCritical Damage Bonus提高 27%\neffect of Socketed Items提高 60%"
     },
     {
       "name": "Agony Guardian (先祖冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "128% increased [EnergyShield|Energy Shield]\n+27 to maximum Mana\n18% increased [ItemRarity|Rarity of Items] found\n33% increased [Critical|Critical Hit] Chance\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 128%\n+27 最大魔力\n物品稀有度提高 18%\n暴击率提高 33%\n+37% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Dusk League (捷足便鞋)",
@@ -53,7 +53,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n74% increased [Evasion] and [EnergyShield|Energy Shield]\n+138 to maximum Life\n+31 to [Intelligence|Intelligence]\n+43% to [Resistances|Fire Resistance]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 74%\n+138 最大生命\n+31 智慧\n+43% 火焰抗性\n+43% 闪电抗性"
     },
     {
       "name": "Rapture Quill (贯心箭袋)",
@@ -61,7 +61,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 19 to 29 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 4 to 67 [Lightning] damage to [Attack|Attacks]\n45% increased Damage with Bow Skills\n26% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage"
+      "desc": "(基底) 暴击率 for Attacks提高 24%\n附加 19 - 29 物理伤害 to Attacks\n附加 4 - 67 Attacks\nDamage with Bow Skills提高 45%\nCritical Damage Bonus for [Attack] Damage提高 26%"
     },
     {
       "name": "Entropy Fletch (狂热之弓)",
@@ -69,7 +69,7 @@
       "baseType": "Fanatic Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7099d311a6/Bow07.png",
       "rarity": 2,
-      "desc": "160% increased [Physical] Damage\nAdds 16 to 37 [Physical|Physical] Damage\n+3 to Level of all [Attack] Skills\n[Gain] 16% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n[Physical] Damage提高 160%\n附加 16 - 37 物理伤害\n+3 Level of all [Attack] Skills\n[Gain] 16% of Damage as Extra [Physical] Damage"
     },
     {
       "name": "Kalandra's Touch",
@@ -85,7 +85,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+43 to maximum Life\n+27 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 25%\n(基底) Has 3 [Charm] Slots\n+43 最大生命\n+27 力量\n+38 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     }
   ],
   "skills": [

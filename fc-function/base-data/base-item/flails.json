@@ -1,0 +1,104 @@
+[
+  {
+    "en": "Splintered Flail",
+    "cn": "碎裂连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chain Flail",
+    "cn": "精索连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Holy Flail",
+    "cn": "神祝连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Flail",
+    "cn": "钢铁连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Twin Flail",
+    "cn": "双首连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Slender Flail",
+    "cn": "长鞭连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Flail",
+    "cn": "巨石连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ring Flail",
+    "cn": "环锁连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Guarded Flail",
+    "cn": "卫甲连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Icicle Flail",
+    "cn": "冰刺连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tearing Flail",
+    "cn": "碎肉连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Great Flail",
+    "cn": "巨型连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Abyssal Flail",
+    "cn": "深渊连枷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Flails/Flail13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ball and Chain",
+    "cn": "链球强袭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/macedmg.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Morning Star",
+    "cn": "流星重锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/macedmg.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rattling Ball",
+    "cn": "破坏球",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/macedmg.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spiked Whip",
+    "cn": "尖刺长鞭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/macedmg.webp",
+    "type": "base_item"
+  }
+]

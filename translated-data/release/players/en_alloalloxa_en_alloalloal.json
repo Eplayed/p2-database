@@ -13,7 +13,7 @@
       "baseType": "Dreaming Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYxMCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d836b3566d/Warstaff10.png",
       "rarity": 2,
-      "desc": "153% increased [Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 27% of Damage as Extra [Physical] Damage\n21% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n[Physical] Damage提高 153%\n+5 Level of all [Attack] Skills\n[Gain] 27% of Damage as Extra [Physical] Damage\n21% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Dread Grasp (三相戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 23 [Physical|Physical] Damage to [Attack|Attacks]\n23% increased [Cold] Damage\n+115 to maximum Life\n+13 to all [Attributes|Attributes]\n+18% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +10% all Elemental [Resistances]\n附加 14 - 23 物理伤害 to Attacks\n[Cold] Damage提高 23%\n+115 最大生命\n+13 全属性\n+18% 混沌抗性"
     },
     {
       "name": "Vengeance Palm (华丽护手)",
@@ -29,7 +29,7 @@
       "baseType": "Ornate Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/041d8df186/GlovesStr04.png",
       "rarity": 2,
-      "desc": "97% increased [Armour|Armour]\nAdds 7 to 17 [Physical|Physical] Damage to [Attack|Attacks]\n+107 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n+41% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲提高 97%\n附加 7 - 17 物理伤害 to Attacks\n+107 最大生命\n+2 Level of all Melee Skills\n+41% 火焰抗性\n+35% 冰霜抗性"
     },
     {
       "name": "Rune Wrap (士兵胸甲)",
@@ -37,7 +37,7 @@
       "baseType": "Soldier Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d5346c8ff4/BodyStr03.png",
       "rarity": 2,
-      "desc": "+241 to [Armour|Armour]\n103% increased [Armour|Armour]\n+32 to [Strength|Strength]\n+35% to [Resistances|Lightning Resistance]\n+41% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+241 护甲\n护甲提高 103%\n+32 力量\n+35% 闪电抗性\n+41% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "Loath Tread (华丽胫甲)",
@@ -45,7 +45,7 @@
       "baseType": "Ornate Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f9e847d2b0/BootsStr04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+122 to maximum Life\n+34% to [Resistances|Lightning Resistance]\n+16% to [Resistances|Chaos Resistance]\n+34% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n+122 最大生命\n+34% 闪电抗性\n+16% 混沌抗性\n+34% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "Ryslatha's Coil",
@@ -53,7 +53,7 @@
       "baseType": "Ornate Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9SeXNsYXRoYXNDb2lsIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/09d92223e5/RyslathasCoil.png",
       "rarity": 3,
-      "desc": "+85 to maximum Life\n45% increased [Flask] Life Recovery rate\n46% more maximum [Physical] [Attack] Damage\n33% less minimum [Physical] [Attack] Damage"
+      "desc": "(基底) Has 1 [Charm] Slot\n(基底) [Charm] Charges used降低 13%\n+85 最大生命\n[Flask] Life Recovery rate提高 45%\n46% more maximum [Physical] [Attack] Damage\n33% less minimum [Physical] [Attack] Damage\n(已腐化)"
     },
     {
       "name": "Wrath Rosary (帝金护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "24% increased [Spell] Damage\n50% increased [Armour]\n+149 to maximum Life\n+32 to [Dexterity|Dexterity]\n+27% to [Resistances|Chaos Resistance]"
+      "desc": "(附魔) Allocates Momentum\n(基底) 物品稀有度提高 19%\n[Spell] Damage提高 24%\n[护甲]提高 50%\n+149 最大生命\n+32 敏捷\n+27% 混沌抗性"
     },
     {
       "name": "Empyrean Grasp (三相戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 13 to 23 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 25 to 43 [Fire] damage to [Attack|Attacks]\n+109 to maximum Life\n+46% to [Resistances|Fire Resistance]\n+42% to [Resistances|Cold Resistance]\n[ManaLeech|Leech] 4.85% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +9% all Elemental [Resistances]\n附加 13 - 23 物理伤害 to Attacks\n附加 25 - 43 Attacks\n+109 最大生命\n+46% 火焰抗性\n+42% 冰霜抗性\nLeech 4.85% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Vengeance Brow (帝国巨盔)",
@@ -77,7 +77,7 @@
       "baseType": "Imperial Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a455b9fc43/HelmetStr07.png",
       "rarity": 2,
-      "desc": "+129 to [Armour|Armour]\n128% increased [Armour|Armour]\n+30 to maximum Life\n+43% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+129 护甲\n护甲提高 128%\n+30 最大生命\n+43% 火焰抗性\n+45% 闪电抗性\n(已腐化)"
     }
   ],
   "skills": [

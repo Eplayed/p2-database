@@ -13,7 +13,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+168 to [Evasion] Rating\n+225 to maximum Mana\n8% increased maximum Mana\n22% increased Cast Speed\n+35% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n+168 [闪避值] Rating\n+225 最大魔力\n最大魔力提高 8%\n施法速度提高 22%\n+35% 冰霜抗性\n+34% 闪电抗性"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -21,7 +21,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "64% increased [Evasion|Evasion] Rating\n28% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+13 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 64%\n暴击率提高 28%\n[Attack] Speed提高 5%\n+13 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+46 to maximum Life\n+29 to [Strength|Strength]\n+37 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +25% 火焰抗性\n(基底) 晕眩门槛提高 25%\n(基底) Has 2 [Charm] Slots\n+46 最大生命\n+29 力量\n+37 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -45,7 +45,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+113 to maximum [EnergyShield|Energy Shield]\n38% increased [EnergyShield|Energy Shield]\n+35% to [Resistances|Fire Resistance]\n+31% to [Resistances|Cold Resistance]\n+30% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+113 最大能量护盾\n能量护盾提高 38%\n+35% 火焰抗性\n+31% 冰霜抗性\n+30% 闪电抗性"
     },
     {
       "name": "Morbid Ward (圣洁法器)",
@@ -53,7 +53,7 @@
       "baseType": "Sacred Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/64fc1e2b9f/Focus08.png",
       "rarity": 2,
-      "desc": "+82 to maximum [EnergyShield|Energy Shield]\n88% increased [Spell] Damage\n+87 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n28% increased Cast Speed"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+82 最大能量护盾\n[Spell] Damage提高 88%\n+87 最大魔力\n+2 Level of all Spell Skills\n施法速度提高 28%"
     },
     {
       "name": "Brood Brow (卡马萨冠冕)",
@@ -61,7 +61,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "135% increased [EnergyShield|Energy Shield]\n+30 to maximum Mana\n+38% to [Resistances|Fire Resistance]\n+32% to [Resistances|Cold Resistance]\n13.6 Life Regeneration per second"
+      "desc": "(附魔) 能量护盾提高 24%\n(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n能量护盾提高 135%\n+30 最大魔力\n+38% 火焰抗性\n+32% 冰霜抗性\n13.6 Life Regeneration per second\n(已腐化)"
     },
     {
       "name": "Amor Mandragora",
@@ -69,7 +69,7 @@
       "baseType": "Changeling Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvVW5pcXVlcy9BbW9yTWFuZHJhZ29yYSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/98113cdc0a/AmorMandragora.png",
       "rarity": 3,
-      "desc": "Adds 18 to 25 [Physical|Physical] Damage\n+14 to [Intelligence|Intelligence]\n11% increased Skill Effect Duration\nEnemies in your [Presence] are [Hinder|Hindered]\nGain 1 [DruidicProwess|Druidic Prowess] for every 20 total Rage spent"
+      "desc": "附加 18 - 25 物理伤害\n+14 智慧\nSkill Effect Duration提高 11%\nEnemies in your Hindered\nGain 1 Druidic Prowess for every 20 total Rage spent"
     },
     {
       "name": "Spirit Track (丝克玛便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "62% increased [EnergyShield|Energy Shield]\n+29% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]\n36% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 62%\n+29% 火焰抗性\n+45% 闪电抗性\n能量护盾 Recharge Rate提高 36%\n(已腐化)"
     },
     {
       "name": "Cataclysm Bite (决斗法杖)",
@@ -85,7 +85,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Fire] Damage\n[Gain] 26% of Damage as Extra [Cold] Damage\n+130 to maximum Mana\n+4 to Level of all [Spell|Spell] Skills\n26% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Fire] Damage\n[Gain] 26% of Damage as Extra [Cold] Damage\n+130 最大魔力\n+4 Level of all Spell Skills\n施法速度提高 26%"
     },
     {
       "name": "Foe Clasp (月影护身符)",
@@ -93,7 +93,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "34% increased [Spell] Damage\n+33 to [Spirit|Spirit]\n32% increased Cast Speed\n28% increased Global [Defences]"
+      "desc": "(附魔) Allocates Calibration\n(基底) +28 最大能量护盾\n[Spell] Damage提高 34%\n+33 Spirit\n施法速度提高 32%\nGlobal [Defences]提高 28%"
     }
   ],
   "skills": [

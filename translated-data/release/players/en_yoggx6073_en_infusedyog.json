@@ -13,7 +13,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+126 to maximum [EnergyShield|Energy Shield]\n40% increased [EnergyShield|Energy Shield]\n+37% to [Resistances|Cold Resistance]\n42% [FasterESRechargeStart|faster start of Energy Shield Recharge]\n+202 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) +5% all Elemental [Resistances]\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+126 最大能量护盾\n能量护盾提高 40%\n+37% 冰霜抗性\n42% faster start of 能量护盾 Recharge\n+202 晕眩门槛"
     },
     {
       "name": "Oblivion Finger (金光戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "+160 to [Evasion] Rating\n+94 to maximum Mana\n34% increased [ItemRarity|Rarity of Items] found\n23% increased Cast Speed"
+      "desc": "(基底) 物品稀有度提高 10%\n+160 [闪避值] Rating\n+94 最大魔力\n物品稀有度提高 34%\n施法速度提高 23%"
     },
     {
       "name": "Ghoul Finger (金光戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "+93 to maximum Mana\n34% increased [ItemRarity|Rarity of Items] found\n+40% to [Resistances|Lightning Resistance]\nGain 27 Mana per enemy killed"
+      "desc": "(基底) 物品稀有度提高 11%\n+93 最大魔力\n物品稀有度提高 34%\n+40% 闪电抗性\nGain 27 Mana per enemy killed"
     },
     {
       "name": "Brood Lock (亚麻腰带)",
@@ -37,7 +37,7 @@
       "baseType": "Linen Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwMiIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/45c1e6bfa2/Belt02.png",
       "rarity": 2,
-      "desc": "+103 to maximum Mana\n7% increased [Flask] Mana Recovery rate\n+36% to [Resistances|Fire Resistance]\n+32% to [Resistances|Cold Resistance]\n+40% to [Resistances|Lightning Resistance]\n54 to 74 [Physical|Physical] [Thorns|Thorns] damage"
+      "desc": "(基底) Mana Recovery from Flasks提高 23%\n(基底) Has 1 [Charm] Slot\n+103 最大魔力\n[Flask] Mana Recovery rate提高 7%\n+36% 火焰抗性\n+32% 冰霜抗性\n+40% 闪电抗性\n54 to 74 Physical Thorns damage"
     },
     {
       "name": "Damnation Needle (决斗法杖)",
@@ -45,7 +45,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 29% of Damage as Extra [Lightning] Damage\n+160 to maximum Mana\n+4 to Level of all [Spell|Spell] Skills\n41% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 29% of Damage as Extra [Lightning] Damage\n+160 最大魔力\n+4 Level of all Spell Skills\n暴击率 for Spells提高 41%"
     },
     {
       "name": "Damnation Corona (天冠冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Skycrown Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03048a9ab7/HelmetInt02.png",
       "rarity": 2,
-      "desc": "77% increased [EnergyShield|Energy Shield]\n+143 to maximum Mana\n19% increased [ItemRarity|Rarity of Items] found\n30% increased [Critical|Critical Hit] Chance\n+41% to [Resistances|Fire Resistance]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 77%\n+143 最大魔力\n物品稀有度提高 19%\n暴击率提高 30%\n+41% 火焰抗性"
     },
     {
       "name": "Soul Sole (奢华便鞋)",
@@ -61,7 +61,7 @@
       "baseType": "Luxurious Slippers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e1c49a9d6d/BootsInt04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+54 to maximum [EnergyShield|Energy Shield]\n17% increased [ItemRarity|Rarity of Items] found\n+21 to [Intelligence|Intelligence]\n+23% to [Resistances|Fire Resistance]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n+54 最大能量护盾\n物品稀有度提高 17%\n+21 智慧\n+23% 火焰抗性"
     },
     {
       "name": "Entropy Chant (鸣谐长杖)",
@@ -69,7 +69,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 27% of Damage as Extra [Lightning] Damage\n64% increased [Spell] Damage\n+239 to maximum Mana\n+7 to Level of all [Fire|Fire] [Spell|Spell] Skills\n48% increased Cast Speed\n70% increased [Flammability] [BuffMagnitude|Magnitude]"
+      "desc": "[Gain] 27% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 64%\n+239 最大魔力\n+7 Level of all Fire Spell Skills\n施法速度提高 48%\nMagnitude提高 70%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -77,7 +77,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "83% increased [Evasion|Evasion] Rating\n27% increased [Critical|Critical Hit] Chance\n6% increased [Attack] Speed\n+19 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) +5% all Elemental [Resistances]\n闪避值 Rating提高 83%\n暴击率提高 27%\n[Attack] Speed提高 6%\n+19 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Storm Beads (帝金护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+145 to [Accuracy|Accuracy] Rating\n15% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Spell|Spell] Skills\n+36 to [Intelligence|Intelligence]\n27% increased Global [Defences]"
+      "desc": "(附魔) Allocates Conservative Casting\n(基底) 物品稀有度提高 11%\n+145 Accuracy Rating\n物品稀有度提高 15%\n+3 Level of all Spell Skills\n+36 智慧\nGlobal [Defences]提高 27%"
     },
     {
       "name": "Paradox Star (神圣法器)",
@@ -93,7 +93,7 @@
       "baseType": "Hallowed Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/64fc1e2b9f/Focus08.png",
       "rarity": 2,
-      "desc": "99% increased [EnergyShield|Energy Shield]\n+142 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n54% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) +5% all Elemental [Resistances]\n能量护盾提高 99%\n+142 最大魔力\n+2 Level of all Spell Skills\n暴击率 for Spells提高 54%"
     }
   ],
   "skills": [

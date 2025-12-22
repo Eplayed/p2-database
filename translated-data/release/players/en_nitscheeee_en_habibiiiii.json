@@ -13,7 +13,7 @@
       "baseType": "Conjurer Mantle",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludFN0cjA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3574a91ac4/BodyIntStr04.png",
       "rarity": 2,
-      "desc": "+154 to [Armour|Armour]\n+58 to maximum [EnergyShield|Energy Shield]\n132% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+31% to [Resistances|Fire Resistance]\n+42% to [Resistances|Cold Resistance]\n+21% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +26 Spirit\n+154 护甲\n+58 最大能量护盾\n护甲 and 能量护盾提高 132%\n+31% 火焰抗性\n+42% 冰霜抗性\n+21% 混沌抗性\n(已腐化)"
     },
     {
       "name": "命运之抗争",
@@ -21,7 +21,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "7% increased maximum Life\n+13 to [Strength|Strength]\n26% increased Mana Regeneration Rate\nRecover 32% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Vengeful Fury\n(基底) +15 敏捷\n最大生命提高 7%\n+13 力量\n魔力回复速度提高 26%\nRecover 32% of Missing Life before being Hit by an Enemy"
     },
     {
       "name": "Headhunter (重革腰带)",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiIsInJlbGljIjowfV0/7518a96138/Headhunter.png",
       "rarity": 9,
-      "desc": "+45 to maximum Life\n+37 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +15 力量\n(基底) 晕眩门槛提高 25%\n(基底) Has 2 [Charm] Slots\n+45 最大生命\n+37 力量\n+38 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Rage Track (隐秘绑腿)",
@@ -37,7 +37,7 @@
       "baseType": "Cryptic Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnRTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/12efc4aaa8/BootsIntStr04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n38% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+144 to maximum Life\n+28 to [Intelligence|Intelligence]\n+29% to [Resistances|Lightning Resistance]\n+72 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n护甲 and 能量护盾提高 38%\n+144 最大生命\n+28 智慧\n+29% 闪电抗性\n+72 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Carrion Finger (三相戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 28 to 40 [Fire] damage to [Attack|Attacks]\n+119 to maximum Life\n+23% to [Resistances|Lightning Resistance]\n+32% to [Resistances|Chaos Resistance]\n[LifeLeech|Leech] 7.53% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +8% all Elemental [Resistances]\n附加 28 - 40 Attacks\n+119 最大生命\n+23% 闪电抗性\n+32% 混沌抗性\nLeech 7.53% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Dire Salvation (Maji Talisman)",
@@ -53,7 +53,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "165% increased [Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 26% of Damage as Extra [Physical] Damage\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +8 Maximum [Rage]\n[Physical] Damage提高 165%\n+5 Level of all [Attack] Skills\n[Gain] 26% of Damage as Extra [Physical] Damage\n20% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Grim Hold (红玉戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 24 [Cold] damage to [Attack|Attacks]\n+119 to maximum Life\n12% increased [ItemRarity|Rarity of Items] found\n+26% to [Resistances|Fire Resistance]\n+17% to [Resistances|Lightning Resistance]\n[ManaLeech|Leech] 5.55% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +34% 火焰抗性\n附加 14 - 24 Attacks\n+119 最大生命\n物品稀有度提高 12%\n+26% 火焰抗性\n+17% 闪电抗性\nLeech 5.55% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Rage Knell (预兆短杖)",
@@ -69,7 +69,7 @@
       "baseType": "Omen Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d2cc9f0ac1/Sceptre04.png",
       "rarity": 2,
-      "desc": "34% increased [Spirit|Spirit]\n[Allies|Allies] in your [Presence|Presence] deal 47% increased Damage\n[Allies|Allies] in your [Presence|Presence] deal 1 to 46 added [Attack|Attack] [Lightning|Lightning] Damage\n+25 to [Intelligence|Intelligence]\n69% increased Mana Regeneration Rate\n10% increased [LightRadius|Light Radius]"
+      "desc": "(符文) Allies in your Presence have 施法速度提高 24%\n(符文) Bonded: Skill Speed while Shapeshifted提高 30%\nSpirit提高 34%\nAllies in your Presence deal Damage提高 47%\nAllies in your Presence deal 1 to 46 added Attack 闪电伤害\n+25 智慧\n魔力回复速度提高 69%\nLight Radius提高 10%\n(已腐化)"
     },
     {
       "name": "Rage Grasp (华丽袖带)",
@@ -77,7 +77,7 @@
       "baseType": "Ornate Cuffs",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludFN0cjAzIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0e34625351/GlovesIntStr03.png",
       "rarity": 2,
-      "desc": "29% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+143 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n+24% to [Resistances|Fire Resistance]\n+28% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲 and 能量护盾提高 29%\n+143 最大生命\n+2 Level of all Melee Skills\n+24% 火焰抗性\n+28% 闪电抗性"
     },
     {
       "name": "Dusk Keep (隐秘之冠)",
@@ -85,7 +85,7 @@
       "baseType": "Cryptic Crown",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnRTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9456a4b2b7/HelmetIntStr06.png",
       "rarity": 2,
-      "desc": "27% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+194 to maximum Life\n+82 to maximum Mana\n+42% to [Resistances|Cold Resistance]\n+20% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) Skill Effect Duration提高 8%\n(符文) 冷却回复速度提高 8%\n(符文) +4 Maximum [Rage]\n护甲 and 能量护盾提高 27%\n+194 最大生命\n+82 最大魔力\n+42% 冰霜抗性\n+20% 混沌抗性\n(已腐化)"
     }
   ],
   "skills": [

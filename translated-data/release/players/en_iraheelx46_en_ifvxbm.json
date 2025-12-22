@@ -13,7 +13,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+81 to maximum [EnergyShield|Energy Shield]\n104% increased [EnergyShield|Energy Shield]\n+55 to [Spirit|Spirit]\n+30 to [Intelligence|Intelligence]\n50% reduced [Ignite|Ignite] Duration on you"
+      "desc": "(附魔) 12% of Damage taken Recouped as Life\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+81 最大能量护盾\n能量护盾提高 104%\n+55 Spirit\n+30 智慧\nIgnite Duration on you降低 50%\n(已腐化)"
     },
     {
       "name": "灵魂羁绊",
@@ -21,7 +21,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+57 to maximum [EnergyShield|Energy Shield]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(基底) [Charm] Effect Duration提高 15%\n(基底) Has 2 [Charm] Slots\n+57 最大能量护盾\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "Atziri's Acuity",
@@ -29,7 +29,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "96% increased [Armour|Armour]\n45% increased [Critical|Critical Hit] Chance\n+29 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(附魔) Damage Penetrates 15% 闪电抗性\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n护甲提高 96%\n暴击率提高 45%\n+29 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "Corruption Hold (裂隙戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "40% increased [Lightning] Damage\n+85 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n+44% to [Resistances|Cold Resistance]\n+24% to [Resistances|Chaos Resistance]\n42% increased Mana Regeneration Rate"
+      "desc": "(基底) Maximum [Quality] is 40%\n[Lightning] Damage提高 40%\n+85 最大生命\n物品稀有度提高 16%\n+44% 冰霜抗性\n+24% 混沌抗性\n魔力回复速度提高 42%"
     },
     {
       "name": "Domination Slippers (雅致便鞋)",
@@ -45,7 +45,7 @@
       "baseType": "Elegant Slippers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e1c49a9d6d/BootsInt04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+46 to maximum [EnergyShield|Energy Shield]\n+34% to [Resistances|Lightning Resistance]\n+26% to [Resistances|Chaos Resistance]\n+109 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) +14% 冰霜抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n移动速度提高 30%\n+46 最大能量护盾\n+34% 闪电抗性\n+26% 混沌抗性\n+109 晕眩门槛"
     },
     {
       "name": "Cataclysm Guardian (先祖冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(已腐化)"
     },
     {
       "name": "Pandemonium Twirl (珠玉戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "30% increased [Lightning] Damage\n28% increased Cast Speed\n+27 to [Dexterity|Dexterity]\n13.8 Life Regeneration per second"
+      "desc": "(基底) 施法速度提高 12%\n[Lightning] Damage提高 30%\n施法速度提高 28%\n+27 敏捷\n13.8 Life Regeneration per second"
     },
     {
       "name": "Cataclysm Beam (麻痹长杖)",
@@ -69,7 +69,7 @@
       "baseType": "Paralysing Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 56% of Damage as Extra [Fire] Damage\n[Gain] 58% of Damage as Extra [Lightning] Damage\n202% increased [Spell] Damage\n+5 to Level of all [Spell|Spell] Skills\n98% increased chance to [Shock]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 56% of Damage as Extra [Fire] Damage\n[Gain] 58% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 202%\n+5 Level of all Spell Skills\nchance to [Shock]提高 98%"
     },
     {
       "name": "Miracle Weaver (鸣谐长杖)",
@@ -77,7 +77,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "+97 to maximum Mana\n+2 to Level of all [Chaos|Chaos] [Spell|Spell] Skills\n63% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n+16 to [Intelligence|Intelligence]"
+      "desc": "+97 最大魔力\n+2 Level of all Chaos Spell Skills\n暴击率 for Spells提高 63%\n+16 智慧"
     },
     {
       "name": "Sorrow Idol (月影护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "19% increased [Spell] Damage\n48% increased [Armour]\n+36 to [Spirit|Spirit]\n+3 to Level of all [Spell|Spell] Skills\n+23 to [Intelligence|Intelligence]\n12% of Damage taken [Recoup|Recouped] as Life"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +25 最大能量护盾\n[Spell] Damage提高 19%\n[护甲]提高 48%\n+36 Spirit\n+3 Level of all Spell Skills\n+23 智慧\n12% of Damage taken Recouped as Life"
     }
   ],
   "skills": [

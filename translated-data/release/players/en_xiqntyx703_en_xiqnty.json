@@ -13,7 +13,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "+114 to maximum Life\n+66 to maximum Mana\n27% increased Cast Speed\n+15% to all [ElementalDamage|Elemental] [Resistances]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +23% 火焰抗性\n+114 最大生命\n+66 最大魔力\n施法速度提高 27%\n+15% all Elemental [Resistances]\n+19% 混沌抗性"
     },
     {
       "name": "Entropy Goad (丝克玛便鞋)",
@@ -21,7 +21,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "+56 to maximum [EnergyShield|Energy Shield]\n95% increased [EnergyShield|Energy Shield]\n+32 to [Intelligence|Intelligence]\n+35% to [Resistances|Lightning Resistance]\n+18% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+56 最大能量护盾\n能量护盾提高 95%\n+32 智慧\n+35% 闪电抗性\n+18% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Maelström Gyre (红玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "30% increased [Lightning] Damage\n+122 to maximum Mana\n28% increased Cast Speed\n+29 to [Intelligence|Intelligence]\n+13% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) +23% 火焰抗性\n[Lightning] Damage提高 30%\n+122 最大魔力\n施法速度提高 28%\n+29 智慧\n+13% all Elemental [Resistances]"
     },
     {
       "name": "Gale Bond (加长腰带)",
@@ -37,7 +37,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4a30ba13fb/Belt04.png",
       "rarity": 2,
-      "desc": "+47 to [Armour]\n+174 to maximum Life\n+97 to maximum Mana\n+34% to [Resistances|Fire Resistance]\n+31% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) [Charm] Effect Duration提高 19%\n(基底) Has 3 [Charm] Slots\n+47 [护甲]\n+174 最大生命\n+97 最大魔力\n+34% 火焰抗性\n+31% 闪电抗性"
     },
     {
       "name": "Horror Call (鸣谐长杖)",
@@ -45,7 +45,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Cold] Damage\n98% increased [Fire] Damage\n+300 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n41% increased Cast Speed\n11% increased Mana Regeneration Rate\n5% increased [LightRadius|Light Radius]"
+      "desc": "[Gain] 30% of Damage as Extra [Cold] Damage\n[Fire] Damage提高 98%\n+300 最大魔力\n+5 Level of all Spell Skills\n施法速度提高 41%\n魔力回复速度提高 11%\nLight Radius提高 5%"
     },
     {
       "name": "Pain Shelter (邪恶束衣)",
@@ -53,7 +53,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+93 to maximum [EnergyShield|Energy Shield]\n100% increased [EnergyShield|Energy Shield]\n+33 to [Intelligence|Intelligence]\n+32% to [Resistances|Cold Resistance]\n24.8 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+93 最大能量护盾\n能量护盾提高 100%\n+33 智慧\n+32% 冰霜抗性\n24.8 Life Regeneration per second"
     },
     {
       "name": "Rune Charm (荒凉原野法器)",
@@ -61,7 +61,7 @@
       "baseType": "Leyline Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a7c172ac69/Focus06.png",
       "rarity": 2,
-      "desc": "+81 to maximum [EnergyShield|Energy Shield]\n75% increased [EnergyShield|Energy Shield]\n+2 to Level of all [Spell|Spell] Skills\n17% increased [CriticalDamageBonus|Critical Spell Damage Bonus]\n27% increased Cast Speed"
+      "desc": "(符文) 魔力回复速度提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+81 最大能量护盾\n能量护盾提高 75%\n+2 Level of all Spell Skills\nCritical 法术伤害 Bonus提高 17%\n施法速度提高 27%"
     },
     {
       "name": "Blight Call (决斗法杖)",
@@ -69,7 +69,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "26% increased [Spell] Damage\n95% increased [Spell] [Physical] Damage\n+28 to maximum Mana\n+4 to Level of all [Spell|Spell] Skills\n+29 to [Intelligence|Intelligence]\n45% increased Mana Regeneration Rate"
+      "desc": "(符文) [Spell] Damage提高 30%\n(符文) Bonded: Break Critical Hit with Spells equal to 12% of 物理伤害 dealt\n[Spell] Damage提高 26%\n[Spell] [Physical] Damage提高 95%\n+28 最大魔力\n+4 Level of all Spell Skills\n+29 智慧\n魔力回复速度提高 45%"
     },
     {
       "name": "Tempest Clasp (赤红护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Crimson Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQ3JpbXNvbkFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6306715ae7/CrimsonAmulet.png",
       "rarity": 2,
-      "desc": "22% increased [Spell] Damage\n+115 to maximum Life\n+49 to [Spirit|Spirit]\n+3 to Level of all [Spell|Spell] Skills\n59% increased Mana Regeneration Rate"
+      "desc": "(附魔) Allocates Tempered Mind\n(基底) 2.7 Life Regeneration per second\n[Spell] Damage提高 22%\n+115 最大生命\n+49 Spirit\n+3 Level of all Spell Skills\n魔力回复速度提高 59%"
     },
     {
       "name": "Pandemonium Vise (瓦尔手套)",
@@ -85,7 +85,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "97% increased [EnergyShield|Energy Shield]\n+121 to maximum Life\n28% increased [CriticalDamageBonus|Critical Damage Bonus]\n+40% to [Resistances|Lightning Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 魔力回复速度提高 84%\n(符文) Bonded: +48 最大生命\n(符文) Bonded: +48 最大魔力\n能量护盾提高 97%\n+121 最大生命\nCritical Damage Bonus提高 28%\n+40% 闪电抗性\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Dragon Salvation (先祖冠冕)",
@@ -93,7 +93,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+43 to maximum [EnergyShield|Energy Shield]\n93% increased [EnergyShield|Energy Shield]\n+69 to maximum Life\n+35% to [Resistances|Cold Resistance]\n+23% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+43 最大能量护盾\n能量护盾提高 93%\n+69 最大生命\n+35% 冰霜抗性\n+23% 混沌抗性"
     }
   ],
   "skills": [

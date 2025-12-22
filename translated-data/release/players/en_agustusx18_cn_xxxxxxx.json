@@ -13,7 +13,7 @@
       "baseType": "Iron Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0lyb25SaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/155a44583e/IronRing.png",
       "rarity": 2,
-      "desc": "Adds 19 to 30 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 24 to 33 [Cold] damage to [Attack|Attacks]\n25% increased [Cold] Damage\n+25 to [Dexterity|Dexterity]\n+33% to [Resistances|Cold Resistance]\n[LifeLeech|Leech] 6.52% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) 附加 1 - 4 物理伤害 to Attacks\n附加 19 - 30 物理伤害 to Attacks\n附加 24 - 33 Attacks\n[Cold] Damage提高 25%\n+25 敏捷\n+33% 冰霜抗性\nLeech 6.52% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Beast Barrage (寻战之弓)",
@@ -21,7 +21,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "+436 to [Accuracy|Accuracy] Rating\n+4.87% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\n23% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) +110 Accuracy Rating\n(符文) Elements\n(符文) Bonded: Attacks have +1% 暴击率\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n+436 Accuracy Rating\n+4.87% 暴击率\n+3 Level of all [Attack] Skills\n23% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "精华收割器",
@@ -29,7 +29,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "51% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 36 [Lightning] damage to [Attack|Attacks]\n+18 to [Intelligence|Intelligence]\n+31% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(符文) 附加 5 - 12 物理伤害 to Attacks\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n(符文) Bonded: Fissure Skills have +2 [Limit]\n能量护盾提高 51%\n附加 1 - 36 Attacks\n+18 智慧\n+31% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     },
     {
       "name": "Rune Rosary (日曜护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+156 to maximum Mana\n+44 to [Spirit|Spirit]\n+2 to Level of all [Projectile] Skills\n25% increased [CriticalDamageBonus|Critical Damage Bonus]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) Allocates Ancient Aegis\n(基底) +12 Spirit\n+156 最大魔力\n+44 Spirit\n+2 Level of all [Projectile] Skills\nCritical Damage Bonus提高 25%\n+43% 闪电抗性"
     },
     {
       "name": "黑盗勋章",
@@ -45,7 +45,7 @@
       "baseType": "Corsair Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhlQmxhY2tDcmVzdCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0d9e626b9a/TheBlackCrest.png",
       "rarity": 3,
-      "desc": "96% increased [Evasion|Evasion] Rating\n12% increased [ItemRarity|Rarity of Items] found\n+25% to [Resistances|Lightning Resistance]\nGain [Tailwind] on [Critical|Critical Hit], no more than once per second\nLose all [Tailwind] when [HitDamage|Hit]"
+      "desc": "(符文) +5% all Elemental [Resistances]\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n闪避值 Rating提高 96%\n物品稀有度提高 12%\n+25% 闪电抗性\nGain Critical Hit, no more than once per second\nLose all Hit\n(已腐化)"
     },
     {
       "name": "Mind Spiral (裂隙戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 24 to 34 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 30 to 44 [Cold] damage to [Attack|Attacks]\n21% increased Cast Speed\n+33% to [Resistances|Fire Resistance]\n+22% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 24 - 34 物理伤害 to Attacks\n附加 30 - 44 Attacks\n施法速度提高 21%\n+33% 火焰抗性\n+22% 冰霜抗性"
     },
     {
       "name": "Cadiro's Gambit",
@@ -61,7 +61,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9VbmlxdWVzL1BlcmFuZHVzVHVybnN0aWxlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/49f9f76fa9/PerandusTurnstile.png",
       "rarity": 3,
-      "desc": "Each Arrow fired is a [UniqueArrowModifierChain|Crescendo], [UniqueArrowModifierSplit|Splinter], [UniqueArrowModifierPierceReturn|Reversing], [UniqueArrowModifierCrit|Diamond], [UniqueArrowModifierRarity|Covetous], or [UniqueArrowModifierStun|Blunt] Arrow"
+      "desc": "(附魔) Projectiles have 10% chance to [Chain] an additional time from terrain\n(基底) [Attack] Speed提高 7%\nEach Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+59 to maximum Life\n+24 to [Strength|Strength]\n+28 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 3 [Charm] Slots\n+59 最大生命\n+24 力量\n+28 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Dragon Guardian (邪恶束衣)",
@@ -77,7 +77,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+96 to maximum [EnergyShield|Energy Shield]\n103% increased [EnergyShield|Energy Shield]\n+32% to [Resistances|Fire Resistance]\n+33% to [Resistances|Cold Resistance]\n22.6 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+96 最大能量护盾\n能量护盾提高 103%\n+32% 火焰抗性\n+33% 冰霜抗性\n22.6 Life Regeneration per second\n(已腐化)"
     },
     {
       "name": "Morbid Urge (钢缘便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Steelpoint Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n23% increased [Evasion] and [EnergyShield|Energy Shield]\n+113 to maximum Mana\n+31% to [Resistances|Fire Resistance]\n+31% to [Resistances|Cold Resistance]\n+30 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 23%\n+113 最大魔力\n+31% 火焰抗性\n+31% 冰霜抗性\n+30 晕眩门槛"
     }
   ],
   "skills": [

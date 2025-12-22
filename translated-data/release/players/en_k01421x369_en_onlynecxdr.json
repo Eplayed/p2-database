@@ -13,7 +13,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+3 to Level of all [Minion|Minion] Skills\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+34% to [Resistances|Fire Resistance]\n33% increased Global [Defences]"
+      "desc": "(附魔) Allocates Warlord Leader\n(基底) +15 Spirit\n+3 Level of all Minion Skills\n+16% all Elemental [Resistances]\n+34% 火焰抗性\nGlobal [Defences]提高 33%"
     },
     {
       "name": "Armageddon Refuge (荒凉原野法器)",
@@ -21,7 +21,7 @@
       "baseType": "Leyline Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a7c172ac69/Focus06.png",
       "rarity": 2,
-      "desc": "79% increased [Spell] Damage\n45% increased [ESRechargeRate|Energy Shield Recharge Rate]\n46% [FasterESRechargeStart|faster start of Energy Shield Recharge]\n63% increased Mana Regeneration Rate"
+      "desc": "[Spell] Damage提高 79%\n能量护盾 Recharge Rate提高 45%\n46% faster start of 能量护盾 Recharge\n魔力回复速度提高 63%"
     },
     {
       "name": "Apocalypse Mantle (Sacrificial Regalia)",
@@ -29,7 +29,7 @@
       "baseType": "Sacrificial Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0ckRleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7e5722b0ec/BodyStrDexInt02.png",
       "rarity": 2,
-      "desc": "+96 to maximum [EnergyShield|Energy Shield]\n99% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+22% to [Resistances|Fire Resistance]\n+28% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 能量护盾 Recharge Rate提高 50%\n(符文) effect of Curses on you降低 50%\n(符文) Bonded: 20% faster start of 能量护盾 Recharge\n(符文) Bonded: Magnitudes提高 8%\n(基底) +1 Level of all [Corrupted] Skill Gems\n+96 最大能量护盾\n护甲, 闪避值 and 能量护盾提高 99%\n+22% 火焰抗性\n+28% 闪电抗性"
     },
     {
       "name": "Ventor's Gamble",
@@ -37,7 +37,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9WZW50b3JzR2FtYmxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc113c96d9/VentorsGamble.png",
       "rarity": 3,
-      "desc": "+36 to maximum Life\n+20 to [Spirit|Spirit]\n6% increased [ItemRarity|Rarity of Items] found\n+17% to [Resistances|Fire Resistance]\n+45% to [Resistances|Cold Resistance]\n+40% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 14%\n+36 最大生命\n+20 Spirit\n物品稀有度提高 6%\n+17% 火焰抗性\n+45% 冰霜抗性\n+40% 闪电抗性"
     },
     {
       "name": "灵骸之履",
@@ -45,7 +45,7 @@
       "baseType": "Lattice Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VbmlxdWVzL0JvbmVzT2ZVbGxyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cae692c545/BonesOfUllr.png",
       "rarity": 3,
-      "desc": "5% increased Movement Speed\n50% increased [EnergyShield|Energy Shield]\n+38 to maximum Life\n+21 to maximum Mana\n36% increased [Reservation] [Efficiency] of Skills which create Undead [Minion|Minions]"
+      "desc": "(附魔) Freeze Threshold提高 21%\n(符文) 移动速度 per 15 [Spirit], up to a maximum of 40%提高 1%\nOther Modifiers to 移动速度 except for Sprinting do not apply\n移动速度提高 5%\n能量护盾提高 50%\n+38 最大生命\n+21 最大魔力\nMinions提高 36%\n(已腐化)"
     },
     {
       "name": "Behemoth Knuckle (海妖之鳞手套)",
@@ -53,7 +53,7 @@
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "139% increased [EnergyShield|Energy Shield]\n+47 to maximum Life\n+40% to [Resistances|Fire Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 56%\n(符文) Bonded: +32 最大生命\n(符文) Bonded: +32 最大魔力\n能量护盾提高 139%\n+47 最大生命\n+40% 火焰抗性\neffect of Socketed Items提高 60%"
     },
     {
       "name": "永恒紧缩之戒",
@@ -61,7 +61,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9FdmVyZ3Jhc3BpbmdSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2e75de4433/EvergraspingRing.png",
       "rarity": 3,
-      "desc": "+90 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] [Gain] 30% of Damage as Extra [Chaos] Damage\nEnemies in your [Presence|Presence] [Gain] 10% of Damage as Extra [Chaos] Damage"
+      "desc": "(附魔) +15 力量\n(附魔) +9% all Elemental [Resistances]\n(基底) 施法速度提高 8%\n+90 最大魔力\nAllies in your Presence [Gain] 30% of Damage as Extra [Chaos] Damage\nEnemies in your Presence [Gain] 10% of Damage as Extra [Chaos] Damage\n(已腐化)"
     },
     {
       "name": "Pandemonium Brow (卡马萨冠冕)",
@@ -69,7 +69,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+62 to maximum [EnergyShield|Energy Shield]\n40% increased [EnergyShield|Energy Shield]\n+42 to maximum Life\n+2 to Level of all [Minion|Minion] Skills\n+33 to [Intelligence|Intelligence]\n37% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(附魔) +23 Spirit\n(附魔) +1 Level of all Minion Skills\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+62 最大能量护盾\n能量护盾提高 40%\n+42 最大生命\n+2 Level of all Minion Skills\n+33 智慧\n能量护盾 Recharge Rate提高 37%\n(已腐化)"
     },
     {
       "name": "夜临",
@@ -77,7 +77,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9EYXJrbmVzc0VudGhyb25lZCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9bbef2f97f/DarknessEnthroned.png",
       "rarity": 3,
-      "desc": "This item gains bonuses from Socketed Items as though it was a Helmet\n96% increased effect of Socketed Items"
+      "desc": "(附魔) 最大能量护盾提高 21%\n(附魔) +12 智慧\n(符文) Enemies you [Curse] take Damage提高 11%\n(符文) [Reservation] [Efficiency] of [Minion] Skills提高 15%\n(符文) Bonded: Area of Effect of Curses提高 39%\n(符文) Bonded: Minions Revive 15% faster\n(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\nThis item gains bonuses from Socketed Items as though it was a Helmet\neffect of Socketed Items提高 96%\n(已腐化)"
     },
     {
       "name": "Foe Wish (塔萨里奥法器)",
@@ -85,7 +85,7 @@
       "baseType": "Tasalian Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "+86 to maximum [EnergyShield|Energy Shield]\n38% increased [EnergyShield|Energy Shield]\n+28 to maximum Mana\n+35% to [Resistances|Lightning Resistance]\n48% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) 30% faster start of 能量护盾 Recharge\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+86 最大能量护盾\n能量护盾提高 38%\n+28 最大魔力\n+35% 闪电抗性\n能量护盾 Recharge Rate提高 48%"
     },
     {
       "name": "Hate Roar (罪孽短杖)",
@@ -93,7 +93,7 @@
       "baseType": "Rattling Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTAxIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2dc4b05095/Sceptre01.png",
       "rarity": 2,
-      "desc": "59% increased [Spirit|Spirit]\n[Allies|Allies] in your [Presence|Presence] deal 87% increased Damage\n[Allies|Allies] in your [Presence|Presence] have 15% increased [Attack|Attack] Speed\n+4 to Level of all [Minion|Minion] Skills\n[Minion|Minions] have 50% increased maximum Life"
+      "desc": "(符文) Allies in your Presence deal Damage提高 30%\n(符文) Bonded: Damage while Shapeshifted提高 40%\nSpirit提高 59%\nAllies in your Presence deal Damage提高 87%\nAllies in your Presence have 攻击速度提高 15%\n+4 Level of all Minion Skills\nMinions have 最大生命提高 50%"
     }
   ],
   "skills": [

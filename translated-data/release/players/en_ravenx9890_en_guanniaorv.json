@@ -13,7 +13,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "+85 to maximum Life\n+49 to [Spirit|Spirit]\n+18 to all [Attributes|Attributes]\n+23% to [Resistances|Fire Resistance]\n31% increased Global [Defences]"
+      "desc": "(附魔) Allocates Heavy Frost\n(基底) +6 全属性\n+85 最大生命\n+49 Spirit\n+18 全属性\n+23% 火焰抗性\nGlobal [Defences]提高 31%"
     },
     {
       "name": "Soul Grip (三相戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 27 to 44 [Cold] damage to [Attack|Attacks]\n+82 to [Evasion] Rating\n+117 to maximum Life\n+29 to [Intelligence|Intelligence]\n+18% to [Resistances|Chaos Resistance]\n16.6 Life Regeneration per second"
+      "desc": "(基底) +9% all Elemental [Resistances]\n附加 27 - 44 Attacks\n+82 [闪避值] Rating\n+117 最大生命\n+29 智慧\n+18% 混沌抗性\n16.6 Life Regeneration per second"
     },
     {
       "name": "Vortex Crusher (圣地短杖)",
@@ -29,7 +29,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA2YiIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5cb4f981bd/Sceptre06b.png",
       "rarity": 2,
-      "desc": "19% increased [Spirit|Spirit]\n+134 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 32% increased Damage\n[Allies|Allies] in your [Presence|Presence] have 12% increased [Attack|Attack] Speed\n20% reduced [Attributes|Attribute] Requirements\n[Minion|Minions] have 32% increased maximum Life"
+      "desc": "(附魔) Allies in your Presence have 攻击速度提高 8%\n(符文) Allies in your Presence deal Damage提高 90%\n(符文) Bonded: Damage while Shapeshifted提高 120%\nSpirit提高 19%\n+134 最大魔力\nAllies in your Presence deal Damage提高 32%\nAllies in your Presence have 攻击速度提高 12%\nAttribute Requirements降低 20%\nMinions have 最大生命提高 32%\n(已腐化)"
     },
     {
       "name": "Honour Crest (先祖冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "126% increased [EnergyShield|Energy Shield]\n+45 to maximum Life\n+28% to [Resistances|Fire Resistance]\n+40% to [Resistances|Cold Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 126%\n+45 最大生命\n+28% 火焰抗性\n+40% 冰霜抗性\n+19% 混沌抗性"
     },
     {
       "name": "Vortex Coat (狼皮斗篷)",
@@ -45,7 +45,7 @@
       "baseType": "Wolfskin Mantle",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludFN0cjAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/79f27dfa2e/BodyIntStr02.png",
       "rarity": 2,
-      "desc": "+157 to [Armour|Armour]\n+55 to maximum [EnergyShield|Energy Shield]\n37% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+38% to [Resistances|Cold Resistance]\n11.7 Life Regeneration per second\n+215 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n+157 护甲\n+55 最大能量护盾\n护甲 and 能量护盾提高 37%\n+38% 冰霜抗性\n11.7 Life Regeneration per second\n+215 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Sol Knot (黄玉戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 5 to 13 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 66 [Lightning] damage to [Attack|Attacks]\n30% increased [Chaos] Damage\n+38% to [Resistances|Lightning Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +32% 闪电抗性\n附加 5 - 13 物理伤害 to Attacks\n附加 2 - 66 Attacks\n[Chaos] Damage提高 30%\n+38% 闪电抗性\n+19% 混沌抗性"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+56 to maximum Life\n+33 to [Strength|Strength]\n+34 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +15 敏捷\n(基底) 晕眩门槛提高 25%\n(基底) Has 2 [Charm] Slots\n+56 最大生命\n+33 力量\n+34 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Draíocht Grip (Thunder Talisman)",
@@ -69,7 +69,7 @@
       "baseType": "Thunder Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvVm9sdGZhbmdUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0ab277d9d8/VoltfangTalisman.png",
       "rarity": 2,
-      "desc": "169% increased [Physical] Damage\nAdds 29 to 40 [Physical|Physical] Damage\n[Gain] 31% of Damage as Extra [Cold] Damage\n+5 to Level of all [Attack] Skills\nGain 6 Mana per enemy killed\n22% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(附魔) Attribute Requirements降低 20%\n(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n(基底) Magnitude of Shock you inflict提高 15%\n[Physical] Damage提高 169%\n附加 29 - 40 物理伤害\n[Gain] 31% of Damage as Extra [Cold] Damage\n+5 Level of all [Attack] Skills\nGain 6 Mana per enemy killed\n22% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Plague Track (丝克玛便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n72% increased [EnergyShield|Energy Shield]\n+37% to [Resistances|Fire Resistance]\n+31% to [Resistances|Lightning Resistance]\n51% reduced [Chill|Chill] Duration on you"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 72%\n+37% 火焰抗性\n+31% 闪电抗性\nChill Duration on you降低 51%\n(已腐化)"
     },
     {
       "name": "公理不存",
@@ -85,7 +85,7 @@
       "baseType": "Grand Manchettes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9TaW5lQWVxdW8iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e243b1f810/SineAequo.png",
       "rarity": 3,
-      "desc": "13% increased [SkillSpeed|Skill Speed]\n115% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n[Immobilised|Immobilise] enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage"
+      "desc": "(附魔) Damage Penetrates 12% 闪电抗性\n(附魔) Break 护甲提高 15%\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\nSkill Speed提高 13%\n护甲, 闪避值 and 能量护盾提高 115%\nImmobilise enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage\n(已腐化)"
     }
   ],
   "skills": [

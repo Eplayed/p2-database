@@ -13,7 +13,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "+19 to [Accuracy|Accuracy] Rating\n+66 to maximum Life\n+135 to maximum Mana\n+17% to all [ElementalDamage|Elemental] [Resistances]\n+35% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +9% all Elemental [Resistances]\n+19 Accuracy Rating\n+66 最大生命\n+135 最大魔力\n+17% all Elemental [Resistances]\n+35% 冰霜抗性\n+38% 闪电抗性"
     },
     {
       "name": "Horror Call (咆哮长杖)",
@@ -21,7 +21,7 @@
       "baseType": "Roaring Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 46% of Damage as Extra [Fire] Damage\n184% increased [Spell] [Physical] Damage\n30% reduced [Attributes|Attribute] Requirements\n+32 to [Intelligence|Intelligence]\n+7 to Level of all [Physical|Physical] [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 46% of Damage as Extra [Fire] Damage\n[Spell] [Physical] Damage提高 184%\nAttribute Requirements降低 30%\n+32 智慧\n+7 Level of all Physical Spell Skills"
     },
     {
       "name": "Bramble Veil (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n77% increased [EnergyShield|Energy Shield]\n+141 to maximum Life\n13% increased [ItemRarity|Rarity of Items] found\n+40% to [Resistances|Fire Resistance]\n5.2 Life Regeneration per second"
+      "desc": "(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n+73 最大能量护盾\n能量护盾提高 77%\n+141 最大生命\n物品稀有度提高 13%\n+40% 火焰抗性\n5.2 Life Regeneration per second"
     },
     {
       "name": "Hysseg's Claw",
@@ -37,7 +37,7 @@
       "baseType": "Familial Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvVW5pcXVlcy9IYW5kT2ZUaGVDbGFuIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5ff4ad8d36/HandOfTheClan.png",
       "rarity": 3,
-      "desc": "89% increased [Physical] Damage\n5% increased Movement Speed\n+14 to [Strength|Strength]\n+13 to [Intelligence|Intelligence]\n6% increased Damage per [Minion]"
+      "desc": "(基底) Minions deal Damage提高 41%\n[Physical] Damage提高 89%\n移动速度提高 5%\n+14 力量\n+13 智慧\nDamage per [Minion]提高 6%"
     },
     {
       "name": "Phoenix Ward (邪恶束衣)",
@@ -45,7 +45,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+84 to maximum [EnergyShield|Energy Shield]\n136% increased [EnergyShield|Energy Shield]\n+36 to maximum Life\n+37% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]\n49% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(附魔) 能量护盾提高 25%\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+84 最大能量护盾\n能量护盾提高 136%\n+36 最大生命\n+37% 火焰抗性\n+35% 闪电抗性\n49% faster start of 能量护盾 Recharge\n(已腐化)"
     },
     {
       "name": "夜鳞",
@@ -53,7 +53,7 @@
       "baseType": "Pauascale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9OaWdodHNjYWxlIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/854d34c57b/Nightscale.png",
       "rarity": 3,
-      "desc": "76% increased [EnergyShield|Energy Shield]\n42% increased [Critical|Critical Hit] Chance\n+14 to [Intelligence|Intelligence]\n+23% to [Resistances|Cold Resistance]\n150% increased Mana Regeneration Rate if you've dealt a [Critical|Critical Hit] [Recently]\nCannot Regenerate Mana if you haven't dealt a [Critical|Critical Hit] [Recently]"
+      "desc": "(符文) 施法速度提高 8%\n(符文) effect of Arcane Surge on you提高 40%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n能量护盾提高 76%\n暴击率提高 42%\n+14 智慧\n+23% 冰霜抗性\n魔力回复速度 if you've dealt a Critical Hit [Recently]提高 150%\nCannot Regenerate Mana if you haven't dealt a Critical Hit [Recently]\n(已腐化)"
     },
     {
       "name": "Oblivion Clasp (赤红护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Crimson Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQ3JpbXNvbkFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6306715ae7/CrimsonAmulet.png",
       "rarity": 2,
-      "desc": "+81 to maximum Life\n+50 to [Spirit|Spirit]\n+3 to Level of all [Spell|Spell] Skills\n+20 to all [Attributes|Attributes]\n+32 to [Strength|Strength]"
+      "desc": "(附魔) Allocates Material Solidification\n(基底) 3.3 Life Regeneration per second\n+81 最大生命\n+50 Spirit\n+3 Level of all Spell Skills\n+20 全属性\n+32 力量"
     },
     {
       "name": "Victory Grip (黄玉戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 23 [Physical|Physical] Damage to [Attack|Attacks]\n+140 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n+33% to [Resistances|Fire Resistance]\n+24% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +23% 闪电抗性\n附加 14 - 23 物理伤害 to Attacks\n+140 最大魔力\n物品稀有度提高 17%\n+33% 火焰抗性\n+24% 混沌抗性"
     },
     {
       "name": "Onslaught Bond (重革腰带)",
@@ -77,7 +77,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwOSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3299e86495/Belt09.png",
       "rarity": 2,
-      "desc": "+150 to [Armour]\n+110 to maximum Life\n21% increased [Charm] Effect Duration\n+37% to [Resistances|Cold Resistance]\n+20% to [Resistances|Chaos Resistance]\n+193 to [StunThreshold|Stun Threshold]"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 3 [Charm] Slots\n+150 [护甲]\n+110 最大生命\n[Charm] Effect Duration提高 21%\n+37% 冰霜抗性\n+20% 混沌抗性\n+193 晕眩门槛"
     },
     {
       "name": "踏趾靴",
@@ -85,7 +85,7 @@
       "baseType": "Trimmed Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VbmlxdWVzL1RyYW1wbGV0b2UiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/eed7a02130/Trampletoe.png",
       "rarity": 3,
-      "desc": "15% increased Movement Speed\n82% increased [Armour|Armour]\n50% increased [Attributes|Attribute] Requirements\nDeal 30% of [Overkill] damage to enemies within 2 metres of the enemy killed"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +11% 混沌抗性\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 15%\n护甲提高 82%\nAttribute Requirements提高 50%\nDeal 30% of [Overkill] damage to enemies within 2 metres of the enemy killed\n(已腐化)"
     }
   ],
   "skills": [

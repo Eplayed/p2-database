@@ -13,7 +13,7 @@
       "baseType": "Vaal Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/30e916dc14/GlovesStr05.png",
       "rarity": 2,
-      "desc": "Adds 11 to 25 [Fire] damage to [Attack|Attacks]\nAdds 7 to 13 [Cold] damage to [Attack|Attacks]\n+142 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n11% increased [Attack] Speed\n+31% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n附加 11 - 25 Attacks\n附加 7 - 13 Attacks\n+142 最大生命\n物品稀有度提高 16%\n[Attack] Speed提高 11%\n+31% 冰霜抗性"
     },
     {
       "name": "猎首",
@@ -21,7 +21,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+44 to maximum Life\n+22 to [Strength|Strength]\n+35 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +2% Maximum 火焰抗性\n(基底) 晕眩门槛提高 30%\n(基底) Has 2 [Charm] Slots\n+44 最大生命\n+22 力量\n+35 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Apocalypse Track (沙誓鞋履)",
@@ -29,7 +29,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+44 to maximum [EnergyShield|Energy Shield]\n63% increased [EnergyShield|Energy Shield]\n15% increased [ItemRarity|Rarity of Items] found\n+29 to [Intelligence|Intelligence]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 30%\n+44 最大能量护盾\n能量护盾提高 63%\n物品稀有度提高 15%\n+29 智慧"
     },
     {
       "name": "Kraken Guardian (士兵胸甲)",
@@ -37,7 +37,7 @@
       "baseType": "Soldier Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d5346c8ff4/BodyStr03.png",
       "rarity": 2,
-      "desc": "+321 to [Armour|Armour]\n133% increased [Armour|Armour]\n+30 to [Strength|Strength]\n+37% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+321 护甲\n护甲提高 133%\n+30 力量\n+37% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Brood Roar (预兆短杖)",
@@ -45,7 +45,7 @@
       "baseType": "Omen Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d2cc9f0ac1/Sceptre04.png",
       "rarity": 2,
-      "desc": "+155 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 45% increased Damage\n+27 to [Intelligence|Intelligence]\n[Minion|Minions] have 36% increased maximum Life\n63% increased Mana Regeneration Rate"
+      "desc": "(符文) Allies in your Presence deal Damage提高 90%\n(符文) Bonded: Damage while Shapeshifted提高 120%\n+155 最大魔力\nAllies in your Presence deal Damage提高 45%\n+27 智慧\nMinions have 最大生命提高 36%\n魔力回复速度提高 63%\n(已腐化)"
     },
     {
       "name": "Glyph Salvation (帝国巨盔)",
@@ -53,7 +53,7 @@
       "baseType": "Imperial Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a455b9fc43/HelmetStr07.png",
       "rarity": 2,
-      "desc": "+114 to [Armour|Armour]\n+128 to maximum Life\n25% reduced [Attributes|Attribute] Requirements\n+35% to [Resistances|Fire Resistance]\n+41% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +11% 混沌抗性\n+114 护甲\n+128 最大生命\nAttribute Requirements降低 25%\n+35% 火焰抗性\n+41% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Armageddon Loop (紫晶戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 13 to 22 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 4 to 82 [Lightning] damage to [Attack|Attacks]\n+263 to [Accuracy|Accuracy] Rating\n+36% to [Resistances|Fire Resistance]\n+42% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +12% 混沌抗性\n附加 13 - 22 物理伤害 to Attacks\n附加 4 - 82 Attacks\n+263 Accuracy Rating\n+36% 火焰抗性\n+42% 闪电抗性"
     },
     {
       "name": "Doom Nail (三相戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 16 to 30 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 19 to 34 [Cold] damage to [Attack|Attacks]\nAdds 1 to 42 [Lightning] damage to [Attack|Attacks]\n+42% to [Resistances|Fire Resistance]\n+33% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +8% all Elemental [Resistances]\n附加 16 - 30 物理伤害 to Attacks\n附加 19 - 34 Attacks\n附加 1 - 42 Attacks\n+42% 火焰抗性\n+33% 冰霜抗性"
     },
     {
       "name": "Sorrow Skin (Cruel Talisman)",
@@ -77,7 +77,7 @@
       "baseType": "Cruel Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvVmljaW91c1RhbGlzbWFuIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/10e044a5b7/ViciousTalisman.png",
       "rarity": 2,
-      "desc": "Adds 98 to 147 [Cold|Cold] Damage\n+60 to [Accuracy|Accuracy] Rating\n117% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n28% increased [Attack] Speed\n+5 to Level of all [Attack] Skills\n15% increased [LightRadius|Light Radius]"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 98 - 147 冰霜伤害\n+60 Accuracy Rating\n元素伤害 with Attacks提高 117%\n[Attack] Speed提高 28%\n+5 Level of all [Attack] Skills\nLight Radius提高 15%"
     },
     {
       "name": "Phoenix Locket (翠玉护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvSmFkZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac51014172/JadeAmulet.png",
       "rarity": 2,
-      "desc": "49% increased [Armour]\n17% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Melee|Melee] Skills\n+33% to [Resistances|Lightning Resistance]\n36% increased Global [Defences]"
+      "desc": "(附魔) Allocates Acceleration\n(基底) +12 敏捷\n[护甲]提高 49%\n物品稀有度提高 17%\n+3 Level of all Melee Skills\n+33% 闪电抗性\nGlobal [Defences]提高 36%"
     }
   ],
   "skills": [

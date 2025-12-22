@@ -13,7 +13,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 53% of Damage as Extra [Fire] Damage\n201% increased [Lightning] Damage\n+305 to maximum Mana\n+7 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n79% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) [Gain] 10% of Damage as Extra [Lightning] Damage\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: Magnitude of Shock you inflict提高 30%\n[Gain] 53% of Damage as Extra [Fire] Damage\n[Lightning] Damage提高 201%\n+305 最大魔力\n+7 Level of all Lightning Spell Skills\n暴击率 for Spells提高 79%"
     },
     {
       "name": "时空之肌",
@@ -21,7 +21,7 @@
       "baseType": "Silk Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL1BpbGdyaW1zSW1hZ2UiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/69db95b9aa/PilgrimsImage.png",
       "rarity": 3,
-      "desc": "+122 to maximum [EnergyShield|Energy Shield]\n+18% to all [ElementalDamage|Elemental] [Resistances]\n17% of Damage taken [Recoup|Recouped] as Life\n23% of Damage taken [Recoup|Recouped] as Mana\nSkills have -1.77 seconds to Cooldown"
+      "desc": "(符文) 最大生命提高 3%\n(符文) effect of Curses on you降低 50%\n(符文) Bonded: Magnitudes提高 8%\n+122 最大能量护盾\n+18% all Elemental [Resistances]\n17% of Damage taken Recouped as Life\n23% of Damage taken Recouped as Mana\nSkills have -1.77 seconds to Cooldown"
     },
     {
       "name": "Woe Pillar (鸣谐长杖)",
@@ -29,7 +29,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 49% of Damage as Extra [Fire] Damage\n+5 to Level of all [Spell|Spell] Skills\n21% increased Cast Speed"
+      "desc": "[Gain] 49% of Damage as Extra [Fire] Damage\n+5 Level of all Spell Skills\n施法速度提高 21%"
     },
     {
       "name": "Rage Knuckle (紫晶戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 19 to 29 [Fire] damage to [Attack|Attacks]\n+123 to maximum Life\n34% increased [ItemRarity|Rarity of Items] found\n21% increased Cast Speed"
+      "desc": "(基底) +13% 混沌抗性\n附加 19 - 29 Attacks\n+123 最大生命\n物品稀有度提高 34%\n施法速度提高 21%"
     },
     {
       "name": "Hate Dash (沙誓鞋履)",
@@ -45,7 +45,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+141 to maximum Life\n+20% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]\n+16% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+141 最大生命\n+20% 火焰抗性\n+37% 冰霜抗性\n+16% 混沌抗性"
     },
     {
       "name": "Behemoth Strap (重革腰带)",
@@ -53,7 +53,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwOSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3299e86495/Belt09.png",
       "rarity": 2,
-      "desc": "+190 to [Armour]\n+164 to maximum Life\n+37% to [Resistances|Fire Resistance]\n+42% to [Resistances|Cold Resistance]\n105 to 185 [Physical|Physical] [Thorns|Thorns] damage"
+      "desc": "(基底) 晕眩门槛提高 28%\n(基底) Has 3 [Charm] Slots\n+190 [护甲]\n+164 最大生命\n+37% 火焰抗性\n+42% 冰霜抗性\n105 to 185 Physical Thorns damage"
     },
     {
       "name": "Mind Spiral (紫晶戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "27% increased [Fire] Damage\n+121 to maximum Life\n35% increased [ItemRarity|Rarity of Items] found\n21% increased Cast Speed\n17.5 Life Regeneration per second"
+      "desc": "(基底) +13% 混沌抗性\n[Fire] Damage提高 27%\n+121 最大生命\n物品稀有度提高 35%\n施法速度提高 21%\n17.5 Life Regeneration per second"
     },
     {
       "name": "Beast Salvation (先祖冠冕)",
@@ -69,7 +69,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "42% increased [EnergyShield|Energy Shield]\n+169 to maximum Life\n+35 to maximum Mana\n18% increased [ItemRarity|Rarity of Items] found\n+29 to [Intelligence|Intelligence]\n+40% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 42%\n+169 最大生命\n+35 最大魔力\n物品稀有度提高 18%\n+29 智慧\n+40% 火焰抗性\n+44% 冰霜抗性"
     },
     {
       "name": "暴风之语",
@@ -77,7 +77,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0Nob2lyT2ZUaGVTdG9ybSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/59c9c7bfc8/ChoirOfTheStorm.png",
       "rarity": 3,
-      "desc": "+100% to [Resistances|Lightning Resistance]\n[Critical|Critical Hits] [IgnoreResistances|Ignore] Enemy Monster [Resistances|Lightning Resistance]\n[Trigger] Lightning Bolt Skill on [Critical|Critical Hit]"
+      "desc": "(附魔) Allocates Cooked\n(基底) +10 敏捷\n+100% 闪电抗性\nCritical Hits Ignore Enemy Monster 闪电抗性\nCritical Hit"
     },
     {
       "name": "Atziri's Acuity",
@@ -85,7 +85,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "84% increased [Armour|Armour]\n50% increased [Critical|Critical Hit] Chance\n+30 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n护甲提高 84%\n暴击率提高 50%\n+30 智慧\nCritical Hits is instant"
     }
   ],
   "skills": [

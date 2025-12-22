@@ -13,7 +13,7 @@
       "baseType": "Secured Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VbmlxdWVzL1dha2VPZkRlc3RydWN0aW9uIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cca716f5a6/WakeOfDestruction.png",
       "rarity": 3,
-      "desc": "10% increased Movement Speed\n30% increased [Armour|Armour] and [EnergyShield|Energy Shield]\nAdds 1 to 37 [Lightning] damage to [Attack|Attacks]\nDrop [ShockedGround|Shocked Ground] while moving, lasting 8 seconds"
+      "desc": "(附魔) +3% Maximum 闪电抗性\n(附魔) +21% 冰霜抗性\n(符文) +28% 闪电抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n移动速度提高 10%\n护甲 and 能量护盾提高 30%\n附加 1 - 37 Attacks\nDrop Shocked Ground while moving, lasting 8 seconds\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -21,7 +21,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+54 to maximum Life\n+39 to [Strength|Strength]\n+36 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 27%\n(基底) Has 3 [Charm] Slots\n+54 最大生命\n+39 力量\n+36 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Dread Hold (裂隙戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 82 [Lightning] damage to [Attack|Attacks]\n36% increased [Lightning] Damage\n19% increased [ItemRarity|Rarity of Items] found\n+21% to all [ElementalDamage|Elemental] [Resistances]\n+42% to [Resistances|Fire Resistance]\n+61% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 1 - 82 Attacks\n[Lightning] Damage提高 36%\n物品稀有度提高 19%\n+21% all Elemental [Resistances]\n+42% 火焰抗性\n+61% 闪电抗性"
     },
     {
       "name": "Empyrean Edge (阿科扬战矛)",
@@ -37,7 +37,7 @@
       "baseType": "Akoyan Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIxMCIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/114525ad0e/1HSpear10.png",
       "rarity": 2,
-      "desc": "75% increased [Physical] Damage\nAdds 36 to 64 [Physical|Physical] Damage\n+175 to [Accuracy|Accuracy] Rating\n+3 to Level of all [Attack] Skills\n22% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 75%\n附加 36 - 64 物理伤害\n+175 Accuracy Rating\n+3 Level of all [Attack] Skills\n22% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Glyph Grasp (闪耀护腕)",
@@ -45,7 +45,7 @@
       "baseType": "Polished Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f400b5dc10/GlovesDex06.png",
       "rarity": 2,
-      "desc": "42% increased [Evasion|Evasion] Rating\nAdds 25 to 45 [Fire] damage to [Attack|Attacks]\n+176 to maximum Life\n+32% to [Resistances|Cold Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) [Attack] Speed提高 12%\n(符文) +17% 混沌抗性\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 48%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 24%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n闪避值 Rating提高 42%\n附加 25 - 45 Attacks\n+176 最大生命\n+32% 冰霜抗性\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Ghoul Brow (劫掠者之帽)",
@@ -53,7 +53,7 @@
       "baseType": "Freebooter Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXgwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/74f4fa374e/HelmetDex07.png",
       "rarity": 2,
-      "desc": "+162 to [Evasion] Rating\n93% increased [Evasion|Evasion] Rating\n+169 to maximum Life\n+29% to [Resistances|Fire Resistance]\n+14% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+162 [闪避值] Rating\n闪避值 Rating提高 93%\n+169 最大生命\n+29% 火焰抗性\n+14% 混沌抗性"
     },
     {
       "name": "Skull Nail (紫晶戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 26 to 40 [Fire] damage to [Attack|Attacks]\n+112 to maximum Life\n+30% to [Resistances|Fire Resistance]\n+43% to [Resistances|Cold Resistance]\nGain 17 Mana per enemy killed"
+      "desc": "(基底) +9% 混沌抗性\n附加 26 - 40 Attacks\n+112 最大生命\n+30% 火焰抗性\n+43% 冰霜抗性\nGain 17 Mana per enemy killed"
     },
     {
       "name": "Hyrri's Ire",
@@ -69,7 +69,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "228% increased [Evasion|Evasion] Rating\n[Gain] 24% of Damage as Extra [Cold] Damage\n+37 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 38%\n闪避值 Rating提高 228%\n[Gain] 24% of Damage as Extra [Cold] Damage\n+37 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]"
     },
     {
       "name": "神圣之火",
@@ -77,7 +77,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL1NhY3JlZEZsYW1lIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f6c6572ac6/SacredFlame.png",
       "rarity": 3,
-      "desc": "[Gain] 60% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.7% of their Maximum Life per second\n[Allies|Allies] in your [Presence|Presence] [Gain|Gain] 21% of Damage as Extra Fire Damage\nEnemies in your [Presence|Presence] Resist [ElementalDamage|Elemental Damage] based on their Lowest [Resistances|Resistance]"
+      "desc": "(符文) Spirit提高 20%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 60%\n[Gain] 60% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.7% of their Maximum Life per second\nAllies in your Presence Gain 21% of Damage as Extra 火焰伤害\nEnemies in your Presence Resist 元素伤害 based on their Lowest Resistance\n(已腐化)"
     },
     {
       "name": "Torment Rosary (日曜护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+136 to maximum Life\n18% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Projectile] Skills\n+25 to [Intelligence|Intelligence]\n34% increased Global [Defences]"
+      "desc": "(附魔) Allocates Overwhelming Strike\n(基底) +14 Spirit\n+136 最大生命\n物品稀有度提高 18%\n+3 Level of all [Projectile] Skills\n+25 智慧\nGlobal [Defences]提高 34%"
     },
     {
       "name": "苍穹裂片",
@@ -93,7 +93,7 @@
       "baseType": "Winged Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzL1VuaXF1ZXMvU2t5c2xpdmVyIiwidyI6MSwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b495502d39/Skysliver.png",
       "rarity": 3,
-      "desc": "No [Physical] Damage\nAdds 1 to 107 [Lightning|Lightning] Damage\n30% increased [Attack] Speed\n63% increased chance to [Shock]\n[BooleanDamageRoll|Rolls only the minimum or maximum Damage value] for each [DamageTypes|Damage Type]"
+      "desc": "(附魔) [Physical] Damage提高 22%\n(附魔) [Attack] Speed提高 8%\n(符文) [Attack] Speed提高 5%\nNo [Physical] Damage\n附加 1 - 107 闪电伤害\n[Attack] Speed提高 30%\nchance to [Shock]提高 63%\nRolls only the minimum or maximum Damage value for each Damage Type\n(已腐化)"
     }
   ],
   "skills": [

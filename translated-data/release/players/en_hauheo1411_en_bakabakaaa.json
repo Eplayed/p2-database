@@ -13,7 +13,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 32 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 24 to 40 [Fire] damage to [Attack|Attacks]\nAdds 26 to 43 [Cold] damage to [Attack|Attacks]\n18% increased [ItemRarity|Rarity of Items] found\n+40% to [Resistances|Cold Resistance]\n+22% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +7% 混沌抗性\n附加 14 - 32 物理伤害 to Attacks\n附加 24 - 40 Attacks\n附加 26 - 43 Attacks\n物品稀有度提高 18%\n+40% 冰霜抗性\n+22% 闪电抗性"
     },
     {
       "name": "Kalandra's Touch",
@@ -29,7 +29,7 @@
       "baseType": "Corsair Coat",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleDEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4451ea3f74/BodyDex10.png",
       "rarity": 2,
-      "desc": "38% increased [Evasion|Evasion] Rating\n+225 to maximum Life\n10% increased maximum Life\n+22% to [Resistances|Fire Resistance]\n+34% to [Resistances|Lightning Resistance]\n+26% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 最大生命提高 9%\n(基底) 移动速度提高 5%\n闪避值 Rating提高 38%\n+225 最大生命\n最大生命提高 10%\n+22% 火焰抗性\n+34% 闪电抗性\n+26% 混沌抗性\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+46 to maximum Life\n+38 to [Strength|Strength]\n+32 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +15 敏捷\n(基底) 晕眩门槛提高 24%\n(基底) Has 2 [Charm] Slots\n+46 最大生命\n+38 力量\n+32 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Pain Nails (华丽护手)",
@@ -45,7 +45,7 @@
       "baseType": "Ornate Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/041d8df186/GlovesStr04.png",
       "rarity": 2,
-      "desc": "Adds 7 to 15 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 13 to 19 [Fire] damage to [Attack|Attacks]\nAdds 1 to 31 [Lightning] damage to [Attack|Attacks]\n14% increased [Attack] Speed\n+37% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 附加 5 - 12 物理伤害 to Attacks\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n(符文) Bonded: Fissure Skills have +2 [Limit]\n附加 7 - 15 物理伤害 to Attacks\n附加 13 - 19 Attacks\n附加 1 - 31 Attacks\n[Attack] Speed提高 14%\n+37% 火焰抗性\n(已腐化)"
     },
     {
       "name": "Blight Locket (日曜护身符)",
@@ -53,7 +53,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+111 to maximum Life\n+147 to maximum Mana\n+3 to Level of all [Projectile] Skills\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) Allocates Stormcharged\n(附魔) Leech 2% of [Physical] [Attack] Damage as Mana\n(基底) +10 Spirit\n+111 最大生命\n+147 最大魔力\n+3 Level of all [Projectile] Skills\n+34% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Hypnotic Trail (魅力便鞋)",
@@ -61,7 +61,7 @@
       "baseType": "Charmed Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2c646ce419/BootsDexInt02.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+130 to maximum Life\n+110 to maximum Mana\n+29 to [Dexterity|Dexterity]\n+24% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) 能量护盾提高 15%\n(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+130 最大生命\n+110 最大魔力\n+29 敏捷\n+24% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Pandemonium Corona (法里顿面具)",
@@ -69,7 +69,7 @@
       "baseType": "Faridun Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/1322e46f92/HelmetDexInt04.png",
       "rarity": 2,
-      "desc": "28% increased [Evasion] and [EnergyShield|Energy Shield]\n+152 to maximum Life\n+24 to maximum Mana\n14% increased [ItemRarity|Rarity of Items] found\n33% increased [Critical|Critical Hit] Chance\n+28% to [Resistances|Fire Resistance]\n+28% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n能量护盾提高 28%\n+152 最大生命\n+24 最大魔力\n物品稀有度提高 14%\n暴击率提高 33%\n+28% 火焰抗性\n+28% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Wrath Branch (寻战之弓)",
@@ -77,7 +77,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "62% increased [Physical] Damage\n+133 to [Accuracy|Accuracy] Rating\n94% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+4.91% to [Critical|Critical Hit] Chance\n21% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 62%\n+133 Accuracy Rating\n元素伤害 with Attacks提高 94%\n+4.91% 暴击率\n21% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Doom Barb (贯心箭袋)",
@@ -85,7 +85,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 17 to 32 [Physical|Physical] Damage to [Attack|Attacks]\n50% increased Damage with Bow Skills\n35% increased [Critical|Critical Hit Chance] for [Attack|Attacks]\n16% increased [Attack] Speed"
+      "desc": "(附魔) Skill Speed提高 6%\n(基底) 暴击率 for Attacks提高 28%\n附加 17 - 32 物理伤害 to Attacks\nDamage with Bow Skills提高 50%\n暴击率 for Attacks提高 35%\n[Attack] Speed提高 16%\n(已腐化)"
     }
   ],
   "skills": [
@@ -104,9 +104,9 @@
           "isSupport": true
         },
         {
-          "name": "从容不迫",
-          "originalName": "Deliberation",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DZXNzYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a70bb9bb3b/CessationSupportGem.png",
+          "name": "冻结",
+          "originalName": "Freeze",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9IeXBvdGhlcm1pYVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7cbdd8a882/HypothermiaSupportGem.png",
           "isSupport": true
         },
         {

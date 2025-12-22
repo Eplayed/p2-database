@@ -13,7 +13,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+94 to maximum [EnergyShield|Energy Shield]\n107% increased [EnergyShield|Energy Shield]\n+55 to [Spirit|Spirit]\n+29% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]\n57% reduced [Poison|Poison] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+94 最大能量护盾\n能量护盾提高 107%\n+55 Spirit\n+29% 火焰抗性\n+45% 闪电抗性\nPoison Duration on you降低 57%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -21,7 +21,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "60% increased [Evasion|Evasion] Rating\n30% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+17 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(附魔) Damage Penetrates 11% 火焰抗性\n闪避值 Rating提高 60%\n暴击率提高 30%\n[Attack] Speed提高 5%\n+17 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Miracle Brow (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+69 to maximum [EnergyShield|Energy Shield]\n98% increased [EnergyShield|Energy Shield]\n+91 to maximum Mana\n+38% to [Resistances|Fire Resistance]\n+39% to [Resistances|Cold Resistance]\n36% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+69 最大能量护盾\n能量护盾提高 98%\n+91 最大魔力\n+38% 火焰抗性\n+39% 冰霜抗性\n能量护盾 Recharge Rate提高 36%"
     },
     {
       "name": "Blood Stride (丝克玛便鞋)",
@@ -37,7 +37,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+42 to maximum [EnergyShield|Energy Shield]\n34% increased [EnergyShield|Energy Shield]\n+32% to [Resistances|Cold Resistance]\n+41% to [Resistances|Lightning Resistance]\n+405 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+42 最大能量护盾\n能量护盾提高 34%\n+32% 冰霜抗性\n+41% 闪电抗性\n+405 晕眩门槛"
     },
     {
       "name": "Sorrow Pile (鸣谐长杖)",
@@ -45,7 +45,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 28% of Damage as Extra [Cold] Damage\n128% increased [Spell] Damage\n76% increased [Spell] [Physical] Damage\n+5 to Level of all [Spell|Spell] Skills\n52% increased Cast Speed\n+16 to [Intelligence|Intelligence]"
+      "desc": "(符文) +50 最大魔力\n(符文) 魔力回复速度提高 24%\n(符文) Bonded: 最大魔力提高 5%\n(符文) Bonded: Mana Cost [Efficiency]提高 16%\n[Gain] 28% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 128%\n[Spell] [Physical] Damage提高 76%\n+5 Level of all Spell Skills\n施法速度提高 52%\n+16 智慧"
     },
     {
       "name": "Dire Band (三相戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "30% increased [Fire] Damage\n+137 to [Accuracy|Accuracy] Rating\n+168 to maximum Mana\n15% increased [ItemRarity|Rarity of Items] found\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+25% to [Resistances|Fire Resistance]"
+      "desc": "(基底) +9% all Elemental [Resistances]\n[Fire] Damage提高 30%\n+137 Accuracy Rating\n+168 最大魔力\n物品稀有度提高 15%\n+16% all Elemental [Resistances]\n+25% 火焰抗性"
     },
     {
       "name": "Skull Bane (鸣谐长杖)",
@@ -61,7 +61,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 57% of Damage as Extra [Fire] Damage\n[Gain] 50% of Damage as Extra [Cold] Damage\n188% increased [Spell] Damage\n30% reduced [Attributes|Attribute] Requirements\n+7 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n+28 to [Intelligence|Intelligence]"
+      "desc": "(符文) [Gain] 20% of Damage as Extra [Cold] Damage\n(符文) Bonded: Freeze Buildup提高 60%\n[Gain] 57% of Damage as Extra [Fire] Damage\n[Gain] 50% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 188%\nAttribute Requirements降低 30%\n+7 Level of all Lightning Spell Skills\n+28 智慧"
     },
     {
       "name": "Domination Trap (亚麻腰带)",
@@ -69,7 +69,7 @@
       "baseType": "Linen Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwMiIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/45c1e6bfa2/Belt02.png",
       "rarity": 2,
-      "desc": "+250 to [Armour]\n+22 to maximum Mana\n28% increased [Flask] Mana Recovery rate\n+18 to [Strength|Strength]\n+39% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Mana Recovery from Flasks提高 20%\n(基底) Has 3 [Charm] Slots\n+250 [护甲]\n+22 最大魔力\n[Flask] Mana Recovery rate提高 28%\n+18 力量\n+39% 冰霜抗性\n+34% 闪电抗性"
     },
     {
       "name": "Behemoth Whorl (金光戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 31 [Lightning] damage to [Attack|Attacks]\n+157 to [Accuracy|Accuracy] Rating\n29% increased [ItemRarity|Rarity of Items] found\n22% increased Cast Speed\n+24 to [Dexterity|Dexterity]"
+      "desc": "(基底) 物品稀有度提高 12%\n附加 1 - 31 Attacks\n+157 Accuracy Rating\n物品稀有度提高 29%\n施法速度提高 22%\n+24 敏捷"
     },
     {
       "name": "Agony Braid (琥珀护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "+85 to maximum [EnergyShield|Energy Shield]\n60% increased maximum [EnergyShield|Energy Shield]\n28% increased Cast Speed\n+31 to [Strength|Strength]"
+      "desc": "(附魔) Allocates Conservative Casting\n(基底) +13 力量\n+85 最大能量护盾\n最大能量护盾提高 60%\n施法速度提高 28%\n+31 力量"
     }
   ],
   "skills": [

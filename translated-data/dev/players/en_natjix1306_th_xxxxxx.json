@@ -13,7 +13,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL09wZW5QYWxtT2ZUaGVEcmVhbWVyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fa5b4a4e00/OpenPalmOfTheDreamer.png",
       "rarity": 3,
-      "desc": "[Allies|Allies] in your [Presence|Presence] deal 14 to 32 added [Attack|Attack] [Chaos] Damage\n+9 to all [Attributes|Attributes]\n23% reduced [LightRadius|Light Radius]\n1% reduced Skill Effect Duration\n[Gain] 27% of Damage as Extra [Chaos] Damage\nGrants effect of [UniqueShrineChaos|Dreaming Gloom Shrine]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\nAllies in your Presence deal 14 to 32 added Attack [Chaos] Damage\n+9 全属性\nLight Radius降低 23%\nSkill Effect Duration降低 1%\n[Gain] 27% of Damage as Extra [Chaos] Damage\nGrants effect of Dreaming Gloom Shrine\n(已腐化)"
     },
     {
       "name": "Behemoth Nail (黄玉戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "27% increased [Chaos] Damage\n21% increased Cast Speed\n+35% to [Resistances|Cold Resistance]\n46% increased Mana Regeneration Rate"
+      "desc": "(基底) +21% 闪电抗性\n[Chaos] Damage提高 27%\n施法速度提高 21%\n+35% 冰霜抗性\n魔力回复速度提高 46%"
     },
     {
       "name": "Woe Post (鸣谐长杖)",
@@ -29,7 +29,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 49% of Damage as Extra [Lightning] Damage\n75% increased [Spell] Damage\n139% increased [Chaos] Damage\n+70 to maximum Mana\n20% reduced [Attributes|Attribute] Requirements\n+4 to Level of all [Chaos|Chaos] [Spell|Spell] Skills"
+      "desc": "(符文) [Spell] Damage提高 60%\n(符文) Bonded: Break Critical Hit with Spells equal to 24% of 物理伤害 dealt\n[Gain] 49% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 75%\n[Chaos] Damage提高 139%\n+70 最大魔力\nAttribute Requirements降低 20%\n+4 Level of all Chaos Spell Skills"
     },
     {
       "name": "Vengeance Knuckle (珠玉戒指)",
@@ -37,7 +37,15 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "Adds 10 to 16 [Physical|Physical] Damage to [Attack|Attacks]\n6% increased [Cold] Damage\n28% increased [Chaos] Damage\n+36% to [Resistances|Lightning Resistance]\n53% increased Mana Regeneration Rate"
+      "desc": "(基底) 施法速度提高 7%\n附加 10 - 16 物理伤害 to Attacks\n[Cold] Damage提高 6%\n[Chaos] Damage提高 28%\n+36% 闪电抗性\n魔力回复速度提高 53%"
+    },
+    {
+      "name": "Eagle Branch (决斗法杖)",
+      "originalName": "Eagle Branch",
+      "baseType": "Dueling Wand",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
+      "rarity": 2,
+      "desc": "(符文) [Spell] Damage提高 30%\n(符文) Bonded: Break Critical Hit with Spells equal to 12% of 物理伤害 dealt\n[Gain] 26% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 115%\n+5 Level of all Chaos Spell Skills\n+29 智慧"
     },
     {
       "name": "Phoenix Keep (卡马萨冠冕)",
@@ -45,7 +53,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "114% increased [EnergyShield|Energy Shield]\n+27 to maximum Mana\n19% increased [ItemRarity|Rarity of Items] found\n+39% to [Resistances|Fire Resistance]\n+39% to [Resistances|Cold Resistance]\n22.6 Life Regeneration per second"
+      "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n能量护盾提高 114%\n+27 最大魔力\n物品稀有度提高 19%\n+39% 火焰抗性\n+39% 冰霜抗性\n22.6 Life Regeneration per second"
     },
     {
       "name": "Ghoul Track (沙誓鞋履)",
@@ -53,7 +61,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+56 to maximum [EnergyShield|Energy Shield]\n41% increased [EnergyShield|Energy Shield]\n+13% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]\n+105 to [StunThreshold|Stun Threshold]\n52% reduced [Chill|Chill] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+56 最大能量护盾\n能量护盾提高 41%\n+13% 火焰抗性\n+35% 闪电抗性\n+105 晕眩门槛\nChill Duration on you降低 52%"
     },
     {
       "name": "Beast Beads (赤红护身符)",
@@ -61,7 +69,7 @@
       "baseType": "Crimson Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQ3JpbXNvbkFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6306715ae7/CrimsonAmulet.png",
       "rarity": 2,
-      "desc": "29% increased maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Spell|Spell] Skills\n+12% to all [ElementalDamage|Elemental] [Resistances]\n+32% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) Allocates Ancient Aegis\n(基底) 2.7 Life Regeneration per second\n最大能量护盾提高 29%\n+3 Level of all Spell Skills\n+12% all Elemental [Resistances]\n+32% 火焰抗性"
     },
     {
       "name": "Apocalypse Coat (邪恶束衣)",
@@ -69,7 +77,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+86 to maximum [EnergyShield|Energy Shield]\n96% increased [EnergyShield|Energy Shield]\n+29 to [Intelligence|Intelligence]\n+39% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+86 最大能量护盾\n能量护盾提高 96%\n+29 智慧\n+39% 火焰抗性\n+38% 冰霜抗性"
     },
     {
       "name": "Behemoth Hand (瓦尔手套)",
@@ -77,15 +85,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "95% increased [EnergyShield|Energy Shield]\nAdds 1 to 21 [Lightning] damage to [Attack|Attacks]\n+61 to maximum Life\n+32% to [Resistances|Lightning Resistance]\n44% increased [ESRechargeRate|Energy Shield Recharge Rate]\nGain 72 Life per enemy killed"
-    },
-    {
-      "name": "Dire Weaver (凋零法杖)",
-      "originalName": "Dire Weaver",
-      "baseType": "Withered Wand",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDAxIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8b127e7050/Wand01.png",
-      "rarity": 2,
-      "desc": "152% increased [Spell] Damage\n+34 to maximum Mana\n+4 to Level of all [Chaos|Chaos] [Spell|Spell] Skills\n25% increased Cast Speed\n+29 to [Intelligence|Intelligence]"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n能量护盾提高 95%\n附加 1 - 21 Attacks\n+61 最大生命\n+32% 闪电抗性\n能量护盾 Recharge Rate提高 44%\nGain 72 Life per enemy killed"
     },
     {
       "name": "Rapture Wish (涡旋法器)",
@@ -93,7 +93,7 @@
       "baseType": "Whorl Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fae6589795/Focus10.png",
       "rarity": 2,
-      "desc": "32% increased [Chaos] Damage\n+10 to maximum Mana\n+2 to Level of all [Spell|Spell] Skills\n+8 to [Intelligence|Intelligence]\n42% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 30% faster start of 能量护盾 Recharge\n[Chaos] Damage提高 32%\n+10 最大魔力\n+2 Level of all Spell Skills\n+8 智慧\n能量护盾 Recharge Rate提高 42%"
     },
     {
       "name": "猎首",
@@ -101,7 +101,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+41 to maximum Life\n+21 to [Strength|Strength]\n+32 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 22%\n(基底) Has 2 [Charm] Slots\n+41 最大生命\n+21 力量\n+32 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     }
   ],
   "skills": [
@@ -178,9 +178,9 @@
           "isSupport": true
         },
         {
-          "name": "极速腐化 II",
-          "originalName": "Swift Affliction II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Td2lmdEFmZmxpY3Rpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8bd5b03bf8/SwiftAfflictionSupportGem.png",
+          "name": "机动",
+          "originalName": "Mobility",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb2JpbGl0eVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b5771e1aa2/MobilitySupportGem.png",
           "isSupport": true
         }
       ]
@@ -268,6 +268,40 @@
     {
       "gems": [
         {
+          "name": "紧急时刻",
+          "originalName": "Time of Need",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvVGltZU9mTmVlZFNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/38f422e7e1/TimeOfNeedSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "持续时间压缩 II",
+          "originalName": "Compressed Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MZXNzRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5d61c1a8eb/LessDurationSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "灵秘 I",
+          "originalName": "Mysticism I",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9NeXN0aWNpc21TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/19475ca1f0/MysticismSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "冷静头脑",
+          "originalName": "Cool Headed",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db29sSGVhZGVkU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6694f34aa4/CoolHeadedSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "温热血脉",
+          "originalName": "Warm Blooded",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XYXJtQmxvb2RlZFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/ff54a4beb2/WarmBloodedSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
           "name": "诅咒光环",
           "originalName": "Blasphemy",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hCbGFzcGhlbXlTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/47fe56538a/WitchBlasphemySkillGem.png",
@@ -302,34 +336,6 @@
     {
       "gems": [
         {
-          "name": "混沌箭",
-          "originalName": "Chaos Bolt",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "Zarokh's Revolt",
-          "originalName": "Zarokh's Revolt",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1phcm9raHNSZXZvbHQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/804c776d70/ZarokhsRevolt.png",
-          "isSupport": true
-        },
-        {
-          "name": "投射物加速 III",
-          "originalName": "Projectile Acceleration III",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJQcm9qZWN0aWxlc1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b901131b04/FasterProjectilesSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "天顶 I",
-          "originalName": "Zenith I",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9NYW5hdGVuYW5jZVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b087f3e886/ManatenanceSupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
           "name": "饕餮虫群",
           "originalName": "Ravenous Swarm",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hSYXZlbm91c1N3YXJtU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6ea4d43b31/WitchRavenousSwarmSkillGem.png",
@@ -351,6 +357,34 @@
           "name": "持续时间延长 II",
           "originalName": "Prolonged Duration II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
+          "name": "凋零姿态",
+          "originalName": "Withering Presence",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hXaXRoZXJpbmdQcmVzZW5jZVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b08ee5f059/WitchWitheringPresenceSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "持续时间延长 II",
+          "originalName": "Prolonged Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "混沌专精",
+          "originalName": "Chaos Mastery",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFvc01hc3RlcnlTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cedd39c5b/ChaosMasterySupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "清晰 I",
+          "originalName": "Clarity I",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbGFyaXR5U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b8cfb97d8c/ClaritySupportGem.png",
           "isSupport": true
         }
       ]
@@ -402,44 +436,16 @@
     {
       "gems": [
         {
-          "name": "紧急时刻",
-          "originalName": "Time of Need",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvVGltZU9mTmVlZFNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/38f422e7e1/TimeOfNeedSkillGem.png",
+          "name": "法术节魔",
+          "originalName": "Spellslinger",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRWxlbWVudGFsSW52b2NhdGlvbk1ldGFTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/94722beec3/ElementalInvocationMetaSkillGem.png",
           "isSupport": false
         },
         {
-          "name": "持续时间压缩 II",
-          "originalName": "Compressed Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MZXNzRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5d61c1a8eb/LessDurationSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "清晰 I",
-          "originalName": "Clarity I",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbGFyaXR5U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b8cfb97d8c/ClaritySupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "凋零姿态",
-          "originalName": "Withering Presence",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hXaXRoZXJpbmdQcmVzZW5jZVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b08ee5f059/WitchWitheringPresenceSkillGem.png",
+          "name": "彗星落",
+          "originalName": "Comet",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29tZXRTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/212d23c28b/CometSkillGem.png",
           "isSupport": false
-        },
-        {
-          "name": "持续时间延长 II",
-          "originalName": "Prolonged Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "混沌专精",
-          "originalName": "Chaos Mastery",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFvc01hc3RlcnlTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cedd39c5b/ChaosMasterySupportGem.png",
-          "isSupport": true
         }
       ]
     },

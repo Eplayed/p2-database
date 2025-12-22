@@ -1,0 +1,24 @@
+{
+  "name": "poe2-translate-crawler-fc",
+  "version": "1.0.0",
+  "description": "阿里云函数计算版本的流放之路2数据翻译爬虫",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer-core": "^21.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "poe2",
+    "crawler",
+    "translation",
+    "alibaba-cloud",
+    "function-compute"
+  ],
+  "author": "",
+  "license": "MIT"
+}

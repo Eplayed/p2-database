@@ -13,7 +13,7 @@
       "baseType": "Gelid Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDIiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/39b0c10007/Staff02.png",
       "rarity": 2,
-      "desc": "[Gain] 52% of Damage as Extra [Fire] Damage\n[Gain] 54% of Damage as Extra [Lightning] Damage\n149% increased [Spell] Damage\n+5 to Level of all [Spell|Spell] Skills\n36% increased Cast Speed\n+8 to [Intelligence|Intelligence]"
+      "desc": "(符文) [Gain] 20% of Damage as Extra [Lightning] Damage\n(符文) Bonded: Magnitude of Shock you inflict提高 60%\n[Gain] 52% of Damage as Extra [Fire] Damage\n[Gain] 54% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 149%\n+5 Level of all Spell Skills\n施法速度提高 36%\n+8 智慧"
     },
     {
       "name": "Wrath Idol (星辉护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "29% increased [Spell] Damage\n+172 to maximum Mana\n+3 to Level of all [Spell|Spell] Skills\n+14% to all [ElementalDamage|Elemental] [Resistances]\n+38% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) Allocates Hastening Barrier\n(基底) +6 全属性\n[Spell] Damage提高 29%\n+172 最大魔力\n+3 Level of all Spell Skills\n+14% all Elemental [Resistances]\n+38% 火焰抗性"
     },
     {
       "name": "Pandemonium March (丝克玛便鞋)",
@@ -29,7 +29,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n92% increased [EnergyShield|Energy Shield]\n+31 to maximum Mana\n16% increased [ItemRarity|Rarity of Items] found\n+28% to [Resistances|Fire Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n能量护盾提高 92%\n+31 最大魔力\n物品稀有度提高 16%\n+28% 火焰抗性\n+36% 闪电抗性"
     },
     {
       "name": "Dread Gyre (黄玉戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "24% increased [Lightning] Damage\n+195 to [Evasion] Rating\n22% increased Cast Speed\n+12% to all [ElementalDamage|Elemental] [Resistances]\n+37% to [Resistances|Fire Resistance]"
+      "desc": "(基底) +27% 闪电抗性\n[Lightning] Damage提高 24%\n+195 [闪避值] Rating\n施法速度提高 22%\n+12% all Elemental [Resistances]\n+37% 火焰抗性"
     },
     {
       "name": "Maelström Star (卡马萨冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+69 to maximum [EnergyShield|Energy Shield]\n111% increased [EnergyShield|Energy Shield]\n+33 to maximum Mana\n+31% to [Resistances|Cold Resistance]\n45% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+69 最大能量护盾\n能量护盾提高 111%\n+33 最大魔力\n+31% 冰霜抗性\n能量护盾 Recharge Rate提高 45%"
     },
     {
       "name": "Oblivion Carapace (飘逸之衣)",
@@ -53,7 +53,7 @@
       "baseType": "Flowing Raiment",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f868a6a214/BodyInt06.png",
       "rarity": 2,
-      "desc": "+93 to maximum [EnergyShield|Energy Shield]\n95% increased [EnergyShield|Energy Shield]\n+52 to [Spirit|Spirit]\n+35% to [Resistances|Cold Resistance]\n32 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 魔力回复速度提高 41%\n+93 最大能量护盾\n能量护盾提高 95%\n+52 Spirit\n+35% 冰霜抗性\n32 Life Regeneration per second"
     },
     {
       "name": "Shavronne's Satchel",
@@ -61,7 +61,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
       "rarity": 3,
-      "desc": "26% reduced [Flask] Life Recovery rate\n+21 to [Intelligence|Intelligence]\n25% increased [Flask|Flask] Charges gained\nLife Recovery from [Flask|Flasks] also applies to [EnergyShield|Energy Shield]"
+      "desc": "(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 26%\n+21 智慧\nFlask Charges gained提高 25%\nLife Recovery from Flasks also applies to 能量护盾"
     },
     {
       "name": "Demon Gyre (裂隙戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+31 to [Accuracy|Accuracy] Rating\n+55 to [Evasion] Rating\n+67 to maximum Mana\n23% increased Cast Speed\n+35% to [Resistances|Cold Resistance]\n+30% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n+31 Accuracy Rating\n+55 [闪避值] Rating\n+67 最大魔力\n施法速度提高 23%\n+35% 冰霜抗性\n+30% 闪电抗性"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -77,7 +77,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "73% increased [Evasion|Evasion] Rating\n23% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+15 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 73%\n暴击率提高 23%\n[Attack] Speed提高 5%\n+15 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%"
     }
   ],
   "skills": [

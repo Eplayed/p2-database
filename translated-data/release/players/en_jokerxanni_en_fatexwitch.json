@@ -13,7 +13,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+53 to maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Spell|Spell] Skills\n28% increased Cast Speed\n+20 to all [Attributes|Attributes]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +12 Spirit\n+53 最大能量护盾\n+3 Level of all Spell Skills\n施法速度提高 28%\n+20 全属性"
     },
     {
       "name": "谜容",
@@ -21,7 +21,7 @@
       "baseType": "Tribal Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhlVmVydGV4IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/baf0218c37/TheVertex.png",
       "rarity": 3,
-      "desc": "Has no [Attributes|Attribute] Requirements\n144% increased [Evasion] and [EnergyShield|Energy Shield]\n+16% to [Resistances|Chaos Resistance]\n[Equipment] has no [Attributes|Attribute] Requirements"
+      "desc": "(符文) 最大魔力提高 6%\nHas no Attribute Requirements\n能量护盾提高 144%\n+16% 混沌抗性\nAttribute Requirements\n(已腐化)"
     },
     {
       "name": "Chimeric Knuckle (瓦尔手套)",
@@ -29,7 +29,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "+49 to maximum [EnergyShield|Energy Shield]\n62% increased [EnergyShield|Energy Shield]\nAdds 19 to 28 [Fire] damage to [Attack|Attacks]\n+35% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 施法速度提高 8%\n(符文) +14% 闪电抗性\n(符文) Life Cost [Efficiency]提高 25%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Mana Cost Low Mana提高 20%\n+49 最大能量护盾\n能量护盾提高 62%\n附加 19 - 28 Attacks\n+35% 冰霜抗性\n+36% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Gale Roar (鸣谐长杖)",
@@ -37,7 +37,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 49% of Damage as Extra [Fire] Damage\n231% increased [Cold] Damage\n+256 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n81% increased Mana Regeneration Rate\nGain 12 Mana per enemy killed"
+      "desc": "[Gain] 49% of Damage as Extra [Fire] Damage\n[Cold] Damage提高 231%\n+256 最大魔力\n+5 Level of all Spell Skills\n魔力回复速度提高 81%\nGain 12 Mana per enemy killed"
     },
     {
       "name": "Brimstone Goad (丝克玛便鞋)",
@@ -45,7 +45,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+107 to maximum Mana\n15% increased [ItemRarity|Rarity of Items] found\n60% increased effect of Socketed Items"
+      "desc": "(符文) 移动速度提高 8%\n(符文) 护甲, 闪避值 and 能量护盾提高 28%\n(符文) Bonded: +16 最大生命\n(符文) Bonded: +16 最大魔力\n(符文) Bonded: 冷却回复速度提高 16%\n移动速度提高 35%\n+107 最大魔力\n物品稀有度提高 15%\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Atziri's Splendour",
@@ -53,7 +53,7 @@
       "baseType": "Sacrificial Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0F0emlyaXNTcGxlbmRvdXIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/27da3616c7/AtzirisSplendour.png",
       "rarity": 3,
-      "desc": "Only [SoulCore|Soul Cores] can be Socketed in this item\nThis item gains bonuses from Socketed [SoulCore|Soul Cores] as though it was also a Helmet\nHas no [Attributes|Attribute] Requirements\n259% increased [EnergyShield|Energy Shield]\n+11% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(符文) 最大魔力提高 18%\n(基底) +1 Level of all [Corrupted] Skill Gems\nOnly Soul Cores can be Socketed in this item\nThis item gains bonuses from Socketed Soul Cores as though it was also a Helmet\nHas no Attribute Requirements\n能量护盾提高 259%\n+11% all Elemental [Resistances]\n(已腐化)"
     },
     {
       "name": "Headhunter (重革腰带)",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiIsInJlbGljIjowfV0/7518a96138/Headhunter.png",
       "rarity": 9,
-      "desc": "+51 to maximum Life\n+20 to [Strength|Strength]\n+24 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 3 [Charm] Slots\n+51 最大生命\n+20 力量\n+24 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "献祭之心",
@@ -69,7 +69,7 @@
       "baseType": "Sacred Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL1VuaXF1ZXMvUmF0aHBpdGhHbG9iZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/51e4da7cb9/RathpithGlobe.png",
       "rarity": 3,
-      "desc": "81% increased [EnergyShield|Energy Shield]\nNon-[Channelling] [Spell|Spells] cost an additional 6% of your maximum Life\nNon-[Channelling] [Spell|Spells] have 3% increased [Critical|Critical Hit Chance] per 100 maximum Life"
+      "desc": "(符文) +10% all Elemental [Resistances]\n能量护盾提高 81%\nNon-Spells cost an additional 6% of your 最大生命\nNon-Spells have 暴击率 per 100 最大生命提高 3%\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -85,7 +85,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 29% of Damage as Extra [Fire] Damage\n[Gain] 25% of Damage as Extra [Cold] Damage\n+162 to maximum Mana\n35% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 29% of Damage as Extra [Fire] Damage\n[Gain] 25% of Damage as Extra [Cold] Damage\n+162 最大魔力\n施法速度提高 35%"
     },
     {
       "name": "Corpse Loop (裂隙戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "8% increased maximum Mana\n24% increased Cast Speed\n+15% to all [ElementalDamage|Elemental] [Resistances]\n72% increased Mana Regeneration Rate"
+      "desc": "(基底) Maximum [Quality] is 40%\n最大魔力提高 8%\n施法速度提高 24%\n+15% all Elemental [Resistances]\n魔力回复速度提高 72%"
     }
   ],
   "skills": [

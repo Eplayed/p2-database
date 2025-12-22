@@ -13,7 +13,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+52 to maximum [EnergyShield|Energy Shield]\n+29 to [Intelligence|Intelligence]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(附魔) 最大能量护盾提高 23%\n(基底) [Charm] Effect Duration提高 18%\n(基底) Has 3 [Charm] Slots\n+52 最大能量护盾\n+29 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "Atziri's Acuity",
@@ -21,7 +21,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "95% increased [Armour|Armour]\n38% increased [Critical|Critical Hit] Chance\n+21 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Life Cost [Efficiency]提高 25%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n护甲提高 95%\n暴击率提高 38%\n+21 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "Dread Gyre (蓝玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "+112 to [Evasion] Rating\n+117 to maximum Life\n34% increased [ItemRarity|Rarity of Items] found\n28% increased Cast Speed\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +25% 冰霜抗性\n+112 [闪避值] Rating\n+117 最大生命\n物品稀有度提高 34%\n施法速度提高 28%\n+38% 闪电抗性"
     },
     {
       "name": "Viper Guardian (先祖冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n36% increased [ItemRarity|Rarity of Items] found\n28% increased [Critical|Critical Hit] Chance\n+37% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+73 最大能量护盾\n物品稀有度提高 36%\n暴击率提高 28%\n+37% 火焰抗性"
     },
     {
       "name": "Victory Road (丝克玛便鞋)",
@@ -45,7 +45,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n38% increased [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+32% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]\n+72 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 38%\n物品稀有度提高 18%\n+32% 火焰抗性\n+45% 闪电抗性\n+72 晕眩门槛"
     },
     {
       "name": "Entropy Gnarl (收割长杖)",
@@ -53,7 +53,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "[Gain] 53% of Damage as Extra [Lightning] Damage\n236% increased [Spell] Damage\n+6 to Level of all [Spell|Spell] Skills\n82% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n40% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 53% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 236%\n+6 Level of all Spell Skills\n暴击率 for Spells提高 82%\n施法速度提高 40%"
     },
     {
       "name": "Onslaught Finger (紫晶戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "+116 to maximum Life\n+67 to maximum Mana\n16% increased [ItemRarity|Rarity of Items] found\n+37% to [Resistances|Cold Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +15% 混沌抗性\n+116 最大生命\n+67 最大魔力\n物品稀有度提高 16%\n+37% 冰霜抗性\n+19% 混沌抗性"
     },
     {
       "name": "Apocalypse Ward (邪恶束衣)",
@@ -69,7 +69,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+30 to maximum [EnergyShield|Energy Shield]\n146% increased [EnergyShield|Energy Shield]\n+34% to [Resistances|Fire Resistance]\n+39% to [Resistances|Cold Resistance]\n+31% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+30 最大能量护盾\n能量护盾提高 146%\n+34% 火焰抗性\n+39% 冰霜抗性\n+31% 闪电抗性"
     },
     {
       "name": "Loath Rosary (星辉护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "+91 to maximum [EnergyShield|Energy Shield]\n55% increased maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Spell|Spell] Skills\n+33% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +7 全属性\n+91 最大能量护盾\n最大能量护盾提高 55%\n+3 Level of all Spell Skills\n+33% 火焰抗性"
     },
     {
       "name": "Oblivion Pole (鸣谐长杖)",
@@ -85,7 +85,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "205% increased [Chaos] Damage\n42% increased Cast Speed\nGain 73 Life per enemy killed"
+      "desc": "[Chaos] Damage提高 205%\n施法速度提高 42%\nGain 73 Life per enemy killed"
     }
   ],
   "skills": [

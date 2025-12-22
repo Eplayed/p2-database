@@ -13,7 +13,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 8%\n(已腐化)"
     },
     {
       "name": "Apocalypse Grasp (蓝玉戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 7 to 17 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 1 to 58 [Lightning] damage to [Attack|Attacks]\n18% increased [ItemRarity|Rarity of Items] found\n+15% to all [ElementalDamage|Elemental] [Resistances]\n[ManaLeech|Leech] 6.1% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +24% 冰霜抗性\n附加 7 - 17 物理伤害 to Attacks\n附加 1 - 58 Attacks\n物品稀有度提高 18%\n+15% all Elemental [Resistances]\nLeech 6.1% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Cadiro's Gambit",
@@ -29,7 +29,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9VbmlxdWVzL1BlcmFuZHVzVHVybnN0aWxlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/49f9f76fa9/PerandusTurnstile.png",
       "rarity": 3,
-      "desc": "Each Arrow fired is a [UniqueArrowModifierChain|Crescendo], [UniqueArrowModifierSplit|Splinter], [UniqueArrowModifierPierceReturn|Reversing], [UniqueArrowModifierCrit|Diamond], [UniqueArrowModifierRarity|Covetous], or [UniqueArrowModifierStun|Blunt] Arrow"
+      "desc": "(附魔) Projectiles have 13% chance to [Chain] an additional time from terrain\n(基底) [Attack] Speed提高 9%\nEach Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow\n(已腐化)"
     },
     {
       "name": "Nemesis Trail (缚革鞋履)",
@@ -37,7 +37,7 @@
       "baseType": "Bound Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8a97a69384/BootsInt02.png",
       "rarity": 2,
-      "desc": "25% increased Movement Speed\n+46 to maximum [EnergyShield|Energy Shield]\n36% increased [EnergyShield|Energy Shield]\n16% increased [ItemRarity|Rarity of Items] found\n+19% to [Resistances|Fire Resistance]\n+32% to [Resistances|Lightning Resistance]\n+67 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 25%\n+46 最大能量护盾\n能量护盾提高 36%\n物品稀有度提高 16%\n+19% 火焰抗性\n+32% 闪电抗性\n+67 晕眩门槛"
     },
     {
       "name": "Empyrean Claw (冷酷手套)",
@@ -45,7 +45,7 @@
       "baseType": "Grim Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5da448ad79/GlovesInt02.png",
       "rarity": 2,
-      "desc": "Adds 21 to 34 [Fire] damage to [Attack|Attacks]\nAdds 13 to 21 [Cold] damage to [Attack|Attacks]\nAdds 3 to 61 [Lightning] damage to [Attack|Attacks]\n+36% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 附加 5 - 12 物理伤害 to Attacks\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n(符文) Bonded: Fissure Skills have +2 [Limit]\n附加 21 - 34 Attacks\n附加 13 - 21 Attacks\n附加 3 - 61 Attacks\n+36% 冰霜抗性"
     },
     {
       "name": "Doom Shelter (卡马萨冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+66 to maximum [EnergyShield|Energy Shield]\n128% increased [EnergyShield|Energy Shield]\n+32 to maximum Life\n17% increased [ItemRarity|Rarity of Items] found\n30% increased [Critical|Critical Hit] Chance\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+66 最大能量护盾\n能量护盾提高 128%\n+32 最大生命\n物品稀有度提高 17%\n暴击率提高 30%\n+35% 闪电抗性"
     },
     {
       "name": "Horror Ward (邪恶束衣)",
@@ -61,7 +61,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+66 to maximum [EnergyShield|Energy Shield]\n+35% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]\n46% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+66 最大能量护盾\n+35% 冰霜抗性\n+35% 闪电抗性\n46% faster start of 能量护盾 Recharge"
     },
     {
       "name": "遗孀之雹",
@@ -69,7 +69,7 @@
       "baseType": "Crude Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL1VuaXF1ZXMvV2lkb3doYWlsIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2003f478c3/Widowhail.png",
       "rarity": 3,
-      "desc": "266% increased bonuses gained from Equipped [Quiver]"
+      "desc": "bonuses gained from Equipped [Quiver]提高 266%\n(已腐化)"
     },
     {
       "name": "Shavronne's Satchel",
@@ -77,7 +77,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
       "rarity": 3,
-      "desc": "20% reduced [Flask] Life Recovery rate\n+28 to [Intelligence|Intelligence]\n27% increased [Flask|Flask] Charges gained\nLife Recovery from [Flask|Flasks] also applies to [EnergyShield|Energy Shield]"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 20%\n+28 智慧\nFlask Charges gained提高 27%\nLife Recovery from Flasks also applies to 能量护盾"
     },
     {
       "name": "Blight Siege (双子之弓)",
@@ -85,7 +85,7 @@
       "baseType": "Gemini Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0a606586d/Bow06.png",
       "rarity": 2,
-      "desc": "167% increased [Physical] Damage\n+3 to Level of all [Attack] Skills\n+140% [SurpassChance|Surpassing] chance to fire an additional Arrow\n21% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +50% Surpassing chance to fire an additional Arrow\n[Physical] Damage提高 167%\n+3 Level of all [Attack] Skills\n+140% Surpassing chance to fire an additional Arrow\n21% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Phoenix Braid (月影护身符)",
@@ -93,7 +93,7 @@
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "32% increased maximum [EnergyShield|Energy Shield]\n+42 to [Spirit|Spirit]\n36% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Projectile] Skills\n+29% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) Allocates Serrated Edges\n(基底) +22 最大能量护盾\n最大能量护盾提高 32%\n+42 Spirit\n物品稀有度提高 36%\n+2 Level of all [Projectile] Skills\n+29% 火焰抗性"
     },
     {
       "name": "Apocalypse Grip (金光戒指)",
@@ -101,7 +101,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 40 [Lightning] damage to [Attack|Attacks]\n34% increased [ItemRarity|Rarity of Items] found\n+27 to [Dexterity|Dexterity]\n+16% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 1 - 40 Attacks\n物品稀有度提高 34%\n+27 敏捷\n+16% all Elemental [Resistances]"
     }
   ],
   "skills": [

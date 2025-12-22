@@ -13,7 +13,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+50 to [Spirit|Spirit]\n+40% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n33% increased Global [Defences]"
+      "desc": "(附魔) Allocates Ancient Aegis\n(基底) 物品稀有度提高 19%\n+50 Spirit\n+40% 火焰抗性\n+34% 冰霜抗性\nGlobal [Defences]提高 33%"
     },
     {
       "name": "Cadiro's Gambit",
@@ -21,7 +21,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9VbmlxdWVzL1BlcmFuZHVzVHVybnN0aWxlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/49f9f76fa9/PerandusTurnstile.png",
       "rarity": 3,
-      "desc": "Each Arrow fired is a [UniqueArrowModifierChain|Crescendo], [UniqueArrowModifierSplit|Splinter], [UniqueArrowModifierPierceReturn|Reversing], [UniqueArrowModifierCrit|Diamond], [UniqueArrowModifierRarity|Covetous], or [UniqueArrowModifierStun|Blunt] Arrow"
+      "desc": "(附魔) Damage提高 22%\n(基底) [Attack] Speed提高 9%\nEach Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow\n(已腐化)"
     },
     {
       "name": "精华收割器",
@@ -29,7 +29,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "68% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 42 [Lightning] damage to [Attack|Attacks]\n+21 to [Intelligence|Intelligence]\n+33% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n能量护盾提高 68%\n附加 1 - 42 Attacks\n+21 智慧\n+33% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     },
     {
       "name": "Entropy Finger (金光戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 21 to 32 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 28 to 43 [Cold] damage to [Attack|Attacks]\n15% increased [ItemRarity|Rarity of Items] found\n+37% to [Resistances|Fire Resistance]\n[LifeLeech|Leech] 9.34% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) 物品稀有度提高 9%\n附加 21 - 32 物理伤害 to Attacks\n附加 28 - 43 Attacks\n物品稀有度提高 15%\n+37% 火焰抗性\nLeech 9.34% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Dusk Song (双子之弓)",
@@ -45,7 +45,7 @@
       "baseType": "Gemini Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0a606586d/Bow06.png",
       "rarity": 2,
-      "desc": "179% increased [Physical] Damage\nAdds 32 to 55 [Physical|Physical] Damage\n+3 to Level of all [Attack] Skills\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n(基底) +50% Surpassing chance to fire an additional Arrow\n[Physical] Damage提高 179%\n附加 32 - 55 物理伤害\n+3 Level of all [Attack] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Storm Shelter (邪恶束衣)",
@@ -53,7 +53,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+91 to maximum [EnergyShield|Energy Shield]\n101% increased [EnergyShield|Energy Shield]\n+33 to [Intelligence|Intelligence]\n+31% to [Resistances|Fire Resistance]\n+40% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+91 最大能量护盾\n能量护盾提高 101%\n+33 智慧\n+31% 火焰抗性\n+40% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+57 to maximum Life\n+34 to [Strength|Strength]\n+41 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 22%\n(基底) Has 3 [Charm] Slots\n+57 最大生命\n+34 力量\n+41 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Kraken Spiral (裂隙戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 18 to 26 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 1 to 81 [Lightning] damage to [Attack|Attacks]\n16% increased [ItemRarity|Rarity of Items] found\n+28 to [Intelligence|Intelligence]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 18 - 26 物理伤害 to Attacks\n附加 1 - 81 Attacks\n物品稀有度提高 16%\n+28 智慧"
     },
     {
       "name": "黑盗勋章",
@@ -77,7 +77,7 @@
       "baseType": "Corsair Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhlQmxhY2tDcmVzdCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0d9e626b9a/TheBlackCrest.png",
       "rarity": 3,
-      "desc": "94% increased [Evasion|Evasion] Rating\n20% increased [ItemRarity|Rarity of Items] found\n+25% to [Resistances|Lightning Resistance]\nGain [Tailwind] on [Critical|Critical Hit], no more than once per second\nLose all [Tailwind] when [HitDamage|Hit]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) +14% 闪电抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n闪避值 Rating提高 94%\n物品稀有度提高 20%\n+25% 闪电抗性\nGain Critical Hit, no more than once per second\nLose all Hit\n(已腐化)"
     },
     {
       "name": "Behemoth Hoof (捷足便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+53 to [Evasion] Rating\n+22 to maximum [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n25% reduced [Attributes|Attribute] Requirements\n60% increased effect of Socketed Items"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 28%\n(符文) Bonded: +16 最大生命\n(符文) Bonded: +16 最大魔力\n移动速度提高 35%\n+53 [闪避值] Rating\n+22 最大能量护盾\n物品稀有度提高 18%\nAttribute Requirements降低 25%\neffect of Socketed Items提高 60%\n(已腐化)"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Noble Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/39a19d746e/HelmetStr05.png",
       "rarity": 2,
-      "desc": "+160 to [Armour|Armour]\n95% increased [Armour|Armour]\n+173 to maximum Life\n+36 to [Intelligence|Intelligence]\n+22% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+160 护甲\n护甲提高 95%\n+173 最大生命\n+36 智慧\n+22% 混沌抗性"
     },
     {
       "name": "赤红护身符",
@@ -21,7 +21,7 @@
       "baseType": "Restorative Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 7% of Damage taken Recouped as Life"
     },
     {
       "name": "赤红护身符",
@@ -29,7 +29,7 @@
       "baseType": "Commanding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) Presence Area of Effect提高 25%"
     },
     {
       "name": "赤红护身符",
@@ -37,7 +37,7 @@
       "baseType": "Guarding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Block] chance提高 12%"
     },
     {
       "name": "赤红护身符",
@@ -45,7 +45,7 @@
       "baseType": "Calm Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 魔力回复速度 while moving提高 27%"
     },
     {
       "name": "Rage Goad (术士护腿)",
@@ -53,7 +53,7 @@
       "baseType": "Warlock Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnRTdHIwMyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3fb2f64940/BootsIntStr03.png",
       "rarity": 2,
-      "desc": "+60 to [Armour|Armour]\n+24 to maximum [EnergyShield|Energy Shield]\n92% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+31 to [Intelligence|Intelligence]\n+25% to [Resistances|Cold Resistance]\n+45% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n+60 护甲\n+24 最大能量护盾\n护甲 and 能量护盾提高 92%\n+31 智慧\n+25% 冰霜抗性\n+45% 闪电抗性"
     },
     {
       "name": "Vortex Harness (万用腰带)",
@@ -61,7 +61,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQxMCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d95952e174/Belt10.png",
       "rarity": 2,
-      "desc": "+160 to maximum Life\n+120 to maximum Mana\n34% increased [Flask] Life Recovery rate\n+36 to [Strength|Strength]\n+43% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Has 3 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n+160 最大生命\n+120 最大魔力\n[Flask] Life Recovery rate提高 34%\n+36 力量\n+43% 冰霜抗性"
     },
     {
       "name": "命运之抗争",
@@ -69,7 +69,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "12% increased maximum Life\n+19 to [Strength|Strength]\n39% increased Mana Regeneration Rate\nRecover 27% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Battle Trance\n(基底) +14 敏捷\n最大生命提高 12%\n+19 力量\n魔力回复速度提高 39%\nRecover 27% of Missing Life before being Hit by an Enemy"
     },
     {
       "name": "Golem Duty (Maji Talisman)",
@@ -77,7 +77,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "61% increased [Physical] Damage\n+146 to [Accuracy|Accuracy] Rating\n26% increased [Attack] Speed\n+5 to Level of all [Attack] Skills\n21% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n(基底) +12 Maximum [Rage]\n[Physical] Damage提高 61%\n+146 Accuracy Rating\n[Attack] Speed提高 26%\n+5 Level of all [Attack] Skills\n21% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Viper Talons (巨型护手)",
@@ -85,7 +85,7 @@
       "baseType": "Massive Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/20c9cbb22c/GlovesStr06.png",
       "rarity": 2,
-      "desc": "90% increased [Armour|Armour]\nAdds 26 to 42 [Fire] damage to [Attack|Attacks]\n+144 to maximum Life\n+45% to [Resistances|Fire Resistance]\n+29% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n护甲提高 90%\n附加 26 - 42 Attacks\n+144 最大生命\n+45% 火焰抗性\n+29% 冰霜抗性"
     },
     {
       "name": "Skull Grasp (红玉戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "Adds 25 to 43 [Fire] damage to [Attack|Attacks]\n+118 to maximum Life\n+32 to [Strength|Strength]\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+32% to [Resistances|Fire Resistance]"
+      "desc": "(基底) +26% 火焰抗性\n附加 25 - 43 Attacks\n+118 最大生命\n+32 力量\n+16% all Elemental [Resistances]\n+32% 火焰抗性"
     },
     {
       "name": "Sorrow Hold (三相戒指)",
@@ -101,7 +101,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 3 to 80 [Lightning] damage to [Attack|Attacks]\n+305 to [Accuracy|Accuracy] Rating\n+115 to maximum Life\n+37% to [Resistances|Lightning Resistance]\n+22% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +12% all Elemental [Resistances]\n附加 3 - 80 Attacks\n+305 Accuracy Rating\n+115 最大生命\n+37% 闪电抗性\n+22% 混沌抗性"
     },
     {
       "name": "Dire Shelter (华丽战铠)",
@@ -109,7 +109,7 @@
       "baseType": "Ornate Plate",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/9751abcb6d/BodyStr06.png",
       "rarity": 2,
-      "desc": "41% increased [Armour|Armour]\n+248 to maximum Life\n+53 to [Spirit|Spirit]\n+34% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 最大生命提高 6%\n(基底) Regenerate 2.25% of 最大生命 per second\n护甲提高 41%\n+248 最大生命\n+53 Spirit\n+34% 冰霜抗性\n+36% 闪电抗性"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Lazuli Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TZWVkT2ZDYXRhY2x5c20iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4ae8a2cc6d/SeedOfCataclysm.png",
       "rarity": 3,
-      "desc": "58% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n60% increased [CriticalDamageBonus|Critical Spell Damage Bonus]\n+16% to [Resistances|Chaos Resistance]\n10% increased Mana Cost of Skills"
+      "desc": "(基底) +25 最大魔力\n暴击率 for Spells提高 58%\nCritical 法术伤害 Bonus提高 60%\n+16% 混沌抗性\nMana Cost of Skills提高 10%"
     },
     {
       "name": "Atziri's Acuity",
@@ -21,7 +21,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "95% increased [Armour|Armour]\n50% increased [Critical|Critical Hit] Chance\n+30 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n护甲提高 95%\n暴击率提高 50%\n+30 智慧\nCritical Hits is instant"
     },
     {
       "name": "Empyrean Cloak (邪恶束衣)",
@@ -29,7 +29,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+93 to maximum [EnergyShield|Energy Shield]\n93% increased [EnergyShield|Energy Shield]\n+51 to [Spirit|Spirit]\n+38% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) +37 最大生命\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+93 最大能量护盾\n能量护盾提高 93%\n+51 Spirit\n+38% 火焰抗性\n+37% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "暴风之语",
@@ -37,7 +37,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0Nob2lyT2ZUaGVTdG9ybSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/59c9c7bfc8/ChoirOfTheStorm.png",
       "rarity": 3,
-      "desc": "+95% to [Resistances|Lightning Resistance]\n[Critical|Critical Hits] [IgnoreResistances|Ignore] Enemy Monster [Resistances|Lightning Resistance]\n[Trigger] Lightning Bolt Skill on [Critical|Critical Hit]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +10 敏捷\n+95% 闪电抗性\nCritical Hits Ignore Enemy Monster 闪电抗性\nCritical Hit"
     },
     {
       "name": "踏趾靴",
@@ -45,7 +45,7 @@
       "baseType": "Trimmed Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VbmlxdWVzL1RyYW1wbGV0b2UiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/eed7a02130/Trampletoe.png",
       "rarity": 3,
-      "desc": "15% increased Movement Speed\n94% increased [Armour|Armour]\n50% increased [Attributes|Attribute] Requirements\nDeal 30% of [Overkill] damage to enemies within 2 metres of the enemy killed"
+      "desc": "(符文) +22% 混沌抗性\n移动速度提高 15%\n护甲提高 94%\nAttribute Requirements提高 50%\nDeal 30% of [Overkill] damage to enemies within 2 metres of the enemy killed\n(已腐化)"
     },
     {
       "name": "Plague Dome (卡马萨冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) Skill Effect Duration提高 8%\n(符文) 冷却回复速度提高 8%\n(已腐化)"
     },
     {
       "name": "灵魂羁绊",
@@ -61,7 +61,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+52 to maximum [EnergyShield|Energy Shield]\n+28 to [Intelligence|Intelligence]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(基底) [Charm] Effect Duration提高 16%\n(基底) Has 2 [Charm] Slots\n+52 最大能量护盾\n+28 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "Honour Chant (鸣谐长杖)",
@@ -69,7 +69,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 50% of Damage as Extra [Lightning] Damage\n113% increased [Spell] Damage\n123% increased [Lightning] Damage\n+5 to Level of all [Spell|Spell] Skills\n98% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n49% increased Cast Speed"
+      "desc": "(符文) [Gain] 10% of Damage as Extra [Lightning] Damage\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: Magnitude of Shock you inflict提高 30%\n[Gain] 50% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 113%\n[Lightning] Damage提高 123%\n+5 Level of all Spell Skills\n暴击率 for Spells提高 98%\n施法速度提高 49%"
     },
     {
       "name": "Ventor's Gamble",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9WZW50b3JzR2FtYmxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc113c96d9/VentorsGamble.png",
       "rarity": 3,
-      "desc": "+54 to maximum Life\n+12 to [Spirit|Spirit]\n21% increased [ItemRarity|Rarity of Items] found\n+42% to [Resistances|Fire Resistance]\n+39% to [Resistances|Cold Resistance]\n+10% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 6%\n+54 最大生命\n+12 Spirit\n物品稀有度提高 21%\n+42% 火焰抗性\n+39% 冰霜抗性\n+10% 闪电抗性"
     }
   ],
   "skills": [

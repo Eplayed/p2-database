@@ -13,7 +13,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n+41 to [Spirit|Spirit]\n34% increased [ItemRarity|Rarity of Items] found\n+2 to Level of all [Projectile] Skills"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) 物品稀有度提高 17%\n+73 最大能量护盾\n+41 Spirit\n物品稀有度提高 34%\n+2 Level of all [Projectile] Skills"
     },
     {
       "name": "Behemoth Shell",
@@ -21,7 +21,7 @@
       "baseType": "Falconer's Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/512e4bd095/BodyDexInt06.png",
       "rarity": 2,
-      "desc": "101% increased [Evasion] and [EnergyShield|Energy Shield]\n+59 to [Spirit|Spirit]\n+45% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 移动速度提高 5%\n能量护盾提高 101%\n+59 Spirit\n+45% 火焰抗性\n+44% 冰霜抗性\n+19% 混沌抗性"
     },
     {
       "name": "Onslaught Circle (三相戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 6 to 12 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 3 to 59 [Lightning] damage to [Attack|Attacks]\n16% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Fire Resistance]\n+51% to [Resistances|Cold Resistance]\n[LifeLeech|Leech] 7.12% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +12% all Elemental [Resistances]\n附加 6 - 12 物理伤害 to Attacks\n附加 3 - 59 Attacks\n物品稀有度提高 16%\n+36% 火焰抗性\n+51% 冰霜抗性\nLeech 7.12% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "The Flesh Poppet",
@@ -37,7 +37,7 @@
       "baseType": "Vicious Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvVW5pcXVlcy9UaGVTa2luVGhpZWYiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7209883e7c/TheSkinThief.png",
       "rarity": 3,
-      "desc": "92% increased [Physical] Damage\n13% increased [Attack] Speed\n+10 to all [Attributes|Attributes]\n35% reduced [Presence|Presence] Area of Effect\nCopy a random [MonsterModifiers|Modifier] from each enemy in your [Presence] when\nyou [Shapeshift] to an Animal form\nModifiers gained this way are lost after 30 seconds or when you next [Shapeshift]"
+      "desc": "[Physical] Damage提高 92%\n[Attack] Speed提高 13%\n+10 全属性\nPresence Area of Effect降低 35%\nCopy a random Modifier from each enemy in your [Presence] when\nyou [Shapeshift] to an Animal form\nModifiers gained this way are lost after 30 seconds or when you next [Shapeshift]"
     },
     {
       "name": "Torment Veil (先祖冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+65 to maximum [EnergyShield|Energy Shield]\n75% increased [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+39% to [Resistances|Cold Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+65 最大能量护盾\n能量护盾提高 75%\n物品稀有度提高 18%\n+39% 冰霜抗性\n+19% 混沌抗性"
     },
     {
       "name": "Storm Rain (寻战之弓)",
@@ -53,7 +53,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "Adds 38 to 62 [Physical|Physical] Damage\nAdds 6 to 173 [Lightning|Lightning] Damage\n+4.53% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Bow Attacks fire an additional Arrow\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: +2% Maximum 闪电抗性\n附加 38 - 62 物理伤害\n附加 6 - 173 闪电伤害\n+4.53% 暴击率\n+3 Level of all [Attack] Skills"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+40 to maximum Life\n+21 to [Strength|Strength]\n+39 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 23%\n(基底) Has 3 [Charm] Slots\n+40 最大生命\n+21 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Fate Bite (贯心箭袋)",
@@ -69,7 +69,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 13 to 24 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 1 to 63 [Lightning] damage to [Attack|Attacks]\n+439 to [Accuracy|Accuracy] Rating\n+2 to Level of all [Projectile] Skills\n31% increased [Critical|Critical Hit Chance] for [Attack|Attacks]"
+      "desc": "(基底) 暴击率 for Attacks提高 24%\n附加 13 - 24 物理伤害 to Attacks\n附加 1 - 63 Attacks\n+439 Accuracy Rating\n+2 Level of all [Projectile] Skills\n暴击率 for Attacks提高 31%"
     },
     {
       "name": "Dusk Twirl (金光戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 19 to 27 [Fire] damage to [Attack|Attacks]\nAdds 1 to 80 [Lightning] damage to [Attack|Attacks]\n30% increased [ItemRarity|Rarity of Items] found\n+48% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 19 - 27 Attacks\n附加 1 - 80 Attacks\n物品稀有度提高 30%\n+48% 闪电抗性"
     },
     {
       "name": "Brimstone Spur (丝克玛便鞋)",
@@ -85,7 +85,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "94% increased [EnergyShield|Energy Shield]\n18% increased [ItemRarity|Rarity of Items] found\n+45% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 94%\n物品稀有度提高 18%\n+45% 火焰抗性\n+45% 闪电抗性\n(已腐化)"
     },
     {
       "name": "精华收割器",
@@ -93,7 +93,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "65% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 47 [Lightning] damage to [Attack|Attacks]\n+24 to [Intelligence|Intelligence]\n+35% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(附魔) Damage Penetrates 15% 闪电抗性\n(符文) 附加 5 - 12 物理伤害 to Attacks\n(符文) Bonded: Fissure Skills have +2 [Limit]\n能量护盾提高 65%\n附加 1 - 47 Attacks\n+24 智慧\n+35% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     }
   ],
   "skills": [

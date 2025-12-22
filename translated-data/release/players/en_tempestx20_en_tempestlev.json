@@ -13,7 +13,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 2 to 71 [Lightning] damage to [Attack|Attacks]\n+45% to [Resistances|Fire Resistance]\n+31% to [Resistances|Cold Resistance]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 2 - 71 Attacks\n+45% 火焰抗性\n+31% 冰霜抗性\n+33% 闪电抗性"
     },
     {
       "name": "Cataclysm Core (双灵战弩)",
@@ -21,7 +21,7 @@
       "baseType": "Gemini Crossbow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Dcm9zc2Jvd3MvMkhDcm9zc2JvdzA1IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/28ab8c9744/2HCrossbow05.png",
       "rarity": 2,
-      "desc": "Adds 123 to 183 [Fire|Fire] Damage\nAdds 107 to 150 [Cold|Cold] Damage\n[Gain] 30% of Damage as Extra [Cold] Damage\n+5 to Level of all [Attack] Skills\n23% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Loads an additional bolt\n附加 123 - 183 火焰伤害\n附加 107 - 150 冰霜伤害\n[Gain] 30% of Damage as Extra [Cold] Damage\n+5 Level of all [Attack] Skills\n23% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Empyrean Vise (尖刺护腕)",
@@ -29,7 +29,7 @@
       "baseType": "Spiked Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b6a93d2794/GlovesDex05.png",
       "rarity": 2,
-      "desc": "72% increased [Evasion|Evasion] Rating\nAdds 24 to 33 [Fire] damage to [Attack|Attacks]\nAdds 1 to 42 [Lightning] damage to [Attack|Attacks]\n13% increased [Attack] Speed\n+26% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n闪避值 Rating提高 72%\n附加 24 - 33 Attacks\n附加 1 - 42 Attacks\n[Attack] Speed提高 13%\n+26% 冰霜抗性\n+35% 闪电抗性"
     },
     {
       "name": "Phoenix Peak (劫掠者之帽)",
@@ -37,7 +37,7 @@
       "baseType": "Freebooter Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXgwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/74f4fa374e/HelmetDex07.png",
       "rarity": 2,
-      "desc": "+48 to [Evasion] Rating\n114% increased [Evasion|Evasion] Rating\n+29 to maximum Mana\n31% increased [Critical|Critical Hit] Chance\n+44% to [Resistances|Fire Resistance]\n+36% to [Resistances|Cold Resistance]"
+      "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n+48 [闪避值] Rating\n闪避值 Rating提高 114%\n+29 最大魔力\n暴击率提高 31%\n+44% 火焰抗性\n+36% 冰霜抗性"
     },
     {
       "name": "Storm Heart (日曜护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "34% increased maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Projectile] Skills\n+28 to [Dexterity|Dexterity]\n27% increased Global [Defences]"
+      "desc": "(附魔) Allocates Ancient Aegis\n(基底) +11 Spirit\n最大能量护盾提高 34%\n+3 Level of all [Projectile] Skills\n+28 敏捷\nGlobal [Defences]提高 27%"
     },
     {
       "name": "Grim Band (裂隙戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 12 to 21 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 37 to 54 [Fire] damage to [Attack|Attacks]\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+27% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 12 - 21 物理伤害 to Attacks\n附加 37 - 54 Attacks\n+16% all Elemental [Resistances]\n+27% 冰霜抗性"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+42 to maximum Life\n+22 to [Strength|Strength]\n+31 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 23%\n(基底) Has 2 [Charm] Slots\n+42 最大生命\n+22 力量\n+31 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Woe Suit (邪恶束衣)",
@@ -69,7 +69,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+110 to maximum [EnergyShield|Energy Shield]\n132% increased [EnergyShield|Energy Shield]\n+30 to [Intelligence|Intelligence]\n55% [FasterESRechargeStart|faster start of Energy Shield Recharge]\n49% reduced Duration of [Bleeding] on You"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) effect of Curses on you降低 50%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Magnitudes提高 8%\n+110 最大能量护盾\n能量护盾提高 132%\n+30 智慧\n55% faster start of 能量护盾 Recharge\nDuration of [Bleeding] on You降低 49%"
     },
     {
       "name": "Entropy Slippers (龙皮长靴)",
@@ -77,7 +77,7 @@
       "baseType": "Drakeskin Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8da0bb2ea6/BootsDex06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n118% increased [Evasion|Evasion] Rating\n+23% to [Resistances|Fire Resistance]\n+44% to [Resistances|Lightning Resistance]\n+128 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n闪避值 Rating提高 118%\n+23% 火焰抗性\n+44% 闪电抗性\n+128 晕眩门槛"
     }
   ],
   "skills": [

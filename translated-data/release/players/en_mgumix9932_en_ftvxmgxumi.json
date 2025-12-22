@@ -13,7 +13,7 @@
       "baseType": "Vaal Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3bc62e552f/BootsStr05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n75% increased [Armour|Armour]\n+42% to [Resistances|Lightning Resistance]\n+40% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n43% reduced [Chill|Chill] Duration on you"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n护甲提高 75%\n+42% 闪电抗性\n+40% 的 护甲 也套用于 元素伤害\nChill Duration on you降低 43%"
     },
     {
       "name": "Corpse Breaker (神圣巨锤)",
@@ -21,7 +21,7 @@
       "baseType": "Sacred Maul",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kTWFjZXMvQmFzZXR5cGVzLzJITWFjZTA2IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cde79f403c/2HMace06.png",
       "rarity": 2,
-      "desc": "Adds 20 to 34 [Fire|Fire] Damage\n35% reduced [Attributes|Attribute] Requirements\nCauses 70% increased [Stun|Stun] Buildup\n[Gain] 32% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 16%\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 30%\n附加 20 - 34 火焰伤害\nAttribute Requirements降低 35%\nCauses Stun Buildup提高 70%\n[Gain] 32% of Damage as Extra [Physical] Damage"
     },
     {
       "name": "收缩指令",
@@ -29,7 +29,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+120 to maximum Life\n+10 to all [Attributes|Attributes]\n8.9 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+120 最大生命\n+10 全属性\n8.9 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded"
     },
     {
       "name": "Victory Wrap (士兵胸甲)",
@@ -37,7 +37,7 @@
       "baseType": "Soldier Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d5346c8ff4/BodyStr03.png",
       "rarity": 2,
-      "desc": "146% increased [Armour|Armour]\n+35 to maximum Life\n+61 to [Spirit|Spirit]\n+37% to [Resistances|Fire Resistance]\n+26% to [Resistances|Cold Resistance]\n+41% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲提高 146%\n+35 最大生命\n+61 Spirit\n+37% 火焰抗性\n+26% 冰霜抗性\n+41% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "猎首",
@@ -45,7 +45,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+46 to maximum Life\n+41 to [Strength|Strength]\n+30 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 21%\n(基底) Has 2 [Charm] Slots\n+46 最大生命\n+41 力量\n+30 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Rage Whorl (蓝玉戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "21% increased [Fire] Damage\n+177 to [Accuracy|Accuracy] Rating\n+105 to maximum Life\n+34% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]\n[ManaLeech|Leech] 6.19% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +28% 冰霜抗性\n[Fire] Damage提高 21%\n+177 Accuracy Rating\n+105 最大生命\n+34% 火焰抗性\n+44% 冰霜抗性\nLeech 6.19% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Beast Tower (塔赫亚塔盾)",
@@ -61,7 +61,7 @@
       "baseType": "Tawhoan Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMTAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8efda96f5b/Tower10.png",
       "rarity": 2,
-      "desc": "+244 to [Armour|Armour]\n39% increased [Armour|Armour]\n+27% to [Resistances|Fire Resistance]\n+30% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n+274 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+244 护甲\n护甲提高 39%\n+27% 火焰抗性\n+30% 的 护甲 也套用于 元素伤害\n+274 晕眩门槛"
     },
     {
       "name": "Eagle Fist (瓦尔护手)",
@@ -69,7 +69,7 @@
       "baseType": "Vaal Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/30e916dc14/GlovesStr05.png",
       "rarity": 2,
-      "desc": "Adds 9 to 19 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 34 [Lightning] damage to [Attack|Attacks]\n+2 to Level of all [Melee|Melee] Skills\n+39% to [Resistances|Lightning Resistance]\n+29% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 9 - 19 物理伤害 to Attacks\n附加 2 - 34 Attacks\n+2 Level of all Melee Skills\n+39% 闪电抗性\n+29% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Miracle Finger (三相戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "18% increased [Fire] Damage\n12% increased [Lightning] Damage\n+104 to maximum Life\n+14% to all [ElementalDamage|Elemental] [Resistances]\n+34% to [Resistances|Lightning Resistance]\n[LifeLeech|Leech] 5.73% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +9% all Elemental [Resistances]\n[Fire] Damage提高 18%\n[Lightning] Damage提高 12%\n+104 最大生命\n+14% all Elemental [Resistances]\n+34% 闪电抗性\nLeech 5.73% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Skull Beads (日曜护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+96 to maximum Life\n18% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Melee|Melee] Skills\n+12% to [Resistances|Chaos Resistance]\n25% increased Global [Defences]"
+      "desc": "(附魔) Allocates Acceleration\n(基底) +12 Spirit\n+96 最大生命\n物品稀有度提高 18%\n+3 Level of all Melee Skills\n+12% 混沌抗性\nGlobal [Defences]提高 25%"
     }
   ],
   "skills": [

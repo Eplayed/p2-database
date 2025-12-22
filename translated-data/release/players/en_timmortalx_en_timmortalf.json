@@ -13,7 +13,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "24% increased [Lightning] Damage\n+121 to maximum Mana\n22% increased Cast Speed\n+22% to all [ElementalDamage|Elemental] [Resistances]\n+58% to [Resistances|Fire Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n[Lightning] Damage提高 24%\n+121 最大魔力\n施法速度提高 22%\n+22% all Elemental [Resistances]\n+58% 火焰抗性"
     },
     {
       "name": "Onslaught Choker (日曜护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "25% increased [Spell] Damage\n+213 to maximum Mana\n+50 to [Spirit|Spirit]\n8% increased [Intelligence]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +11 Spirit\n[Spell] Damage提高 25%\n+213 最大魔力\n+50 Spirit\n[智慧]提高 8%"
     },
     {
       "name": "Entropy Skin (滑布外衣)",
@@ -29,7 +29,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+148 to [Evasion] Rating\n+61 to maximum [EnergyShield|Energy Shield]\n41% increased [Evasion] and [EnergyShield|Energy Shield]\n+42% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]\n+270 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+148 [闪避值] Rating\n+61 最大能量护盾\n能量护盾提高 41%\n+42% 冰霜抗性\n+43% 闪电抗性\n+270 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Torment Song (鸣谐长杖)",
@@ -37,7 +37,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 51% of Damage as Extra [Lightning] Damage\n174% increased [Spell] Damage\n+139 to maximum Mana\n25% reduced [Attributes|Attribute] Requirements\n+5 to Level of all [Spell|Spell] Skills\n84% increased Mana Regeneration Rate"
+      "desc": "[Gain] 51% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 174%\n+139 最大魔力\nAttribute Requirements降低 25%\n+5 Level of all Spell Skills\n魔力回复速度提高 84%"
     },
     {
       "name": "Honour Crown (卡马萨冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "+59 to maximum [EnergyShield|Energy Shield]\n132% increased [EnergyShield|Energy Shield]\n+45 to maximum Life\n34% increased [Critical|Critical Hit] Chance\n+34% to [Resistances|Cold Resistance]"
+      "desc": "(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n+59 最大能量护盾\n能量护盾提高 132%\n+45 最大生命\n暴击率提高 34%\n+34% 冰霜抗性"
     },
     {
       "name": "Shavronne's Satchel",
@@ -53,7 +53,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
       "rarity": 3,
-      "desc": "20% reduced [Flask] Life Recovery rate\n+30 to [Intelligence|Intelligence]\n24% increased [Flask|Flask] Charges gained\nLife Recovery from [Flask|Flasks] also applies to [EnergyShield|Energy Shield]"
+      "desc": "(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 20%\n+30 智慧\nFlask Charges gained提高 24%\nLife Recovery from Flasks also applies to 能量护盾"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -61,7 +61,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "67% increased [Evasion|Evasion] Rating\n29% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+18 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 67%\n暴击率提高 29%\n[Attack] Speed提高 5%\n+18 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%"
     },
     {
       "name": "Ghoul Coil (裂隙戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "25% increased [Lightning] Damage\n+249 to maximum Mana\n7% increased maximum Mana\n+30 to [Dexterity|Dexterity]\n+41% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n[Lightning] Damage提高 25%\n+249 最大魔力\n最大魔力提高 7%\n+30 敏捷\n+41% 闪电抗性"
     },
     {
       "name": "Gale Goad (捷足便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n53% increased [Evasion] and [EnergyShield|Energy Shield]\n+40% to [Resistances|Fire Resistance]\n+41% to [Resistances|Cold Resistance]\n44% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 53%\n+40% 火焰抗性\n+41% 冰霜抗性\n能量护盾 Recharge Rate提高 44%"
     },
     {
       "name": "Oblivion Song (收割长杖)",
@@ -85,7 +85,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "[Gain] 51% of Damage as Extra [Fire] Damage\n[Gain] 62% of Damage as Extra [Lightning] Damage\n230% increased [Spell] Damage\n79% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 51% of Damage as Extra [Fire] Damage\n[Gain] 62% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 230%\n暴击率 for Spells提高 79%"
     }
   ],
   "skills": [

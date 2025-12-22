@@ -13,7 +13,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+238 to [Accuracy|Accuracy] Rating\n55% increased [Evasion|Evasion Rating]\n+3 to Level of all [Melee|Melee] Skills\n33% increased Global [Defences]"
+      "desc": "(附魔) Allocates Reaching Strike\n(基底) +12 Spirit\n+238 Accuracy Rating\n闪避值 Rating提高 55%\n+3 Level of all Melee Skills\nGlobal [Defences]提高 33%"
     },
     {
       "name": "Mind Spell (邪恶节杖)",
@@ -21,7 +21,7 @@
       "baseType": "Sinister Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac756ffc0d/Warstaff03.png",
       "rarity": 2,
-      "desc": "Adds 67 to 110 [Cold|Cold] Damage\n+4.86% to [Critical|Critical Hit] Chance\n24% increased [Attack] Speed\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) [Attack] Speed提高 5%\n(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 67 - 110 冰霜伤害\n+4.86% 暴击率\n[Attack] Speed提高 24%\n+5 Level of all [Attack] Skills"
     },
     {
       "name": "Mind Glance (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n71% increased [EnergyShield|Energy Shield]\n31% increased [Critical|Critical Hit] Chance\n+36% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+73 最大能量护盾\n能量护盾提高 71%\n暴击率提高 31%\n+36% 火焰抗性\n+35% 闪电抗性"
     },
     {
       "name": "Golem Tread (龙鳞长靴)",
@@ -37,7 +37,7 @@
       "baseType": "Dragonscale Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/316987efab/BootsDex05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+137 to [Evasion] Rating\n70% increased [Evasion|Evasion] Rating\n+32 to [Dexterity|Dexterity]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+137 [闪避值] Rating\n闪避值 Rating提高 70%\n+32 敏捷\n+34% 闪电抗性"
     },
     {
       "name": "Kalandra's Touch",
@@ -53,7 +53,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+157 to [Evasion] Rating\n+61 to maximum [EnergyShield|Energy Shield]\n42% increased [Evasion] and [EnergyShield|Energy Shield]\n+33% to [Resistances|Cold Resistance]\n+31% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) 30% faster start of 能量护盾 Recharge\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+157 [闪避值] Rating\n+61 最大能量护盾\n能量护盾提高 42%\n+33% 冰霜抗性\n+31% 闪电抗性"
     },
     {
       "name": "Loath Caress (黄金手套)",
@@ -61,7 +61,7 @@
       "baseType": "Gold Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "Adds 14 to 32 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 22 to 34 [Fire] damage to [Attack|Attacks]\nAdds 2 to 38 [Lightning] damage to [Attack|Attacks]\n60% increased effect of Socketed Items"
+      "desc": "(符文) [Attack] Speed提高 12%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n附加 14 - 32 物理伤害 to Attacks\n附加 22 - 34 Attacks\n附加 2 - 38 Attacks\neffect of Socketed Items提高 60%"
     },
     {
       "name": "Hypnotic Knuckle (裂隙戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 35 to 58 [Fire] damage to [Attack|Attacks]\n+28 to [Strength|Strength]\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+33% to [Resistances|Fire Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 35 - 58 Attacks\n+28 力量\n+16% all Elemental [Resistances]\n+33% 火焰抗性"
     },
     {
       "name": "猎首",
@@ -77,7 +77,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+51 to maximum Life\n+23 to [Strength|Strength]\n+29 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) 闪避值 Rating提高 20%\n(基底) 晕眩门槛提高 23%\n(基底) Has 2 [Charm] Slots\n+51 最大生命\n+23 力量\n+29 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     }
   ],
   "skills": [

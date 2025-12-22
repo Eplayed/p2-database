@@ -13,7 +13,7 @@
       "baseType": "Sturdy Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 晕眩门槛提高 21%"
     },
     {
       "name": "Torment March (丝克玛便鞋)",
@@ -21,7 +21,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "+53 to maximum [EnergyShield|Energy Shield]\n+38% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 56%\n(符文) Bonded: +32 最大生命\n(符文) Bonded: +32 最大魔力\n+53 最大能量护盾\n+38% 火焰抗性\n+35% 冰霜抗性\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Sorrow Shelter (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+69 to maximum [EnergyShield|Energy Shield]\n36% increased [EnergyShield|Energy Shield]\n+36 to maximum Life\n26% increased [Critical|Critical Hit] Chance\n44% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+69 最大能量护盾\n能量护盾提高 36%\n+36 最大生命\n暴击率提高 26%\n能量护盾 Recharge Rate提高 44%"
     },
     {
       "name": "Phoenix Eye (黄玉戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "+170 to maximum Mana\n6% increased maximum Mana\n+42% to [Resistances|Fire Resistance]\n+42% to [Resistances|Lightning Resistance]\n43% increased Mana Regeneration Rate"
+      "desc": "(基底) +25% 闪电抗性\n+170 最大魔力\n最大魔力提高 6%\n+42% 火焰抗性\n+42% 闪电抗性\n魔力回复速度提高 43%"
     },
     {
       "name": "赤红护身符",
@@ -45,7 +45,7 @@
       "baseType": "Guarding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Block] chance提高 12%"
     },
     {
       "name": "奇思妙想",
@@ -53,7 +53,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "14% increased [Charm] Charges gained\n8% reduced [Charm] Charges used\n31% increased bonuses gained from left Equipped Ring\n34% increased bonuses gained from right Equipped Ring"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 14%\n[Charm] Charges used降低 8%\nbonuses gained from left Equipped Ring提高 31%\nbonuses gained from right Equipped Ring提高 34%\n(已腐化)"
     },
     {
       "name": "Spirit Bane (鸣谐长杖)",
@@ -61,7 +61,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 48% of Damage as Extra [Fire] Damage\n78% increased [Spell] Damage\n+272 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n31% increased Mana Cost [Efficiency]"
+      "desc": "(符文) +20 智慧\n(符文) Bonded: +100 最大能量护盾\n[Gain] 48% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 78%\n+272 最大魔力\n+5 Level of all Spell Skills\nMana Cost [Efficiency]提高 31%"
     },
     {
       "name": "Vortex Spire (决斗法杖)",
@@ -69,7 +69,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 29% of Damage as Extra [Fire] Damage\n[Gain] 29% of Damage as Extra [Cold] Damage\n+133 to maximum Mana\n+4 to Level of all [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 29% of Damage as Extra [Fire] Damage\n[Gain] 29% of Damage as Extra [Cold] Damage\n+133 最大魔力\n+4 Level of all Spell Skills"
     },
     {
       "name": "Eagle Coat (飘逸之衣)",
@@ -77,7 +77,7 @@
       "baseType": "Flowing Raiment",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f868a6a214/BodyInt06.png",
       "rarity": 2,
-      "desc": "+85 to maximum [EnergyShield|Energy Shield]\n+55 to [Spirit|Spirit]\n+40% to [Resistances|Cold Resistance]\n43% [FasterESRechargeStart|faster start of Energy Shield Recharge]\n8.4 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 魔力回复速度提高 46%\n+85 最大能量护盾\n+55 Spirit\n+40% 冰霜抗性\n43% faster start of 能量护盾 Recharge\n8.4 Life Regeneration per second"
     },
     {
       "name": "Ghoul Idol (海玉护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Lapis Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTGFwaXNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/572eeaf30b/LapisAmulet.png",
       "rarity": 2,
-      "desc": "+106 to maximum [EnergyShield|Energy Shield]\n51% increased maximum [EnergyShield|Energy Shield]\n+17 to all [Attributes|Attributes]\n32% increased Global [Defences]"
+      "desc": "(附魔) Allocates Crystallised Immunities\n(基底) +14 智慧\n+106 最大能量护盾\n最大能量护盾提高 51%\n+17 全属性\nGlobal [Defences]提高 32%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -93,7 +93,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "74% increased [Evasion|Evasion] Rating\n21% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+15 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 74%\n暴击率提高 21%\n[Attack] Speed提高 5%\n+15 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Maelström Cry (预兆短杖)",
@@ -101,7 +101,7 @@
       "baseType": "Omen Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d2cc9f0ac1/Sceptre04.png",
       "rarity": 2,
-      "desc": "77% increased [Spirit|Spirit]\n+179 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] have 16% increased [Critical|Critical Hit] Chance\n[Aura] Skills have 15% increased [BuffMagnitude|Magnitudes]"
+      "desc": "(符文) +10 智慧\nSpirit提高 77%\n+179 最大魔力\nAllies in your Presence have 暴击率提高 16%\nMagnitudes"
     },
     {
       "name": "Victory Spiral (珠玉戒指)",
@@ -109,7 +109,7 @@
       "baseType": "Pearl Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1BlYXJsUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5d008028ac/PearlRing.png",
       "rarity": 2,
-      "desc": "+116 to maximum Mana\n4% increased maximum Mana\n24% increased Cast Speed\n+35% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]"
+      "desc": "(基底) 施法速度提高 7%\n+116 最大魔力\n最大魔力提高 4%\n施法速度提高 24%\n+35% 火焰抗性\n+38% 冰霜抗性"
     }
   ],
   "skills": [

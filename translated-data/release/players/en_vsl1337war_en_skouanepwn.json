@@ -13,7 +13,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+42 to maximum [EnergyShield|Energy Shield]\n100% increased [EnergyShield|Energy Shield]\n25% reduced [Attributes|Attribute] Requirements\n+39% to [Resistances|Cold Resistance]\n+19% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n+42 最大能量护盾\n能量护盾提高 100%\nAttribute Requirements降低 25%\n+39% 冰霜抗性\n+19% 闪电抗性"
     },
     {
       "name": "Sol Hold (红玉戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 27 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 25 to 44 [Cold] damage to [Attack|Attacks]\n+124 to [Evasion] Rating\n+29 to [Intelligence|Intelligence]\n+13% to all [ElementalDamage|Elemental] [Resistances]\n[LifeLeech|Leech] 8.62% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +24% 火焰抗性\n附加 14 - 27 物理伤害 to Attacks\n附加 25 - 44 Attacks\n+124 [闪避值] Rating\n+29 智慧\n+13% all Elemental [Resistances]\nLeech 8.62% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Demon Tread (丝克玛便鞋)",
@@ -29,7 +29,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+59 to maximum [EnergyShield|Energy Shield]\n+28% to [Resistances|Cold Resistance]\n+121 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+59 最大能量护盾\n+28% 冰霜抗性\n+121 晕眩门槛"
     },
     {
       "name": "猎首",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+22 to [Strength|Strength]\n+36 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 30%\n(基底) Has 2 [Charm] Slots\n+58 最大生命\n+22 力量\n+36 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Armageddon Mantle (邪恶束衣)",
@@ -45,7 +45,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+30 to maximum [EnergyShield|Energy Shield]\n147% increased [EnergyShield|Energy Shield]\n+33% to [Resistances|Fire Resistance]\n48% [FasterESRechargeStart|faster start of Energy Shield Recharge]\n59% reduced [Poison|Poison] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+30 最大能量护盾\n能量护盾提高 147%\n+33% 火焰抗性\n48% faster start of 能量护盾 Recharge\nPoison Duration on you降低 59%"
     },
     {
       "name": "Gloom Edge (阿科扬战矛)",
@@ -53,7 +53,7 @@
       "baseType": "Akoyan Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIxMCIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/114525ad0e/1HSpear10.png",
       "rarity": 2,
-      "desc": "Adds 31 to 57 [Cold|Cold] Damage\n+4.48% to [Critical|Critical Hit] Chance\n+3 to Level of all [Attack] Skills\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 31 - 57 冰霜伤害\n+4.48% 暴击率\n+3 Level of all [Attack] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Demon Collar (海玉护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Lapis Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTGFwaXNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/572eeaf30b/LapisAmulet.png",
       "rarity": 2,
-      "desc": "51% increased [Evasion|Evasion Rating]\n56% increased maximum [EnergyShield|Energy Shield]\n+50 to [Spirit|Spirit]\n+18 to all [Attributes|Attributes]\n+33% to [Resistances|Lightning Resistance]\n69% increased Mana Regeneration Rate"
+      "desc": "(附魔) Allocates Ancient Aegis\n(基底) +11 智慧\n闪避值 Rating提高 51%\n最大能量护盾提高 56%\n+50 Spirit\n+18 全属性\n+33% 闪电抗性\n魔力回复速度提高 69%"
     },
     {
       "name": "神圣之火",
@@ -69,7 +69,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL1NhY3JlZEZsYW1lIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f6c6572ac6/SacredFlame.png",
       "rarity": 3,
-      "desc": "[Gain] 53% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.3% of their Maximum Life per second\n[Allies|Allies] in your [Presence|Presence] [Gain|Gain] 25% of Damage as Extra Fire Damage\nEnemies in your [Presence|Presence] Resist [ElementalDamage|Elemental Damage] based on their Lowest [Resistances|Resistance]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\n[Gain] 53% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.3% of their Maximum Life per second\nAllies in your Presence Gain 25% of Damage as Extra 火焰伤害\nEnemies in your Presence Resist 元素伤害 based on their Lowest Resistance\n(已腐化)"
     },
     {
       "name": "Morbid Finger (蓝玉戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 7 to 15 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 26 to 44 [Cold] damage to [Attack|Attacks]\n+32% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]\n15.5 Life Regeneration per second"
+      "desc": "(基底) +28% 冰霜抗性\n附加 7 - 15 物理伤害 to Attacks\n附加 26 - 44 Attacks\n+32% 火焰抗性\n+35% 冰霜抗性\n15.5 Life Regeneration per second"
     },
     {
       "name": "精华收割器",
@@ -85,7 +85,7 @@
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "62% increased [Evasion] and [EnergyShield|Energy Shield]\nAdds 1 to 34 [Lightning] damage to [Attack|Attacks]\n+16 to [Intelligence|Intelligence]\n+32% to [Resistances|Lightning Resistance]\n[LifeLeech|Life Leech] is [StatConversion|Converted] to [EnergyShieldLeech|Energy Shield Leech]"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n能量护盾提高 62%\n附加 1 - 34 Attacks\n+16 智慧\n+32% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "128% increased [EnergyShield|Energy Shield]\n+28 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\n33% increased [Critical|Critical Hit] Chance\n+36% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 128%\n+28 最大生命\n物品稀有度提高 16%\n暴击率提高 33%\n+36% 冰霜抗性\n(已腐化)"
     },
     {
       "name": "Horror Trap (万用腰带)",
@@ -21,7 +21,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQxMCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d95952e174/Belt10.png",
       "rarity": 2,
-      "desc": "+140 to [Armour]\n29% increased [Charm] Effect Duration\n+30 to [Strength|Strength]\n+29% to [Resistances|Fire Resistance]\n+24% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n+140 [护甲]\n[Charm] Effect Duration提高 29%\n+30 力量\n+29% 火焰抗性\n+24% 冰霜抗性"
     },
     {
       "name": "Brood Finger (金光戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "31% increased [Cold] Damage\n+104 to [Evasion] Rating\n+158 to maximum Mana\n23% increased Cast Speed\n+31% to [Resistances|Fire Resistance]"
+      "desc": "(基底) 物品稀有度提高 12%\n[Cold] Damage提高 31%\n+104 [闪避值] Rating\n+158 最大魔力\n施法速度提高 23%\n+31% 火焰抗性"
     },
     {
       "name": "意志呼唤",
@@ -37,7 +37,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9DYWxsT2ZUaGVCcm90aGVyaG9vZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/217e78da44/CallOfTheBrotherhood.png",
       "rarity": 3,
-      "desc": "+18 to [Intelligence|Intelligence]\n38% increased Mana Regeneration Rate\n28% increased [Freeze|Freeze] Buildup\n100% of [Lightning] Damage [Conversion|Converted] to [Cold] Damage"
+      "desc": "(附魔) +12 敏捷\n(附魔) +9% all Elemental [Resistances]\n(基底) +29% 闪电抗性\n+18 智慧\n魔力回复速度提高 38%\nFreeze Buildup提高 28%\n100% of Converted to [Cold] Damage\n(已腐化)"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -45,7 +45,7 @@
       "baseType": "Fine Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
       "rarity": 3,
-      "desc": "75% increased [Evasion|Evasion] Rating\n24% increased [Critical|Critical Hit] Chance\n5% increased [Attack] Speed\n+20 to [Dexterity|Dexterity]\nYour [Critical|Critical Hit] Chance cannot be [RerollCrit|Rerolled]\nYour [CriticalDamageBonus|Critical Damage Bonus] is 250%"
+      "desc": "(符文) 施法速度提高 8%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 75%\n暴击率提高 24%\n[Attack] Speed提高 5%\n+20 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "Hypnotic Shell (邪恶束衣)",
@@ -53,7 +53,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+91 to maximum [EnergyShield|Energy Shield]\n109% increased [EnergyShield|Energy Shield]\n+22 to [Intelligence|Intelligence]\n+40% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+91 最大能量护盾\n能量护盾提高 109%\n+22 智慧\n+40% 冰霜抗性\n+34% 闪电抗性"
     },
     {
       "name": "破碎传承者",
@@ -61,7 +61,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVW5pcXVlcy9TaXJlT2ZTaGFyZHMiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4d78611003/SireOfShards.png",
       "rarity": 3,
-      "desc": "92% increased [Spell] Damage\n19% increased Cast Speed\n+8% to all [ElementalDamage|Elemental] [Resistances]\n20% increased [LightRadius|Light Radius]\n[Spell|Spells] fire 4 additional [Projectile|Projectiles]\n[Spell|Spells] fire [Projectile|Projectiles] in a circle"
+      "desc": "[Spell] Damage提高 92%\n施法速度提高 19%\n+8% all Elemental [Resistances]\nLight Radius提高 20%\nSpells fire 4 additional Projectiles\nSpells fire Projectiles in a circle"
     },
     {
       "name": "Gloom March (沙誓鞋履)",
@@ -69,7 +69,7 @@
       "baseType": "Sandsworn Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+56 to maximum [EnergyShield|Energy Shield]\n96% increased [EnergyShield|Energy Shield]\n15% increased [ItemRarity|Rarity of Items] found\n+42% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+56 最大能量护盾\n能量护盾提高 96%\n物品稀有度提高 15%\n+42% 火焰抗性"
     },
     {
       "name": "Horror Heart (碧蓝护身符)",
@@ -77,7 +77,7 @@
       "baseType": "Azure Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQXp1cmVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e49b170ba2/AzureAmulet.png",
       "rarity": 2,
-      "desc": "32% increased [Spell] Damage\n35% increased maximum [EnergyShield|Energy Shield]\n+49 to [Spirit|Spirit]\n27% increased Cast Speed\n+35% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Allocates Conservative Casting\n(基底) 魔力回复速度提高 25%\n[Spell] Damage提高 32%\n最大能量护盾提高 35%\n+49 Spirit\n施法速度提高 27%\n+35% 冰霜抗性"
     },
     {
       "name": "Bramble Pole (神圣长杖)",
@@ -85,7 +85,7 @@
       "baseType": "Sanctified Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "[Gain] 56% of Damage as Extra [Fire] Damage\n[Gain] 56% of Damage as Extra [Cold] Damage\n184% increased [Spell] Damage\n+7 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n+25 to [Intelligence|Intelligence]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 56% of Damage as Extra [Fire] Damage\n[Gain] 56% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 184%\n+7 Level of all Lightning Spell Skills\n+25 智慧"
     }
   ],
   "skills": [

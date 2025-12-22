@@ -13,7 +13,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwOSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3299e86495/Belt09.png",
       "rarity": 2,
-      "desc": "+37 to maximum Life\n7% increased [Flask] Life Recovery rate\n27% increased [Charm] Effect Duration\n+35% to [Resistances|Cold Resistance]\n+20% to [Resistances|Chaos Resistance]\n15% reduced [Flask|Flask] Charges used"
+      "desc": "(附魔) 最大能量护盾提高 21%\n(基底) 晕眩门槛提高 27%\n(基底) Has 3 [Charm] Slots\n+37 最大生命\n[Flask] Life Recovery rate提高 7%\n[Charm] Effect Duration提高 27%\n+35% 冰霜抗性\n+20% 混沌抗性\nFlask Charges used降低 15%\n(已腐化)"
     },
     {
       "name": "Vortex Ward (先祖冠冕)",
@@ -21,7 +21,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+70 to maximum [EnergyShield|Energy Shield]\n108% increased [EnergyShield|Energy Shield]\n+34 to maximum Life\n+32% to [Resistances|Fire Resistance]\n+21% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+70 最大能量护盾\n能量护盾提高 108%\n+34 最大生命\n+32% 火焰抗性\n+21% 混沌抗性"
     },
     {
       "name": "Grim Grip (红玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 31 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 32 to 51 [Fire] damage to [Attack|Attacks]\n+167 to maximum Mana\n+26 to [Strength|Strength]\n+18% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) +32% 火焰抗性\n附加 14 - 31 物理伤害 to Attacks\n附加 32 - 51 Attacks\n+167 最大魔力\n+26 力量\n+18% all Elemental [Resistances]"
     },
     {
       "name": "Kraken Call (邪恶节杖)",
@@ -37,7 +37,7 @@
       "baseType": "Sinister Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac756ffc0d/Warstaff03.png",
       "rarity": 2,
-      "desc": "Adds 10 to 202 [Lightning|Lightning] Damage\n121% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+4.53% to [Critical|Critical Hit] Chance\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 10 - 202 闪电伤害\n元素伤害 with Attacks提高 121%\n+4.53% 暴击率\n+5 Level of all [Attack] Skills"
     },
     {
       "name": "Storm Locket (海玉护身符)",
@@ -45,7 +45,7 @@
       "baseType": "Lapis Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTGFwaXNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/572eeaf30b/LapisAmulet.png",
       "rarity": 2,
-      "desc": "21% increased [Spell] Damage\n+93 to maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Melee|Melee] Skills\n22% increased [CriticalDamageBonus|Critical Damage Bonus]\n+15% to all [ElementalDamage|Elemental] [Resistances]\n26% increased Global [Defences]"
+      "desc": "(附魔) Allocates Crystallised Immunities\n(基底) +11 智慧\n[Spell] Damage提高 21%\n+93 最大能量护盾\n+3 Level of all Melee Skills\nCritical Damage Bonus提高 22%\n+15% all Elemental [Resistances]\nGlobal [Defences]提高 26%"
     },
     {
       "name": "Sorrow Band (潜能之戒)",
@@ -53,7 +53,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 9 to 13 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 25 to 42 [Fire] damage to [Attack|Attacks]\n+194 to [Evasion] Rating\n+29 to [Dexterity|Dexterity]\n+19% to all [ElementalDamage|Elemental] [Resistances]\n[ManaLeech|Leech] 6.79% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 9 - 13 物理伤害 to Attacks\n附加 25 - 42 Attacks\n+194 [闪避值] Rating\n+29 敏捷\n+19% all Elemental [Resistances]\nLeech 6.79% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Hypnotic Knuckle (信徒袖带)",
@@ -61,7 +61,7 @@
       "baseType": "Adherent Cuffs",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludFN0cjA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5749813f61/GlovesIntStr04.png",
       "rarity": 2,
-      "desc": "Adds 21 to 36 [Fire] damage to [Attack|Attacks]\nAdds 1 to 55 [Lightning] damage to [Attack|Attacks]\n+59 to maximum Mana\n+2 to Level of all [Melee|Melee] Skills\n13% increased [Attack] Speed"
+      "desc": "(符文) +11% 混沌抗性\n附加 21 - 36 Attacks\n附加 1 - 55 Attacks\n+59 最大魔力\n+2 Level of all Melee Skills\n[Attack] Speed提高 13%"
     },
     {
       "name": "Entropy Pace (束带长靴)",
@@ -69,7 +69,7 @@
       "baseType": "Cinched Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b82526a3d4/BootsDex02.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n97% increased [Evasion|Evasion] Rating\n+33% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 23% of [Evasion|Evasion Rating]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 35%\n闪避值 Rating提高 97%\n+33% 冰霜抗性\n+38% 闪电抗性\nGain Deflection Rating equal to 23% of 闪避值 Rating"
     },
     {
       "name": "Glyph Ward (滑布外衣)",
@@ -77,7 +77,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+133 to [Evasion] Rating\n+52 to maximum [EnergyShield|Energy Shield]\n151% increased [Evasion] and [EnergyShield|Energy Shield]\n+22% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 25% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+133 [闪避值] Rating\n+52 最大能量护盾\n能量护盾提高 151%\n+22% 闪电抗性\nGain Deflection Rating equal to 25% of 闪避值 Rating"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 27 to 39 [Cold] damage to [Attack|Attacks]\n26% increased [Cold] Damage\n+40% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]\n[ManaLeech|Leech] 5.88% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 27 - 39 Attacks\n[Cold] Damage提高 26%\n+40% 火焰抗性\n+35% 闪电抗性\nLeech 5.88% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Apocalypse Visage (卡马萨冠冕)",
@@ -21,7 +21,7 @@
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "139% increased [EnergyShield|Energy Shield]\n+17 to [Accuracy|Accuracy] Rating\n+47 to maximum Life\n+30 to [Intelligence|Intelligence]\n+27% to [Resistances|Lightning Resistance]\n5% increased [LightRadius|Light Radius]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 139%\n+17 Accuracy Rating\n+47 最大生命\n+30 智慧\n+27% 闪电抗性\nLight Radius提高 5%"
     },
     {
       "name": "Corpse Mantle (漫步者外衣)",
@@ -29,7 +29,7 @@
       "baseType": "Rambler Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dba7d26275/BodyDexInt04.png",
       "rarity": 2,
-      "desc": "+161 to [Evasion] Rating\n+57 to maximum [EnergyShield|Energy Shield]\n42% increased [Evasion] and [EnergyShield|Energy Shield]\n+33 to [Intelligence|Intelligence]\n+35% to [Resistances|Cold Resistance]\n44% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +13% 混沌抗性\n+161 [闪避值] Rating\n+57 最大能量护盾\n能量护盾提高 42%\n+33 智慧\n+35% 冰霜抗性\n44% faster start of 能量护盾 Recharge"
     },
     {
       "name": "Chimeric Charm (星辉护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "+108 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n25% increased [Critical|Critical Hit] Chance\n+24 to all [Attributes|Attributes]\n+21% to all [ElementalDamage|Elemental] [Resistances]\n29% increased Global [Defences]"
+      "desc": "(附魔) Allocates Dangerous Blossom\n(基底) +7 全属性\n+108 最大魔力\n物品稀有度提高 17%\n暴击率提高 25%\n+24 全属性\n+21% all Elemental [Resistances]\nGlobal [Defences]提高 29%"
     },
     {
       "name": "Corruption Goad (打击节杖)",
@@ -45,7 +45,7 @@
       "baseType": "Striking Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/23459cf5a8/Warstaff02.png",
       "rarity": 2,
-      "desc": "157% increased [Physical] Damage\n[Gain] 32% of Damage as Extra [Cold] Damage\n96% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n+3.44% to [Critical|Critical Hit] Chance\n+5 to Level of all [Attack] Skills\nGrants 5 Life per Enemy [HitDamage|Hit]"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) [Melee] [Strike] Range with this weapon提高 16%\n[Physical] Damage提高 157%\n[Gain] 32% of Damage as Extra [Cold] Damage\n元素伤害 with Attacks提高 96%\n+3.44% 暴击率\n+5 Level of all [Attack] Skills\nGrants 5 Life per Enemy Hit"
     },
     {
       "name": "Bramble Cord (重革腰带)",
@@ -53,7 +53,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwOSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3299e86495/Belt09.png",
       "rarity": 2,
-      "desc": "+168 to maximum Life\n26% increased [Flask] Mana Recovery rate\n24% increased [Charm] Effect Duration\n+33% to [Resistances|Fire Resistance]\n+21% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) 晕眩门槛提高 30%\n(基底) Has 3 [Charm] Slots\n+168 最大生命\n[Flask] Mana Recovery rate提高 26%\n[Charm] Effect Duration提高 24%\n+33% 火焰抗性\n+21% 混沌抗性"
     },
     {
       "name": "公理不存",
@@ -61,7 +61,7 @@
       "baseType": "Grand Manchettes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9TaW5lQWVxdW8iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e243b1f810/SineAequo.png",
       "rarity": 3,
-      "desc": "15% increased [SkillSpeed|Skill Speed]\n137% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n[Immobilised|Immobilise] enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\nSkill Speed提高 15%\n护甲, 闪避值 and 能量护盾提高 137%\nImmobilise enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage"
     },
     {
       "name": "Sorrow Coil (潜能之戒)",
@@ -69,7 +69,7 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "Adds 28 to 38 [Cold] damage to [Attack|Attacks]\n+165 to [Accuracy|Accuracy] Rating\n+19% to all [ElementalDamage|Elemental] [Resistances]\n+29% to [Resistances|Lightning Resistance]\n13% increased Mana Regeneration Rate"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 28 - 38 Attacks\n+165 Accuracy Rating\n+19% all Elemental [Resistances]\n+29% 闪电抗性\n魔力回复速度提高 13%"
     },
     {
       "name": "赤红护身符",
@@ -77,7 +77,7 @@
       "baseType": "Surefooted Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 Penalty from using Skills while moving降低 10%"
     },
     {
       "name": "赤红护身符",
@@ -85,7 +85,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 7%"
     },
     {
       "name": "Rune Trail (魅力便鞋)",
@@ -93,7 +93,7 @@
       "baseType": "Charmed Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2c646ce419/BootsDexInt02.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n+55 to [Evasion] Rating\n+24 to maximum [EnergyShield|Energy Shield]\n99% increased [Evasion] and [EnergyShield|Energy Shield]\n+22 to [Intelligence|Intelligence]\n+36% to [Resistances|Cold Resistance]\n21.3 Life Regeneration per second"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n+55 [闪避值] Rating\n+24 最大能量护盾\n能量护盾提高 99%\n+22 智慧\n+36% 冰霜抗性\n21.3 Life Regeneration per second"
     },
     {
       "name": "赤红护身符",
@@ -101,7 +101,7 @@
       "baseType": "Restorative Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 6% of Damage taken Recouped as Life"
     },
     {
       "name": "赤红护身符",
@@ -109,7 +109,7 @@
       "baseType": "Commanding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) Presence Area of Effect提高 21%"
     }
   ],
   "skills": [

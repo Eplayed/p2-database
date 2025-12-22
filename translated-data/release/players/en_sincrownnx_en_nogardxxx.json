@@ -13,7 +13,7 @@
       "baseType": "Changeling Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvQ2hhbmdlbGluZ1RhbGlzbWFuIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b93972e143/ChangelingTalisman.png",
       "rarity": 1,
-      "desc": "Adds 5 to 13 [Physical|Physical] Damage\n+7 to [Strength|Strength]"
+      "desc": "附加 5 - 13 物理伤害\n+7 力量"
     },
     {
       "name": "Sol Grasp (黄金手套)",
@@ -21,7 +21,7 @@
       "baseType": "Gold Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "Adds 11 to 25 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 23 to 33 [Cold] damage to [Attack|Attacks]\n32% increased [CriticalDamageBonus|Critical Damage Bonus]\n+29 to [Intelligence|Intelligence]\n+25% to [Resistances|Fire Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n附加 11 - 25 物理伤害 to Attacks\n附加 23 - 33 Attacks\nCritical Damage Bonus提高 32%\n+29 智慧\n+25% 火焰抗性"
     },
     {
       "name": "Honour Grip (裂隙戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 19 to 33 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 37 to 51 [Fire] damage to [Attack|Attacks]\nAdds 4 to 70 [Lightning] damage to [Attack|Attacks]\n+33 to [Dexterity|Dexterity]\n+33% to [Resistances|Fire Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 19 - 33 物理伤害 to Attacks\n附加 37 - 51 Attacks\n附加 4 - 70 Attacks\n+33 敏捷\n+33% 火焰抗性"
     },
     {
       "name": "Bramble Spark (沙丘行者鞋履)",
@@ -37,7 +37,7 @@
       "baseType": "Dunerunner Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n95% increased [EnergyShield|Energy Shield]\n+144 to maximum Life\n+37% to [Resistances|Lightning Resistance]\n+18% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n能量护盾提高 95%\n+144 最大生命\n+37% 闪电抗性\n+18% 混沌抗性"
     },
     {
       "name": "Rapture Salvation (滑布外衣)",
@@ -45,7 +45,7 @@
       "baseType": "Sleek Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
       "rarity": 2,
-      "desc": "+124 to [Evasion] Rating\n+52 to maximum [EnergyShield|Energy Shield]\n40% increased [Evasion] and [EnergyShield|Energy Shield]\n+33% to [Resistances|Fire Resistance]\n+24% to [Resistances|Cold Resistance]\n52% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+124 [闪避值] Rating\n+52 最大能量护盾\n能量护盾提高 40%\n+33% 火焰抗性\n+24% 冰霜抗性\n52% faster start of 能量护盾 Recharge"
     },
     {
       "name": "Bramble Medallion (海玉护身符)",
@@ -53,7 +53,7 @@
       "baseType": "Lapis Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTGFwaXNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/572eeaf30b/LapisAmulet.png",
       "rarity": 2,
-      "desc": "53% increased maximum [EnergyShield|Energy Shield]\n5% increased maximum Mana\n+3 to Level of all [Melee|Melee] Skills\n30.5 Life Regeneration per second\n33% increased Global [Defences]"
+      "desc": "(附魔) Allocates Cooked\n(基底) +15 智慧\n最大能量护盾提高 53%\n最大魔力提高 5%\n+3 Level of all Melee Skills\n30.5 Life Regeneration per second\nGlobal [Defences]提高 33%"
     },
     {
       "name": "Morbid Bane (霹雳节杖)",
@@ -61,7 +61,7 @@
       "baseType": "Bolting Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwNCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4329b881c1/Warstaff04.png",
       "rarity": 2,
-      "desc": "Adds 124 to 195 [Fire|Fire] Damage\nAdds 7 to 252 [Lightning|Lightning] Damage\n+3.14% to [Critical|Critical Hit] Chance\n27% increased [Attack] Speed\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 124 - 195 火焰伤害\n附加 7 - 252 闪电伤害\n+3.14% 暴击率\n[Attack] Speed提高 27%\n+5 Level of all [Attack] Skills"
     },
     {
       "name": "Sol Gyre (裂隙戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 11 to 23 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 4 to 96 [Lightning] damage to [Attack|Attacks]\n+26 to [Dexterity|Dexterity]\n+45% to [Resistances|Fire Resistance]\n+41% to [Resistances|Cold Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 11 - 23 物理伤害 to Attacks\n附加 4 - 96 Attacks\n+26 敏捷\n+45% 火焰抗性\n+41% 冰霜抗性"
     },
     {
       "name": "Wrath Guardian (先祖冠冕)",
@@ -77,7 +77,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+73 to maximum [EnergyShield|Energy Shield]\n77% increased [EnergyShield|Energy Shield]\n+43% to [Resistances|Cold Resistance]\n+42% to [Resistances|Lightning Resistance]\n38% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "+73 最大能量护盾\n能量护盾提高 77%\n+43% 冰霜抗性\n+42% 闪电抗性\n能量护盾 Recharge Rate提高 38%\n(已腐化)"
     },
     {
       "name": "夜临",
@@ -85,7 +85,7 @@
       "baseType": "Fine Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9EYXJrbmVzc0VudGhyb25lZCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9bbef2f97f/DarknessEnthroned.png",
       "rarity": 3,
-      "desc": "This item gains bonuses from Socketed Items as though it was Gloves\n97% increased effect of Socketed Items"
+      "desc": "(符文) 附加 9 - 23 物理伤害 to Attacks\n(符文) [Attack] Speed提高 15%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 29%\n(符文) Bonded: Fissure Skills have +3 [Limit]\n(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\nThis item gains bonuses from Socketed Items as though it was Gloves\neffect of Socketed Items提高 97%"
     }
   ],
   "skills": [

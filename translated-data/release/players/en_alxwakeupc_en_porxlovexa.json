@@ -13,7 +13,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+117 to maximum Life\n+146 to maximum Mana\n13% increased [ItemRarity|Rarity of Items] found\n+17 to [Strength|Strength]\n+39% to [Resistances|Cold Resistance]\n[ManaLeech|Leech] 5.9% of [Physical] [Attack] Damage as Mana"
+      "desc": "(附魔) +11 力量\n(基底) Maximum [Quality] is 40%\n+117 最大生命\n+146 最大魔力\n物品稀有度提高 13%\n+17 力量\n+39% 冰霜抗性\nLeech 5.9% of [Physical] [Attack] Damage as Mana\n(已腐化)"
     },
     {
       "name": "Agony Harness (嵌板腰带)",
@@ -21,7 +21,7 @@
       "baseType": "Plate Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwNSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/510a304252/Belt05.png",
       "rarity": 2,
-      "desc": "+177 to [Armour]\n+169 to maximum Life\n31% increased [Flask] Life Recovery rate\n+28% to [Resistances|Fire Resistance]\n+16% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +139 [护甲]\n(基底) Has 2 [Charm] Slots\n+177 [护甲]\n+169 最大生命\n[Flask] Life Recovery rate提高 31%\n+28% 火焰抗性\n+16% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Demon Crusher (构造之锤)",
@@ -29,7 +29,7 @@
       "baseType": "Structured Hammer",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQmFzZXR5cGVzLzFITWFjZTA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f0a2fc612b/1HMace08.png",
       "rarity": 2,
-      "desc": "Adds 4 to 10 [Fire|Fire] Damage\nAdds 1 to 6 [Lightning|Lightning] Damage\n23% increased [Attack] Speed\n+5 to Level of all [Melee|Melee] Skills\n[Gain] 19% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 8%\n(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 15%\n(基底) 40% chance to Hit\n附加 4 - 10 火焰伤害\n附加 1 - 6 闪电伤害\n[Attack] Speed提高 23%\n+5 Level of all Melee Skills\n[Gain] 19% of Damage as Extra [Physical] Damage\n(已腐化)"
     },
     {
       "name": "Apocalypse Track (塔萨里奥胫甲)",
@@ -37,7 +37,7 @@
       "baseType": "Tasalian Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c3e83f5cc/BootsStr06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n28% increased [Armour|Armour]\n+24% to [Resistances|Fire Resistance]\n+38% to [Resistances|Lightning Resistance]\n+30% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n+62 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n护甲提高 28%\n+24% 火焰抗性\n+38% 闪电抗性\n+30% 的 护甲 也套用于 元素伤害\n+62 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Havoc Visor (帝国巨盔)",
@@ -45,7 +45,7 @@
       "baseType": "Imperial Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a455b9fc43/HelmetStr07.png",
       "rarity": 2,
-      "desc": "41% increased [Armour|Armour]\n+180 to maximum Life\n+126 to maximum Mana\n+32% to [Resistances|Cold Resistance]\n+22% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Experience gain提高 2%\n(符文) +4 Maximum [Rage]\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: +10% all Elemental [Resistances]\n护甲提高 41%\n+180 最大生命\n+126 最大魔力\n+32% 冰霜抗性\n+22% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Glyph Fend (塔赫亚塔盾)",
@@ -53,7 +53,7 @@
       "baseType": "Tawhoan Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMTAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8efda96f5b/Tower10.png",
       "rarity": 2,
-      "desc": "144% increased [Armour|Armour]\n+2% to [MaximumResistances|Maximum Fire Resistance]\n+36% to [Resistances|Lightning Resistance]\n+366 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲提高 144%\n+2% Maximum 火焰抗性\n+36% 闪电抗性\n+366 晕眩门槛\n(已腐化)"
     },
     {
       "name": "Bramble Salvation (督军胸甲)",
@@ -61,7 +61,7 @@
       "baseType": "Warlord Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/23e350525b/BodyStr10.png",
       "rarity": 2,
-      "desc": "+225 to [Armour|Armour]\n103% increased [Armour|Armour]\n+33% to [Resistances|Fire Resistance]\n+21% to [Resistances|Chaos Resistance]\n+39% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(附魔) +31 最大生命\n(符文) 最大生命提高 3%\n(符文) +5% all Elemental [Resistances]\n(基底) +24% 的 护甲 也套用于 元素伤害\n+225 护甲\n护甲提高 103%\n+33% 火焰抗性\n+21% 混沌抗性\n+39% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "Woe Caress (黑钢手甲)",
@@ -69,7 +69,7 @@
       "baseType": "Blacksteel Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/1c86410ca6/GlovesStrDex04.png",
       "rarity": 2,
-      "desc": "Adds 15 to 21 [Physical|Physical] Damage to [Attack|Attacks]\n+131 to [Accuracy|Accuracy] Rating\n+122 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n+31% to [Resistances|Fire Resistance]"
+      "desc": "(附魔) Quantity of Gold Dropped by Slain Enemies提高 5%\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n附加 15 - 21 物理伤害 to Attacks\n+131 Accuracy Rating\n+122 最大生命\n+2 Level of all Melee Skills\n+31% 火焰抗性\n(已腐化)"
     },
     {
       "name": "亡者呼唤",
@@ -77,7 +77,7 @@
       "baseType": "Emerald Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9EZWF0aFJ1c2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/85c32a7b7b/DeathRush.png",
       "rarity": 3,
-      "desc": "+113 to [Accuracy|Accuracy] Rating\n+91 to [Evasion] Rating\n[LifeLeech|Leech] 5% of [Physical] [Attack] Damage as Life\nYou gain [Onslaught] for 4 seconds on Kill"
+      "desc": "(附魔) Skill Speed提高 5%\n(基底) +133 Accuracy Rating\n+113 Accuracy Rating\n+91 [闪避值] Rating\nLeech 5% of [Physical] [Attack] Damage as Life\nYou gain [Onslaught] 持续 4 秒 on Kill\n(已腐化)"
     },
     {
       "name": "Woe Scarab (琥珀护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "37% increased maximum [EnergyShield|Energy Shield]\n+136 to maximum Life\n+3 to Level of all [Melee|Melee] Skills\n+30 to [Strength|Strength]\n+15% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) Allocates Battle Fever\n(基底) +10 力量\n最大能量护盾提高 37%\n+136 最大生命\n+3 Level of all Melee Skills\n+30 力量\n+15% all Elemental [Resistances]"
     }
   ],
   "skills": [

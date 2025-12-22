@@ -13,7 +13,7 @@
       "baseType": "Ornate Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f9e847d2b0/BootsStr04.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n58% increased [Armour|Armour]\n+143 to maximum Life\n+16% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]\n+32% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n护甲提高 58%\n+143 最大生命\n+16% 火焰抗性\n+38% 冰霜抗性\n+32% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "命运之抗争",
@@ -21,7 +21,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "10% increased maximum Life\n+15 to [Strength|Strength]\n33% increased Mana Regeneration Rate\nRecover 32% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Warding Potions\n(基底) +13 敏捷\n最大生命提高 10%\n+15 力量\n魔力回复速度提高 33%\nRecover 32% of Missing Life before being Hit by an Enemy"
     },
     {
       "name": "烈炎之袍",
@@ -29,7 +29,7 @@
       "baseType": "Silk Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0Nsb2FrT2ZGbGFtZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c3f662adf6/CloakOfFlame.png",
       "rarity": 3,
-      "desc": "+50 to maximum [EnergyShield|Energy Shield]\n+48% to [Resistances|Fire Resistance]\n60% reduced [Ignite|Ignite] Duration on you\n59% of [Physical|Physical] Damage taken as [Fire|Fire] Damage\n30 to 41 [Fire|Fire] [Thorns|Thorns] damage"
+      "desc": "(符文) +11% 混沌抗性\n(符文) 15% of Damage is taken from Mana before Life\n(符文) Bonded: 8% of Maximum Life Converted to 能量护盾\n+50 最大能量护盾\n+48% 火焰抗性\nIgnite Duration on you降低 60%\n59% of 物理伤害 taken as 火焰伤害\n30 to 41 Fire Thorns damage\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -37,7 +37,7 @@
       "baseType": "Commanding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) Presence Area of Effect提高 21%"
     },
     {
       "name": "赤红护身符",
@@ -45,7 +45,7 @@
       "baseType": "Restorative Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 7% of Damage taken Recouped as Life"
     },
     {
       "name": "赤红护身符",
@@ -53,7 +53,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 10%"
     },
     {
       "name": "赤红护身符",
@@ -61,7 +61,7 @@
       "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 while Sprinting提高 9%"
     },
     {
       "name": "Foe Loop (红玉戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "24% increased [Chaos] Damage\n+108 to maximum Life\n+170 to maximum Mana\n+35% to [Resistances|Cold Resistance]\n+16% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +30% 火焰抗性\n[Chaos] Damage提高 24%\n+108 最大生命\n+170 最大魔力\n+35% 冰霜抗性\n+16% 混沌抗性"
     },
     {
       "name": "Vengeance Nails (巨型护手)",
@@ -77,7 +77,7 @@
       "baseType": "Massive Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/20c9cbb22c/GlovesStr06.png",
       "rarity": 2,
-      "desc": "+114 to [Armour|Armour]\n+143 to maximum Life\n16% increased [Attack] Speed\n+40% to [Resistances|Cold Resistance]\n+22% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n+114 护甲\n+143 最大生命\n[Attack] Speed提高 16%\n+40% 冰霜抗性\n+22% 闪电抗性"
     },
     {
       "name": "Soul Halo (典范巨盔)",
@@ -85,7 +85,7 @@
       "baseType": "Paragon Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/39a19d746e/HelmetStr05.png",
       "rarity": 2,
-      "desc": "86% increased [Armour|Armour]\n+163 to maximum Life\n+29% to [Resistances|Cold Resistance]\n+45% to [Resistances|Lightning Resistance]\n+41% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +4 Maximum [Rage]\n护甲提高 86%\n+163 最大生命\n+29% 冰霜抗性\n+45% 闪电抗性\n+41% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "猎首",
@@ -93,7 +93,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+34 to [Strength|Strength]\n+40 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 27%\n(基底) Has 3 [Charm] Slots\n+58 最大生命\n+34 力量\n+40 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Woe Spawn (Maji Talisman)",
@@ -101,7 +101,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "159% increased [Physical] Damage\nAdds 33 to 58 [Physical|Physical] Damage\n[Gain] 33% of Damage as Extra [Fire] Damage\n+5 to Level of all [Attack] Skills\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 18%\n(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: effect of Fully Broken 护甲提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +10 Maximum [Rage]\n[Physical] Damage提高 159%\n附加 33 - 58 物理伤害\n[Gain] 33% of Damage as Extra [Fire] Damage\n+5 Level of all [Attack] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Pain Turn (黄玉戒指)",
@@ -109,7 +109,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "+256 to [Accuracy|Accuracy] Rating\n+103 to maximum Life\n+98 to maximum Mana\n+40% to [Resistances|Lightning Resistance]\n66% increased Mana Regeneration Rate"
+      "desc": "(基底) +34% 闪电抗性\n+256 Accuracy Rating\n+103 最大生命\n+98 最大魔力\n+40% 闪电抗性\n魔力回复速度提高 66%"
     }
   ],
   "skills": [

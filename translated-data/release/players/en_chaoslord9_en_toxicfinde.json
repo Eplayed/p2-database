@@ -13,7 +13,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 15 to 26 [Fire] damage to [Attack|Attacks]\n+194 to [Accuracy|Accuracy] Rating\n19% increased [ItemRarity|Rarity of Items] found\n+37% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +8% all Elemental [Resistances]\n附加 15 - 26 Attacks\n+194 Accuracy Rating\n物品稀有度提高 19%\n+37% 火焰抗性\n+38% 冰霜抗性"
     },
     {
       "name": "毒疫之指",
@@ -21,7 +21,7 @@
       "baseType": "Gauze Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QbGFndWVmaW5nZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f88ef1cca5/Plaguefinger.png",
       "rarity": 3,
-      "desc": "47% increased [Evasion] and [EnergyShield|Energy Shield]\n4% increased [Attack] Speed\n[DamageTypes|All Damage] from [HitDamage|Hits] [Contributes|Contributes] to [Poison] Magnitude"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Magnitude of Damaging Ailments you inflict提高 20%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 15%\n能量护盾提高 47%\n[Attack] Speed提高 4%\nAll Damage from Hits Contributes to [Poison] Magnitude\n(已腐化)"
     },
     {
       "name": "Hypnotic Arch (毁灭者之弓)",
@@ -29,7 +29,7 @@
       "baseType": "Obliterator Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e62ea7f094/Bow09.png",
       "rarity": 2,
-      "desc": "70% increased [Physical] Damage\nAdds 31 to 49 [Physical|Physical] Damage\n+174 to [Accuracy|Accuracy] Rating\n+3 to Level of all [Attack] Skills\n25% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n(基底) Projectile Range降低 50%\n[Physical] Damage提高 70%\n附加 31 - 49 物理伤害\n+174 Accuracy Rating\n+3 Level of all [Attack] Skills\n25% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -37,7 +37,7 @@
       "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 while Sprinting提高 9%"
     },
     {
       "name": "Onslaught Brow (先祖冠冕)",
@@ -45,7 +45,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "132% increased [EnergyShield|Energy Shield]\n+49 to maximum Life\n17% increased [ItemRarity|Rarity of Items] found\n+30 to [Intelligence|Intelligence]\n+22% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 132%\n+49 最大生命\n物品稀有度提高 17%\n+30 智慧\n+22% 混沌抗性"
     },
     {
       "name": "赤红护身符",
@@ -53,7 +53,7 @@
       "baseType": "Calm Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 魔力回复速度 while moving提高 25%"
     },
     {
       "name": "Eagle Spark (急迅便鞋)",
@@ -61,7 +61,7 @@
       "baseType": "Quickslip Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f36ea8ace2/BootsDexInt03.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+51 to [Evasion] Rating\n+25 to maximum [EnergyShield|Energy Shield]\n+95 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n+44% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+51 [闪避值] Rating\n+25 最大能量护盾\n+95 最大魔力\n物品稀有度提高 17%\n+44% 闪电抗性"
     },
     {
       "name": "Golem Gorget (帝金护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "24% increased [Armour]\n47% increased maximum [EnergyShield|Energy Shield]\n+42 to [Spirit|Spirit]\n+3 to Level of all [Projectile] Skills\n+48% to [Resistances|Lightning Resistance]"
+      "desc": "(附魔) Allocates Lasting Trauma\n(基底) 物品稀有度提高 17%\n[护甲]提高 24%\n最大能量护盾提高 47%\n+42 Spirit\n+3 Level of all [Projectile] Skills\n+48% 闪电抗性"
     },
     {
       "name": "Damnation Stinger (贯心箭袋)",
@@ -77,7 +77,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) 暴击率 for Attacks提高 20%\n(已腐化)"
     },
     {
       "name": "Hyrri's Ire",
@@ -85,7 +85,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "246% increased [Evasion|Evasion] Rating\n[Gain] 24% of Damage as Extra [Cold] Damage\n+36 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 36%\n闪避值 Rating提高 246%\n[Gain] 24% of Damage as Extra [Cold] Damage\n+36 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]"
     },
     {
       "name": "Brood Hold (金光戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) 物品稀有度提高 15%\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -101,7 +101,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+44 to maximum Life\n+39 to [Strength|Strength]\n+25 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 23%\n(基底) Has 2 [Charm] Slots\n+44 最大生命\n+39 力量\n+25 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     }
   ],
   "skills": [

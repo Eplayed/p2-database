@@ -13,7 +13,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+58 to maximum Life\n+25 to [Strength|Strength]\n+21 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +20% 冰霜抗性\n(基底) 晕眩门槛提高 28%\n(基底) Has 2 [Charm] Slots\n+58 最大生命\n+25 力量\n+21 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Domination Sole (雅致胫甲)",
@@ -21,7 +21,7 @@
       "baseType": "Elegant Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f9e847d2b0/BootsStr04.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+77 to maximum Mana\n18% increased [ItemRarity|Rarity of Items] found\n+38% to [Resistances|Lightning Resistance]\n+41% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+77 最大魔力\n物品稀有度提高 18%\n+38% 闪电抗性\n+41% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Dire Medallion (血岩护身符)",
@@ -29,7 +29,7 @@
       "baseType": "Bloodstone Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQmxvb2RzdG9uZUFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f8bbf74c8e/BloodstoneAmulet.png",
       "rarity": 2,
-      "desc": "+98 to maximum Mana\n+47 to [Spirit|Spirit]\n+3 to Level of all [Melee|Melee] Skills\n+34% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Allocates Wild Storm\n(基底) +31 最大生命\n+98 最大魔力\n+47 Spirit\n+3 Level of all Melee Skills\n+34% 火焰抗性\n+37% 冰霜抗性"
     },
     {
       "name": "Woe Cloak (Maji Talisman)",
@@ -37,7 +37,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "176% increased [Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 31% of Damage as Extra [Physical] Damage\n23% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Skill Speed提高 8%\n(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 15%\n(基底) +12 Maximum [Rage]\n[Physical] Damage提高 176%\n+5 Level of all [Attack] Skills\n[Gain] 31% of Damage as Extra [Physical] Damage\n23% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Woe Shelter (石制胸甲)",
@@ -45,7 +45,7 @@
       "baseType": "Stone Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/017f2527d7/BodyStr08.png",
       "rarity": 2,
-      "desc": "+266 to [Armour|Armour]\n107% increased [Armour|Armour]\n+210 to maximum Life\n+21% to [Resistances|Chaos Resistance]\n+50% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +28% 闪电抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+266 护甲\n护甲提高 107%\n+210 最大生命\n+21% 混沌抗性\n+50% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Kalandra's Touch",
@@ -61,7 +61,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 4 to 96 [Lightning] damage to [Attack|Attacks]\n28% increased [Cold] Damage\n+119 to maximum Life\n+29 to [Intelligence|Intelligence]\n+22% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) +14 力量\n(基底) Maximum [Quality] is 40%\n附加 4 - 96 Attacks\n[Cold] Damage提高 28%\n+119 最大生命\n+29 智慧\n+22% all Elemental [Resistances]\n(已腐化)"
     },
     {
       "name": "公理不存",
@@ -69,7 +69,7 @@
       "baseType": "Grand Manchettes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9TaW5lQWVxdW8iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e243b1f810/SineAequo.png",
       "rarity": 3,
-      "desc": "11% increased [SkillSpeed|Skill Speed]\n109% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n[Immobilised|Immobilise] enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage"
+      "desc": "(附魔) Damage Penetrates 11% 冰霜抗性\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\nSkill Speed提高 11%\n护甲, 闪避值 and 能量护盾提高 109%\nImmobilise enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage\n(已腐化)"
     },
     {
       "name": "Gale Visor (贵族巨盔)",
@@ -77,7 +77,7 @@
       "baseType": "Noble Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/39a19d746e/HelmetStr05.png",
       "rarity": 2,
-      "desc": "37% increased [Armour|Armour]\n+166 to maximum Life\n+27 to maximum Mana\n+41% to [Resistances|Fire Resistance]\n+32% to [Resistances|Cold Resistance]\n+37% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +11% 混沌抗性\n护甲提高 37%\n+166 最大生命\n+27 最大魔力\n+41% 火焰抗性\n+32% 冰霜抗性\n+37% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Brimstone Beam (收割长杖)",
@@ -85,7 +85,7 @@
       "baseType": "Reaping Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDgiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2d0093de2/Staff08.png",
       "rarity": 2,
-      "desc": "117% increased [Spell] Damage\n30% reduced [Attributes|Attribute] Requirements\n+28 to [Intelligence|Intelligence]\n59% increased Mana Regeneration Rate"
+      "desc": "[Spell] Damage提高 117%\nAttribute Requirements降低 30%\n+28 智慧\n魔力回复速度提高 59%"
     }
   ],
   "skills": [

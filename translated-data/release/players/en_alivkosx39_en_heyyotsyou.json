@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 12 to 18 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 14 to 25 [Cold] damage to [Attack|Attacks]\n34% increased [ItemRarity|Rarity of Items] found\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 12 - 18 物理伤害 to Attacks\n附加 14 - 25 Attacks\n物品稀有度提高 34%\n+37% 闪电抗性"
     },
     {
       "name": "Carrion Collar (星辉护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "+172 to maximum Life\n7% increased maximum Life\n+3 to Level of all [Melee|Melee] Skills\n+33% to [Resistances|Fire Resistance]\n+38% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Allocates Acceleration\n(基底) +7 全属性\n+172 最大生命\n最大生命提高 7%\n+3 Level of all Melee Skills\n+33% 火焰抗性\n+38% 冰霜抗性"
     },
     {
       "name": "Phoenix Hoof (萨满绑腿)",
@@ -29,7 +29,7 @@
       "baseType": "Shamanistic Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnRTdHIwMyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3fb2f64940/BootsIntStr03.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n86% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+40% to [Resistances|Fire Resistance]\n+33% to [Resistances|Lightning Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +11% 混沌抗性\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n护甲 and 能量护盾提高 86%\n+40% 火焰抗性\n+33% 闪电抗性\n+19% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Horror Guardian (好战者巨盔)",
@@ -37,7 +37,7 @@
       "baseType": "Warmonger Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwMiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/73267fe169/HelmetStr02.png",
       "rarity": 2,
-      "desc": "+518 to [Accuracy|Accuracy] Rating\n+147 to maximum Life\n+92 to maximum Mana\n+43% to [Resistances|Fire Resistance]\n+44% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n+518 Accuracy Rating\n+147 最大生命\n+92 最大魔力\n+43% 火焰抗性\n+44% 冰霜抗性"
     },
     {
       "name": "Vengeance Mantle (Sacrificial Regalia)",
@@ -45,7 +45,7 @@
       "baseType": "Sacrificial Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0ckRleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7e5722b0ec/BodyStrDexInt02.png",
       "rarity": 2,
-      "desc": "+163 to [Evasion] Rating\n86% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+205 to maximum Life\n+41% to [Resistances|Cold Resistance]\n+46% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +1 Level of all [Corrupted] Skill Gems\n+163 [闪避值] Rating\n护甲, 闪避值 and 能量护盾提高 86%\n+205 最大生命\n+41% 冰霜抗性\n+46% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Entropy Gyre (金光戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 9 to 20 [Physical|Physical] Damage to [Attack|Attacks]\n25% increased [Cold] Damage\n36% increased [ItemRarity|Rarity of Items] found\n+39 to [Intelligence|Intelligence]\n+27% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 9 - 20 物理伤害 to Attacks\n[Cold] Damage提高 25%\n物品稀有度提高 36%\n+39 智慧\n+27% 闪电抗性"
     },
     {
       "name": "Wrath Touch (华丽护手)",
@@ -61,7 +61,7 @@
       "baseType": "Ornate Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/041d8df186/GlovesStr04.png",
       "rarity": 2,
-      "desc": "8% increased [Armour|Armour]\n+207 to [Accuracy|Accuracy] Rating\n+143 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n+15% to [Resistances|Fire Resistance]\n+39% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n护甲提高 8%\n+207 Accuracy Rating\n+143 最大生命\n+2 Level of all Melee Skills\n+15% 火焰抗性\n+39% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+50 to maximum Life\n+28 to [Strength|Strength]\n+28 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 2 [Charm] Slots\n+50 最大生命\n+28 力量\n+28 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Lonely Urge (Jade Talisman)",
@@ -77,7 +77,7 @@
       "baseType": "Jade Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvTHVtYmVyaW5nVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75c7ed525d/LumberingTalisman.png",
       "rarity": 2,
-      "desc": "161% increased [Physical] Damage\nAdds 33 to 58 [Physical|Physical] Damage\n138% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n22% increased [Attack] Speed\n+5 to Level of all [Attack] Skills"
+      "desc": "(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 161%\n附加 33 - 58 物理伤害\n元素伤害 with Attacks提高 138%\n[Attack] Speed提高 22%\n+5 Level of all [Attack] Skills"
     }
   ],
   "skills": [

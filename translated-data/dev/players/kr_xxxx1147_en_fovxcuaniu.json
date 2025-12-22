@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 36 [Physical|Physical] Damage to [Attack|Attacks]\n34% increased [ItemRarity|Rarity of Items] found\n+15% to all [ElementalDamage|Elemental] [Resistances]\n+24% to [Resistances|Fire Resistance]"
+      "desc": "(基底) 物品稀有度提高 10%\n附加 14 - 36 物理伤害 to Attacks\n物品稀有度提高 34%\n+15% all Elemental [Resistances]\n+24% 火焰抗性"
     },
     {
       "name": "Torment Gorget (帝金护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+50 to [Spirit|Spirit]\n+18% to all [ElementalDamage|Elemental] [Resistances]\n+34% to [Resistances|Fire Resistance]\n26% increased Global [Defences]"
+      "desc": "(附魔) Allocates Lasting Trauma\n(基底) 物品稀有度提高 18%\n+50 Spirit\n+18% all Elemental [Resistances]\n+34% 火焰抗性\nGlobal [Defences]提高 26%"
     },
     {
       "name": "Pandemonium Star (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -45,7 +45,7 @@
       "baseType": "Obliterator Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e62ea7f094/Bow09.png",
       "rarity": 2,
-      "desc": "168% increased [Physical] Damage\nAdds 34 to 66 [Physical|Physical] Damage\nAdds 4 to 135 [Lightning|Lightning] Damage\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile Range降低 50%\n[Physical] Damage提高 168%\n附加 34 - 66 物理伤害\n附加 4 - 135 闪电伤害\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "Miracle Brand (精工箭袋)",
@@ -53,7 +53,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
       "rarity": 2,
-      "desc": "Adds 19 to 28 [Cold] damage to [Attack|Attacks]\nAdds 1 to 68 [Lightning] damage to [Attack|Attacks]\n59% increased Damage with Bow Skills\n32% increased [CriticalDamageBonus|Critical Damage Bonus] for [Attack] Damage"
+      "desc": "(基底) [Attack] Speed提高 8%\n附加 19 - 28 Attacks\n附加 1 - 68 Attacks\nDamage with Bow Skills提高 59%\nCritical Damage Bonus for [Attack] Damage提高 32%"
     },
     {
       "name": "Hyrri's Ire",
@@ -61,7 +61,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "212% increased [Evasion|Evasion] Rating\n[Gain] 21% of Damage as Extra [Cold] Damage\n+32 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 39%\n闪避值 Rating提高 212%\n[Gain] 21% of Damage as Extra [Cold] Damage\n+32 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]"
     },
     {
       "name": "Blood Duty (Fungal Talisman)",
@@ -69,7 +69,7 @@
       "baseType": "Fungal Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvRnJlbnppZWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d520e0ed80/FrenziedTalisman.png",
       "rarity": 2,
-      "desc": "104% increased [Physical] Damage\nAdds 2 to 72 [Lightning|Lightning] Damage\n87% increased [ElementalDamage|Elemental] Damage with [Attack|Attacks]\n28% increased [Attack] Speed\n29% increased [Stun|Stun] Duration"
+      "desc": "(符文) [Attack] Speed提高 15%\n[Physical] Damage提高 104%\n附加 2 - 72 闪电伤害\n元素伤害 with Attacks提高 87%\n[Attack] Speed提高 28%\nStun Duration提高 29%\n(已腐化)"
     },
     {
       "name": "Morbid Span (丝克玛便鞋)",
@@ -77,7 +77,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+58 to maximum [EnergyShield|Energy Shield]\n96% increased [EnergyShield|Energy Shield]\n+35% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Lose 5% of 最大生命 per second while Sprinting\n(符文) 移动速度 while Sprinting提高 25%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+58 最大能量护盾\n能量护盾提高 96%\n+35% 冰霜抗性\n+43% 闪电抗性\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -85,7 +85,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+42 to maximum Life\n+48 to [Strength|Strength]\n+33 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 24%\n(基底) Has 2 [Charm] Slots\n+42 最大生命\n+48 力量\n+33 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "毒疫之指",
@@ -93,7 +93,7 @@
       "baseType": "Gauze Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QbGFndWVmaW5nZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f88ef1cca5/Plaguefinger.png",
       "rarity": 3,
-      "desc": "34% increased [Evasion] and [EnergyShield|Energy Shield]\n6% increased [Attack] Speed\n[DamageTypes|All Damage] from [HitDamage|Hits] [Contributes|Contributes] to [Poison] Magnitude"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) Magnitude of Damaging Ailments you inflict提高 20%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 15%\n能量护盾提高 34%\n[Attack] Speed提高 6%\nAll Damage from Hits Contributes to [Poison] Magnitude\n(已腐化)"
     }
   ],
   "skills": [

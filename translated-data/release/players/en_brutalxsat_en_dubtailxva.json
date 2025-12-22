@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 3 to 8 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 9 to 14 [Fire] damage to [Attack|Attacks]\nAdds 1 to 27 [Lightning] damage to [Attack|Attacks]\n+23% to [Resistances|Fire Resistance]\n+24% to [Resistances|Cold Resistance]\n+22% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 15%\n附加 3 - 8 物理伤害 to Attacks\n附加 9 - 14 Attacks\n附加 1 - 27 Attacks\n+23% 火焰抗性\n+24% 冰霜抗性\n+22% 闪电抗性"
     },
     {
       "name": "Corpse Slippers (龙鳞长靴)",
@@ -21,7 +21,7 @@
       "baseType": "Dragonscale Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/316987efab/BootsDex05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n73% increased [Evasion|Evasion] Rating\n+41% to [Resistances|Fire Resistance]\n+41% to [Resistances|Lightning Resistance]\n+22% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n闪避值 Rating提高 73%\n+41% 火焰抗性\n+41% 闪电抗性\n+22% 混沌抗性"
     },
     {
       "name": "Golem Scarab (海玉护身符)",
@@ -29,7 +29,7 @@
       "baseType": "Lapis Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTGFwaXNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/572eeaf30b/LapisAmulet.png",
       "rarity": 2,
-      "desc": "+74 to maximum Life\n+115 to maximum Mana\n+3 to Level of all [Projectile] Skills\n+21% to [Resistances|Cold Resistance]\n+16% to [Resistances|Chaos Resistance]"
+      "desc": "(附魔) Allocates Killer Instinct\n(基底) +12 智慧\n+74 最大生命\n+115 最大魔力\n+3 Level of all [Projectile] Skills\n+21% 冰霜抗性\n+16% 混沌抗性"
     },
     {
       "name": "赤红护身符",
@@ -37,7 +37,7 @@
       "baseType": "Restorative Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 10% of Damage taken Recouped as Life"
     },
     {
       "name": "猎首",
@@ -45,7 +45,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+49 to maximum Life\n+29 to [Strength|Strength]\n+20 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 3 [Charm] Slots\n+49 最大生命\n+29 力量\n+20 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Grim Dome (劫掠者之帽)",
@@ -53,7 +53,7 @@
       "baseType": "Freebooter Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXgwNyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/74f4fa374e/HelmetDex07.png",
       "rarity": 2,
-      "desc": "91% increased [Evasion|Evasion] Rating\n+169 to maximum Life\n+32% to [Resistances|Cold Resistance]\n+30% to [Resistances|Lightning Resistance]\nGain [Deflect|Deflection Rating] equal to 16% of [Evasion|Evasion Rating]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n闪避值 Rating提高 91%\n+169 最大生命\n+32% 冰霜抗性\n+30% 闪电抗性\nGain Deflection Rating equal to 16% of 闪避值 Rating"
     },
     {
       "name": "Pain Fingers (倒刺护腕)",
@@ -61,7 +61,7 @@
       "baseType": "Barbed Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b6a93d2794/GlovesDex05.png",
       "rarity": 2,
-      "desc": "Adds 9 to 17 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 2 to 55 [Lightning] damage to [Attack|Attacks]\n+33% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 9 - 17 物理伤害 to Attacks\n附加 2 - 55 Attacks\n+33% 火焰抗性\n+35% 冰霜抗性\n+38% 闪电抗性"
     },
     {
       "name": "Vortex Suit (滑击背心)",
@@ -69,7 +69,7 @@
       "baseType": "Slipstrike Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dd53d7b8d1/BodyDex06.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(已腐化)"
     },
     {
       "name": "Horror Fletch (寻战之弓)",
@@ -77,7 +77,7 @@
       "baseType": "Warmonger Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwOCIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90f84002ea/Bow08.png",
       "rarity": 2,
-      "desc": "65% increased [Physical] Damage\nAdds 29 to 66 [Physical|Physical] Damage\n+169 to [Accuracy|Accuracy] Rating\n+3 to Level of all [Attack] Skills\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) Bow Attacks fire an additional Arrow\n(符文) Elements\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 65%\n附加 29 - 66 物理伤害\n+169 Accuracy Rating\n+3 Level of all [Attack] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Miracle Twirl (裂隙戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 11 to 24 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 27 to 42 [Fire] damage to [Attack|Attacks]\n+167 to maximum Mana\n+16% to all [ElementalDamage|Elemental] [Resistances]\n+31% to [Resistances|Fire Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 11 - 24 物理伤害 to Attacks\n附加 27 - 42 Attacks\n+167 最大魔力\n+16% all Elemental [Resistances]\n+31% 火焰抗性"
     },
     {
       "name": "Loath Shot (贯心箭袋)",
@@ -93,7 +93,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(基底) 暴击率 for Attacks提高 28%\n(已腐化)"
     }
   ],
   "skills": [

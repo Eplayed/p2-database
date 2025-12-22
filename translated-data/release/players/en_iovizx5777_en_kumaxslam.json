@@ -13,7 +13,7 @@
       "baseType": "Tawhoan Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMTAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8efda96f5b/Tower10.png",
       "rarity": 2,
-      "desc": "+256 to [Armour|Armour]\n110% increased [Armour|Armour]\n+23% to [Resistances|Lightning Resistance]\n+39% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n+262 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+256 护甲\n护甲提高 110%\n+23% 闪电抗性\n+39% 的 护甲 也套用于 元素伤害\n+262 晕眩门槛"
     },
     {
       "name": "Armageddon Clutches (军官手甲)",
@@ -21,7 +21,7 @@
       "baseType": "Commander Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cb6b02463/GlovesStrDex02.png",
       "rarity": 2,
-      "desc": "Adds 6 to 9 [Physical|Physical] Damage to [Attack|Attacks]\n+131 to maximum Life\n+121 to maximum Mana\n+2 to Level of all [Melee|Melee] Skills\n[ManaLeech|Leech] 5.22% of [Physical] [Attack] Damage as Mana"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 6 - 9 物理伤害 to Attacks\n+131 最大生命\n+121 最大魔力\n+2 Level of all Melee Skills\nLeech 5.22% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Doom Band (三相戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 15 to 22 [Physical|Physical] Damage to [Attack|Attacks]\n+186 to [Evasion] Rating\n+115 to maximum Life\n+32 to [Strength|Strength]\n+16% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +7% all Elemental [Resistances]\n附加 15 - 22 物理伤害 to Attacks\n+186 [闪避值] Rating\n+115 最大生命\n+32 力量\n+16% 混沌抗性"
     },
     {
       "name": "Pain Wrap (督军胸甲)",
@@ -37,7 +37,7 @@
       "baseType": "Warlord Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/23e350525b/BodyStr10.png",
       "rarity": 2,
-      "desc": "+258 to [Armour|Armour]\n103% increased [Armour|Armour]\n+28 to [Strength|Strength]\nHits against you have 42% reduced [CriticalDamageBonus|Critical Damage Bonus]\n30.5 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +22% 的 护甲 也套用于 元素伤害\n+258 护甲\n护甲提高 103%\n+28 力量\nHits against you have Critical Damage Bonus降低 42%\n30.5 Life Regeneration per second"
     },
     {
       "name": "Golem Ruin (冠首之锤)",
@@ -45,7 +45,7 @@
       "baseType": "Crown Mace",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQmFzZXR5cGVzLzFITWFjZTA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3f1f11ed25/1HMace06.png",
       "rarity": 2,
-      "desc": "Adds 16 to 27 [Physical|Physical] Damage\nAdds 26 to 41 [Fire|Fire] Damage\n23% increased [Attack] Speed\n+5 to Level of all [Melee|Melee] Skills\n[Gain] 18% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 8%\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 15%\n附加 16 - 27 物理伤害\n附加 26 - 41 火焰伤害\n[Attack] Speed提高 23%\n+5 Level of all Melee Skills\n[Gain] 18% of Damage as Extra [Physical] Damage"
     },
     {
       "name": "Ghoul Twirl (金光戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 5 to 13 [Physical|Physical] Damage to [Attack|Attacks]\n20% increased [Lightning] Damage\n+104 to maximum Life\n+40% to [Resistances|Fire Resistance]\n+35% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 10%\n附加 5 - 13 物理伤害 to Attacks\n[Lightning] Damage提高 20%\n+104 最大生命\n+40% 火焰抗性\n+35% 闪电抗性"
     },
     {
       "name": "Empyrean Braid (帝金护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "31% increased [Evasion|Evasion Rating]\n30% increased maximum [EnergyShield|Energy Shield]\n32% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Melee|Melee] Skills"
+      "desc": "(附魔) Allocates Greatest Defence\n(基底) 物品稀有度提高 14%\n闪避值 Rating提高 31%\n最大能量护盾提高 30%\n物品稀有度提高 32%\n+3 Level of all Melee Skills"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+57 to maximum Life\n+30 to [Strength|Strength]\n+21 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +11 力量\n(基底) 晕眩门槛提高 25%\n(基底) Has 3 [Charm] Slots\n+57 最大生命\n+30 力量\n+21 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Phoenix Stride (要塞战靴)",
@@ -77,7 +77,7 @@
       "baseType": "Fortress Sabatons",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHJEZXgwMyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0dd26050c/BootsStrDex03.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n40% increased [Armour|Armour] and [Evasion|Evasion]\n+130 to maximum Life\n+38% to [Resistances|Fire Resistance]\n+42% to [Resistances|Cold Resistance]\n+116 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n护甲 and 闪避值提高 40%\n+130 最大生命\n+38% 火焰抗性\n+42% 冰霜抗性\n+116 晕眩门槛"
     },
     {
       "name": "Damnation Corona (隐秘之冠)",
@@ -85,7 +85,7 @@
       "baseType": "Cryptic Crown",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnRTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9456a4b2b7/HelmetIntStr06.png",
       "rarity": 2,
-      "desc": "29% increased [Armour|Armour] and [EnergyShield|Energy Shield]\n+147 to maximum Life\n+23 to maximum Mana\n+33% to [Resistances|Cold Resistance]\n+41% to [Resistances|Lightning Resistance]\n+13% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +28% 火焰抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲 and 能量护盾提高 29%\n+147 最大生命\n+23 最大魔力\n+33% 冰霜抗性\n+41% 闪电抗性\n+13% 混沌抗性\n(已腐化)"
     }
   ],
   "skills": [

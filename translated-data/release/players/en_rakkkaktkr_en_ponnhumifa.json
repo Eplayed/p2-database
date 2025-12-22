@@ -13,7 +13,7 @@
       "baseType": "Sturdy Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 晕眩门槛提高 25%"
     },
     {
       "name": "Vortex Spiral (三相戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "28% increased [Lightning] Damage\n+105 to maximum Life\n+144 to maximum Mana\n+19% to all [ElementalDamage|Elemental] [Resistances]\n+37% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +10% all Elemental [Resistances]\n[Lightning] Damage提高 28%\n+105 最大生命\n+144 最大魔力\n+19% all Elemental [Resistances]\n+37% 冰霜抗性"
     },
     {
       "name": "Wrath Ward (法术冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Sorcerous Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/33248feedf/HelmetInt04.png",
       "rarity": 2,
-      "desc": "+53 to maximum [EnergyShield|Energy Shield]\n98% increased [EnergyShield|Energy Shield]\n34% increased [Critical|Critical Hit] Chance\n+29 to [Intelligence|Intelligence]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+53 最大能量护盾\n能量护盾提高 98%\n暴击率提高 34%\n+29 智慧\n+33% 闪电抗性"
     },
     {
       "name": "灵魂羁绊",
@@ -37,7 +37,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+46 to maximum [EnergyShield|Energy Shield]\n+23 to [Intelligence|Intelligence]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(附魔) +15 力量\n(基底) [Charm] Effect Duration提高 17%\n(基底) Has 3 [Charm] Slots\n+46 最大能量护盾\n+23 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "Dragon Nail (三相戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "+202 to [Accuracy|Accuracy] Rating\n+93 to maximum Life\n6% increased maximum Mana\n+38% to [Resistances|Fire Resistance]\n+48% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +8% all Elemental [Resistances]\n+202 Accuracy Rating\n+93 最大生命\n最大魔力提高 6%\n+38% 火焰抗性\n+48% 闪电抗性"
     },
     {
       "name": "Fate Track (丝克玛便鞋)",
@@ -53,7 +53,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+88 to maximum Life\n+117 to maximum Mana\n+30% to [Resistances|Fire Resistance]\n+43% to [Resistances|Cold Resistance]\n+14% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 35%\n+88 最大生命\n+117 最大魔力\n+30% 火焰抗性\n+43% 冰霜抗性\n+14% 混沌抗性"
     },
     {
       "name": "Cataclysm Pendant (碧蓝护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Azure Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQXp1cmVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e49b170ba2/AzureAmulet.png",
       "rarity": 2,
-      "desc": "35% increased maximum [EnergyShield|Energy Shield]\n+110 to maximum Life\n+48 to [Spirit|Spirit]\n+30 to [Intelligence|Intelligence]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) 魔力回复速度提高 25%\n最大能量护盾提高 35%\n+110 最大生命\n+48 Spirit\n+30 智慧"
     },
     {
       "name": "Atziri's Acuity",
@@ -69,7 +69,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "48% increased [Critical|Critical Hit] Chance\n+21 to [Intelligence|Intelligence]\n[Leech] from [Critical|Critical Hits] is instant"
+      "desc": "(符文) 施法速度提高 8%\n(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Mana Cost Low Mana提高 20%\n暴击率提高 48%\n+21 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "血誓",
@@ -77,7 +77,7 @@
       "baseType": "Altar Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL1RoZUNvdmVuYW50IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/90335a8685/TheCovenant.png",
       "rarity": 3,
-      "desc": "141% increased [EnergyShield|Energy Shield]\n+136 to maximum Life\n10% of [Spell] Damage [LifeLeech|Leeched as Life]"
+      "desc": "(符文) +14% 火焰抗性\n(符文) +22% 混沌抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 141%\n+136 最大生命\n10% of Leeched as Life\n(已腐化)"
     },
     {
       "name": "Rune Ward (排列法器)",
@@ -85,7 +85,7 @@
       "baseType": "Arrayed Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a7c172ac69/Focus06.png",
       "rarity": 2,
-      "desc": "+70 to maximum [EnergyShield|Energy Shield]\n92% increased [EnergyShield|Energy Shield]\n62% increased [Spell] [Physical] Damage\n+2 to Level of all [Spell|Spell] Skills\n49% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n46% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+70 最大能量护盾\n能量护盾提高 92%\n[Spell] [Physical] Damage提高 62%\n+2 Level of all Spell Skills\n暴击率 for Spells提高 49%\n46% faster start of 能量护盾 Recharge"
     },
     {
       "name": "Brimstone Needle (决斗法杖)",
@@ -93,7 +93,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Cold] Damage\n[Gain] 29% of Damage as Extra [Lightning] Damage\n32% increased Cast Speed\n66% increased Mana Regeneration Rate\n+5 to Level of all [Physical|Physical] [Spell|Spell] Skills"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Cold] Damage\n[Gain] 29% of Damage as Extra [Lightning] Damage\n施法速度提高 32%\n魔力回复速度提高 66%\n+5 Level of all Physical Spell Skills"
     }
   ],
   "skills": [

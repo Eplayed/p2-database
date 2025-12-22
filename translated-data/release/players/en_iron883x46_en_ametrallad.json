@@ -13,7 +13,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL09wZW5QYWxtT2ZUaGVEcmVhbWVyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/fa5b4a4e00/OpenPalmOfTheDreamer.png",
       "rarity": 3,
-      "desc": "[Allies|Allies] in your [Presence|Presence] deal 14 to 26 added [Attack|Attack] [Chaos] Damage\n+9 to all [Attributes|Attributes]\n23% reduced [LightRadius|Light Radius]\n13% reduced Skill Effect Duration\n[Gain] 27% of Damage as Extra [Chaos] Damage\nGrants effect of [UniqueShrineChaos|Dreaming Gloom Shrine]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\nAllies in your Presence deal 14 to 26 added Attack [Chaos] Damage\n+9 全属性\nLight Radius降低 23%\nSkill Effect Duration降低 13%\n[Gain] 27% of Damage as Extra [Chaos] Damage\nGrants effect of Dreaming Gloom Shrine\n(已腐化)"
     },
     {
       "name": "灵魂羁绊",
@@ -21,7 +21,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+45 to maximum [EnergyShield|Energy Shield]\n+30 to [Intelligence|Intelligence]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(附魔) 最大能量护盾提高 23%\n(基底) [Charm] Effect Duration提高 18%\n(基底) Has 3 [Charm] Slots\n+45 最大能量护盾\n+30 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "Torment Sole (丝克玛便鞋)",
@@ -29,7 +29,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "99% increased [EnergyShield|Energy Shield]\n+37% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n+33% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 99%\n+37% 火焰抗性\n+34% 冰霜抗性\n+33% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -45,7 +45,7 @@
       "baseType": "Lazuli Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TZWVkT2ZDYXRhY2x5c20iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4ae8a2cc6d/SeedOfCataclysm.png",
       "rarity": 3,
-      "desc": "50% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n50% increased [CriticalDamageBonus|Critical Spell Damage Bonus]\n+13% to [Resistances|Chaos Resistance]\n10% increased Mana Cost of Skills"
+      "desc": "(基底) +27 最大魔力\n暴击率 for Spells提高 50%\nCritical 法术伤害 Bonus提高 50%\n+13% 混沌抗性\nMana Cost of Skills提高 10%"
     },
     {
       "name": "Hypnotic Pile (鸣谐长杖)",
@@ -53,7 +53,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 31% of Damage as Extra [Lightning] Damage\n20% reduced [Attributes|Attribute] Requirements\n+5 to Level of all [Spell|Spell] Skills"
+      "desc": "(符文) +20 智慧\n(符文) Bonded: +100 最大能量护盾\n[Gain] 31% of Damage as Extra [Lightning] Damage\nAttribute Requirements降低 20%\n+5 Level of all Spell Skills"
     },
     {
       "name": "谜容",
@@ -61,7 +61,7 @@
       "baseType": "Tribal Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhlVmVydGV4IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/baf0218c37/TheVertex.png",
       "rarity": 3,
-      "desc": "Has no [Attributes|Attribute] Requirements\n23% increased [Critical|Critical Hit] Chance\n+14% to [Resistances|Chaos Resistance]\nSkill Gems have no [Attributes|Attribute] Requirements"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\nHas no Attribute Requirements\n暴击率提高 23%\n+14% 混沌抗性\nSkill Gems have no Attribute Requirements\n(已腐化)"
     },
     {
       "name": "Phoenix Choker (琥珀护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Amber Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQW1iZXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b2698b19ad/AmberAmulet.png",
       "rarity": 2,
-      "desc": "+124 to maximum Life\n+41 to [Spirit|Spirit]\n26% increased [Critical|Critical Hit] Chance\n+15% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) Allocates Fast Metabolism\n(基底) +13 力量\n+124 最大生命\n+41 Spirit\n暴击率提高 26%\n+15% all Elemental [Resistances]"
     },
     {
       "name": "Phoenix Grip (丰裕手套)",
@@ -77,7 +77,7 @@
       "baseType": "Opulent Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8882887a8e/GlovesInt04.png",
       "rarity": 2,
-      "desc": "+42 to maximum [EnergyShield|Energy Shield]\n40% increased [EnergyShield|Energy Shield]\n+47 to maximum Life\n+40% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]\n+37% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) Life Cost [Efficiency]提高 25%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n+42 最大能量护盾\n能量护盾提高 40%\n+47 最大生命\n+40% 火焰抗性\n+37% 冰霜抗性\n+37% 闪电抗性"
     },
     {
       "name": "Brood Curtain (邪恶束衣)",
@@ -85,7 +85,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(已腐化)"
     },
     {
       "name": "Corruption Call (决斗法杖)",
@@ -93,7 +93,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/eafbb19c97/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 28% of Damage as Extra [Cold] Damage\n[Gain] 30% of Damage as Extra [Lightning] Damage\n91% increased [Spell] Damage\n+5 to Level of all [Fire|Fire] [Spell|Spell] Skills\n51% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 28% of Damage as Extra [Cold] Damage\n[Gain] 30% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 91%\n+5 Level of all Fire Spell Skills\n暴击率 for Spells提高 51%"
     }
   ],
   "skills": [

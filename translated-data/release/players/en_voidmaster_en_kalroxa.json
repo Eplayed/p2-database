@@ -13,7 +13,7 @@
       "baseType": "Surefooted Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 Penalty from using Skills while moving降低 9%"
     },
     {
       "name": "赤红护身符",
@@ -21,7 +21,7 @@
       "baseType": "Deflective Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) Deflection Rating提高 10%"
     },
     {
       "name": "暴风之语",
@@ -29,7 +29,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0Nob2lyT2ZUaGVTdG9ybSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/59c9c7bfc8/ChoirOfTheStorm.png",
       "rarity": 3,
-      "desc": "+115% to [Resistances|Lightning Resistance]\n[Critical|Critical Hits] [IgnoreResistances|Ignore] Enemy Monster [Resistances|Lightning Resistance]\n[Trigger] Lightning Bolt Skill on [Critical|Critical Hit]"
+      "desc": "(附魔) Allocates Barbaric 力量\n(基底) +12 敏捷\n+115% 闪电抗性\nCritical Hits Ignore Enemy Monster 闪电抗性\nCritical Hit"
     },
     {
       "name": "灵魂羁绊",
@@ -37,7 +37,7 @@
       "baseType": "Long Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
       "rarity": 3,
-      "desc": "+58 to maximum [EnergyShield|Energy Shield]\n+29 to [Intelligence|Intelligence]\nExcess Life Recovery from [LifeLeech|Leech] is applied to [EnergyShield|Energy Shield]"
+      "desc": "(附魔) +23% 火焰抗性\n(基底) [Charm] Effect Duration提高 19%\n(基底) Has 2 [Charm] Slots\n+58 最大能量护盾\n+29 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "血咒师面罩",
@@ -45,7 +45,7 @@
       "baseType": "Face Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvUGhhbnRvbUJsb29kIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/913957c654/PhantomBlood.png",
       "rarity": 3,
-      "desc": "+22 to [Evasion] Rating\n+11 to maximum [EnergyShield|Energy Shield]\n34% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n+11 to [Strength|Strength]\n+16 to [Intelligence|Intelligence]\n[BloodMagic|Blood Magic]"
+      "desc": "(附魔) +30 Spirit\n(符文) +11% 混沌抗性\n+22 [闪避值] Rating\n+11 最大能量护盾\n暴击率 for Spells提高 34%\n+11 力量\n+16 智慧\nBlood Magic\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -61,7 +61,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "135% increased [EnergyShield|Energy Shield]\n+161 to maximum Life\n+24% to [Resistances|Fire Resistance]\n+31% to [Resistances|Cold Resistance]"
+      "desc": "(符文) Life Cost [Efficiency]提高 25%\n能量护盾提高 135%\n+161 最大生命\n+24% 火焰抗性\n+31% 冰霜抗性"
     },
     {
       "name": "Sorrow Urge (丝克玛便鞋)",
@@ -69,7 +69,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n116% increased [EnergyShield|Energy Shield]\n16% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Cold Resistance]\n+65 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 116%\n物品稀有度提高 16%\n+36% 冰霜抗性\n+65 晕眩门槛"
     },
     {
       "name": "Corruption Jack (邪恶束衣)",
@@ -77,7 +77,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+77 to maximum [EnergyShield|Energy Shield]\n105% increased [EnergyShield|Energy Shield]\n+39% to [Resistances|Fire Resistance]\n+34% to [Resistances|Cold Resistance]\n+238 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+77 最大能量护盾\n能量护盾提高 105%\n+39% 火焰抗性\n+34% 冰霜抗性\n+238 晕眩门槛"
     },
     {
       "name": "Foe Eye (金光戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "36% increased [Lightning] Damage\n32% increased [ItemRarity|Rarity of Items] found\n24% increased Cast Speed\n+14% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 物品稀有度提高 14%\n[Lightning] Damage提高 36%\n物品稀有度提高 32%\n施法速度提高 24%\n+14% all Elemental [Resistances]"
     },
     {
       "name": "Onslaught Pole (鸣谐长杖)",
@@ -93,7 +93,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 50% of Damage as Extra [Cold] Damage\n236% increased [Spell] Damage\n233% increased [Lightning] Damage\n+7 to Level of all [Lightning|Lightning] [Spell|Spell] Skills\n94% increased [Critical|Critical Hit Chance] for [Spell|Spells]"
+      "desc": "(符文) [Gain] 10% of Damage as Extra [Lightning] Damage\n(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Magnitude of Shock you inflict提高 30%\n[Gain] 50% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 236%\n[Lightning] Damage提高 233%\n+7 Level of all Lightning Spell Skills\n暴击率 for Spells提高 94%"
     },
     {
       "name": "Vengeance Pole (鸣谐长杖)",
@@ -101,7 +101,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 46% of Damage as Extra [Cold] Damage\n+313 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n+26 to [Intelligence|Intelligence]\n20% increased Mana Regeneration Rate\n15% increased [LightRadius|Light Radius]"
+      "desc": "(符文) +70 最大能量护盾\n(符文) Bonded: 最大生命提高 10%\n[Gain] 46% of Damage as Extra [Cold] Damage\n+313 最大魔力\n+5 Level of all Spell Skills\n+26 智慧\n魔力回复速度提高 20%\nLight Radius提高 15%"
     }
   ],
   "skills": [

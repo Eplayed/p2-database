@@ -13,7 +13,7 @@
       "baseType": "Crimson Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQ3JpbXNvbkFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6306715ae7/CrimsonAmulet.png",
       "rarity": 2,
-      "desc": "+420 to [Accuracy|Accuracy] Rating\n+34 to [Spirit|Spirit]\n+2 to Level of all [Spell|Spell] Skills\n+13% to [Resistances|Fire Resistance]\n29% increased Global [Defences]"
+      "desc": "(附魔) Allocates Heavy Ammunition\n(基底) 4 Life Regeneration per second\n+420 Accuracy Rating\n+34 Spirit\n+2 Level of all Spell Skills\n+13% 火焰抗性\nGlobal [Defences]提高 29%"
     },
     {
       "name": "Entropy Hold (红玉戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "Adds 6 to 12 [Physical|Physical] Damage to [Attack|Attacks]\n+81 to maximum Mana\n6% increased maximum Mana\n26% increased Cast Speed\n+35% to [Resistances|Fire Resistance]\n+40% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +21% 火焰抗性\n附加 6 - 12 物理伤害 to Attacks\n+81 最大魔力\n最大魔力提高 6%\n施法速度提高 26%\n+35% 火焰抗性\n+40% 闪电抗性"
     },
     {
       "name": "Golem Sanctuary (邪恶束衣)",
@@ -29,7 +29,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+75 to maximum [EnergyShield|Energy Shield]\n128% increased [EnergyShield|Energy Shield]\n+22 to [Intelligence|Intelligence]\n+37% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+75 最大能量护盾\n能量护盾提高 128%\n+22 智慧\n+37% 火焰抗性"
     },
     {
       "name": "Oblivion Urge (丝克玛便鞋)",
@@ -37,7 +37,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "+60 to maximum [EnergyShield|Energy Shield]\n77% increased [EnergyShield|Energy Shield]\n+37% to [Resistances|Cold Resistance]\n+31% to [Resistances|Lightning Resistance]\n42% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+60 最大能量护盾\n能量护盾提高 77%\n+37% 冰霜抗性\n+31% 闪电抗性\n能量护盾 Recharge Rate提高 42%"
     },
     {
       "name": "Blight Hold (海妖之鳞手套)",
@@ -45,7 +45,7 @@
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "+46 to maximum [EnergyShield|Energy Shield]\n43% increased [EnergyShield|Energy Shield]\n+96 to maximum Life\n21% increased [CriticalDamageBonus|Critical Damage Bonus]\n42% increased [ESRechargeRate|Energy Shield Recharge Rate]"
+      "desc": "(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+46 最大能量护盾\n能量护盾提高 43%\n+96 最大生命\nCritical Damage Bonus提高 21%\n能量护盾 Recharge Rate提高 42%"
     },
     {
       "name": "Vortex Ward (先祖冠冕)",
@@ -53,7 +53,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "128% increased [EnergyShield|Energy Shield]\n+25 to maximum Mana\n+34% to [Resistances|Fire Resistance]\n+36% to [Resistances|Cold Resistance]\n+32% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 128%\n+25 最大魔力\n+34% 火焰抗性\n+36% 冰霜抗性\n+32% 闪电抗性"
     },
     {
       "name": "奇思妙想",
@@ -61,7 +61,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "1% increased [Charm] Charges gained\n7% reduced [Charm] Charges used\n30% increased bonuses gained from left Equipped Ring\n30% increased bonuses gained from right Equipped Ring"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained提高 1%\n[Charm] Charges used降低 7%\nbonuses gained from left Equipped Ring提高 30%\nbonuses gained from right Equipped Ring提高 30%"
     },
     {
       "name": "Cataclysm Pole (鸣谐长杖)",
@@ -69,7 +69,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 60% of Damage as Extra [Fire] Damage\n[Gain] 57% of Damage as Extra [Cold] Damage\n85% increased [Spell] Damage\n+77 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills"
+      "desc": "(符文) [Spell] Damage提高 60%\n(符文) Bonded: Break Critical Hit with Spells equal to 24% of 物理伤害 dealt\n[Gain] 60% of Damage as Extra [Fire] Damage\n[Gain] 57% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 85%\n+77 最大魔力\n+5 Level of all Spell Skills"
     },
     {
       "name": "Beast Band (黄玉戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "+32 to maximum Life\n7% increased maximum Mana\n24% increased Cast Speed\n+25% to [Resistances|Cold Resistance]\n+39% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +30% 闪电抗性\n+32 最大生命\n最大魔力提高 7%\n施法速度提高 24%\n+25% 冰霜抗性\n+39% 闪电抗性"
     },
     {
       "name": "Horror Song (鸣谐长杖)",
@@ -85,7 +85,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "219% increased [Spell] Damage\n54% increased [Lightning] Damage\n+41 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n51% increased Cast Speed\nGain 9 Mana per enemy killed"
+      "desc": "[Spell] Damage提高 219%\n[Lightning] Damage提高 54%\n+41 最大魔力\n+5 Level of all Spell Skills\n施法速度提高 51%\nGain 9 Mana per enemy killed"
     }
   ],
   "skills": [

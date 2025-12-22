@@ -13,7 +13,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "+109 to maximum Life\n+107 to maximum Mana\n+18% to all [ElementalDamage|Elemental] [Resistances]\n+16% to [Resistances|Chaos Resistance]\n[ManaLeech|Leech] 6% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +10% all Elemental [Resistances]\n+109 最大生命\n+107 最大魔力\n+18% all Elemental [Resistances]\n+16% 混沌抗性\nLeech 6% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "惊险刺激",
@@ -21,7 +21,7 @@
       "baseType": "Spired Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhyaWxsc3RlZWwiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/5356ecced3/Thrillsteel.png",
       "rarity": 3,
-      "desc": "[Onslaught]"
+      "desc": "(附魔) +26 Spirit\n(符文) +11% 混沌抗性\n[Onslaught]\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+52 to maximum Life\n+39 to [Strength|Strength]\n+40 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +40 最大生命\n(基底) 晕眩门槛提高 21%\n(基底) Has 2 [Charm] Slots\n+52 最大生命\n+39 力量\n+40 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Demon Knot (蓝玉戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 1 to 4 [Lightning] damage to [Attack|Attacks]\n+136 to maximum Life\n19% increased [ItemRarity|Rarity of Items] found\n+34% to [Resistances|Fire Resistance]\n[LifeLeech|Leech] 6.43% of [Physical] [Attack] Damage as Life\nGain 2 Mana per enemy killed"
+      "desc": "(基底) +22% 冰霜抗性\n附加 1 - 4 Attacks\n+136 最大生命\n物品稀有度提高 19%\n+34% 火焰抗性\nLeech 6.43% of [Physical] [Attack] Damage as Life\nGain 2 Mana per enemy killed"
     },
     {
       "name": "Corpse Badge (皇家塔盾)",
@@ -45,7 +45,7 @@
       "baseType": "Royal Tower Shield",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9TaGllbGRzL1Rvd2VyMDMiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a0b185297f/Tower03.png",
       "rarity": 2,
-      "desc": "+230 to [Armour|Armour]\n150% increased [Armour|Armour]\n+30 to [Strength|Strength]\n+2% to all [MaximumResistances|Maximum Elemental Resistances]\n+38% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n+125 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+230 护甲\n护甲提高 150%\n+30 力量\n+2% all Maximum 元素抗性\n+38% 的 护甲 也套用于 元素伤害\n+125 晕眩门槛"
     },
     {
       "name": "Corpse Pelt (督军胸甲)",
@@ -53,7 +53,7 @@
       "baseType": "Warlord Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0cjEwIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/23e350525b/BodyStr10.png",
       "rarity": 2,
-      "desc": "125% increased [Armour|Armour]\n+239 to maximum Life\n+38% to [Resistances|Cold Resistance]\n+42% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) +80 最大生命\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +20% 的 护甲 也套用于 元素伤害\n护甲提高 125%\n+239 最大生命\n+38% 冰霜抗性\n+42% 闪电抗性"
     },
     {
       "name": "Foe Span (塔萨里奥胫甲)",
@@ -61,7 +61,7 @@
       "baseType": "Tasalian Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c3e83f5cc/BootsStr06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n40% increased [Armour|Armour]\n+38% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]\n+35% to [Resistances|Lightning Resistance]\n+99 to [StunThreshold|Stun Threshold]"
+      "desc": "(符文) +11% 混沌抗性\n移动速度提高 30%\n护甲提高 40%\n+38% 火焰抗性\n+35% 冰霜抗性\n+35% 闪电抗性\n+99 晕眩门槛"
     },
     {
       "name": "Onslaught Beads (日曜护身符)",
@@ -69,7 +69,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "9% increased maximum Life\n35% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Melee|Melee] Skills\n+19 to all [Attributes|Attributes]"
+      "desc": "(附魔) Allocates Greatest Defence\n(基底) +15 Spirit\n最大生命提高 9%\n物品稀有度提高 35%\n+3 Level of all Melee Skills\n+19 全属性"
     },
     {
       "name": "Woe Paw (骑士护手)",
@@ -77,7 +77,7 @@
       "baseType": "Knightly Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/07026229f5/GlovesStr02.png",
       "rarity": 2,
-      "desc": "32% increased [Armour|Armour]\n+142 to maximum Life\n+109 to maximum Mana\n+2 to Level of all [Melee|Melee] Skills\n+35% to [Resistances|Fire Resistance]"
+      "desc": "(符文) +11% 混沌抗性\n护甲提高 32%\n+142 最大生命\n+109 最大魔力\n+2 Level of all Melee Skills\n+35% 火焰抗性"
     },
     {
       "name": "Woe Smasher (构造之锤)",
@@ -85,7 +85,7 @@
       "baseType": "Structured Hammer",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvQmFzZXR5cGVzLzFITWFjZTA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f0a2fc612b/1HMace08.png",
       "rarity": 2,
-      "desc": "77% increased [Physical] Damage\n+366 to [Accuracy|Accuracy] Rating\n+5 to Level of all [Melee|Melee] Skills\n[ManaLeech|Leeches] 6.57% of [Physical|Physical] Damage as Mana\n[Gain] 20% of Damage as Extra [Physical] Damage"
+      "desc": "(符文) Skill Speed提高 8%\n(符文) Bonded: [Reservation] [Efficiency] of [Herald] Skills提高 15%\n(基底) 40% chance to Hit\n[Physical] Damage提高 77%\n+366 Accuracy Rating\n+5 Level of all Melee Skills\nLeeches 6.57% of 物理伤害 as Mana\n[Gain] 20% of Damage as Extra [Physical] Damage"
     }
   ],
   "skills": [

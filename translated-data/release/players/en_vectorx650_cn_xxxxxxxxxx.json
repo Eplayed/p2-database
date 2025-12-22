@@ -13,7 +13,7 @@
       "baseType": "Sacrificial Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0F0emlyaXNTcGxlbmRvdXIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/27da3616c7/AtzirisSplendour.png",
       "rarity": 3,
-      "desc": "Only [SoulCore|Soul Cores] can be Socketed in this item\nThis item gains bonuses from Socketed [SoulCore|Soul Cores] as though it was also a Helmet\n319% increased [EnergyShield|Energy Shield]\n+13% to all [ElementalDamage|Elemental] [Resistances]\nSkills from [Corrupted] Gems have 53% of Mana Costs [StatConversion|Converted] to Life Costs"
+      "desc": "(符文) 最大魔力提高 18%\n(基底) +1 Level of all [Corrupted] Skill Gems\nOnly Soul Cores can be Socketed in this item\nThis item gains bonuses from Socketed Soul Cores as though it was also a Helmet\n能量护盾提高 319%\n+13% all Elemental [Resistances]\nSkills from Converted to Life Costs\n(已腐化)"
     },
     {
       "name": "谜容",
@@ -21,7 +21,7 @@
       "baseType": "Tribal Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvVGhlVmVydGV4IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/baf0218c37/TheVertex.png",
       "rarity": 3,
-      "desc": "Has no [Attributes|Attribute] Requirements\n127% increased [Evasion] and [EnergyShield|Energy Shield]\n24% increased [Critical|Critical Hit] Chance\nSkill Gems have no [Attributes|Attribute] Requirements"
+      "desc": "(附魔) +27 Spirit\n(符文) 最大魔力提高 3%\nHas no Attribute Requirements\n能量护盾提高 127%\n暴击率提高 24%\nSkill Gems have no Attribute Requirements\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -37,7 +37,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "+46 to maximum [EnergyShield|Energy Shield]\n88% increased [EnergyShield|Energy Shield]\n+45% to [Resistances|Fire Resistance]\n+31% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+46 最大能量护盾\n能量护盾提高 88%\n+45% 火焰抗性\n+31% 冰霜抗性\n+43% 闪电抗性"
     },
     {
       "name": "猎首",
@@ -45,7 +45,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+49 to maximum Life\n+38 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 30%\n(基底) Has 3 [Charm] Slots\n+49 最大生命\n+38 力量\n+38 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Blight Whorl (裂隙戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "+245 to maximum Mana\n8% increased maximum Mana\n18% increased [ItemRarity|Rarity of Items] found\n23% increased Cast Speed\n+16% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) Maximum [Quality] is 40%\n+245 最大魔力\n最大魔力提高 8%\n物品稀有度提高 18%\n施法速度提高 23%\n+16% all Elemental [Resistances]"
     },
     {
       "name": "Skull Choker (日曜护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+214 to maximum Mana\n9% increased maximum Mana\n+3 to Level of all [Spell|Spell] Skills\n28% increased Cast Speed"
+      "desc": "(附魔) Allocates Voracious\n(基底) +15 Spirit\n+214 最大魔力\n最大魔力提高 9%\n+3 Level of all Spell Skills\n施法速度提高 28%"
     },
     {
       "name": "Apocalypse Paw (海妖之鳞手套)",
@@ -69,7 +69,7 @@
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "100% increased [EnergyShield|Energy Shield]\n+124 to maximum Mana\n+44% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 施法速度提高 12%\n(符文) Life Cost [Efficiency]提高 40%\n(符文) Bonded: Mana Cost Low Mana提高 32%\n能量护盾提高 100%\n+124 最大魔力\n+44% 冰霜抗性\n+43% 闪电抗性"
     },
     {
       "name": "Miracle Weaver (鸣谐长杖)",
@@ -77,7 +77,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 36% of Damage as Extra [Lightning] Damage\n+308 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n35% increased [CriticalDamageBonus|Critical Spell Damage Bonus]\n42% increased Cast Speed"
+      "desc": "[Gain] 36% of Damage as Extra [Lightning] Damage\n+308 最大魔力\n+5 Level of all Spell Skills\nCritical 法术伤害 Bonus提高 35%\n施法速度提高 42%"
     },
     {
       "name": "献祭之心",
@@ -85,7 +85,7 @@
       "baseType": "Sacred Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL1VuaXF1ZXMvUmF0aHBpdGhHbG9iZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/51e4da7cb9/RathpithGlobe.png",
       "rarity": 3,
-      "desc": "+83 to maximum Life\nNon-[Channelling] [Spell|Spells] have 3% increased [Critical|Critical Hit Chance] per 100 maximum Life\nNon-[Channelling] [Spell|Spells] deal 6% increased Damage per 100 maximum Life"
+      "desc": "(附魔) +25 最大魔力\n(符文) +35 最大魔力\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+83 最大生命\nNon-Spells have 暴击率 per 100 最大生命提高 3%\nNon-Spells deal Damage per 100 最大生命提高 6%\n(已腐化)"
     },
     {
       "name": "Storm Spire (决斗法杖)",
@@ -93,7 +93,7 @@
       "baseType": "Dueling Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDEzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiIsImR1cGxpY2F0ZWQiOnRydWV9XQ/77ce2d8417/Wand13.png",
       "rarity": 2,
-      "desc": "[Gain] 30% of Damage as Extra [Lightning] Damage\n119% increased [Spell] Damage\n67% increased [Critical|Critical Hit Chance] for [Spell|Spells]\n34% increased Cast Speed"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 119%\n暴击率 for Spells提高 67%\n施法速度提高 34%"
     }
   ],
   "skills": [

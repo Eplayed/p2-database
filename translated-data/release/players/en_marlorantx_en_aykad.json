@@ -13,7 +13,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+62 to maximum [EnergyShield|Energy Shield]\n37% increased [EnergyShield|Energy Shield]\n+36 to maximum Life\n+43% to [Resistances|Cold Resistance]\n+34% to [Resistances|Lightning Resistance]\n+20% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+62 最大能量护盾\n能量护盾提高 37%\n+36 最大生命\n+43% 冰霜抗性\n+34% 闪电抗性\n+20% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Carrion Knot (裂隙戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Breach Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
-      "desc": "Adds 14 to 28 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 1 to 79 [Lightning] damage to [Attack|Attacks]\n+12% to all [ElementalDamage|Elemental] [Resistances]\n+40% to [Resistances|Fire Resistance]"
+      "desc": "(基底) Maximum [Quality] is 40%\n附加 14 - 28 物理伤害 to Attacks\n附加 1 - 79 Attacks\n+12% all Elemental [Resistances]\n+40% 火焰抗性"
     },
     {
       "name": "奇思妙想",
@@ -29,7 +29,7 @@
       "baseType": "Utility Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9XaWRvd21ha2VyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/394f71de07/Widowmaker.png",
       "rarity": 3,
-      "desc": "12% reduced [Charm] Charges gained\n9% reduced [Charm] Charges used\n30% increased bonuses gained from left Equipped Ring\n30% increased bonuses gained from right Equipped Ring"
+      "desc": "(基底) Has 2 [Charm] Slots\n(基底) 20% of Flask Recovery applied Instantly\n[Charm] Charges gained降低 12%\n[Charm] Charges used降低 9%\nbonuses gained from left Equipped Ring提高 30%\nbonuses gained from right Equipped Ring提高 30%"
     },
     {
       "name": "Kalandra's Touch",
@@ -45,7 +45,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "230% increased [Evasion|Evasion] Rating\n[Gain] 24% of Damage as Extra [Cold] Damage\n+33 to [Dexterity|Dexterity]\n25% increased [Freeze] Duration on Enemies\n[Evasion|Evasion Rating] is doubled if you have not been [HitDamage|Hit] [Recently]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 36%\n闪避值 Rating提高 230%\n[Gain] 24% of Damage as Extra [Cold] Damage\n+33 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]"
     },
     {
       "name": "神圣之火",
@@ -53,7 +53,7 @@
       "baseType": "Shrine Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9VbmlxdWVzL1NhY3JlZEZsYW1lIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f6c6572ac6/SacredFlame.png",
       "rarity": 3,
-      "desc": "[Gain] 60% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.6% of their Maximum Life per second\n[Allies|Allies] in your [Presence|Presence] [Gain|Gain] 23% of Damage as Extra Fire Damage\nEnemies in your [Presence|Presence] Resist [ElementalDamage|Elemental Damage] based on their Lowest [Resistances|Resistance]"
+      "desc": "(符文) Spirit提高 10%\n(符文) Bonded: Minions have 冷却回复速度 for [Command] Skills提高 30%\n[Gain] 60% of Damage as Extra [Fire] Damage\n[Allies] in your [Presence] Regenerate 2.6% of their Maximum Life per second\nAllies in your Presence Gain 23% of Damage as Extra 火焰伤害\nEnemies in your Presence Resist 元素伤害 based on their Lowest Resistance"
     },
     {
       "name": "Vengeance Noose (帝金护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "48% increased maximum [EnergyShield|Energy Shield]\n17% increased [ItemRarity|Rarity of Items] found\n+3 to Level of all [Projectile] Skills\n+28 to [Dexterity|Dexterity]"
+      "desc": "(附魔) Allocates Swift Flight\n(基底) 物品稀有度提高 17%\n最大能量护盾提高 48%\n物品稀有度提高 17%\n+3 Level of all [Projectile] Skills\n+28 敏捷"
     },
     {
       "name": "Gloom Touch (瓦尔手套)",
@@ -69,7 +69,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "Adds 13 to 23 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 3 to 59 [Lightning] damage to [Attack|Attacks]\n+117 to maximum Life\n+28 to [Dexterity|Dexterity]\n+34% to [Resistances|Cold Resistance]"
+      "desc": "(符文) +40 最大生命\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 13 - 23 物理伤害 to Attacks\n附加 3 - 59 Attacks\n+117 最大生命\n+28 敏捷\n+34% 冰霜抗性"
     },
     {
       "name": "覆灭之兆",
@@ -77,7 +77,7 @@
       "baseType": "Secured Leggings",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VbmlxdWVzL1dha2VPZkRlc3RydWN0aW9uIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cca716f5a6/WakeOfDestruction.png",
       "rarity": 3,
-      "desc": "10% increased Movement Speed\n39% increased [Armour|Armour] and [EnergyShield|Energy Shield]\nAdds 1 to 34 [Lightning] damage to [Attack|Attacks]\nDrop [ShockedGround|Shocked Ground] while moving, lasting 8 seconds"
+      "desc": "(符文) 移动速度提高 5%\n(符文) +28% 冰霜抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 10%\n护甲 and 能量护盾提高 39%\n附加 1 - 34 Attacks\nDrop Shocked Ground while moving, lasting 8 seconds\n(已腐化)"
     },
     {
       "name": "Armageddon Edge (阿科扬战矛)",
@@ -85,7 +85,7 @@
       "baseType": "Akoyan Spear",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3BlYXJzLzFIU3BlYXIxMCIsInciOjEsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/114525ad0e/1HSpear10.png",
       "rarity": 2,
-      "desc": "166% increased [Physical] Damage\n+4.8% to [Critical|Critical Hit] Chance\n24% increased [Attack] Speed\n+3 to Level of all [Attack] Skills"
+      "desc": "(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 166%\n+4.8% 暴击率\n[Attack] Speed提高 24%\n+3 Level of all [Attack] Skills\n(已腐化)"
     }
   ],
   "skills": [

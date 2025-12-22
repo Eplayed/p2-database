@@ -13,7 +13,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwOSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3299e86495/Belt09.png",
       "rarity": 2,
-      "desc": "+183 to [Armour]\n+168 to maximum Life\n+30 to maximum Mana\n+33% to [Resistances|Fire Resistance]\n+7% to [Resistances|Cold Resistance]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 2 [Charm] Slots\n+183 [护甲]\n+168 最大生命\n+30 最大魔力\n+33% 火焰抗性\n+7% 冰霜抗性\n+36% 闪电抗性"
     },
     {
       "name": "Ambush Stride (蛇鳞长靴)",
@@ -21,7 +21,7 @@
       "baseType": "Serpentscale Boots",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXgwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/316987efab/BootsDex05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n21% increased [Evasion|Evasion] Rating\n+29 to [Dexterity|Dexterity]\n+35% to [Resistances|Cold Resistance]\n+24% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) +5% all Elemental [Resistances]\n移动速度提高 35%\n闪避值 Rating提高 21%\n+29 敏捷\n+35% 冰霜抗性\n+24% 混沌抗性"
     },
     {
       "name": "精工箭袋",
@@ -29,7 +29,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) [Attack] Speed提高 7%"
     },
     {
       "name": "Woe Knot (三相戒指)",
@@ -37,7 +37,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 3 to 62 [Lightning] damage to [Attack|Attacks]\n34% increased [Lightning] Damage\n+157 to [Evasion] Rating\n+21 to [Strength|Strength]\n+39% to [Resistances|Fire Resistance]"
+      "desc": "(基底) +10% all Elemental [Resistances]\n附加 3 - 62 Attacks\n[Lightning] Damage提高 34%\n+157 [闪避值] Rating\n+21 力量\n+39% 火焰抗性"
     },
     {
       "name": "Rift Wrap (滑击背心)",
@@ -45,7 +45,7 @@
       "baseType": "Slipstrike Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dd53d7b8d1/BodyDex06.png",
       "rarity": 2,
-      "desc": "+228 to [Evasion] Rating\n84% increased [Evasion|Evasion] Rating\n+203 to maximum Life\n+38% to [Resistances|Lightning Resistance]\n46% reduced [Ignite|Ignite] Duration on you"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+228 [闪避值] Rating\n闪避值 Rating提高 84%\n+203 最大生命\n+38% 闪电抗性\nIgnite Duration on you降低 46%"
     },
     {
       "name": "双子之弓",
@@ -53,7 +53,7 @@
       "baseType": "Gemini Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0a606586d/Bow06.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) +50% Surpassing chance to fire an additional Arrow"
     },
     {
       "name": "Oblivion Peak (翱翔面具)",
@@ -61,7 +61,7 @@
       "baseType": "Soaring Mask",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXREZXhJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a9d1297918/HelmetDexInt05.png",
       "rarity": 2,
-      "desc": "+31 to [Evasion] Rating\n+21 to maximum [EnergyShield|Energy Shield]\n41% increased [Evasion] and [EnergyShield|Energy Shield]\n+176 to maximum Life\n12% increased [ItemRarity|Rarity of Items] found\n+45% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+31 [闪避值] Rating\n+21 最大能量护盾\n能量护盾提高 41%\n+176 最大生命\n物品稀有度提高 12%\n+45% 火焰抗性"
     },
     {
       "name": "Fate Arrow (精工箭袋)",
@@ -69,7 +69,7 @@
       "baseType": "Primed Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
       "rarity": 2,
-      "desc": "Adds 28 to 39 [Fire] damage to [Attack|Attacks]\nAdds 1 to 64 [Lightning] damage to [Attack|Attacks]\n50% increased Damage with Bow Skills\n+31 to [Dexterity|Dexterity]\nGain 18 Mana per enemy killed"
+      "desc": "(基底) [Attack] Speed提高 10%\n附加 28 - 39 Attacks\n附加 1 - 64 Attacks\nDamage with Bow Skills提高 50%\n+31 敏捷\nGain 18 Mana per enemy killed"
     },
     {
       "name": "Beast Branch (双子之弓)",
@@ -77,7 +77,7 @@
       "baseType": "Gemini Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b0a606586d/Bow06.png",
       "rarity": 2,
-      "desc": "163% increased [Physical] Damage\nAdds 23 to 35 [Physical|Physical] Damage\n30% reduced [Attributes|Attribute] Requirements\n+3 to Level of all [Attack] Skills\n+12 to [Dexterity|Dexterity]"
+      "desc": "(符文) [Physical] Damage提高 18%\n(符文) Elements\n(符文) Bonded: effect of Fully Broken 护甲提高 20%\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +50% Surpassing chance to fire an additional Arrow\n[Physical] Damage提高 163%\n附加 23 - 35 物理伤害\nAttribute Requirements降低 30%\n+3 Level of all [Attack] Skills\n+12 敏捷"
     },
     {
       "name": "Corpse Coil (紫晶戒指)",
@@ -85,7 +85,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 2 to 37 [Lightning] damage to [Attack|Attacks]\n23% increased [Lightning] Damage\n18% increased [ItemRarity|Rarity of Items] found\n+36% to [Resistances|Cold Resistance]\n+19% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +13% 混沌抗性\n附加 2 - 37 Attacks\n[Lightning] Damage提高 23%\n物品稀有度提高 18%\n+36% 冰霜抗性\n+19% 混沌抗性"
     },
     {
       "name": "Agony Rosary (日曜护身符)",
@@ -93,7 +93,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+70 to maximum Life\n+176 to maximum Mana\n+3 to Level of all [Projectile] Skills\n27% increased Global [Defences]"
+      "desc": "(附魔) Allocates Heavy Ammunition\n(基底) +12 Spirit\n+70 最大生命\n+176 最大魔力\n+3 Level of all [Projectile] Skills\nGlobal [Defences]提高 27%"
     },
     {
       "name": "Spirit Fingers (海妖之鳞手套)",
@@ -101,7 +101,7 @@
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "Adds 15 to 21 [Physical|Physical] Damage to [Attack|Attacks]\n+72 to maximum Life\n11% increased [Attack] Speed\n+20% to [Resistances|Cold Resistance]\n+43% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 附加 5 - 12 物理伤害 to Attacks\n(符文) Bonded: Fissure Skills have +2 [Limit]\n附加 15 - 21 物理伤害 to Attacks\n+72 最大生命\n[Attack] Speed提高 11%\n+20% 冰霜抗性\n+43% 闪电抗性"
     }
   ],
   "skills": [

@@ -13,7 +13,7 @@
       "baseType": "Visceral Quiver",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
-      "desc": "Adds 2 to 62 [Lightning] damage to [Attack|Attacks]\n49% increased Damage with Bow Skills\n+2 to Level of all [Projectile] Skills\n+29 to [Dexterity|Dexterity]"
+      "desc": "(基底) 暴击率 for Attacks提高 20%\n附加 2 - 62 Attacks\nDamage with Bow Skills提高 49%\n+2 Level of all [Projectile] Skills\n+29 敏捷"
     },
     {
       "name": "Oblivion Spur (钢缘便鞋)",
@@ -21,7 +21,7 @@
       "baseType": "Steelpoint Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "33% increased [Evasion] and [EnergyShield|Energy Shield]\n17% increased [ItemRarity|Rarity of Items] found\nGain [Deflect|Deflection Rating] equal to 23% of [Evasion|Evasion Rating]\n+74 to [StunThreshold|Stun Threshold]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 移动速度提高 8%\n(符文) +22% 闪电抗性\n(符文) Bonded: +16 最大生命\n(符文) Bonded: +16 最大魔力\n(符文) Bonded: 冷却回复速度提高 16%\n能量护盾提高 33%\n物品稀有度提高 17%\nGain Deflection Rating equal to 23% of 闪避值 Rating\n+74 晕眩门槛\neffect of Socketed Items提高 60%"
     },
     {
       "name": "Viper Guardian (Sacrificial Regalia)",
@@ -29,7 +29,7 @@
       "baseType": "Sacrificial Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keVN0ckRleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7e5722b0ec/BodyStrDexInt02.png",
       "rarity": 2,
-      "desc": ""
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +1 Level of all [Corrupted] Skill Gems\n(已腐化)"
     },
     {
       "name": "Eagle Keep (先祖冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+71 to maximum [EnergyShield|Energy Shield]\n100% increased [EnergyShield|Energy Shield]\n15% increased [ItemRarity|Rarity of Items] found\n+21% to [Resistances|Cold Resistance]\n14.2 Life Regeneration per second"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+71 最大能量护盾\n能量护盾提高 100%\n物品稀有度提高 15%\n+21% 冰霜抗性\n14.2 Life Regeneration per second"
     },
     {
       "name": "Bramble Whorl (红玉戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Ruby Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1J1YnlSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4f0e6f99c1/RubyRing.png",
       "rarity": 2,
-      "desc": "Adds 9 to 15 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 19 to 33 [Fire] damage to [Attack|Attacks]\nAdds 1 to 56 [Lightning] damage to [Attack|Attacks]\n+35% to [Resistances|Fire Resistance]\n+35% to [Resistances|Cold Resistance]"
+      "desc": "(基底) +30% 火焰抗性\n附加 9 - 15 物理伤害 to Attacks\n附加 19 - 33 Attacks\n附加 1 - 56 Attacks\n+35% 火焰抗性\n+35% 冰霜抗性"
     },
     {
       "name": "Ghoul Twine (狂热之弓)",
@@ -53,7 +53,7 @@
       "baseType": "Fanatic Bow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0Jhc2V0eXBlcy9Cb3cwNyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7099d311a6/Bow07.png",
       "rarity": 2,
-      "desc": "Adds 15 to 24 [Physical|Physical] Damage\nAdds 3 to 233 [Lightning|Lightning] Damage\n+3 to Level of all [Attack] Skills\n20% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Bow Attacks fire an additional Arrow\n(符文) Bonded: [Projectile] Speed提高 20%\n(符文) Bonded: +2% Maximum 闪电抗性\n附加 15 - 24 物理伤害\n附加 3 - 233 闪电伤害\n+3 Level of all [Attack] Skills\n20% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "猎首",
@@ -61,7 +61,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+48 to maximum Life\n+36 to [Strength|Strength]\n+39 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 22%\n(基底) Has 2 [Charm] Slots\n+48 最大生命\n+36 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Skull Knuckle (三相戒指)",
@@ -69,7 +69,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "Adds 12 to 23 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 20 to 35 [Fire] damage to [Attack|Attacks]\nAdds 1 to 51 [Lightning] damage to [Attack|Attacks]\n+29 to [Dexterity|Dexterity]\n+24 to [Intelligence|Intelligence]"
+      "desc": "(基底) +9% all Elemental [Resistances]\n附加 12 - 23 物理伤害 to Attacks\n附加 20 - 35 Attacks\n附加 1 - 51 Attacks\n+29 敏捷\n+24 智慧"
     },
     {
       "name": "Dire Hold (潜行护腕)",
@@ -77,7 +77,7 @@
       "baseType": "Stalking Bracers",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0RleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7a62d10b16/GlovesDex02.png",
       "rarity": 2,
-      "desc": "Adds 11 to 19 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 1 to 53 [Lightning] damage to [Attack|Attacks]\n16% increased [ItemRarity|Rarity of Items] found\n16% increased [Attack] Speed\n[ManaLeech|Leech] 4.57% of [Physical] [Attack] Damage as Mana"
+      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n附加 11 - 19 物理伤害 to Attacks\n附加 1 - 53 Attacks\n物品稀有度提高 16%\n[Attack] Speed提高 16%\nLeech 4.57% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Kraken Rosary (帝金护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+3 to Level of all [Projectile] Skills\n+36% to [Resistances|Fire Resistance]\n+36% to [Resistances|Cold Resistance]\n30% increased Global [Defences]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) 物品稀有度提高 20%\n+3 Level of all [Projectile] Skills\n+36% 火焰抗性\n+36% 冰霜抗性\nGlobal [Defences]提高 30%"
     }
   ],
   "skills": [

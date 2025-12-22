@@ -13,7 +13,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "+88 to maximum [EnergyShield|Energy Shield]\n56% increased maximum [EnergyShield|Energy Shield]\n+44 to [Spirit|Spirit]\n+15% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(附魔) Allocates Harness the Elements\n(基底) +13 Spirit\n+88 最大能量护盾\n最大能量护盾提高 56%\n+44 Spirit\n+15% all Elemental [Resistances]"
     },
     {
       "name": "Grim Finger (紫晶戒指)",
@@ -21,7 +21,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "25% increased [Lightning] Damage\n+112 to maximum Life\n+91 to maximum Mana\n+31% to [Resistances|Lightning Resistance]\n+23% to [Resistances|Chaos Resistance]"
+      "desc": "(基底) +13% 混沌抗性\n[Lightning] Damage提高 25%\n+112 最大生命\n+91 最大魔力\n+31% 闪电抗性\n+23% 混沌抗性"
     },
     {
       "name": "未生巫妖",
@@ -29,7 +29,7 @@
       "baseType": "Ravenous Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVW5pcXVlcy9LdWxlbWFrc0JpcnRoIiwidyI6MSwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/8460c512f8/KulemaksBirth.png",
       "rarity": 3,
-      "desc": "76% increased [Abyssalify|Desecrated Modifier] magnitudes"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) 25% chance for Projectiles\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Every [Rage] also grants [Spell] Damage提高 1%\nDesecrated Modifier magnitudes提高 76%"
     },
     {
       "name": "猎首",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+59 to maximum Life\n+32 to [Strength|Strength]\n+38 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +1 Maximum Endurance Charges\n(基底) 晕眩门槛提高 24%\n(基底) Has 2 [Charm] Slots\n+59 最大生命\n+32 力量\n+38 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Dusk Hoof (沙丘行者鞋履)",
@@ -45,7 +45,7 @@
       "baseType": "Dunerunner Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n+18% to [Resistances|Fire Resistance]\n44% increased [ESRechargeRate|Energy Shield Recharge Rate]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 移动速度提高 8%\n(符文) 护甲, 闪避值 and 能量护盾提高 28%\n(符文) Bonded: +16 最大生命\n(符文) Bonded: +16 最大魔力\n(符文) Bonded: 冷却回复速度提高 16%\n移动速度提高 35%\n+18% 火焰抗性\n能量护盾 Recharge Rate提高 44%\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Alpha's Howl",
@@ -53,7 +53,7 @@
       "baseType": "Armoured Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQWxwaGFzSG93bCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/172ece8af4/AlphasHowl.png",
       "rarity": 3,
-      "desc": "85% increased [Evasion|Evasion] Rating\n+100 to [Spirit|Spirit]\n+74% to [Resistances|Cold Resistance]\n[Presence] Radius is doubled"
+      "desc": "(附魔) +30 Spirit\n(符文) +11% 混沌抗性\n闪避值 Rating提高 85%\n+100 Spirit\n+74% 冰霜抗性\n[Presence] Radius is doubled\n(已腐化)"
     },
     {
       "name": "Gloom Spiral (黄玉戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "24% increased [Cold] Damage\n28% increased [Lightning] Damage\n+40% to [Resistances|Fire Resistance]\n+37% to [Resistances|Cold Resistance]\n+22% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) +29% 闪电抗性\n[Cold] Damage提高 24%\n[Lightning] Damage提高 28%\n+40% 火焰抗性\n+37% 冰霜抗性\n+22% 闪电抗性"
     },
     {
       "name": "Loath Weaver (鸣谐长杖)",
@@ -69,7 +69,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "55% increased [Spell] Damage\n138% increased [Lightning] Damage\n+185 to maximum Mana\n+5 to Level of all [Spell|Spell] Skills\n38% increased Cast Speed\n58% increased chance to [Shock]"
+      "desc": "[Spell] Damage提高 55%\n[Lightning] Damage提高 138%\n+185 最大魔力\n+5 Level of all Spell Skills\n施法速度提高 38%\nchance to [Shock]提高 58%"
     },
     {
       "name": "Painter's Servant",
@@ -77,7 +77,7 @@
       "baseType": "Torn Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QYWludGVyc1NlcnZhbnQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b0ab8bb2b3/PaintersServant.png",
       "rarity": 3,
-      "desc": "[Gain] 9% of [ElementalDamage|Elemental Damage] as Extra [Cold] Damage\n[Gain] 7% of [ElementalDamage|Elemental Damage] as Extra [Fire] Damage\n[Gain] 10% of [ElementalDamage|Elemental Damage] as Extra [Lightning] Damage\n33% of [ElementalDamage|Elemental Damage] [Conversion|Converted] to [Cold] Damage\n33% of [ElementalDamage|Elemental Damage] [Conversion|Converted] to [Fire] Damage\n33% of [ElementalDamage|Elemental Damage] [Conversion|Converted] to [Lightning] Damage"
+      "desc": "(符文) +14% 火焰抗性\n(符文) +14% 闪电抗性\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n元素伤害 as Extra [Cold] Damage\n元素伤害 as Extra [Fire] Damage\n元素伤害 as Extra [Lightning] Damage\n33% of 元素伤害 Converted to [Cold] Damage\n33% of 元素伤害 Converted to [Fire] Damage\n33% of 元素伤害 Converted to [Lightning] Damage\n(已腐化)"
     },
     {
       "name": "Brood Guardian (邪恶束衣)",
@@ -85,7 +85,7 @@
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "+98 to maximum [EnergyShield|Energy Shield]\n142% increased [EnergyShield|Energy Shield]\n+36% to [Resistances|Fire Resistance]\n+38% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+98 最大能量护盾\n能量护盾提高 142%\n+36% 火焰抗性\n+38% 闪电抗性"
     }
   ],
   "skills": [

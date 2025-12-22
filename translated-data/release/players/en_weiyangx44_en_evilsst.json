@@ -13,7 +13,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "100% increased [EnergyShield|Energy Shield]\n+124 to maximum Mana\n+39% to [Resistances|Fire Resistance]\n+45% to [Resistances|Cold Resistance]\n+41% to [Resistances|Lightning Resistance]"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 100%\n+124 最大魔力\n+39% 火焰抗性\n+45% 冰霜抗性\n+41% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Carrion Scarab (日曜护身符)",
@@ -21,7 +21,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "30% increased [Spell] Damage\n54% increased maximum [EnergyShield|Energy Shield]\n+3 to Level of all [Spell|Spell] Skills\n+43% to [Resistances|Cold Resistance]"
+      "desc": "(附魔) Allocates Stormcharged\n(基底) +14 Spirit\n[Spell] Damage提高 30%\n最大能量护盾提高 54%\n+3 Level of all Spell Skills\n+43% 冰霜抗性"
     },
     {
       "name": "猎首",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+50 to maximum Life\n+39 to [Strength|Strength]\n+34 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) 最大能量护盾提高 17%\n(基底) 晕眩门槛提高 27%\n(基底) Has 2 [Charm] Slots\n+50 最大生命\n+39 力量\n+34 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Soul Mast (耐火长杖)",
@@ -37,7 +37,7 @@
       "baseType": "Pyrophyte Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDUiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b18c549d04/Staff05.png",
       "rarity": 2,
-      "desc": "[Gain] 58% of Damage as Extra [Cold] Damage\n237% increased [Spell] Damage\n52% increased Cast Speed\n103% increased Mana Regeneration Rate"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) 25% chance for Projectiles\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Every [Rage] also grants [Spell] Damage提高 1%\n[Gain] 58% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 237%\n施法速度提高 52%\n魔力回复速度提高 103%\n(已腐化)"
     },
     {
       "name": "Dread Whorl (三相戒指)",
@@ -45,7 +45,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "+200 to maximum Mana\n7% increased maximum Mana\n+29 to [Intelligence|Intelligence]\n69% increased Mana Regeneration Rate"
+      "desc": "(附魔) +13 智慧\n(基底) +10% all Elemental [Resistances]\n+200 最大魔力\n最大魔力提高 7%\n+29 智慧\n魔力回复速度提高 69%\n(已腐化)"
     },
     {
       "name": "Hate Palm (瓦尔手套)",
@@ -53,7 +53,7 @@
       "baseType": "Vaal Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b273510d40/GlovesInt05.png",
       "rarity": 2,
-      "desc": "+51 to maximum [EnergyShield|Energy Shield]\n99% increased [EnergyShield|Energy Shield]\n+116 to maximum Mana\n28% increased [CriticalDamageBonus|Critical Damage Bonus]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 施法速度提高 12%\n(符文) effect of Arcane Surge on you提高 64%\n(符文) Bonded: Mana Cost Low Mana提高 32%\n+51 最大能量护盾\n能量护盾提高 99%\n+116 最大魔力\nCritical Damage Bonus提高 28%\neffect of Socketed Items提高 60%\n(已腐化)"
     },
     {
       "name": "Beast Wish (德鲁伊法器)",
@@ -61,7 +61,7 @@
       "baseType": "Druidic Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7832c8858c/Focus03.png",
       "rarity": 2,
-      "desc": "+77 to maximum [EnergyShield|Energy Shield]\n127% increased [EnergyShield|Energy Shield]\n+21 to maximum Mana\n+29 to [Intelligence|Intelligence]\n51% [FasterESRechargeStart|faster start of Energy Shield Recharge]"
+      "desc": "(附魔) Attribute Requirements降低 20%\n(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+77 最大能量护盾\n能量护盾提高 127%\n+21 最大魔力\n+29 智慧\n51% faster start of 能量护盾 Recharge\n(已腐化)"
     },
     {
       "name": "Oblivion Post (鸣谐长杖)",
@@ -69,7 +69,7 @@
       "baseType": "Chiming Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
-      "desc": "[Gain] 48% of Damage as Extra [Cold] Damage\n143% increased [Fire] Damage\n+248 to maximum Mana\n+4 to Level of all [Spell|Spell] Skills\n50% increased Mana Regeneration Rate\n78% increased [Flammability] [BuffMagnitude|Magnitude]"
+      "desc": "(符文) +70 最大能量护盾\n(符文) Bonded: 最大生命提高 10%\n[Gain] 48% of Damage as Extra [Cold] Damage\n[Fire] Damage提高 143%\n+248 最大魔力\n+4 Level of all Spell Skills\n魔力回复速度提高 50%\nMagnitude提高 78%"
     },
     {
       "name": "Blight Ward (圣洁法器)",
@@ -77,7 +77,7 @@
       "baseType": "Sacred Focus",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/64fc1e2b9f/Focus08.png",
       "rarity": 2,
-      "desc": "+90 to maximum [EnergyShield|Energy Shield]\n99% increased [EnergyShield|Energy Shield]\n+2 to Level of all [Spell|Spell] Skills\n31% increased Cast Speed"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+90 最大能量护盾\n能量护盾提高 99%\n+2 Level of all Spell Skills\n施法速度提高 31%\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -93,7 +93,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "+70 to maximum [EnergyShield|Energy Shield]\n98% increased [EnergyShield|Energy Shield]\n34% increased [Critical|Critical Hit] Chance\n+34% to [Resistances|Fire Resistance]"
+      "desc": "(符文) 最大魔力提高 3%\n(符文) Area of Effect提高 8%\n(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: [Reservation] [Efficiency] of [Companion] Skills提高 10%\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n+70 最大能量护盾\n能量护盾提高 98%\n暴击率提高 34%\n+34% 火焰抗性\n(已腐化)"
     },
     {
       "name": "Damnation Shelter (圣礼束衣)",
@@ -101,7 +101,7 @@
       "baseType": "Sacramental Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDA4IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e1702b49d8/BodyInt08.png",
       "rarity": 2,
-      "desc": "+96 to maximum [EnergyShield|Energy Shield]\n+61 to [Spirit|Spirit]\n+38% to [Resistances|Fire Resistance]\n+40% to [Resistances|Cold Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 49% faster start of 能量护盾 Recharge\n+96 最大能量护盾\n+61 Spirit\n+38% 火焰抗性\n+40% 冰霜抗性"
     }
   ],
   "skills": [

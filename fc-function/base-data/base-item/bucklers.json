@@ -1,0 +1,134 @@
+[
+  {
+    "en": "Leather Buckler",
+    "cn": "皮制轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wooden Buckler",
+    "cn": "木制轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plated Buckler",
+    "cn": "嵌板轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Buckler",
+    "cn": "锻铁轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ridged Buckler",
+    "cn": "凸脊轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spiked Buckler",
+    "cn": "尖刺轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ringed Buckler",
+    "cn": "环锁轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Edged Buckler",
+    "cn": "锋缘轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Laminate Buckler",
+    "cn": "合板轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pearl Buckler",
+    "cn": "珠光轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ornate Buckler",
+    "cn": "华丽轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Array Buckler",
+    "cn": "阵列轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Aegis Buckler",
+    "cn": "神佑轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Oak Buckler",
+    "cn": "橡木轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Painted Buckler",
+    "cn": "彩绘轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Coiled Buckler",
+    "cn": "盘曲轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spikeward Buckler",
+    "cn": "尖刺守护轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jingling Buckler",
+    "cn": "铃鸣轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bladeguard Buckler",
+    "cn": "刀刃守护轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gutspike Buckler",
+    "cn": "肠刺轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancient Buckler",
+    "cn": "远古轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Desert Buckler",
+    "cn": "沙漠轻盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Buckler09.webp",
+    "type": "base_item"
+  }
+]

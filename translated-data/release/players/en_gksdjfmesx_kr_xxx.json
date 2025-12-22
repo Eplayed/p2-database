@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 25 to 39 [Fire] damage to [Attack|Attacks]\nAdds 3 to 80 [Lightning] damage to [Attack|Attacks]\n18% increased [ItemRarity|Rarity of Items] found\n+14% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) 物品稀有度提高 15%\n附加 25 - 39 Attacks\n附加 3 - 80 Attacks\n物品稀有度提高 18%\n+14% all Elemental [Resistances]"
     },
     {
       "name": "公理不存",
@@ -21,7 +21,7 @@
       "baseType": "Grand Manchettes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9TaW5lQWVxdW8iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e243b1f810/SineAequo.png",
       "rarity": 3,
-      "desc": "11% increased [SkillSpeed|Skill Speed]\n135% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n[Immobilised|Immobilise] enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage"
+      "desc": "(符文) [Attack] Speed提高 8%\n(符文) +11% 混沌抗性\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\nSkill Speed提高 11%\n护甲, 闪避值 and 能量护盾提高 135%\nImmobilise enemies at 50% buildup instead of 100%\nEnemies [Immobilised] by you take 20% more Damage\n(已腐化)"
     },
     {
       "name": "Morbid Peak (先祖冠冕)",
@@ -29,7 +29,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "133% increased [EnergyShield|Energy Shield]\n+38 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n+32% to [Resistances|Cold Resistance]\n+17% to [Resistances|Chaos Resistance]"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Area of Effect提高 8%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: [Reservation] [Efficiency] of [Companion] Skills提高 10%\n能量护盾提高 133%\n+38 最大魔力\n物品稀有度提高 17%\n+32% 冰霜抗性\n+17% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Onslaught Idol (帝金护身符)",
@@ -37,7 +37,7 @@
       "baseType": "Gold Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
-      "desc": "+50 to [Spirit|Spirit]\n+33 to [Strength|Strength]\n+36% to [Resistances|Fire Resistance]\n27% increased Global [Defences]"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) 物品稀有度提高 18%\n+50 Spirit\n+33 力量\n+36% 火焰抗性\nGlobal [Defences]提高 27%"
     },
     {
       "name": "Beast Tread (游荡者便鞋)",
@@ -45,7 +45,7 @@
       "baseType": "Wanderer Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwMSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/28c930b721/BootsDexInt01.png",
       "rarity": 2,
-      "desc": "35% increased Movement Speed\n91% increased [Evasion] and [EnergyShield|Energy Shield]\n+110 to maximum Life\n16% increased [ItemRarity|Rarity of Items] found\nGain [Deflect|Deflection Rating] equal to 23% of [Evasion|Evasion Rating]"
+      "desc": "(附魔) +24% 火焰抗性\n(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 91%\n+110 最大生命\n物品稀有度提高 16%\nGain Deflection Rating equal to 23% of 闪避值 Rating\n(已腐化)"
     },
     {
       "name": "无生之辱",
@@ -53,7 +53,7 @@
       "baseType": "Grand Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL01vcmlvckludmljdHVzX00iLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6674aa4ff6/MoriorInvictus_M.png",
       "rarity": 3,
-      "desc": "366% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+54 to maximum Life per Socket filled\n+10% to all [Resistances|Elemental Resistances] per Socket filled\n+13 to [Spirit|Spirit] per Socket filled"
+      "desc": "(符文) +33% 混沌抗性\n(符文) effect of Curses on you降低 50%\n(符文) 15% of Damage is taken from Mana before Life\n(符文) Bonded: Magnitudes提高 8%\n(符文) Bonded: 8% of Maximum Life Converted to 能量护盾\n护甲, 闪避值 and 能量护盾提高 366%\n+54 最大生命 per Socket filled\n+10% all 元素抗性 per Socket filled\n+13 Spirit per Socket filled\n(已腐化)"
     },
     {
       "name": "Pandemonium Core (摧城弩)",
@@ -61,7 +61,7 @@
       "baseType": "Siege Crossbow",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Dcm9zc2Jvd3MvMkhDcm9zc2JvdzA3IiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/7153259b14/2HCrossbow07.png",
       "rarity": 2,
-      "desc": "Adds 155 to 229 [Fire|Fire] Damage\nAdds 119 to 182 [Cold|Cold] Damage\n+7 to Level of all [Projectile] Skills\n23% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile\n附加 155 - 229 火焰伤害\n附加 119 - 182 冰霜伤害\n+7 Level of all [Projectile] Skills\n23% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -69,7 +69,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+54 to maximum Life\n+27 to [Strength|Strength]\n+30 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) 闪避值 Rating提高 22%\n(基底) 晕眩门槛提高 27%\n(基底) Has 2 [Charm] Slots\n+54 最大生命\n+27 力量\n+30 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Soul Band (金光戒指)",
@@ -77,7 +77,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "Adds 26 to 43 [Cold] damage to [Attack|Attacks]\nAdds 2 to 82 [Lightning] damage to [Attack|Attacks]\n16% increased [ItemRarity|Rarity of Items] found\n+14% to all [ElementalDamage|Elemental] [Resistances]\n+36% to [Resistances|Lightning Resistance]"
+      "desc": "(基底) 物品稀有度提高 13%\n附加 26 - 43 Attacks\n附加 2 - 82 Attacks\n物品稀有度提高 16%\n+14% all Elemental [Resistances]\n+36% 闪电抗性"
     }
   ],
   "skills": [

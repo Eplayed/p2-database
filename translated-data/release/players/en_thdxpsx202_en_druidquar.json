@@ -13,7 +13,7 @@
       "baseType": "Tasalian Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4c3e83f5cc/BootsStr06.png",
       "rarity": 2,
-      "desc": "30% increased Movement Speed\n41% increased [Armour|Armour]\n+121 to maximum Life\n+31% to [Resistances|Cold Resistance]\n+41% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n+133 to [StunThreshold|Stun Threshold]"
+      "desc": "(附魔) +21% 闪电抗性\n(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n护甲提高 41%\n+121 最大生命\n+31% 冰霜抗性\n+41% 的 护甲 也套用于 元素伤害\n+133 晕眩门槛\n(已腐化)"
     },
     {
       "name": "巨铜之顶",
@@ -21,7 +21,7 @@
       "baseType": "Champion Cuirass",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0JyYXNzRG9tZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e2c74f60ea/BrassDome.png",
       "rarity": 3,
-      "desc": "758% increased [Armour|Armour]\n-1% to all [MaximumResistances|Maximum Elemental Resistances]\n+289 to [StunThreshold|Stun Threshold]\nTake no Extra Damage from [Critical|Critical Hits]"
+      "desc": "(符文) +10% all Elemental [Resistances]\n(符文) effect of Curses on you降低 50%\n(符文) Bonded: Magnitudes提高 8%\n护甲提高 758%\n-1% to all Maximum 元素抗性\n+289 晕眩门槛\nTake no Extra Damage from Critical Hits\n(已腐化)"
     },
     {
       "name": "Miracle Grasp (蓝玉戒指)",
@@ -29,7 +29,7 @@
       "baseType": "Sapphire Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
-      "desc": "Adds 13 to 22 [Physical|Physical] Damage to [Attack|Attacks]\n+98 to maximum Life\n+92 to maximum Mana\n17% increased [ItemRarity|Rarity of Items] found\n+15% to all [ElementalDamage|Elemental] [Resistances]"
+      "desc": "(基底) +31% 冰霜抗性\n附加 13 - 22 物理伤害 to Attacks\n+98 最大生命\n+92 最大魔力\n物品稀有度提高 17%\n+15% all Elemental [Resistances]"
     },
     {
       "name": "Blight Urge (Frenzied Talisman)",
@@ -37,7 +37,7 @@
       "baseType": "Frenzied Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvRnJlbnppZWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d520e0ed80/FrenziedTalisman.png",
       "rarity": 2,
-      "desc": "40% increased [Physical] Damage\nAdds 26 to 37 [Fire|Fire] Damage\nAdds 2 to 67 [Lightning|Lightning] Damage\n+81 to [Accuracy|Accuracy] Rating\n16% increased [Attack] Speed\n+4 to Level of all [Melee|Melee] Skills\nGrants 4 Life per Enemy [HitDamage|Hit]"
+      "desc": "(符文) 附加 13 - 16 火焰伤害\n(符文) 附加 2 - 60 闪电伤害\n(符文) Bonded: Ignite Magnitude提高 25%\n(符文) Bonded: Magnitude of Shock you inflict提高 60%\n[Physical] Damage提高 40%\n附加 26 - 37 火焰伤害\n附加 2 - 67 闪电伤害\n+81 Accuracy Rating\n[Attack] Speed提高 16%\n+4 Level of all Melee Skills\nGrants 4 Life per Enemy Hit\n(已腐化)"
     },
     {
       "name": "Glyph Hand (骑士护手)",
@@ -45,7 +45,7 @@
       "baseType": "Knightly Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/07026229f5/GlovesStr02.png",
       "rarity": 2,
-      "desc": "Adds 8 to 16 [Physical|Physical] Damage to [Attack|Attacks]\nAdds 13 to 19 [Cold] damage to [Attack|Attacks]\n+121 to maximum Life\n+2 to Level of all [Melee|Melee] Skills\n+38% to [Resistances|Lightning Resistance]\n+42% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) +22% 混沌抗性\n附加 8 - 16 物理伤害 to Attacks\n附加 13 - 19 Attacks\n+121 最大生命\n+2 Level of all Melee Skills\n+38% 闪电抗性\n+42% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "收缩指令",
@@ -53,7 +53,7 @@
       "baseType": "Viper Cap",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1VuaXF1ZXMvQ29uc3RyaWN0aW5nQ29tbWFuZCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2950de57ef/ConstrictingCommand.png",
       "rarity": 3,
-      "desc": "+91 to maximum Life\n+14 to all [Attributes|Attributes]\n10.9 Life Regeneration per second\nRequire 4 fewer enemies to be [Surrounded|Surrounded]"
+      "desc": "(符文) +5% all Elemental [Resistances]\n(符文) +11% 混沌抗性\n+91 最大生命\n+14 全属性\n10.9 Life Regeneration per second\nRequire 4 fewer enemies to be Surrounded\n(已腐化)"
     },
     {
       "name": "Plague Grip (三相戒指)",
@@ -61,7 +61,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "23% increased [Lightning] Damage\n+89 to maximum Life\n18% increased [ItemRarity|Rarity of Items] found\n+12% to all [ElementalDamage|Elemental] [Resistances]\n+31% to [Resistances|Fire Resistance]\n[LifeLeech|Leech] 6.24% of [Physical] [Attack] Damage as Life"
+      "desc": "(基底) +9% all Elemental [Resistances]\n[Lightning] Damage提高 23%\n+89 最大生命\n物品稀有度提高 18%\n+12% all Elemental [Resistances]\n+31% 火焰抗性\nLeech 6.24% of [Physical] [Attack] Damage as Life"
     },
     {
       "name": "Fate Branch (Skullcrusher Quarterstaff)",
@@ -69,7 +69,7 @@
       "baseType": "Skullcrusher Quarterstaff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwOSIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/fbbd584845/Warstaff09.png",
       "rarity": 2,
-      "desc": "169% increased [Physical] Damage\nAdds 50 to 79 [Physical|Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 33% of Damage as Extra [Physical] Damage\n24% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n(基底) 36% chance to Hit\n[Physical] Damage提高 169%\n附加 50 - 79 物理伤害\n+5 Level of all [Attack] Skills\n[Gain] 33% of Damage as Extra [Physical] Damage\n24% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
     },
     {
       "name": "赤红护身符",
@@ -77,7 +77,7 @@
       "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 移动速度 while Sprinting提高 8%"
     },
     {
       "name": "Golem Clasp (星辉护身符)",
@@ -85,7 +85,7 @@
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "+162 to maximum Life\n9% increased maximum Life\n+48 to [Spirit|Spirit]\n+3 to Level of all [Melee|Melee] Skills"
+      "desc": "(附魔) Allocates Tribal Fury\n(基底) +5 全属性\n+162 最大生命\n最大生命提高 9%\n+48 Spirit\n+3 Level of all Melee Skills"
     },
     {
       "name": "猎首",
@@ -93,7 +93,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+41 to maximum Life\n+36 to [Strength|Strength]\n+37 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(附魔) +23% 火焰抗性\n(基底) 晕眩门槛提高 22%\n(基底) Has 2 [Charm] Slots\n+41 最大生命\n+36 力量\n+37 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     }
   ],
   "skills": [

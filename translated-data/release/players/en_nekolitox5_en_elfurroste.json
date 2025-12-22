@@ -13,7 +13,7 @@
       "baseType": "Vaal Greaves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3bc62e552f/BootsStr05.png",
       "rarity": 2,
-      "desc": "95% increased [Armour|Armour]\n+127 to maximum Life\n+40% to [Resistances|Fire Resistance]\n+45% to [Resistances|Lightning Resistance]\n60% increased effect of Socketed Items"
+      "desc": "(符文) 移动速度提高 8%\n(符文) Slowing Potency of Debuffs on You降低 24%\n(符文) Bonded: 冷却回复速度提高 16%\n护甲提高 95%\n+127 最大生命\n+40% 火焰抗性\n+45% 闪电抗性\neffect of Socketed Items提高 60%"
     },
     {
       "name": "无生之辱",
@@ -21,7 +21,7 @@
       "baseType": "Grand Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL01vcmlvckludmljdHVzX00iLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/6674aa4ff6/MoriorInvictus_M.png",
       "rarity": 3,
-      "desc": "316% increased [Armour|Armour], [Evasion|Evasion] and [EnergyShield|Energy Shield]\n+5 to all [Attributes] per Socket filled\n+54 to maximum Life per Socket filled\n+8% to all [Resistances|Elemental Resistances] per Socket filled"
+      "desc": "(符文) +160 最大生命\n(符文) 最大生命提高 3%\n(符文) Bonded: +40 最大生命\n(符文) Bonded: +40 最大魔力\n护甲, 闪避值 and 能量护盾提高 316%\n+5 all [Attributes] per Socket filled\n+54 最大生命 per Socket filled\n+8% all 元素抗性 per Socket filled\n(已腐化)"
     },
     {
       "name": "猎首",
@@ -29,7 +29,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "+47 to maximum Life\n+38 to [Strength|Strength]\n+31 to [Dexterity|Dexterity]\nWhen you kill a [Rarity|Rare] monster, you gain its [MonsterModifiers|Modifiers] for 60 seconds"
+      "desc": "(基底) 晕眩门槛提高 21%\n(基底) Has 3 [Charm] Slots\n+47 最大生命\n+38 力量\n+31 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "赤红护身符",
@@ -37,7 +37,7 @@
       "baseType": "Sturdy Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": ""
+      "desc": "(基底) 晕眩门槛提高 17%"
     },
     {
       "name": "命运之抗争",
@@ -45,7 +45,7 @@
       "baseType": "Jade Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9VbmlxdWVzL0RlZmlhbmNlT2ZEZXN0aW55IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/713775c874/DefianceOfDestiny.png",
       "rarity": 3,
-      "desc": "9% increased maximum Life\n+12 to [Strength|Strength]\n32% increased Mana Regeneration Rate\nRecover 36% of Missing Life before being [HitDamage|Hit] by an Enemy"
+      "desc": "(附魔) Allocates Vengeful Fury\n(基底) +11 敏捷\n最大生命提高 9%\n+12 力量\n魔力回复速度提高 32%\nRecover 36% of Missing Life before being Hit by an Enemy"
     },
     {
       "name": "Dire Twirl (紫晶戒指)",
@@ -53,7 +53,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "Adds 7 to 13 [Physical|Physical] Damage to [Attack|Attacks]\n+117 to maximum Life\n+159 to maximum Mana\n+27% to [Resistances|Cold Resistance]\n63% increased Mana Regeneration Rate\n[ManaLeech|Leech] 5.74% of [Physical] [Attack] Damage as Mana"
+      "desc": "(基底) +9% 混沌抗性\n附加 7 - 13 物理伤害 to Attacks\n+117 最大生命\n+159 最大魔力\n+27% 冰霜抗性\n魔力回复速度提高 63%\nLeech 5.74% of [Physical] [Attack] Damage as Mana"
     },
     {
       "name": "Torment Spell (预兆短杖)",
@@ -61,7 +61,7 @@
       "baseType": "Omen Sceptre",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA0IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/d2cc9f0ac1/Sceptre04.png",
       "rarity": 2,
-      "desc": "60% increased [Spirit|Spirit]\n+94 to maximum Mana\n[Allies|Allies] in your [Presence|Presence] deal 1 to 27 added [Attack|Attack] [Lightning|Lightning] Damage\n[Allies|Allies] in your [Presence|Presence] have +15% to all [ElementalDamage|Elemental] [Resistances|Resistances]\n[Allies|Allies] in your [Presence|Presence] Regenerate 12.6 Life per second\n58% increased Mana Regeneration Rate"
+      "desc": "(符文) Allies in your Presence have 攻击速度提高 8%\n(符文) Allies in your Presence have 施法速度提高 8%\n(符文) Bonded: Skill Speed while Shapeshifted提高 20%\nSpirit提高 60%\n+94 最大魔力\nAllies in your Presence deal 1 to 27 added Attack 闪电伤害\nAllies in your Presence have +15% all 元素抗性\nAllies in your Presence Regenerate 12.6 Life per second\n魔力回复速度提高 58%\n(已腐化)"
     },
     {
       "name": "Horror Knuckle (巨型护手)",
@@ -69,7 +69,7 @@
       "baseType": "Massive Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/20c9cbb22c/GlovesStr06.png",
       "rarity": 2,
-      "desc": "+115 to [Armour|Armour]\nAdds 15 to 23 [Cold] damage to [Attack|Attacks]\n+39% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]\n60% increased effect of Socketed Items"
+      "desc": "(符文) [Attack] Speed提高 12%\n(符文) +17% 混沌抗性\n(符文) Bonded: Slowing Potency of Debuffs on You降低 24%\n+115 护甲\n附加 15 - 23 Attacks\n+39% 的 护甲 也套用于 元素伤害\neffect of Socketed Items提高 60%"
     },
     {
       "name": "Maji Talisman",
@@ -77,7 +77,7 @@
       "baseType": "Maji Talisman",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
-      "desc": "168% increased [Physical] Damage\nAdds 28 to 44 [Physical|Physical] Damage\n+5 to Level of all [Attack] Skills\n[Gain] 28% of Damage as Extra [Physical] Damage\n23% chance to gain [Onslaught|Onslaught] on Killing [HitDamage|Hits] with this Weapon"
+      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +11 Maximum [Rage]\n[Physical] Damage提高 168%\n附加 28 - 44 物理伤害\n+5 Level of all [Attack] Skills\n[Gain] 28% of Damage as Extra [Physical] Damage\n23% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
       "name": "Mind Crown (典范巨盔)",
@@ -85,7 +85,7 @@
       "baseType": "Paragon Greathelm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRTdHIwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/39a19d746e/HelmetStr05.png",
       "rarity": 2,
-      "desc": "+161 to [Armour|Armour]\n82% increased [Armour|Armour]\n+161 to maximum Life\n+29% to [Resistances|Cold Resistance]\n+12% to [Resistances|Chaos Resistance]\n+39% of [Armour|Armour] also applies to [ElementalDamage|Elemental Damage]"
+      "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n+161 护甲\n护甲提高 82%\n+161 最大生命\n+29% 冰霜抗性\n+12% 混沌抗性\n+39% 的 护甲 也套用于 元素伤害"
     },
     {
       "name": "Viper Gyre (黄玉戒指)",
@@ -93,7 +93,7 @@
       "baseType": "Topaz Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1RvcGF6UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83315d9397/TopazRing.png",
       "rarity": 2,
-      "desc": "Adds 18 to 31 [Cold] damage to [Attack|Attacks]\n+117 to maximum Life\n+21% to [Resistances|Cold Resistance]\n[LifeLeech|Leech] 7.41% of [Physical] [Attack] Damage as Life\n55% increased Mana Regeneration Rate"
+      "desc": "(基底) +24% 闪电抗性\n附加 18 - 31 Attacks\n+117 最大生命\n+21% 冰霜抗性\nLeech 7.41% of [Physical] [Attack] Damage as Life\n魔力回复速度提高 55%"
     }
   ],
   "skills": [
