@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "merge_data.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cron:dev": "set NODE_ENV=dev node auto_browser/deploy_cron.js",
+    "cron:prod": "set NODE_ENV=production node auto_browser/deploy_cron.js"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +15,6 @@
     "ali-oss": "^6.23.0",
     "https-proxy-agent": "^7.0.6",
     "protobufjs": "^7.5.4",
-    "puppeteer": "^24.33.0",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "puppeteer": "^24.33.0"
   }
 }
