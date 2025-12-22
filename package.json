@@ -4,8 +4,8 @@
   "main": "merge_data.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cron:dev": "set NODE_ENV=dev node auto_browser/deploy_cron.js",
-    "cron:prod": "set NODE_ENV=production node auto_browser/deploy_cron.js"
+    "cron:dev": "set NODE_ENV=dev && node run_translate_crawler.js",
+    "cron:prod": "set NODE_ENV=production && node run_translate_crawler.js"
   },
   "keywords": [],
   "author": "",
