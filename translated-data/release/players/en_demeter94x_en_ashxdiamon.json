@@ -85,7 +85,7 @@
       "baseType": "Attuned Wand",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9CYXNldHlwZXMvV2FuZDAzIiwidyI6MSwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e3b38f8f2b/Wand03.png",
       "rarity": 2,
-      "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Elements\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n[Gain] 30% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 104%\n[Lightning] Damage提高 87%\n+4 Level of all Spell Skills\n(已腐化)"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 30% of Damage as Extra [Fire] Damage\n[Spell] Damage提高 104%\n[Lightning] Damage提高 87%\n+4 Level of all Spell Skills\n(已腐化)"
     },
     {
       "name": "Kraken Spire (鸣谐长杖)",
@@ -158,15 +158,55 @@
           "isSupport": true
         },
         {
-          "name": "Khatal's Rejuvenation",
-          "originalName": "Khatal's Rejuvenation",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0xpbmVhZ2VLaGF0YWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1006cc6339/LineageKhatal.png",
+          "name": "机动",
+          "originalName": "Mobility",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb2JpbGl0eVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b5771e1aa2/MobilitySupportGem.png",
           "isSupport": true
         },
         {
           "name": "快速施法 II",
           "originalName": "Rapid Casting II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJDYXN0U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3242e80646/FasterCastSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "精准暴击",
+          "originalName": "Pinpoint Critical",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QaW5wb2ludENyaXRpY2FsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9b8e57083b/PinpointCriticalSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
+          "name": "元素祈求",
+          "originalName": "Elemental Invocation",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRWxlbWVudGFsSW52b2NhdGlvbk1ldGFTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/94722beec3/ElementalInvocationMetaSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "活动炸弹",
+          "originalName": "Living Bomb",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTGl2aW5nQm9tYlNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e1c7881c93/LivingBombSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "火球",
+          "originalName": "Fireball",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvR3JlYXRlckZpcmViYWxsU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8c5a38ce48/GreaterFireballSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "无边能量 II",
+          "originalName": "Boundless Energy II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZGRlZEltcGV0dXNTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cebc02ce93/AddedImpetusSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "高效 II",
+          "originalName": "Efficiency II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
           "isSupport": true
         },
         {
@@ -220,46 +260,6 @@
     {
       "gems": [
         {
-          "name": "元素异常状态时施放",
-          "originalName": "Cast on Elemental Ailment",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ2FzdG9uRnJlZXplU2hvY2tJZ25pdGVNZXRhU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/00e4f6ef2c/CastonFreezeShockIgniteMetaSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "烈炎风暴",
-          "originalName": "Firestorm",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hGaXJlc3Rvcm1Ta2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/bc713a9da1/WitchFirestormSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "范围集中",
-          "originalName": "Concentrated Area",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25jZW50cmF0ZWRFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b2b4865296/ConcentratedEffectSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "持续时间延长 II",
-          "originalName": "Prolonged Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "精准暴击",
-          "originalName": "Pinpoint Critical",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QaW5wb2ludENyaXRpY2FsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9b8e57083b/PinpointCriticalSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Dialla's Desire",
-          "originalName": "Dialla's Desire",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0RpYWxsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0bd65d845a/Dialla.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
           "name": "诅咒光环",
           "originalName": "Blasphemy",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hCbGFzcGhlbXlTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/47fe56538a/WitchBlasphemySkillGem.png",
@@ -300,39 +300,39 @@
     {
       "gems": [
         {
-          "name": "元素祈求",
-          "originalName": "Elemental Invocation",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRWxlbWVudGFsSW52b2NhdGlvbk1ldGFTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/94722beec3/ElementalInvocationMetaSkillGem.png",
+          "name": "元素异常状态时施放",
+          "originalName": "Cast on Elemental Ailment",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ2FzdG9uRnJlZXplU2hvY2tJZ25pdGVNZXRhU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/00e4f6ef2c/CastonFreezeShockIgniteMetaSkillGem.png",
           "isSupport": false
         },
         {
-          "name": "活动炸弹",
-          "originalName": "Living Bomb",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTGl2aW5nQm9tYlNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e1c7881c93/LivingBombSkillGem.png",
+          "name": "烈炎风暴",
+          "originalName": "Firestorm",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hGaXJlc3Rvcm1Ta2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/bc713a9da1/WitchFirestormSkillGem.png",
           "isSupport": false
         },
         {
-          "name": "冰霜新星",
-          "originalName": "Ice Nova",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSWNlTm92YVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/c22987ca6d/IceNovaSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "无边能量 II",
-          "originalName": "Boundless Energy II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZGRlZEltcGV0dXNTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cebc02ce93/AddedImpetusSupportGem.png",
+          "name": "范围集中",
+          "originalName": "Concentrated Area",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25jZW50cmF0ZWRFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b2b4865296/ConcentratedEffectSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "高效 II",
-          "originalName": "Efficiency II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
+          "name": "持续时间延长 II",
+          "originalName": "Prolonged Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
           "isSupport": true
         },
         {
           "name": "精准暴击",
           "originalName": "Pinpoint Critical",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QaW5wb2ludENyaXRpY2FsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9b8e57083b/PinpointCriticalSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Dialla's Desire",
+          "originalName": "Dialla's Desire",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0RpYWxsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0bd65d845a/Dialla.png",
           "isSupport": true
         }
       ]
@@ -466,9 +466,9 @@
           "isSupport": true
         },
         {
-          "name": "Hayoxi's Fulmination",
-          "originalName": "Hayoxi's Fulmination",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0hheW94aSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/8e0f7a5178/Hayoxi.png",
+          "name": "诅咒之地",
+          "originalName": "Cursed Ground",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DdXJzZWRHcm91bmRTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/9f05751dd6/CursedGroundSupportGem.png",
           "isSupport": true
         }
       ]
@@ -504,19 +504,25 @@
     {
       "gems": [
         {
-          "name": "魔力吸取",
-          "originalName": "Mana Drain",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
+          "name": "魔力残片",
+          "originalName": "Mana Remnants",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRW5lcmd5UmVtbmFudHNTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7e60342154/EnergyRemnantsSkillGem.png",
           "isSupport": false
+        },
+        {
+          "name": "和谐残迹 II",
+          "originalName": "Harmonic Remnants II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9SdXNoZWRSZW1uYW50c1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/bf571a0d70/RushedRemnantsSupportGem.png",
+          "isSupport": true
         }
       ]
     },
     {
       "gems": [
         {
-          "name": "寒冰弹",
-          "originalName": "Frostbolt",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRnJvc3RCb2x0U2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f25017e94e/FrostBoltSkillGem.png",
+          "name": "魔力吸取",
+          "originalName": "Mana Drain",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
           "isSupport": false
         }
       ]

@@ -21,7 +21,7 @@
       "baseType": "Armoured Vest",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
       "rarity": 3,
-      "desc": "(附魔) +13% 混沌抗性\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) Elemental Ailment Threshold提高 34%\n闪避值 Rating提高 225%\n[Gain] 25% of Damage as Extra [Cold] Damage\n+37 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]\n(已腐化)"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n(基底) Elemental Ailment Threshold提高 37%\n闪避值 Rating提高 245%\n[Gain] 25% of Damage as Extra [Cold] Damage\n+40 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]\n(已腐化)"
     },
     {
       "name": "Kraken Brow (先祖冠冕)",
@@ -37,7 +37,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 3 [Charm] Slots\n+50 最大生命\n+24 力量\n+32 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
+      "desc": "(基底) 晕眩门槛提高 29%\n(基底) Has 2 [Charm] Slots\n+44 最大生命\n+31 力量\n+39 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
     },
     {
       "name": "Demon Braid (日曜护身符)",
@@ -61,7 +61,7 @@
       "baseType": "Gauze Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9QbGFndWVmaW5nZXIiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f88ef1cca5/Plaguefinger.png",
       "rarity": 3,
-      "desc": "(符文) +14% 冰霜抗性\n(符文) Magnitude of Damaging Ailments you inflict提高 20%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 15%\n[Attack] Speed提高 4%\n24% chance to Poison on Hit\nAll Damage from Hits Contributes to [Poison] Magnitude\n(已腐化)"
+      "desc": "(符文) Magnitude of Damaging Ailments you inflict提高 20%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Duration of Damaging Ailments on Enemies提高 15%\n[Attack] Speed提高 4%\n24% chance to Poison on Hit\nAll Damage from Hits Contributes to [Poison] Magnitude\n(已腐化)"
     },
     {
       "name": "Beast Mark (毁灭者之弓)",
@@ -77,15 +77,7 @@
       "baseType": "Combat Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": "(基底) [Attack] Speed提高 10%"
-    },
-    {
-      "name": "赤红护身符",
-      "originalName": "Sprinters Leg",
-      "baseType": "Sprinters Leg",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) 移动速度 while Sprinting提高 10%"
+      "desc": "(基底) [Attack] Speed提高 8%"
     },
     {
       "name": "Demon Skewer (贯心箭袋)",
@@ -109,7 +101,7 @@
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "(符文) 移动速度提高 5%\n(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 96%\n+122 最大生命\n+44% 冰霜抗性\n+43% 闪电抗性"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Lose 5% of 最大生命 per second while Sprinting\n(符文) 移动速度 while Sprinting提高 25%\n(符文) Bonded: 冷却回复速度提高 10%\n能量护盾提高 94%\n+135 最大生命\n+45% 冰霜抗性\n+45% 闪电抗性"
     }
   ],
   "skills": [
@@ -149,6 +141,46 @@
           "name": "Mark of Siphoning II",
           "originalName": "Mark of Siphoning II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9NYXJrZWRGb3JEcmFpblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8d21d38c4f/MarkedForDrainSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
+          "name": "赤血之捷",
+          "originalName": "Herald of Blood",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSGVyYWxkb2ZCbG9vZFNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/363beda1e0/HeraldofBloodSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "中毒 III",
+          "originalName": "Poison III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFuY2V0b1BvaXNvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/aa10383916/ChancetoPoisonSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "迸发之疫",
+          "originalName": "Bursting Plague",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CdXJzdGluZ1BsYWd1ZVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/acafd28d1d/BurstingPlagueSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "致命毒素 II",
+          "originalName": "Deadly Poison II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9EZWFkbHlQb2lzb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0c89a49c4d/DeadlyPoisonSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "流血 III",
+          "originalName": "Bleed III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFuY2VUb0JsZWVkU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ad7ca3304c/ChanceToBleedSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "范围扩大 II",
+          "originalName": "Magnified Area II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
           "isSupport": true
         }
       ]
@@ -229,46 +261,6 @@
           "name": "Arakaali's Lust",
           "originalName": "Arakaali's Lust",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0xpbmVhZ2VBcmFrYWFsaSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03d86b8db8/LineageArakaali.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "赤血之捷",
-          "originalName": "Herald of Blood",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSGVyYWxkb2ZCbG9vZFNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/363beda1e0/HeraldofBloodSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "中毒 III",
-          "originalName": "Poison III",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFuY2V0b1BvaXNvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/aa10383916/ChancetoPoisonSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "迸发之疫",
-          "originalName": "Bursting Plague",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CdXJzdGluZ1BsYWd1ZVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/acafd28d1d/BurstingPlagueSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "致命毒素 II",
-          "originalName": "Deadly Poison II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9EZWFkbHlQb2lzb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0c89a49c4d/DeadlyPoisonSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "流血 III",
-          "originalName": "Bleed III",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFuY2VUb0JsZWVkU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ad7ca3304c/ChanceToBleedSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "范围扩大 II",
-          "originalName": "Magnified Area II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
           "isSupport": true
         }
       ]

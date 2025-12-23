@@ -13,7 +13,7 @@
       "baseType": "Gold Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
       "rarity": 2,
-      "desc": "(基底) 物品稀有度提高 10%\n附加 14 - 36 物理伤害 to Attacks\n物品稀有度提高 34%\n+15% all Elemental [Resistances]\n+24% 火焰抗性"
+      "desc": "(基底) 物品稀有度提高 15%\n附加 14 - 36 物理伤害 to Attacks\n物品稀有度提高 34%\n+15% all Elemental [Resistances]\n+24% 火焰抗性"
     },
     {
       "name": "Torment Gorget (帝金护身符)",
@@ -22,14 +22,6 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
       "desc": "(附魔) Allocates Lasting Trauma\n(基底) 物品稀有度提高 18%\n+50 Spirit\n+18% all Elemental [Resistances]\n+34% 火焰抗性\nGlobal [Defences]提高 26%"
-    },
-    {
-      "name": "Pandemonium Star (先祖冠冕)",
-      "originalName": "Pandemonium Star",
-      "baseType": "Ancestral Tiara",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
-      "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(已腐化)"
     },
     {
       "name": "Kalandra's Touch",
@@ -54,6 +46,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
       "rarity": 2,
       "desc": "(基底) [Attack] Speed提高 8%\n附加 19 - 28 Attacks\n附加 1 - 68 Attacks\nDamage with Bow Skills提高 59%\nCritical Damage Bonus for [Attack] Damage提高 32%"
+    },
+    {
+      "name": "Empyrean Peak (先祖冠冕)",
+      "originalName": "Empyrean Peak",
+      "baseType": "Ancestral Tiara",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
+      "rarity": 2,
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 129%\n+26 最大魔力\n物品稀有度提高 17%\n+42% 冰霜抗性\n+36% 闪电抗性"
     },
     {
       "name": "Hyrri's Ire",

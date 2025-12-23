@@ -53,7 +53,23 @@
       "baseType": "Commanding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": "(基底) Presence Area of Effect提高 23%"
+      "desc": "(基底) Presence Area of Effect提高 18%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Restorative Leg",
+      "baseType": "Restorative Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 8% of Damage taken Recouped as Life"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Sprinters Leg",
+      "baseType": "Sprinters Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 移动速度 while Sprinting提高 10%"
     },
     {
       "name": "Loath Pole (鸣谐长杖)",
@@ -70,6 +86,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9Gb2NpL0Jhc2V0eXBlcy9Gb2N1czA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a7c172ac69/Focus06.png",
       "rarity": 2,
       "desc": "+37 最大魔力\n+2 Level of all Spell Skills\n+28% 闪电抗性\n51% faster start of 能量护盾 Recharge"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Decrepifying Arm",
+      "baseType": "Decrepifying Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) Magnitudes提高 15%"
     },
     {
       "name": "Miracle Ward (密会法器)",
@@ -254,9 +278,9 @@
           "isSupport": false
         },
         {
-          "name": "范围扩大 II",
-          "originalName": "Magnified Area II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
+          "name": "仪祭诅咒",
+          "originalName": "Ritualistic Curse",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9SaXR1YWxpc3RpY0N1cnNlU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/5440925891/RitualisticCurseSupportGem.png",
           "isSupport": true
         },
         {
@@ -266,9 +290,9 @@
           "isSupport": true
         },
         {
-          "name": "混沌专精",
-          "originalName": "Chaos Mastery",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFvc01hc3RlcnlTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cedd39c5b/ChaosMasterySupportGem.png",
+          "name": "减速效能",
+          "originalName": "Slow Potency",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbmN1bWJlcmFuY2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0329448182/EncumberanceSupportGem.png",
           "isSupport": true
         }
       ]

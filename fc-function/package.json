@@ -4,7 +4,9 @@
   "description": "阿里云函数计算版本的流放之路2数据翻译爬虫",
   "main": "index.js",
   "dependencies": {
-    "puppeteer-core": "^21.0.0"
+    "ali-oss": "^6.23.0",
+    "dotenv": "^16.0.0",
+    "puppeteer-core": "^24.34.0"
   },
   "engines": {
     "node": ">=16.0.0"

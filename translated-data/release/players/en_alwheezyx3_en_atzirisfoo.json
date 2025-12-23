@@ -21,7 +21,7 @@
       "baseType": "Commander Gauntlets",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0ckRleDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/0cb6b02463/GlovesStrDex02.png",
       "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) +40 最大生命\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n护甲 and 闪避值提高 100%\n+537 Accuracy Rating\n+109 最大生命\n+32% 闪电抗性\n+38% 的 护甲 也套用于 元素伤害\n(已腐化)"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n护甲 and 闪避值提高 100%\n+537 Accuracy Rating\n+109 最大生命\n+32% 闪电抗性\n+38% 的 护甲 也套用于 元素伤害\n(已腐化)"
     },
     {
       "name": "无生之辱",
@@ -48,14 +48,6 @@
       "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Slowing Potency of Debuffs on You降低 15%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n护甲提高 24%\n+20 力量\n+29% 闪电抗性\n+34% 的 护甲 也套用于 元素伤害\n+33 晕眩门槛\n(已腐化)"
     },
     {
-      "name": "Sorrow Grinder (圣地短杖)",
-      "originalName": "Sorrow Grinder",
-      "baseType": "Shrine Sceptre",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA2YSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a6a4d69a6b/Sceptre06a.png",
-      "rarity": 2,
-      "desc": "(附魔) Attribute Requirements降低 14%\n(符文) Allies in your Presence deal 1 to 40 added Attack 闪电伤害\n(符文) Bonded: Shapeshifted提高 40%\nSpirit提高 49%\n+68 最大魔力\nAllies in your Presence deal 15 to 22 added Attack 火焰伤害\nAttribute Requirements降低 35%\n+28 智慧\n魔力回复速度提高 61%\n(已腐化)"
-    },
-    {
       "name": "Dragon Grasp (紫晶戒指)",
       "originalName": "Dragon Grasp",
       "baseType": "Amethyst Ring",
@@ -78,6 +70,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvUmFiaWRUYWxpc21hbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848a8c92de/RabidTalisman.png",
       "rarity": 2,
       "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) +12 Maximum [Rage]\n[Physical] Damage提高 164%\n附加 27 - 51 物理伤害\n+5 Level of all [Attack] Skills\n[Gain] 31% of Damage as Extra [Physical] Damage\n20% chance to gain Onslaught on Killing Hits with this Weapon"
+    },
+    {
+      "name": "Skull Weaver (圣地短杖)",
+      "originalName": "Skull Weaver",
+      "baseType": "Shrine Sceptre",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9TY2VwdGVycy9CYXNldHlwZXMvU2NlcHRyZTA2YSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a6a4d69a6b/Sceptre06a.png",
+      "rarity": 2,
+      "desc": "(符文) Allies in your Presence deal Damage提高 30%\n(符文) Allies in your Presence have 攻击速度提高 8%\n(符文) Bonded: Damage while Shapeshifted提高 40%\n(符文) Bonded: Skill Speed while Shapeshifted提高 10%\n(已腐化)"
     },
     {
       "name": "Headhunter (重革腰带)",
@@ -132,46 +132,6 @@
     {
       "gems": [
         {
-          "name": "Walking Calamity",
-          "originalName": "Walking Calamity",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRXYWxraW5nQ2FsYW1pdHlTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/12e4d69bdc/DruidWalkingCalamitySkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "持续时间延长 II",
-          "originalName": "Prolonged Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "点燃 III",
-          "originalName": "Ignite III",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JZ25pdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/ff097cc42f/IgnitionSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "范围集中",
-          "originalName": "Concentrated Area",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25jZW50cmF0ZWRFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b2b4865296/ConcentratedEffectSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Rakiata's Flow",
-          "originalName": "Rakiata's Flow",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
-          "isSupport": true
-        },
-        {
-          "name": "Rigwald's Ferocity",
-          "originalName": "Rigwald's Ferocity",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1JpZ3dhbGQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/3336601782/Rigwald.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
           "name": "Pounce",
           "originalName": "Pounce",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV29sZkxlYXBBdHRhY2tTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7d5766517e/WolfLeapAttackSkillGem.png",
@@ -205,6 +165,46 @@
           "name": "神圣降临",
           "originalName": "Holy Descent",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Ib2x5RGVzY2VudFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4297c498c6/HolyDescentSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
+          "name": "Fury of the Mountain",
+          "originalName": "Fury of the Mountain",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGdXJ5b2Z0aGVNb3VudGFpblNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f8d23186e7/DruidFuryoftheMountainSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "快速攻击 II",
+          "originalName": "Rapid Attacks II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJBdHRhY2tTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/1824662136/FasterAttackSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "迅猛增幅 II",
+          "originalName": "Burgeon II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFubmVsbGluZ0RhbWFnZVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/970a9098a9/ChannellingDamageSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "元素军械 II",
+          "originalName": "Elemental Armament II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "余震 II",
+          "originalName": "Aftershock II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZnRlcnNob2NrU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f39c3a9ea7/AftershockSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "终结 II",
+          "originalName": "Culling Strike II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DdWxsaW5nU3RyaWtlU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/86fcc9e319/CullingStrikeSupportGem.png",
           "isSupport": true
         }
       ]
@@ -252,6 +252,46 @@
     {
       "gems": [
         {
+          "name": "Walking Calamity",
+          "originalName": "Walking Calamity",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRXYWxraW5nQ2FsYW1pdHlTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/12e4d69bdc/DruidWalkingCalamitySkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "持续时间延长 II",
+          "originalName": "Prolonged Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "点燃 III",
+          "originalName": "Ignite III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JZ25pdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/ff097cc42f/IgnitionSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "范围集中",
+          "originalName": "Concentrated Area",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25jZW50cmF0ZWRFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b2b4865296/ConcentratedEffectSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Rakiata's Flow",
+          "originalName": "Rakiata's Flow",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
+          "isSupport": true
+        },
+        {
+          "name": "Rigwald's Ferocity",
+          "originalName": "Rigwald's Ferocity",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1JpZ3dhbGQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/3336601782/Rigwald.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
           "name": "Ferocious Roar",
           "originalName": "Ferocious Roar",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmVhcldhcmNyeU1ldGFTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b011aa1403/BearWarcryMetaSkillGem.png",
@@ -292,50 +332,16 @@
     {
       "gems": [
         {
-          "name": "Fury of the Mountain",
-          "originalName": "Fury of the Mountain",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRGdXJ5b2Z0aGVNb3VudGFpblNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f8d23186e7/DruidFuryoftheMountainSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "快速攻击 II",
-          "originalName": "Rapid Attacks II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJBdHRhY2tTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/1824662136/FasterAttackSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Kaom's Madness",
-          "originalName": "Kaom's Madness",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0xpbmVhZ2VLYW9tIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/892e83bc7d/LineageKaom.png",
-          "isSupport": true
-        },
-        {
-          "name": "元素军械 II",
-          "originalName": "Elemental Armament II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "余震 II",
-          "originalName": "Aftershock II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZnRlcnNob2NrU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/f39c3a9ea7/AftershockSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "终结 II",
-          "originalName": "Culling Strike II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DdWxsaW5nU3RyaWtlU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/86fcc9e319/CullingStrikeSupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
           "name": "火焰净化",
           "originalName": "Purity of Fire",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
           "isSupport": false
+        },
+        {
+          "name": "清晰 II",
+          "originalName": "Clarity II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbGFyaXR5U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b8cfb97d8c/ClaritySupportGem.png",
+          "isSupport": true
         },
         {
           "name": "药草学 II",
@@ -347,12 +353,6 @@
           "name": "活力 II",
           "originalName": "Vitality II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9WaXRhbGl0eVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4d0a173757/VitalitySupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "清晰 II",
-          "originalName": "Clarity II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbGFyaXR5U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b8cfb97d8c/ClaritySupportGem.png",
           "isSupport": true
         },
         {

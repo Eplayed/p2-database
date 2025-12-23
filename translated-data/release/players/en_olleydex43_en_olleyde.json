@@ -8,12 +8,12 @@
   },
   "equipment": [
     {
-      "name": "Loath Quill (飞矢箭袋)",
-      "originalName": "Loath Quill",
-      "baseType": "Volant Quiver",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVm9sYW50IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/2577f2fea8/QuiverVolant.png",
-      "rarity": 2,
-      "desc": "(基底) Arrow Speed提高 28%\n附加 8 - 18 物理伤害 to Attacks\n附加 19 - 31 Attacks\nDamage with Bow Skills提高 58%\nCritical Damage Bonus for [Attack] Damage提高 29%\n+32 敏捷"
+      "name": "赤红护身符",
+      "originalName": "Combat Arm",
+      "baseType": "Combat Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) [Attack] Speed提高 9%"
     },
     {
       "name": "Chimeric Ward (卡马萨冠冕)",
@@ -22,6 +22,38 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
       "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+58 最大能量护盾\n能量护盾提高 133%\n+33 最大生命\n+37% 火焰抗性\n+23% 闪电抗性"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Surefooted Leg",
+      "baseType": "Surefooted Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 移动速度 Penalty from using Skills while moving降低 10%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Sturdy Leg",
+      "baseType": "Sturdy Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 晕眩门槛提高 20%"
+    },
+    {
+      "name": "Corpse Spike (精工箭袋)",
+      "originalName": "Corpse Spike",
+      "baseType": "Primed Quiver",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
+      "rarity": 2,
+      "desc": "(基底) [Attack] Speed提高 10%\n附加 4 - 68 Attacks\n[Projectile] Speed提高 34%\nCritical Damage Bonus for [Attack] Damage提高 29%\n[Attack] Speed提高 15%\nGain 28 Life per enemy killed"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Decrepifying Arm",
+      "baseType": "Decrepifying Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) Magnitudes提高 14%"
     },
     {
       "name": "Tempest Blast (双子之弓)",
@@ -40,12 +72,12 @@
       "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 41%\n+133 最大生命\n+38% 冰霜抗性\n+14% 闪电抗性\n+466 晕眩门槛"
     },
     {
-      "name": "Woe Collar (月影护身符)",
-      "originalName": "Woe Collar",
+      "name": "Skull Torc (月影护身符)",
+      "originalName": "Skull Torc",
       "baseType": "Lunar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTHVuYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e0eef02a23/LunarAmulet.png",
       "rarity": 2,
-      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +34 最大能量护盾\n+129 最大生命\n+3 Level of all [Projectile] Skills\n+22 智慧\n+35% 冰霜抗性"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +30 最大能量护盾\n+92 最大能量护盾\n+70 最大生命\n+47 Spirit\n+3 Level of all [Projectile] Skills\n+33 力量\n+14% all Elemental [Resistances]"
     },
     {
       "name": "猎首",
@@ -53,7 +85,7 @@
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
-      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 3 [Charm] Slots\n+59 最大生命\n+20 力量\n+30 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
+      "desc": "(基底) 晕眩门槛提高 25%\n(基底) Has 3 [Charm] Slots\n+72 最大生命\n+40 力量\n+37 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     },
     {
       "name": "Oblivion Coat",
@@ -61,7 +93,7 @@
       "baseType": "Falconer's Jacket",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDA2IiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/512e4bd095/BodyDexInt06.png",
       "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 移动速度提高 5%\n+126 [闪避值] Rating\n+43 最大能量护盾\n能量护盾提高 64%\n+47 Spirit\n+30% 闪电抗性\n+17% 混沌抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating"
+      "desc": "(附魔) 3% additional [Physical] Damage Reduction\n(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) 移动速度提高 5%\n+126 [闪避值] Rating\n+43 最大能量护盾\n能量护盾提高 64%\n+47 Spirit\n+30% 闪电抗性\n+17% 混沌抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating\n(已腐化)"
     },
     {
       "name": "Behemoth Fist (冷酷手套)",
@@ -69,7 +101,7 @@
       "baseType": "Grim Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5da448ad79/GlovesInt02.png",
       "rarity": 2,
-      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 27%\n附加 2 - 42 Attacks\n+167 最大生命\n[Attack] Speed提高 16%\n能量护盾 Recharge Rate提高 43%"
+      "desc": "(符文) 附加 5 - 12 物理伤害 to Attacks\n(符文) Bonded: Fissure Skills have +2 [Limit]\n能量护盾提高 27%\n附加 2 - 42 Attacks\n+167 最大生命\n[Attack] Speed提高 16%\n能量护盾 Recharge Rate提高 43%"
     },
     {
       "name": "Dire Grasp (珠玉戒指)",
@@ -236,9 +268,9 @@
           "isSupport": true
         },
         {
-          "name": "致命之捷",
-          "originalName": "Deadly Herald",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9EZWFkbHlIZXJhbGRTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4e98f6a965/DeadlyHeraldSupportGem.png",
+          "name": "元素军械 II",
+          "originalName": "Elemental Armament II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
           "isSupport": true
         },
         {
@@ -385,6 +417,22 @@
           "name": "击退",
           "originalName": "Knockback",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Lbm9ja2JhY2tTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dba803f507/KnockbackSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
+          "name": "幽灵舞步",
+          "originalName": "Ghost Dance",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvR2hvc3REYW5jZVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5ac9e78c5e/GhostDanceSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "持续时间压缩 II",
+          "originalName": "Compressed Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MZXNzRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5d61c1a8eb/LessDurationSupportGem.png",
           "isSupport": true
         }
       ]

@@ -24,12 +24,20 @@
       "desc": "(附魔) Allocates Acceleration\n(基底) +7 全属性\n+172 最大生命\n最大生命提高 7%\n+3 Level of all Melee Skills\n+33% 火焰抗性\n+38% 冰霜抗性"
     },
     {
-      "name": "Phoenix Hoof (萨满绑腿)",
-      "originalName": "Phoenix Hoof",
-      "baseType": "Shamanistic Leggings",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnRTdHIwMyIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3fb2f64940/BootsIntStr03.png",
+      "name": "Agony Nails (羽饰护手)",
+      "originalName": "Agony Nails",
+      "baseType": "Feathered Mitts",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA1IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/30e916dc14/GlovesStr05.png",
       "rarity": 2,
-      "desc": "(符文) 移动速度提高 5%\n(符文) +11% 混沌抗性\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n护甲 and 能量护盾提高 86%\n+40% 火焰抗性\n+33% 闪电抗性\n+19% 混沌抗性\n(已腐化)"
+      "desc": "(附魔) Damage Penetrates 10% 火焰抗性\n(符文) +11% 混沌抗性\n附加 8 - 12 Attacks\n+87 最大生命\n+2 Level of all Melee Skills\n+23% 火焰抗性\n+43% 的 护甲 也套用于 元素伤害\n(已腐化)"
+    },
+    {
+      "name": "Anarchy Tread (隐秘绑腿)",
+      "originalName": "Anarchy Tread",
+      "baseType": "Cryptic Leggings",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnRTdHIwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/12efc4aaa8/BootsIntStr04.png",
+      "rarity": 2,
+      "desc": "(附魔) +24% 闪电抗性\n(附魔) Freeze Threshold提高 30%\n(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+55 护甲\n+23 最大能量护盾\n+120 最大生命\n物品稀有度提高 15%\n+25% 火焰抗性\n(已腐化)"
     },
     {
       "name": "Horror Guardian (好战者巨盔)",
@@ -48,6 +56,14 @@
       "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +1 Level of all [Corrupted] Skill Gems\n+163 [闪避值] Rating\n护甲, 闪避值 and 能量护盾提高 86%\n+205 最大生命\n+41% 冰霜抗性\n+46% 的 护甲 也套用于 元素伤害"
     },
     {
+      "name": "Damnation Grip (Jade Talisman)",
+      "originalName": "Damnation Grip",
+      "baseType": "Jade Talisman",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvTHVtYmVyaW5nVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75c7ed525d/LumberingTalisman.png",
+      "rarity": 2,
+      "desc": "(附魔) 附加 11 - 24 冰霜伤害\n(附魔) 元素伤害 with Attacks提高 44%\n(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 38 - 91 物理伤害\n[Attack] Speed提高 24%\n+5 Level of all [Attack] Skills\n21% chance to gain Onslaught on Killing Hits with this Weapon\n(已腐化)"
+    },
+    {
       "name": "Entropy Gyre (金光戒指)",
       "originalName": "Entropy Gyre",
       "baseType": "Gold Ring",
@@ -56,28 +72,12 @@
       "desc": "(基底) 物品稀有度提高 13%\n附加 9 - 20 物理伤害 to Attacks\n[Cold] Damage提高 25%\n物品稀有度提高 36%\n+39 智慧\n+27% 闪电抗性"
     },
     {
-      "name": "Wrath Touch (华丽护手)",
-      "originalName": "Wrath Touch",
-      "baseType": "Ornate Mitts",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc1N0cjA0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/041d8df186/GlovesStr04.png",
-      "rarity": 2,
-      "desc": "(符文) +14% 闪电抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n护甲提高 8%\n+207 Accuracy Rating\n+143 最大生命\n+2 Level of all Melee Skills\n+15% 火焰抗性\n+39% 的 护甲 也套用于 元素伤害"
-    },
-    {
       "name": "猎首",
       "originalName": "Headhunter",
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
       "rarity": 3,
       "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 2 [Charm] Slots\n+50 最大生命\n+28 力量\n+28 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒"
-    },
-    {
-      "name": "Lonely Urge (Jade Talisman)",
-      "originalName": "Lonely Urge",
-      "baseType": "Jade Talisman",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvT2ZmaGFuZC9UYWxpc21hbnMvTHVtYmVyaW5nVGFsaXNtYW4iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75c7ed525d/LumberingTalisman.png",
-      "rarity": 2,
-      "desc": "(符文) Rare or Unique Enemies提高 50%\n(符文) Elements\n(符文) Bonded: +1 Level of all [Attack] Skills\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n[Physical] Damage提高 161%\n附加 33 - 58 物理伤害\n元素伤害 with Attacks提高 138%\n[Attack] Speed提高 22%\n+5 Level of all [Attack] Skills"
     }
   ],
   "skills": [

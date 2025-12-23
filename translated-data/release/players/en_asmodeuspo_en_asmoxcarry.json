@@ -13,7 +13,7 @@
       "baseType": "Prismatic Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
-      "desc": "(基底) +7% all Elemental [Resistances]\n[Lightning] Damage提高 27%\n物品稀有度提高 16%\n+38% 火焰抗性\n+31% 冰霜抗性\n+20% 混沌抗性"
+      "desc": "(基底) +7% all Elemental [Resistances]\n[Lightning] Damage提高 27%\n物品稀有度提高 16%\n+38% 火焰抗性\n+31% 冰霜抗性\n+24% 混沌抗性"
     },
     {
       "name": "暴风之语",
@@ -29,7 +29,7 @@
       "baseType": "Sacrificial Regalia",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0F0emlyaXNTcGxlbmRvdXIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/27da3616c7/AtzirisSplendour.png",
       "rarity": 3,
-      "desc": "(附魔) +34 最大生命\n(符文) Hits against you have Critical Damage Bonus降低 120%\n(符文) +10% all Elemental [Resistances]\n(符文) +11% 混沌抗性\n(基底) +1 Level of all [Corrupted] Skill Gems\nOnly Soul Cores can be Socketed in this item\nThis item gains bonuses from Socketed Soul Cores as though it was also a Shield\nHas no Attribute Requirements\n能量护盾提高 249%\nSkills from Converted to Life Costs\n(已腐化)"
+      "desc": "(附魔) +34 最大生命\n(符文) Hits against you have Critical Damage Bonus降低 80%\n(符文) +15% all Elemental [Resistances]\n(符文) +11% 混沌抗性\n(基底) +1 Level of all [Corrupted] Skill Gems\nOnly Soul Cores can be Socketed in this item\nThis item gains bonuses from Socketed Soul Cores as though it was also a Shield\nHas no Attribute Requirements\n能量护盾提高 249%\nSkills from Converted to Life Costs\n(已腐化)"
     },
     {
       "name": "灵魂羁绊",
@@ -56,20 +56,20 @@
       "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n+91 最大生命\n物品稀有度提高 18%\n+44% 火焰抗性\n+21% 混沌抗性"
     },
     {
-      "name": "Beast Grasp (冷酷手套)",
-      "originalName": "Beast Grasp",
-      "baseType": "Grim Gloves",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDAyIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5da448ad79/GlovesInt02.png",
-      "rarity": 2,
-      "desc": "(符文) Life Cost [Efficiency]提高 25%\n+17 最大能量护盾\n能量护盾提高 59%\n+69 最大生命\nCritical Damage Bonus提高 23%\n+30% 冰霜抗性\n+29% 闪电抗性"
-    },
-    {
       "name": "Dusk Star (法术冠冕)",
       "originalName": "Dusk Star",
       "baseType": "Sorcerous Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/33248feedf/HelmetInt04.png",
       "rarity": 2,
       "desc": "(符文) Experience gain提高 2%\n(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: +10% all Elemental [Resistances]\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n能量护盾提高 75%\n物品稀有度提高 34%\n暴击率提高 33%\n+31% 冰霜抗性"
+    },
+    {
+      "name": "Kalandra's Touch",
+      "originalName": "Kalandra's Touch",
+      "baseType": "Ring",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTWlycm9yUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIiLCJkdXBsaWNhdGVkIjp0cnVlfV0/ec1c789fca/MirrorRing.png",
+      "rarity": 3,
+      "desc": "Reflects opposite Ring"
     },
     {
       "name": "赤红护身符",
@@ -104,12 +104,12 @@
       "desc": "(符文) Gain additional 晕眩门槛 equal to 28% of 最大能量护盾\n(符文) Bonded: Immobilisation buildup提高 60%\n[Spell] Damage提高 108%\n+281 最大魔力\n+5 Level of all Spell Skills\n施法速度提高 42%\nMagnitude提高 67%"
     },
     {
-      "name": "Onslaught Grip (青金戒指)",
-      "originalName": "Onslaught Grip",
-      "baseType": "Lazuli Ring",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0xhenVsaVJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/53f4255f0b/LazuliRing.png",
+      "name": "Kraken Fist (海妖之鳞手套)",
+      "originalName": "Kraken Fist",
+      "baseType": "Sirenscale Gloves",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
-      "desc": "(基底) +30 最大魔力\n[Chaos] Damage提高 16%\n+108 最大生命\n物品稀有度提高 16%\n+39% 火焰抗性\n+33% 冰霜抗性\n+25% 混沌抗性"
+      "desc": "(符文) 施法速度提高 12%\n(符文) Life Cost [Efficiency]提高 40%\n(符文) Bonded: Mana Cost Low Mana提高 32%\n能量护盾提高 78%\n附加 14 - 23 Attacks\nCritical Damage Bonus提高 31%\neffect of Socketed Items提高 60%"
     }
   ],
   "skills": [

@@ -33,11 +33,27 @@
     },
     {
       "name": "赤红护身符",
+      "originalName": "Evasive Leg",
+      "baseType": "Evasive Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 闪避值 Rating提高 24%"
+    },
+    {
+      "name": "赤红护身符",
       "originalName": "Deflective Arm",
       "baseType": "Deflective Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
       "desc": "(基底) Deflection Rating提高 8%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Guarding Arm",
+      "baseType": "Guarding Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) [Block] chance提高 10%"
     },
     {
       "name": "Viper Turn (三相戒指)",
@@ -46,6 +62,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1ByaXNtYXRpY1JpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a9bd534c46/PrismaticRing.png",
       "rarity": 2,
       "desc": "(基底) +10% all Elemental [Resistances]\n附加 15 - 26 物理伤害 to Attacks\n[Lightning] Damage提高 33%\n物品稀有度提高 18%\n+19% all Elemental [Resistances]\n+39% 闪电抗性\nLeech 5.36% of [Physical] [Attack] Damage as Mana"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Sprinters Leg",
+      "baseType": "Sprinters Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 移动速度 while Sprinting提高 9%"
     },
     {
       "name": "Glyph Charm (海玉护身符)",
@@ -77,7 +101,7 @@
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 134%\n+45% 闪电抗性\n+27% 混沌抗性\n+124 晕眩门槛"
+      "desc": "(符文) Lose 5% of 最大生命 per second while Sprinting\n(符文) 移动速度 while Sprinting提高 25%\n移动速度提高 35%\n能量护盾提高 134%\n+45% 闪电抗性\n+27% 混沌抗性\n+124 晕眩门槛"
     },
     {
       "name": "Foe Circle (蓝玉戒指)",
@@ -122,9 +146,9 @@
           "isSupport": true
         },
         {
-          "name": "闪电穿透",
-          "originalName": "Lightning Penetration",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaWdodG5pbmdQZW5ldHJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75e9801e13/LightningPenetrationSupportGem.png",
+          "name": "Rakiata's Flow",
+          "originalName": "Rakiata's Flow",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
           "isSupport": true
         }
       ]
@@ -282,9 +306,9 @@
           "isSupport": true
         },
         {
-          "name": "Rakiata's Flow",
-          "originalName": "Rakiata's Flow",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
+          "name": "闪电穿透",
+          "originalName": "Lightning Penetration",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaWdodG5pbmdQZW5ldHJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/75e9801e13/LightningPenetrationSupportGem.png",
           "isSupport": true
         }
       ]

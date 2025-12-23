@@ -40,20 +40,20 @@
       "desc": "(附魔) +12 敏捷\n(附魔) +9% all Elemental [Resistances]\n(基底) +29% 闪电抗性\n+18 智慧\n魔力回复速度提高 38%\nFreeze Buildup提高 28%\n100% of Converted to [Cold] Damage\n(已腐化)"
     },
     {
-      "name": "Maligaro's Virtuosity",
-      "originalName": "Maligaro's Virtuosity",
-      "baseType": "Fine Bracers",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
-      "rarity": 3,
-      "desc": "(符文) 施法速度提高 8%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 75%\n暴击率提高 24%\n[Attack] Speed提高 5%\n+20 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
-    },
-    {
       "name": "Hypnotic Shell (邪恶束衣)",
       "originalName": "Hypnotic Shell",
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
       "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+91 最大能量护盾\n能量护盾提高 109%\n+22 智慧\n+40% 冰霜抗性\n+34% 闪电抗性"
+    },
+    {
+      "name": "Maligaro's Virtuosity",
+      "originalName": "Maligaro's Virtuosity",
+      "baseType": "Fine Bracers",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9NYWxpZ2Fyb3NWaXJ0dW9zaXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/08f6808733/MaligarosVirtuosity.png",
+      "rarity": 3,
+      "desc": "(符文) 施法速度提高 8%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n闪避值 Rating提高 78%\n暴击率提高 27%\n[Attack] Speed提高 5%\n+12 敏捷\nYour 暴击率 cannot be Rerolled\nYour Critical Damage Bonus is 250%\n(已腐化)"
     },
     {
       "name": "破碎传承者",

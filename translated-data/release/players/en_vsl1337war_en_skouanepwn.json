@@ -56,14 +56,6 @@
       "desc": "(符文) Elements\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n附加 31 - 57 冰霜伤害\n+4.48% 暴击率\n+3 Level of all [Attack] Skills\n24% chance to gain Onslaught on Killing Hits with this Weapon"
     },
     {
-      "name": "Demon Collar (海玉护身符)",
-      "originalName": "Demon Collar",
-      "baseType": "Lapis Amulet",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvTGFwaXNBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/572eeaf30b/LapisAmulet.png",
-      "rarity": 2,
-      "desc": "(附魔) Allocates Ancient Aegis\n(基底) +11 智慧\n闪避值 Rating提高 51%\n最大能量护盾提高 56%\n+50 Spirit\n+18 全属性\n+33% 闪电抗性\n魔力回复速度提高 69%"
-    },
-    {
       "name": "神圣之火",
       "originalName": "Sacred Flame",
       "baseType": "Shrine Sceptre",
@@ -80,12 +72,20 @@
       "desc": "(基底) +28% 冰霜抗性\n附加 7 - 15 物理伤害 to Attacks\n附加 26 - 44 Attacks\n+32% 火焰抗性\n+35% 冰霜抗性\n15.5 Life Regeneration per second"
     },
     {
+      "name": "Beast Beads (帝金护身符)",
+      "originalName": "Beast Beads",
+      "baseType": "Gold Amulet",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
+      "rarity": 2,
+      "desc": "(附魔) Allocates Ancient Aegis\n(基底) 物品稀有度提高 16%\n+92 最大能量护盾\n最大能量护盾提高 56%\n+50 Spirit\n+17% all Elemental [Resistances]\n+39% 闪电抗性"
+    },
+    {
       "name": "精华收割器",
       "originalName": "Essentia Sanguis",
       "baseType": "Furtive Wraps",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9Fc3NlbnRpYVNhbmd1aXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b52adc9de8/EssentiaSanguis.png",
       "rarity": 3,
-      "desc": "(符文) [Attack] Speed提高 8%\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n能量护盾提高 62%\n附加 1 - 34 Attacks\n+16 智慧\n+32% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n能量护盾提高 62%\n附加 1 - 34 Attacks\n+16 智慧\n+32% 闪电抗性\nLife Leech is Converted to 能量护盾 Leech\n(已腐化)"
     }
   ],
   "skills": [
@@ -218,9 +218,9 @@
           "isSupport": false
         },
         {
-          "name": "从容不迫",
-          "originalName": "Deliberation",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DZXNzYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a70bb9bb3b/CessationSupportGem.png",
+          "name": "Garukhan's Resolve",
+          "originalName": "Garukhan's Resolve",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0dhcnVraGFuIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/e7ac94a66c/Garukhan.png",
           "isSupport": true
         },
         {

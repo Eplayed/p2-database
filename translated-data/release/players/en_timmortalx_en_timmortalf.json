@@ -212,6 +212,46 @@
     {
       "gems": [
         {
+          "name": "暴击时施放",
+          "originalName": "Cast on Critical",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ2FzdE9uQ3JpdE1ldGFTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d572559d02/CastOnCritMetaSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "彗星落",
+          "originalName": "Comet",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29tZXRTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/212d23c28b/CometSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "无边能量 II",
+          "originalName": "Boundless Energy II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZGRlZEltcGV0dXNTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cebc02ce93/AddedImpetusSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "激变",
+          "originalName": "Snap",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29sZFNuYXBTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3e5c8edb59/ColdSnapSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "精准暴击",
+          "originalName": "Pinpoint Critical",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QaW5wb2ludENyaXRpY2FsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9b8e57083b/PinpointCriticalSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "高效 II",
+          "originalName": "Efficiency II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
           "name": "元素异常状态时施放",
           "originalName": "Cast on Elemental Ailment",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ2FzdG9uRnJlZXplU2hvY2tJZ25pdGVNZXRhU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/00e4f6ef2c/CastonFreezeShockIgniteMetaSkillGem.png",
@@ -224,10 +264,10 @@
           "isSupport": false
         },
         {
-          "name": "激变",
-          "originalName": "Snap",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29sZFNuYXBTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3e5c8edb59/ColdSnapSkillGem.png",
-          "isSupport": false
+          "name": "Rakiata's Flow",
+          "originalName": "Rakiata's Flow",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
+          "isSupport": true
         },
         {
           "name": "精准暴击",
@@ -252,46 +292,6 @@
     {
       "gems": [
         {
-          "name": "暴击时施放",
-          "originalName": "Cast on Critical",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ2FzdE9uQ3JpdE1ldGFTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/d572559d02/CastOnCritMetaSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "彗星落",
-          "originalName": "Comet",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29tZXRTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/212d23c28b/CometSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "无边能量 II",
-          "originalName": "Boundless Energy II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZGRlZEltcGV0dXNTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cebc02ce93/AddedImpetusSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Rakiata's Flow",
-          "originalName": "Rakiata's Flow",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
-          "isSupport": true
-        },
-        {
-          "name": "精准暴击",
-          "originalName": "Pinpoint Critical",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QaW5wb2ludENyaXRpY2FsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9b8e57083b/PinpointCriticalSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "高效 II",
-          "originalName": "Efficiency II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
           "name": "魔力风暴",
           "originalName": "Mana Tempest",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTWFuYVRlbXBlc3RTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7c0dd44fc6/ManaTempestSkillGem.png",
@@ -304,9 +304,9 @@
           "isSupport": true
         },
         {
-          "name": "Morgana's Tempest",
-          "originalName": "Morgana's Tempest",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL01vcmdhbmFzVGVtcGVzdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e5072647eb/MorganasTempest.png",
+          "name": "高效 II",
+          "originalName": "Efficiency II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
           "isSupport": true
         },
         {
@@ -316,9 +316,9 @@
           "isSupport": true
         },
         {
-          "name": "高效 II",
-          "originalName": "Efficiency II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
+          "name": "快速施法 III",
+          "originalName": "Rapid Casting III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJDYXN0U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3242e80646/FasterCastSupportGem.png",
           "isSupport": true
         }
       ]

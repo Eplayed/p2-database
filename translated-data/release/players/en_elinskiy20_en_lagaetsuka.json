@@ -434,21 +434,15 @@
     {
       "gems": [
         {
-          "name": "风舞者",
-          "originalName": "Wind Dancer",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2luZERhbmNlclNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/9205945635/WindDancerSkillGem.png",
+          "name": "Alchemist's Boon",
+          "originalName": "Alchemist's Boon",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQWxjaGVtaXN0c0Jvb25Ta2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/1c9907b1ad/AlchemistsBoonSkillGem.png",
           "isSupport": false
         },
         {
           "name": "清晰 I",
           "originalName": "Clarity I",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbGFyaXR5U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b8cfb97d8c/ClaritySupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "致盲 II",
-          "originalName": "Blind II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CbGluZFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a0e77e4bc2/BlindSupportGem.png",
           "isSupport": true
         }
       ]

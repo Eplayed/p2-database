@@ -8,20 +8,12 @@
   },
   "equipment": [
     {
-      "name": "Vengeance Spiral (潜能之戒)",
-      "originalName": "Vengeance Spiral",
-      "baseType": "Unset Ring",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
-      "rarity": 2,
-      "desc": "(基底) Grants 1 additional Skill Slot\n附加 27 - 39 Attacks\n[Cold] Damage提高 26%\n+40% 火焰抗性\n+35% 闪电抗性\nLeech 5.88% of [Physical] [Attack] Damage as Mana"
-    },
-    {
       "name": "Apocalypse Visage (卡马萨冠冕)",
       "originalName": "Apocalypse Visage",
       "baseType": "Kamasan Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e18c6eb9b7/HelmetInt05.png",
       "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 139%\n+17 Accuracy Rating\n+47 最大生命\n+30 智慧\n+27% 闪电抗性\nLight Radius提高 5%"
+      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n能量护盾提高 139%\n+17 Accuracy Rating\n+47 最大生命\n+30 智慧\n+27% 闪电抗性\nLight Radius提高 5%"
     },
     {
       "name": "Corpse Mantle (漫步者外衣)",
@@ -32,28 +24,20 @@
       "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n(基底) +13% 混沌抗性\n+161 [闪避值] Rating\n+57 最大能量护盾\n能量护盾提高 42%\n+33 智慧\n+35% 冰霜抗性\n44% faster start of 能量护盾 Recharge"
     },
     {
-      "name": "Chimeric Charm (星辉护身符)",
-      "originalName": "Chimeric Charm",
+      "name": "Dire Heart (星辉护身符)",
+      "originalName": "Dire Heart",
       "baseType": "Stellar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
       "rarity": 2,
-      "desc": "(附魔) Allocates Dangerous Blossom\n(基底) +7 全属性\n+108 最大魔力\n物品稀有度提高 17%\n暴击率提高 25%\n+24 全属性\n+21% all Elemental [Resistances]\nGlobal [Defences]提高 29%"
+      "desc": "(附魔) Allocates Dangerous Blossom\n(基底) +6 全属性\n+120 最大魔力\n+3 Level of all Melee Skills\n暴击率提高 29%\n+20% all Elemental [Resistances]\nGlobal [Defences]提高 25%"
     },
     {
-      "name": "Corruption Goad (打击节杖)",
-      "originalName": "Corruption Goad",
-      "baseType": "Striking Quarterstaff",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMiIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/23459cf5a8/Warstaff02.png",
-      "rarity": 2,
-      "desc": "(符文) 附加 1 - 60 闪电伤害\n(符文) Elements\n(符文) Bonded: +2% Maximum 闪电抗性\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) [Melee] [Strike] Range with this weapon提高 16%\n[Physical] Damage提高 157%\n[Gain] 32% of Damage as Extra [Cold] Damage\n元素伤害 with Attacks提高 96%\n+3.44% 暴击率\n+5 Level of all [Attack] Skills\nGrants 5 Life per Enemy Hit"
-    },
-    {
-      "name": "Bramble Cord (重革腰带)",
-      "originalName": "Bramble Cord",
+      "name": "Woe Locket (重革腰带)",
+      "originalName": "Woe Locket",
       "baseType": "Heavy Belt",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQmFzZXR5cGVzL0JlbHQwOSIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3299e86495/Belt09.png",
       "rarity": 2,
-      "desc": "(基底) 晕眩门槛提高 30%\n(基底) Has 3 [Charm] Slots\n+168 最大生命\n[Flask] Mana Recovery rate提高 26%\n[Charm] Effect Duration提高 24%\n+33% 火焰抗性\n+21% 混沌抗性"
+      "desc": "(基底) 晕眩门槛提高 26%\n(基底) Has 2 [Charm] Slots\n+107 最大生命\n+72 最大魔力\n[Charm] Effect Duration提高 27%\n+42% 火焰抗性\n+19% 混沌抗性"
     },
     {
       "name": "公理不存",
@@ -69,23 +53,15 @@
       "baseType": "Unset Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
       "rarity": 2,
-      "desc": "(基底) Grants 1 additional Skill Slot\n附加 28 - 38 Attacks\n+165 Accuracy Rating\n+19% all Elemental [Resistances]\n+29% 闪电抗性\n魔力回复速度提高 13%"
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 28 - 38 Attacks\n+165 Accuracy Rating\n+26 智慧\n+19% all Elemental [Resistances]\n+29% 闪电抗性"
     },
     {
-      "name": "赤红护身符",
-      "originalName": "Surefooted Leg",
-      "baseType": "Surefooted Leg",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) 移动速度 Penalty from using Skills while moving降低 10%"
-    },
-    {
-      "name": "赤红护身符",
-      "originalName": "Combat Arm",
-      "baseType": "Combat Arm",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) [Attack] Speed提高 7%"
+      "name": "Bramble Spire (邪恶节杖)",
+      "originalName": "Bramble Spire",
+      "baseType": "Sinister Quarterstaff",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9XYXJTdGF2ZXMvV2Fyc3RhZmYwMyIsInciOjIsImgiOjQsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/ac756ffc0d/Warstaff03.png",
+      "rarity": 2,
+      "desc": "(符文) [Physical] Damage提高 36%\n(符文) Bonded: effect of Fully Broken 护甲提高 40%\n[Physical] Damage提高 169%\n附加 29 - 53 物理伤害\n+2.29% 暴击率\n+5 Level of all [Attack] Skills\nGrants 5 Life per Enemy Hit"
     },
     {
       "name": "Rune Trail (魅力便鞋)",
@@ -96,20 +72,12 @@
       "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 30%\n+55 [闪避值] Rating\n+24 最大能量护盾\n能量护盾提高 99%\n+22 智慧\n+36% 冰霜抗性\n21.3 Life Regeneration per second"
     },
     {
-      "name": "赤红护身符",
-      "originalName": "Restorative Leg",
-      "baseType": "Restorative Leg",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) 6% of Damage taken Recouped as Life"
-    },
-    {
-      "name": "赤红护身符",
-      "originalName": "Commanding Arm",
-      "baseType": "Commanding Arm",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) Presence Area of Effect提高 21%"
+      "name": "Victory Finger (潜能之戒)",
+      "originalName": "Victory Finger",
+      "baseType": "Unset Ring",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1Vuc2V0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/79ee559b51/UnsetRing.png",
+      "rarity": 2,
+      "desc": "(基底) Grants 1 additional Skill Slot\n附加 27 - 40 Attacks\n[Cold] Damage提高 36%\n+33 力量\n+37% 冰霜抗性\n+28% 闪电抗性"
     }
   ],
   "skills": [
@@ -356,46 +324,6 @@
     {
       "gems": [
         {
-          "name": "闪现打击",
-          "originalName": "Flicker Strike",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRmxpY2tlclN0cmlrZVRlbGVwb3J0U2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d82d8f10cb/FlickerStrikeTeleportSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "先祖召唤 II",
-          "originalName": "Ancestral Call II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BbmNlc3RyYWxDYWxsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/606b287fa7/AncestralCallSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "苦寒之意",
-          "originalName": "Embitter",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbWJpdHRlclN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/71251eac93/EmbitterSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "近战 II",
-          "originalName": "Close Combat II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbG9zZUNvbWJhdFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8a1b540798/CloseCombatSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "快速攻击 II",
-          "originalName": "Rapid Attacks II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJBdHRhY2tTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/1824662136/FasterAttackSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "元素军械 II",
-          "originalName": "Elemental Armament II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
           "name": "寒冰之捷",
           "originalName": "Herald of Ice",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSGVyYWxkb2ZJY2VTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4da6fadc12/HeraldofIceSkillGem.png",
@@ -436,39 +364,39 @@
     {
       "gems": [
         {
-          "name": "夏乌拉之手",
-          "originalName": "Hand of Chayula",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQWNvbHl0ZU9mQ2hheXVsYVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/c61728f6e4/AcolyteOfChayulaSkillGem.png",
+          "name": "闪现打击",
+          "originalName": "Flicker Strike",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRmxpY2tlclN0cmlrZVRlbGVwb3J0U2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d82d8f10cb/FlickerStrikeTeleportSkillGem.png",
           "isSupport": false
         },
         {
-          "name": "冰冻印记",
-          "originalName": "Freezing Mark",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRnJlZXppbmdNYXJrU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cbcf0b9c69/FreezingMarkSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "Charged Mark",
-          "originalName": "Charged Mark",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DaGFyZ2VkTWFya1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/50c6af6222/ChargedMarkSupportGem.png",
+          "name": "先祖召唤 II",
+          "originalName": "Ancestral Call II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BbmNlc3RyYWxDYWxsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/606b287fa7/AncestralCallSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "时空锁链",
-          "originalName": "Temporal Chains",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvVGVtcG9yYWxDaGFpbnNTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4ff51fb7c6/TemporalChainsSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "强效诅咒",
-          "originalName": "Heightened Curse",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DdXJzZUVmZmVjdFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/014c0f2077/CurseEffectSupportGem.png",
+          "name": "苦寒之意",
+          "originalName": "Embitter",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbWJpdHRlclN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/71251eac93/EmbitterSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "持续时间延长 II",
-          "originalName": "Prolonged Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
+          "name": "近战 II",
+          "originalName": "Close Combat II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbG9zZUNvbWJhdFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8a1b540798/CloseCombatSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "快速攻击 II",
+          "originalName": "Rapid Attacks II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9GYXN0ZXJBdHRhY2tTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/1824662136/FasterAttackSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "元素军械 II",
+          "originalName": "Elemental Armament II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
           "isSupport": true
         }
       ]
@@ -516,27 +444,39 @@
     {
       "gems": [
         {
-          "name": "幽灵舞步",
-          "originalName": "Ghost Dance",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvR2hvc3REYW5jZVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5ac9e78c5e/GhostDanceSkillGem.png",
+          "name": "先祖战吼",
+          "originalName": "Ancestral Cry",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2FycmlvckFuY2VzdHJhbENyeVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/f105b7e7dc/WarriorAncestralCrySkillGem.png",
           "isSupport": false
         },
         {
-          "name": "持续时间压缩 II",
-          "originalName": "Compressed Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MZXNzRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5d61c1a8eb/LessDurationSupportGem.png",
+          "name": "持续时间延长 II",
+          "originalName": "Prolonged Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "吞灵 I",
-          "originalName": "Cannibalism I",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DYW5uaWJhbGlzbVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/927e914014/CannibalismSupportGem.png",
+          "name": "范围扩大 II",
+          "originalName": "Magnified Area II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "精准 I",
-          "originalName": "Precision I",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QcmVjaXNpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/9739e056ca/PrecisionSupportGem.png",
+          "name": "近战 II",
+          "originalName": "Close Combat II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbG9zZUNvbWJhdFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8a1b540798/CloseCombatSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "元素军械 II",
+          "originalName": "Elemental Armament II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "遍地荆棘",
+          "originalName": "Brambleslam",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CcmlhcnBhdGNoU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/87a56a5cd5/BriarpatchSupportGem.png",
           "isSupport": true
         }
       ]
@@ -565,6 +505,34 @@
           "name": "残片效能 I",
           "originalName": "Remnant Potency I",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnRlcmx1ZGVTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a06605b719/InterludeSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
+          "name": "幽灵舞步",
+          "originalName": "Ghost Dance",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvR2hvc3REYW5jZVNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5ac9e78c5e/GhostDanceSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "持续时间压缩 II",
+          "originalName": "Compressed Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MZXNzRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5d61c1a8eb/LessDurationSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "吞灵 I",
+          "originalName": "Cannibalism I",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DYW5uaWJhbGlzbVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/927e914014/CannibalismSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "精准 I",
+          "originalName": "Precision I",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QcmVjaXNpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/9739e056ca/PrecisionSupportGem.png",
           "isSupport": true
         }
       ]

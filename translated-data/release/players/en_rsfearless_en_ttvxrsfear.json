@@ -344,27 +344,27 @@
           "isSupport": false
         },
         {
-          "name": "电弧",
-          "originalName": "Arc",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQXJjU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9ef31ce4c4/ArcSkillGem.png",
-          "isSupport": false
-        },
-        {
           "name": "无边能量 II",
           "originalName": "Boundless Energy II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZGRlZEltcGV0dXNTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/cebc02ce93/AddedImpetusSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "Rakiata's Flow",
-          "originalName": "Rakiata's Flow",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
+          "name": "范围集中",
+          "originalName": "Concentrated Area",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25jZW50cmF0ZWRFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b2b4865296/ConcentratedEffectSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "从容不迫",
-          "originalName": "Deliberation",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DZXNzYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a70bb9bb3b/CessationSupportGem.png",
+          "name": "元素集中",
+          "originalName": "Elemental Focus",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbGVtZW50YWxGb2N1c1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/0719960753/ElementalFocusSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Tul's Stillness",
+          "originalName": "Tul's Stillness",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0xpbmVhZ2VUdWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c1383467e3/LineageTul.png",
           "isSupport": true
         }
       ]

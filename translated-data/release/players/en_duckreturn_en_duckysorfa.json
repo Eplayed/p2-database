@@ -40,14 +40,6 @@
       "desc": "(附魔) Allocates Split Shot\n(基底) 物品稀有度提高 14%\n+3 Level of all Spell Skills\n暴击率提高 25%\n+22% 闪电抗性\nGlobal [Defences]提高 33%"
     },
     {
-      "name": "Apocalypse Weaver (神圣长杖)",
-      "originalName": "Apocalypse Weaver",
-      "baseType": "Sanctified Staff",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
-      "rarity": 2,
-      "desc": "(符文) [Spell] Damage提高 30%\n(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Break Critical Hit with Spells equal to 12% of 物理伤害 dealt\n[Gain] 46% of Damage as Extra [Cold] Damage\n+327 最大魔力\n+8 Level of all Cold Spell Skills\n施法速度提高 48%\n魔力回复速度提高 92%"
-    },
-    {
       "name": "Havoc Spell (塔萨里奥法器)",
       "originalName": "Havoc Spell",
       "baseType": "Tasalian Focus",
@@ -62,6 +54,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/e1c49a9d6d/BootsInt04.png",
       "rarity": 2,
       "desc": "(符文) +14% 冰霜抗性\n(符文) Mana Cost [Efficiency] if you haven't Dodge Rolled [Recently]提高 15%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n+114 最大魔力\n+38% 火焰抗性\n+45% 冰霜抗性\n+35% 闪电抗性\n(已腐化)"
+    },
+    {
+      "name": "Entropy Weaver (咆哮长杖)",
+      "originalName": "Entropy Weaver",
+      "baseType": "Roaring Staff",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
+      "rarity": 2,
+      "desc": "(符文) [Spell] Damage提高 30%\n(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Break Critical Hit with Spells equal to 12% of 物理伤害 dealt\n[Gain] 66% of Damage as Extra [Cold] Damage\n+347 最大魔力\n+8 Level of all Cold Spell Skills\n施法速度提高 38%\nMana Cost [Efficiency]提高 29%"
     },
     {
       "name": "Maligaro's Virtuosity",
@@ -93,7 +93,7 @@
       "baseType": "Ancestral Tiara",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Jhc2V0eXBlcy9IZWxtZXRJbnQwOCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/6e0502ce1f/HelmetInt08.png",
       "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+59 最大能量护盾\n能量护盾提高 87%\n+40% 冰霜抗性\n+40% 闪电抗性\n能量护盾 Recharge Rate提高 43%"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Cost [Efficiency]提高 12%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: [Meta] Skills have [Reservation] [Efficiency]提高 12%\n+59 最大能量护盾\n能量护盾提高 87%\n+40% 冰霜抗性\n+40% 闪电抗性\n能量护盾 Recharge Rate提高 43%\n(已腐化)"
     }
   ],
   "skills": [
@@ -232,27 +232,27 @@
           "isSupport": true
         },
         {
-          "name": "加长引线 II",
-          "originalName": "Long Fuse II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Mb25nRnVzZVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a8c1fd3141/LongFuseSupportGem.png",
-          "isSupport": true
-        },
-        {
           "name": "冷却回复 II",
           "originalName": "Cooldown Recovery II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db29sZG93blJlZHVjdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/aeed090552/CooldownReductionSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "冰霜专精",
-          "originalName": "Cold Mastery",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db2xkTWFzdGVyeVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/5b94287aed/ColdMasterySupportGem.png",
+          "name": "冗余 II",
+          "originalName": "Overabundance II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZUxpbWl0U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/504067e164/IncreaseLimitSupportGem.png",
           "isSupport": true
         },
         {
-          "name": "高效 II",
-          "originalName": "Efficiency II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
+          "name": "施法回响",
+          "originalName": "Spell Echo",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9TcGVsbEVjaG9TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/78a72826b3/SpellEchoSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "范围扩大 II",
+          "originalName": "Magnified Area II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
           "isSupport": true
         }
       ]
@@ -300,6 +300,40 @@
     {
       "gems": [
         {
+          "name": "Navira, the Last Mirage",
+          "originalName": "Navira, the Last Mirage",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "奉命 III",
+          "originalName": "Bidding III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CaWRkaW5nU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83a1f192fa/BiddingSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "冰霜专精",
+          "originalName": "Cold Mastery",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db2xkTWFzdGVyeVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/5b94287aed/ColdMasterySupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "持续时间延长 II",
+          "originalName": "Prolonged Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Kurgal's Leash",
+          "originalName": "Kurgal's Leash",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0FieXNzS3VyZ2FsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/4b6ee03a64/AbyssKurgal.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
           "name": "汲取元素",
           "originalName": "Siphon Elements",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvU2lwaG9uRWxlbWVudHNTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/1c7b480be8/SiphonElementsSkillGem.png",
@@ -327,34 +361,6 @@
           "name": "清晰 II",
           "originalName": "Clarity II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbGFyaXR5U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/b8cfb97d8c/ClaritySupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "Navira, the Last Mirage",
-          "originalName": "Navira, the Last Mirage",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "奉命 III",
-          "originalName": "Bidding III",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CaWRkaW5nU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/83a1f192fa/BiddingSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "冰霜专精",
-          "originalName": "Cold Mastery",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db2xkTWFzdGVyeVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/5b94287aed/ColdMasterySupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "持续时间延长 II",
-          "originalName": "Prolonged Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
           "isSupport": true
         }
       ]
@@ -440,8 +446,8 @@
     {
       "gems": [
         {
-          "name": "奉献",
-          "originalName": "Consecrate",
+          "name": "释出",
+          "originalName": "Unleash",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
           "isSupport": false
         }

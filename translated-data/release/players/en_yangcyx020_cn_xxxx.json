@@ -24,6 +24,14 @@
       "desc": "(基底) +28% 冰霜抗性\n附加 15 - 26 物理伤害 to Attacks\n+170 最大魔力\n物品稀有度提高 35%\nLeech 7.46% of [Physical] [Attack] Damage as Life\nLeech 6.54% of [Physical] [Attack] Damage as Mana"
     },
     {
+      "name": "赤红护身符",
+      "originalName": "Calm Leg",
+      "baseType": "Calm Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 魔力回复速度 while moving提高 26%"
+    },
+    {
       "name": "Lioneye's Glare",
       "originalName": "Lioneye's Glare",
       "baseType": "Heavy Bow",
@@ -92,46 +100,6 @@
     {
       "gems": [
         {
-          "name": "闪电之捷",
-          "originalName": "Herald of Thunder",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSGVyYWxkb2ZUaHVuZGVyU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/23b055fe42/HeraldofThunderSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "元素集中",
-          "originalName": "Elemental Focus",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbGVtZW50YWxGb2N1c1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/0719960753/ElementalFocusSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "致盲 II",
-          "originalName": "Blind II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CbGluZFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a0e77e4bc2/BlindSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "范围扩大 II",
-          "originalName": "Magnified Area II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "元素军械 I",
-          "originalName": "Elemental Armament I",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Oisín's Oath",
-          "originalName": "Oisín's Oath",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1dhbGtlcm9mdGhlV2lsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/411ddf8582/WalkeroftheWilds.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
           "name": "引雷针",
           "originalName": "Lightning Rod",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvUmFuZ2VyTGlnaHRuaW5nUm9kUmFpblNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/dbb4597574/RangerLightningRodRainSkillGem.png",
@@ -165,6 +133,46 @@
           "name": "召唤契约 II",
           "originalName": "Minion Pact II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CbGFua0JsdWVTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b420545308/BlankBlueSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
+          "name": "闪电之捷",
+          "originalName": "Herald of Thunder",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSGVyYWxkb2ZUaHVuZGVyU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/23b055fe42/HeraldofThunderSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "元素集中",
+          "originalName": "Elemental Focus",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbGVtZW50YWxGb2N1c1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/0719960753/ElementalFocusSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "致盲 II",
+          "originalName": "Blind II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CbGluZFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/a0e77e4bc2/BlindSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "范围扩大 II",
+          "originalName": "Magnified Area II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "元素军械 I",
+          "originalName": "Elemental Armament I",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Oisín's Oath",
+          "originalName": "Oisín's Oath",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1dhbGtlcm9mdGhlV2lsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/411ddf8582/WalkeroftheWilds.png",
           "isSupport": true
         }
       ]

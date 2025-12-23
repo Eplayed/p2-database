@@ -21,7 +21,7 @@
       "baseType": "Moulded Mitts",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
-      "desc": "(符文) 施法速度提高 8%\n(符文) Life Cost [Efficiency]提高 25%\n(符文) Magnitude of Non-Damaging Ailments you inflict提高 30%\n(符文) Bonded: Duration of Elemental [Ailments] on Enemies提高 15%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n护甲提高 95%\n暴击率提高 38%\n+21 智慧\nCritical Hits is instant\n(已腐化)"
+      "desc": "(符文) 施法速度提高 8%\n(符文) +14% 冰霜抗性\n(符文) Life Cost [Efficiency]提高 25%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n(符文) Bonded: Mana Cost Low Mana提高 20%\n护甲提高 95%\n暴击率提高 38%\n+21 智慧\nCritical Hits is instant\n(已腐化)"
     },
     {
       "name": "Dread Gyre (蓝玉戒指)",
@@ -30,6 +30,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL1NhcHBoaXJlUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/14608c24b1/SapphireRing.png",
       "rarity": 2,
       "desc": "(基底) +25% 冰霜抗性\n+112 [闪避值] Rating\n+117 最大生命\n物品稀有度提高 34%\n施法速度提高 28%\n+38% 闪电抗性"
+    },
+    {
+      "name": "Atziri's Splendour",
+      "originalName": "Atziri's Splendour",
+      "baseType": "Sacrificial Regalia",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0F0emlyaXNTcGxlbmRvdXIiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/27da3616c7/AtzirisSplendour.png",
+      "rarity": 3,
+      "desc": "(符文) 最大生命提高 15%\n(符文) +5% all Elemental [Resistances]\n(基底) +1 Level of all [Corrupted] Skill Gems\nOnly Soul Cores can be Socketed in this item\nThis item gains bonuses from Socketed Soul Cores as though it was also a Shield\nHas no Attribute Requirements\n能量护盾提高 291%\n+15% all Elemental [Resistances]\n(已腐化)"
     },
     {
       "name": "Viper Guardian (先祖冠冕)",
@@ -62,14 +70,6 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
       "desc": "(基底) +15% 混沌抗性\n+116 最大生命\n+67 最大魔力\n物品稀有度提高 16%\n+37% 冰霜抗性\n+19% 混沌抗性"
-    },
-    {
-      "name": "Apocalypse Ward (邪恶束衣)",
-      "originalName": "Apocalypse Ward",
-      "baseType": "Vile Robe",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
-      "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+30 最大能量护盾\n能量护盾提高 146%\n+34% 火焰抗性\n+39% 冰霜抗性\n+31% 闪电抗性"
     },
     {
       "name": "Loath Rosary (星辉护身符)",
@@ -311,16 +311,6 @@
           "name": "赤炼收割",
           "originalName": "Reap",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
-          "isSupport": false
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "开掘",
-          "originalName": "Unearth",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV2l0Y2hVbmVhcnRoU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e2b9b4ff2e/WitchUnearthSkillGem.png",
           "isSupport": false
         }
       ]

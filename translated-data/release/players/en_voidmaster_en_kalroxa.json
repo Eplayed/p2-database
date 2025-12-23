@@ -17,11 +17,19 @@
     },
     {
       "name": "赤红护身符",
-      "originalName": "Deflective Arm",
-      "baseType": "Deflective Arm",
+      "originalName": "Caster Arm",
+      "baseType": "Caster Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": "(基底) Deflection Rating提高 10%"
+      "desc": "(基底) 施法速度提高 10%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Sprinters Leg",
+      "baseType": "Sprinters Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 移动速度 while Sprinting提高 9%"
     },
     {
       "name": "暴风之语",
@@ -72,14 +80,6 @@
       "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 35%\n能量护盾提高 116%\n物品稀有度提高 16%\n+36% 冰霜抗性\n+65 晕眩门槛"
     },
     {
-      "name": "Corruption Jack (邪恶束衣)",
-      "originalName": "Corruption Jack",
-      "baseType": "Vile Robe",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
-      "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+77 最大能量护盾\n能量护盾提高 105%\n+39% 火焰抗性\n+34% 冰霜抗性\n+238 晕眩门槛"
-    },
-    {
       "name": "Foe Eye (金光戒指)",
       "originalName": "Foe Eye",
       "baseType": "Gold Ring",
@@ -94,6 +94,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDYiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/7df6587cac/Staff06.png",
       "rarity": 2,
       "desc": "(符文) [Gain] 10% of Damage as Extra [Lightning] Damage\n(符文) +1 Level of all Spell Skills\n(符文) Bonded: [Archon] recovery period expires 30% faster\n(符文) Bonded: Magnitude of Shock you inflict提高 30%\n[Gain] 50% of Damage as Extra [Cold] Damage\n[Spell] Damage提高 236%\n[Lightning] Damage提高 233%\n+7 Level of all Lightning Spell Skills\n暴击率 for Spells提高 94%"
+    },
+    {
+      "name": "Cataclysm Cloak (邪恶束衣)",
+      "originalName": "Cataclysm Cloak",
+      "baseType": "Vile Robe",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
+      "rarity": 2,
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 54%\n(符文) Bonded: +30 最大生命\n(符文) Bonded: +30 最大魔力\n+94 最大能量护盾\n能量护盾提高 110%\n+40% 火焰抗性\n+22% 混沌抗性\n(已腐化)"
     },
     {
       "name": "Vengeance Pole (鸣谐长杖)",
@@ -385,6 +393,12 @@
           "name": "残片效能 I",
           "originalName": "Remnant Potency I",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnRlcmx1ZGVTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a06605b719/InterludeSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Khatal's Rejuvenation",
+          "originalName": "Khatal's Rejuvenation",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL0xpbmVhZ2VLaGF0YWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1006cc6339/LineageKhatal.png",
           "isSupport": true
         }
       ]

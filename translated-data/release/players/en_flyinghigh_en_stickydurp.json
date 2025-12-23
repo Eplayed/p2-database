@@ -16,20 +16,12 @@
       "desc": "(附魔) Allocates Fast Metabolism\n(基底) 物品稀有度提高 19%\n最大能量护盾提高 42%\n+3 Level of all Spell Skills\n施法速度提高 28%\n+28% 冰霜抗性\nGlobal [Defences]提高 28%"
     },
     {
-      "name": "Pain Knuckle (紫晶戒指)",
-      "originalName": "Pain Knuckle",
-      "baseType": "Amethyst Ring",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
-      "rarity": 2,
-      "desc": "(基底) +12% 混沌抗性\n[Lightning] Damage提高 30%\n+114 最大生命\n施法速度提高 25%\n+38% 冰霜抗性\n+38% 闪电抗性"
-    },
-    {
       "name": "Storm Goad (丝克玛便鞋)",
       "originalName": "Storm Goad",
       "baseType": "Sekhema Sandals",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/0fe23f857a/BootsInt06.png",
       "rarity": 2,
-      "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+59 最大能量护盾\n+40% 火焰抗性\n+41% 冰霜抗性\n+45% 闪电抗性\n(已腐化)"
+      "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n+59 最大能量护盾\n+40% 火焰抗性\n+41% 冰霜抗性\n+45% 闪电抗性\n(已腐化)"
     },
     {
       "name": "Havoc Pole (鸣谐长杖)",
@@ -41,11 +33,27 @@
     },
     {
       "name": "赤红护身符",
-      "originalName": "Sturdy Leg",
-      "baseType": "Sturdy Leg",
+      "originalName": "Calm Leg",
+      "baseType": "Calm Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": "(基底) 晕眩门槛提高 20%"
+      "desc": "(基底) 魔力回复速度 while moving提高 21%"
+    },
+    {
+      "name": "Beast Hold (金光戒指)",
+      "originalName": "Beast Hold",
+      "baseType": "Gold Ring",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0dvbGRSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a138f2df65/GoldRing.png",
+      "rarity": 2,
+      "desc": "(基底) 物品稀有度提高 13%\n[Cold] Damage提高 30%\n[Lightning] Damage提高 30%\n施法速度提高 26%\n+15% all Elemental [Resistances]\n+34% 冰霜抗性"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Restorative Leg",
+      "baseType": "Restorative Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 9% of Damage taken Recouped as Life"
     },
     {
       "name": "赤红护身符",
@@ -54,6 +62,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
       "desc": "(基底) 施法速度提高 9%"
+    },
+    {
+      "name": "灵魂羁绊",
+      "originalName": "Soul Tether",
+      "baseType": "Long Belt",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
+      "rarity": 3,
+      "desc": "(附魔) +25% 闪电抗性\n(基底) [Charm] Effect Duration提高 15%\n(基底) Has 3 [Charm] Slots\n+58 最大能量护盾\n+28 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
     },
     {
       "name": "形单影只",
@@ -72,12 +88,12 @@
       "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 49% of Damage as Extra [Fire] Damage\n[Gain] 59% of Damage as Extra [Cold] Damage\n+5 Level of all Spell Skills\n暴击率 for Spells提高 95%\n施法速度提高 43%"
     },
     {
-      "name": "灵魂羁绊",
-      "originalName": "Soul Tether",
-      "baseType": "Long Belt",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9Tb3VsVGV0aGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/3a7bb8985a/SoulTether.png",
+      "name": "灾变的种子",
+      "originalName": "Seed of Cataclysm",
+      "baseType": "Lazuli Ring",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TZWVkT2ZDYXRhY2x5c20iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4ae8a2cc6d/SeedOfCataclysm.png",
       "rarity": 3,
-      "desc": "(附魔) +20% 冰霜抗性\n(基底) [Charm] Effect Duration提高 17%\n(基底) Has 3 [Charm] Slots\n+41 最大能量护盾\n+25 智慧\nExcess Life Recovery from Leech is applied to 能量护盾\n(已腐化)"
+      "desc": "(基底) +25 最大魔力\n暴击率 for Spells提高 62%\nCritical 法术伤害 Bonus提高 61%\n+16% 混沌抗性\nMana Cost of Skills提高 11%\n(已腐化)"
     },
     {
       "name": "Atziri's Acuity",
@@ -86,14 +102,6 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVW5pcXVlcy9BdHppcmlzQWN1aXR5IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/190d063426/AtzirisAcuity.png",
       "rarity": 3,
       "desc": "(符文) 施法速度提高 8%\n(符文) Life Cost [Efficiency]提高 25%\n(符文) Bonded: Mana Cost Low Mana提高 20%\n护甲提高 89%\n暴击率提高 53%\n+21 智慧\nCritical Hits is instant\n(已腐化)"
-    },
-    {
-      "name": "灾变的种子",
-      "originalName": "Seed of Cataclysm",
-      "baseType": "Lazuli Ring",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVW5pcXVlcy9TZWVkT2ZDYXRhY2x5c20iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/4ae8a2cc6d/SeedOfCataclysm.png",
-      "rarity": 3,
-      "desc": "(基底) +20 最大魔力\n暴击率 for Spells提高 60%\nCritical 法术伤害 Bonus提高 52%\n+17% 混沌抗性\nMana Cost of Skills提高 10%"
     },
     {
       "name": "Rapture Carapace (邪恶束衣)",

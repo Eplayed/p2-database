@@ -24,14 +24,6 @@
       "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n能量护盾提高 42%\n+37 最大魔力\n+45% 火焰抗性\n+43% 冰霜抗性\n+42% 闪电抗性\n(已腐化)"
     },
     {
-      "name": "Hyrri's Ire",
-      "originalName": "Hyrri's Ire",
-      "baseType": "Armoured Vest",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
-      "rarity": 3,
-      "desc": "(符文) +22% 混沌抗性\n(基底) Elemental Ailment Threshold提高 30%\n闪避值 Rating提高 234%\n[Gain] 20% of Damage as Extra [Cold] Damage\n+36 敏捷\n[Freeze] Duration on Enemies提高 25%\n闪避值 Rating is doubled if you have not been Hit [Recently]\n(已腐化)"
-    },
-    {
       "name": "Onslaught Twine (毁灭者之弓)",
       "originalName": "Onslaught Twine",
       "baseType": "Obliterator Bow",
@@ -40,12 +32,28 @@
       "desc": "(符文) [Gain] 13% of Damage as Extra [Chaos] Damage\n(符文) [Poison] Duration降低 25%\n(符文) Elements\n(符文) Targets can be affected by +1 of your Poisons at the same time\n(符文) Bonded: [Gain] 8% of Damage as Extra [Physical] Damage\n(符文) Bonded: [Gain] 13% of 元素伤害 as Extra 混沌伤害\n(符文) Bonded: 8% chance to gain an additional random Charge when you gain a Charge\n(基底) Projectile Range降低 50%\n[Physical] Damage提高 160%\n[Gain] 20% of Damage as Extra [Lightning] Damage\n+4.23% 暴击率\n+3 Level of all [Projectile] Skills"
     },
     {
+      "name": "Hyrri's Ire",
+      "originalName": "Hyrri's Ire",
+      "baseType": "Armoured Vest",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9VbmlxdWVzL0h5cnJpc0lyZSIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a64fc0eadd/HyrrisIre.png",
+      "rarity": 3,
+      "desc": "(符文) +22% 混沌抗性\n(基底) Elemental Ailment Threshold提高 38%\n闪避值 Rating提高 295%\n[Gain] 28% of Damage as Extra [Cold] Damage\n+35 敏捷\n[Freeze] Duration on Enemies提高 30%\n闪避值 Rating is doubled if you have not been Hit [Recently]\n(已腐化)"
+    },
+    {
       "name": "Loath Urge (捷足便鞋)",
       "originalName": "Loath Urge",
       "baseType": "Daggerfoot Shoes",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNEZXhJbnQwNCIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/c7b2a1d325/BootsDexInt04.png",
       "rarity": 2,
       "desc": "(符文) 移动速度提高 8%\n(符文) Lose 8% of 最大生命 per second while Sprinting\n(符文) 移动速度 while Sprinting提高 40%\n(符文) Bonded: 冷却回复速度提高 16%\n+48 [闪避值] Rating\n+23 最大能量护盾\n物品稀有度提高 18%\nGain Deflection Rating equal to 23% of 闪避值 Rating\neffect of Socketed Items提高 60%"
+    },
+    {
+      "name": "Blood Skewer (贯心箭袋)",
+      "originalName": "Blood Skewer",
+      "baseType": "Visceral Quiver",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
+      "rarity": 2,
+      "desc": "(基底) 暴击率 for Attacks提高 30%\n附加 4 - 63 Attacks\nDamage with Bow Skills提高 59%\n[Projectile] Speed提高 43%\n暴击率 for Attacks提高 38%"
     },
     {
       "name": "Cadiro's Gambit",
@@ -70,14 +78,6 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0JyZWFjaFJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cffe574bd0/BreachRing.png",
       "rarity": 2,
       "desc": "(基底) Maximum [Quality] is 40%\n附加 16 - 36 物理伤害 to Attacks\n附加 40 - 63 Attacks\n附加 2 - 81 Attacks\n+16% all Elemental [Resistances]\n+36% 火焰抗性"
-    },
-    {
-      "name": "Rift Flight (精工箭袋)",
-      "originalName": "Rift Flight",
-      "baseType": "Primed Quiver",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
-      "rarity": 2,
-      "desc": "(基底) [Attack] Speed提高 10%\n附加 4 - 69 Attacks\nDamage with Bow Skills提高 55%\n[Projectile] Speed提高 45%\n暴击率 for Attacks提高 38%"
     },
     {
       "name": "Soul Collar (帝金护身符)",

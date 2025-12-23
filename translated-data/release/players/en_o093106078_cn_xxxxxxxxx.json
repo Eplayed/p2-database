@@ -13,7 +13,7 @@
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +12 Spirit\n+93 最大能量护盾\n+49 Spirit\n物品稀有度提高 17%\n暴击率提高 30%"
+      "desc": "(附魔) Allocates Subterfuge Mask\n(基底) +15 Spirit\n+93 最大能量护盾\n+49 Spirit\n物品稀有度提高 17%\n暴击率提高 30%"
     },
     {
       "name": "精华收割器",
@@ -32,28 +32,28 @@
       "desc": "(符文) Experience gain提高 2%\n(符文) Bonded: +10% all Elemental [Resistances]\n能量护盾提高 134%\n+30 最大魔力\n物品稀有度提高 15%\n暴击率提高 31%\n21.9 Life Regeneration per second"
     },
     {
-      "name": "Mind Skin (滑布外衣)",
-      "originalName": "Mind Skin",
-      "baseType": "Sleek Jacket",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
-      "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+121 [闪避值] Rating\n+46 最大能量护盾\n能量护盾提高 108%\n+154 最大生命\n+35% 冰霜抗性\n+37% 闪电抗性"
+      "name": "赤红护身符",
+      "originalName": "Evasive Leg",
+      "baseType": "Evasive Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 闪避值 Rating提高 21%"
     },
     {
       "name": "赤红护身符",
-      "originalName": "Calm Leg",
-      "baseType": "Calm Leg",
+      "originalName": "Sprinters Leg",
+      "baseType": "Sprinters Leg",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": "(基底) 魔力回复速度 while moving提高 25%"
+      "desc": "(基底) 移动速度 while Sprinting提高 6%"
     },
     {
       "name": "赤红护身符",
-      "originalName": "Guarding Arm",
-      "baseType": "Guarding Arm",
+      "originalName": "Commanding Arm",
+      "baseType": "Commanding Arm",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
-      "desc": "(基底) [Block] chance提高 11%"
+      "desc": "(基底) Presence Area of Effect提高 24%"
     },
     {
       "name": "赤红护身符",
@@ -62,14 +62,6 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
       "rarity": 0,
       "desc": "(基底) [Attack] Speed提高 10%"
-    },
-    {
-      "name": "赤红护身符",
-      "originalName": "Evasive Leg",
-      "baseType": "Evasive Leg",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) 闪避值 Rating提高 27%"
     },
     {
       "name": "Blood Grasp (裂隙戒指)",
@@ -94,6 +86,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvTWlycm9yUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIiLCJkdXBsaWNhdGVkIjp0cnVlfV0/ec1c789fca/MirrorRing.png",
       "rarity": 3,
       "desc": "Reflects opposite Ring"
+    },
+    {
+      "name": "Vengeance Mantle (滑布外衣)",
+      "originalName": "Vengeance Mantle",
+      "baseType": "Sleek Jacket",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keURleEludDAyIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/31d5df47b6/BodyDexInt02.png",
+      "rarity": 2,
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+151 [闪避值] Rating\n+59 最大能量护盾\n能量护盾提高 143%\n+39% 冰霜抗性\n+33% 闪电抗性"
     },
     {
       "name": "神圣之火",
@@ -234,9 +234,9 @@
           "isSupport": true
         },
         {
-          "name": "竭力痛击",
-          "originalName": "Overextend",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9PdmVyZXh0ZW5kU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848f1bb2a1/OverextendSupportGem.png",
+          "name": "Rakiata's Flow",
+          "originalName": "Rakiata's Flow",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
           "isSupport": true
         }
       ]
@@ -314,49 +314,9 @@
           "isSupport": true
         },
         {
-          "name": "Rakiata's Flow",
-          "originalName": "Rakiata's Flow",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1Jha2lhdGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/c3f55541d3/Rakiata.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "爆破战矛",
-          "originalName": "Explosive Spear",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvUmVtb3RlTWluZVNwZWFyU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/98f7f7ec82/RemoteMineSpearSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "元素军械 II",
-          "originalName": "Elemental Armament II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "短暂引信 II",
-          "originalName": "Short Fuse II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FeHBlZGl0ZVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e884b653c5/ExpediteSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "精准暴击",
-          "originalName": "Pinpoint Critical",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9QaW5wb2ludENyaXRpY2FsU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9b8e57083b/PinpointCriticalSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "召唤契约 II",
-          "originalName": "Minion Pact II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CbGFua0JsdWVTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b420545308/BlankBlueSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Blazing Critical",
-          "originalName": "Blazing Critical",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9CbGF6aW5nQ3JpdHNTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/402e939ac2/BlazingCritsSupportGem.png",
+          "name": "竭力痛击",
+          "originalName": "Overextend",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9PdmVyZXh0ZW5kU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/848f1bb2a1/OverextendSupportGem.png",
           "isSupport": true
         }
       ]

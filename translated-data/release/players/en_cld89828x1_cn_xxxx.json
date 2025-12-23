@@ -8,6 +8,14 @@
   },
   "equipment": [
     {
+      "name": "Viper Beads (日曜护身符)",
+      "originalName": "Viper Beads",
+      "baseType": "Solar Amulet",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
+      "rarity": 2,
+      "desc": "(附魔) Allocates Lasting Trauma\n(基底) +10 Spirit\n+45 Spirit\n+16% all Elemental [Resistances]\n+26% 冰霜抗性\nGlobal [Defences]提高 36%"
+    },
+    {
       "name": "毒疫之指",
       "originalName": "Plaguefinger",
       "baseType": "Gauze Wraps",
@@ -32,14 +40,6 @@
       "desc": "(符文) +11% 混沌抗性\n移动速度提高 30%\n闪避值 Rating提高 23%\n+34% 闪电抗性\n+18% 混沌抗性\nGain Deflection Rating equal to 21% of 闪避值 Rating\n+37 晕眩门槛"
     },
     {
-      "name": "Dread Gorget (日曜护身符)",
-      "originalName": "Dread Gorget",
-      "baseType": "Solar Amulet",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
-      "rarity": 2,
-      "desc": "(附魔) Allocates Lasting Trauma\n(基底) +11 Spirit\n+48 最大能量护盾\n+46 Spirit\n物品稀有度提高 12%\n+40% 冰霜抗性\n+24% 闪电抗性\n16% of Damage taken Recouped as Life"
-    },
-    {
       "name": "Blood Twirl (紫晶戒指)",
       "originalName": "Blood Twirl",
       "baseType": "Amethyst Ring",
@@ -54,6 +54,22 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
       "rarity": 2,
       "desc": "(基底) 暴击率 for Attacks提高 21%\n(已腐化)"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Combat Arm",
+      "baseType": "Combat Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) [Attack] Speed提高 8%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Calm Leg",
+      "baseType": "Calm Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 魔力回复速度 while moving提高 27%"
     },
     {
       "name": "Chimeric Band (三相戒指)",

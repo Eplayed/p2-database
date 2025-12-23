@@ -48,12 +48,12 @@
       "desc": "(基底) +21% 闪电抗性\n附加 10 - 22 物理伤害 to Attacks\n附加 33 - 48 Attacks\n附加 2 - 84 Attacks\n+21% 火焰抗性\n+24% 闪电抗性\n+21% 混沌抗性"
     },
     {
-      "name": "赤红护身符",
-      "originalName": "Combat Arm",
-      "baseType": "Combat Arm",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) [Attack] Speed提高 7%"
+      "name": "Kraken Impaler (精工箭袋)",
+      "originalName": "Kraken Impaler",
+      "baseType": "Primed Quiver",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyUHJpbWVkIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5dd4b75a63/QuiverPrimed.png",
+      "rarity": 2,
+      "desc": "(基底) [Attack] Speed提高 9%\n附加 14 - 24 Attacks\n附加 3 - 66 Attacks\nDamage with Bow Skills提高 53%\n暴击率 for Attacks提高 38%\n[Attack] Speed提高 14%"
     },
     {
       "name": "Ghoul Fletch (寻战之弓)",
@@ -80,14 +80,6 @@
       "desc": "(附魔) +1 Maximum Frenzy Charges\n(符文) [Attack] Speed提高 8%\n(符文) Bonded: Slowing Potency of Debuffs on You降低 15%\n附加 10 - 16 物理伤害 to Attacks\n附加 26 - 44 Attacks\nCritical Damage Bonus提高 34%\n+31% 火焰抗性\n+44% 冰霜抗性\n(已腐化)"
     },
     {
-      "name": "赤红护身符",
-      "originalName": "Sturdy Leg",
-      "baseType": "Sturdy Leg",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) 晕眩门槛提高 21%"
-    },
-    {
       "name": "猎首",
       "originalName": "Headhunter",
       "baseType": "Heavy Belt",
@@ -102,14 +94,6 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvR29sZEFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7da5b5dc6e/GoldAmulet.png",
       "rarity": 2,
       "desc": "(附魔) Allocates Run and Gun\n(基底) 物品稀有度提高 17%\n最大能量护盾提高 52%\n+2 Level of all [Projectile] Skills\n+30 敏捷\n+26 智慧"
-    },
-    {
-      "name": "Miracle Brand (贯心箭袋)",
-      "originalName": "Miracle Brand",
-      "baseType": "Visceral Quiver",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9CYXNldHlwZXMvUXVpdmVyVmlzY2VyYWwiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/1c5ba2c98f/QuiverVisceral.png",
-      "rarity": 2,
-      "desc": "(基底) 暴击率 for Attacks提高 23%\n附加 10 - 14 物理伤害 to Attacks\n附加 25 - 44 Attacks\nDamage with Bow Skills提高 44%\nCritical Damage Bonus for [Attack] Damage提高 32%\n[Attack] Speed提高 15%"
     }
   ],
   "skills": [

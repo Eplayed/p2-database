@@ -13,7 +13,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "(基底) +13% 混沌抗性\n附加 21 - 35 Attacks\n+114 最大生命\n+150 最大魔力\n+31% 冰霜抗性\n+43% 闪电抗性"
+      "desc": "(基底) +13% 混沌抗性\n附加 27 - 40 Attacks\n+119 最大生命\n+151 最大魔力\n+37% 冰霜抗性\n+40% 闪电抗性"
     },
     {
       "name": "Golem Keep (神礼王冠)",
@@ -29,7 +29,7 @@
       "baseType": "Amethyst Ring",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvQmFzZXR5cGVzL0FtZXRoeXN0UmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/352427171d/AmethystRing.png",
       "rarity": 2,
-      "desc": "(基底) +12% 混沌抗性\n附加 10 - 24 物理伤害 to Attacks\n+134 最大生命\n+172 最大魔力\n+40% 火焰抗性\n+30% 闪电抗性"
+      "desc": "(基底) +12% 混沌抗性\n附加 10 - 24 物理伤害 to Attacks\n+112 最大生命\n+172 最大魔力\n+40% 火焰抗性\n+36% 闪电抗性"
     },
     {
       "name": "Beast Salvation (督军胸甲)",
@@ -56,12 +56,12 @@
       "desc": "(符文) 移动速度提高 5%\n(符文) Bonded: 冷却回复速度提高 10%\n移动速度提高 30%\n+60 最大能量护盾\n能量护盾提高 73%\n+32 智慧\n+37% 冰霜抗性"
     },
     {
-      "name": "Gale Charm (日曜护身符)",
-      "originalName": "Gale Charm",
+      "name": "Storm Noose (日曜护身符)",
+      "originalName": "Storm Noose",
       "baseType": "Solar Amulet",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU29sYXJBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/f23b75f540/SolarAmulet.png",
       "rarity": 2,
-      "desc": "(附魔) Allocates Battle Trance\n(基底) +14 Spirit\n最大生命提高 7%\n+48 Spirit\n物品稀有度提高 18%\n+22% 冰霜抗性"
+      "desc": "(附魔) Allocates Battle Trance\n(基底) +14 Spirit\n+175 最大生命\n+48 Spirit\n物品稀有度提高 18%\n+3 Level of all Melee Skills\n+30 敏捷"
     },
     {
       "name": "猎首",
@@ -268,9 +268,9 @@
           "isSupport": true
         },
         {
-          "name": "冰霜协调",
-          "originalName": "Cold Attunement",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZGRlZENvbGREYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a304f9e591/AddedColdDamageSupportGem.png",
+          "name": "冰霜专精",
+          "originalName": "Cold Mastery",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db2xkTWFzdGVyeVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/5b94287aed/ColdMasterySupportGem.png",
           "isSupport": true
         },
         {

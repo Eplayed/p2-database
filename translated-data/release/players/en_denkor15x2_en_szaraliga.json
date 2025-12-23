@@ -132,6 +132,46 @@
     {
       "gems": [
         {
+          "name": "Lunar Blessing",
+          "originalName": "Lunar Blessing",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRMdW5hckJsZXNzaW5nU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d6f8440aa6/DruidLunarBlessingSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "持续时间延长 II",
+          "originalName": "Prolonged Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "助力之风 III",
+          "originalName": "Second Wind III",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9TZWNvbmRXaW5kU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/07f74d3870/SecondWindSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "范围集中",
+          "originalName": "Concentrated Area",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25jZW50cmF0ZWRFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b2b4865296/ConcentratedEffectSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "元素军械 II",
+          "originalName": "Elemental Armament II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "元素集中",
+          "originalName": "Elemental Focus",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbGVtZW50YWxGb2N1c1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/0719960753/ElementalFocusSupportGem.png",
+          "isSupport": true
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
           "name": "寒冰之捷",
           "originalName": "Herald of Ice",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvSGVyYWxkb2ZJY2VTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/4da6fadc12/HeraldofIceSkillGem.png",
@@ -166,46 +206,6 @@
           "originalName": "Elemental Focus",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9FbGVtZW50YWxGb2N1c1N1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/0719960753/ElementalFocusSupportGem.png",
           "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "Pounce",
-          "originalName": "Pounce",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV29sZkxlYXBBdHRhY2tTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7d5766517e/WolfLeapAttackSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "Eternal Mark",
-          "originalName": "Eternal Mark",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9EYXplb25Dcml0U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3a9a902fd5/DazeonCritSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Mark for Death II",
-          "originalName": "Mark for Death II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9TaW5nbGVPdXRTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/6a5c117756/SingleOutSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "Mark of Siphoning II",
-          "originalName": "Mark of Siphoning II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9NYXJrZWRGb3JEcmFpblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8d21d38c4f/MarkedForDrainSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "冷却回复 II",
-          "originalName": "Cooldown Recovery II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db29sZG93blJlZHVjdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/aeed090552/CooldownReductionSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "冰冻印记",
-          "originalName": "Freezing Mark",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRnJlZXppbmdNYXJrU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cbcf0b9c69/FreezingMarkSkillGem.png",
-          "isSupport": false
         }
       ]
     },
@@ -252,6 +252,46 @@
     {
       "gems": [
         {
+          "name": "Pounce",
+          "originalName": "Pounce",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvV29sZkxlYXBBdHRhY2tTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/7d5766517e/WolfLeapAttackSkillGem.png",
+          "isSupport": false
+        },
+        {
+          "name": "Eternal Mark",
+          "originalName": "Eternal Mark",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9EYXplb25Dcml0U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3a9a902fd5/DazeonCritSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Ice Bite II",
+          "originalName": "Ice Bite II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JY2VCaXRlU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/9723b702bd/IceBiteSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "Mark of Siphoning II",
+          "originalName": "Mark of Siphoning II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9NYXJrZWRGb3JEcmFpblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8d21d38c4f/MarkedForDrainSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "冷却回复 II",
+          "originalName": "Cooldown Recovery II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db29sZG93blJlZHVjdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/aeed090552/CooldownReductionSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "冰冻印记",
+          "originalName": "Freezing Mark",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRnJlZXppbmdNYXJrU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/cbcf0b9c69/FreezingMarkSkillGem.png",
+          "isSupport": false
+        }
+      ]
+    },
+    {
+      "gems": [
+        {
           "name": "Cross Slash",
           "originalName": "Cross Slash",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRDcm9zc1NsYXNoU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/bdf00f20b7/DruidCrossSlashSkillGem.png",
@@ -279,68 +319,6 @@
           "name": "近战 II",
           "originalName": "Close Combat II",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9DbG9zZUNvbWJhdFN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/8a1b540798/CloseCombatSupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "Lunar Blessing",
-          "originalName": "Lunar Blessing",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvRHJ1aWRMdW5hckJsZXNzaW5nU2tpbGxHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/d6f8440aa6/DruidLunarBlessingSkillGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "持续时间延长 II",
-          "originalName": "Prolonged Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Nb3JlRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/355241f0d2/MoreDurationSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "助力之风 III",
-          "originalName": "Second Wind III",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9TZWNvbmRXaW5kU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/07f74d3870/SecondWindSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "范围集中",
-          "originalName": "Concentrated Area",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db25jZW50cmF0ZWRFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/b2b4865296/ConcentratedEffectSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "元素军械 II",
-          "originalName": "Elemental Armament II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XZWFwb25FbGVtZW50YWxEYW1hZ2VTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/bc4396d18c/WeaponElementalDamageSupportGem.png",
-          "isSupport": true
-        }
-      ]
-    },
-    {
-      "gems": [
-        {
-          "name": "Apocalypse",
-          "originalName": "Apocalypse",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
-          "isSupport": false
-        },
-        {
-          "name": "范围扩大 I",
-          "originalName": "Magnified Area I",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZWRBcmVhT2ZFZmZlY3RTdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/a6082d5155/IncreasedAreaOfEffectSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "审慎施法",
-          "originalName": "Considered Casting",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9BZGRlZENvbnNpZGVyZWRDYXN0aW5nU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/90352fb0e0/AddedConsideredCastingSupportGem.png",
-          "isSupport": true
-        },
-        {
-          "name": "精准破坏",
-          "originalName": "Controlled Destruction",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db250cm9sbGVkRGVzdHJ1Y3Rpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72ec89855b/ControlledDestructionSupportGem.png",
           "isSupport": true
         }
       ]

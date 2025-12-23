@@ -80,14 +80,6 @@
       "desc": "(基底) +28% 闪电抗性\n[Chaos] Damage提高 19%\n+119 最大生命\n物品稀有度提高 18%\n+40% 火焰抗性\n+39% 闪电抗性"
     },
     {
-      "name": "赤红护身符",
-      "originalName": "Caster Arm",
-      "baseType": "Caster Arm",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
-      "rarity": 0,
-      "desc": "(基底) 施法速度提高 7%"
-    },
-    {
       "name": "Torment Crest (典范巨盔)",
       "originalName": "Torment Crest",
       "baseType": "Paragon Greathelm",

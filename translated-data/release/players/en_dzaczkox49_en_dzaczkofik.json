@@ -8,14 +8,6 @@
   },
   "equipment": [
     {
-      "name": "Shavronne's Satchel",
-      "originalName": "Shavronne's Satchel",
-      "baseType": "Fine Belt",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9TaGF2cm9ubmVzU2F0Y2hlbCIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/03b20ba6b9/ShavronnesSatchel.png",
-      "rarity": 3,
-      "desc": "(基底) Has 3 [Charm] Slots\n(基底) Flasks gain 0.17 charges per Second\n[Flask] Life Recovery rate降低 25%\n+24 智慧\nFlask Charges gained提高 21%\nLife Recovery from Flasks also applies to 能量护盾"
-    },
-    {
       "name": "Tempest Hand (瓦尔手套)",
       "originalName": "Tempest Hand",
       "baseType": "Vaal Gloves",
@@ -78,6 +70,14 @@
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9CYXNldHlwZXMvQm9vdHNJbnQwNSIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/2f27d465e1/BootsInt05.png",
       "rarity": 2,
       "desc": "(附魔) +2% Maximum 闪电抗性\n(符文) +14% 冰霜抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n移动速度提高 35%\n能量护盾提高 63%\n+43% 火焰抗性\n+22% 冰霜抗性\n+28% 闪电抗性\n(已腐化)"
+    },
+    {
+      "name": "猎首",
+      "originalName": "Headhunter",
+      "baseType": "Heavy Belt",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVW5pcXVlcy9IZWFkaHVudGVyIiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/24accb4eec/Headhunter.png",
+      "rarity": 3,
+      "desc": "(基底) 晕眩门槛提高 20%\n(基底) Has 2 [Charm] Slots\n+37 最大生命\n+18 力量\n+30 敏捷\n当你击败 Rare 怪物, 你获得其 Modifiers 持续 60 秒\n(已腐化)"
     }
   ],
   "skills": [

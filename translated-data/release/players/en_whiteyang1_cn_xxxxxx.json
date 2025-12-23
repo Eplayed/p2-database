@@ -40,20 +40,20 @@
       "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 18%\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+61 最大能量护盾\n能量护盾提高 91%\n+141 最大魔力\n+26 智慧\n+38% 火焰抗性"
     },
     {
+      "name": "Rune Beads (碧蓝护身符)",
+      "originalName": "Rune Beads",
+      "baseType": "Azure Amulet",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvQXp1cmVBbXVsZXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/e49b170ba2/AzureAmulet.png",
+      "rarity": 2,
+      "desc": "(附魔) Allocates Crystallised Immunities\n(基底) 魔力回复速度提高 28%\n[Spell] Damage提高 26%\n+47 Spirit\n+3 Level of all Spell Skills\n+15 全属性\n魔力回复速度提高 74%"
+    },
+    {
       "name": "Rage Vise (海妖之鳞手套)",
       "originalName": "Rage Vise",
       "baseType": "Sirenscale Gloves",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvQmFzZXR5cGVzL0dsb3Zlc0ludDA2IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/472c12ee59/GlovesInt06.png",
       "rarity": 2,
       "desc": "(符文) +14% 火焰抗性\n(符文) Bonded: +10 最大生命\n(符文) Bonded: +10 最大魔力\n+43 最大能量护盾\n能量护盾提高 92%\n+34% 火焰抗性\n+34% 冰霜抗性\n+17% 混沌抗性"
-    },
-    {
-      "name": "Agony Heart (星辉护身符)",
-      "originalName": "Agony Heart",
-      "baseType": "Stellar Amulet",
-      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9CYXNldHlwZXMvU3RlbGxhckFtdWxldCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/a44db4cd4a/StellarAmulet.png",
-      "rarity": 2,
-      "desc": "(附魔) Allocates Crystallised Immunities\n(基底) +7 全属性\n[Spell] Damage提高 26%\n+208 最大魔力\n+45 Spirit\n+3 Level of all Spell Skills\n+13 智慧\n魔力回复速度提高 28%"
     },
     {
       "name": "Soul Goad (丝克玛便鞋)",
@@ -152,10 +152,10 @@
           "isSupport": false
         },
         {
-          "name": "狂野碎片 II",
-          "originalName": "Wildshards II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9XaWxkc2hhcmRzU3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/bcd3051ba7/WildshardsSupportGem.png",
-          "isSupport": true
+          "name": "激变",
+          "originalName": "Snap",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQ29sZFNuYXBTa2lsbEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/3e5c8edb59/ColdSnapSkillGem.png",
+          "isSupport": false
         },
         {
           "name": "Dialla's Desire",

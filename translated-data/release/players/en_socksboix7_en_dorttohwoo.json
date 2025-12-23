@@ -80,6 +80,14 @@
       "desc": "(基底) +28% 闪电抗性\n附加 13 - 31 物理伤害 to Attacks\n附加 2 - 67 Attacks\n+156 最大魔力\n物品稀有度提高 17%\nLeech 7.9% of [Physical] [Attack] Damage as Mana"
     },
     {
+      "name": "赤红护身符",
+      "originalName": "Surefooted Leg",
+      "baseType": "Surefooted Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 移动速度 Penalty from using Skills while moving降低 10%"
+    },
+    {
       "name": "Sorrow Nail (紫晶戒指)",
       "originalName": "Sorrow Nail",
       "baseType": "Amethyst Ring",

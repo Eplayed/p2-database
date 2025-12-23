@@ -8,6 +8,38 @@
   },
   "equipment": [
     {
+      "name": "赤红护身符",
+      "originalName": "Surefooted Leg",
+      "baseType": "Surefooted Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 移动速度 Penalty from using Skills while moving降低 10%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Decrepifying Arm",
+      "baseType": "Decrepifying Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) Magnitudes提高 16%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Caster Arm",
+      "baseType": "Caster Arm",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 施法速度提高 10%"
+    },
+    {
+      "name": "赤红护身符",
+      "originalName": "Calm Leg",
+      "baseType": "Calm Leg",
+      "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UZW1wbGVNYXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/b7f784b8f7/TempleMap.png",
+      "rarity": 0,
+      "desc": "(基底) 魔力回复速度 while moving提高 28%"
+    },
+    {
       "name": "Tempest Stride (奢华便鞋)",
       "originalName": "Tempest Stride",
       "baseType": "Luxurious Slippers",

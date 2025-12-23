@@ -61,7 +61,7 @@
       "baseType": "Roaring Staff",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvQmFzZXR5cGVzL1N0YWZmMDEiLCJ3IjoxLCJoIjo0LCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/9d50d5c541/Staff01.png",
       "rarity": 2,
-      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 56% of Damage as Extra [Fire] Damage\n[Gain] 54% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 171%\n+5 Level of all Spell Skills\n施法速度提高 51%"
+      "desc": "(符文) +1 Level of all Spell Skills\n(符文) Elements\n(符文) Bonded: 12% chance when collecting an Elemental Infusion to gain an\nadditional Elemental Infusion of the same type\n(符文) Bonded: [Archon] recovery period expires 30% faster\n[Gain] 68% of Damage as Extra [Fire] Damage\n[Gain] 62% of Damage as Extra [Lightning] Damage\n[Spell] Damage提高 193%\n+5 Level of all Spell Skills\n施法速度提高 62%"
     },
     {
       "name": "Carrion Road (麻布鞋履)",
@@ -292,15 +292,15 @@
           "isSupport": true
         },
         {
-          "name": "持续时间压缩 II",
-          "originalName": "Compressed Duration II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MZXNzRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5d61c1a8eb/LessDurationSupportGem.png",
-          "isSupport": true
-        },
-        {
           "name": "冗余 I",
           "originalName": "Overabundance I",
           "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbmNyZWFzZUxpbWl0U3VwcG9ydEdlbSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/504067e164/IncreaseLimitSupportGem.png",
+          "isSupport": true
+        },
+        {
+          "name": "持续时间压缩 II",
+          "originalName": "Compressed Duration II",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MZXNzRHVyYXRpb25TdXBwb3J0R2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/5d61c1a8eb/LessDurationSupportGem.png",
           "isSupport": true
         },
         {

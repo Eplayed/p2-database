@@ -32,12 +32,12 @@
       "desc": "(符文) +1 Item 闪避值 Rating on Equipped Helmet\n+171 [闪避值] Rating\n闪避值 Rating提高 135%\n+32 最大魔力\n+31% 火焰抗性\nGain Deflection Rating equal to 22% of 闪避值 Rating"
     },
     {
-      "name": "Wrath Jack (邪恶束衣)",
-      "originalName": "Wrath Jack",
+      "name": "Ghoul Hide (邪恶束衣)",
+      "originalName": "Ghoul Hide",
       "baseType": "Vile Robe",
       "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9CYXNldHlwZXMvQm9keUludDAzIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/72f888e8c2/BodyInt03.png",
       "rarity": 2,
-      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+74 最大能量护盾\n能量护盾提高 103%\n+33 智慧\n+35% 火焰抗性\n+33% 闪电抗性"
+      "desc": "(符文) 护甲, 闪避值 and 能量护盾提高 36%\n(符文) Bonded: +20 最大生命\n(符文) Bonded: +20 最大魔力\n+85 最大能量护盾\n能量护盾提高 101%\nAttribute Requirements降低 25%\n+33 智慧\n+33% 火焰抗性"
     },
     {
       "name": "Eagle Rosary (日曜护身符)",

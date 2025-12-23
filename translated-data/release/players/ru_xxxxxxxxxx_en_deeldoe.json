@@ -154,9 +154,9 @@
           "isSupport": true
         },
         {
-          "name": "高效 II",
-          "originalName": "Efficiency II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9JbnNwaXJhdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/744943c6f1/InspirationSupportGem.png",
+          "name": "冰霜专精",
+          "originalName": "Cold Mastery",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db2xkTWFzdGVyeVN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/5b94287aed/ColdMasterySupportGem.png",
           "isSupport": true
         }
       ]
@@ -288,25 +288,19 @@
     {
       "gems": [
         {
-          "name": "闪现",
-          "originalName": "Blink",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxpbmtSZXNlcnZhdGlvblNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/56e87c0cd5/BlinkReservationSkillGem.png",
+          "name": "释出",
+          "originalName": "Unleash",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
           "isSupport": false
-        },
-        {
-          "name": "冷却回复 II",
-          "originalName": "Cooldown Recovery II",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9Db29sZG93blJlZHVjdGlvblN1cHBvcnRHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/aeed090552/CooldownReductionSupportGem.png",
-          "isSupport": true
         }
       ]
     },
     {
       "gems": [
         {
-          "name": "释出",
-          "originalName": "Unleash",
-          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxhbmtHZW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwicmVhbG0iOiJwb2UyIn1d/250ec3ed08/BlankGem.png",
+          "name": "闪现",
+          "originalName": "Blink",
+          "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvQmxpbmtSZXNlcnZhdGlvblNraWxsR2VtIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/56e87c0cd5/BlinkReservationSkillGem.png",
           "isSupport": false
         }
       ]
