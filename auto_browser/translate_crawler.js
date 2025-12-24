@@ -1,7 +1,7 @@
-require("dotenv").config({ path: path.join(__dirname, ".env") });
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 // 加载翻译字典
 let dictBase = {},
@@ -589,24 +589,67 @@ async function runTask() {
                 i.frameType
               );
               // --- 🔴 新增：处理词缀 ---
-              // 合并所有词缀类型
-              let allMods = [];
+              // 分别处理不同类型的词缀，保持颜色标记
+              const translatedMods = {
+                implicit: [],   // 基底词缀 - #8888ff
+                explicit: [],   // 显式词缀 - #8888ff
+                rune: [],       // 符文词缀 - #0d6efd
+                enchant: [],    // 附魔词缀 - #af6025
+                corrupted: false // 腐化状态 - #e22626
+              };
 
-              // 1. 附魔 (Enchants)
-              if (i.enchantMods)
-                allMods.push(...i.enchantMods.map((m) => `(附魔) ${m}`));
-              // 2. 符文 (Runes)
-              if (i.runeMods)
-                allMods.push(...i.runeMods.map((m) => `(符文) ${m}`));
-              // 3. 基底 (Implicit)
-              if (i.implicitMods)
-                allMods.push(...i.implicitMods.map((m) => `(基底) ${m}`));
-              // 4. 显式 (Explicit)
-              if (i.explicitMods) allMods.push(...i.explicitMods);
+              // 1. 基底词缀 (Implicit)
+              if (i.implicitMods) {
+                translatedMods.implicit = i.implicitMods.map(m => 
+                  `<span style="color:#8888ff">${translateMods([m])}</span><br/>`
+                );
+              }
+
+              // 2. 显式词缀 (Explicit)
+              if (i.explicitMods) {
+                translatedMods.explicit = i.explicitMods.map(m => 
+                  `<span style="color:#8888ff">${translateMods([m])}</span><br/>`
+                );
+              }
+
+              // 3. 符文词缀 (Runes)
+              if (i.runeMods) {
+                translatedMods.rune = i.runeMods.map(m => 
+                  `<span style="color:#0d6efd">${translateMods([m])}</span><br/>`
+                );
+              }
+
+              // 4. 附魔词缀 (Enchants)
+              if (i.enchantMods) {
+                translatedMods.enchant = i.enchantMods.map(m => 
+                  `<span style="color:#af6025">${translateMods([m])}</span><br/>`
+                );
+              }
+
               // 5. 腐化状态
-              if (i.corrupted) allMods.push("(已腐化)");
-              // 调用翻译函数
-              const translatedDesc = translateMods(allMods);
+              if (i.corrupted) {
+                translatedMods.corrupted = true;
+              }
+
+              // 组合所有词缀描述
+              const descLines = [];
+              if (translatedMods.implicit.length > 0) {
+                descLines.push(...translatedMods.implicit);
+              }
+              if (translatedMods.explicit.length > 0) {
+                descLines.push(...translatedMods.explicit);
+              }
+              if (translatedMods.rune.length > 0) {
+                descLines.push(...translatedMods.rune);
+              }
+              if (translatedMods.enchant.length > 0) {
+                descLines.push(...translatedMods.enchant);
+              }
+              if (translatedMods.corrupted) {
+                descLines.push(`<span style="color:#e22626">已腐化</span>`);
+              }
+
+              const translatedDesc = descLines.join('\n');
               return {
                 slot: item.inventoryId,
                 name: translatedName,
@@ -625,8 +668,8 @@ async function runTask() {
                 return {
                   name: translatedName,
                   originalName: originalName, // 保留原英文名
-                  icon: g.itemData?.icon,
-                  isSupport: g.itemData?.support,
+                  icon: g.itemData.icon,
+                  isSupport: g.itemData.support,
                 };
               }),
             })),
