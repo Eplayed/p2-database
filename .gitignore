@@ -2,6 +2,7 @@
 node_modules
 .DS_Store
 dist
+translated-data
 .npmrc
 .cache
 package-lock.json
@@ -21,4 +22,7 @@ bin-release/
 *.ipa
 *.apk
 
+
+
 oss-config.json
+.env
