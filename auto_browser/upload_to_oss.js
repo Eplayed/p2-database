@@ -1,14 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const OSS = require('ali-oss');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 const envConfig = require('./env-config');
 
 // --- ⚙️ OSS 配置 (使用环境变量或硬编码) ---
 const OSS_CONFIG = {
-    region: process.env.OSS_REGION || 'oss-cn-hongkong',
-    accessKeyId: process.env.OSS_ACCESS_KEY_ID || '你的AccessKeyId',
-    accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET || '你的AccessKeySecret',
-    bucket: process.env.OSS_BUCKET || '你的Bucket名字'
+    region: process.env.OSS_REGION || 'oss-cn-hangzhou',
+    accessKeyId: process.env.OSS_ACCESS_KEY_ID,
+    accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET,
+    bucket: process.env.OSS_BUCKET
 };
 
 // 递归获取文件
