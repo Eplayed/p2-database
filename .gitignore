@@ -25,4 +25,4 @@ bin-release/
 
 
 oss-config.json
-.env
+auto_browser/.env
