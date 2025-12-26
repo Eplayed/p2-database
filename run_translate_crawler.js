@@ -15,6 +15,8 @@ console.log('3. 保存翻译后的数据到项目根目录');
 
 if (isDev) {
     console.log('4. 上传数据到OSS的poe2-ladders/dev目录');
+}else{
+    console.log('4. 上传数据到OSS的poe2-ladders/release目录');
 }
 
 console.log('');
@@ -25,10 +27,10 @@ async function main() {
         await runTask();
         
         // 开发环境下执行OSS上传
-        if (isDev) {
+        // if (isDev) {
             console.log('\n🚀 开始上传数据到OSS...');
             await uploadAll();
-        }
+        // }
         
         console.log('\n✅ 任务执行完成！');
         
