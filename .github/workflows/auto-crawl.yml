@@ -47,6 +47,9 @@ jobs:
           libxss1 \
           libasound2t64
           
+    - name: Increase max open files limit (prevent ulimit error)
+      run: ulimit -n 4096
+          
     - name: Create auto_browser/.env file
       run: |
         mkdir -p auto_browser
