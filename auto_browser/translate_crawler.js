@@ -315,14 +315,6 @@ async function runTask() {
       ].includes(resourceType)
     ) {
       req.abort();
-    } else if (
-      url.includes("analytics") ||
-      url.includes("tracking") ||
-      url.includes("doubleclick") ||
-      url.includes("facebook") ||
-      url.includes("google-analytics")
-    ) {
-      req.abort();
     } else {
       req.continue();
     }
@@ -603,50 +595,38 @@ async function runTask() {
               // --- 🔴 新增：处理词缀 ---
               // 分别处理不同类型的词缀，保持颜色标记
               const translatedMods = {
-                implicit: [], // 基底词缀 - #8888ff
-                explicit: [], // 显式词缀 - #8888ff
-                rune: [], // 符文词缀 - #0d6efd
-                enchant: [], // 附魔词缀 - #af6025
-                corrupted: false, // 腐化状态 - #e22626
+                implicit: [],   // 基底词缀 - #8888ff
+                explicit: [],   // 显式词缀 - #8888ff
+                rune: [],       // 符文词缀 - #0d6efd
+                enchant: [],    // 附魔词缀 - #af6025
+                corrupted: false // 腐化状态 - #e22626
               };
 
               // 1. 基底词缀 (Implicit)
               if (i.implicitMods) {
-                translatedMods.implicit = i.implicitMods.map(
-                  (m) =>
-                    `<span style="color:#8888ff">${translateMods([
-                      m,
-                    ])}</span><br/>`
+                translatedMods.implicit = i.implicitMods.map(m => 
+                  `<span style="color:#8888ff">${translateMods([m])}</span><br/>`
                 );
               }
 
               // 2. 显式词缀 (Explicit)
               if (i.explicitMods) {
-                translatedMods.explicit = i.explicitMods.map(
-                  (m) =>
-                    `<span style="color:#8888ff">${translateMods([
-                      m,
-                    ])}</span><br/>`
+                translatedMods.explicit = i.explicitMods.map(m => 
+                  `<span style="color:#8888ff">${translateMods([m])}</span><br/>`
                 );
               }
 
               // 3. 符文词缀 (Runes)
               if (i.runeMods) {
-                translatedMods.rune = i.runeMods.map(
-                  (m) =>
-                    `<span style="color:#0d6efd">${translateMods([
-                      m,
-                    ])}</span><br/>`
+                translatedMods.rune = i.runeMods.map(m => 
+                  `<span style="color:#0d6efd">${translateMods([m])}</span><br/>`
                 );
               }
 
               // 4. 附魔词缀 (Enchants)
               if (i.enchantMods) {
-                translatedMods.enchant = i.enchantMods.map(
-                  (m) =>
-                    `<span style="color:#af6025">${translateMods([
-                      m,
-                    ])}</span><br/>`
+                translatedMods.enchant = i.enchantMods.map(m => 
+                  `<span style="color:#af6025">${translateMods([m])}</span><br/>`
                 );
               }
 
@@ -673,7 +653,7 @@ async function runTask() {
                 descLines.push(`<span style="color:#e22626">已腐化</span>`);
               }
 
-              const translatedDesc = descLines.join("\n");
+              const translatedDesc = descLines.join('\n');
               return {
                 slot: item.inventoryId,
                 name: translatedName,
