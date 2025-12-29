@@ -281,7 +281,7 @@ async function runTask() {
   const browser = await puppeteer.launch({
     headless: "new",
     executablePath: CHROME_PATH || undefined,
-    protocolTimeout: 1200000, // 增加 protocolTimeout 到 600 秒
+    protocolTimeout: 2400000, // 增加 protocolTimeout 到 2400 秒
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
@@ -325,7 +325,7 @@ async function runTask() {
     console.log("1️⃣  获取职业列表...");
     await page.goto(BASE_URL, {
       waitUntil: "domcontentloaded",
-      timeout: 60000,
+      timeout: 120000,
     });
 
     try {
