@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cron:dev": "NODE_ENV=dev node run_translate_crawler.js",
-    "cron:prod": "NODE_ENV=production node run_translate_crawler.js"
+    "cron:prod": "NODE_ENV=production node run_translate_crawler.js",
+    "start": "npm run cron:prod"
   },
   "keywords": [],
   "author": "",
