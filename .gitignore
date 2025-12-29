@@ -5,7 +5,6 @@ dist
 translated-data
 .npmrc
 .cache
-package-lock.json
 
 # Build and Release Folders
 bin-debug/
