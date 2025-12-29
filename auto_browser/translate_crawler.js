@@ -281,7 +281,7 @@ async function runTask() {
   const browser = await puppeteer.launch({
     headless: "new",
     executablePath: CHROME_PATH || undefined,
-    protocolTimeout: 600000, // 增加 protocolTimeout 到 600 秒
+    protocolTimeout: 1200000, // 增加 protocolTimeout 到 600 秒
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
