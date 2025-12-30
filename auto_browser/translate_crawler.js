@@ -372,7 +372,7 @@ async function runTask() {
       try {
         await page.goto(cls.link, {
           waitUntil: "domcontentloaded",
-          timeout: 60000,
+          timeout: 120000,
         });
         await page.waitForFunction(
           () => {
@@ -448,7 +448,7 @@ async function runTask() {
         try {
           await page.goto(player.link, {
             waitUntil: "domcontentloaded",
-            timeout: 60000,
+            timeout: 120000,
           });
 
           // 等待 SVG 渲染 + 滚动到底部
