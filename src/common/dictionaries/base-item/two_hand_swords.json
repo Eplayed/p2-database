@@ -1,0 +1,86 @@
+[
+  {
+    "en": "Energy Blade",
+    "cn": "能量之刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/TwoHandSwordStormBlade.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Corroded Longsword",
+    "cn": "锈斑长剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Greatsword",
+    "cn": "钢铁巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blessed Claymore",
+    "cn": "蒙福大剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Broad Greatsword",
+    "cn": "阔刃巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rippled Greatsword",
+    "cn": "波纹巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Arced Longsword",
+    "cn": "弧刃长剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Greatsword",
+    "cn": "磐石巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Obsidian Greatsword",
+    "cn": "黑曜巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Keen Greatsword",
+    "cn": "寒芒巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancient Greatblade",
+    "cn": "上古巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flanged Greatblade",
+    "cn": "焰刃巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Regalia Longsword",
+    "cn": "君威长剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ultra Greatsword",
+    "cn": "超凡巨剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandSwords/Basetypes/2HSword13.webp",
+    "type": "base_item"
+  }
+]

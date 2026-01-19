@@ -1,0 +1,80 @@
+[
+  {
+    "en": "Crude Claw",
+    "cn": "粗制利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pict Claw",
+    "cn": "绘彩利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wolfbone Claw",
+    "cn": "狼骨利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Forked Claw",
+    "cn": "分叉利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plated Claw",
+    "cn": "护板利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Edged Claw",
+    "cn": "锋刃利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Arced Claw",
+    "cn": "弧形利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hooked Claw",
+    "cn": "钩齿利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Razorglass Claw",
+    "cn": "琉锋利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sharktooth Claw",
+    "cn": "鲨颚爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Armoured Claw",
+    "cn": "重装利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Piercing Claw",
+    "cn": "洞穿利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Talon Claw",
+    "cn": "猛禽利爪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Claws/Basetypes/Claw13.webp",
+    "type": "base_item"
+  }
+]

@@ -1,0 +1,497 @@
+[
+  {
+    "id": "s1_witch_lich_wolf",
+    "meta": {
+      "title": "女巫巫妖 群狼狂热者召唤流",
+      "author": "a 伟",
+      "class": "Lich",
+      "name": "巫妖",
+      "tags": ["清图效率高", "自动挡", "精魂机制"]
+    },
+    "intro": {
+      "desc": "利用德鲁伊的群狼吸引仇恨，配合巫妖升华天赋“灵魂破裂”实现被诅咒敌人击杀爆炸。清图极快且安全。",
+      "pros": ["清图效率S级", "生存安全", "操作轻松"],
+      "cons": ["精魂需求高(60+)", "属性需求较高(力/智)"]
+    },
+    "skills": [
+      {
+        "groupName": "精魂/光环 (核心)",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "召唤群狼",
+            "originalName": "Summon Wolf"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "时空锁链",
+            "originalName": "Temporal Chains"
+          }
+        ],
+        "note": "群狼需要60点精魂开启，时空锁链用于触发升华的诅咒爆炸效果。"
+      },
+      {
+        "groupName": "主力输出",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "召唤狂热者",
+            "originalName": "Summon Fanatic"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "召唤生物伤害",
+            "originalName": "Minion Damage"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "召唤生物速度",
+            "originalName": "Minion Speed"
+          }
+        ],
+        "note": "负责单体输出与收割。"
+      },
+      {
+        "groupName": "辅助技能",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "魔侍祭司",
+            "originalName": "Skeletal Priest"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "苦痛奉献",
+            "originalName": "Pain Offering"
+          }
+        ],
+        "note": "提供增益BUFF与回复。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [
+        {
+          "name": "灵骸之履 (Bones of Ullr)",
+          "reason": "毕业鞋子，增加保留效果，双孔可镶嵌灵核。"
+        },
+        {
+          "name": "赌神之环 (Ventor's Gamble)",
+          "reason": "可选戒指位，提供大量精魂与抗性（需Roll值好）。"
+        }
+      ],
+      "rare_priority": [
+        {
+          "slot": "主手武器 (钝钉木棒)",
+          "stats": ["双孔 (镶嵌阿兹卡帕灵核+30精魂)"]
+        },
+        {
+          "slot": "副手武器 (短杖)",
+          "stats": ["召唤生物等级", "精魂提高", "在场友军伤害"]
+        },
+        {
+          "slot": "头盔",
+          "stats": ["召唤生物技能等级 +2", "高能量护盾", "镶嵌拉克丝雕像"]
+        },
+        {
+          "slot": "胸甲",
+          "stats": ["精魂", "能量护盾", "能量护盾充能时间提前"]
+        },
+        {
+          "slot": "项链",
+          "stats": ["召唤生物等级", "精魂", "涂油：督军领袖"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "属性达标：优先堆叠力量和智力，以满足开启群狼技能的需求（需60精魂）。",
+      "装备积累：前期寻找带孔武器，尽快入手增加精魂的灵核（如阿兹卡帕灵核）。",
+      "机制启动：点出巫妖升华“灵魂破裂”后，配合时空锁链光环即可实现炸屏清图。",
+      "生存补充：通过戒指、腰带、手套补齐抗性，头盔和衣服优先找高护盾值。"
+    ]
+  },
+  {
+    "id": "s1_blood_mage_budget",
+    "meta": {
+      "title": "低造价全通血法 (Blood Mage)",
+      "author": "网络攻略",
+      "class": "Blood-Mage",
+      "name": "法师",
+      "tags": ["低造价", "全通副本", "高性价比"]
+    },
+    "intro": {
+      "desc": "全身造价不超过30D的超高性价比BD，利用血法机制输出。虽然诅咒范围大但非传统COC玩法。无需昂贵辅助宝石即可通关所有难度副本。",
+      "pros": ["造价低廉", "通关全内容", "生存优秀"],
+      "cons": ["需精细凑精魂", "装备制作繁琐"]
+    },
+    "skills": [
+      {
+        "groupName": "核心输出/诅咒",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "电球",
+            "originalName": "Spark"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "暴击时施放",
+            "originalName": "Cast on Critical Strike"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "元素要害",
+            "originalName": "Elemental Weakness"
+          }
+        ],
+        "note": "依靠血法机制输出，配合武器天赋最大化诅咒范围和持续时间。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [
+        {
+          "name": "阿兹里的护手 (Atziri's Acuity)",
+          "reason": "提供暴击几率，市场价约5-6D，性价比高。"
+        },
+        {
+          "name": "血咒师面罩 (Bloodletter's Hood)",
+          "reason": "核心机制装备，作用是节省放血术宝石（节省约4-8D成本）。"
+        }
+      ],
+      "rare_priority": [
+        {
+          "slot": "长杖 (Staff)",
+          "stats": ["后: +5 法术技能等级", "前: 150%+ 法术/物理伤害"]
+        },
+        {
+          "slot": "胸甲 (Body Armour)",
+          "stats": ["精魂 (56+)", "高能量护盾"]
+        },
+        {
+          "slot": "项链 (Amulet)",
+          "stats": ["精魂 (45+)", "项链与上衣精魂总和需达101"]
+        },
+        {
+          "slot": "戒指 (Ring)",
+          "stats": ["施法速度 (20+)", "闪电伤害", "抗性"]
+        },
+        {
+          "slot": "腰带 (Belt)",
+          "stats": ["前: 最大生命 (150+)", "后: 抗性"]
+        },
+        {
+          "slot": "鞋子 (Boots)",
+          "stats": ["移动速度 (25+)", "能量护盾", "抗性"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "长杖制作：通过深渊亵渎（左旋+亵渎）和领主预兆（阿姆拉姆词缀）制作前缀伤害。",
+      "精魂达标：确保项链和上衣的精魂总和达到101点，这是BD运转的关键。",
+      "抗性补充：通过戒指、腰带和鞋子补足抗性，鞋子推荐选用82级以上丝克玛便鞋基底。",
+      "天赋加点：重点点出武器天赋中的诅咒范围和持续时间，确保元素要害覆盖全程。"
+    ]
+  },
+  {
+    "id": "s1_ranger_crossbow_grenade",
+    "meta": {
+      "title": "游侠/亚马逊 弩箭榴弹流",
+      "author": "网络攻略",
+      "class": "Ranger",
+      "name": "游侠",
+      "tags": ["低投入", "速通剧情", "清怪效率S"]
+    },
+    "intro": {
+      "desc": "利用高爆榴弹极高的基础伤害进行开荒，1级技能堪比高等级闪电箭。虽然是延迟伤害，但习惯后清图与攻坚效率极高。",
+      "pros": ["基础伤害极高", "不依赖装备", "BOSS战爆发强"],
+      "cons": ["延迟出伤", "后期异界乏力"]
+    },
+    "skills": [
+      {
+        "groupName": "核心输出",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "高爆榴弹",
+            "originalName": "High Explosive Grenade"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "投射物伤害",
+            "originalName": "Projectile Damage"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "快速攻击",
+            "originalName": "Faster Attacks"
+          }
+        ],
+        "note": "主要清图与单体输出手段，利用高基础点伤碾压剧情。"
+      },
+      {
+        "groupName": "爆发触发",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "爆炸射击",
+            "originalName": "Explosive Shot"
+          }
+        ],
+        "note": "用于引爆榴弹，打出爆发伤害。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [],
+      "rare_priority": [
+        {
+          "slot": "武器 (十字弩)",
+          "stats": ["技能等级", "基础点伤", "攻击速度"]
+        },
+        {
+          "slot": "饰品/手套",
+          "stats": ["物理/元素点伤", "生命", "抗性"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "起号：先创建佣兵击败守门怪，进城后将十字弩和爆炸榴弹存入仓库。",
+      "转职：切换游侠/亚马逊角色，取出装备开始练级。",
+      "战斗：BOSS战先用榴弹打满眩晕条，然后连续布置榴弹，最后用爆炸射击引爆，两套带走。",
+      "后期：进入异界后若感到乏力，建议转型为追猎者毒爆流。"
+    ]
+  },
+  {
+    "id": "s1_witch_summoner_crit",
+    "meta": {
+      "title": "女巫 召唤暴击流 (精灵王)",
+      "author": "网络攻略",
+      "class": "Witch",
+      "name": "女巫",
+      "tags": ["秒杀流", "异界无敌", "体验丝滑"]
+    },
+    "intro": {
+      "desc": "瓦拉煞的门徒，通过召唤物暴击流进行输出。前期靠骷髅，后期转灵体（强化狂热者），升华后伤害质变。",
+      "pros": ["爆发极高", "操作简单", "异界强度高"],
+      "cons": ["前期缺精魂", "依赖特定灵体"]
+    },
+    "skills": [
+      {
+        "groupName": "前期输出",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "骷髅弓箭手",
+            "originalName": "Summon Skeletal Archer"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "召唤物伤害",
+            "originalName": "Minion Damage"
+          }
+        ],
+        "note": "未升华前的过渡主力。"
+      },
+      {
+        "groupName": "核心灵体",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "唤醒灵体",
+            "originalName": "Raise Spectre"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "召唤物暴击",
+            "originalName": "Minion Critical Strike"
+          }
+        ],
+        "note": "去刻蚀峡谷召唤“强化狂热者”。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [],
+      "rare_priority": [
+        {
+          "slot": "武器/头盔",
+          "stats": ["召唤物等级", "精魂上限", "召唤物伤害"]
+        },
+        {
+          "slot": "鞋子",
+          "stats": ["移动速度", "抗性"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "开局：打死守门怪后，仓库放入短杖和骷髅弓箭手供新号使用。",
+      "中期：多开精魂上限，多召唤宝宝。注意走位，让宝宝输出。",
+      "后期：获得灵体技能后，去刻蚀峡谷抓“强化狂热者”。",
+      "BOSS战：使用“凯拉里的巴雅”给BOSS上暴击弱点，配合“凯拉里之诡计”爆发。"
+    ]
+  },
+  {
+    "id": "s1_witch_blood_bone",
+    "meta": {
+      "title": "女巫 血法骨刺流",
+      "author": "网络攻略",
+      "class": "Witch",
+      "name": "女巫",
+      "tags": ["老牌强势", "全屏清怪", "无脑"]
+    },
+    "intro": {
+      "desc": "利用精华吸取配合顽疾进行传染，实现全屏清怪。对装备要求极低，主要以此作为开荒过渡。",
+      "pros": ["不吃装备", "清图范围大", "由于是老牌BD稳定性高"],
+      "cons": ["单体攻坚稍慢", "技能连招较多"]
+    },
+    "skills": [
+      {
+        "groupName": "核心输出",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "精华吸取",
+            "originalName": "Essence Drain"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "顽疾",
+            "originalName": "Contagion"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "虚空操纵",
+            "originalName": "Void Manipulation"
+          }
+        ],
+        "note": "核心连招：先放精华吸取，再用顽疾传染。"
+      },
+      {
+        "groupName": "辅助/清怪",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "风暴漩涡",
+            "originalName": "Storm Brand"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "饕餮虫群",
+            "originalName": "Devouring Swarm"
+          }
+        ],
+        "note": "辅助清怪与增伤。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [],
+      "rare_priority": [
+        {
+          "slot": "武器 (法杖/长杖)",
+          "stats": ["法术技能等级", "法术伤害", "持续伤害加成"]
+        },
+        {
+          "slot": "防具",
+          "stats": ["生命", "抗性", "能量护盾"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "技能选择：精华吸取+风暴漩涡+饕餮虫群+顽疾+尖刺风暴。",
+      "输出手法：利用顽疾将精华吸取的伤害扩散到全屏。",
+      "装备：无需特定暗金，捡地上的稀有黄装鉴定，补足抗性和血量即可平推剧情。"
+    ]
+  },
+  {
+    "id": "s1_druid_dragon_bear",
+    "meta": {
+      "title": "德鲁伊 龙熊双修秒杀流",
+      "author": "网络攻略",
+      "class": "Druid",
+      "name": "德鲁伊",
+      "tags": ["秒杀流", "双形态", "近战"]
+    },
+    "intro": {
+      "desc": "熊形态清小怪，龙形态秒BOSS。利用龙形态普攻获取暴击球，32级后伤害产生质变。",
+      "pros": ["爆发极高", "形态切换灵活", "生存不错"],
+      "cons": ["近战前期易猝死", "需要监控暴击球"]
+    },
+    "skills": [
+      {
+        "groupName": "熊形态 (清怪)",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "狂怒猛击",
+            "originalName": "Furious Slam"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "火山",
+            "originalName": "Volcano"
+          }
+        ],
+        "note": "攒够10点怒火后直接秒杀附近小兵。"
+      },
+      {
+        "groupName": "龙形态 (攻坚)",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "黏油炮弹",
+            "originalName": "Napalm Shot"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "烈风吹袭",
+            "originalName": "Tornado"
+          }
+        ],
+        "note": "用于获取暴击球和打出终结伤害。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [],
+      "rare_priority": [
+        {
+          "slot": "武器",
+          "stats": ["近战技能等级", "物理伤害", "基础点伤"]
+        },
+        {
+          "slot": "防具",
+          "stats": ["生命", "抗性"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "1-10级：如果觉得近战容易死，可以暂时用远程技能（如藤曼）过渡。",
+      "中期：拿到吞噬技能球后转为龙形态，利用龙普攻吞噬敌人保持暴击球。",
+      "32级后：流派成型，除阶段性BOSS外基本可实现秒杀。",
+      "BOSS连招：龙形态攻击 -> 快速眩晕 -> 烈风吹袭(拿球) -> 黏油炮弹(秒杀)。"
+    ]
+  }
+]

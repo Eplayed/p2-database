@@ -1,0 +1,686 @@
+[
+  {
+    "en": "Golden Wreath",
+    "cn": "金黄花环",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Demigodstriumph.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Golden Visage",
+    "cn": "金色面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/DemigodsImmortality.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rusted Greathelm",
+    "cn": "锈蚀巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Soldier Greathelm",
+    "cn": "兵卒巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wrapped Greathelm",
+    "cn": "裹布巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spired Greathelm",
+    "cn": "螺旋巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elite Greathelm",
+    "cn": "精锐巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warrior Greathelm",
+    "cn": "战士巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Commander Greathelm",
+    "cn": "军官巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fierce Greathelm",
+    "cn": "刚烈巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sentinel Greathelm",
+    "cn": "哨卫巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Goliath Greathelm",
+    "cn": "歌利亚巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Guardian Greathelm",
+    "cn": "守护者巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shabby Hood",
+    "cn": "破旧兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Felt Cap",
+    "cn": "毛毡帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lace Hood",
+    "cn": "花边兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Swathed Cap",
+    "cn": "缠丝帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hunter Hood",
+    "cn": "猎者兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Viper Cap",
+    "cn": "毒蝰帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Corsair Cap",
+    "cn": "海贼帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Leatherbound Hood",
+    "cn": "皮缚兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Velvet Cap",
+    "cn": "丝绒帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Covert Hood",
+    "cn": "匿踪兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Armoured Cap",
+    "cn": "覆甲帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Twig Circlet",
+    "cn": "细枝头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wicker Tiara",
+    "cn": "柳枝冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Beaded Circlet",
+    "cn": "珠饰头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chain Tiara",
+    "cn": "锁链冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Feathered Tiara",
+    "cn": "羽饰冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gold Circlet",
+    "cn": "烁金头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vermeil Circlet",
+    "cn": "朱砂头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jade Tiara",
+    "cn": "翠玉冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Noble Circlet",
+    "cn": "贵族头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Twilight Tiara",
+    "cn": "暮光冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Magus Tiara",
+    "cn": "术士冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Brimmed Helm",
+    "cn": "宽沿之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Guarded Helm",
+    "cn": "守护之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Visored Helm",
+    "cn": "护面之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cowled Helm",
+    "cn": "掩面之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shielded Helm",
+    "cn": "卫护之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Closed Helm",
+    "cn": "封闭之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Decorated Helm",
+    "cn": "华饰之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gallant Helm",
+    "cn": "英武之盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Crown",
+    "cn": "铁锻王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Horned Crown",
+    "cn": "犄角王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cultist Crown",
+    "cn": "密教头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Martyr Crown",
+    "cn": "英烈之冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heavy Crown",
+    "cn": "沉重王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spiritbone Crown",
+    "cn": "灵骨王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lavish Crown",
+    "cn": "奢华王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Archon Crown",
+    "cn": "执政官王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hewn Mask",
+    "cn": "凿制之面",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Face Mask",
+    "cn": "覆颜面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hooded Mask",
+    "cn": "兜帽之面",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Veiled Mask",
+    "cn": "蒙纱之面",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tribal Mask",
+    "cn": "部族之面",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Solid Mask",
+    "cn": "坚固之面",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shaded Mask",
+    "cn": "影蔽之面",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Death Mask",
+    "cn": "死神之面",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Visage",
+    "cn": "恢弘面罩",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Corroded Greathelm",
+    "cn": "腐蚀巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mercenary Greathelm",
+    "cn": "佣兵巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Homeguard Greathelm",
+    "cn": "族卫巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Greathelm",
+    "cn": "雅致巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Noble Greathelm",
+    "cn": "贵族巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rotted Hood",
+    "cn": "腐烂兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wool Cap",
+    "cn": "羊毛帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Narrow Hood",
+    "cn": "窄型兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wrapped Cap",
+    "cn": "包裹帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Deerstalker Hood",
+    "cn": "猎踪兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Druidic Circlet",
+    "cn": "德鲁伊头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Avian Tiara",
+    "cn": "飞羽冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Desert Circlet",
+    "cn": "沙漠头冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sandsworn Tiara",
+    "cn": "沙誓冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jungle Tiara",
+    "cn": "丛林冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Domed Helm",
+    "cn": "圆顶头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Engraved Helm",
+    "cn": "雕饰头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Soldier Helm",
+    "cn": "士兵头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cabalist Helm",
+    "cn": "秘法家头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gladiatoral Helm",
+    "cn": "角斗士头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mailed Crown",
+    "cn": "锁甲王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Forest Crown",
+    "cn": "森林王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Zealot Crown",
+    "cn": "狂热者王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hallowed Crown",
+    "cn": "神圣王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Inquisitor Crown",
+    "cn": "判官王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Oak Mask",
+    "cn": "欧克面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bandit Mask",
+    "cn": "盗贼面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Skulking Mask",
+    "cn": "潜行面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pariah Mask",
+    "cn": "贱民面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Avian Mask",
+    "cn": "飞羽面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warmonger Greathelm",
+    "cn": "好战者巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Masked Greathelm",
+    "cn": "蒙面巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Paragon Greathelm",
+    "cn": "典范巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Imperial Greathelm",
+    "cn": "帝国巨盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStr07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Woven Cap",
+    "cn": "编织帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Desert Cap",
+    "cn": "沙漠帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Trapper Hood",
+    "cn": "猎人兜帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Freebooter Cap",
+    "cn": "劫掠者之帽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDex07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Skycrown Tiara",
+    "cn": "天冠冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sorcerous Tiara",
+    "cn": "法术冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kamasan Tiara",
+    "cn": "卡马萨冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancestral Tiara",
+    "cn": "先祖冠冕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetInt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warded Helm",
+    "cn": "掩蔽头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cryptic Helm",
+    "cn": "神秘头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Champion Helm",
+    "cn": "勇士头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gladiatorial Helm",
+    "cn": "角斗士头盔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetStrDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Druidic Crown",
+    "cn": "德鲁伊王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Saintly Crown",
+    "cn": "圣洁王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Divine Crown",
+    "cn": "神礼王冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cryptic Crown",
+    "cn": "隐秘之冠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetIntStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Brigand Mask",
+    "cn": "驱灵面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Faridun Mask",
+    "cn": "法里顿面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Soaring Mask",
+    "cn": "翱翔面具",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grinning Mask",
+    "cn": "狞笑面罩",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Basetypes/HelmetDexInt06.webp",
+    "type": "base_item"
+  }
+]

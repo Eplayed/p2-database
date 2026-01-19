@@ -1,0 +1,890 @@
+[
+  {
+    "en": "Golden Mantle",
+    "cn": "黄金战甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/DemigodsArmour.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rusted Cuirass",
+    "cn": "锈蚀胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fur Plate",
+    "cn": "覆皮之铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Cuirass",
+    "cn": "铁锻胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Raider Plate",
+    "cn": "劫掠之铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Maraketh Cuirass",
+    "cn": "马拉克斯胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Steel Plate",
+    "cn": "冷钢之铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Full Plate",
+    "cn": "连身铠甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Cuirass",
+    "cn": "瓦尔胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Juggernaut Plate",
+    "cn": "巨灵之铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chieftain Cuirass",
+    "cn": "酋长胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Colosseum Plate",
+    "cn": "决斗之铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Champion Cuirass",
+    "cn": "冠军胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Glorious Plate",
+    "cn": "荣耀战铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Conqueror Plate",
+    "cn": "霸王战铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Abyssal Cuirass",
+    "cn": "深渊胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Leather Vest",
+    "cn": "皮革背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Quilted Vest",
+    "cn": "菱纹背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pathfinder Coat",
+    "cn": "寻路者外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shrouded Vest",
+    "cn": "蔽影背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rhoahide Coat",
+    "cn": "恐喙鸟皮外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Studded Vest",
+    "cn": "嵌饰背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Scouts Vest",
+    "cn": "斥候背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Serpentscale Coat",
+    "cn": "蛇鳞外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Corsair Vest",
+    "cn": "海贼背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Smuggler Coat",
+    "cn": "走私者外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Strider Vest",
+    "cn": "疾行者背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hardleather Coat",
+    "cn": "硬皮外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Exquisite Vest",
+    "cn": "浮华背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mail Coat",
+    "cn": "锁环外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Armoured Vest",
+    "cn": "铠装背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tattered Robe",
+    "cn": "破烂长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Feathered Robe",
+    "cn": "羽饰长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hexers Robe",
+    "cn": "魔蛊长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bone Raiment",
+    "cn": "坠饰之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Silk Robe",
+    "cn": "丝质之袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Keth Raiment",
+    "cn": "克斯之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Votive Raiment",
+    "cn": "奉愿之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Altar Robe",
+    "cn": "祭坛长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elementalist Robe",
+    "cn": "元素使长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mystic Raiment",
+    "cn": "密士之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Imperial Robe",
+    "cn": "帝国长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plated Raiment",
+    "cn": "嵌板之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Havoc Raiment",
+    "cn": "劫难之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Enlightened Robe",
+    "cn": "启迪长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Arcane Raiment",
+    "cn": "秘法之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chain Mail",
+    "cn": "环锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rogue Armour",
+    "cn": "盗贼护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vagabond Armour",
+    "cn": "漂泊者护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cloaked Mail",
+    "cn": "披风锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Explorer Armour",
+    "cn": "探索者护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Scale Mail",
+    "cn": "嵌鳞锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Knight Armour",
+    "cn": "骑士护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancestral Mail",
+    "cn": "先祖锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lamellar Mail",
+    "cn": "层叠锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gladiator Armour",
+    "cn": "角斗士护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heroic Armour",
+    "cn": "英武护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tournament Mail",
+    "cn": "演武锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex12a.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Slayer Armour",
+    "cn": "惩罚者护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pilgrim Vestments",
+    "cn": "朝圣者长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pelt Mantle",
+    "cn": "毛皮斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mail Vestments",
+    "cn": "锁子长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shaman Mantle",
+    "cn": "萨满斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ironclad Vestments",
+    "cn": "武装长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrificial Mantle",
+    "cn": "献祭斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cleric Vestments",
+    "cn": "圣徒长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tideseer Mantle",
+    "cn": "潮贤斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gilded Vestments",
+    "cn": "鎏金长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Venerated Mantle",
+    "cn": "崇圣斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Revered Vestments",
+    "cn": "崇礼长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Corvus Mantle",
+    "cn": "灵鸦斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Zenith Vestments",
+    "cn": "天顶长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hermit Garb",
+    "cn": "隐士束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Waxed Jacket",
+    "cn": "防水外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Marabout Garb",
+    "cn": "遁世束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wayfarer Jacket",
+    "cn": "远行者外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Anchorite Garb",
+    "cn": "隐士束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Scalpers Jacket",
+    "cn": "猎头者外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Scoundrel Jacket",
+    "cn": "流贼外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ascetic Garb",
+    "cn": "苦修束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Clandestine Jacket",
+    "cn": "无影外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Monastic Garb",
+    "cn": "修行束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Torment Jacket",
+    "cn": "磨难外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Devout Garb",
+    "cn": "虔心束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Assassin Garb",
+    "cn": "暗影束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Garment",
+    "cn": "华服装束",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Regalia",
+    "cn": "恢弘盛装",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrificial Regalia",
+    "cn": "Sacrificial Regalia",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Golden Plate",
+    "cn": "金耀之铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Barbarian Plate",
+    "cn": "野蛮人战铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rugged Cuirass",
+    "cn": "粗糙胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sandsworn Cuirass",
+    "cn": "沙誓胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Plate",
+    "cn": "优雅战铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heavy Plate",
+    "cn": "重型战铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Cuirass",
+    "cn": "石制胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Patchwork Vest",
+    "cn": "拼接背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hunting Coat",
+    "cn": "狩猎外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Riding Coat",
+    "cn": "骑行外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Layered Vest",
+    "cn": "分层背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Runner Vest",
+    "cn": "跑者背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lizardscale Coat",
+    "cn": "蜥鳞外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Avian Robe",
+    "cn": "飞羽长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cursespeakers Robe",
+    "cn": "诅咒术士长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Luxurious Robe",
+    "cn": "奢华长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "River Raiment",
+    "cn": "河流之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Adherents Raiment",
+    "cn": "信徒之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ceremonial Robe",
+    "cn": "仪式长袍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ring Mail",
+    "cn": "锁环甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Scoundrel Armour",
+    "cn": "恶棍护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wanderer Armour",
+    "cn": "流浪者护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mantled Mail",
+    "cn": "斗篷锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Trailblazer Armour",
+    "cn": "开拓者护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Golden Mail",
+    "cn": "黄金锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Templar Vestments",
+    "cn": "圣堂武僧长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bearskin Mantle",
+    "cn": "熊皮斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chain Vestments",
+    "cn": "链甲长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Occultist Mantle",
+    "cn": "秘术家斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plated Vestments",
+    "cn": "嵌板长衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heartcarver Mantle",
+    "cn": "刻心斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Oiled Jacket",
+    "cn": "油蜡外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Evangelist Garb",
+    "cn": "传道士束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Itinerant Jacket",
+    "cn": "流浪外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hatungo Garb",
+    "cn": "哈图纳格斯束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hawkers Jacket",
+    "cn": "小贩外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Soldier Cuirass",
+    "cn": "士兵胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ornate Plate",
+    "cn": "华丽战铠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Utzaal Cuirass",
+    "cn": "乌扎尔胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warlord Cuirass",
+    "cn": "督军胸甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStr10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Swiftstalker Coat",
+    "cn": "迅捷潜行者外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Slipstrike Vest",
+    "cn": "滑击背心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wyrmscale Coat",
+    "cn": "巨龙鳞外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Corsair Coat",
+    "cn": "海盗外套",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDex10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vile Robe",
+    "cn": "邪恶束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flowing Raiment",
+    "cn": "飘逸之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacramental Robe",
+    "cn": "圣礼束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Feathered Raiment",
+    "cn": "羽饰之衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyInt10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dastard Armour",
+    "cn": "懦夫护甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shrouded Mail",
+    "cn": "蔽影锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Death Mail",
+    "cn": "死亡锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Thane Mail",
+    "cn": "领主锁甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyStrDex08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wolfskin Mantle",
+    "cn": "狼皮斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Conjurer Mantle",
+    "cn": "咒者斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Death Mantle",
+    "cn": "死亡斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Seastorm Mantle",
+    "cn": "海洋风暴斗篷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyIntStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sleek Jacket",
+    "cn": "滑布外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rambler Jacket",
+    "cn": "漫步者外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Falconers Jacket",
+    "cn": "猎鹰师外衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Austere Garb",
+    "cn": "简朴束衣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Basetypes/BodyDexInt08.webp",
+    "type": "base_item"
+  }
+]

@@ -1,0 +1,3185 @@
+{
+  "keywords": {
+    "Mark of the Abyssal Lord": "深渊领主的印记",
+    "Corrupted Blood cannot be inflicted on you": "技能的魔力消耗的 % 转化为生命消耗",
+    "Immune to Maim": "免疫瘫痪",
+    "Cannot be Blinded": "免疫致盲",
+    "You cannot be Hindered": "你无法被缓速",
+    "Hits with Shield Skills which Heavy Stun enemies break fully Break Armour": "粉碎护甲，相当于造成物理伤害的 %",
+    "Bow Attacks fire an additional Arrow": "弓类攻击发射  支额外箭矢",
+    "Increases and Reductions to Projectile Speed also apply to Damage with Bows": "当你有图腾存在时，伤害提高 %",
+    "Loads an additional bolt": "额外装填一支弩箭",
+    "Attacks Chain an additional time": "技能的魔力消耗的 % 转化为生命消耗",
+    "On Corruption, Item gains two Enchantments": "被腐化时，物品获得两项附魔",
+    "to Dexterity": "敏捷",
+    "to Accuracy Rating": "命中值",
+    "to Accuracy Rating% increased Light Radius": "命中值照亮范围扩大 %",
+    "to Intelligence": "智慧",
+    "% to Critical Damage Bonus": "% 暴击伤害加成",
+    "% to Critical Hit Chance": "暴击几率 %",
+    "% chance to gain Onslaught on Killing Hits with this Weapon": "此武器进行造成最后一击时有 % 的几率获得猛攻",
+    "Adds  to  Cold Damage": "附加    冰霜伤害",
+    "Adds  to  Fire Damage": "附加    火焰伤害",
+    "Adds  to  Lightning Damage": "附加    闪电伤害",
+    "Adds  to  Physical Damage": "附加    物理伤害",
+    "% increased Elemental Damage with Attacks": "攻击技能的元素伤害提高 %",
+    "% increased Attack Speed": "攻击速度加快 %",
+    "Gain % of Damage as Extra Cold Damage": "混沌伤害提高 %",
+    "Gain % of Damage as Extra Fire Damage": "获得相当于伤害 % 的额外火焰伤害",
+    "Gain % of Damage as Extra Lightning Damage": "获得相当于伤害 % 的额外闪电伤害",
+    "Gain % of Damage as Extra Physical Damage": "获得相当于伤害 % 的额外物理伤害",
+    "to Strength, Dexterity or Intelligence": "力量、敏捷或智慧",
+    "Gain  Mana per Enemy Killed": "每击败一名敌人获得  点魔力",
+    "Gain  Life per Enemy Killed": "每击败一名敌人获得  点生命",
+    "Grants  Life per Enemy Hit": "每击中一名敌人获得  点生命",
+    "% reduced Attribute Requirements": "属性需求降低 %",
+    "to Level of all Attack Skills": "所有攻击技能等级",
+    "to Level of all Melee Skills": "所有近战技能等级",
+    "Leeches % of Physical Damage as Mana": "物理伤害的 % 转化为魔力偷取",
+    "Leeches % of Physical Damage as Life": "物理伤害的 % 转化为生命偷取",
+    "% increased Physical Damage": "物理伤害提高 %",
+    "% increased Physical Damage to Accuracy Rating": "物理伤害提高 % 命中值",
+    "% increased Stun Duration": "晕眩持续时间延长 %",
+    "Causes % increased Stun Buildup": "造成的晕眩积蓄值提高 %",
+    "to Strength": "力量",
+    "% chance to Pierce an Enemy": "粉碎护甲，相当于造成物理伤害的 %",
+    "% to Maximum Lightning Resistance": "% 闪电抗性上限",
+    "% increased Parried Debuff Duration": "技能的魔力消耗的 % 转化为生命消耗",
+    "% to Cold Resistance": "冰霜抗性 %",
+    "% increased Cold DamageDamage Penetrates % Cold Resistance": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Duration of Ignite, Shock and Chill on Enemies": "敌人受到的点燃、感电和冰缓持续时间延长 %",
+    "% increased Duration of Damaging Ailments on Enemies": "敌人受到伤害性异常状态的持续时间延长 %",
+    "% increased Pin Buildup": "定身积蓄值提高 %",
+    "% increased Spell Damage% increased Armour": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Spell Damage% increased maximum Energy Shield": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Spell Damage% increased Evasion Rating": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Shock Duration": "感电持续时间延长 %",
+    "% increased chance to Shock": "感电几率提高 %",
+    "% increased Attack Speed with Bows": "弓类攻击的攻击速度加快 %",
+    "% increased Accuracy Rating with Bows": "命中值",
+    "% increased Damage with Bows": "弓类伤害提高 %",
+    "% increased Critical Hit Chance for Attacks": "暴击几率 %",
+    "% chance to Blind Enemies on Hit with Attacks": "攻击击中有 % 的几率致盲敌人",
+    "% increased Critical Damage Bonus for Attack Damage": "% 暴击伤害加成",
+    "% increased Attack Damage": "攻击伤害提高 %",
+    "% increased Armour% increased Attack Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Armour% increased Thorns damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Armour% increased Totem Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased ArmourMinions deal % increased Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% to Chaos Resistance": "混沌抗性 %",
+    "% increased Chaos Damage% increased Withered Magnitude": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% to Fire Resistance": "火焰抗性 %",
+    "% increased Fire DamageDamage Penetrates % Fire Resistance": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Companions deal % increased Damage": "伙伴的伤害提高 %",
+    "Companions deal % increased DamageCompanions have % increased maximum Life": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Companions have % increased maximum Life": "伙伴的生命上限提高 %",
+    "% increased Mana Flask Charges gained": "获得的魔力药剂充能提高 %",
+    "% increased Life Flask Charges gained": "获得的生命药剂充能提高 %",
+    "% increased Flask Charges gained": "获得的药剂充能提高 %",
+    "% increased Charm Charges gained": "获得的咒符充能提高 %",
+    "% chance to Daze on Hit": "粉碎护甲，相当于造成物理伤害的 %",
+    "% chance to Poison on Hit": "击中时有 % 的几率使目标中毒",
+    "% increased Damage with Hits against Rare and Unique Enemies": "击中稀有怪和传奇怪伤害提高 %",
+    "% increased Damage while you have an active Charm": "激活咒符时，伤害提高 %",
+    "% increased Freeze Buildup with Quarterstaves": "节杖的冻结积蓄值提高 %",
+    "% increased Attack Speed with Quarterstaves": "节杖的攻击速度加快 %",
+    "% increased Damage with Quarterstaves": "节杖的伤害提高 %",
+    "Herald Skills deal % increased Damage": "捷技能造成的伤害提高 %",
+    "% increased Cooldown Recovery Rate": "攻击的消耗效能提高 %",
+    "% increased Strength": "力量提高 %",
+    "% increased Dexterity": "力量提高 %",
+    "% increased Accuracy Rating": "命中值提高 %",
+    "% increased amount of Mana Leeched": "攻击的消耗效能提高 %",
+    "% increased maximum Energy Shield% increased Attack Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased maximum Energy Shield% increased Thorns damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased maximum Energy Shield% increased Totem Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased maximum Energy ShieldMinions deal % increased Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Magnitude of Damaging Ailments you inflict with Critical Hits": "你的暴击造成的伤害性异常状态强度提高 %",
+    "% increased Effect of your Mark Skills": "你的印记技能效果提高 %",
+    "Debuffs on you expire % faster": "你身上的减益效果消失速度加快 %",
+    "% increased Magnitude of Abyssal Wasting you inflict": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% reduced Slowing Potency of Debuffs on You": "你受到的异常状态的减速强度降低 %",
+    "% increased Magnitude of Shock you inflict": "你造成的感电强度提高 %",
+    "% increased Magnitude of Ailments you inflict": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Magnitude of Poison you inflict": "你造成的中毒强度提高 %",
+    "% increased Exposure Effect": "攻击的消耗效能提高 %",
+    "% increased Global Physical DamageBreak % increased Armour": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Stun Threshold if you haven't been Stunned Recently": "若你[近期]未被晕眩，晕眩阈值提高 %",
+    "% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds": "若你在过去  秒内造成过近战击中，投射物伤害提高 %",
+    "% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Evasion Rating": "闪避值提高 %",
+    "% increased Evasion Rating% increased Attack Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Evasion Rating% increased Thorns damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Evasion Rating% increased Totem Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Evasion RatingMinions deal % increased Damage": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% to Lightning Resistance": "闪电抗性 %",
+    "% increased Lightning Damage": "闪电伤害提高 %",
+    "% increased Lightning DamageDamage Penetrates % Lightning Resistance": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Damage Penetrates % Lightning Resistance": "伤害穿透 % 的闪电抗性",
+    "Damaging Ailments deal damage % faster": "伤害型异常状态生效速度加快 %",
+    "% increased Presence Area of EffectAura Skills have % increased Magnitudes": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Projectiles have % chance for an additional Projectile when Forking": "投射物分裂时，有 % 的几率发射一个额外投射物",
+    "Projectiles have % chance to Chain an additional time from terrain": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Projectile Damage": "投射物伤害提高 %",
+    "% increased Projectile Speed": "投射物速度加快 %",
+    "% increased Hazard Damage": "危害伤害提高 %",
+    "% increased Mana Recovery from Flasks": "药剂的魔力回复提高 %",
+    "% increased Life Recovery from Flasks": "药剂的生命回复提高 %",
+    "% increased Flask Effect Duration": "药剂效果的持续时间延长 %",
+    "% increased Movement Speed": "移动速度加快 %",
+    "% increased Elemental Ailment Threshold": "异常状态阈值提高 %",
+    "% increased Elemental Damage": "元素伤害提高 %",
+    "% increased Elemental Damage% increased Magnitude of Ailments you inflict": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased chance to inflict Bleeding% increased Magnitude of Bleeding you inflict": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased chance to inflict Ailments": "造成异常状态的几率提高 %",
+    "% increased Warcry Buff Effect% increased Damage with Warcries": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Critical Damage Bonus with Spears": "战矛的暴击伤害加成提高 %",
+    "% increased Attack Speed with Spears": "战矛的攻击速度提高 %",
+    "% increased Damage with Spears": "战矛的伤害提高 %",
+    "% increased Attack Speed with Crossbows": "战弩的攻击速度提高 %",
+    "% increased Damage with Crossbows": "战弩的伤害提高 %",
+    "% increased Crossbow Reload Speed": "战弩装填速度加快 %",
+    "% increased Parry Damage": "招架伤害提高 %",
+    "% increased Stun Threshold while Parrying": "招架时的晕眩阈值提高 %",
+    "Minions have % increased maximum Lifeminion area of effect % [,]": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Blind Effect": "致盲效果提高%",
+    "% increased Intelligence": "力量提高 %",
+    "% increased Poison Duration": "中毒持续时间延长 %",
+    "% increased chance to Poison% increased Magnitude of Poison you inflict": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Charm Effect Duration": "咒符效果的持续时间延长 %",
+    "Mark Skills have % increased Skill Effect Duration": "咒印技能的技能效果持续时间提高 %",
+    "Mark Skills have % increased Use Speed": "咒印技能的施法速度加快 %",
+    "% increased bonuses gained from Equipped Quiver": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Melee Strike Range with this weapon": "此武器的近战打击范围扩大 %",
+    "% increased Damage while you have a Totem": "当你有图腾存在时，伤害提高 %",
+    "% increased Damage against Enemies with Fully Broken Armour": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Break Armour equal to % of Physical Damage dealt": "粉碎护甲，相当于造成物理伤害的 %",
+    "Attacks with this Weapon Penetrate % Cold Resistance": "该武器的攻击穿透 % 的冰霜抗性",
+    "Attacks with this Weapon Penetrate % Fire Resistance": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Attacks with this Weapon Penetrate % Lightning Resistance": "当你有图腾存在时，伤害提高 %",
+    "Adds  to  Chaos damage": "该装备附加    基础混沌伤害",
+    "% increased Cost Efficiency of Attacks": "攻击的消耗效能提高 %",
+    "Gain  Rage on Hit": "击中时获得  点怒火",
+    "% chance to cause Bleeding on Hit": "击中有 % 的几率造成流血",
+    "% increased Spirit Reservation Efficiency of Skills": "粉碎护甲，相当于造成物理伤害的 %",
+    "% of Skill Mana Costs Converted to Life Costs": "技能的魔力消耗的 % 转化为生命消耗",
+    "Melee Attack Skills have  to maximum number of Summoned Totems": "当你有图腾存在时，伤害提高 %",
+    "Fissure Skills have a % chance to create an additional Fissure": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Totem Placement speed": "技能的魔力消耗的 % 转化为生命消耗",
+    "% chance for Mace Slam Skills you use yourself to cause Aftershocks": "粉碎护甲，相当于造成物理伤害的 %",
+    "Empowered Attacks deal % increased Damage": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Physical Damage% reduced Attack Speed": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Warcry Cooldown Recovery Rate": "攻击的消耗效能提高 %",
+    "to  Physical Thorns damage": "物理荆棘伤害",
+    "to Armour": "护甲",
+    "to Strength and Dexterity": "技能的魔力消耗的 % 转化为生命消耗",
+    "to Strength and Intelligence": "粉碎护甲，相当于造成物理伤害的 %",
+    "to Dexterity and Intelligence": "攻击的消耗效能提高 %",
+    "to Stun Threshold": "晕眩阈值",
+    "to maximum Life": "最大生命",
+    "% to Maximum Cold Resistance": "% 冰霜抗性上限",
+    "% to Cold and Chaos Resistances": "攻击的消耗效能提高 %",
+    "% of Armour also applies to Chaos Damage": "攻击的消耗效能提高 %",
+    "% of Armour also applies to Elemental Damage": "% 的护甲同样作用于元素伤害",
+    "% additional Physical Damage Reduction": "% 额外物理伤害减免",
+    "% to Maximum Chaos Resistance": "% 混沌抗性上限",
+    "% to Maximum Fire Resistance": "% 火焰抗性上限",
+    "% to Fire and Chaos Resistances": "粉碎护甲，相当于造成物理伤害的 %",
+    "% to all maximum Resistances": "粉碎护甲，相当于造成物理伤害的 %",
+    "% to Lightning and Chaos Resistances": "技能的魔力消耗的 % 转化为生命消耗",
+    "% to all Maximum Elemental Resistances": "% 元素抗性上限",
+    "% increased Parried Debuff Magnitude": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Block chance": "格挡几率提高 %",
+    "% increased Armour, Evasion or Energy Shield": "护甲、闪避或能量护盾提高 %",
+    "% increased Armour": "护甲提高 %",
+    "% increased Armour to Stun Threshold": "护甲提高 % 晕眩阈值",
+    "Hits have % reduced Critical Hit Chance against you": "技能的魔力消耗的 % 转化为生命消耗",
+    "% of Damage taken Recouped as Mana": "将所受伤害的%吸纳为魔力",
+    "% of Damage taken Recouped as Life": "将所受伤害的%吸纳为生命",
+    "% increased Thorns damage": "荆棘伤害提高 %",
+    "Mana gained when you Block": "魔力在你格挡时",
+    "Your Heavy Stun buildup empties % faster": "粉碎护甲，相当于造成物理伤害的 %",
+    "% reduced effect of Curses on you": "粉碎护甲，相当于造成物理伤害的 %",
+    "Life gained when you Block": "生命在你格挡时",
+    "You take % of damage from Blocked Hits while Active Blocking% of Physical Damage taken as Lightning while Active Blocking": "技能的魔力消耗的 % 转化为生命消耗",
+    "% to maximum Block chance": "最大格挡几率 %",
+    "to Armour to Evasion Rating": "护甲 点闪避值",
+    "Hits against you have % reduced Critical Damage Bonus": "对你的击中的暴击伤害加成降低 %",
+    "% increased Armour and Evasion": "该装备的护甲与闪避提高 %",
+    "% increased Armour and Evasion to Stun Threshold": "该装备的护甲与闪避提高 % 晕眩阈值",
+    "Gain Deflection Rating equal to % of Evasion Rating": "获得相当于闪避值 % 的偏转值",
+    "to Armour to maximum Energy Shield": "护甲 最大能量护盾",
+    "% increased Armour and Energy Shield": "该装备的护甲与能量护盾提高 %",
+    "% increased Armour and Energy Shield to Stun Threshold": "该装备的护甲与能量护盾提高 % 晕眩阈值",
+    "% increased Energy Shield Recharge Rate": "能量护盾充能率提高 %",
+    "% increased Energy Shield Recharge Rate if you've Blocked Recently": "攻击的消耗效能提高 %",
+    "% to all Elemental Resistances": "所有元素抗性 %",
+    "to maximum Mana": "最大魔力",
+    "to maximum Energy Shield": "最大能量护盾",
+    "% increased Spell Physical Damage": "% 法术物理伤害提高",
+    "% increased Cold Damage": "冰霜伤害提高 %",
+    "% increased Critical Hit Chance for Spells": "法术暴击率提高 %",
+    "% increased Critical Spell Damage Bonus": "% 暴击伤害加成",
+    "Spell Skills have % increased Area of Effect": "粉碎护甲，相当于造成物理伤害的 %",
+    "Spell Skills have  to maximum number of Summoned Totems": "当你有图腾存在时，伤害提高 %",
+    "% chance for Spell Skills to fire  additional Projectiles": "技能的魔力消耗的 % 转化为生命消耗",
+    "% of Spell Mana Cost Converted to Life Cost": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Spell Damage": "法术伤害提高 %",
+    "Offering Skills have % increased Buff effect": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Energy Shield": "该装备的能量护盾提高 %",
+    "% increased Energy Shield to maximum Mana": "该装备的能量护盾提高 % 最大魔力",
+    "% increased Chaos Damage": "混沌伤害提高 %",
+    "% increased Fire Damage": "火焰伤害提高 %",
+    "% increased Mana Cost Efficiency": "魔力消耗效能提高 %",
+    "% increased Mana Regeneration Rate": "魔力再生率提高 %",
+    "% faster start of Energy Shield Recharge": "该装备的能量护盾提高 % 最大魔力",
+    "Invocated Spells deal % increased Damage": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Cast Speed": "施法速度加快 %",
+    "% chance when collecting an Elemental Infusion to gain anadditional Elemental Infusion of the same type": "攻击的消耗效能提高 %",
+    "to Level of all Spell Skills": "所有法术技能等级",
+    "to Level of all Minion Skills": "所有召唤生物技能等级",
+    "% increased Spell Damage while wielding a Melee Weapon": "当你有图腾存在时，伤害提高 %",
+    "% faster Curse Activation": "诅咒激活速度加快 %",
+    "% increased Curse Magnitudes": "诅咒强度提高 %",
+    "Enemies Hindered by you take % increased Chaos Damage": "攻击的消耗效能提高 %",
+    "Enemies Hindered by you take % increased Physical Damage": "技能的魔力消耗的 % 转化为生命消耗",
+    "Enemies Hindered by you take % increased Elemental Damage": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Freeze Buildup": "冻结积蓄值提高 %",
+    "Break Armour on Critical Hit with Spells equal to % of Physical Damage dealt": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Spell Damage to maximum Mana": "法术伤害提高 % 最大魔力",
+    "% increased Spell DamageMinions deal % increased Damage": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Break % increased Armour": "粉碎的护甲提高 %",
+    "% increased Cast Speed for each different NonInstant Spell you've Cast Recently": "攻击的消耗效能提高 %",
+    "% increased Cast Speed while on Full Mana": "攻击的消耗效能提高 %",
+    "% increased Mana Regeneration Rate% increased Light Radius": "魔力再生率提高 %照亮范围扩大 %",
+    "% increased Magnitude of Bleeding you inflict": "你造成的流血强度提高 %",
+    "to Level of all Cold Spell Skills": "所有冰霜法术技能等级",
+    "to Level of all Chaos Spell Skills": "所有混沌法术技能等级",
+    "to Level of all Fire Spell Skills": "所有火焰法术技能等级",
+    "to Level of all Lightning Spell Skills": "所有闪电法术技能等级",
+    "to Level of all Physical Spell Skills": "所有物理法术技能等级",
+    "% increased Spell Damage with Spells that cost Life": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Cost Efficiency% of Spell Mana Cost Converted to Life Cost": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Flammability Magnitude": "易燃强度提高 %",
+    "to Evasion Rating": "点闪避值",
+    "to Evasion Rating% increased Evasion Rating": "点闪避值闪避值提高 %",
+    "to Spirit": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Reservation Efficiency of Companion Skills": "技能的魔力消耗的 % 转化为生命消耗",
+    "% reduced Ignite Duration on you": "粉碎护甲，相当于造成物理伤害的 %",
+    "% reduced Poison Duration on you": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Evasion Rating to maximum Life": "闪避值提高 % 最大生命",
+    "Life Regeneration per second": "生命每秒再生",
+    "% increased maximum Life": "生命上限提高 %",
+    "% of Physical Damage from Hits taken as Chaos Damage": "受到击中物理伤害的 % 转化为混沌伤害",
+    "% reduced Duration of Bleeding on You": "攻击的消耗效能提高 %",
+    "Prevent % of Damage from Deflected Hits": "技能的魔力消耗的 % 转化为生命消耗",
+    "to Evasion Rating to maximum Energy Shield": "点闪避值 最大能量护盾",
+    "to Evasion Rating to maximum Energy Shield% increased Evasion and Energy Shield": "点闪避值 最大能量护盾该装备的闪避与能量护盾提高 %",
+    "% of Damage is taken from Mana before Life": "攻击的消耗效能提高 %",
+    "% increased Evasion and Energy Shield": "该装备的闪避与能量护盾提高 %",
+    "% increased Evasion and Energy Shield to maximum Life": "该装备的闪避与能量护盾提高 % 最大生命",
+    "to Armour% increased Armour": "护甲护甲提高 %",
+    "% increased Armour to maximum Life": "护甲提高 % 最大生命",
+    "to Armour to Evasion Rating% increased Armour and Evasion": "护甲 点闪避值该装备的护甲与闪避提高 %",
+    "% increased Armour and Evasion to maximum Life": "该装备的护甲与闪避提高 % 最大生命",
+    "to Armour to maximum Energy Shield% increased Armour and Energy Shield": "护甲 最大能量护盾该装备的护甲与能量护盾提高 %",
+    "% increased Armour and Energy Shield to maximum Life": "该装备的护甲与能量护盾提高 % 最大生命",
+    "to maximum Energy Shield% increased Energy Shield": "最大能量护盾该装备的能量护盾提高 %",
+    "% increased Energy Shield to maximum Life": "节杖的伤害提高 %",
+    "Surpassing chance to fire an additional Arrow": "#% 滿溢機率發射額外一枚箭矢",
+    "% increased Immobilisation buildup": "攻击的消耗效能提高 %",
+    "% increased Area of Effect for Attacks": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Attack Speed% increased Attack Speed while your Companion is in your Presence": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Attack SpeedCompanions have % increased Attack Speed": "粉碎护甲，相当于造成物理伤害的 %",
+    "Companions deal % increased Damage% increased Damage while your Companion is in your Presence": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% chance to Maim on Hit": "击中时有 % 的几率造成瘫痪",
+    "% chance to Blind Enemies on hit": "击中时有 % 的几率致盲敌人",
+    "to Level of all Projectile Skills": "所有投射物技能等级",
+    "Projectiles have % increased Critical Hit Chance against Enemies further than m": "攻击的消耗效能提高 %",
+    "Projectiles deal % increased Damage with Hits against Enemies further than m": "当你有图腾存在时，伤害提高 %",
+    "Projectile Attacks have a % chance to fire two additional Projectiles while moving": "技能的魔力消耗的 % 转化为生命消耗",
+    "to Maximum Rage": "最大怒火",
+    "% increased Stun Buildup": "晕眩持续时间延长 %",
+    "Gain  Rage when Hit by an Enemy": "被敌人击中时获得  点怒火",
+    "% increased Damage with Maces": "锤类的伤害提高 %",
+    "% increased Stun Buildup with Maces": "锤类的晕眩积蓄提高 %",
+    "% increased Defences from Equipped Shield": "从盾牌获取的防御提高 %",
+    "% increased Ignite Magnitude": "附加    火焰伤害",
+    "% chance for Attack Hits to apply Incision": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Armour Break Duration": "护甲破损持续时间延长 %",
+    "% increased Knockback Distance": "击退距离延长 %",
+    "% chance to inflict Bleeding on Hit": "击中时有 % 的几率造成流血",
+    "% increased Skill Effect Duration": "粉碎护甲，相当于造成物理伤害的 %",
+    "Gain  Rage on Melee Hit": "近战击中时获得  怒火",
+    "% increased Melee Damage": "近战伤害提高 %",
+    "% increased Bleeding Duration": "流血持续时间延长 %",
+    "Banner Skills have % increased Duration": "旗帜技能的持续时间延长 %",
+    "% increased Glory generation for Banner Skills": "每击败一名敌人获得  点生命",
+    "Banner Skills have % increased Area of Effect": "旗帜技能的效果范围扩大 %",
+    "% increased Global Physical Damage": "全局物理伤害提高 %",
+    "Damage Penetrates % Fire Resistance": "伤害穿透 % 火焰抗性",
+    "% increased amount of Life Leeched": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Life Regeneration rate": "生命再生率提高 %",
+    "% increased Presence Area of Effect": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Totem Life": "图腾的生命提高 %",
+    "% increased Totem Damage": "图腾伤害提高 %",
+    "% increased Weapon Swap Speed": "武器切换速度加快 %",
+    "% increased Area of Effect": "附加    火焰伤害",
+    "% increased Stun Threshold": "晕眩阈值提高 %",
+    "% increased Damage with Warcries": "战吼的伤害提高 %",
+    "% increased Warcry Buff Effect": "战吼的增益效果提高 %",
+    "% increased Warcry Speed": "战吼速度加快 %",
+    "Minions have % increased Area of Effect": "召唤生物的效果区域扩大 %",
+    "Minions have % increased maximum Life": "召唤生物的最大生命提高 %",
+    "Minions have % additional Physical Damage Reduction": "召唤生物有 % 额外物理伤害减免",
+    "% increased Critical Damage Bonus": "% 暴击伤害加成",
+    "% increased Damage with Bow Skills": "弓类技能伤害提高 %",
+    "Adds  to  Cold damage to Attacks": "附加    冰霜伤害",
+    "Adds  to  Fire damage to Attacks": "附加    火焰伤害",
+    "Adds  to  Lightning damage to Attacks": "附加    闪电伤害",
+    "Adds  to  Physical Damage to Attacks": "附加    物理伤害",
+    "% increased Skill Speed": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Damage": "伤害提高 %",
+    "Projectiles have % increased Critical Damage Bonus against Enemies within m": "技能的魔力消耗的 % 转化为生命消耗",
+    "Projectiles deal % increased Damage with Hits against Enemies within m": "该武器的攻击穿透 % 的冰霜抗性",
+    "to all Attributes": "全属性",
+    "Remnants can be collected from % further away": "粉碎护甲，相当于造成物理伤害的 %",
+    "Remnants have % increased effect": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Attack Damage while on Low Life": "当你有图腾存在时，伤害提高 %",
+    "Recover % of maximum Mana on Kill": "攻击的消耗效能提高 %",
+    "% increased maximum Mana": "魔力上限提高 %",
+    "% increased Spell Damage while on Full Energy Shield": "该武器的攻击穿透 % 的冰霜抗性",
+    "Minions deal % increased Damage if you've Hit Recently": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Freeze Buildup if you've consumed an Power Charge Recently": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Magnitude of Shock if you've consumed a Frenzy Charge Recently": "当你有图腾存在时，伤害提高 %",
+    "% increased Magnitude of Ignite if you've consumed an Endurance Charge Recently": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Regenerate % of maximum Life per second": "生命每秒再生 %",
+    "Recover % of maximum Life on Kill": "技能的魔力消耗的 % 转化为生命消耗",
+    "Leech % of Physical Attack Damage as Mana": "物理攻击伤害的 % 转化为魔力偷取",
+    "Leech % of Physical Attack Damage as Life": "物理攻击伤害的 % 转化为生命偷取",
+    "% increased Rarity of Items found": "物品稀有度提高 %",
+    "% increased Critical Hit Chance": "暴击几率 %",
+    "Triggered Spells deal % increased Spell Damage": "被触发法术的法术伤害提高 %",
+    "% increased Chill Duration on Enemies": "敌人被冰缓的持续时间延长 %",
+    "% increased Freeze Threshold": "冻结阈值提高 %",
+    "Meta Skills gain % increased Energy": "非凡技能获得的能量提高 %",
+    "Offerings have % increased Maximum Life": "奉献的生命上限提高 %",
+    "Offering Skills have % increased Duration": "奉献技能的持续时间提高 %",
+    "Aura Skills have % increased Magnitudes": "粉碎护甲，相当于造成物理伤害的 %",
+    "Gain additional Ailment Threshold equal to % of maximum Energy Shield": "获得额外异常状态阈值，相当于最大能量护盾的 %",
+    "Gain additional Stun Threshold equal to % of maximum Energy Shield": "获得相当于能量护盾上限 % 的晕眩阈值",
+    "% chance to gain Volatility on Kill": "击败敌人时有 % 的几率获得无常",
+    "% increased maximum Energy Shield": "能量护盾上限提高 %",
+    "% increased Damage if you have Consumed a Corpse Recently": "若你近期内有消耗灵柩，则伤害提高 %",
+    "Damage Penetrates % Cold Resistance": "伤害穿透 % 冰霜抗性",
+    "% increased Withered Magnitude": "死亡凋零强度提高 %",
+    "Minions have % increased Critical Hit Chance": "召唤生物的暴击率提高 %",
+    "Minions have % increased Critical Damage Bonus": "召唤生物的暴击伤害加成提高 %",
+    "Minions have % increased Attack and Cast Speed": "召唤生物的攻击和施法速度加快 %",
+    "Minions deal % increased Damage": "召唤生物的伤害提高 %",
+    "Minions have % to all Elemental Resistances": "召唤生物获得 % 元素抗性",
+    "Minions have % to Chaos Resistance": "召唤生物有 % 混沌抗性",
+    "% increased Energy Shield from Equipped Focus": "装备法器的能量护盾提高 %",
+    "% increased Curse Duration": "诅咒持续时间延长 %",
+    "% increased Area of Effect of Curses": "粉碎护甲，相当于造成物理伤害的 %",
+    ". .% to Critical Hit Chance": "暴击几率 %",
+    "Adds   to   Cold Damage": "附加    冰霜伤害",
+    "Adds   to   Chaos damage": "附加   至   混沌傷害",
+    "Adds   to   Fire Damage": "附加    火焰伤害",
+    "Adds   to   Lightning Damage": "附加    闪电伤害",
+    "Adds   to   Physical Damage": "附加    物理伤害",
+    "Gain  % of Damage as Extra Cold Damage": "获得相当于伤害 % 的额外冰霜伤害",
+    "Gain  % of Damage as Extra Fire Damage": "获得相当于伤害 % 的额外火焰伤害",
+    "Gain  % of Damage as Extra Lightning Damage": "获得相当于伤害 % 的额外闪电伤害",
+    "Gain  % of Damage as Extra Physical Damage": "获得相当于伤害 % 的额外物理伤害",
+    "Gain   Mana per enemy killed": "每击败一名敌人获得  点魔力",
+    "Gain   Life per enemy killed": "每击败一名敌人获得  点生命",
+    "Leeches  .% of Physical Damage as Mana": "物理伤害的 % 转化为魔力偷取",
+    "Leeches  .% of Physical Damage as Life": "物理伤害的 % 转化为生命偷取",
+    "% increased Physical Damage  to Accuracy Rating": "物理伤害提高 % 命中值",
+    "Causes  % increased Stun Buildup": "造成的晕眩积蓄值提高 %",
+    "% increased Evasion Rating to Stun Threshold": "闪避值提高 % 晕眩阈值",
+    "% increased Spirit": "精魂提高 %",
+    "% increased Spirit to maximum Mana": "精魂提高 % 最大魔力",
+    "Allies in your Presence have % increased Critical Hit Chance": "暴击几率 %",
+    "Allies in your Presence have % increased Critical Damage Bonus": "在场的友军的暴击伤害加成提高 %",
+    "Allies in your Presence have % increased Attack Speed": "在场的友军的攻击速度加快 %",
+    "Allies in your Presence have % increased Cast Speed": "在场的友军的施法速度加快 %",
+    "Allies in your Presence have % to all Elemental Resistances": "在场的友军的所有元素抗性 %",
+    "Allies in your Presence deal  to  added Attack Cold Damage": "附加    冰霜伤害",
+    "Allies in your Presence deal  to  added Attack Fire Damage": "附加    火焰伤害",
+    "Allies in your Presence deal  to  added Attack Lightning Damage": "附加    闪电伤害",
+    "Allies in your Presence deal  to  added Attack Physical Damage": "附加    物理伤害",
+    "Allies in your Presence Regenerate  Life per second": "生命每秒再生",
+    "Allies in your Presence deal % increased Damage": "在场的友军造成的伤害提高 %",
+    "Loads  additional bolts": "额外装填  支弩箭",
+    "Grenade Skills have  Cooldown Use": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Grenade Damage% increased Grenade Duration": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Grenades have % chance to activate a second time": "粉碎护甲，相当于造成物理伤害的 %",
+    "to maximum number of Summoned Ballista Totems": "当你有图腾存在时，伤害提高 %",
+    "% increased Reload Speed": "攻击的消耗效能提高 %",
+    "% chance when you Reload a Crossbow to be immediate": "攻击的消耗效能提高 %",
+    "Notable Passive Skills in Radius also grant  to Maximum Rage": "最大怒火",
+    "Notable Passive Skills in Radius also grant % of Damage is taken from Mana before Life": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant % increased Block chance": "[格挡]几率提高 %",
+    "Notable Passive Skills in Radius also grant % increased Stun Buildup": "晕眩持续时间延长 %",
+    "Notable Passive Skills in Radius also grant Gain  Rage when Hit by an Enemy": "被敌人击中时获得  点怒火",
+    "Notable Passive Skills in Radius also grant % increased Critical Hit Chance with Daggers": "范围内的核心天赋同时提供 匕首攻击的暴击率提高 %",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed with Daggers": "范围内的核心天赋同时提供 匕首攻击的攻击速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Stun Buildup with Maces": "锤类的晕眩积蓄提高 %",
+    "Notable Passive Skills in Radius also grant % increased Defences from Equipped Shield": "从盾牌获取的防御提高 %",
+    "Notable Passive Skills in Radius also grant % increased Ignite Magnitude": "附加    火焰伤害",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed with Axes": "范围内的核心天赋同时提供 斧类攻击的攻击速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Armour Break Duration": "护甲破损持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased Knockback Distance": "击退距离延长 %",
+    "Notable Passive Skills in Radius also grant Hits have % reduced Critical Hit Chance against you": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant % of Skill Mana Costs Converted to Life Costs": "技能的魔力消耗的 % 转化为生命消耗",
+    "Notable Passive Skills in Radius also grant % increased Skill Effect Duration": "技能效果持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed with Swords": "范围内的核心天赋同时提供 剑类攻击的攻击速度加快 %",
+    "Notable Passive Skills in Radius also grant % of Damage taken Recouped as Mana": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant % of Damage taken Recouped as Life": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant Gain  Rage on Melee Hit": "近战击中时获得  怒火",
+    "Notable Passive Skills in Radius also grant % increased Critical Hit Chance with Flails": "范围内的核心天赋同时提供 连枷的暴击率提高 %",
+    "Notable Passive Skills in Radius also grant % increased Bleeding Duration": "流血持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased maximum Mana": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant % increased Mana Cost Efficiency": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant Mana Flasks gain  charges per Second": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant % increased Magnitude of Bleeding you inflict": "你造成的流血强度提高 %",
+    "Notable Passive Skills in Radius also grant % increased Glory generation for Banner Skills": "每击败一名敌人获得  点生命",
+    "Notable Passive Skills in Radius also grant % increased Global Defences": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant Regenerate % of maximum Life per second": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant % increased maximum Life": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant Life Flasks gain  charges per Second": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "Notable Passive Skills in Radius also grant % increased Life Regeneration rate": "生命再生率提高 %",
+    "Notable Passive Skills in Radius also grant % increased Presence Area of Effect": "同场效果范围扩大 %",
+    "Notable Passive Skills in Radius also grant % increased Unarmed Attack Speed": "范围内的核心天赋同时提供 徒手攻击速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Trap Throwing Speed": "范围内的核心天赋同时提供 陷阱投掷速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Area of Effect": "附加    火焰伤害",
+    "Notable Passive Skills in Radius also grant % increased Warcry Buff Effect": "战吼的增益效果提高 %",
+    "Notable Passive Skills in Radius also grant % increased Warcry Cooldown Recovery Rate": "战吼冷却回复速度加快 %",
+    "Notable Passive Skills in Radius also grant Minions Revive % faster": "范围内的核心天赋同时提供 召唤生物的复活速度加快 %",
+    "Notable Passive Skills in Radius also grant Minions have % increased Area of Effect": "召唤生物的效果区域扩大 %",
+    "Notable Passive Skills in Radius also grant Charms gain  charges per Second": "冰霜伤害提高 %伤害穿透 % 冰霜抗性",
+    "% increased Effect of Notable Passive Skills in Radius": "范围内的核心天赋效果提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Daggers": "获得相当于伤害 % 的额外闪电伤害",
+    "Small Passive Skills in Radius also grant % increased Damage with Maces": "锤类的伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage against Enemies with Fully Broken Armour": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Small Passive Skills in Radius also grant Break % increased Armour": "粉碎的护甲提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Axes": "范围内的小型天赋同时提供 斧类伤害提高 %",
+    "Small Passive Skills in Radius also grant % chance for Attack Hits to apply Incision": "攻击击中有 % 的几率施加创口",
+    "Small Passive Skills in Radius also grant % increased Attack Damage": "攻击伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Armour": "护甲提高 %",
+    "Small Passive Skills in Radius also grant % increased Fire Damage": "附加    火焰伤害",
+    "Small Passive Skills in Radius also grant % chance to inflict Bleeding on Hit": "击中时有 % 的几率造成流血",
+    "Small Passive Skills in Radius also grant % increased Damage with Swords": "物理伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Melee Damage": "近战伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Thorns damage": "荆棘伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Unarmed Attacks": "范围内的小型天赋同时提供 空手攻击时伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Flails": "范围内的小型天赋同时提供 连枷的伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Totem Placement speed": "你的图腾放置速度加快 %",
+    "Small Passive Skills in Radius also grant Banner Skills have % increased Duration": "旗帜技能的持续时间延长 %",
+    "Small Passive Skills in Radius also grant Banner Skills have % increased Area of Effect": "旗帜技能的效果范围扩大 %",
+    "Small Passive Skills in Radius also grant Empowered Attacks deal % increased Damage": "攻击技能的元素伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Global Physical Damage": "全局物理伤害提高 %",
+    "Small Passive Skills in Radius also grant Damage Penetrates % Fire Resistance": "火焰伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased amount of Life Leeched": "生命偷取量提高 %",
+    "Small Passive Skills in Radius also grant % increased Totem Life": "图腾的生命提高 %",
+    "Small Passive Skills in Radius also grant % increased Totem Damage": "图腾伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Weapon Swap Speed": "武器切换速度加快 %",
+    "Small Passive Skills in Radius also grant % increased Trap Damage": "范围内的小型天赋同时提供 陷阱伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Flammability Magnitude": "易燃强度提高 %",
+    "Small Passive Skills in Radius also grant % increased Elemental Damage": "元素伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Stun Threshold": "晕眩阈值提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Warcries": "战吼的伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Warcry Speed": "战吼速度加快 %",
+    "Small Passive Skills in Radius also grant Minions have % increased maximum Life": "召唤生物的最大生命提高 %",
+    "Small Passive Skills in Radius also grant % increased Minion Accuracy Rating": "范围内的小型天赋同时提供 召唤生物命中值提高 %",
+    "Small Passive Skills in Radius also grant Minions have % additional Physical Damage Reduction": "召唤生物有 % 额外物理伤害减免",
+    "% increased Effect of Small Passive Skills in Radius": "同场效果范围扩大 %",
+    "Upgrades Radius to Largelocal jewel effect base radius []": "护甲 最大能量护盾该装备的护甲与能量护盾提高 %",
+    "Upgrades Radius to Mediumlocal jewel effect base radius []": "将范围升级为中型local jewel effect base radius []",
+    "Notable Passive Skills in Radius also grant % increased Critical Hit Chance": "暴击几率提高 %",
+    "Notable Passive Skills in Radius also grant % increased Critical Damage Bonus": "暴击伤害加成提高 %",
+    "Notable Passive Skills in Radius also grant % increased Chill Duration on Enemies": "敌人被冰缓的持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased Duration of Damaging Ailments on Enemies": "敌人受到伤害性异常状态的持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased Freeze Buildup": "冻结积蓄值提高 %",
+    "Notable Passive Skills in Radius also grant % increased Critical Hit Chance for Spells": "法术暴击率提高 %",
+    "Notable Passive Skills in Radius also grant % increased Critical Spell Damage Bonus": "暴击几率 %",
+    "Notable Passive Skills in Radius also grant Meta Skills gain % increased Energy": "非凡技能获得的能量提高 %",
+    "Notable Passive Skills in Radius also grant Offering Skills have % increased Duration": "奉献技能的持续时间提高 %",
+    "Notable Passive Skills in Radius also grant Aura Skills have % increased Magnitudes": "光环技能的强度提高 %",
+    "Notable Passive Skills in Radius also grant Recover % of maximum Mana on Kill": "每击败一名敌人获得  点魔力",
+    "Notable Passive Skills in Radius also grant % chance to gain Volatility on Kill": "击败敌人时有 % 的几率获得无常",
+    "Notable Passive Skills in Radius also grant % increased Freeze Buildup with Quarterstaves": "节杖的冻结积蓄值提高 %",
+    "Notable Passive Skills in Radius also grant % faster start of Energy Shield Recharge": "该装备的能量护盾提高 % 最大魔力",
+    "Notable Passive Skills in Radius also grant % increased Magnitude of Damaging Ailments you inflict with Critical Hits": "你的暴击造成的伤害性异常状态强度提高 %",
+    "Notable Passive Skills in Radius also grant Debuffs on you expire % faster": "你身上的减益效果消失速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Magnitude of Shock you inflict": "你造成的感电强度提高 %",
+    "Notable Passive Skills in Radius also grant % increased Magnitude of Ailments you inflict": "你造成的异常状态强度提高 %",
+    "Notable Passive Skills in Radius also grant Damaging Ailments deal damage % faster": "伤害型异常状态生效速度加快 %",
+    "Notable Passive Skills in Radius also grant Recover % of maximum Life on Kill": "每击败一名敌人获得  点生命",
+    "Notable Passive Skills in Radius also grant % increased Cast Speed": "施法速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Withered Magnitude": "死亡凋零强度提高 %",
+    "Notable Passive Skills in Radius also grant % increased chance to inflict Ailments": "造成异常状态的几率提高 %",
+    "Notable Passive Skills in Radius also grant Minions have % increased Critical Hit Chance": "召唤生物的暴击率提高 %",
+    "Notable Passive Skills in Radius also grant Minions have % increased Critical Damage Bonus": "召唤生物的暴击伤害加成提高 %",
+    "Notable Passive Skills in Radius also grant Minions have % increased Attack and Cast Speed": "召唤生物的攻击和施法速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Energy Shield from Equipped Focus": "装备法器的能量护盾提高 %",
+    "Notable Passive Skills in Radius also grant % increased Area of Effect of Curses": "诅咒的效果范围扩大 %",
+    "Notable Passive Skills in Radius also grant % increased Curse Magnitudes": "诅咒强度提高 %",
+    "Small Passive Skills in Radius also grant Triggered Spells deal % increased Spell Damage": "被触发法术的法术伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Cold Damage": "冰霜伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Freeze Threshold": "冻结阈值提高 %",
+    "Small Passive Skills in Radius also grant % increased Spell Damage": "法术伤害提高 %",
+    "Small Passive Skills in Radius also grant Offerings have % increased Maximum Life": "奉献的生命上限提高 %",
+    "Small Passive Skills in Radius also grant % increased Shock Duration": "感电持续时间延长 %",
+    "Small Passive Skills in Radius also grant % increased chance to Shock": "感电几率提高 %",
+    "Small Passive Skills in Radius also grant % increased Chaos Damage": "混沌伤害提高 %",
+    "Small Passive Skills in Radius also grant Gain additional Ailment Threshold equal to % of maximum Energy Shield": "获得额外异常状态阈值，相当于最大能量护盾的 %",
+    "Small Passive Skills in Radius also grant Gain additional Stun Threshold equal to % of maximum Energy Shield": "获得相当于能量护盾上限 % 的晕眩阈值",
+    "Small Passive Skills in Radius also grant % increased Mana Regeneration Rate": "魔力再生率提高 %",
+    "Small Passive Skills in Radius also grant % increased Energy Shield Recharge Rate": "能量护盾充能率提高 %",
+    "Small Passive Skills in Radius also grant % increased maximum Energy Shield": "能量护盾上限提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage if you have Consumed a Corpse Recently": "若你近期内有消耗灵柩，则伤害提高 %",
+    "Small Passive Skills in Radius also grant Damage Penetrates % Cold Resistance": "伤害穿透 % 冰霜抗性",
+    "Small Passive Skills in Radius also grant Minions deal % increased Damage": "召唤生物的伤害提高 %",
+    "Small Passive Skills in Radius also grant Minions have % to all Elemental Resistances": "召唤生物获得 % 元素抗性",
+    "Small Passive Skills in Radius also grant Minions have % to Chaos Resistance": "召唤生物有 % 混沌抗性",
+    "Small Passive Skills in Radius also grant % increased Curse Duration": "诅咒持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % chance to Pierce an Enemy": "% 的几率穿透一个敌人",
+    "Notable Passive Skills in Radius also grant % increased Parried Debuff Duration": "被招架减益状态的持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased Duration of Ignite, Shock and Chill on Enemies": "敌人受到的点燃、感电和冰缓持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased Pin Buildup": "定身积蓄值提高 %",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed with Bows": "弓类攻击的攻击速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Critical Hit Chance for Attacks": "攻击暴击率提高 %",
+    "Notable Passive Skills in Radius also grant % increased Critical Damage Bonus for Attack Damage": "攻击伤害的暴击伤害加成 %",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed": "攻击速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Mana Flask Charges gained": "获得的魔力药剂充能提高 %",
+    "Notable Passive Skills in Radius also grant % increased Life Flask Charges gained": "获得的生命药剂充能提高 %",
+    "Notable Passive Skills in Radius also grant % increased Flask Charges gained": "获得的药剂充能提高 %",
+    "Notable Passive Skills in Radius also grant % increased Charm Charges gained": "获得的咒符充能提高 %",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed with Quarterstaves": "节杖的攻击速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Cooldown Recovery Rate": "冷却回复速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Effect of your Mark Skills": "你的印记技能效果提高 %",
+    "Notable Passive Skills in Radius also grant % reduced Slowing Potency of Debuffs on You": "你受到的异常状态的减速强度降低 %",
+    "Notable Passive Skills in Radius also grant % increased Magnitude of Poison you inflict": "你造成的中毒强度提高 %",
+    "Notable Passive Skills in Radius also grant Projectiles have % chance for an additional Projectile when Forking": "投射物分裂时，有 % 的几率发射一个额外投射物",
+    "Notable Passive Skills in Radius also grant Projectiles have % chance to Chain an additional time from terrain": "投射物击中地形时有 % 的几率额外连锁一次",
+    "Notable Passive Skills in Radius also grant % increased Projectile Speed": "投射物速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Movement Speed": "移动速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Critical Damage Bonus with Spears": "战矛的暴击伤害加成提高 %",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed with Spears": "战矛的攻击速度提高 %",
+    "Notable Passive Skills in Radius also grant % increased Attack Speed with Crossbows": "战弩的攻击速度提高 %",
+    "Notable Passive Skills in Radius also grant % increased Crossbow Reload Speed": "战弩装填速度加快 %",
+    "Notable Passive Skills in Radius also grant % increased Stun Threshold while Parrying": "招架时的晕眩阈值提高 %",
+    "Notable Passive Skills in Radius also grant % increased Blind Effect": "致盲效果提高%",
+    "Notable Passive Skills in Radius also grant % increased Poison Duration": "中毒持续时间延长 %",
+    "Notable Passive Skills in Radius also grant % increased bonuses gained from Equipped Quiver": "装备箭袋获得的加成提高 %",
+    "Small Passive Skills in Radius also grant % increased Accuracy Rating with Bows": "命中值",
+    "Small Passive Skills in Radius also grant % increased Damage with Bows": "弓类伤害提高 %",
+    "Small Passive Skills in Radius also grant % chance to Blind Enemies on Hit with Attacks": "攻击击中有 % 的几率致盲敌人",
+    "Small Passive Skills in Radius also grant Companions deal % increased Damage": "伙伴的伤害提高 %",
+    "Small Passive Skills in Radius also grant Companions have % increased maximum Life": "伙伴的生命上限提高 %",
+    "Small Passive Skills in Radius also grant % chance to Daze on Hit": "晕眩持续时间延长 %",
+    "Small Passive Skills in Radius also grant % chance to Poison on Hit": "击中时有 % 的几率使目标中毒",
+    "Small Passive Skills in Radius also grant % increased Damage with Hits against Rare and Unique Enemies": "击中稀有怪和传奇怪伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage while you have an active Charm": "激活咒符时，伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Quarterstaves": "节杖的伤害提高 %",
+    "Small Passive Skills in Radius also grant Herald Skills deal % increased Damage": "捷技能造成的伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Accuracy Rating": "命中值提高 %",
+    "Small Passive Skills in Radius also grant % increased amount of Mana Leeched": "魔力偷取量提高 %",
+    "Small Passive Skills in Radius also grant % increased Stun Threshold if you haven't been Stunned Recently": "若你[近期]未被晕眩，晕眩阈值提高 %",
+    "Small Passive Skills in Radius also grant % increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds": "若你在过去  秒内造成过近战击中，投射物伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds": "若你在过去  秒内造成过投射物攻击击中，近战伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Evasion Rating": "闪避值提高 %",
+    "Small Passive Skills in Radius also grant % increased Lightning Damage": "附加    闪电伤害",
+    "Small Passive Skills in Radius also grant Damage Penetrates % Lightning Resistance": "伤害穿透 % 的闪电抗性",
+    "Small Passive Skills in Radius also grant % increased Projectile Damage": "投射物伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Hazard Damage": "危害伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Mana Recovery from Flasks": "药剂的魔力回复提高 %",
+    "Small Passive Skills in Radius also grant % increased Life Recovery from Flasks": "药剂的生命回复提高 %",
+    "Small Passive Skills in Radius also grant % increased Flask Effect Duration": "药剂效果的持续时间延长 %",
+    "Small Passive Skills in Radius also grant % increased Elemental Ailment Threshold": "异常状态阈值提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Spears": "战矛的伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Damage with Crossbows": "战弩的伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Parry Damage": "招架伤害提高 %",
+    "Small Passive Skills in Radius also grant % increased Charm Effect Duration": "咒符效果的持续时间延长 %",
+    "Small Passive Skills in Radius also grant Mark Skills have % increased Skill Effect Duration": "咒印技能的技能效果持续时间提高 %",
+    "Small Passive Skills in Radius also grant Mark Skills have % increased Use Speed": "咒印技能的施法速度加快 %",
+    "% increased Quantity of Gold Dropped by Slain Enemies": "被击败的敌人掉落的金币数量提高 %",
+    "Gain  Life per Enemy Hit with Attacks": "每击中一名敌人获得  点生命",
+    "% of Lightning Damage taken Recouped as Life": "将承受的闪电伤害的 % 吸纳为生命",
+    "to Maximum Frenzy Charges": "狂怒球数量上限",
+    "Debuffs you inflict have % increased Slow Magnitude": "你造成的减益状态的减速强度提高 %",
+    "% increased effect of Socketed Items": "镶嵌的物品效果提高 %",
+    "% increased chance to inflict Bleeding": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased chance to Poison": "技能的魔力消耗的 % 转化为生命消耗",
+    "% chance to Gain Arcane Surge when you deal a Critical Hit": "攻击的消耗效能提高 %",
+    "% increased Cast Speed when on Full Life": "攻击的消耗效能提高 %",
+    "% increased Skill Speed if you've consumed a Frenzy Charge Recently": "技能的魔力消耗的 % 转化为生命消耗",
+    "% of Leech is Instant": "粉碎护甲，相当于造成物理伤害的 %",
+    "to Maximum Power Charges": "暴击球数量上限",
+    "Enemies you Mark take % increased Damage": "技能的魔力消耗的 % 转化为生命消耗",
+    "% of Cold Damage taken Recouped as Life": "将承受的冰霜伤害的 % 吸纳为生命",
+    "% of Elemental Damage taken Recouped as Energy Shield": "攻击的消耗效能提高 %",
+    "% increased Evasion Rating to maximum Mana": "闪避值提高 % 最大魔力",
+    "% increased Life Cost Efficiency": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Evasion and Energy Shield to maximum Mana": "该装备的闪避与能量护盾提高 % 最大魔力",
+    "% increased effect of Arcane Surge on you": "攻击的消耗效能提高 %",
+    "% increased Armour to maximum Mana": "护甲提高 % 最大魔力",
+    "% increased Glory generation": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Armour and Evasion to maximum Mana": "该装备的护甲与闪避提高 % 最大魔力",
+    "% increased Armour and Energy Shield to maximum Mana": "该装备的护甲与能量护盾提高 % 最大魔力",
+    "% increased Cold Damage% increased Freeze Buildup": "该武器的攻击穿透 % 的冰霜抗性",
+    "% chance to Poison on Hit with this weapon": "此武器击中时有 % 的几率使目标中毒",
+    "% increased Fire Damage% increased Ignite Magnitude": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% chance to build an additional Combo on Hit": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Lightning Damage% increased Magnitude of Shock you inflict": "当你有图腾存在时，伤害提高 %",
+    "Recover % of Maximum Mana when you expend at least  Combo": "攻击的消耗效能提高 %",
+    "Recover % of Maximum Life when you expend at least  Combo": "技能的魔力消耗的 % 转化为生命消耗",
+    "% to Critical Damage Bonus with Traps": "% 暴击伤害加成",
+    "to Level of all Trap Skill Gems": "所有陷阱技能宝石等级提高",
+    "% increased Critical Hit Chance with Traps": "暴击几率 %",
+    "% increased Trap Damage": "陷阱伤害提高 %",
+    "% increased Trap Damage to maximum Mana": "陷阱伤害提高 % 最大魔力",
+    "% chance for Skills to retain % of Glory on use": "当你有图腾存在时，伤害提高 %",
+    "% increased Reservation Efficiency of Herald Skills": "技能的魔力消耗的 % 转化为生命消耗",
+    "% increased Evasion Rating from Equipped Body Armour": "当你有图腾存在时，伤害提高 %",
+    "% increased Strength, Dexterity or Intelligence": "力量、敏捷或智慧提高 %",
+    "Mana Flasks gain  charges per Second": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Deflection Rating": "当你有图腾存在时，伤害提高 %",
+    "Invocated Spells have % chance to consume half as much Energy": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Global Defences": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Life Flasks gain  charges per Second": "当你有图腾存在时，伤害提高 %",
+    "to Level of all Skills": "所有技能等级",
+    "% to Quality of all Skills": "攻击的消耗效能提高 %",
+    "Minions have % increased Cooldown Recovery Rate": "攻击的消耗效能提高 %",
+    "Charms gain  charges per Second": "对护甲完全破损的敌人造成的伤害提高 %",
+    "Equipment and Skill Gems have % reduced Attribute Requirements": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Armour from Equipped Body Armour": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% increased Energy Shield from Equipped Body Armour": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Mana Regeneration Rate while stationary": "攻击的消耗效能提高 %",
+    "% reduced Freeze Duration on you": "你被冰冻的持续时间缩短 %",
+    "% reduced Chill Duration on you": "你被冰缓的持续时间缩短 %",
+    "% reduced Shock duration on you": "你被感电的持续时间缩短 %",
+    "% increased Mana Cost Efficiency if you have Dodge Rolled Recently": "攻击的消耗效能提高 %",
+    "metres to Dodge Roll distance": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Evasion and Energy Shield to Stun Threshold": "该装备的闪避与能量护盾提高 % 晕眩阈值",
+    "% increased Energy Shield to Stun Threshold": "该装备的能量护盾提高 % 晕眩阈值",
+    "Gain % of Maximum Mana as Armour": "该武器的攻击穿透 % 的冰霜抗性",
+    "% of Fire Damage taken Recouped as Life": "将承受的火焰伤害的 % 吸纳为生命",
+    "% to Thorns Critical Hit Chance": "粉碎护甲，相当于造成物理伤害的 %",
+    "to  Fire Thorns damage per  maximum Life": "对护甲完全破损的敌人造成的伤害提高 %",
+    "to Maximum Endurance Charges": "耐力球数量上限",
+    "% chance for Charms you use to not consume Charges": "对护甲完全破损的敌人造成的伤害提高 %",
+    "% chance for Flasks you use to not consume Charges": "当你有图腾存在时，伤害提高 %",
+    "% increased Life Regeneration rate during Effect of any Life Flask": "当你有图腾存在时，伤害提高 %",
+    "% reduced Slowing Potency of Debuffs on You if you've used a Charm Recently": "技能的魔力消耗的 % 转化为生命消耗",
+    "% reduced Flask Charges used": "使用的药剂充能降低 %",
+    "% reduced Charm Charges used": "使用的咒符充能降低 %",
+    "% increased Flask Mana Recovery rate": "药剂魔力回复速度加快 %",
+    "% increased Flask Life Recovery rate": "药剂生命回复速度加快 %",
+    "% increased Cast Speed when on Low Life": "技能的魔力消耗的 % 转化为生命消耗",
+    "% to Block chance": "粉碎护甲，相当于造成物理伤害的 %",
+    "% increased Spell Damage per  Maximum Life": "当你有图腾存在时，伤害提高 %",
+    "% increased Spell Damage per  maximum Mana": "该武器的攻击穿透 % 的冰霜抗性",
+    "% increased Magnitude of Damaging Ailments you inflict": "当你有图腾存在时，伤害提高 %",
+    "to maximum number of Elemental Infusions": "该武器的攻击穿透 % 的冰霜抗性",
+    "Archon recovery period expires % faster": "攻击的消耗效能提高 %",
+    "% increased Archon Buff duration": "粉碎护甲，相当于造成物理伤害的 %"
+  },
+  "patterns": [
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Dexterity",
+      "replace": "+$1 敏捷"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Accuracy Rating",
+      "replace": "+$1 命中值"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Accuracy Rating([\\d\\.\\–\\-]+)% increased Light Radius",
+      "replace": "+$1 命中值照亮范围扩大 $2%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Intelligence",
+      "replace": "+$1 智慧"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Critical Damage Bonus",
+      "replace": "+$1% 暴击伤害加成"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Critical Hit Chance",
+      "replace": "暴击几率 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to gain Onslaught on Killing Hits with this Weapon",
+      "replace": "此武器进行造成最后一击时有 $1% 的几率获得猛攻"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Cold Damage",
+      "replace": "附加 $1 冰霜伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Fire Damage",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Lightning Damage",
+      "replace": "附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Lightning Damage",
+      "replace": "附加 $1 - $2 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Physical Damage",
+      "replace": "附加 $1 物理伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Damage with Attacks",
+      "replace": "攻击技能的元素伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed",
+      "replace": "攻击速度加快 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Cold Damage",
+      "replace": "获得相当于伤害 $1% 的额外冰霜伤害"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Fire Damage",
+      "replace": "获得相当于伤害 $1% 的额外火焰伤害"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Lightning Damage",
+      "replace": "获得相当于伤害 $1% 的额外闪电伤害"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Physical Damage",
+      "replace": "获得相当于伤害 $1% 的额外物理伤害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength, Dexterity or Intelligence",
+      "replace": "力量、敏捷或智慧 +$1"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Mana per Enemy Killed",
+      "replace": "每击败一名敌人获得 $1 点魔力"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Life per Enemy Killed",
+      "replace": "每击败一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "Grants ([\\d\\.\\–\\-]+) Life per Enemy Hit",
+      "replace": "每击中一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Attribute Requirements",
+      "replace": "属性需求降低 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Attack Skills",
+      "replace": "所有攻击技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Melee Skills",
+      "replace": "所有近战技能等级 +$1"
+    },
+    {
+      "regex": "Leeches ([\\d\\.\\–\\-]+)% of Physical Damage as Mana",
+      "replace": "物理伤害的 $1% 转化为魔力偷取"
+    },
+    {
+      "regex": "Leeches ([\\d\\.\\–\\-]+)% of Physical Damage as Life",
+      "replace": "物理伤害的 $1% 转化为生命偷取"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Physical Damage",
+      "replace": "物理伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to Accuracy Rating",
+      "replace": "物理伤害提高 $1 命中值"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Duration",
+      "replace": "晕眩持续时间延长 $1%"
+    },
+    {
+      "regex": "Causes ([\\d\\.\\–\\-]+)% increased Stun Buildup",
+      "replace": "造成的晕眩积蓄值提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength",
+      "replace": "+$1 力量"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Pierce an Enemy",
+      "replace": "范围内的核心天赋同时提供 $1% 的几率穿透一个敌人"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Lightning Resistance",
+      "replace": "+$1 力量"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Parried Debuff Duration",
+      "replace": "范围内的核心天赋同时提供 被招架减益状态的持续时间延长 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Cold Resistance",
+      "replace": "冰霜抗性 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% Cold Resistance",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Duration of Ignite, Shock and Chill on Enemies",
+      "replace": "所有物理法术技能等级 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Duration of Damaging Ailments on Enemies",
+      "replace": "范围内的核心天赋同时提供 敌人受到伤害性异常状态的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Pin Buildup",
+      "replace": "范围内的核心天赋同时提供 定身积蓄值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased maximum Energy Shield",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Evasion Rating",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Shock Duration",
+      "replace": "范围内的小型天赋同时提供 感电持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to Shock",
+      "replace": "感电几率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Bows",
+      "replace": "范围内的核心天赋同时提供 弓类攻击的攻击速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Accuracy Rating with Bows",
+      "replace": "+$1 命中值"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Bows",
+      "replace": "范围内的小型天赋同时提供 弓类伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Hit Chance for Attacks",
+      "replace": "范围内的核心天赋同时提供 攻击暴击率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Blind Enemies on Hit with Attacks",
+      "replace": "范围内的小型天赋同时提供 攻击击中有 $1% 的几率致盲敌人"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Damage Bonus for Attack Damage",
+      "replace": "范围内的核心天赋同时提供 攻击伤害的暴击伤害加成 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Damage",
+      "replace": "范围内的小型天赋同时提供 攻击伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Thorns damage",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Totem Damage",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Chaos Resistance",
+      "replace": "混沌抗性 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Withered Magnitude",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Fire Resistance",
+      "replace": "火焰抗性 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% Fire Resistance",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Companions deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "范围内的小型天赋同时提供 伙伴的伤害提高 $1%"
+    },
+    {
+      "regex": "Companions deal ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Companions have ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "范围内的小型天赋同时提供 伙伴的生命上限提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Flask Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的魔力药剂充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Flask Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的生命药剂充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flask Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的药剂充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Charm Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的咒符充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Daze on Hit",
+      "replace": "晕眩持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Poison on Hit",
+      "replace": "范围内的小型天赋同时提供 击中时有 $1% 的几率使目标中毒"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Hits against Rare and Unique Enemies",
+      "replace": "范围内的小型天赋同时提供 击中稀有怪和传奇怪伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you have an active Charm",
+      "replace": "范围内的小型天赋同时提供 激活咒符时，伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Buildup with Quarterstaves",
+      "replace": "范围内的核心天赋同时提供 节杖的冻结积蓄值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Quarterstaves",
+      "replace": "范围内的核心天赋同时提供 节杖的攻击速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Quarterstaves",
+      "replace": "该装备的能量护盾提高 $1 最大生命"
+    },
+    {
+      "regex": "Herald Skills deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "范围内的小型天赋同时提供 捷技能造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cooldown Recovery Rate",
+      "replace": "范围内的核心天赋同时提供 冷却回复速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Strength",
+      "replace": "智慧提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Dexterity",
+      "replace": "智慧提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Accuracy Rating",
+      "replace": "范围内的小型天赋同时提供 命中值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased amount of Mana Leeched",
+      "replace": "范围内的小型天赋同时提供 魔力偷取量提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Damaging Ailments you inflict with Critical Hits",
+      "replace": "范围内的核心天赋同时提供 你的暴击造成的伤害性异常状态强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Effect of your Mark Skills",
+      "replace": "范围内的核心天赋同时提供 你的印记技能效果提高 $1%"
+    },
+    {
+      "regex": "Debuffs on you expire ([\\d\\.\\–\\-]+)% faster",
+      "replace": "范围内的核心天赋同时提供 你身上的减益效果消失速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Abyssal Wasting you inflict",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Slowing Potency of Debuffs on You",
+      "replace": "范围内的核心天赋同时提供 你受到的异常状态的减速强度降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Shock you inflict",
+      "replace": "范围内的核心天赋同时提供 你造成的感电强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Ailments you inflict",
+      "replace": "范围内的核心天赋同时提供 你造成的异常状态强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Poison you inflict",
+      "replace": "范围内的核心天赋同时提供 你造成的中毒强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Exposure Effect",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Threshold if you haven't been Stunned Recently",
+      "replace": "范围内的小型天赋同时提供 若你[近期]未被晕眩，晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+      "replace": "范围内的小型天赋同时提供 若你在过去 $1 秒内造成过近战击中，投射物伤害提高 $2%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+      "replace": "范围内的小型天赋同时提供 若你在过去 $1 秒内造成过投射物攻击击中，近战伤害提高 $2%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Lightning Resistance",
+      "replace": "闪电抗性 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Lightning Damage",
+      "replace": "附加 $1 - $2 闪电伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% Lightning Resistance",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Damage Penetrates ([\\d\\.\\–\\-]+)% Lightning Resistance",
+      "replace": "范围内的小型天赋同时提供 伤害穿透 $1% 的闪电抗性"
+    },
+    {
+      "regex": "Damaging Ailments deal damage ([\\d\\.\\–\\-]+)% faster",
+      "replace": "范围内的核心天赋同时提供 伤害型异常状态生效速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitudes",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Projectiles have ([\\d\\.\\–\\-]+)% chance for an additional Projectile when Forking",
+      "replace": "范围内的核心天赋同时提供 投射物分裂时，有 $1% 的几率发射一个额外投射物"
+    },
+    {
+      "regex": "Projectiles have ([\\d\\.\\–\\-]+)% chance to Chain an additional time from terrain",
+      "replace": "范围内的核心天赋同时提供 投射物击中地形时有 $1% 的几率额外连锁一次"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Projectile Damage",
+      "replace": "范围内的小型天赋同时提供 投射物伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Projectile Speed",
+      "replace": "范围内的核心天赋同时提供 投射物速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Hazard Damage",
+      "replace": "范围内的小型天赋同时提供 危害伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Recovery from Flasks",
+      "replace": "范围内的小型天赋同时提供 药剂的魔力回复提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Recovery from Flasks",
+      "replace": "范围内的小型天赋同时提供 药剂的生命回复提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flask Effect Duration",
+      "replace": "范围内的小型天赋同时提供 药剂效果的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed",
+      "replace": "范围内的核心天赋同时提供 移动速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Ailment Threshold",
+      "replace": "范围内的小型天赋同时提供 异常状态阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Damage",
+      "replace": "范围内的小型天赋同时提供 元素伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to inflict Bleeding([\\d\\.\\–\\-]+)% increased Magnitude of Bleeding you inflict",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to inflict Ailments",
+      "replace": "范围内的核心天赋同时提供 造成异常状态的几率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Warcries",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Damage Bonus with Spears",
+      "replace": "范围内的核心天赋同时提供 战矛的暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Spears",
+      "replace": "范围内的核心天赋同时提供 战矛的攻击速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Spears",
+      "replace": "范围内的小型天赋同时提供 战矛的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Crossbows",
+      "replace": "范围内的核心天赋同时提供 战弩的攻击速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Crossbows",
+      "replace": "闪电伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Crossbow Reload Speed",
+      "replace": "范围内的核心天赋同时提供 战弩装填速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Parry Damage",
+      "replace": "范围内的小型天赋同时提供 招架伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Threshold while Parrying",
+      "replace": "范围内的核心天赋同时提供 招架时的晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased maximum Lifeminion area of effect \\+% \\[([\\d\\.\\–\\-]+),([\\d\\.\\–\\-]+)\\]",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Blind Effect",
+      "replace": "范围内的核心天赋同时提供 致盲效果提高$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Intelligence",
+      "replace": "智慧提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Poison Duration",
+      "replace": "范围内的核心天赋同时提供 中毒持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to Poison([\\d\\.\\–\\-]+)% increased Magnitude of Poison you inflict",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Charm Effect Duration",
+      "replace": "范围内的小型天赋同时提供 咒符效果的持续时间延长 $1%"
+    },
+    {
+      "regex": "Mark Skills have ([\\d\\.\\–\\-]+)% increased Skill Effect Duration",
+      "replace": "范围内的小型天赋同时提供 咒印技能的技能效果持续时间提高 $1%"
+    },
+    {
+      "regex": "Mark Skills have ([\\d\\.\\–\\-]+)% increased Use Speed",
+      "replace": "范围内的小型天赋同时提供 咒印技能的施法速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased bonuses gained from Equipped Quiver",
+      "replace": "范围内的核心天赋同时提供 装备箭袋获得的加成提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Melee Strike Range with this weapon",
+      "replace": "此武器的近战打击范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you have a Totem",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage against Enemies with Fully Broken Armour",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "Break Armour equal to ([\\d\\.\\–\\-]+)% of Physical Damage dealt",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "Attacks with this Weapon Penetrate ([\\d\\.\\–\\-]+)% Cold Resistance",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "Attacks with this Weapon Penetrate ([\\d\\.\\–\\-]+)% Fire Resistance",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "Attacks with this Weapon Penetrate ([\\d\\.\\–\\-]+)% Lightning Resistance",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Chaos damage",
+      "replace": "该装备附加 $1 基础混沌伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cost Efficiency of Attacks",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Rage on Hit",
+      "replace": "击中时获得 $1 点怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to cause Bleeding on Hit",
+      "replace": "击中有 $1% 的几率造成流血"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spirit Reservation Efficiency of Skills",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Skill Mana Costs Converted to Life Costs",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "Melee Attack Skills have \\+([\\d\\.\\–\\-]+) to maximum number of Summoned Totems",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "Fissure Skills have a ([\\d\\.\\–\\-]+)% chance to create an additional Fissure",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Totem Placement speed",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Mace Slam Skills you use yourself to cause Aftershocks",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "Empowered Attacks deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Physical Damage([\\d\\.\\–\\-]+)% reduced Attack Speed",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warcry Cooldown Recovery Rate",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Physical Thorns damage",
+      "replace": "$1 物理荆棘伤害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Armour",
+      "replace": "+$1 护甲"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength and Dexterity",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength and Intelligence",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Dexterity and Intelligence",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Stun Threshold",
+      "replace": "+$1 晕眩阈值"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum Life",
+      "replace": "+$1 最大生命"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Cold Resistance",
+      "replace": "+$1% 冰霜抗性上限"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Cold and Chaos Resistances",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% of Armour also applies to Chaos Damage",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% of Armour also applies to Elemental Damage",
+      "replace": "+$1% 的护甲同样作用于元素伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% additional Physical Damage Reduction",
+      "replace": "$1% 额外物理伤害减免"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Chaos Resistance",
+      "replace": "+$1% 混沌抗性上限"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Fire Resistance",
+      "replace": "+$1% 火焰抗性上限"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Fire and Chaos Resistances",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to all maximum Resistances",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Lightning and Chaos Resistances",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to all Maximum Elemental Resistances",
+      "replace": "+$1% 元素抗性上限"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Parried Debuff Magnitude",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Block chance",
+      "replace": "格挡几率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour, Evasion or Energy Shield",
+      "replace": "护甲、闪避或能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to Stun Threshold",
+      "replace": "护甲提高 $1 晕眩阈值"
+    },
+    {
+      "regex": "Hits have ([\\d\\.\\–\\-]+)% reduced Critical Hit Chance against you",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Damage taken Recouped as Mana",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Damage taken Recouped as Life",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Mana gained when you Block",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Your Heavy Stun buildup empties ([\\d\\.\\–\\-]+)% faster",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced effect of Curses on you",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Life gained when you Block",
+      "replace": "生命在你格挡时 $1"
+    },
+    {
+      "regex": "You take ([\\d\\.\\–\\-]+)% of Physical Damage taken as Lightning while Active Blocking",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to maximum Block chance",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Evasion Rating",
+      "replace": "+$1 点闪避值"
+    },
+    {
+      "regex": "Hits against you have ([\\d\\.\\–\\-]+)% reduced Critical Damage Bonus",
+      "replace": "对你的击中的暴击伤害加成降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour and Evasion",
+      "replace": "该装备的护甲与闪避提高 $1%"
+    },
+    {
+      "regex": "Gain Deflection Rating equal to ([\\d\\.\\–\\-]+)% of Evasion Rating",
+      "replace": "获得相当于闪避值 $1% 的偏转值"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum Energy Shield",
+      "replace": "+$1 最大能量护盾"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour and Energy Shield",
+      "replace": "该装备的护甲与能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield Recharge Rate",
+      "replace": "范围内的核心天赋同时提供 敌人受到伤害性异常状态的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield Recharge Rate if you've Blocked Recently",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to all Elemental Resistances",
+      "replace": "所有元素抗性 +$1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum Mana",
+      "replace": "+$1 最大魔力"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Physical Damage",
+      "replace": "$1% 法术物理伤害提高"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cold Damage",
+      "replace": "冰霜伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Hit Chance for Spells",
+      "replace": "暴击几率 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Spell Damage Bonus",
+      "replace": "+$1% 暴击伤害加成"
+    },
+    {
+      "regex": "Spell Skills have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "Spell Skills have \\+([\\d\\.\\–\\-]+) to maximum number of Summoned Totems",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Spell Skills to fire ([\\d\\.\\–\\-]+) additional Projectiles",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Spell Mana Cost Converted to Life Cost",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage",
+      "replace": "增加 $1%法術傷害"
+    },
+    {
+      "regex": "Offering Skills have ([\\d\\.\\–\\-]+)% increased Buff effect",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield",
+      "replace": "该装备的能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to maximum Mana",
+      "replace": "该装备的能量护盾提高 $1 最大魔力"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Chaos Damage",
+      "replace": "混沌伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Fire Damage",
+      "replace": "火焰伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Cost Efficiency",
+      "replace": "魔力消耗效能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Regeneration Rate",
+      "replace": "魔力再生率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% faster start of Energy Shield Recharge",
+      "replace": "能量护盾提早 $1% 开始恢复"
+    },
+    {
+      "regex": "Invocated Spells deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed",
+      "replace": "施法速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance when collecting an Elemental Infusion to gain anadditional Elemental Infusion of the same type",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Spell Skills",
+      "replace": "所有法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Minion Skills",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage while wielding a Melee Weapon",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% faster Curse Activation",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Curse Magnitudes",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "Enemies Hindered by you take ([\\d\\.\\–\\-]+)% increased Chaos Damage",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Enemies Hindered by you take ([\\d\\.\\–\\-]+)% increased Physical Damage",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "Enemies Hindered by you take ([\\d\\.\\–\\-]+)% increased Elemental Damage",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Buildup",
+      "replace": "冻结积蓄值提高 $1%"
+    },
+    {
+      "regex": "Break Armour on Critical Hit with Spells equal to ([\\d\\.\\–\\-]+)% of Physical Damage dealt",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "Break ([\\d\\.\\–\\-]+)% increased Armour",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed for each different Non-Instant Spell you've Cast Recently",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed while on Full Mana",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Regeneration Rate([\\d\\.\\–\\-]+)% increased Light Radius",
+      "replace": "魔力再生率提高 $1%照亮范围扩大 $2%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Bleeding you inflict",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Cold Spell Skills",
+      "replace": "所有冰霜法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Chaos Spell Skills",
+      "replace": "所有混沌法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Fire Spell Skills",
+      "replace": "所有火焰法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Lightning Spell Skills",
+      "replace": "所有闪电法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Physical Spell Skills",
+      "replace": "所有物理法术技能等级 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage with Spells that cost Life",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flammability Magnitude",
+      "replace": "易燃强度提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Evasion Rating",
+      "replace": "+$1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Spirit",
+      "replace": "+$1 精魂"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Reservation Efficiency of Companion Skills",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Ignite Duration on you",
+      "replace": "你被点燃的持续时间缩短 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Poison Duration on you",
+      "replace": "你受到的中毒持续时间降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to maximum Life",
+      "replace": "闪避值提高 $1 最大生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Life Regeneration per second",
+      "replace": "+$1% 火焰抗性上限"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "生命上限提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Physical Damage from Hits taken as Chaos Damage",
+      "replace": "受到击中物理伤害的 $1% 转化为混沌伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Duration of Bleeding on You",
+      "replace": "受到流血的持续时间缩短 $1%"
+    },
+    {
+      "regex": "Prevent \\+([\\d\\.\\–\\-]+)% of Damage from Deflected Hits",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Evasion and Energy Shield",
+      "replace": "+$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Damage is taken from Mana before Life",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Evasion and Energy Shield",
+      "replace": "该装备的闪避与能量护盾提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Armour",
+      "replace": "+$1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Armour and Evasion",
+      "replace": "+$1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Armour and Energy Shield",
+      "replace": "将范围升级为大型local jewel effect base radius [$1]"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Energy Shield",
+      "replace": "+$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% Surpassing chance to fire an additional Arrow",
+      "replace": "$1% 滿溢機率發射額外一枚箭矢"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Immobilisation buildup",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Area of Effect for Attacks",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed while your Companion is in your Presence",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "Companions deal ([\\d\\.\\–\\-]+)% increased Damage while your Companion is in your Presence",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Maim on Hit",
+      "replace": "击中时有 $1% 的几率造成瘫痪"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Blind Enemies on hit",
+      "replace": "击中时有 $1% 的几率致盲敌人"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Projectile Skills",
+      "replace": "所有投射物技能等级 +$1"
+    },
+    {
+      "regex": "Projectiles have ([\\d\\.\\–\\-]+)% increased Critical Hit Chance against Enemies further than ([\\d\\.\\–\\-]+)m",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Projectiles deal ([\\d\\.\\–\\-]+)% increased Damage with Hits against Enemies further than ([\\d\\.\\–\\-]+)m",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "Projectile Attacks have a ([\\d\\.\\–\\-]+)% chance to fire two additional Projectiles while moving",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Maximum Rage",
+      "replace": "范围内的核心天赋同时提供 +$1 最大怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Buildup",
+      "replace": "晕眩持续时间延长 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Rage when Hit by an Enemy",
+      "replace": "范围内的核心天赋同时提供 被敌人击中时获得 $1 点怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Maces",
+      "replace": "范围内的小型天赋同时提供 锤类的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Buildup with Maces",
+      "replace": "范围内的核心天赋同时提供 锤类的晕眩积蓄提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Defences from Equipped Shield",
+      "replace": "范围内的核心天赋同时提供 从盾牌获取的防御提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Ignite Magnitude",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Attack Hits to apply Incision",
+      "replace": "范围内的小型天赋同时提供 攻击击中有 $1% 的几率施加创口"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour Break Duration",
+      "replace": "范围内的核心天赋同时提供 护甲破损持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Knockback Distance",
+      "replace": "范围内的核心天赋同时提供 击退距离延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to inflict Bleeding on Hit",
+      "replace": "范围内的小型天赋同时提供 击中时有 $1% 的几率造成流血"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Skill Effect Duration",
+      "replace": "范围内的核心天赋同时提供 技能效果持续时间延长 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Rage on Melee Hit",
+      "replace": "范围内的核心天赋同时提供 近战击中时获得 $1 怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Melee Damage",
+      "replace": "范围内的小型天赋同时提供 近战伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Bleeding Duration",
+      "replace": "范围内的核心天赋同时提供 流血持续时间延长 $1%"
+    },
+    {
+      "regex": "Banner Skills have ([\\d\\.\\–\\-]+)% increased Duration",
+      "replace": "范围内的小型天赋同时提供 旗帜技能的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Glory generation for Banner Skills",
+      "replace": "每击败一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "Banner Skills have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "范围内的小型天赋同时提供 旗帜技能的效果范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Global Physical Damage",
+      "replace": "范围内的小型天赋同时提供 全局物理伤害提高 $1%"
+    },
+    {
+      "regex": "Damage Penetrates ([\\d\\.\\–\\-]+)% Fire Resistance",
+      "replace": "火焰伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased amount of Life Leeched",
+      "replace": "范围内的小型天赋同时提供 生命偷取量提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Regeneration rate",
+      "replace": "范围内的核心天赋同时提供 生命再生率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Presence Area of Effect",
+      "replace": "范围内的核心天赋同时提供 同场效果范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Totem Life",
+      "replace": "范围内的小型天赋同时提供 图腾的生命提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Weapon Swap Speed",
+      "replace": "范围内的小型天赋同时提供 武器切换速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Threshold",
+      "replace": "范围内的小型天赋同时提供 晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warcry Buff Effect",
+      "replace": "范围内的核心天赋同时提供 战吼的增益效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warcry Speed",
+      "replace": "范围内的小型天赋同时提供 战吼速度加快 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "范围内的核心天赋同时提供 召唤生物的效果区域扩大 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "范围内的小型天赋同时提供 召唤生物的最大生命提高 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% additional Physical Damage Reduction",
+      "replace": "范围内的小型天赋同时提供 召唤生物有 $1% 额外物理伤害减免"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Bow Skills",
+      "replace": "弓类技能伤害提高 $1%"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Cold damage to Attacks",
+      "replace": "附加 $1 冰霜伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Cold damage to Attacks",
+      "replace": "附加 $1 冰霜伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Fire damage to Attacks",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Fire damage to Attacks",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Lightning damage to Attacks",
+      "replace": "附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Lightning damage to Attacks",
+      "replace": "附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Physical Damage to Attacks",
+      "replace": "附加 $1 物理伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Physical Damage to Attacks",
+      "replace": "附加 $1 物理伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Skill Speed",
+      "replace": "技能速度加快 $1%"
+    },
+    {
+      "regex": "Projectiles have ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus against Enemies within ([\\d\\.\\–\\-]+)m",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "Projectiles deal ([\\d\\.\\–\\-]+)% increased Damage with Hits against Enemies within ([\\d\\.\\–\\-]+)m",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to all Attributes",
+      "replace": "+$1 全属性"
+    },
+    {
+      "regex": "Remnants can be collected from ([\\d\\.\\–\\-]+)% further away",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "Remnants have ([\\d\\.\\–\\-]+)% increased effect",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Damage while on Low Life",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "Recover ([\\d\\.\\–\\-]+)% of maximum Mana on Kill",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased maximum Mana",
+      "replace": "魔力上限提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage while on Full Energy Shield",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "Minions deal ([\\d\\.\\–\\-]+)% increased Damage if you've Hit Recently",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Buildup if you've consumed an Power Charge Recently",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Shock if you've consumed a Frenzy Charge Recently",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Ignite if you've consumed an Endurance Charge Recently",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "Regenerate ([\\d\\.\\–\\-]+)% of maximum Life per second",
+      "replace": "生命每秒再生 $1%"
+    },
+    {
+      "regex": "Recover ([\\d\\.\\–\\-]+)% of maximum Life on Kill",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "Leech ([\\d\\.\\–\\-]+)% of Physical Attack Damage as Mana",
+      "replace": "物理伤害的 $1% 转化为魔力偷取"
+    },
+    {
+      "regex": "Leech ([\\d\\.\\–\\-]+)% of Physical Attack Damage as Life",
+      "replace": "物理伤害的 $1% 转化为生命偷取"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Rarity of Items found",
+      "replace": "物品稀有度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "范围内的核心天赋同时提供 暴击几率提高 $1%"
+    },
+    {
+      "regex": "Triggered Spells deal ([\\d\\.\\–\\-]+)% increased Spell Damage",
+      "replace": "范围内的小型天赋同时提供 被触发法术的法术伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Chill Duration on Enemies",
+      "replace": "范围内的核心天赋同时提供 敌人被冰缓的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Threshold",
+      "replace": "范围内的小型天赋同时提供 冻结阈值提高 $1%"
+    },
+    {
+      "regex": "Meta Skills gain ([\\d\\.\\–\\-]+)% increased Energy",
+      "replace": "范围内的核心天赋同时提供 非凡技能获得的能量提高 $1%"
+    },
+    {
+      "regex": "Offerings have ([\\d\\.\\–\\-]+)% increased Maximum Life",
+      "replace": "范围内的小型天赋同时提供 奉献的生命上限提高 $1%"
+    },
+    {
+      "regex": "Offering Skills have ([\\d\\.\\–\\-]+)% increased Duration",
+      "replace": "范围内的核心天赋同时提供 奉献技能的持续时间提高 $1%"
+    },
+    {
+      "regex": "Aura Skills have ([\\d\\.\\–\\-]+)% increased Magnitudes",
+      "replace": "范围内的核心天赋同时提供 光环技能的强度提高 $1%"
+    },
+    {
+      "regex": "Gain additional Ailment Threshold equal to ([\\d\\.\\–\\-]+)% of maximum Energy Shield",
+      "replace": "范围内的小型天赋同时提供 获得额外异常状态阈值，相当于最大能量护盾的 $1%"
+    },
+    {
+      "regex": "Gain additional Stun Threshold equal to ([\\d\\.\\–\\-]+)% of maximum Energy Shield",
+      "replace": "范围内的小型天赋同时提供 获得相当于能量护盾上限 $1% 的晕眩阈值"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to gain Volatility on Kill",
+      "replace": "范围内的核心天赋同时提供 击败敌人时有 $1% 的几率获得无常"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage if you have Consumed a Corpse Recently",
+      "replace": "范围内的小型天赋同时提供 若你近期内有消耗灵柩，则伤害提高 $1%"
+    },
+    {
+      "regex": "Damage Penetrates ([\\d\\.\\–\\-]+)% Cold Resistance",
+      "replace": "范围内的小型天赋同时提供 伤害穿透 $1% 冰霜抗性"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "范围内的核心天赋同时提供 召唤生物的暴击率提高 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "范围内的核心天赋同时提供 召唤生物的暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Attack and Cast Speed",
+      "replace": "范围内的核心天赋同时提供 召唤生物的攻击和施法速度加快 $1%"
+    },
+    {
+      "regex": "Minions deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "范围内的小型天赋同时提供 召唤生物的伤害提高 $1%"
+    },
+    {
+      "regex": "Minions have \\+([\\d\\.\\–\\-]+)% to all Elemental Resistances",
+      "replace": "范围内的小型天赋同时提供 召唤生物获得 +$1% 元素抗性"
+    },
+    {
+      "regex": "Minions have \\+([\\d\\.\\–\\-]+)% to Chaos Resistance",
+      "replace": "范围内的小型天赋同时提供 召唤生物有 +$1% 混沌抗性"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield from Equipped Focus",
+      "replace": "范围内的核心天赋同时提供 装备法器的能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Curse Duration",
+      "replace": "范围内的小型天赋同时提供 诅咒持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Area of Effect of Curses",
+      "replace": "范围内的核心天赋同时提供 诅咒的效果范围扩大 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Mana per enemy killed",
+      "replace": "每击败一名敌人获得 $1 点魔力"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Life per enemy killed",
+      "replace": "每击败一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spirit",
+      "replace": "精魂提高 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "暴击几率 +$1%"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "+$1% 暴击伤害加成"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Attack Speed",
+      "replace": "攻击速度加快 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Cast Speed",
+      "replace": "施法速度加快 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have \\+([\\d\\.\\–\\-]+)% to all Elemental Resistances",
+      "replace": "在场的友军的所有元素抗性 +$1%"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Cold Damage",
+      "replace": "附加 $1 冰霜伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Fire Damage",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Lightning Damage",
+      "replace": "附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) added Attack Lightning Damage",
+      "replace": "附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Physical Damage",
+      "replace": "附加 $1 物理伤害"
+    },
+    {
+      "regex": "Allies in your Presence Regenerate ([\\d\\.\\–\\-]+) Life per second",
+      "replace": "生命每秒再生 $1"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "攻击技能的元素伤害提高 $1%"
+    },
+    {
+      "regex": "Loads ([\\d\\.\\–\\-]+) additional bolts",
+      "replace": "额外装填 $1 支弩箭"
+    },
+    {
+      "regex": "Grenade Skills have \\+([\\d\\.\\–\\-]+) Cooldown Use",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Grenade Duration",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "Grenades have ([\\d\\.\\–\\-]+)% chance to activate a second time",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum number of Summoned Ballista Totems",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Reload Speed",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance when you Reload a Crossbow to be immediate",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant \\+([\\d\\.\\–\\-]+) to Maximum Rage",
+      "replace": "范围内的核心天赋同时提供 +$1 最大怒火"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% of Damage is taken from Mana before Life",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Block chance",
+      "replace": "范围内的核心天赋同时提供 [格挡]几率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Stun Buildup",
+      "replace": "晕眩持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Gain ([\\d\\.\\–\\-]+) Rage when Hit by an Enemy",
+      "replace": "范围内的核心天赋同时提供 被敌人击中时获得 $1 点怒火"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Hit Chance with Daggers",
+      "replace": "范围内的核心天赋同时提供 匕首攻击的暴击率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed with Daggers",
+      "replace": "范围内的核心天赋同时提供 匕首攻击的攻击速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Stun Buildup with Maces",
+      "replace": "范围内的核心天赋同时提供 锤类的晕眩积蓄提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Defences from Equipped Shield",
+      "replace": "范围内的核心天赋同时提供 从盾牌获取的防御提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Ignite Magnitude",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed with Axes",
+      "replace": "范围内的核心天赋同时提供 斧类攻击的攻击速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Armour Break Duration",
+      "replace": "范围内的核心天赋同时提供 护甲破损持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Knockback Distance",
+      "replace": "范围内的核心天赋同时提供 击退距离延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Hits have ([\\d\\.\\–\\-]+)% reduced Critical Hit Chance against you",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% of Skill Mana Costs Converted to Life Costs",
+      "replace": "范围内的核心天赋同时提供 技能的魔力消耗的 $1% 转化为生命消耗"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Skill Effect Duration",
+      "replace": "范围内的核心天赋同时提供 技能效果持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed with Swords",
+      "replace": "范围内的核心天赋同时提供 剑类攻击的攻击速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% of Damage taken Recouped as Mana",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% of Damage taken Recouped as Life",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Gain ([\\d\\.\\–\\-]+) Rage on Melee Hit",
+      "replace": "范围内的核心天赋同时提供 近战击中时获得 $1 怒火"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Hit Chance with Flails",
+      "replace": "范围内的核心天赋同时提供 连枷的暴击率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Bleeding Duration",
+      "replace": "范围内的核心天赋同时提供 流血持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased maximum Mana",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Mana Cost Efficiency",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Mana Flasks gain ([\\d\\.\\–\\-]+)\\.([\\d\\.\\–\\-]+) charges per Second",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Magnitude of Bleeding you inflict",
+      "replace": "范围内的核心天赋同时提供 你造成的流血强度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Glory generation for Banner Skills",
+      "replace": "每击败一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Global Defences",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Regenerate ([\\d\\.\\–\\-]+)% of maximum Life per second",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Life Flasks gain ([\\d\\.\\–\\-]+)\\.([\\d\\.\\–\\-]+) charges per Second",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Life Regeneration rate",
+      "replace": "范围内的核心天赋同时提供 生命再生率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Presence Area of Effect",
+      "replace": "范围内的核心天赋同时提供 同场效果范围扩大 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Unarmed Attack Speed",
+      "replace": "范围内的核心天赋同时提供 徒手攻击速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Trap Throwing Speed",
+      "replace": "范围内的核心天赋同时提供 陷阱投掷速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Warcry Buff Effect",
+      "replace": "范围内的核心天赋同时提供 战吼的增益效果提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Warcry Cooldown Recovery Rate",
+      "replace": "范围内的核心天赋同时提供 战吼冷却回复速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Minions Revive ([\\d\\.\\–\\-]+)% faster",
+      "replace": "范围内的核心天赋同时提供 召唤生物的复活速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Minions have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "范围内的核心天赋同时提供 召唤生物的效果区域扩大 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Charms gain ([\\d\\.\\–\\-]+)\\.([\\d\\.\\–\\-]+) charges per Second",
+      "replace": "范围内的核心天赋同时提供 咒符每秒获得 $1.$2 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Effect of Notable Passive Skills in Radius",
+      "replace": "范围内的核心天赋效果提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Daggers",
+      "replace": "獲得相當於傷害 $1% 的額外閃電傷害"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Maces",
+      "replace": "范围内的小型天赋同时提供 锤类的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage against Enemies with Fully Broken Armour",
+      "replace": "范围内的小型天赋同时提供 对护甲完全破损的敌人造成的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Break ([\\d\\.\\–\\-]+)% increased Armour",
+      "replace": "陷阱伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Axes",
+      "replace": "范围内的小型天赋同时提供 斧类伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% chance for Attack Hits to apply Incision",
+      "replace": "范围内的小型天赋同时提供 攻击击中有 $1% 的几率施加创口"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Damage",
+      "replace": "范围内的小型天赋同时提供 攻击伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Armour",
+      "replace": "范围内的小型天赋同时提供 护甲提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Fire Damage",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% chance to inflict Bleeding on Hit",
+      "replace": "范围内的小型天赋同时提供 击中时有 $1% 的几率造成流血"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Swords",
+      "replace": "物理伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Melee Damage",
+      "replace": "范围内的小型天赋同时提供 近战伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Thorns damage",
+      "replace": "范围内的小型天赋同时提供 荆棘伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Unarmed Attacks",
+      "replace": "范围内的小型天赋同时提供 空手攻击时伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Flails",
+      "replace": "范围内的小型天赋同时提供 连枷的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Totem Placement speed",
+      "replace": "范围内的小型天赋同时提供 你的图腾放置速度加快 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Banner Skills have ([\\d\\.\\–\\-]+)% increased Duration",
+      "replace": "范围内的小型天赋同时提供 旗帜技能的持续时间延长 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Banner Skills have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "范围内的小型天赋同时提供 旗帜技能的效果范围扩大 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Empowered Attacks deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "攻击技能的元素伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Global Physical Damage",
+      "replace": "范围内的小型天赋同时提供 全局物理伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Damage Penetrates ([\\d\\.\\–\\-]+)% Fire Resistance",
+      "replace": "火焰伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased amount of Life Leeched",
+      "replace": "范围内的小型天赋同时提供 生命偷取量提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Totem Life",
+      "replace": "范围内的小型天赋同时提供 图腾的生命提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Totem Damage",
+      "replace": "范围内的小型天赋同时提供 图腾伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Weapon Swap Speed",
+      "replace": "范围内的小型天赋同时提供 武器切换速度加快 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Trap Damage",
+      "replace": "范围内的小型天赋同时提供 陷阱伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Flammability Magnitude",
+      "replace": "易燃强度提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Elemental Damage",
+      "replace": "范围内的小型天赋同时提供 元素伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Stun Threshold",
+      "replace": "范围内的小型天赋同时提供 晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Warcries",
+      "replace": "范围内的小型天赋同时提供 战吼的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Warcry Speed",
+      "replace": "范围内的小型天赋同时提供 战吼速度加快 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Minions have ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "范围内的小型天赋同时提供 召唤生物的最大生命提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Minion Accuracy Rating",
+      "replace": "范围内的小型天赋同时提供 召唤生物命中值提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Minions have ([\\d\\.\\–\\-]+)% additional Physical Damage Reduction",
+      "replace": "范围内的小型天赋同时提供 召唤生物有 $1% 额外物理伤害减免"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Effect of Small Passive Skills in Radius",
+      "replace": "范围内的小型天赋效果提高 $1%"
+    },
+    {
+      "regex": "Upgrades Radius to Largelocal jewel effect base radius \\[([\\d\\.\\–\\-]+)\\]",
+      "replace": "将范围升级为大型local jewel effect base radius [$1]"
+    },
+    {
+      "regex": "Upgrades Radius to Mediumlocal jewel effect base radius \\[([\\d\\.\\–\\-]+)\\]",
+      "replace": "将范围升级为中型local jewel effect base radius [$1]"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "范围内的核心天赋同时提供 暴击几率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "范围内的小型天赋效果提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Chill Duration on Enemies",
+      "replace": "范围内的核心天赋同时提供 敌人被冰缓的持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Duration of Damaging Ailments on Enemies",
+      "replace": "范围内的核心天赋同时提供 敌人受到伤害性异常状态的持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Freeze Buildup",
+      "replace": "冻结积蓄值提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Hit Chance for Spells",
+      "replace": "范围内的核心天赋同时提供 法术暴击率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Spell Damage Bonus",
+      "replace": "暴击几率 +$1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Meta Skills gain ([\\d\\.\\–\\-]+)% increased Energy",
+      "replace": "范围内的核心天赋同时提供 非凡技能获得的能量提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Offering Skills have ([\\d\\.\\–\\-]+)% increased Duration",
+      "replace": "范围内的核心天赋同时提供 奉献技能的持续时间提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Aura Skills have ([\\d\\.\\–\\-]+)% increased Magnitudes",
+      "replace": "范围内的核心天赋同时提供 光环技能的强度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Recover ([\\d\\.\\–\\-]+)% of maximum Mana on Kill",
+      "replace": "每击败一名敌人获得 $1 点魔力"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% chance to gain Volatility on Kill",
+      "replace": "范围内的核心天赋同时提供 击败敌人时有 $1% 的几率获得无常"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Freeze Buildup with Quarterstaves",
+      "replace": "范围内的核心天赋同时提供 节杖的冻结积蓄值提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% faster start of Energy Shield Recharge",
+      "replace": "该装备的能量护盾提高 $1 最大魔力"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Magnitude of Damaging Ailments you inflict with Critical Hits",
+      "replace": "范围内的核心天赋同时提供 你的暴击造成的伤害性异常状态强度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Debuffs on you expire ([\\d\\.\\–\\-]+)% faster",
+      "replace": "范围内的核心天赋同时提供 你身上的减益效果消失速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Magnitude of Shock you inflict",
+      "replace": "范围内的核心天赋同时提供 你造成的感电强度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Magnitude of Ailments you inflict",
+      "replace": "范围内的核心天赋同时提供 你造成的异常状态强度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Damaging Ailments deal damage ([\\d\\.\\–\\-]+)% faster",
+      "replace": "范围内的核心天赋同时提供 伤害型异常状态生效速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Recover ([\\d\\.\\–\\-]+)% of maximum Life on Kill",
+      "replace": "每击败一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Cast Speed",
+      "replace": "范围内的核心天赋同时提供 施法速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Withered Magnitude",
+      "replace": "范围内的核心天赋同时提供 死亡凋零强度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased chance to inflict Ailments",
+      "replace": "范围内的核心天赋同时提供 造成异常状态的几率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Minions have ([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "范围内的核心天赋同时提供 召唤生物的暴击率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Minions have ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "范围内的核心天赋同时提供 召唤生物的暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Minions have ([\\d\\.\\–\\-]+)% increased Attack and Cast Speed",
+      "replace": "范围内的核心天赋同时提供 召唤生物的攻击和施法速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Energy Shield from Equipped Focus",
+      "replace": "范围内的核心天赋同时提供 装备法器的能量护盾提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Area of Effect of Curses",
+      "replace": "范围内的核心天赋同时提供 诅咒的效果范围扩大 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Curse Magnitudes",
+      "replace": "范围内的核心天赋同时提供 诅咒强度提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Triggered Spells deal ([\\d\\.\\–\\-]+)% increased Spell Damage",
+      "replace": "范围内的小型天赋同时提供 被触发法术的法术伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Cold Damage",
+      "replace": "范围内的小型天赋同时提供 冰霜伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Freeze Threshold",
+      "replace": "范围内的小型天赋同时提供 冻结阈值提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Spell Damage",
+      "replace": "范围内的小型天赋同时提供 法术伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Offerings have ([\\d\\.\\–\\-]+)% increased Maximum Life",
+      "replace": "范围内的小型天赋同时提供 奉献的生命上限提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Shock Duration",
+      "replace": "范围内的小型天赋同时提供 感电持续时间延长 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased chance to Shock",
+      "replace": "感电几率提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Chaos Damage",
+      "replace": "范围内的小型天赋同时提供 混沌伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Gain additional Ailment Threshold equal to ([\\d\\.\\–\\-]+)% of maximum Energy Shield",
+      "replace": "范围内的小型天赋同时提供 获得额外异常状态阈值，相当于最大能量护盾的 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Gain additional Stun Threshold equal to ([\\d\\.\\–\\-]+)% of maximum Energy Shield",
+      "replace": "范围内的小型天赋同时提供 获得相当于能量护盾上限 $1% 的晕眩阈值"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Mana Regeneration Rate",
+      "replace": "范围内的小型天赋同时提供 魔力再生率提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Energy Shield Recharge Rate",
+      "replace": "范围内的小型天赋同时提供 能量护盾充能率提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased maximum Energy Shield",
+      "replace": "范围内的小型天赋同时提供 能量护盾上限提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage if you have Consumed a Corpse Recently",
+      "replace": "范围内的小型天赋同时提供 若你近期内有消耗灵柩，则伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Damage Penetrates ([\\d\\.\\–\\-]+)% Cold Resistance",
+      "replace": "范围内的小型天赋同时提供 伤害穿透 $1% 冰霜抗性"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Minions deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "范围内的小型天赋同时提供 召唤生物的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Minions have \\+([\\d\\.\\–\\-]+)% to all Elemental Resistances",
+      "replace": "范围内的小型天赋同时提供 召唤生物获得 +$1% 元素抗性"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Minions have \\+([\\d\\.\\–\\-]+)% to Chaos Resistance",
+      "replace": "范围内的小型天赋同时提供 召唤生物有 +$1% 混沌抗性"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Curse Duration",
+      "replace": "范围内的小型天赋同时提供 诅咒持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% chance to Pierce an Enemy",
+      "replace": "范围内的核心天赋同时提供 $1% 的几率穿透一个敌人"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Parried Debuff Duration",
+      "replace": "范围内的核心天赋同时提供 被招架减益状态的持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Duration of Ignite, Shock and Chill on Enemies",
+      "replace": "所有物理法术技能等级 +$1"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Pin Buildup",
+      "replace": "范围内的核心天赋同时提供 定身积蓄值提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed with Bows",
+      "replace": "范围内的核心天赋同时提供 弓类攻击的攻击速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Hit Chance for Attacks",
+      "replace": "范围内的核心天赋同时提供 攻击暴击率提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus for Attack Damage",
+      "replace": "范围内的核心天赋同时提供 攻击伤害的暴击伤害加成 +$1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed",
+      "replace": "范围内的核心天赋同时提供 攻击速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Mana Flask Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的魔力药剂充能提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Life Flask Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的生命药剂充能提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Flask Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的药剂充能提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Charm Charges gained",
+      "replace": "范围内的核心天赋同时提供 获得的咒符充能提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed with Quarterstaves",
+      "replace": "范围内的核心天赋同时提供 节杖的攻击速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Cooldown Recovery Rate",
+      "replace": "范围内的核心天赋同时提供 冷却回复速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Effect of your Mark Skills",
+      "replace": "范围内的核心天赋同时提供 你的印记技能效果提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% reduced Slowing Potency of Debuffs on You",
+      "replace": "范围内的核心天赋同时提供 你受到的异常状态的减速强度降低 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Magnitude of Poison you inflict",
+      "replace": "范围内的核心天赋同时提供 你造成的中毒强度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Projectiles have ([\\d\\.\\–\\-]+)% chance for an additional Projectile when Forking",
+      "replace": "范围内的核心天赋同时提供 投射物分裂时，有 $1% 的几率发射一个额外投射物"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant Projectiles have ([\\d\\.\\–\\-]+)% chance to Chain an additional time from terrain",
+      "replace": "范围内的核心天赋同时提供 投射物击中地形时有 $1% 的几率额外连锁一次"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Projectile Speed",
+      "replace": "范围内的核心天赋同时提供 投射物速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Movement Speed",
+      "replace": "范围内的核心天赋同时提供 移动速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus with Spears",
+      "replace": "范围内的核心天赋同时提供 战矛的暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed with Spears",
+      "replace": "范围内的核心天赋同时提供 战矛的攻击速度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Attack Speed with Crossbows",
+      "replace": "范围内的核心天赋同时提供 战弩的攻击速度提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Crossbow Reload Speed",
+      "replace": "范围内的核心天赋同时提供 战弩装填速度加快 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Stun Threshold while Parrying",
+      "replace": "范围内的核心天赋同时提供 招架时的晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Blind Effect",
+      "replace": "范围内的核心天赋同时提供 致盲效果提高$1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Poison Duration",
+      "replace": "范围内的核心天赋同时提供 中毒持续时间延长 $1%"
+    },
+    {
+      "regex": "Notable Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased bonuses gained from Equipped Quiver",
+      "replace": "范围内的核心天赋同时提供 装备箭袋获得的加成提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Accuracy Rating with Bows",
+      "replace": "+$1 命中值"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Bows",
+      "replace": "范围内的小型天赋同时提供 弓类伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% chance to Blind Enemies on Hit with Attacks",
+      "replace": "范围内的小型天赋同时提供 攻击击中有 $1% 的几率致盲敌人"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Companions deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "范围内的小型天赋同时提供 伙伴的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Companions have ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "范围内的小型天赋同时提供 伙伴的生命上限提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% chance to Daze on Hit",
+      "replace": "晕眩持续时间延长 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% chance to Poison on Hit",
+      "replace": "范围内的小型天赋同时提供 击中时有 $1% 的几率使目标中毒"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Hits against Rare and Unique Enemies",
+      "replace": "范围内的小型天赋同时提供 击中稀有怪和传奇怪伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage while you have an active Charm",
+      "replace": "范围内的小型天赋同时提供 激活咒符时，伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Quarterstaves",
+      "replace": "该装备的能量护盾提高 $1 最大生命"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Herald Skills deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "范围内的小型天赋同时提供 捷技能造成的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Accuracy Rating",
+      "replace": "范围内的小型天赋同时提供 命中值提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased amount of Mana Leeched",
+      "replace": "范围内的小型天赋同时提供 魔力偷取量提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Stun Threshold if you haven't been Stunned Recently",
+      "replace": "范围内的小型天赋同时提供 若你[近期]未被晕眩，晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Projectile Damage if you've dealt a Melee Hit in the past eight seconds",
+      "replace": "范围内的小型天赋同时提供 若你在过去 $1 秒内造成过近战击中，投射物伤害提高 $2%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Melee Damage if you've dealt a Projectile Attack Hit in the past eight seconds",
+      "replace": "范围内的小型天赋同时提供 若你在过去 $1 秒内造成过投射物攻击击中，近战伤害提高 $2%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Evasion Rating",
+      "replace": "范围内的小型天赋同时提供 闪避值提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Lightning Damage",
+      "replace": "附加 $1 - $2 闪电伤害"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Damage Penetrates ([\\d\\.\\–\\-]+)% Lightning Resistance",
+      "replace": "范围内的小型天赋同时提供 伤害穿透 $1% 的闪电抗性"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Projectile Damage",
+      "replace": "范围内的小型天赋同时提供 投射物伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Hazard Damage",
+      "replace": "范围内的小型天赋同时提供 危害伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Mana Recovery from Flasks",
+      "replace": "范围内的小型天赋同时提供 药剂的魔力回复提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Life Recovery from Flasks",
+      "replace": "范围内的小型天赋同时提供 药剂的生命回复提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Flask Effect Duration",
+      "replace": "范围内的小型天赋同时提供 药剂效果的持续时间延长 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Elemental Ailment Threshold",
+      "replace": "范围内的小型天赋同时提供 异常状态阈值提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Spears",
+      "replace": "范围内的小型天赋同时提供 战矛的伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Damage with Crossbows",
+      "replace": "闪电伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Parry Damage",
+      "replace": "范围内的小型天赋同时提供 招架伤害提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant ([\\d\\.\\–\\-]+)% increased Charm Effect Duration",
+      "replace": "范围内的小型天赋同时提供 咒符效果的持续时间延长 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Mark Skills have ([\\d\\.\\–\\-]+)% increased Skill Effect Duration",
+      "replace": "范围内的小型天赋同时提供 咒印技能的技能效果持续时间提高 $1%"
+    },
+    {
+      "regex": "Small Passive Skills in Radius also grant Mark Skills have ([\\d\\.\\–\\-]+)% increased Use Speed",
+      "replace": "范围内的小型天赋同时提供 咒印技能的施法速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Quantity of Gold Dropped by Slain Enemies",
+      "replace": "被击败的敌人掉落的金币数量提高 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Life per Enemy Hit with Attacks",
+      "replace": "每击中一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Lightning Damage taken Recouped as Life",
+      "replace": "将承受的闪电伤害的 $1% 吸纳为生命"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Maximum Frenzy Charges",
+      "replace": "狂怒球数量上限 +$1"
+    },
+    {
+      "regex": "Debuffs you inflict have ([\\d\\.\\–\\-]+)% increased Slow Magnitude",
+      "replace": "你造成的减益状态的减速强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased effect of Socketed Items",
+      "replace": "镶嵌的物品效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to inflict Bleeding",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to Poison",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Gain Arcane Surge when you deal a Critical Hit",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed when on Full Life",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Skill Speed if you've consumed a Frenzy Charge Recently",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Leech is Instant",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Maximum Power Charges",
+      "replace": "暴击球数量上限 +$1"
+    },
+    {
+      "regex": "Enemies you Mark take ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Cold Damage taken Recouped as Life",
+      "replace": "将承受的冰霜伤害的 $1% 吸纳为生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Elemental Damage taken Recouped as Energy Shield",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Cost Efficiency",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased effect of Arcane Surge on you",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Glory generation",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Poison on Hit with this weapon",
+      "replace": "此武器击中时有 $1% 的几率使目标中毒"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to build an additional Combo on Hit",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "Recover ([\\d\\.\\–\\-]+)% of Maximum Mana when you expend at least ([\\d\\.\\–\\-]+) Combo",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Recover ([\\d\\.\\–\\-]+)% of Maximum Life when you expend at least ([\\d\\.\\–\\-]+) Combo",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Critical Damage Bonus with Traps",
+      "replace": "+$1% 暴击伤害加成"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Trap Skill Gems",
+      "replace": "所有陷阱技能宝石等级提高 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Hit Chance with Traps",
+      "replace": "暴击几率 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Trap Damage",
+      "replace": "陷阱伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)",
+      "replace": "$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Skills to retain ([\\d\\.\\–\\-]+)% of Glory on use",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Reservation Efficiency of Herald Skills",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Evasion Rating from Equipped Body Armour",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Strength, Dexterity or Intelligence",
+      "replace": "力量、敏捷或智慧提高 $1%"
+    },
+    {
+      "regex": "Mana Flasks gain ([\\d\\.\\–\\-]+) charges per Second",
+      "replace": "魔力药剂每秒获得 $1 次充能"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Deflection Rating",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "Invocated Spells have ([\\d\\.\\–\\-]+)% chance to consume half as much Energy",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Global Defences",
+      "replace": "全局防御提高 $1%"
+    },
+    {
+      "regex": "Life Flasks gain ([\\d\\.\\–\\-]+) charges per Second",
+      "replace": "生命药剂每秒获得 $1 次充能"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Skills",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Quality of all Skills",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Cooldown Recovery Rate",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "Charms gain ([\\d\\.\\–\\-]+) charges per Second",
+      "replace": "咒符每秒获得 $1 次充能"
+    },
+    {
+      "regex": "Equipment and Skill Gems have ([\\d\\.\\–\\-]+)% reduced Attribute Requirements",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour from Equipped Body Armour",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield from Equipped Body Armour",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Regeneration Rate while stationary",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Freeze Duration on you",
+      "replace": "你被冰冻的持续时间缩短 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Chill Duration on you",
+      "replace": "你被冰缓的持续时间缩短 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Shock duration on you",
+      "replace": "你被感电的持续时间缩短 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Cost Efficiency if you have Dodge Rolled Recently",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) metres to Dodge Roll distance",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Maximum Mana as Armour",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Fire Damage taken Recouped as Life",
+      "replace": "将承受的火焰伤害的 $1% 吸纳为生命"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Thorns Critical Hit Chance",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Fire Thorns damage per ([\\d\\.\\–\\-]+) maximum Life",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Maximum Endurance Charges",
+      "replace": "耐力球数量上限 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Charms you use to not consume Charges",
+      "replace": "消耗生命的法術增加 $1% 法術傷害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Flasks you use to not consume Charges",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Regeneration rate during Effect of any Life Flask",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Slowing Potency of Debuffs on You if you've used a Charm Recently",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Flask Charges used",
+      "replace": "使用的药剂充能降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Charm Charges used",
+      "replace": "使用的咒符充能降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flask Mana Recovery rate",
+      "replace": "药剂魔力回复速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flask Life Recovery rate",
+      "replace": "药剂生命回复速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed when on Low Life",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Block chance",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage per ([\\d\\.\\–\\-]+) Maximum Life",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage per ([\\d\\.\\–\\-]+) maximum Mana",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Damaging Ailments you inflict",
+      "replace": "增加 $1%你所施加之傷害型異常狀態的幅度"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum number of Elemental Infusions",
+      "replace": "元素灌注最大数量 +$1"
+    },
+    {
+      "regex": "Archon recovery period expires ([\\d\\.\\–\\-]+)% faster",
+      "replace": "执政官间隔期的消减速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Archon Buff duration",
+      "replace": "执政官增益状态持续时间提高 $1%"
+    }
+  ]
+}

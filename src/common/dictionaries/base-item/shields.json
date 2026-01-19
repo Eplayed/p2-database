@@ -1,0 +1,404 @@
+[
+  {
+    "en": "Golden Flame",
+    "cn": "黄金圣炎",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Shields/DemigodsShield.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Splintered Tower Shield",
+    "cn": "朽木塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Painted Tower Shield",
+    "cn": "彩绘塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Braced Tower Shield",
+    "cn": "加固塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Barricade Tower Shield",
+    "cn": "障壁塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Effigial Tower Shield",
+    "cn": "塑像塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rampart Tower Shield",
+    "cn": "壁垒塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heraldric Tower Shield",
+    "cn": "徽纹塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Tower Shield",
+    "cn": "坚石塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crucible Tower Shield",
+    "cn": "熔铸塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancestor Tower Shield",
+    "cn": "先祖塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Phalanx Tower Shield",
+    "cn": "方阵塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Defiant Tower Shield",
+    "cn": "无畏塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blacksteel Tower Shield",
+    "cn": "黑钢塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hardwood Targe",
+    "cn": "硬木圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pelage Targe",
+    "cn": "毛皮圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Studded Targe",
+    "cn": "镶钉圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crescent Targe",
+    "cn": "新月圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chiseled Targe",
+    "cn": "镌凿圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Feathered Targe",
+    "cn": "羽饰圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stratified Targe",
+    "cn": "分层圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Carved Targe",
+    "cn": "雕纹圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mosaic Targe",
+    "cn": "厚装圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Aureate Targe",
+    "cn": "金辉圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Targe",
+    "cn": "华丽圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blazon Crest Shield",
+    "cn": "饰印纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sigil Crest Shield",
+    "cn": "魔印纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Emblem Crest Shield",
+    "cn": "圣徽纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jingling Crest Shield",
+    "cn": "铃鸣纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sectarian Crest Shield",
+    "cn": "宗室纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Omen Crest Shield",
+    "cn": "噩兆纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wayward Crest Shield",
+    "cn": "无定纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Seer Crest Shield",
+    "cn": "先知纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stoic Crest Shield",
+    "cn": "清修纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Empyreal Crest Shield",
+    "cn": "苍穹纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Deified Crest Shield",
+    "cn": "神尊纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Golden Shield",
+    "cn": "金辉盾牌",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Aged Tower Shield",
+    "cn": "陈旧塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Metalworked Tower Shield",
+    "cn": "匠工塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cultist Tower Shield",
+    "cn": "密会塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bulwark Tower Shield",
+    "cn": "堡垒塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Noble Tower Shield",
+    "cn": "贵族塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Goldworked Tower Shield",
+    "cn": "金工塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ironwood Targe",
+    "cn": "铁木圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fur-lined Targe",
+    "cn": "毛皮衬里圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mercenary Targe",
+    "cn": "佣兵圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Polished Targe",
+    "cn": "抛光圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Targe",
+    "cn": "石制圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Avian Targe",
+    "cn": "飞羽圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Painted Crest Shield",
+    "cn": "彩绘纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Engraved Crest Shield",
+    "cn": "雕饰纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Descry Crest Shield",
+    "cn": "圣印纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dekharan Crest Shield",
+    "cn": "德卡拉纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Quartered Crest Shield",
+    "cn": "四分纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Glowering Crest Shield",
+    "cn": "怒视纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Royal Tower Shield",
+    "cn": "皇家塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fortress Tower Shield",
+    "cn": "要塞塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Tower Shield",
+    "cn": "瓦尔塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tawhoan Tower Shield",
+    "cn": "塔赫亚塔盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Tower10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mammoth Targe",
+    "cn": "猛犸圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Baroque Targe",
+    "cn": "巴洛克圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Soaring Targe",
+    "cn": "翱翔圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Golden Targe",
+    "cn": "耀金圆盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Shield10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Intricate Crest Shield",
+    "cn": "精巧纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sekheman Crest Shield",
+    "cn": "丝克玛纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Crest Shield",
+    "cn": "瓦尔纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blacksteel Crest Shield",
+    "cn": "黑钢纹章盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Crest07.webp",
+    "type": "base_item"
+  }
+]

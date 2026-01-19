@@ -1,0 +1,4682 @@
+[
+  {
+    "en": "Leap Slam",
+    "cn": "跃击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteLeapSlam.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shield Charge",
+    "cn": "重盾冲锋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteShieldCharge.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Breaker",
+    "cn": "摧甲重击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteHeavyStrike.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shockwave Totem",
+    "cn": "震波图腾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteShockwaveTotem.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Ash",
+    "cn": "灰烬之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfAshSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Infernal Cry",
+    "cn": "炽焰战吼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteInfernalCry.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Earthquake",
+    "cn": "震地",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteEarthquake.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sunder",
+    "cn": "大地震击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteSunder.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Seismic Cry",
+    "cn": "震地战吼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteSeismicCry.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Earthshatter",
+    "cn": "尖刺战吼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteEarthshatter.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Boneshatter",
+    "cn": "七伤破",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteBoneshatter.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Volcanic Fissure",
+    "cn": "火山裂缝",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteVolcanicFissure.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rolling Slam",
+    "cn": "轰动猛击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteDoubleSlam.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Supercharged Slam",
+    "cn": "蓄威神锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteSuperchargedSlam.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ancestral Warrior Totem",
+    "cn": "先祖战士图腾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteAncestralWarriorTotem.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Perfect Strike",
+    "cn": "完美一击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BrutePerfectStrike.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Resonating Shield",
+    "cn": "共振护盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteResonatingShield.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Magma Barrier",
+    "cn": "岩浆屏障",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteMagmaBarrier.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Scavenged Plating",
+    "cn": "装甲回收",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteScavengedPlating.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Molten Blast",
+    "cn": "熔岩爆裂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteMoltenBlast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hammer of the Gods",
+    "cn": "诸天之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteHammerOfTheGods.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stampede",
+    "cn": "溃败",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteStampede.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shield Wall",
+    "cn": "盾墙",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteShieldWall.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fortifying Cry",
+    "cn": "坚韧战吼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WarriorShieldingCry.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Time of Need",
+    "cn": "紧急时刻",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TimeOfNeedSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Overwhelming Presence",
+    "cn": "压迫气场",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/OverwhelmingPressureSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Berserk",
+    "cn": "盛怒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BeserkSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Ash",
+    "cn": "灰烬之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfAshSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Iron Ward",
+    "cn": "钢铁看守",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WardingSteel.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Forge Hammer",
+    "cn": "锻造之锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WarriorForgeHammer.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ancestral Cry",
+    "cn": "先祖战吼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WarriorAncestralCry.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Snipers Mark",
+    "cn": "狙击之印",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/projectileweakness.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rain of Arrows",
+    "cn": "箭雨",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerRainOfArrowsSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Arrow",
+    "cn": "闪电箭矢",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerLightningArrow.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Barrage",
+    "cn": "弹幕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerBarrageSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Thunder",
+    "cn": "闪电之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Plague Bearer",
+    "cn": "灾难使徒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerPlagueBearerSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Assault",
+    "cn": "极速进攻",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressRapidAssault.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Disengage",
+    "cn": "退避三舍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ImpaleSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blood Hunt",
+    "cn": "猎血寻腥",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressBloodHuntSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Whirling Slash",
+    "cn": "回旋挥斩",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressWhirlingSlash.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spearfield",
+    "cn": "枪林矛阵",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressSpearField.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Spear",
+    "cn": "闪电战矛",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressStormSpear.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Glacial Lance",
+    "cn": "冰川长枪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressGlacialLance.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Escape Shot",
+    "cn": "逃脱射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerFrostEscapeShot.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spiral Volley",
+    "cn": "螺旋齐射",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerSpiralVolleySkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Detonating Arrow",
+    "cn": "爆破箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerDetonatingArrowSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Poisonburst Arrow",
+    "cn": "毒爆箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerPoisonBurstArrow.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Toxic Growth",
+    "cn": "剧毒增生",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerPoisonBloomSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stormcaller Arrow",
+    "cn": "唤雷箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerShockingArrow.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Rod",
+    "cn": "引雷针",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerLightningRodRainSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Snipe",
+    "cn": "狙击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerSnipeShotArrow.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Gas Arrow",
+    "cn": "瓦斯之箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerGasCloudSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Electrocuting Arrow",
+    "cn": "电殛箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerElectrocutingRodSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vine Arrow",
+    "cn": "藤缠箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerPoisonVineArrowSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rhoa Mount",
+    "cn": "恐喙鸟坐骑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RhoaMountSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Twister",
+    "cn": "旋龙",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TwisterSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Explosive Spear",
+    "cn": "爆破战矛",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressRemoteMineSpear.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Thunderous Leap",
+    "cn": "雷鸣飞跃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ThunderousLeapSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wind Dancer",
+    "cn": "风舞者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerWindDancerSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shockchain Arrow",
+    "cn": "连环震击箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerShockchainSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ice Shot",
+    "cn": "冰霜射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerIceShot.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Voltaic Mark",
+    "cn": "流电印记",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ShockingMarkSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tornado Shot",
+    "cn": "龙卷射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerTornadoShotSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Alchemists Boon",
+    "cn": "炼金师的恩典",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/AlchemistsBoonSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Magnetic Salvo",
+    "cn": "磁性齐射",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerMagneticSalvo.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Freezing Salvo",
+    "cn": "冻结齐射",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerFreezingSalvoSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Plague",
+    "cn": "荒芜之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfAgonySkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mirage Archer",
+    "cn": "幻影射手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/LingeringMirageSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Combat Frenzy",
+    "cn": "战斗狂怒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerCombatFrenzySkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Thunder",
+    "cn": "闪电之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfThunderSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Whirlwind Lance",
+    "cn": "旋风投枪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WindstormLanceSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Primal Strikes",
+    "cn": "原始打击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PrimalStrikesSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cull The Weak",
+    "cn": "终结弱者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FrenziedLungeSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fangs of Frost",
+    "cn": "刺骨寒冰",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FangsofFrostSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wind Serpents Fury",
+    "cn": "腾蛇之怒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WindSerpentsFurySkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rake",
+    "cn": "斜掠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressBloodHunt.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bloodhounds Mark",
+    "cn": "血犬印记",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MarkoftheBloodhoundSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tame Beast",
+    "cn": "驯服野兽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressTameBeast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spear of Solaris",
+    "cn": "日耀之矛",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SolarisSpearSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Storm Lance",
+    "cn": "岚舞长枪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressOverchargedSpear.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Sundering",
+    "cn": "元素碎裂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressExtraElements.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Companion: {0}",
+    "cn": "伙伴：{0}",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressSummonCompanion.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Trail of Caltrops",
+    "cn": "铁蒺藜之路",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CaltropsOnDodgeSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Toxic Domain",
+    "cn": "毒性领域",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerToxicDomain.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ice-Tipped Arrows",
+    "cn": "冰尖箭矢",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerShearingBolts.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Firebolt",
+    "cn": "火焰弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FireballSkillStaff.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ice Nova",
+    "cn": "冰霜新星",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressIceNova.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Detonate Dead",
+    "cn": "爆灵术",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchDetonateDead.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Volatile Dead",
+    "cn": "灵体火球",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/VolatileDeadWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Raise Zombie",
+    "cn": "魔卫复苏",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchRaiseZombie.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spark",
+    "cn": "电球",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressSpark.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spark",
+    "cn": "电球",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressSpark.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frost Wall",
+    "cn": "冰墙",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressFrostWall.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Enervating Nova",
+    "cn": "衰颓新星",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/EnervatingNovaWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Temporal Chains",
+    "cn": "时空锁链",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/temporalchains.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Enfeeble",
+    "cn": "衰弱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/enfeeble.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Despair",
+    "cn": "绝望",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Despair.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Warp",
+    "cn": "闪电传送",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressLightningWarp.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Firestorm",
+    "cn": "烈炎风暴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchFirestorm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Power Siphon",
+    "cn": "力量抽取",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PowerSiphonWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Discipline",
+    "cn": "纪律",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DisciplineWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Arc",
+    "cn": "电弧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressArc.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Arctic Armour",
+    "cn": "极地装甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressArcticArmour.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Flammability",
+    "cn": "易燃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Flammability.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hypothermia",
+    "cn": "急冻",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Frostbite.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Conductivity",
+    "cn": "导电",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Conductivity.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Weakness",
+    "cn": "元素要害",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/elementalweakness.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Incinerate",
+    "cn": "烧毁",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressIncinerate.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Purity of Fire",
+    "cn": "火焰净化",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PurityofFireWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Purity of Ice",
+    "cn": "冰霜净化",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PurityofColdWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Purity of Lightning",
+    "cn": "闪电净化",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PurityofLightningWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Impurity",
+    "cn": "不净",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PurityofChaosWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Flameblast",
+    "cn": "烈焰爆破",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressFlameblast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ball Lightning",
+    "cn": "天雷之珠",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressBallLightning.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bone Offering",
+    "cn": "装甲奉献",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchBoneOffering.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blasphemy",
+    "cn": "诅咒光环",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchBlasphemy.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frost Bomb",
+    "cn": "寒霜爆",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressFrostBomb.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Orb of Storms",
+    "cn": "风暴漩涡",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressOrbOfStorms.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Contagion",
+    "cn": "顽疾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchContagion.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wither",
+    "cn": "死亡凋零",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Wither.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Essence Drain",
+    "cn": "精华吸取",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchEssenceDrain.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frostbolt",
+    "cn": "寒冰弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressFrostbolt.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Dark Pact",
+    "cn": "暗夜契约",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DeathPactSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Warrior",
+    "cn": "魔侍武士",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchWarriorSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Reaver",
+    "cn": "魔侍掠夺者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchReaverSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Brute",
+    "cn": "魔侍蛮兵",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchBruteSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Sniper",
+    "cn": "魔侍神射手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchArcherSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Frost Mage",
+    "cn": "魔侍冰霜法师",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchFrostSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Storm Mage",
+    "cn": "魔侍风暴法师",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchStormSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Arsonist",
+    "cn": "魔侍焚焰使",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchArsonistSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skeletal Cleric",
+    "cn": "魔侍祭司",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchClericSkeleton.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vulnerability",
+    "cn": "脆弱",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/vulnerability.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Soulrend",
+    "cn": "裂魂术",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Soulrend.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sigil of Power",
+    "cn": "威能法印",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SigilofPowerWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Flame Wall",
+    "cn": "烈焰之墙",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressFlameWall.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hexblast",
+    "cn": "魔蛊爆炸",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchHexBlast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Exsanguinate",
+    "cn": "赤炼魔光",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BloodTendrilsSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Reap",
+    "cn": "赤炼收割",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ReapWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Eye of Winter",
+    "cn": "凛冬之眼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressEyeofWinter.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Conduit",
+    "cn": "闪电通道",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressLightningConduit.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Galvanic Field",
+    "cn": "电流场",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/GalvanicFieldWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Comet",
+    "cn": "彗星落",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressComet.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mana Tempest",
+    "cn": "魔力风暴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressManaTempest.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Bolt",
+    "cn": "闪电",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/LightningBoltSkillStaff.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Unleash",
+    "cn": "释出",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressTemporalistUnleash.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Shock",
+    "cn": "感电时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastOnShockSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Freeze",
+    "cn": "冻结时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastOnFreezeSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Ignite",
+    "cn": "点燃时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastOnIgniteSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Elemental Ailment",
+    "cn": "元素异常状态时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastonFreezeShockIgnite.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Critical",
+    "cn": "暴击时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastOnCritSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bind Spectre",
+    "cn": "束缚灵体",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchBindSpectre.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pain Offering",
+    "cn": "苦痛奉献",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchPainOffering.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Chaos Bolt",
+    "cn": "混沌箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ChaosBoltWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bonestorm",
+    "cn": "尖刺风暴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchBoneStorm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bone Cage",
+    "cn": "画地为牢",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchBoneCage.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Unearth",
+    "cn": "开掘",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchUnearth.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Solar Orb",
+    "cn": "日曜球",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressSolarOrb.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fireball",
+    "cn": "火球",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressGreaterFireball.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Snap",
+    "cn": "激变",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressColdSnap.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mana Remnants",
+    "cn": "魔力残片",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressEnergyRemnants.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Freezing Shards",
+    "cn": "急冻碎片",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FreezingShardsStaff.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Decompose",
+    "cn": "降解",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DecomposeSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Raging Spirits",
+    "cn": "愤怒狂灵",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchReservationRaginSpirits.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Profane Ritual",
+    "cn": "不敬之礼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchProfaneRitual.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Soul Offering",
+    "cn": "灵之奉献",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchPowerOffering.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Dark Effigy",
+    "cn": "黑暗塑像",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchDarkEffigy.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Minion Death",
+    "cn": "召唤生物死亡时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastOnMinionDeath.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mana Drain",
+    "cn": "魔力吸取",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ManaDrainWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bone Blast",
+    "cn": "针刺爆发",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BoneBlastWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blink",
+    "cn": "闪现",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressBlinkReservation.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Malice",
+    "cn": "怨毒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MaliceWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Living Bomb",
+    "cn": "活动炸弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/LivingBombWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ember Fusillade",
+    "cn": "灰烬连射",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressBlazingCluster.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Conflux",
+    "cn": "元素汇流",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ElementalConfluxSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sacrifice",
+    "cn": "替代牺牲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HarvesterSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Archmage",
+    "cn": "大法师",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ArchmageSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Withering Presence",
+    "cn": "凋零姿态",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchWitheringPresence.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ravenous Swarm",
+    "cn": "饕餮虫群",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchRavenousSwarm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ember Fusillade",
+    "cn": "灰烬连射",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressBlazingCluster.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Bolt",
+    "cn": "闪电",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/LightningBoltSkillStaff.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Withering Presence",
+    "cn": "凋零姿态",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchWitheringPresence.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Convalescence",
+    "cn": "康复",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ConvalescenceSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Heart of Ice",
+    "cn": "冰雪之心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ChillingAuraSkillStaff.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fulmination",
+    "cn": "轰鸣烈焰",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WrathAuraWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Feast of Flesh",
+    "cn": "血肉盛宴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WeaponFeastofFlesh.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spellslinger",
+    "cn": "法术节魔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SpellslingerWeaponSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Siphon Elements",
+    "cn": "汲取元素",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SiphonElements.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frost Darts",
+    "cn": "冰霜飞镖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FrostDartsSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Flicker Strike",
+    "cn": "闪现打击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkFlickerStrikeTeleport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Falling Thunder",
+    "cn": "霹雳闪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkLightningStrike.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Ice",
+    "cn": "寒冰之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfIceSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Siege Ballista",
+    "cn": "攻城炮台",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MercArtilleryBallista.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Whirling Assault",
+    "cn": "旋风击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkWhirlingAssault.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wind Blast",
+    "cn": "迅风爆",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkGaleStrikeSwing.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wave of Frost",
+    "cn": "寒霜浪涌",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkFreezingBackflip.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ice Strike",
+    "cn": "幽寒打",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkComboAttack.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Glacial Cascade",
+    "cn": "冰川之刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkGlacialCascade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Consecrate",
+    "cn": "奉献",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/BuffIcons/consecrated.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Artillery Ballista",
+    "cn": "火力弩炮",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MercRipwireBallista.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Killing Palm",
+    "cn": "终结掌",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkKillingPalm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shattering Palm",
+    "cn": "冰裂掌",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkShatteringPalm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Barrier Invocation",
+    "cn": "屏障咒言",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressBarrierInvocation.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Dodge",
+    "cn": "躲闪时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastOnDodgeRollSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lingering Illusion",
+    "cn": "徘徊幻影",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkLingeringIllusion.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ghost Dance",
+    "cn": "幽灵舞步",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkGhostDance.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Explosive Grenade",
+    "cn": "高爆榴弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ExplosiveGrenade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Flash Grenade",
+    "cn": "闪光榴弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FlashbangGrenade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Gas Grenade",
+    "cn": "瓦斯榴弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ToxicGrenade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Oil Grenade",
+    "cn": "黏油榴弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/OilGrenade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Voltaic Grenade",
+    "cn": "电涌榴弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ShockGrenade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tempest Flurry",
+    "cn": "风暴乱舞",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkTempestFlurry.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Staggering Palm",
+    "cn": "惊风掌",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkWindPalm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Charged Staff",
+    "cn": "充能杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkChargedStaff.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Siphoning Strike",
+    "cn": "汲能击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkSiphoningStrike.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tempest Bell",
+    "cn": "风雷钟",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkTempestBell.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frozen Locus",
+    "cn": "冰凌座",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkIceAmbush.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Raise Shield",
+    "cn": "架盾",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteShieldBlock.webp",
+    "type": "gem"
+  },
+  {
+    "en": "High Velocity Rounds",
+    "cn": "高速弹药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PowerShotPhysical.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fragmentation Rounds",
+    "cn": "碎裂弹药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BurstShotPhysical.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Siege Cascade",
+    "cn": "摧城倾泻",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SiegeCascadePhysical.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Piercing Rounds",
+    "cn": "贯甲弹药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RapidShotPhysical.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Explosive Shot",
+    "cn": "爆炸射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PowerShotIncendiary.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Incendiary Shot",
+    "cn": "燃烧射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BurstShotIncendiary.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Shot",
+    "cn": "快速射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RapidShotIncendiary.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Glacial Bolt",
+    "cn": "冰川弩箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PowerShotPermafrost.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Permafrost Bolts",
+    "cn": "永冻弩箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BurstShotPermafrost.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hailstorm Rounds",
+    "cn": "冰雹弹药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SiegeCascadePermafrost.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ice Shards",
+    "cn": "冰屑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RapidShotPermafrost.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Plasma Blast",
+    "cn": "离子轰击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PowerShotStormblast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Galvanic Shards",
+    "cn": "电光散射",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BurstShotStormblast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stormblast Bolts",
+    "cn": "轰雷弩箭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SiegeCascadeStormblast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shockburst Rounds",
+    "cn": "震爆弹药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RapidShotStormblast.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Punch",
+    "cn": "拳击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/UnarmedDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Quarterstaff Strike",
+    "cn": "节杖打击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/QuarterstaffDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Flail Strike",
+    "cn": "连枷打击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FlailDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sword Slash",
+    "cn": "剑挥砍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/OneHandSwordDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sword Slash",
+    "cn": "剑挥砍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DualWieldSwordDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sword Slash",
+    "cn": "剑挥砍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TwoHandSwordDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Axe Slash",
+    "cn": "斧挥砍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/OneHandAxeDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Axe Slash",
+    "cn": "斧挥砍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DualWieldAxeDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Axe Slash",
+    "cn": "斧挥砍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TwoHandAxeDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mace Strike",
+    "cn": "锤打击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/OneHandMaceDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mace Strike",
+    "cn": "锤打击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DualWieldMaceDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mace Strike",
+    "cn": "锤打击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TwoHandMaceDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Claw Stab",
+    "cn": "爪突刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/OneHandClawDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Claw Stab",
+    "cn": "爪突刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DualWieldClawDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Dagger Stab",
+    "cn": "匕首突刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/OneHandDaggerDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Dagger Stab",
+    "cn": "匕首突刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TwoHandDaggerDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spear Stab",
+    "cn": "枪突刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TwoHandSpearDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spear Stab",
+    "cn": "战矛突刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SpearDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spear Throw",
+    "cn": "战矛飞掷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressIceSpear.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bow Shot",
+    "cn": "弓射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BowDefaultSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crossbow Shot",
+    "cn": "战弩射击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PowerShot.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Life Remnants",
+    "cn": "生命残片",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BloodChannel.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Explosive Concoction",
+    "cn": "爆破灵药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerBrewConcoctionFireSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fulminating Concoction",
+    "cn": "雷鸣灵药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerBrewConcoctionLightningSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shattering Concoction",
+    "cn": "碎冰灵药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerBrewConcoctionColdSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Acidic Concoction",
+    "cn": "酸性灵药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerBrewConcoctionPoisonSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bleeding Concoction",
+    "cn": "创伤灵药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/RangerBrewConcoctionBleedSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Meditate",
+    "cn": "凝神思",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkInvokerMeditate.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Storm",
+    "cn": "元素风暴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressElementalStorm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vaulting Impact",
+    "cn": "跳跃撞击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkVaultingImpact.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Storm Wave",
+    "cn": "移风岚",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkStormWave.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mantra of Destruction",
+    "cn": "毁灭之兆",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkMantraofDestruction.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Decompose",
+    "cn": "降解",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DecomposeSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Expression",
+    "cn": "元素表现",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkInvokerWildStrike.webp",
+    "type": "gem"
+  },
+  {
+    "en": "War Banner",
+    "cn": "战旗",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WarBannerSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Defiance Banner",
+    "cn": "抗争之旗",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DefianceBannerSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Dread Banner",
+    "cn": "恐怖之旗",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DreadBannerSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Freezing Mark",
+    "cn": "冰冻印记",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/FreezingMarkSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Unbound Avatar",
+    "cn": "不羁化身",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkInvokerUnboundAvatar.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hand of Chayula",
+    "cn": "夏乌拉之手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkHandOfChayula.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Summon Infernal Hound",
+    "cn": "召唤炽焰猎犬",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchSummonInfernalFamiliar.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Encase in Jade",
+    "cn": "青玉囚笼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteWarbringerEncasedJade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Temporal Rift",
+    "cn": "时空裂隙",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressTemporalistTemporalRift.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Time Freeze",
+    "cn": "时间冻结",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressTemporalistTimeStop.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Time Snap",
+    "cn": "时间捕捉",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressTemporalistReloadCooldown.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Demon Form",
+    "cn": "走火入魔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchTransformDemon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sorcery Ward",
+    "cn": "元素结界",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/WitchunterSpellAegis.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Invocation",
+    "cn": "元素祈求",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ElementalInvocationSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Attrition",
+    "cn": "持久鏖战",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/AttritionSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Into the Breach",
+    "cn": "投身裂隙",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkBreachWalk.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ancestral Spirits",
+    "cn": "先祖之灵",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/BruteWarbringerDefenders.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ritual Sacrifice",
+    "cn": "秘法奉献",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PrimalistStabCorpseSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Emergency Reload",
+    "cn": "紧急装填",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MercEmergencyReload.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cluster Grenade",
+    "cn": "集束榴弹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MercClusterGrenade.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blink",
+    "cn": "闪现",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressBlinkReservation.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Charge Regulation",
+    "cn": "能量球调节",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/ChargeMasteryDeath.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shard Scavenger",
+    "cn": "碎片回收",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MercShardDespoiler.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Reapers Invocation",
+    "cn": "收割祈求",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MeleeInvocationSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Blood",
+    "cn": "赤血之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfBloodSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cast on Block",
+    "cn": "格挡时施放",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/CastOnMeleeBlockSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Gathering Storm",
+    "cn": "聚风雨",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkGatheringStorm.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blood Boil",
+    "cn": "血沸",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/PrimalistBloodBoilsSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Inevitable Agony",
+    "cn": "命定苦痛",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TemporalistSynchronisationofPainSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Called Shots",
+    "cn": "言出箭随",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/DeadeyeMarkMetagemSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herald of Ice",
+    "cn": "寒冰之捷",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HeraldOfIceSkill.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Parry",
+    "cn": "招架",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressBucklerParry.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Trinity",
+    "cn": "三位一体",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HuntressTrinitySkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Surge",
+    "cn": "元素涌动",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/AmazonElementalInfusionSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fire Spell on Hit",
+    "cn": "击中时火焰法术",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SmithOfKitavaTriggerFireballsSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Manifest Weapon",
+    "cn": "显化武器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SmithOfKitavaCreateWeaponSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Supporting Fire",
+    "cn": "支援火力",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/TacticianDeathFromAboveSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Temper Weapon",
+    "cn": "淬炼武器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SmithOfKitavaImbueWeaponSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Unleash",
+    "cn": "释出",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/SorceressTemporalistUnleash.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Void Illusion",
+    "cn": "虚空幻影",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/MonkVoidIllusion.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mortar Cannon",
+    "cn": "迫击大炮",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/GrenadeBallistaSkillIcon.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Future-Past",
+    "cn": "未来的过去",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/HinekorasSightUnique.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fire Attunement",
+    "cn": "火焰协调",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/addedfiredamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Efficiency I",
+    "cn": "高效 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/inspiration.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Efficiency II",
+    "cn": "高效 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/inspiration.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Knockback",
+    "cn": "击退",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/knockbacksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Life Leech I",
+    "cn": "生命偷取 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lifeleechsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Life Leech II",
+    "cn": "生命偷取 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lifeleechsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Life Leech III",
+    "cn": "生命偷取 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lifeleechsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Heavy Swing",
+    "cn": "沉重挥舞",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/meleephysicaldamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bloodlust",
+    "cn": "血怒",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/bloodlustsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fire Penetration I",
+    "cn": "火焰穿透 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/firepenetrationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fire Penetration II",
+    "cn": "火焰穿透 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/firepenetrationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bleed I",
+    "cn": "流血 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetobleedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bleed II",
+    "cn": "流血 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetobleedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bleed III",
+    "cn": "流血 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetobleedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bleed IV",
+    "cn": "流血 IV",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetobleedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Immolate",
+    "cn": "献祭",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/immolationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Brutality I",
+    "cn": "野性残暴 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/brutalitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Brutality II",
+    "cn": "野性残暴 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/brutalitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Brutality III",
+    "cn": "野性残暴 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/brutalitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rage I",
+    "cn": "狂怒 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ragesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rage II",
+    "cn": "狂怒 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ragesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rage III",
+    "cn": "狂怒 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ragesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Meat Shield I",
+    "cn": "肉盾 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/meatshield.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Meat Shield II",
+    "cn": "肉盾 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/meatshield.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Brutus Brain",
+    "cn": "布鲁特斯之脑",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/meatshield.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Infernal Legion I",
+    "cn": "炎军 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/infernallegionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Infernal Legion II",
+    "cn": "炎军 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/infernallegionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Infernal Legion III",
+    "cn": "炎军 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/infernallegionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lifetap",
+    "cn": "赤炼",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/bloodmagicsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ataluis Bloodletting",
+    "cn": "阿图鲁伊的放血术",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/bloodmagicsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Behead I",
+    "cn": "斩首 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/beheadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Behead II",
+    "cn": "斩首 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/beheadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Einhars Beastrite",
+    "cn": "伊恩哈尔的魔物仪式",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/beheadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Execute I",
+    "cn": "处决 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/executesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Execute II",
+    "cn": "处决 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/executesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Execute III",
+    "cn": "处决 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/executesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Jagged Ground I",
+    "cn": "崎岖之地 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/jaggedgroundsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Jagged Ground II",
+    "cn": "崎岖之地 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/jaggedgroundsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Compressed Duration I",
+    "cn": "持续时间压缩 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lessdurationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Compressed Duration II",
+    "cn": "持续时间压缩 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lessdurationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fist of War I",
+    "cn": "战争铁拳 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fistofwarsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fist of War II",
+    "cn": "战争铁拳 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fistofwarsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fist of War III",
+    "cn": "战争铁拳 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fistofwarsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Prolonged Duration I",
+    "cn": "持续时间延长 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/moredurationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Prolonged Duration II",
+    "cn": "持续时间延长 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/moredurationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Impact Shockwave",
+    "cn": "冲击震波",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/impactshockwavesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ignite I",
+    "cn": "点燃 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ignitionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ignite II",
+    "cn": "点燃 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ignitionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ignite III",
+    "cn": "点燃 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ignitionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Searing Flame I",
+    "cn": "焚躯烈焰 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/searingflamesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Searing Flame II",
+    "cn": "焚躯烈焰 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/searingflamesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Eternal Flame I",
+    "cn": "长明烈焰 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/eternalflamesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Eternal Flame II",
+    "cn": "长明烈焰 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/eternalflamesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Eternal Flame III",
+    "cn": "长明烈焰 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/eternalflamesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Exploit Weakness",
+    "cn": "开发要害",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/exploitweaknesssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Enraged Warcry I",
+    "cn": "燃怒战吼 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/enragedwarcrysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Enraged Warcry II",
+    "cn": "燃怒战吼 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/enragedwarcrysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stun I",
+    "cn": "晕眩 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/overpowersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stun II",
+    "cn": "晕眩 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/overpowersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stun III",
+    "cn": "晕眩 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/overpowersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Raging Cry",
+    "cn": "愤怒战吼",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ragingcrysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Demolisher I",
+    "cn": "护甲破坏者 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increasedarmourbreaksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Demolisher II",
+    "cn": "护甲破坏者 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increasedarmourbreaksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Uruks Smelting",
+    "cn": "厄罗克的熔炼术",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increasedarmourbreaksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rageforged I",
+    "cn": "怒火锤炼 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rageforgedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rageforged II",
+    "cn": "怒火锤炼 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rageforgedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Explosion",
+    "cn": "护甲爆破",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/armourexplosionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stomping Ground",
+    "cn": "震撼大地",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/stompinggroundsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fire Exposure",
+    "cn": "火焰曝露",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fireexposuresupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deep Cuts I",
+    "cn": "凌迟 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/deepcutssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deep Cuts II",
+    "cn": "凌迟 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/deepcutssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Corrupting Cry I",
+    "cn": "腐化战吼 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/corruptingcrysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Corrupting Cry II",
+    "cn": "腐化战吼 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/corruptingcrysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Paquates Pact",
+    "cn": "帕夸特的契约",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/corruptingcrysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vitality I",
+    "cn": "活力 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/vitalitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vitality II",
+    "cn": "活力 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/vitalitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herbalism I",
+    "cn": "药草学 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/herbalismsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Herbalism II",
+    "cn": "药草学 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/herbalismsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cannibalism I",
+    "cn": "吞灵 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cannibalismsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cannibalism II",
+    "cn": "吞灵 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cannibalismsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rupture",
+    "cn": "残破",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rupturesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Break I",
+    "cn": "护甲破损 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/armourbreaksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Break II",
+    "cn": "护甲破损 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/armourbreaksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Armour Break III",
+    "cn": "护甲破损 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/armourbreaksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Armament I",
+    "cn": "元素军械 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/weaponelementaldamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Armament II",
+    "cn": "元素军械 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/weaponelementaldamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Armament III",
+    "cn": "元素军械 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/weaponelementaldamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Font of Blood",
+    "cn": "血脉源泉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fontofbloodsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Font of Rage",
+    "cn": "怒火源泉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fontofragesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Aftershock I",
+    "cn": "余震 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/aftershocksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Aftershock II",
+    "cn": "余震 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/aftershocksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Holy Descent",
+    "cn": "神圣降临",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/holydescentsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Double Barrel I",
+    "cn": "双管齐下 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/doublebarrelsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Double Barrel II",
+    "cn": "双管齐下 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/doublebarrelsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Double Barrel III",
+    "cn": "双管齐下 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/doublebarrelsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Auto Reload",
+    "cn": "自动装填",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/autoreloadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fresh Clip I",
+    "cn": "新装箭匣 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/damageperboltreloadedrecentlysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fresh Clip II",
+    "cn": "新装箭匣 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/damageperboltreloadedrecentlysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Branching Fissures I",
+    "cn": "分叉裂缝 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/branchingfissuressupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Branching Fissures II",
+    "cn": "分叉裂缝 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/branchingfissuressupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Upheaval I",
+    "cn": "剧变 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/upheavalsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Upheaval II",
+    "cn": "剧变 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/upheavalsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Kaoms Madness",
+    "cn": "冈姆的疯狂",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/upheavalsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Urgent Totems I",
+    "cn": "紧急图腾 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/totemplacementspeedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Urgent Totems II",
+    "cn": "紧急图腾 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/totemplacementspeedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Urgent Totems III",
+    "cn": "紧急图腾 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/totemplacementspeedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Long Fuse I",
+    "cn": "加长引线 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/longfusesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Long Fuse II",
+    "cn": "加长引线 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/longfusesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Reinforced Totems I",
+    "cn": "增强图腾 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ironwoodsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Reinforced Totems II",
+    "cn": "增强图腾 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ironwoodsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Heft",
+    "cn": "势大力沉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/heftsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Retaliate I",
+    "cn": "反击 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/steelynervesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Retaliate II",
+    "cn": "反击 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/steelynervesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Steadfast I",
+    "cn": "坚定 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/channellingailmentthresholdsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Steadfast II",
+    "cn": "坚定 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/channellingailmentthresholdsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Flamepierce",
+    "cn": "烈焰穿刺",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/flamepiercesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Battershout",
+    "cn": "震撼战吼",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/battershoutsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rusted Spikes",
+    "cn": "锈蚀尖刺",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rustedspikessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Concoct I",
+    "cn": "调和术 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/concoctsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Concoct II",
+    "cn": "调和术 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/concoctsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Persistent Ground I",
+    "cn": "持久地面 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/domainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Persistent Ground II",
+    "cn": "持久地面 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/domainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Persistent Ground III",
+    "cn": "持久地面 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/domainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Selfless Remnants",
+    "cn": "无我残片",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/figureheadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Remnant Potency I",
+    "cn": "残片效能 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/interludesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Remnant Potency II",
+    "cn": "残片效能 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/interludesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Remnant Potency III",
+    "cn": "残片效能 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/interludesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Clash",
+    "cn": "形势逆转",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/clashsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Syzygy",
+    "cn": "朔望",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/syzygysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Defy I",
+    "cn": "顽抗 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/defysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Defy II",
+    "cn": "顽抗 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/defysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Haemocrystals",
+    "cn": "赤炼水晶",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/haemocrystalssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spar",
+    "cn": "角力",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/sparsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Dauntless",
+    "cn": "不动如山",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/unmovingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ancestral Call I",
+    "cn": "先祖召唤 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ancestralcallsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ancestral Call II",
+    "cn": "先祖召唤 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ancestralcallsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Quill Burst",
+    "cn": "棘刺爆发",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/spikedgauntletssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Barbs I",
+    "cn": "荆棘倒刺 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/barbssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Barbs II",
+    "cn": "荆棘倒刺 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/barbssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Barbs III",
+    "cn": "荆棘倒刺 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/barbssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Thornskin I",
+    "cn": "荆棘皮肤 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/thornskinsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Thornskin II",
+    "cn": "荆棘皮肤 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/thornskinsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Direstrike I",
+    "cn": "蛮勇打击 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/direstrikesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Direstrike II",
+    "cn": "蛮勇打击 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/direstrikesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cool Headed",
+    "cn": "冷静头脑",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/coolheadedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Refraction I",
+    "cn": "折射 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/temperedvaloursupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Refraction II",
+    "cn": "折射 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/temperedvaloursupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Refraction III",
+    "cn": "折射 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/temperedvaloursupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Greatwood I",
+    "cn": "神木 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/greatwoodsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Greatwood II",
+    "cn": "神木 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/greatwoodsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rip",
+    "cn": "撕裂",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ripsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tear",
+    "cn": "撕扯",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/tearsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Brink I",
+    "cn": "崩溃边缘 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/brinksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Brink II",
+    "cn": "崩溃边缘 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/brinksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tireless",
+    "cn": "冷酷",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/tirelesssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Volcanic Eruption",
+    "cn": "熔火喷发",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/volcaniceruptionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Incision",
+    "cn": "创口",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/incisionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Short Fuse I",
+    "cn": "短暂引信 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/expeditesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Short Fuse II",
+    "cn": "短暂引信 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/expeditesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stoicism I",
+    "cn": "坚忍 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/nofearsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stoicism II",
+    "cn": "坚忍 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/nofearsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hardy Totems I",
+    "cn": "坚韧图腾 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/moretotemlifesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hardy Totems II",
+    "cn": "坚韧图腾 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/moretotemlifesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tawhoas Tending",
+    "cn": "塔赫亚的照料",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/moretotemlifesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Enduring Impact I",
+    "cn": "持续冲击 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/enduranceonheavystunsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Enduring Impact II",
+    "cn": "持续冲击 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/enduranceonheavystunsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crater",
+    "cn": "陨坑",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fissureonlandingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vanguard I",
+    "cn": "先锋 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/guardonstunsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vanguard II",
+    "cn": "先锋 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/guardonstunsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skittering Stone I",
+    "cn": "飞掠石 I",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Support/SkitteringStone.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Skittering Stone II",
+    "cn": "飞掠石 II",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/Support/SkitteringStone.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Xophs Pyre",
+    "cn": "索伏的葬火",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Uul-Netols Embrace",
+    "cn": "乌尔尼多的拥抱",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Uhtreds Exodus",
+    "cn": "乌崔德的出走",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankredsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Uhtreds Omen",
+    "cn": "乌崔德的预兆",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankredsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Uhtreds Augury",
+    "cn": "乌崔德的占卜",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankredsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Daressos Passion",
+    "cn": "德瑞索的热情",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankredsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Amanamus Tithe",
+    "cn": "阿曼娜姆的奉纳",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankredsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Attacks I",
+    "cn": "快速攻击 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fasterattack.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Attacks II",
+    "cn": "快速攻击 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fasterattack.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Attacks III",
+    "cn": "快速攻击 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fasterattack.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Multishot I",
+    "cn": "多重射击 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/multipleprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Multishot II",
+    "cn": "多重射击 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/multipleprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Nova Projectiles",
+    "cn": "新星投射物",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/novaprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Projectile Acceleration I",
+    "cn": "投射物加速 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fasterprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Projectile Acceleration II",
+    "cn": "投射物加速 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fasterprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Projectile Acceleration III",
+    "cn": "投射物加速 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fasterprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Heightened Accuracy I",
+    "cn": "精准增强 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/additionalaccuracy.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Heightened Accuracy II",
+    "cn": "精准增强 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/additionalaccuracy.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Attunement",
+    "cn": "闪电协调",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/addedlightningdamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pierce I",
+    "cn": "穿透 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/piercesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pierce II",
+    "cn": "穿透 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/piercesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pierce III",
+    "cn": "穿透 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/piercesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blind I",
+    "cn": "致盲 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blindsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blind II",
+    "cn": "致盲 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blindsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Penetration",
+    "cn": "闪电穿透",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lightningpenetrationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Chain I",
+    "cn": "连锁 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Chain II",
+    "cn": "连锁 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Chain III",
+    "cn": "连锁 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fork",
+    "cn": "分叉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/forksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Projectile Deceleration I",
+    "cn": "投射物减速 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/slowerprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Projectile Deceleration II",
+    "cn": "投射物减速 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/slowerprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shock",
+    "cn": "感电",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/conductionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Poison I",
+    "cn": "中毒 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetopoisonsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Poison II",
+    "cn": "中毒 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetopoisonsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Poison III",
+    "cn": "中毒 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetopoisonsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Maim",
+    "cn": "瘫痪",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/maimsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lasting Shock",
+    "cn": "持久感电",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lastingshocksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Momentum",
+    "cn": "动量",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/momentumsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Close Combat I",
+    "cn": "近战 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/closecombatsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Close Combat II",
+    "cn": "近战 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/closecombatsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Second Wind I",
+    "cn": "助力之风 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/secondwindsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Second Wind II",
+    "cn": "助力之风 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/secondwindsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Second Wind III",
+    "cn": "助力之风 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/secondwindsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Overcharge",
+    "cn": "过载",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/overchargesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Neural Overload",
+    "cn": "神经超载",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/neuraloverloadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Perpetual Charge",
+    "cn": "永续充能",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/perpetualchargesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Corrosion",
+    "cn": "腐蚀",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/corrosionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bursting Plague",
+    "cn": "迸发之疫",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/burstingplaguesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Overabundance I",
+    "cn": "冗余 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increaselimitsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Overabundance II",
+    "cn": "冗余 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increaselimitsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Overabundance III",
+    "cn": "冗余 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increaselimitsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Electrocute",
+    "cn": "电殛",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/electrocutesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deadly Herald",
+    "cn": "致命之捷",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/deadlyheraldssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lockdown",
+    "cn": "封锁",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lockdownsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mobility",
+    "cn": "机动",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/mobilitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pin I",
+    "cn": "定身 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/pinsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pin II",
+    "cn": "定身 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/pinsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pin III",
+    "cn": "定身 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/pinsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bounty I",
+    "cn": "丰饶 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lifeflasksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bounty II",
+    "cn": "丰饶 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lifeflasksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mana Bounty",
+    "cn": "魔力丰沛",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/manaflasksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Life Bounty",
+    "cn": "生命丰沛",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lifeflasksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Life Drain",
+    "cn": "生命榨取",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lifeoncull.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Soul Drain",
+    "cn": "魂魔榨取",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/manaoncull.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Innervate",
+    "cn": "亢奋",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/innervate.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Escalating Poison",
+    "cn": "毒性加剧",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/multiplepoisonsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Charge Profusion I",
+    "cn": "能量球激增 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/multiplechargessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Charge Profusion II",
+    "cn": "能量球激增 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/multiplechargessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Murderous Intent",
+    "cn": "坚韧磨砺",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/empoweredcullsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crescendo I",
+    "cn": "渐入佳境 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/extendedcombo.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crescendo II",
+    "cn": "渐入佳境 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/extendedcombo.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crescendo III",
+    "cn": "渐入佳境 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/extendedcombo.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Exposure",
+    "cn": "闪电曝露",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lightningexposuresupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deadly Poison I",
+    "cn": "致命毒素 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/deadlypoisonsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deadly Poison II",
+    "cn": "致命毒素 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/deadlypoisonsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Window of Opportunity I",
+    "cn": "大好时机 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/windowofopportunitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Window of Opportunity II",
+    "cn": "大好时机 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/windowofopportunitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Swift Affliction I",
+    "cn": "极速腐化 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/swiftafflictionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Swift Affliction II",
+    "cn": "极速腐化 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/swiftafflictionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Swift Affliction III",
+    "cn": "极速腐化 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/swiftafflictionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Combo Finisher I",
+    "cn": "连击终结 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/combofinishersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Combo Finisher II",
+    "cn": "连击终结 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/combofinishersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ailiths Chimes",
+    "cn": "艾利丝钟琴",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/combofinishersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Slow Potency",
+    "cn": "减速效能",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/encumberancesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Precision I",
+    "cn": "精准 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/precisionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Precision II",
+    "cn": "精准 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/precisionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Culling Strike I",
+    "cn": "终结 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cullingstrikesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Culling Strike II",
+    "cn": "终结 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cullingstrikesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Longshot I",
+    "cn": "远射 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/farcombatsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Longshot II",
+    "cn": "远射 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/farcombatsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cooldown Recovery I",
+    "cn": "冷却回复 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cooldownreductionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cooldown Recovery II",
+    "cn": "冷却回复 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cooldownreductionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rathas Assault",
+    "cn": "拉莎的突袭",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/combatreloadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ammo Conservation I",
+    "cn": "节省弹药 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetonotconsumeammosupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ammo Conservation II",
+    "cn": "节省弹药 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetonotconsumeammosupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ammo Conservation III",
+    "cn": "节省弹药 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetonotconsumeammosupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Arjuns Medal",
+    "cn": "阿尔琼的勋章",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chancetonotconsumeammosupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Nimble Reload",
+    "cn": "敏捷装填",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/reloadspeedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ricochet I",
+    "cn": "弹射 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/terrainchainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ricochet II",
+    "cn": "弹射 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/terrainchainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ricochet III",
+    "cn": "弹射 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/terrainchainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Payload",
+    "cn": "子母弹",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/payloadsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Practiced Combo",
+    "cn": "娴熟连击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/practicedcombosupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Culmination I",
+    "cn": "登峰造极 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/culminationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Culmination II",
+    "cn": "登峰造极 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/culminationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ferocity",
+    "cn": "狂暴",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ferocitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Adhesive Grenades I",
+    "cn": "胶粘榴弹 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/stickybombsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Adhesive Grenades II",
+    "cn": "胶粘榴弹 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/stickybombsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Salvo",
+    "cn": "齐射",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/salvosupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cadence",
+    "cn": "节律",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/measuredspeedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Volt",
+    "cn": "电伏积聚",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/voltsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Alignment I",
+    "cn": "相性 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/alignmentsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Alignment II",
+    "cn": "相性 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/alignmentsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Alignment III",
+    "cn": "相性 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/alignmentsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Charged Shots I",
+    "cn": "充能射击 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chargedshotssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Charged Shots II",
+    "cn": "充能射击 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chargedshotssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stormchain",
+    "cn": "风暴连锁",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/stormchainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spectral Volley",
+    "cn": "灵体齐射",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/spectralarrowssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Malady",
+    "cn": "错乱病症",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/maladysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Overextend",
+    "cn": "竭力痛击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/overextendsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Retreat I",
+    "cn": "撤退 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/retreatingassaultsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Retreat II",
+    "cn": "撤退 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/retreatingassaultsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Retreat III",
+    "cn": "撤退 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/retreatingassaultsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pursuit I",
+    "cn": "迫近追逐 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/pursuitsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pursuit II",
+    "cn": "迫近追逐 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/pursuitsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pursuit III",
+    "cn": "迫近追逐 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/pursuitsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Overreach",
+    "cn": "过度延伸",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/reachsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Commiserate",
+    "cn": "以己度人",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/commiseratesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Blindside",
+    "cn": "盲点",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blindsidesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hit and Run",
+    "cn": "连打带跑",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/mobileassaultsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Caltrops",
+    "cn": "铁蒺藜",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/caltropssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shocking Leap",
+    "cn": "电震跃击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/shockingleapsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Warm Blooded",
+    "cn": "温热血脉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/warmbloodedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Punch Through",
+    "cn": "击穿",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/punchthroughsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frenzied Riposte",
+    "cn": "狂怒反击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/retortsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Heightened Charges",
+    "cn": "强化能量球",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/potencysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Delayed Gratification",
+    "cn": "延迟满足",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/adversitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rearm I",
+    "cn": "重新武装 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rearmsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rearm II",
+    "cn": "重新武装 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rearmsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Delayed Reaction",
+    "cn": "延迟激活",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/delayedreactionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Gambleshot",
+    "cn": "投机射击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/gambleshotsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Impale",
+    "cn": "穿刺",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/impalesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Perfection",
+    "cn": "完美",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/perfectionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deliberation",
+    "cn": "从容不迫",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cessationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mark for Death",
+    "cn": "死亡印记",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/singleoutsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Admixture",
+    "cn": "混合物",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/mixedmaladiessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Brambleslam",
+    "cn": "遍地荆棘",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/briarpatchsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Inhibitor",
+    "cn": "抑制器",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/inhibitorsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frozen Spite",
+    "cn": "冰冻怨恨",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/frozenspitesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pietys Mercy",
+    "cn": "派蒂的怜悯",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Streamlined Rounds",
+    "cn": "流线弹药",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/autoshotgunsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Perfected Endurance",
+    "cn": "完美耐力",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/endurancechargeonperfecttimingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Durability",
+    "cn": "耐久度",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/durabilitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tuls Stillness",
+    "cn": "托沃的寂静",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rakiatas Flow",
+    "cn": "拉其塔之流",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rigwalds Ferocity",
+    "cn": "瑞佛的凶猛",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tacatis Ire",
+    "cn": "塔卡提之怒",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Garukhans Resolve",
+    "cn": "格鲁坎的决心",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Arakaalis Lust",
+    "cn": "阿拉卡力的欲望",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cold Attunement",
+    "cn": "冰霜协调",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/addedcolddamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Magnified Area I",
+    "cn": "范围扩大 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increasedareaofeffectsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Magnified Area II",
+    "cn": "范围扩大 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increasedareaofeffectsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Supercritical",
+    "cn": "特化暴击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/increasedcritdamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mana Leech",
+    "cn": "魔力偷取",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/manaleechsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Chaos Attunement",
+    "cn": "混沌协调",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/addedchaosdamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Casting I",
+    "cn": "快速施法 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fastercastsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Casting II",
+    "cn": "快速施法 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fastercastsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rapid Casting III",
+    "cn": "快速施法 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fastercastsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Concentrated Area",
+    "cn": "范围集中",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/concentratedeffectsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cold Penetration",
+    "cn": "冰霜穿透",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/coldpenetrationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spell Echo",
+    "cn": "施法回响",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/spellechosupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Army",
+    "cn": "元素大军",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/elementalarmysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Vilentas Propulsion",
+    "cn": "薇伦塔之推进",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/slowerprojectilessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ice Bite",
+    "cn": "霜咬",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/icebitesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Freeze",
+    "cn": "冻结",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/hypothermiasupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Controlled Destruction",
+    "cn": "精准破坏",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/controlleddestructionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Focus",
+    "cn": "元素集中",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/elementalfocussupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wildfire",
+    "cn": "野火",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/igniteproliferationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Arcane Surge",
+    "cn": "秘术增强",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/arcanesurgesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Withering Touch",
+    "cn": "凋零之触",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/witheringtouchsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Unleash",
+    "cn": "释出",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/unleashsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Feeding Frenzy I",
+    "cn": "狂噬 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/feedingfrenzysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Feeding Frenzy II",
+    "cn": "狂噬 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/feedingfrenzysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Impending Doom",
+    "cn": "末日将至",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/impendingdoomsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Inevitable Critical",
+    "cn": "命定绝杀",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/inevitablecriticalssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frost Nexus",
+    "cn": "封冻枢纽",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/frozennexussupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shock Siphon",
+    "cn": "感电虹吸",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/shocksiphonsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Shock Conduction",
+    "cn": "感电传导",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/shockingproliferationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deep Freeze",
+    "cn": "深度冻结",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/deepfreezesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Essence Harvest",
+    "cn": "收割精华",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/essenceharvestsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Pinpoint Critical",
+    "cn": "精准暴击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/pinpointcriticalsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fortress I",
+    "cn": "坚城 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/wallfortresssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fortress II",
+    "cn": "坚城 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/wallfortresssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ahns Citadel",
+    "cn": "汉恩的城塞",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/wallfortresssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Frostfire",
+    "cn": "霜火",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/frostfiresupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Stormfire",
+    "cn": "风暴之炎",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/stormfiresupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Biting Frost",
+    "cn": "刺骨寒意",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/bitingfrostsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Elemental Discharge",
+    "cn": "元素解放",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/elementaldischargesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hourglass",
+    "cn": "时之沙漏",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/hourglasssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fiery Death",
+    "cn": "炽灭",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/fierydeathsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mana Flare",
+    "cn": "魔力耀斑",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/manaflaresupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ambush",
+    "cn": "伏击",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ambushsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Minion Instability",
+    "cn": "复仇之灵",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/minioninstabilitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Heightened Curse",
+    "cn": "强效诅咒",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/curseeffectsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Corpse Conservation",
+    "cn": "灵盒留存",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/corpseconservationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Decaying Hex",
+    "cn": "衰颓魔蛊",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/decayinghexsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Focused Curse",
+    "cn": "聚焦诅咒",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/focusedhexsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ritualistic Curse",
+    "cn": "仪祭诅咒",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ritualisticcursesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Minion Pact I",
+    "cn": "召唤契约 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/minionpactsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Minion Pact II",
+    "cn": "召唤契约 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/minionpactsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Last Gasp",
+    "cn": "亡命之息",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lastgaspsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Tecrods Revenge",
+    "cn": "特克罗的复仇",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lastgaspsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cold Exposure",
+    "cn": "冰霜曝露",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/coldexposuresupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fire Mastery",
+    "cn": "火焰专精",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/firemasterysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cold Mastery",
+    "cn": "冰霜专精",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/coldmasterysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Lightning Mastery",
+    "cn": "闪电专精",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lightningmasterysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Chaos Mastery",
+    "cn": "混沌专精",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chaosmasterysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Physical Mastery",
+    "cn": "物理专精",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/physicalmasterysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Minion Mastery",
+    "cn": "召唤生物专精",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/physicalmasterysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Intense Agony",
+    "cn": "剧烈痛苦",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/intenseagonysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Drain Ailments",
+    "cn": "异常状态吸收",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/drainedailmentsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Chaotic Freeze",
+    "cn": "混沌冻结",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/chaoticfreezesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Clarity I",
+    "cn": "清晰 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/claritysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Clarity II",
+    "cn": "清晰 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/claritysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Spell Cascade",
+    "cn": "多重范围施法",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/spellcascadesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Cursed Ground",
+    "cn": "诅咒之地",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cursedgroundsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Doedres Undoing",
+    "cn": "德瑞的毁灭",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cursedgroundsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Font of Mana",
+    "cn": "魔力源泉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/manafountainsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Burning Inscription",
+    "cn": "燃烧铭文",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/burningrunessupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sacrificial Lamb I",
+    "cn": "替罪羔羊 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/sacrificallambsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sacrificial Lamb II",
+    "cn": "替罪羔羊 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/sacrificallambsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Potent Exposure",
+    "cn": "强力曝露",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/stripawaysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Considered Casting",
+    "cn": "审慎施法",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/consideredcastingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wildshards I",
+    "cn": "狂野碎片 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/wildshardssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Wildshards II",
+    "cn": "狂野碎片 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/wildshardssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Siones Temper",
+    "cn": "西奥妮的怒火",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/wildshardssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Icicle",
+    "cn": "冰刺",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/icecrystallesslifesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Glacier",
+    "cn": "冰川",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/icecrystalmorelifesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Rising Tempest",
+    "cn": "风暴骤起",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/tempesttemposupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Extraction",
+    "cn": "萃取",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/extractionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Astral Projection",
+    "cn": "星界投射",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/astralprojectionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Expanse",
+    "cn": "开疆",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/execratesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Excise",
+    "cn": "净除",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/excisesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Execrate",
+    "cn": "怨恨",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/expansesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Energy Retention",
+    "cn": "能量保存",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/energyretentionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Sacrificial Offering",
+    "cn": "牺牲供奉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ablationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Danse Macabre",
+    "cn": "死亡之舞",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/dansemacabresupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Energy Capacitor",
+    "cn": "能量电容",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/capacitorsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Boundless Energy I",
+    "cn": "无边能量 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/impetussupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Boundless Energy II",
+    "cn": "无边能量 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/impetussupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Harmonic Remnants I",
+    "cn": "和谐残迹 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rushedremnantssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Harmonic Remnants II",
+    "cn": "和谐残迹 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/rushedremnantssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Fluke",
+    "cn": "运势",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/randomisedtriggersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ixchels Torment",
+    "cn": "伊克切尔的折磨",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/randomisedtriggersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Zenith I",
+    "cn": "天顶 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/manatenancesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Zenith II",
+    "cn": "天顶 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/manatenancesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bidding I",
+    "cn": "奉命 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/biddingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bidding II",
+    "cn": "奉命 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/biddingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bidding III",
+    "cn": "奉命 III",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/biddingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Commandment",
+    "cn": "调遣",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/purecommandsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Bone Shrapnel",
+    "cn": "钙质碎片",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/boneshrapnelsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Derange",
+    "cn": "错乱",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/derangesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Profanity I",
+    "cn": "不敬 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/profanitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Profanity II",
+    "cn": "不敬 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/profanitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Burgeon I",
+    "cn": "迅猛增幅 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/channellingdamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Burgeon II",
+    "cn": "迅猛增幅 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/channellingdamagesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Freezefork",
+    "cn": "冻结分叉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/freezeforksupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Verglas",
+    "cn": "雨淞",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/verglassupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Embitter",
+    "cn": "苦寒之意",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/embittersupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Abiding Hex",
+    "cn": "恒远魔蛊",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/powerchargetogivecursedurationsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crazed Minions",
+    "cn": "癫狂召唤生物",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/crazedminionssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Deathmarch",
+    "cn": "终末行军",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cleansingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Acrimony",
+    "cn": "尖刻",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/acrimonysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Ambrosia",
+    "cn": "仙馔",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/ambrosiasupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crackling Barrier",
+    "cn": "霹雳屏障",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/lightningthornssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Volatility",
+    "cn": "无常",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/instabilitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Muster",
+    "cn": "海纳百川",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/variedtroopssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hulking Minions",
+    "cn": "魁梧仆从",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/enormitysupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mysticism I",
+    "cn": "灵秘 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/mysticismsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Mysticism II",
+    "cn": "灵秘 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/mysticismsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Upwelling I",
+    "cn": "升流 I",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/upwellingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Upwelling II",
+    "cn": "升流 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/upwellingsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Strong Hearted",
+    "cn": "强健心灵",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/strongheartedsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Catharsis",
+    "cn": "泄除",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/cleansesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Loyalty",
+    "cn": "忠诚",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/trustycompanionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Romiras Requital",
+    "cn": "罗米拉的报复",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/trustycompanionsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Encroaching Ground",
+    "cn": "侵蚀地面",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/expandinggroundsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Living Lightning",
+    "cn": "活体闪电",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/livinglightningsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Living Lightning II",
+    "cn": "活体闪电 II",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/livinglightningsupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Crystalline Shards",
+    "cn": "水晶碎片",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/crystallineshardssupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Diallas Desire",
+    "cn": "达拉的渴望",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Kalisas Crescendo",
+    "cn": "卡莉莎的强音",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Eshs Radiance",
+    "cn": "艾许的光辉",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Atziris Allure",
+    "cn": "阿兹里的魅惑",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Zarokhs Refrain",
+    "cn": "扎洛卡的克制",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Kurgals Leash",
+    "cn": "古加尔的缰绳",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Kulemaks Dominion",
+    "cn": "库勒马克的统治",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankgreensupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Varashtas Blessing",
+    "cn": "瓦拉煞的祝福",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Arbiters Ignition",
+    "cn": "仲裁官的点燃",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/blankbluesupport.webp",
+    "type": "gem"
+  },
+  {
+    "en": "Hex Bloom",
+    "cn": "魔蛊绽放",
+    "img": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/hexbloomsupport.webp",
+    "type": "gem"
+  }
+]

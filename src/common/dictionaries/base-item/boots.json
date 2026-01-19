@@ -1,0 +1,543 @@
+[
+ 
+  {
+    "en": "Golden Caligae",
+    "cn": "黄金缠鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/DemigodsStride.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rough Greaves",
+    "cn": "粗制胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Greaves",
+    "cn": "铁锻胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bronze Greaves",
+    "cn": "青铜胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Trimmed Greaves",
+    "cn": "镶边胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Greaves",
+    "cn": "坚石胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Reefsteel Greaves",
+    "cn": "卷钢胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Monument Greaves",
+    "cn": "典范胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Totemic Greaves",
+    "cn": "图腾胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rawhide Boots",
+    "cn": "生皮短靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Laced Boots",
+    "cn": "花边靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Embossed Boots",
+    "cn": "浮雕靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Steeltoe Boots",
+    "cn": "钢趾靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lizardscale Boots",
+    "cn": "蜥鳞靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flared Boots",
+    "cn": "宽口靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Leatherplate Boots",
+    "cn": "覆皮板靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Embroidered Boots",
+    "cn": "刺绣靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Straw Sandals",
+    "cn": "稻草鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wrapped Sandals",
+    "cn": "裹布鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lattice Sandals",
+    "cn": "硬框鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Silk Slippers",
+    "cn": "丝绸便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Feathered Sandals",
+    "cn": "羽饰鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flax Sandals",
+    "cn": "麻布鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Studded Sandals",
+    "cn": "镶钉鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elaborate Sandals",
+    "cn": "精美鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mail Sabatons",
+    "cn": "锁链战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Braced Sabatons",
+    "cn": "加固战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stacked Sabatons",
+    "cn": "层钢战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Covered Sabatons",
+    "cn": "掩护战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flexile Sabatons",
+    "cn": "灵便战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bold Sabatons",
+    "cn": "光鲜战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Padded Leggings",
+    "cn": "衬垫绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Secured Leggings",
+    "cn": "牢靠绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pelt Leggings",
+    "cn": "毛皮绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Weaver Leggings",
+    "cn": "织履绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gilt Leggings",
+    "cn": "镀金护腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pious Leggings",
+    "cn": "虔信护腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Frayed Shoes",
+    "cn": "磨损便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Threaded Shoes",
+    "cn": "线缝便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hunting Shoes",
+    "cn": "狩猎便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Steelpoint Shoes",
+    "cn": "钢缘便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Velour Shoes",
+    "cn": "鹅绒便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bladed Shoes",
+    "cn": "嵌刃便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Cuisses",
+    "cn": "恢弘腿甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Golden Greaves",
+    "cn": "金色护胫",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plated Greaves",
+    "cn": "坚铁胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lionheart Greaves",
+    "cn": "狮心胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Greaves",
+    "cn": "雅致胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Carved Greaves",
+    "cn": "雕饰胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bound Boots",
+    "cn": "缚革长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sleek Boots",
+    "cn": "滑布长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Studded Boots",
+    "cn": "镶钉长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Serpentscale Boots",
+    "cn": "蛇鳞长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Laced Sandals",
+    "cn": "花边鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bangled Sandals",
+    "cn": "手镯鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elegant Slippers",
+    "cn": "雅致便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dunerunner Sandals",
+    "cn": "沙丘行者鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Soldiering Sabatons",
+    "cn": "士兵战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Goldwork Sabatons",
+    "cn": "金工战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bastion Sabatons",
+    "cn": "坚城壁垒战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Adherent Leggings",
+    "cn": "联排绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bound Leggings",
+    "cn": "缚革绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shamanistic Leggings",
+    "cn": "萨满绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wayfarer Shoes",
+    "cn": "远行者便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Silverbuckled Shoes",
+    "cn": "银扣便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Treerunner Shoes",
+    "cn": "林奔者便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bulwark Greaves",
+    "cn": "堡垒胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ornate Greaves",
+    "cn": "华丽胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Greaves",
+    "cn": "瓦尔胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tasalian Greaves",
+    "cn": "塔萨里奥胫甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStr06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cinched Boots",
+    "cn": "束带长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cavalry Boots",
+    "cn": "骑兵长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dragonscale Boots",
+    "cn": "龙鳞长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Drakeskin Boots",
+    "cn": "龙皮长靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDex06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bound Sandals",
+    "cn": "缚革鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Luxurious Slippers",
+    "cn": "奢华便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sandsworn Sandals",
+    "cn": "沙誓鞋履",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sekhema Sandals",
+    "cn": "丝克玛便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsInt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Veteran Sabatons",
+    "cn": "老兵战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Noble Sabatons",
+    "cn": "贵族战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fortress Sabatons",
+    "cn": "要塞战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blacksteel Sabatons",
+    "cn": "黑钢战靴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsStrDex04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Faithful Leggings",
+    "cn": "信仰护腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Apostle Leggings",
+    "cn": "使徒护腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warlock Leggings",
+    "cn": "术士护腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cryptic Leggings",
+    "cn": "隐秘绑腿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsIntStr04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wanderer Shoes",
+    "cn": "游荡者便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Charmed Shoes",
+    "cn": "魅力便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Quickslip Shoes",
+    "cn": "急迅便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Daggerfoot Shoes",
+    "cn": "捷足便鞋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Basetypes/BootsDexInt04.webp",
+    "type": "base_item"
+  }
+]

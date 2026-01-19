@@ -1,0 +1,92 @@
+[
+  {
+    "en": "Golden Blade",
+    "cn": "金色之刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/DemigodsAuthority.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Energy Blade",
+    "cn": "能量之刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/OneHandSwordStormBlade.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shortsword",
+    "cn": "短剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Broadsword",
+    "cn": "阔剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vampiric Blade",
+    "cn": "喋血之刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Scimitar",
+    "cn": "弯刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Charred Shortsword",
+    "cn": "焦痕短剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sickle Sword",
+    "cn": "镰刃剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Falchion",
+    "cn": "弯刃大刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Treasured Blade",
+    "cn": "珍奇之刃",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cutlass",
+    "cn": "军用长刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Runic Shortsword",
+    "cn": "符文短剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Messer",
+    "cn": "大砍刀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Commander Sword",
+    "cn": "统帅利剑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dark Blade",
+    "cn": "黑暗之锋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/Basetypes/1HSword13.webp",
+    "type": "base_item"
+  }
+]

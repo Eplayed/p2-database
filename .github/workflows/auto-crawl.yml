@@ -50,31 +50,13 @@ jobs:
     - name: Increase max open files limit (prevent ulimit error)
       run: ulimit -n 4096
           
-    - name: Create auto_browser/.env file
-      run: |
-        mkdir -p auto_browser
-        cat > auto_browser/.env << EOF
-        NODE_ENV=production
-        DEV_OSS_PATH=dev/
-        PROD_OSS_PATH=release/
-        OSS_REGION=oss-cn-hangzhou
-        OSS_BUCKET=poe2-all-class
-        OSS_ACCESS_KEY_ID=${{ secrets.OSS_ACCESS_KEY_ID }}
-        OSS_ACCESS_KEY_SECRET=${{ secrets.OSS_ACCESS_KEY_SECRET }}
-        OSS_ENDPOINT=https://oss-cn-hangzhou.aliyuncs.com
-        EOF
-        
-    - name: Ensure translated-data directory exists
-      run: |
-        mkdir -p translated-data/release
-        
     - name: Run crawl and upload
-      run: npm run cron:prod
+      run: npm run crawl:ladder
       
     - name: Upload artifacts (for debugging)
       if: failure()
       uses: actions/upload-artifact@v4
       with:
         name: translated-data
-        path: translated-data/
+        path: data/translated-data/
         retention-days: 7

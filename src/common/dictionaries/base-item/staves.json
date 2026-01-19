@@ -1,0 +1,98 @@
+[
+  {
+    "en": "Ashen Staff",
+    "cn": "枯灰长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gelid Staff",
+    "cn": "冰寒长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Voltaic Staff",
+    "cn": "雷霆长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spriggan Staff",
+    "cn": "鬼灵长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pyrophyte Staff",
+    "cn": "耐火长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chiming Staff",
+    "cn": "鸣谐长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rending Staff",
+    "cn": "撕裂长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Reaping Staff",
+    "cn": "收割长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Icicle Staff",
+    "cn": "冰柱长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Roaring Staff",
+    "cn": "咆哮长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Paralysing Staff",
+    "cn": "麻痹长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sanctified Staff",
+    "cn": "神圣长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dark Staff",
+    "cn": "暗黑长杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ravenous Staff",
+    "cn": "饕餮法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Permafrost Staff",
+    "cn": "永霜法杖",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Reflecting Staff",
+    "cn": "Reflecting Staff",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/Staves/Basetypes/Staff02.webp",
+    "type": "base_item"
+  }
+]

@@ -1,0 +1,449 @@
+[
+  {
+    "id": "PoE2_Druid_Cyclone",
+    "meta": {
+      "title": "德鲁伊旋风击护盾流",
+      "author": "网络攻略",
+      "class": "Druid",
+      "name": "德鲁伊",
+      "tags": ["旋风击", "高生存", "清屏", "低造价"]
+    },
+    "intro": {
+      "desc": "基于流放之路2的德鲁伊BD，利用旋风击配合先祖召唤实现全屏清怪。拥有极高的护甲与护盾生存体系，造价适中，兼顾生存与输出。",
+      "pros": [
+        "清屏能力强，无视地形",
+        "生存极高，四抗满且护甲护盾双修",
+        "造价相对低廉（几十D）"
+      ],
+      "cons": [
+        "BOSS战操作较繁琐，需通过连击积攒资源",
+        "需特定装备词缀支持（如惊魂值）"
+      ]
+    },
+    "skills": [
+      {
+        "groupName": "核心清图技能组",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "旋风击",
+            "originalName": "Cyclone"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "先祖召唤 II",
+            "originalName": "Ancestral Call II"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "势大力沉",
+            "originalName": "Heavy Hitter / Pulverise"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "沉重挥舞",
+            "originalName": "Heavy Swing"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "竭力痛击",
+            "originalName": "Exerted Pain"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "阿图鲁伊的放血术",
+            "originalName": "Atul's Bloodletting"
+          }
+        ],
+        "note": "后期可将竭力痛击更换为乌尔尼多的拥抱(Uul-Netol's Embrace)。保持旋风击攻击时间不小于1.5秒以配合先祖召唤CD。"
+      },
+      {
+        "groupName": "爆发/辅助技能组",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "毁灭之兆",
+            "originalName": "Omen of Destruction"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "延长时间 II",
+            "originalName": "Increased Duration II"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "能量球激增 II",
+            "originalName": "Power Charge Surge II"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "混沌专精",
+            "originalName": "Chaos Mastery"
+          }
+        ],
+        "note": "配合充能杖、活体闪电、装甲回收等技能在BOSS战进行爆发。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [
+        {
+          "name": "加长腰带 (Base)",
+          "reason": "需词缀无副作用（无生命/护盾减少），提供核心属性支持"
+        }
+      ],
+      "rare_priority": [
+        {
+          "slot": "武器 (节杖)",
+          "stats": [
+            "纯物理伤害",
+            "DPS 600+",
+            "猛攻 (Onslaught)",
+            "攻击技能加成"
+          ]
+        },
+        {
+          "slot": "头部",
+          "stats": ["纯护甲底材", "高护盾值", "后缀: 护甲作用于元素伤害"]
+        },
+        {
+          "slot": "胸甲",
+          "stats": ["纯护盾底材", "高惊魂值 (Spirit)", "抗性"]
+        },
+        {
+          "slot": "手套",
+          "stats": ["近战技能等级 +2", "物理攻击转生命偷取"]
+        },
+        {
+          "slot": "饰品 (戒指/项链)",
+          "stats": [
+            "物理点伤",
+            "近战技能等级 +3 (项链)",
+            "免疫晕眩/冻结/点燃 (护符)"
+          ]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "升华天赋：优先点出'纠缠石像'和'命定暴击'。",
+      "天赋路线：出门走护甲护盾混合路线，点出投射物攻击以120%护甲防御的关键点。",
+      "装备过渡：早期寻找带有物理点伤的武器，尽快堆高护甲和护盾，利用天赋的护甲转伤机制提升生存。",
+      "输出手法：清图时利用旋风击和先祖召唤的联动；打BOSS时先用先祖之魂攒连击，再开启毁灭之兆等爆发技能。"
+    ]
+  },
+  {
+    "id": "PoE2_Witch_COC_Comet",
+    "meta": {
+      "title": "女巫血法诅咒COC彗星落",
+      "author": "a 伟",
+      "class": "Witch",
+      "name": "女巫",
+      "tags": ["COC", "彗星落", "攻坚", "一键清屏"]
+    },
+    "intro": {
+      "desc": "基于女巫职业的暴击时施放（COC）流派，以彗星落为核心输出。通过诅咒触发高频暴击，实现一键清屏与秒杀BOSS，操作简单适合萌新。",
+      "pros": [
+        "清屏能力极强，无视地图难度",
+        "一键操作，简单易上手",
+        "爆发伤害高，可秒杀攻坚BOSS"
+      ],
+      "cons": [
+        "需特定装备词缀支持（如精魂、暴击率）",
+        "对珠宝和技能连接有硬性要求"
+      ]
+    },
+    "skills": [
+      {
+        "groupName": "诅咒触发组 (一键启动)",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "元素要害",
+            "originalName": "Elemental Weakness"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "德瑞的毁灭",
+            "originalName": "Doedre's Withering"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "赤炼",
+            "originalName": "Blood Charge / Hemomancy"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "天顶 II",
+            "originalName": "Zenith II"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "多重范围施法",
+            "originalName": "Spell Cascade"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "仪祭诅咒",
+            "originalName": "Ritual Curse"
+          }
+        ],
+        "note": "作为起手技能，触发德瑞的毁灭造成伤害并积攒能量"
+      },
+      {
+        "groupName": "核心输出组 (COC)",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "暴击时施放",
+            "originalName": "Cast On Critical Strike"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "彗星落",
+            "originalName": "Comet"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "活体炸弹",
+            "originalName": "Living Bomb"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "无边能量 II",
+            "originalName": "Boundless Energy II"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "天顶 II",
+            "originalName": "Zenith II"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "阿图鲁伊的放血术",
+            "originalName": "Atul's Bloodletting"
+          }
+        ],
+        "note": "能量满时自动触发，利用灌注伤害秒杀敌人"
+      },
+      {
+        "groupName": "光环与资源组",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "大法师",
+            "originalName": "Archmage"
+          },
+          {
+            "icon": "",
+            "isSupport": true,
+            "name": "闪电专精",
+            "originalName": "Lightning Mastery"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "生命残片",
+            "originalName": "Life Siphon"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "魔力残片",
+            "originalName": "Mana Siphon"
+          }
+        ],
+        "note": "配合残片效能与和谐残迹使用，维持血蓝循环"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [
+        {
+          "name": "阿兹里的锻造护手 (Atziri's Forged Gauntlets)",
+          "reason": "需双孔且暴击几率45%以上，提供核心属性"
+        },
+        {
+          "name": "泉井之心 (Heart of the Well)",
+          "reason": "传奇珠宝，提供立即偷取，保证生存续航"
+        }
+      ],
+      "rare_priority": [
+        {
+          "slot": "法杖 (Main Hand)",
+          "stats": [
+            "双倍额外法术伤害",
+            "冰霜法术技能等级 +4/+5",
+            "暴击率 > 40%",
+            "施法速度"
+          ]
+        },
+        {
+          "slot": "圣洁法器 (Off Hand)",
+          "stats": [
+            "已瓦解(Corrupted)",
+            "每100点魔力转化为法术伤害",
+            "双孔补抗性"
+          ]
+        },
+        {
+          "slot": "项链",
+          "stats": ["日曜底子", "所有法术技能等级 +2/+3", "涂油: 急速代谢"]
+        },
+        {
+          "slot": "鞋子",
+          "stats": ["恶风足迹 (Winds of Evil) 词条", "双孔 (镶嵌移动符文)"]
+        },
+        {
+          "slot": "胸甲",
+          "stats": ["高精魂 (Spirit)", "高护盾 (ES)", "抗性"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "精魂(Spirit)管理：通过衣服和项链凑齐至少112点精魂，不足可使用'抗衡黑暗'珠宝补充。",
+      "诅咒范围：通过4颗珠宝找'诅咒范围'词条或点出天赋'喧腾'，确保范围达到4.7以最大化输出覆盖。",
+      "输出循环：进图只需按住'元素要害'，触发诅咒和德瑞的毁灭，暴击后自动引导彗星落。",
+      "装备镶嵌：头部镶嵌魔力上限灵核，手套镶嵌特克罗的凝视提升续航。"
+    ]
+  },
+  {
+    "id": "PoE2_Huntress_StickyGrenade",
+    "meta": {
+      "title": "猎魔人黏油榴弹",
+      "author": "网络攻略",
+      "class": "Huntress",
+      "name": "猎魔人",
+      "tags": ["黏油榴弹", "深渊策略", "低造价", "开荒"]
+    },
+    "intro": {
+      "desc": "基于猎魔人(Huntress)的开荒BD，核心使用黏油榴弹清图，迫击炮与高爆榴弹攻坚。拥有针对恶魔的100%增伤升华，极度契合深渊赛季玩法，生存防御体系全面。",
+      "pros": [
+        "造价低廉，不绑定关键暗金装备",
+        "防御全面，免疫多种持续伤害(点燃/流血/中毒)",
+        "针对恶魔怪有高额增伤，深渊收益极高"
+      ],
+      "cons": ["高爆榴弹视觉效果晃眼", "BOSS战需提前布置阵地(迫击炮/分身)"]
+    },
+    "skills": [
+      {
+        "groupName": "核心弹药技能",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "黏油榴弹",
+            "originalName": "Sticky Oil Grenade"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "高爆榴弹",
+            "originalName": "High Explosive Grenade"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "闪光榴弹",
+            "originalName": "Flash Grenade"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "毒气弹",
+            "originalName": "Gas Grenade"
+          }
+        ],
+        "note": "黏油榴弹用于清图；高爆榴弹配合控制打BOSS；毒气弹用于铺场。"
+      },
+      {
+        "groupName": "阵地与辅助技能",
+        "links": [
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "迫击炮",
+            "originalName": "Mortar"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "幻影猎手",
+            "originalName": "Phantom Hunter"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "灰烬之捷",
+            "originalName": "Herald of Ash"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "风舞者",
+            "originalName": "Wind Dancer"
+          },
+          {
+            "icon": "",
+            "isSupport": false,
+            "name": "元素结界",
+            "originalName": "Elemental Aegis"
+          }
+        ],
+        "note": "迫击炮和幻影猎手可装填榴弹进行输出；风舞者用于位移和保命。"
+      }
+    ],
+    "equipment": {
+      "core_uniques": [],
+      "rare_priority": [
+        {
+          "slot": "武器 (战弩)",
+          "stats": [
+            "额外护甲基底",
+            "攻击技能/投射物等级",
+            "点伤",
+            "榴弹再次激活几率"
+          ]
+        },
+        {
+          "slot": "胸甲",
+          "stats": ["全局防御 (护甲+闪避)", "生命", "抗性"]
+        },
+        {
+          "slot": "手套",
+          "stats": ["点伤", "攻击速度", "抗性", "护甲/闪避"]
+        },
+        {
+          "slot": "珠宝",
+          "stats": ["额外火焰伤害", "额外投射物", "护甲/闪避"]
+        }
+      ]
+    },
+    "leveling_tips": [
+      "升华选择：前期优先点出'元素结界'和'恶魔增伤'节点，后期攻坚可补榴弹次数或伤害节点。",
+      "天赋加点：输出找投射物和引爆时间；生存找护甲、闪避、屏障及负面状态免疫（诅咒/瘫痪等）。",
+      "清图手法：移动中投掷黏油榴弹即可，利用引爆快不伤眼的特性高效清图。",
+      "BOSS连招：先布置迫击炮和幻影猎手，投掷黏油和毒气弹铺场，最后使用高爆榴弹爆发。"
+    ]
+  }
+]

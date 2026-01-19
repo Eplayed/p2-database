@@ -1,0 +1,158 @@
+[
+  {
+    "en": "Felled Greatclub",
+    "cn": "伐采巨棍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Oak Greathammer",
+    "cn": "橡木大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Forge Maul",
+    "cn": "锻炉巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Studded Greatclub",
+    "cn": "镶钉巨棍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cultist Greathammer",
+    "cn": "教徒大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Temple Maul",
+    "cn": "神殿巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Leaden Greathammer",
+    "cn": "灌铅大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crumbling Maul",
+    "cn": "摧枯巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pointed Maul",
+    "cn": "钉头巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Totemic Greatclub",
+    "cn": "图腾巨棍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Greatmace",
+    "cn": "狼牙巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Precise Greathammer",
+    "cn": "精准大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Giant Maul",
+    "cn": "伟岸巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace13.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Snakewood Greathammer",
+    "cn": "蛇纹大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blacksmith Maul",
+    "cn": "锻造巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Zealot Greathammer",
+    "cn": "狂热大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Solemn Maul",
+    "cn": "肃穆巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heavy Greathammer",
+    "cn": "沉重大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Disintegrating Maul",
+    "cn": "破军巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Anvil Maul",
+    "cn": "铁砧巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacred Maul",
+    "cn": "神圣巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ironwood Greathammer",
+    "cn": "铁木大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fanatic Greathammer",
+    "cn": "狂乱大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ruination Maul",
+    "cn": "毁灭巨锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Massive Greathammer",
+    "cn": "庞然大锤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tawhoan Greatclub",
+    "cn": "塔赫亚巨棍",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/TwoHandWeapons/TwoHandMaces/Basetypes/2HMace10.webp",
+    "type": "base_item"
+  }
+]

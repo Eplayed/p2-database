@@ -4,9 +4,10 @@
   "main": "merge_data.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cron:dev": "NODE_ENV=dev node run_translate_crawler.js",
-    "cron:prod": "NODE_ENV=production node run_translate_crawler.js",
-    "start": "npm run cron:prod"
+    "crawl:ladder": "node src/crawlers/poe2-ladder/run_full_process.js",
+    "crawl:ladder:dev": "NODE_ENV=dev node src/crawlers/poe2-ladder/run_full_process.js",
+    "build:crafting": "node src/processors/poe2-crafting/build_and_upload.js",
+    "start": "npm run crawl:ladder"
   },
   "keywords": [],
   "author": "",

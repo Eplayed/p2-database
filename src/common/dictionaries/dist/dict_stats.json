@@ -1,0 +1,1393 @@
+{
+  "keywords": {
+    "maximum Life": "最大生命",
+    "maximum Mana": "最大魔力",
+    "maximum Energy Shield": "最大能量护盾",
+    "Energy Shield": "能量护盾",
+    "Armour": "护甲",
+    "Evasion": "闪避值",
+    "Evasion Rating": "闪避值",
+    "Strength": "力量",
+    "Dexterity": "敏捷",
+    "Intelligence": "智慧",
+    "all Attributes": "全属性",
+    "Fire Resistance": "火焰抗性",
+    "Cold Resistance": "冰霜抗性",
+    "Lightning Resistance": "闪电抗性",
+    "Chaos Resistance": "混沌抗性",
+    "Elemental Resistances": "元素抗性",
+    "Movement Speed": "移动速度",
+    "Attack Speed": "攻击速度",
+    "Cast Speed": "施法速度",
+    "Projectile Speed": "投射物速度",
+    "Critical Hit Chance": "暴击率",
+    "Global Critical Strike Multiplier": "全局暴击伤害加成",
+    "Physical Damage": "物理伤害",
+    "Fire Damage": "火焰伤害",
+    "Cold Damage": "冰霜伤害",
+    "Lightning Damage": "闪电伤害",
+    "Chaos Damage": "混沌伤害",
+    "Elemental Damage": "元素伤害",
+    "Spell Damage": "法术伤害",
+    "Rarity of Items found": "物品稀有度",
+    "Stun Threshold": "晕眩门槛",
+    "Cooldown Recovery Rate": "冷却回复速度",
+    "Mana Regeneration Rate": "魔力回复速度",
+    "Life Regeneration Rate": "生命回复速度",
+    "Mark of the Abyssal Lord": "深渊领主的印记",
+    "Corrupted Blood cannot be inflicted on you": "你无法被施加腐化之血",
+    "Immune to Maim": "免疫瘫痪",
+    "Cannot be Blinded": "免疫致盲",
+    "You cannot be Hindered": "你无法被缓速",
+    "Bow Attacks fire an additional Arrow": "弓类攻击发射 1 支额外箭矢",
+    "Loads an additional bolt": "额外装填一支弩箭",
+    "Attacks Chain an additional time": "攻击额外连锁 1 次",
+    "On Corruption, Item gains two Enchantments": "被腐化时，物品获得两项附魔",
+    "to Accuracy Rating": "命中值",
+    "to Strength, Dexterity or Intelligence": "力量、敏捷或智慧",
+    "to Level of all Attack Skills": "所有攻击技能等级",
+    "to Level of all Melee Skills": "所有近战技能等级",
+    "to Level of all Spell Skills": "所有法术技能等级",
+    "to Level of all Minion Skills": "所有召唤生物技能等级",
+    "to Level of all Cold Spell Skills": "所有冰霜法术技能等级",
+    "to Level of all Chaos Spell Skills": "所有混沌法术技能等级",
+    "to Level of all Fire Spell Skills": "所有火焰法术技能等级",
+    "to Level of all Lightning Spell Skills": "所有闪电法术技能等级",
+    "to Level of all Physical Spell Skills": "所有物理法术技能等级",
+    "to Level of all Projectile Skills": "所有投射物技能等级",
+    "to Level of all Trap Skill Gems": "所有陷阱技能宝石等级",
+    "to Level of all Skills": "所有技能等级",
+    "to Maximum Rage": "最大怒火",
+    "to Maximum Frenzy Charges": "狂怒球数量上限",
+    "to Maximum Power Charges": "暴击球数量上限",
+    "to Maximum Endurance Charges": "耐力球数量上限",
+    "to all Attributes": "全属性",
+    "to Spirit": "精魂"
+  },
+  "patterns": [
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Dexterity",
+      "replace": "+$1 敏捷"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Accuracy Rating",
+      "replace": "+$1 命中值"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Intelligence",
+      "replace": "+$1 智慧"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Critical Damage Bonus",
+      "replace": "+$1% 暴击伤害加成"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Critical Hit Chance",
+      "replace": "暴击几率 +$1%"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Cold Damage",
+      "replace": "附加 $1 冰霜伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Fire Damage",
+      "replace": "附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Lightning Damage",
+      "replace": "附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Lightning Damage",
+      "replace": "附加 $1 - $2 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Physical Damage",
+      "replace": "附加 $1 物理伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Damage with Attacks",
+      "replace": "攻击技能的元素伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed",
+      "replace": "攻击速度加快 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Cold Damage",
+      "replace": "获得相当于伤害 $1% 的额外冰霜伤害"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Fire Damage",
+      "replace": "获得相当于伤害 $1% 的额外火焰伤害"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Lightning Damage",
+      "replace": "获得相当于伤害 $1% 的额外闪电伤害"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+)% of Damage as Extra Physical Damage",
+      "replace": "获得相当于伤害 $1% 的额外物理伤害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength, Dexterity or Intelligence",
+      "replace": "力量、敏捷或智慧 +$1"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Mana per Enemy Killed",
+      "replace": "每击败一名敌人获得 $1 点魔力"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Life per Enemy Killed",
+      "replace": "每击败一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "Grants ([\\d\\.\\–\\-]+) Life per Enemy Hit",
+      "replace": "每击中一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Attribute Requirements",
+      "replace": "属性需求降低 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Attack Skills",
+      "replace": "所有攻击技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Melee Skills",
+      "replace": "所有近战技能等级 +$1"
+    },
+    {
+      "regex": "Leeches ([\\d\\.\\–\\-]+)% of Physical Damage as Mana",
+      "replace": "物理伤害的 $1% 转化为魔力偷取"
+    },
+    {
+      "regex": "Leeches ([\\d\\.\\–\\-]+)% of Physical Damage as Life",
+      "replace": "物理伤害的 $1% 转化为生命偷取"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Physical Damage",
+      "replace": "物理伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Duration",
+      "replace": "晕眩持续时间延长 $1%"
+    },
+    {
+      "regex": "Causes ([\\d\\.\\–\\-]+)% increased Stun Buildup",
+      "replace": "造成的晕眩积蓄值提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength",
+      "replace": "+$1 力量"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Lightning Resistance",
+      "replace": "闪电抗性上限 +$1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Cold Resistance",
+      "replace": "冰霜抗性 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Shock Duration",
+      "replace": "感电持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to Shock",
+      "replace": "感电几率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Bows",
+      "replace": "弓类攻击的攻击速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Bows",
+      "replace": "弓类伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Hit Chance for Attacks",
+      "replace": "攻击暴击率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Blind Enemies on Hit with Attacks",
+      "replace": "攻击击中有 $1% 的几率致盲敌人"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Damage Bonus for Attack Damage",
+      "replace": "攻击伤害的暴击伤害加成 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Damage",
+      "replace": "攻击伤害提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Chaos Resistance",
+      "replace": "混沌抗性 +$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Withered Magnitude",
+      "replace": "死亡凋零强度提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Fire Resistance",
+      "replace": "火焰抗性 +$1%"
+    },
+    {
+      "regex": "Companions deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "伙伴的伤害提高 $1%"
+    },
+    {
+      "regex": "Companions have ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "伙伴的生命上限提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Flask Charges gained",
+      "replace": "获得的魔力药剂充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Flask Charges gained",
+      "replace": "获得的生命药剂充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flask Charges gained",
+      "replace": "获得的药剂充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Charm Charges gained",
+      "replace": "获得的咒符充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Poison on Hit",
+      "replace": "击中时有 $1% 的几率使目标中毒"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Hits against Rare and Unique Enemies",
+      "replace": "击中稀有怪和传奇怪伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you have an active Charm",
+      "replace": "激活咒符时，伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Buildup with Quarterstaves",
+      "replace": "节杖的冻结积蓄值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Quarterstaves",
+      "replace": "节杖的攻击速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Quarterstaves",
+      "replace": "节杖的伤害提高 $1%"
+    },
+    {
+      "regex": "Herald Skills deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "捷技能造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cooldown Recovery Rate",
+      "replace": "冷却回复速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Strength",
+      "replace": "力量提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Dexterity",
+      "replace": "敏捷提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Accuracy Rating",
+      "replace": "命中值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased amount of Mana Leeched",
+      "replace": "魔力偷取量提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Threshold if you haven't been Stunned Recently",
+      "replace": "若你[近期]未被晕眩，晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Evasion Rating",
+      "replace": "闪避值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Lightning Damage",
+      "replace": "闪电伤害提高 $1%"
+    },
+    {
+      "regex": "Damage Penetrates ([\\d\\.\\–\\-]+)% Lightning Resistance",
+      "replace": "伤害穿透 $1% 的闪电抗性"
+    },
+    {
+      "regex": "Damaging Ailments deal damage ([\\d\\.\\–\\-]+)% faster",
+      "replace": "伤害型异常状态生效速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Projectile Damage",
+      "replace": "投射物伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Projectile Speed",
+      "replace": "投射物速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Hazard Damage",
+      "replace": "危害伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Recovery from Flasks",
+      "replace": "药剂的魔力回复提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Recovery from Flasks",
+      "replace": "药剂的生命回复提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flask Effect Duration",
+      "replace": "药剂效果的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed",
+      "replace": "移动速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Ailment Threshold",
+      "replace": "异常状态阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Damage",
+      "replace": "元素伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased chance to inflict Ailments",
+      "replace": "造成异常状态的几率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Warcries",
+      "replace": "战吼的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warcry Buff Effect",
+      "replace": "战吼的增益效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Damage Bonus with Spears",
+      "replace": "战矛的暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Spears",
+      "replace": "战矛的攻击速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Spears",
+      "replace": "战矛的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed with Crossbows",
+      "replace": "战弩的攻击速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Crossbows",
+      "replace": "战弩的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Crossbow Reload Speed",
+      "replace": "战弩装填速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Parry Damage",
+      "replace": "招架伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Threshold while Parrying",
+      "replace": "招架时的晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Blind Effect",
+      "replace": "致盲效果提高$1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Intelligence",
+      "replace": "智慧提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Poison Duration",
+      "replace": "中毒持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Charm Effect Duration",
+      "replace": "咒符效果的持续时间延长 $1%"
+    },
+    {
+      "regex": "Mark Skills have ([\\d\\.\\–\\-]+)% increased Skill Effect Duration",
+      "replace": "咒印技能的技能效果持续时间提高 $1%"
+    },
+    {
+      "regex": "Mark Skills have ([\\d\\.\\–\\-]+)% increased Use Speed",
+      "replace": "咒印技能的施法速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased bonuses gained from Equipped Quiver",
+      "replace": "装备箭袋获得的加成提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Melee Strike Range with this weapon",
+      "replace": "此武器的近战打击范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you have a Totem",
+      "replace": "当你有图腾存在时，伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage against Enemies with Fully Broken Armour",
+      "replace": "对护甲完全破损的敌人造成的伤害提高 $1%"
+    },
+    {
+      "regex": "Break Armour equal to ([\\d\\.\\–\\-]+)% of Physical Damage dealt",
+      "replace": "粉碎护甲，相当于造成物理伤害的 $1%"
+    },
+    {
+      "regex": "Attacks with this Weapon Penetrate ([\\d\\.\\–\\-]+)% Cold Resistance",
+      "replace": "该武器的攻击穿透 $1% 的冰霜抗性"
+    },
+    {
+      "regex": "Attacks with this Weapon Penetrate ([\\d\\.\\–\\-]+)% Fire Resistance",
+      "replace": "该武器的攻击穿透 $1% 的火焰抗性"
+    },
+    {
+      "regex": "Attacks with this Weapon Penetrate ([\\d\\.\\–\\-]+)% Lightning Resistance",
+      "replace": "该武器的攻击穿透 $1% 的闪电抗性"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Chaos damage",
+      "replace": "该装备附加 $1 基础混沌伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cost Efficiency of Attacks",
+      "replace": "攻击的消耗效能提高 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Rage on Hit",
+      "replace": "击中时获得 $1 点怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to cause Bleeding on Hit",
+      "replace": "击中有 $1% 的几率造成流血"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spirit Reservation Efficiency of Skills",
+      "replace": "技能的精魂保留效能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Skill Mana Costs Converted to Life Costs",
+      "replace": "技能的魔力消耗的 $1% 转化为生命消耗"
+    },
+    {
+      "regex": "Fissure Skills have a ([\\d\\.\\–\\-]+)% chance to create an additional Fissure",
+      "replace": "裂隙技能有 $1% 的几率产生一个额外裂隙"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Totem Placement speed",
+      "replace": "图腾放置速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Mace Slam Skills you use yourself to cause Aftershocks",
+      "replace": "你使用的锤类重击技能有 $1% 的几率引发余震"
+    },
+    {
+      "regex": "Empowered Attacks deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "强化攻击造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Physical Damage([\\d\\.\\–\\-]+)% reduced Attack Speed",
+      "replace": "物理伤害提高 $1%攻击速度降低 $2%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warcry Cooldown Recovery Rate",
+      "replace": "战吼冷却回复速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Physical Thorns damage",
+      "replace": "$1 物理荆棘伤害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Armour",
+      "replace": "+$1 护甲"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength and Dexterity",
+      "replace": "+$1 力量和敏捷"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Strength and Intelligence",
+      "replace": "+$1 力量和智慧"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Dexterity and Intelligence",
+      "replace": "+$1 敏捷和智慧"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Stun Threshold",
+      "replace": "+$1 晕眩阈值"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum Life",
+      "replace": "+$1 最大生命"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Cold Resistance",
+      "replace": "+$1% 冰霜抗性上限"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Cold and Chaos Resistances",
+      "replace": "+$1% 冰霜和混沌抗性"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% of Armour also applies to Chaos Damage",
+      "replace": "+$1% 的护甲同样作用于混沌伤害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% of Armour also applies to Elemental Damage",
+      "replace": "+$1% 的护甲同样作用于元素伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% additional Physical Damage Reduction",
+      "replace": "$1% 额外物理伤害减免"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Chaos Resistance",
+      "replace": "+$1% 混沌抗性上限"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Maximum Fire Resistance",
+      "replace": "+$1% 火焰抗性上限"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Fire and Chaos Resistances",
+      "replace": "+$1% 火焰和混沌抗性"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to all maximum Resistances",
+      "replace": "+$1% 所有抗性上限"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to Lightning and Chaos Resistances",
+      "replace": "+$1% 闪电和混沌抗性"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to all Maximum Elemental Resistances",
+      "replace": "+$1% 元素抗性上限"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Parried Debuff Magnitude",
+      "replace": "被招架减益状态的强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Block chance",
+      "replace": "格挡几率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour, Evasion or Energy Shield",
+      "replace": "护甲、闪避或能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to Stun Threshold",
+      "replace": "+$1 晕眩阈值"
+    },
+    {
+      "regex": "Hits have ([\\d\\.\\–\\-]+)% reduced Critical Hit Chance against you",
+      "replace": "对你的击中暴击率降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Damage taken Recouped as Mana",
+      "replace": "将所受伤害的 $1% 吸纳为魔力"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Damage taken Recouped as Life",
+      "replace": "将所受伤害的 $1% 吸纳为生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Mana gained when you Block",
+      "replace": "格挡时获得 $1 点魔力"
+    },
+    {
+      "regex": "Your Heavy Stun buildup empties ([\\d\\.\\–\\-]+)% faster",
+      "replace": "你的重晕积蓄值消退速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced effect of Curses on you",
+      "replace": "你受到的诅咒效果降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Life gained when you Block",
+      "replace": "格挡时获得 $1 点生命"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to maximum Block chance",
+      "replace": "+$1% 最大格挡几率"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Evasion Rating",
+      "replace": "+$1 点闪避值"
+    },
+    {
+      "regex": "Hits against you have ([\\d\\.\\–\\-]+)% reduced Critical Damage Bonus",
+      "replace": "对你的击中的暴击伤害加成降低 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour and Evasion",
+      "replace": "该装备的护甲与闪避提高 $1%"
+    },
+    {
+      "regex": "Gain Deflection Rating equal to ([\\d\\.\\–\\-]+)% of Evasion Rating",
+      "replace": "获得相当于闪避值 $1% 的偏转值"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum Energy Shield",
+      "replace": "+$1 最大能量护盾"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour and Energy Shield",
+      "replace": "该装备的护甲与能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield Recharge Rate",
+      "replace": "能量护盾充能率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield Recharge Rate if you've Blocked Recently",
+      "replace": "如果你近期内格挡过，能量护盾充能率提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% to all Elemental Resistances",
+      "replace": "所有元素抗性 +$1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum Mana",
+      "replace": "+$1 最大魔力"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Physical Damage",
+      "replace": "$1% 法术物理伤害提高"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cold Damage",
+      "replace": "冰霜伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Hit Chance for Spells",
+      "replace": "法术暴击率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Spell Damage Bonus",
+      "replace": "+$1% 法术暴击伤害加成"
+    },
+    {
+      "regex": "Spell Skills have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "法术技能的效果范围扩大 $1%"
+    },
+    {
+      "regex": "Spell Skills have \\+([\\d\\.\\–\\-]+) to maximum number of Summoned Totems",
+      "replace": "法术技能召唤图腾的最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Spell Skills to fire ([\\d\\.\\–\\-]+) additional Projectiles",
+      "replace": "法术技能有 $1% 的几率发射 $2 个额外投射物"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Spell Mana Cost Converted to Life Cost",
+      "replace": "法术魔力消耗的 $1% 转化为生命消耗"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage",
+      "replace": "法术伤害提高 $1%"
+    },
+    {
+      "regex": "Offering Skills have ([\\d\\.\\–\\-]+)% increased Buff effect",
+      "replace": "奉献技能的增益效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield",
+      "replace": "该装备的能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to maximum Mana",
+      "replace": "+$1 最大魔力"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Chaos Damage",
+      "replace": "混沌伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Fire Damage",
+      "replace": "火焰伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Cost Efficiency",
+      "replace": "魔力消耗效能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Regeneration Rate",
+      "replace": "魔力再生率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% faster start of Energy Shield Recharge",
+      "replace": "能量护盾提早 $1% 开始恢复"
+    },
+    {
+      "regex": "Invocated Spells deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "祈求法术造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed",
+      "replace": "施法速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance when collecting an Elemental Infusion to gain anadditional Elemental Infusion of the same type",
+      "replace": "收集元素灌注时，有 $1% 的几率获得一个同类型的额外元素灌注"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Spell Skills",
+      "replace": "所有法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Minion Skills",
+      "replace": "所有召唤生物技能等级 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage while wielding a Melee Weapon",
+      "replace": "装备近战武器时，法术伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% faster Curse Activation",
+      "replace": "诅咒激活速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Curse Magnitudes",
+      "replace": "诅咒强度提高 $1%"
+    },
+    {
+      "regex": "Enemies Hindered by you take ([\\d\\.\\–\\-]+)% increased Chaos Damage",
+      "replace": "你缓速的敌人承受的混沌伤害提高 $1%"
+    },
+    {
+      "regex": "Enemies Hindered by you take ([\\d\\.\\–\\-]+)% increased Physical Damage",
+      "replace": "你缓速的敌人承受的物理伤害提高 $1%"
+    },
+    {
+      "regex": "Enemies Hindered by you take ([\\d\\.\\–\\-]+)% increased Elemental Damage",
+      "replace": "你缓速的敌人承受的元素伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Buildup",
+      "replace": "冻结积蓄值提高 $1%"
+    },
+    {
+      "regex": "Break Armour on Critical Hit with Spells equal to ([\\d\\.\\–\\-]+)% of Physical Damage dealt",
+      "replace": "法术暴击时粉碎护甲，相当于造成的物理伤害的 $1%"
+    },
+    {
+      "regex": "Break ([\\d\\.\\–\\-]+)% increased Armour",
+      "replace": "粉碎的护甲提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed for each different Non-Instant Spell you've Cast Recently",
+      "replace": "近期内你每施放一个不同的非瞬发法术，施法速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Cast Speed while on Full Mana",
+      "replace": "魔力全满时施法速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Regeneration Rate([\\d\\.\\–\\-]+)% increased Light Radius",
+      "replace": "魔力再生率提高 $1%照亮范围扩大 $2%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Bleeding you inflict",
+      "replace": "你造成的流血强度提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Cold Spell Skills",
+      "replace": "所有冰霜法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Chaos Spell Skills",
+      "replace": "所有混沌法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Fire Spell Skills",
+      "replace": "所有火焰法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Lightning Spell Skills",
+      "replace": "所有闪电法术技能等级 +$1"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Physical Spell Skills",
+      "replace": "所有物理法术技能等级 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage with Spells that cost Life",
+      "replace": "消耗生命的法术造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flammability Magnitude",
+      "replace": "易燃强度提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Evasion Rating",
+      "replace": "闪避值提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Spirit",
+      "replace": "+$1 精魂"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Reservation Efficiency of Companion Skills",
+      "replace": "伙伴技能的保留效能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Ignite Duration on you",
+      "replace": "你被点燃的持续时间缩短 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Poison Duration on you",
+      "replace": "你受到的中毒持续时间缩短 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) to maximum Life",
+      "replace": "+$1 最大生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) Life Regeneration per second",
+      "replace": "生命每秒再生 $1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "生命上限提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Physical Damage from Hits taken as Chaos Damage",
+      "replace": "受到击中物理伤害的 $1% 转化为混沌伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced Duration of Bleeding on You",
+      "replace": "你受到的流血持续时间缩短 $1%"
+    },
+    {
+      "regex": "Prevent \\+([\\d\\.\\–\\-]+)% of Damage from Deflected Hits",
+      "replace": "防止 +$1% 来自偏转击中的伤害"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Evasion and Energy Shield",
+      "replace": "该装备的闪避与能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% of Damage is taken from Mana before Life",
+      "replace": "$1% 的伤害优先从魔力扣除，再从生命扣除"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Evasion and Energy Shield",
+      "replace": "该装备的闪避与能量护盾提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Armour",
+      "replace": "护甲提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Armour and Evasion",
+      "replace": "该装备的护甲与闪避提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Armour and Energy Shield",
+      "replace": "该装备的护甲与能量护盾提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+)% increased Energy Shield",
+      "replace": "该装备的能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% Surpassing chance to fire an additional Arrow",
+      "replace": "$1% 满溢几率发射额外一支箭矢"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Immobilisation buildup",
+      "replace": "定身积蓄值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Area of Effect for Attacks",
+      "replace": "攻击效果范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Speed while your Companion is in your Presence",
+      "replace": "你的伙伴在场时，攻击速度加快 $1%"
+    },
+    {
+      "regex": "Companions deal ([\\d\\.\\–\\-]+)% increased Damage while your Companion is in your Presence",
+      "replace": "你的伙伴在场时，其造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Maim on Hit",
+      "replace": "击中时有 $1% 的几率造成瘫痪"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to Blind Enemies on hit",
+      "replace": "击中时有 $1% 的几率致盲敌人"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Level of all Projectile Skills",
+      "replace": "所有投射物技能等级 +$1"
+    },
+    {
+      "regex": "Projectiles have ([\\d\\.\\–\\-]+)% increased Critical Hit Chance against Enemies further than ([\\d\\.\\–\\-]+)m",
+      "replace": "投射物对 $2 米外的敌人暴击率提高 $1%"
+    },
+    {
+      "regex": "Projectiles deal ([\\d\\.\\–\\-]+)% increased Damage with Hits against Enemies further than ([\\d\\.\\–\\-]+)m",
+      "replace": "投射物击中 $2 米外的敌人时造成的伤害提高 $1%"
+    },
+    {
+      "regex": "Projectile Attacks have a ([\\d\\.\\–\\-]+)% chance to fire two additional Projectiles while moving",
+      "replace": "移动时，投射物攻击有 $1% 的几率发射两个额外投射物"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to Maximum Rage",
+      "replace": "+$1 最大怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Buildup",
+      "replace": "晕眩积蓄值提高 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Rage when Hit by an Enemy",
+      "replace": "被敌人击中时获得 $1 点怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Maces",
+      "replace": "锤类的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Buildup with Maces",
+      "replace": "锤类的晕眩积蓄提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Defences from Equipped Shield",
+      "replace": "从盾牌获取的防御提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Ignite Magnitude",
+      "replace": "点燃强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance for Attack Hits to apply Incision",
+      "replace": "攻击击中有 $1% 的几率施加创口"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Armour Break Duration",
+      "replace": "护甲破损持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Knockback Distance",
+      "replace": "击退距离延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to inflict Bleeding on Hit",
+      "replace": "击中时有 $1% 的几率造成流血"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Skill Effect Duration",
+      "replace": "技能效果持续时间延长 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Rage on Melee Hit",
+      "replace": "近战击中时获得 $1 怒火"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Melee Damage",
+      "replace": "近战伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Bleeding Duration",
+      "replace": "流血持续时间延长 $1%"
+    },
+    {
+      "regex": "Banner Skills have ([\\d\\.\\–\\-]+)% increased Duration",
+      "replace": "旗帜技能的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Glory generation for Banner Skills",
+      "replace": "旗帜技能的勋章获取提高 $1%"
+    },
+    {
+      "regex": "Banner Skills have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "旗帜技能的效果范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Global Physical Damage",
+      "replace": "全局物理伤害提高 $1%"
+    },
+    {
+      "regex": "Damage Penetrates ([\\d\\.\\–\\-]+)% Fire Resistance",
+      "replace": "伤害穿透 $1% 火焰抗性"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased amount of Life Leeched",
+      "replace": "生命偷取量提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Regeneration rate",
+      "replace": "生命再生率提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Presence Area of Effect",
+      "replace": "同场效果范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Totem Life",
+      "replace": "图腾的生命提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Weapon Swap Speed",
+      "replace": "武器切换速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "效果范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Stun Threshold",
+      "replace": "晕眩阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warcry Buff Effect",
+      "replace": "战吼的增益效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warcry Speed",
+      "replace": "战吼速度加快 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Area of Effect",
+      "replace": "召唤生物的效果区域扩大 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased maximum Life",
+      "replace": "召唤生物的最大生命提高 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% additional Physical Damage Reduction",
+      "replace": "召唤生物有 $1% 额外物理伤害减免"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage with Bow Skills",
+      "replace": "弓类技能伤害提高 $1%"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Cold damage to Attacks",
+      "replace": "攻击附加 $1 冰霜伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Cold damage to Attacks",
+      "replace": "攻击附加 $1 - $2 冰霜伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Fire damage to Attacks",
+      "replace": "攻击附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Fire damage to Attacks",
+      "replace": "攻击附加 $1 - $2 火焰伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Lightning damage to Attacks",
+      "replace": "攻击附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Lightning damage to Attacks",
+      "replace": "攻击附加 $1 - $2 闪电伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) Physical Damage to Attacks",
+      "replace": "攻击附加 $1 物理伤害"
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) Physical Damage to Attacks",
+      "replace": "攻击附加 $1 - $2 物理伤害"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Skill Speed",
+      "replace": "技能速度加快 $1%"
+    },
+    {
+      "regex": "Projectiles have ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus against Enemies within ([\\d\\.\\–\\-]+)m",
+      "replace": "投射物对 $2 米内的敌人暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "Projectiles deal ([\\d\\.\\–\\-]+)% increased Damage with Hits against Enemies within ([\\d\\.\\–\\-]+)m",
+      "replace": "投射物击中 $2 米内的敌人时造成的伤害提高 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to all Attributes",
+      "replace": "+$1 全属性"
+    },
+    {
+      "regex": "Remnants can be collected from ([\\d\\.\\–\\-]+)% further away",
+      "replace": "可收集遗迹的距离延长 $1%"
+    },
+    {
+      "regex": "Remnants have ([\\d\\.\\–\\-]+)% increased effect",
+      "replace": "遗迹的效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Attack Damage while on Low Life",
+      "replace": "低血时攻击伤害提高 $1%"
+    },
+    {
+      "regex": "Recover ([\\d\\.\\–\\-]+)% of maximum Mana on Kill",
+      "replace": "击败敌人时回复 $1% 最大魔力"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased maximum Mana",
+      "replace": "魔力上限提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spell Damage while on Full Energy Shield",
+      "replace": "能量护盾全满时法术伤害提高 $1%"
+    },
+    {
+      "regex": "Minions deal ([\\d\\.\\–\\-]+)% increased Damage if you've Hit Recently",
+      "replace": "如果你近期内击中过敌人，召唤生物造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Buildup if you've consumed an Power Charge Recently",
+      "replace": "如果你近期消耗过暴击球，冻结积蓄值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Shock if you've consumed a Frenzy Charge Recently",
+      "replace": "如果你近期消耗过狂怒球，感电强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of Ignite if you've consumed an Endurance Charge Recently",
+      "replace": "如果你近期消耗过耐力球，点燃强度提高 $1%"
+    },
+    {
+      "regex": "Regenerate ([\\d\\.\\–\\-]+)% of maximum Life per second",
+      "replace": "每秒再生 $1% 最大生命"
+    },
+    {
+      "regex": "Recover ([\\d\\.\\–\\-]+)% of maximum Life on Kill",
+      "replace": "击败敌人时回复 $1% 最大生命"
+    },
+    {
+      "regex": "Leech ([\\d\\.\\–\\-]+)% of Physical Attack Damage as Mana",
+      "replace": "物理攻击伤害的 $1% 转化为魔力偷取"
+    },
+    {
+      "regex": "Leech ([\\d\\.\\–\\-]+)% of Physical Attack Damage as Life",
+      "replace": "物理攻击伤害的 $1% 转化为生命偷取"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Rarity of Items found",
+      "replace": "物品稀有度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "暴击几率提高 $1%"
+    },
+    {
+      "regex": "Triggered Spells deal ([\\d\\.\\–\\-]+)% increased Spell Damage",
+      "replace": "被触发法术的法术伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Chill Duration on Enemies",
+      "replace": "敌人被冰缓的持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Threshold",
+      "replace": "冻结阈值提高 $1%"
+    },
+    {
+      "regex": "Meta Skills gain ([\\d\\.\\–\\-]+)% increased Energy",
+      "replace": "非凡技能获得的能量提高 $1%"
+    },
+    {
+      "regex": "Offerings have ([\\d\\.\\–\\-]+)% increased Maximum Life",
+      "replace": "奉献的生命上限提高 $1%"
+    },
+    {
+      "regex": "Offering Skills have ([\\d\\.\\–\\-]+)% increased Duration",
+      "replace": "奉献技能的持续时间提高 $1%"
+    },
+    {
+      "regex": "Aura Skills have ([\\d\\.\\–\\-]+)% increased Magnitudes",
+      "replace": "光环技能的强度提高 $1%"
+    },
+    {
+      "regex": "Gain additional Ailment Threshold equal to ([\\d\\.\\–\\-]+)% of maximum Energy Shield",
+      "replace": "获得额外异常状态阈值，相当于最大能量护盾的 $1%"
+    },
+    {
+      "regex": "Gain additional Stun Threshold equal to ([\\d\\.\\–\\-]+)% of maximum Energy Shield",
+      "replace": "获得相当于能量护盾上限 $1% 的晕眩阈值"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance to gain Volatility on Kill",
+      "replace": "击败敌人时有 $1% 的几率获得无常"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage if you have Consumed a Corpse Recently",
+      "replace": "若你近期内有消耗灵柩，则伤害提高 $1%"
+    },
+    {
+      "regex": "Damage Penetrates ([\\d\\.\\–\\-]+)% Cold Resistance",
+      "replace": "伤害穿透 $1% 冰霜抗性"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "召唤生物的暴击率提高 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "召唤生物的暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "Minions have ([\\d\\.\\–\\-]+)% increased Attack and Cast Speed",
+      "replace": "召唤生物的攻击和施法速度加快 $1%"
+    },
+    {
+      "regex": "Minions deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "召唤生物的伤害提高 $1%"
+    },
+    {
+      "regex": "Minions have \\+([\\d\\.\\–\\-]+)% to all Elemental Resistances",
+      "replace": "召唤生物获得 +$1% 元素抗性"
+    },
+    {
+      "regex": "Minions have \\+([\\d\\.\\–\\-]+)% to Chaos Resistance",
+      "replace": "召唤生物有 +$1% 混沌抗性"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield from Equipped Focus",
+      "replace": "装备法器的能量护盾提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Curse Duration",
+      "replace": "诅咒持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Area of Effect of Curses",
+      "replace": "诅咒的效果范围扩大 $1%"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Mana per enemy killed",
+      "replace": "每击败一名敌人获得 $1 点魔力"
+    },
+    {
+      "regex": "Gain ([\\d\\.\\–\\-]+) Life per enemy killed",
+      "replace": "每击败一名敌人获得 $1 点生命"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spirit",
+      "replace": "精魂提高 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Critical Hit Chance",
+      "replace": "在场的友军的暴击率提高 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Critical Damage Bonus",
+      "replace": "在场的友军的暴击伤害加成提高 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Attack Speed",
+      "replace": "在场的友军的攻击速度加快 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have ([\\d\\.\\–\\-]+)% increased Cast Speed",
+      "replace": "在场的友军的施法速度加快 $1%"
+    },
+    {
+      "regex": "Allies in your Presence have \\+([\\d\\.\\–\\-]+)% to all Elemental Resistances",
+      "replace": "在场的友军的所有元素抗性 +$1%"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Cold Damage",
+      "replace": "在场的友军造成附加 $1 冰霜伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Fire Damage",
+      "replace": "在场的友军造成附加 $1 火焰伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Lightning Damage",
+      "replace": "在场的友军造成附加 $1 闪电伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+) added Attack Lightning Damage",
+      "replace": "在场的友军造成附加 $1 - $2 闪电伤害"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+) added Attack Physical Damage",
+      "replace": "在场的友军造成附加 $1 物理伤害"
+    },
+    {
+      "regex": "Allies in your Presence Regenerate ([\\d\\.\\–\\-]+) Life per second",
+      "replace": "在场的友军每秒再生 $1 生命"
+    },
+    {
+      "regex": "Allies in your Presence deal ([\\d\\.\\–\\-]+)% increased Damage",
+      "replace": "在场的友军造成的伤害提高 $1%"
+    },
+    {
+      "regex": "Loads ([\\d\\.\\–\\-]+) additional bolts",
+      "replace": "额外装填 $1 支弩箭"
+    },
+    {
+      "regex": "Grenade Skills have \\+([\\d\\.\\–\\-]+) Cooldown Use",
+      "replace": "榴弹技能的使用次数 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Grenade Duration",
+      "replace": "榴弹持续时间延长 $1%"
+    },
+    {
+      "regex": "Grenades have ([\\d\\.\\–\\-]+)% chance to activate a second time",
+      "replace": "榴弹有 $1% 的几率触发第二次"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to maximum number of Summoned Ballista Totems",
+      "replace": "召唤弩炮图腾的最大数量 +$1"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Reload Speed",
+      "replace": "装填速度加快 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% chance when you Reload a Crossbow to be immediate",
+      "replace": "装填弩箭时有 $1% 的几率瞬间完成"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased",
+      "replace": "提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% reduced",
+      "replace": "降低 $1%"
+    },
+    {
+      "regex": "\\+([\\d\\.\\–\\-]+) to",
+      "replace": "+$1 "
+    },
+    {
+      "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+)",
+      "replace": "附加 $1 - $2"
+    }
+  ]
+}

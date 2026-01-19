@@ -1,0 +1,68 @@
+[
+  {
+    "en": "Broadhead Quiver",
+    "cn": "宽矢箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverBroadhead.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fire Quiver",
+    "cn": "火灵箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverFire.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacral Quiver",
+    "cn": "圣骨箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverSacral.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Two-Point Quiver",
+    "cn": "双锋箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverTwoPoint.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blunt Quiver",
+    "cn": "钝矢箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverBlunt.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Toxic Quiver",
+    "cn": "淬毒箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverToxic.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Serrated Quiver",
+    "cn": "锯齿箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverSerrated.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Primed Quiver",
+    "cn": "精工箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverPrimed.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Penetrating Quiver",
+    "cn": "穿射箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverPenetrating.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Volant Quiver",
+    "cn": "飞矢箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverVolant.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Visceral Quiver",
+    "cn": "贯心箭袋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Quivers/Basetypes/QuiverVisceral.webp",
+    "type": "base_item"
+  }
+]

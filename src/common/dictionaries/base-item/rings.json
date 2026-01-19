@@ -1,0 +1,116 @@
+[
+  {
+    "en": "Golden Hoop",
+    "cn": "金环",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/DemigodsBand.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Ring",
+    "cn": "锻铁戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/IronRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lazuli Ring",
+    "cn": "青金戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/LazuliRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ruby Ring",
+    "cn": "红玉戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/RubyRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sapphire Ring",
+    "cn": "蓝玉戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/SapphireRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Topaz Ring",
+    "cn": "黄玉戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/TopazRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Amethyst Ring",
+    "cn": "紫晶戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/AmethystRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Emerald Ring",
+    "cn": "翡翠戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/EmeraldRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pearl Ring",
+    "cn": "珠玉戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/PearlRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Prismatic Ring",
+    "cn": "三相戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/PrismaticRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gold Ring",
+    "cn": "金光戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/GoldRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Unset Ring",
+    "cn": "潜能之戒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/UnsetRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Abyssal Signet",
+    "cn": "深渊印戒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/IronRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ring",
+    "cn": "戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/MirrorRing.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dusk Ring",
+    "cn": "暮色戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/LakeRing1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gloam Ring",
+    "cn": "薄暮戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/LakeRing2.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Penumbra Ring",
+    "cn": "半影戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/LakeRing3.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tenebrous Ring",
+    "cn": "暗黑戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/LakeRing4.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Breach Ring",
+    "cn": "裂隙戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/Basetypes/BreachRing.webp",
+    "type": "base_item"
+  }
+]

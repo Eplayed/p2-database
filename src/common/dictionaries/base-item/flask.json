@@ -1,0 +1,110 @@
+[
+  {
+    "en": "Lesser Life Flask",
+    "cn": "次级生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Medium Life Flask",
+    "cn": "中型生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Greater Life Flask",
+    "cn": "良质生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Life Flask",
+    "cn": "优质生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Giant Life Flask",
+    "cn": "巨型生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Colossal Life Flask",
+    "cn": "高阶生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gargantuan Life Flask",
+    "cn": "恢弘生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Transcendent Life Flask",
+    "cn": "非凡生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ultimate Life Flask",
+    "cn": "终极生命药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskLife09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lesser Mana Flask",
+    "cn": "次级魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Medium Mana Flask",
+    "cn": "中型魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Greater Mana Flask",
+    "cn": "良质魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grand Mana Flask",
+    "cn": "优质魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Giant Mana Flask",
+    "cn": "巨型魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Colossal Mana Flask",
+    "cn": "高阶魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gargantuan Mana Flask",
+    "cn": "恢弘魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Transcendent Mana Flask",
+    "cn": "非凡魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ultimate Mana Flask",
+    "cn": "终极魔力药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Flasks/Basetypes/FlaskMana09.webp",
+    "type": "base_item"
+  }
+]

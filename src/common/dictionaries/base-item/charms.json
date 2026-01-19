@@ -1,0 +1,80 @@
+[
+  {
+    "en": "Thawing Charm",
+    "cn": "融冰咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/ThawingCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Staunching Charm",
+    "cn": "止血咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/StaunchingCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Antidote Charm",
+    "cn": "抗毒咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/AntidoteCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dousing Charm",
+    "cn": "浸润咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/DousingCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grounding Charm",
+    "cn": "根基咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/GroundingCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Charm",
+    "cn": "磐石咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/StoneCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Silver Charm",
+    "cn": "真银咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/SilverCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ruby Charm",
+    "cn": "红玉咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/RubyCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sapphire Charm",
+    "cn": "蓝宝石咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/SapphireCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Topaz Charm",
+    "cn": "黄玉咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/TopazCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Amethyst Charm",
+    "cn": "紫晶咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/AmethystCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Golden Charm",
+    "cn": "黄金咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/GoldenCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cleansing Charm",
+    "cn": "净化咒符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Charms/Basetypes/AmethystCharm.webp",
+    "type": "base_item"
+  }
+]

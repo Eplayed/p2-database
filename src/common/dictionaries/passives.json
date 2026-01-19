@@ -1,0 +1,1388 @@
+[
+  {
+    "en": "Resolute Technique",
+    "cn": "坚毅之心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneResoluteTechnique.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Giants Blood",
+    "cn": "巨人之血",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/GiantBloodKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Unwavering Stance",
+    "cn": "烈士意志",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneUnwaveringStance.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Avatar of Fire",
+    "cn": "火之化身",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneAvatarOfFire.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blood Magic",
+    "cn": "祭血术",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneBloodMagic.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Zealots Oath",
+    "cn": "狂热者的誓言",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/liferegentoenergyshield.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancestral Bond",
+    "cn": "先祖魂约",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/totemmax.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pain Attunement",
+    "cn": "苦痛灵曲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystonePainAttunement.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chaos Inoculation",
+    "cn": "异灵之体",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneChaosInoculation.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Eldritch Battery",
+    "cn": "异能魔力",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneEldritchBattery.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mind Over Matter",
+    "cn": "心灵升华",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/heroicspirit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Whispers of Doom",
+    "cn": "灭世之语",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneWhispersOfDoom.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Necromantic Talisman",
+    "cn": "通灵魔符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/NecromanticTalismanKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Conduit",
+    "cn": "能量连接",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneConduit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Resonance",
+    "cn": "共鸣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/ResonanceKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Eternal Youth",
+    "cn": "青春永驻",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/EternalYouth.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Primal Hunger",
+    "cn": "荒野行者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DruidRageKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dance with Death",
+    "cn": "与亡共舞",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DancewithDeathKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heartstopper",
+    "cn": "凝心者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/HeartstopperKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Oasis",
+    "cn": "荒漠绿洲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/OasisKeystone2.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vaal Pact",
+    "cn": "瓦尔契约",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/vaalpact.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Iron Reflexes",
+    "cn": "霸体",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneIronReflexes.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Glancing Blows",
+    "cn": "斗转星移",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/GlancingBlows.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elemental Equilibrium",
+    "cn": "元素之相",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneElementalEquilibrium.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bulwark",
+    "cn": "壁垒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/BulwarkKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crimson Assault",
+    "cn": "猩红强袭",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/CrimsonAssaultKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Trusted Kinship",
+    "cn": "情比金坚",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/MultipleBeastCompanionsKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hollow Palm Technique",
+    "cn": "空明之掌",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/HollowPalmTechniqueKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blackflame Covenant",
+    "cn": "黑焰血誓",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/FireSpellsBecomeChaosSpellsKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ritual Cadence",
+    "cn": "仪式节律",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SorceressInvocationSpellsKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Scarred Faith",
+    "cn": "Scarred Faith",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DruidAlternateEnergyShield.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lord of the Wilds",
+    "cn": "Lord of the Wilds",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DruidAnimism.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wildsurge Incantation",
+    "cn": "Wildsurge Incantation",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DruidWildsurgeIncantation.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Black Scythe Training",
+    "cn": "黑镰的训练",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KalguuranStrKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Circular Teachings",
+    "cn": "循证的训诫",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KalguuranDexKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Knightly Tenets",
+    "cn": "骑士信条",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KalguuranIntKeystone.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrifice of Flesh",
+    "cn": "血肉牺牲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AmanamusDefiance.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrifice of Loyalty",
+    "cn": "忠诚牺牲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KulemaksSovereignty.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrifice of Mind",
+    "cn": "心智牺牲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KurgasAmbition.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrifice of Blood",
+    "cn": "鲜血牺牲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/TecrodsBrutality.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacrifice of Sight",
+    "cn": "视觉牺牲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/UlamansVision.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Earthbreaker",
+    "cn": "裂地之灵",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanSlamSkillsAftershock.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ancestral Empowerment",
+    "cn": "先祖神威",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanSlamSkillsFistOfWar.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mountain Splitter",
+    "cn": "震撼力量",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanMountainSplitter.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crushing Impacts",
+    "cn": "粉碎冲击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanYourHitsCrushEnemies.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Hulking Form",
+    "cn": "雄伟英姿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanSmallPassiveDoubled.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Colossal Capacity",
+    "cn": "巨人神力",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanAdditionalInventory.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mysterious Lineage",
+    "cn": "神秘血统",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanMoreMaxLife.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stone Skin",
+    "cn": "磐石之肤",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Titan/TitanMoreBodyArmour.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Anvils Weight",
+    "cn": "铁砧的重量",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerBreakEnemyArmour.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Imploding Impacts",
+    "cn": "内爆冲击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerEnemyArmourBrokenBelowZero.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Jade Heritage",
+    "cn": "青玉传承",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerEncasedInJade.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Warcallers Bellow",
+    "cn": "战争司号的呐喊",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerWarcryExplodesCorpses.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Answered Call",
+    "cn": "呼求回应",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerTotemsDefendedByAncestors.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wooden Wall",
+    "cn": "木垒高筑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerDamageTakenByTotems.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Renlys Training",
+    "cn": "蓝礼的锤炼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerBlockChance.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Turtle Charm",
+    "cn": "灵龟护符",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Warbringer/WarbringerCanBlockAllDamageShieldNotRaised.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heat of the Forge",
+    "cn": "锻炉的热浪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithofKitavaTriggerFireSpellsMeleeWeapon.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Living Weapon",
+    "cn": "活体武器",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaCreateMinionMeleeWeapon.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Against the Anvil",
+    "cn": "迎砧击打",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaImbueMainHandWeapon.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Coal Stoker",
+    "cn": "司炉的炭火",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaFireResistAppliesToColdLightning.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Forged in Flame",
+    "cn": "烈焰的淬炼",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaImprovedFireResistAppliesToColdLightning.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Smiths Masterwork",
+    "cn": "匠人的杰作",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaCanOnlyWearNormalRarityBodyArmour.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tantalum Alloy",
+    "cn": "钽质合金",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kitavan Imprint",
+    "cn": "衬垫铠甲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus2.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Spiked Plates",
+    "cn": "铅质内衬",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus3.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Support Straps",
+    "cn": "支承绑带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus4.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kitavan Engraving",
+    "cn": "奇塔弗铭文",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus5.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tribute to Utula",
+    "cn": "负重支撑",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus6.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Leather Bindings",
+    "cn": "皮革绑绳",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus7.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Flowing Metal",
+    "cn": "液态金属",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus8.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Molten Symbol",
+    "cn": "熔火符印",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus9.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Internal Layer",
+    "cn": "内嵌分层",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Dedication to Kitava",
+    "cn": "敬奉奇塔弗",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus11.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heatproofing",
+    "cn": "绝热防护",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/SmithofKitava/SmithOfKitavaNormalArmourBonus12.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Endless Munitions",
+    "cn": "无限弹药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeGrantsTwoAdditionalProjectiles.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Projectile Proximity Specialisation",
+    "cn": "投射物近距离专精",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeProjectileDamageChoose.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gathering Winds",
+    "cn": "聚风",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeTailwind.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mirage Deadeye",
+    "cn": "风之结界",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeLingeringMirage.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Avidity",
+    "cn": "热望",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeFrenzyChargesGeneration.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Thrilling Chase",
+    "cn": "热血追猎",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeFrenzyChargesHaveMoreEffect.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Called Shots",
+    "cn": "言出箭随",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeMarkEnemiesSpread.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bullseye",
+    "cn": "正中靶心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DeadEye/DeadeyeMoreAccuracy.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Running Assault",
+    "cn": "奔波袭击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderMoreMovemenSpeedUsingSkills.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Relentless Pursuit",
+    "cn": "无尽追踪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderCannotBeSlowed.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Overwhelming Toxicity",
+    "cn": "倾压剧毒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderEnemiesMultiplePoisons.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sustainable Practices",
+    "cn": "可持续操作",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderEvasionDmgReducVsElementalDmg.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Enduring Elixirs",
+    "cn": "耐久药剂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderLifeFlasks.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Brew Concoction",
+    "cn": "酿造灵药",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderBrewConcoction.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Path Seeker",
+    "cn": "务实疗法",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderMultichoicePath.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Travellers Wisdom",
+    "cn": "旅人的智慧",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/PathFinder/PathfinderAdditionalPoints.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Critical Strike",
+    "cn": "暴击",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonExcessChancetoHitConvertedtoCritHitChance.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Penetrate",
+    "cn": "穿透",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonGainPhysicalDamageWeaponsAccuracy.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Predatory Instinct",
+    "cn": "掠食本能",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonRareUniqueBloodlusted.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "In for the Kill",
+    "cn": "直击要害",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonSpeedBloodlustedEnemy.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Surging Avatar",
+    "cn": "涌动化身",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonElementalDamageReductionperElementalInstillation.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Elemental Surge",
+    "cn": "元素涌动",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonConsumeFrenzyChargeGainElementalInstillation.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Azmeri Brew",
+    "cn": "阿兹莫里调制",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonLifeFlasksRecoverManaViceVersa.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stalking Panther",
+    "cn": "匿影猎豹",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonDoubleEvasionfromGlovesBootsHelmsHalvedBodyArmour.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mystic Harvest",
+    "cn": "神秘收割",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Amazon/AmazonIncreasedLifeRecoveryRatePerMissingLife.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mystic Attunement",
+    "cn": "神秘协调",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Primalist/PrimalistIncreasedEffectOfJewellery.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Unfurled Finger",
+    "cn": "伸展的手指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Primalist/PrimalistPlusOneRingSlot.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Intricate Sigils",
+    "cn": "精巧法印",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Primalist/PrimalistPlusOneMaxCharm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mind Phylacteries",
+    "cn": "心灵护命",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Primalist/PrimalistDrainManaActivateCharms.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wildwood Persistence",
+    "cn": "荒林的韧性",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Primalist/PrimalistLifeLeechFromElementalOrChaos.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Corrupted Lifeforce",
+    "cn": "被腐化的命能",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Primalist/PrimalistBloodBoils.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "As the Whispers Demand",
+    "cn": "如低语所愿",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Primalist/PrimalistStabCorpse.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Beidats Gaze",
+    "cn": "贝达特的凝视",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/InfernalistConvertLifeToMana.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Beidats Hand",
+    "cn": "贝达特之手",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/InfernalistConvertLifeToEnergyShield.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Beidats Will",
+    "cn": "贝达特的意志",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/InfernalistConvertLifeToSpirit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Altered Flesh",
+    "cn": "重塑身躯",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/MoltenFury.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Demonic Possession",
+    "cn": "修罗入魔",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/InfernalistTransformIntoDemon1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mastered Darkness",
+    "cn": "驾驭黑暗",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/InfernalistTransformIntoDemon2.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pyromantic Pact",
+    "cn": "火卜契约",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/Fireblood.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bringer of Flame",
+    "cn": "烈焰使者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/FuryManifest.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grinning Immolation",
+    "cn": "狰狞奉献",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/ScorchTheEarth.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Loyal Hellhound",
+    "cn": "忠诚的炽焰猎犬",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/InfernalFamiliar.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Seething Body",
+    "cn": "沸腾之躯",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Infernalist/InfernalistInfernalHeat.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gore Spike",
+    "cn": "创伤尖刺",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageCritDamagePerLife.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sunder the Flesh",
+    "cn": "皮开肉绽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageHigherSpellBaseCritStrike.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sanguimancy",
+    "cn": "滴血为咒",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageLeaveBloodOrbs.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blood Barbs",
+    "cn": "赤红刀锋",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodPhysicalDamageExtraGore.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Whispers of the Flesh",
+    "cn": "血肉私语",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageCurseInfiniteDuration.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Vitality Siphon",
+    "cn": "活力虹吸",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageDamageLeechedLife.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grasping Wounds",
+    "cn": "弥久伤痕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageLifeLoss.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crimson Power",
+    "cn": "腥红之力",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageGainLifeEnergyShield.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sanguine Tides",
+    "cn": "血腥潮汐",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Bloodmage/BloodMageSaguineTides.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crystalline Phylactery",
+    "cn": "结晶护命匣",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/MasteryBlank.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rupture the Soul",
+    "cn": "灵魂破裂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichCursedEnemiesExplodeChaos.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Necromantic Conduit",
+    "cn": "通灵导体",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichUnholyMight.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Blackened Heart",
+    "cn": "黑化之心",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichImprovedUnholyMight.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Soulless Form",
+    "cn": "无魂形态",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichManaRegenBasedOnMaxLife.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Eternal Life",
+    "cn": "永恒的生命",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichLifeCannotChangeWhileES.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Price of Power",
+    "cn": "力量的代价",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichSpellsConsumePowerCharges.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Eldritch Empowerment",
+    "cn": "古神赋力",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichSpellCostESandMoreDMG.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Incessant Cacophony",
+    "cn": "无休嘈杂",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Lich/LichApplyAdditionalCurses.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Constant Gale",
+    "cn": "不息强风",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/GrantsArcaneSurge.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Force of Will",
+    "cn": "意志的力量",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/ImprovedArcaneSurge.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Tempest Caller",
+    "cn": "风暴呼唤者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/GrantsElementalStorm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Multiplying Squalls",
+    "cn": "倍增飑风",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/ImprovedElementalStorm.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Strike Twice",
+    "cn": "惊霆复至",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/ShockAddditionalTime.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shaper of Storms",
+    "cn": "风暴塑形",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/AllDamageCanShock.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heavy Snows",
+    "cn": "漫天雪暴",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/ChillAddditionalTime.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Shaper of Winter",
+    "cn": "寒冬塑形",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/AllDamageCanChill.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Storms Recollection",
+    "cn": "风暴回忆",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/StormweaverRemnant2.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Refracted Infusion",
+    "cn": "折射灌注",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Stormweaver/StormweaverRemnant1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Footprints in the Sand",
+    "cn": "涉沙留痕",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistGrantsTemporalRiftSkill.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ultimate Command",
+    "cn": "极限掌控",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistGrantsTimeStopSkill.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Inevitability",
+    "cn": "无可违逆",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistSynchronisationofPain.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "The Rapid River",
+    "cn": "急浪奔流",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistFasterRecoup.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Now and Again",
+    "cn": "周而复始",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistChanceSkillNoCooldownSkill.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Unbound Encore",
+    "cn": "不羁再现",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistGrantsReloadCooldownsSkill.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Apex of the Moment",
+    "cn": "巅峰时刻",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistNearbyEnemiesProjectilesSlowed.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Quicksand Hourglass",
+    "cn": "迅时沙漏",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Temporalist/TemporalistGainMoreCastSpeed8Seconds.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacred Rituals",
+    "cn": "Sacred Rituals",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/EnergyShieldPhyDmgReduction.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "The Fourth Teaching",
+    "cn": "The Fourth Teaching",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/MoreEnergyShieldRechargeRate.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Varashtas Intuition",
+    "cn": "Varashta's Intuition",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/ElementalDamageTakenFromMana.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Instruments of Power",
+    "cn": "Instruments of Power",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FocusStaff.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Baryanic Leylines",
+    "cn": "Baryanic Leylines",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/TimelostJewelsLargerRadius.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Barya of Navira",
+    "cn": "Barya of Navira",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SummonWaterDjinn.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Barya of Kelari",
+    "cn": "Barya of Kelari",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SummonSandDjinn.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Barya of Ruzhan",
+    "cn": "Barya of Ruzhan",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SummonFireDjinn.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Naviras Fracturing",
+    "cn": "Navira's Fracturing",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/WaterDjinnChiilldedGroundBurst.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Naviras Well",
+    "cn": "Navira's Well",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/WaterDjinnESRechargeCommand.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Naviras Oasis",
+    "cn": "Navira's Oasis",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/WaterDjinnCommandOasis.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kelaris Deception",
+    "cn": "Kelari's Deception",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SandDjinnExplosiveTeleport.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kelaris Judgment",
+    "cn": "Kelari's Judgment",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SandDjinnDaggerslamSkill.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Kelaris Malediction",
+    "cn": "Kelari's Malediction",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SandDjinnCorpseBeetles.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ruzhans Trap",
+    "cn": "Ruzhan's Trap",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FireDjinnFlameRunes.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ruzhans Reckoning",
+    "cn": "Ruzhan's Reckoning",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FireDjinnMeteoricSlam.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ruzhans Fury",
+    "cn": "Ruzhan's Fury",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FireDjinnEmberSlash.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "A Solid Plan",
+    "cn": "可靠的计划",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianLessSpiritCostBuff.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Watch How I Do It",
+    "cn": "给我学着点",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianAlliesGainAttack.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Whoever Pays Best",
+    "cn": "价高者得",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianMultipleBanners.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Suppressing Fire",
+    "cn": "火力抑制",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianProjectileBuildsPin.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Right Where We Want Them",
+    "cn": "正中下怀",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianPinnedEnemiesCannotAct.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Polish That Gear",
+    "cn": "抛光装备",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianGainStunThresholdArmour.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Stay Light, Use Cover",
+    "cn": "轻装与掩蔽",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianEvasionArmourHigher.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Cannons, Ready",
+    "cn": "炮兵就位！",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianTotems.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Unleash Hell",
+    "cn": "倾泻火力！",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianDeathFromAboveCommand.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Strategic Embankments",
+    "cn": "战略堤防",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Tactician/TacticianTotemAura.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Pitiless Killer",
+    "cn": "冷血执行者",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterCullingStrike.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Judge, Jury, and Executioner",
+    "cn": "判罪惩恶人",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterRemovePercentageFullLifeEnemies.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Witchbane",
+    "cn": "女巫克星",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterDrainMonsterFocus.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "No Mercy",
+    "cn": "绝无慈悲",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterDamageMonsterMissingFocus.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Obsessive Rituals",
+    "cn": "痴狂仪式",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterArmourEvasionConvertedSpellAegis.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ceremonial Ablution",
+    "cn": "净罪礼仪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterStrongerSpellAegis.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Zealous Inquisition",
+    "cn": "狂热审讯",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterMonsterHolyExplosion.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Weapon Master",
+    "cn": "武器大师",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Witchhunter/WitchunterSpecPoints.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Crystalline Potential",
+    "cn": "结晶潜力",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingSkillGemQuality.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Implanted Gems",
+    "cn": "植入宝石",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingLevelAllSkillGems.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Gem Studded",
+    "cn": "嵌宝美玉",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingSameSupportMultipleTimes.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Advanced Thaumaturgy",
+    "cn": "奇术深造",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingSkillsAdditionalSupport.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Enhanced Effectiveness",
+    "cn": "强化效能",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingInherentBonusesFromAttributesDouble.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Adaptive Capability",
+    "cn": "应变性能",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingHighestAttributeSatisfiesGemRequirements.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Integrated Efficiency",
+    "cn": "集成效率",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingBuffSkillsReserveLessSpirit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Thaumaturgical Infusion",
+    "cn": "奇术灌输",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Gemling/GemlingMaxElementalResistanceSupportColour.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Entwined Realities",
+    "cn": "Entwined Realities",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OraclePassiveTreeAllocation.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "The Unseen Path",
+    "cn": "The Unseen Path",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OracleDiffChoices.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Harmony Within",
+    "cn": "Harmony Within",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OracleLifeManaHits.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Converging Paths",
+    "cn": "Converging Paths",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OracleRipFromTime.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fateful Vision",
+    "cn": "Fateful Vision",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OracleSpellFlux.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Unnamed Heartwood",
+    "cn": "Unnamed Heartwood",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OracleTotemLimit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "The Lesser Harm",
+    "cn": "The Lesser Harm",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OracleEnemiesActionsUnlucky.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Forced Outcome",
+    "cn": "Forced Outcome",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Oracle/OracleRerollingCrit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Turning of the Seasons",
+    "cn": "Turning of the Seasons",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanPickEleDmg.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Bringer of the Apocalypse",
+    "cn": "Bringer of the Apocalypse",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanUnleashTheElements.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Druidic Champion",
+    "cn": "Druidic Champion",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanRageAffectsSpells.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Reactive Growth",
+    "cn": "Reactive Growth",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanAdaptToElements.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Avatar of Evolution",
+    "cn": "Avatar of Evolution",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanEvenMoreAdaptation.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Furious Wellspring",
+    "cn": "Furious Wellspring",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanRageonHit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sacred Flow",
+    "cn": "Sacred Flow",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanGainSpiritEmptyCharmSlot.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wisdom of the Maji",
+    "cn": "Wisdom of the Maji",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Shaman/ShamanRunesTalismans.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lead me through Grace...",
+    "cn": "降恩的指引",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerEvasionEnergyShieldGrantsSpirit.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "...and Protect me from Harm",
+    "cn": "消灾的庇护",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerEvasionGrantsPhysicalDamageReduction.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "I am the Thunder...",
+    "cn": "我即雷霆",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerShockMagnitude.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "I am the Blizzard...",
+    "cn": "我即暴雪",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerChillChanceBasedOnDamage.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "...and I Shall Rage",
+    "cn": "我即怒火",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerUnboundAvatar.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sunder my Enemies...",
+    "cn": "所向披靡",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerCriticalStrikesIgnoreResistances.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "...and Scatter Them to the Winds",
+    "cn": "风卷残云",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerWildStrike.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Faith is a Choice",
+    "cn": "选择信念",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerGrantsMeditate.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "The Soul Springs Eternal",
+    "cn": "意念永存",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/Invoker/InvokerEnergyDoubled.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Inner Turmoil",
+    "cn": "内在动荡",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaManaLeechInstant.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Unravelling",
+    "cn": "解析",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaUnravelling.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Sap of Nightmares",
+    "cn": "梦魇之液",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaExtraChaosDamage.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Chayulas Gift",
+    "cn": "夏乌拉之赐",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaExtraChaosResistance.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Waking Dream",
+    "cn": "清醒沉梦",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaBreachWalk.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Embrace the Darkness",
+    "cn": "拥抱黑暗",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaReplaceSpiritWithDarkness.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Grasp of the Void",
+    "cn": "虚空之握",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaExtraChaosDamagePerDarkness.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Deepening Shadows",
+    "cn": "深化暗影",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaDarknessProtectsLonger.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Lucid Dreaming",
+    "cn": "清明梦",
+    "img": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/AcolyteofChayula/AcolyteOfChayulaFlameSelector.webp",
+    "type": "base_item"
+  }
+]

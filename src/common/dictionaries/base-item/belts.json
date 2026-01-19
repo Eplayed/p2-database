@@ -1,0 +1,74 @@
+[
+  {
+    "en": "Golden Obi",
+    "cn": "金羽腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Demibelt1.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Rawhide Belt",
+    "cn": "生皮腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt01.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Linen Belt",
+    "cn": "亚麻腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt02.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Wide Belt",
+    "cn": "宽大腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt03.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Long Belt",
+    "cn": "加长腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt04.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Plate Belt",
+    "cn": "嵌板腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt05.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Ornate Belt",
+    "cn": "华丽腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt06.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Mail Belt",
+    "cn": "环锁腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt07.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Double Belt",
+    "cn": "双重腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt08.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Heavy Belt",
+    "cn": "重革腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt09.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Utility Belt",
+    "cn": "万用腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt10.webp",
+    "type": "base_item"
+  },
+  {
+    "en": "Fine Belt",
+    "cn": "精致腰带",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Basetypes/Belt11.webp",
+    "type": "base_item"
+  }
+]
