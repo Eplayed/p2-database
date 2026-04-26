@@ -1,8 +1,28 @@
 [
   {
+    "name": "Blood Mage",
+    "percent": "17.2%",
+    "icon": "https://assets.poe.ninja/poe2/classes/blood-mage.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Blood%20Mage",
+    "apiParams": {
+      "league": "fate-of-the-vaal",
+      "class": "Blood Mage"
+    }
+  },
+  {
+    "name": "Oracle",
+    "percent": "16.3%",
+    "icon": "https://assets.poe.ninja/poe2/classes/oracle.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Oracle",
+    "apiParams": {
+      "league": "fate-of-the-vaal",
+      "class": "Oracle"
+    }
+  },
+  {
     "name": "Pathfinder",
-    "percent": "17.9%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/pathfinder.webp",
+    "percent": "12.5%",
+    "icon": "https://assets.poe.ninja/poe2/classes/pathfinder.webp",
     "link": "https://poe.ninja/poe2/builds/vaal?class=Pathfinder",
     "apiParams": {
       "league": "fate-of-the-vaal",
@@ -11,8 +31,8 @@
   },
   {
     "name": "Shaman",
-    "percent": "17.8%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/shaman.webp",
+    "percent": "8.2%",
+    "icon": "https://assets.poe.ninja/poe2/classes/shaman.webp",
     "link": "https://poe.ninja/poe2/builds/vaal?class=Shaman",
     "apiParams": {
       "league": "fate-of-the-vaal",
@@ -20,69 +40,9 @@
     }
   },
   {
-    "name": "Oracle",
-    "percent": "13.6%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/oracle.webp",
-    "link": "https://poe.ninja/poe2/builds/vaal?class=Oracle",
-    "apiParams": {
-      "league": "fate-of-the-vaal",
-      "class": "Oracle"
-    }
-  },
-  {
-    "name": "Stormweaver",
-    "percent": "6.1%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/stormweaver.webp",
-    "link": "https://poe.ninja/poe2/builds/vaal?class=Stormweaver",
-    "apiParams": {
-      "league": "fate-of-the-vaal",
-      "class": "Stormweaver"
-    }
-  },
-  {
-    "name": "Blood Mage",
-    "percent": "6.1%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/blood-mage.webp",
-    "link": "https://poe.ninja/poe2/builds/vaal?class=Blood%20Mage",
-    "apiParams": {
-      "league": "fate-of-the-vaal",
-      "class": "Blood Mage"
-    }
-  },
-  {
-    "name": "Amazon",
-    "percent": "5.8%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/amazon.webp",
-    "link": "https://poe.ninja/poe2/builds/vaal?class=Amazon",
-    "apiParams": {
-      "league": "fate-of-the-vaal",
-      "class": "Amazon"
-    }
-  },
-  {
-    "name": "Deadeye",
-    "percent": "4.5%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/deadeye.webp",
-    "link": "https://poe.ninja/poe2/builds/vaal?class=Deadeye",
-    "apiParams": {
-      "league": "fate-of-the-vaal",
-      "class": "Deadeye"
-    }
-  },
-  {
-    "name": "Invoker",
-    "percent": "4.2%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/invoker.webp",
-    "link": "https://poe.ninja/poe2/builds/vaal?class=Invoker",
-    "apiParams": {
-      "league": "fate-of-the-vaal",
-      "class": "Invoker"
-    }
-  },
-  {
     "name": "Titan",
-    "percent": "4.2%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/titan.webp",
+    "percent": "5.7%",
+    "icon": "https://assets.poe.ninja/poe2/classes/titan.webp",
     "link": "https://poe.ninja/poe2/builds/vaal?class=Titan",
     "apiParams": {
       "league": "fate-of-the-vaal",
@@ -90,13 +50,53 @@
     }
   },
   {
+    "name": "Stormweaver",
+    "percent": "5.2%",
+    "icon": "https://assets.poe.ninja/poe2/classes/stormweaver.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Stormweaver",
+    "apiParams": {
+      "league": "fate-of-the-vaal",
+      "class": "Stormweaver"
+    }
+  },
+  {
+    "name": "Invoker",
+    "percent": "5.0%",
+    "icon": "https://assets.poe.ninja/poe2/classes/invoker.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Invoker",
+    "apiParams": {
+      "league": "fate-of-the-vaal",
+      "class": "Invoker"
+    }
+  },
+  {
     "name": "Disciple of Varashta",
-    "percent": "4.1%",
-    "icon": "https://poe.ninja/poe2-assets/cdn/classes/disciple-of-varashta.webp",
+    "percent": "5.0%",
+    "icon": "https://assets.poe.ninja/poe2/classes/disciple-of-varashta.webp",
     "link": "https://poe.ninja/poe2/builds/vaal?class=Disciple%20of%20Varashta",
     "apiParams": {
       "league": "fate-of-the-vaal",
       "class": "Disciple of Varashta"
+    }
+  },
+  {
+    "name": "Ritualist",
+    "percent": "4.1%",
+    "icon": "https://assets.poe.ninja/poe2/classes/ritualist.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Ritualist",
+    "apiParams": {
+      "league": "fate-of-the-vaal",
+      "class": "Ritualist"
+    }
+  },
+  {
+    "name": "Amazon",
+    "percent": "3.8%",
+    "icon": "https://assets.poe.ninja/poe2/classes/amazon.webp",
+    "link": "https://poe.ninja/poe2/builds/vaal?class=Amazon",
+    "apiParams": {
+      "league": "fate-of-the-vaal",
+      "class": "Amazon"
     }
   }
 ]

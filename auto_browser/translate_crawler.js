@@ -480,8 +480,9 @@ async function runTask() {
           });
 
           // 等待 SVG 渲染 + 滚动到底部
+          // 尝试多种选择器以兼容 PoE1 和 PoE2
           try {
-            await page.waitForSelector("svg.bg-transparent", { timeout: 8000 });
+            await page.waitForSelector("svg", { timeout: 8000 });
           } catch (e) {}
           await page.evaluate(() =>
             window.scrollTo(0, document.body.scrollHeight)
@@ -513,8 +514,10 @@ async function runTask() {
           // 截图天赋 (SVG -> Canvas -> Base64)
           const treeImgBase64 = await page.evaluate(async () => {
             return new Promise((resolve) => {
-              // 1. 精准定位 SVG (根据你的截图 class 是 bg-transparent)
-              const svgEl = document.querySelector("svg.bg-transparent");
+              // 1. 精准定位 SVG - 尝试多种选择器以兼容 PoE1 和 PoE2
+              let svgEl = document.querySelector("svg.bg-transparent");
+              if (!svgEl) svgEl = document.querySelector("svg[class*='passive']");
+              if (!svgEl) svgEl = document.querySelector("svg");
               if (!svgEl) return resolve(null);
 
               const serializer = new XMLSerializer();
@@ -682,6 +685,18 @@ async function runTask() {
               }
 
               const translatedDesc = descLines.join('\n');
+
+              // --- 🔴 新增：处理镶嵌宝石 ---
+              const socketedGems = (i.socketedItems || []).map((gem) => {
+                const gemName = gem.name || gem.typeLine || "未知宝石";
+                return {
+                  name: translateGemName(gemName),
+                  originalName: gemName,
+                  icon: gem.icon,
+                  isSupport: gem.support,
+                };
+              });
+
               return {
                 slot: item.inventoryId,
                 name: translatedName,
@@ -690,6 +705,7 @@ async function runTask() {
                 icon: i.icon,
                 rarity: i.frameType,
                 desc: translatedDesc, // 使用翻译后的文本
+                gems: socketedGems, // 添加镶嵌宝石
               };
             }),
             skills: (capturedData.skills || []).map((s) => ({

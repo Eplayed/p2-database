@@ -60,7 +60,14 @@ jobs:
           libxrandr2 \
           libgbm1 \
           libxss1 \
-          libasound2t64
+          libasound2t64 \
+          chromium \
+          chromium-browser
+
+    - name: Install Chrome for Puppeteer
+      run: |
+        npx puppeteer browsers install chrome
+        echo "PUPPETEER_EXECUTABLE_PATH=$(npx puppeteer browsers path chrome)" >> $GITHUB_ENV
 
     - name: Increase max open files limit (prevent ulimit error)
       run: ulimit -n 4096
