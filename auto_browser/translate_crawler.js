@@ -47,7 +47,7 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 // 浏览器配置
 const CHROME_PATH = fs.existsSync("/opt/chrome/chrome")
   ? "/opt/chrome/chrome"
-  : "C:\\Users\\Administrator\\.cache\\puppeteer\\chrome\\win64-143.0.7499.146\\chrome-win64\\chrome.exe";
+  : ""; // 让 puppeteer 自动选择 Chrome
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
