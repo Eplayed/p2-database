@@ -14,9 +14,9 @@
   "description": "",
   "dependencies": {
     "ali-oss": "^6.23.0",
-    "dotenv": "^17.2.3",
+    "dotenv": "^17.4.2",
     "https-proxy-agent": "^7.0.6",
     "protobufjs": "^7.5.4",
-    "puppeteer": "^24.33.0"
+    "puppeteer": "^22.0.0"
   }
 }

@@ -1388,6 +1388,490 @@
     {
       "regex": "Adds ([\\d\\.\\–\\-]+) to ([\\d\\.\\–\\-]+)",
       "replace": "附加 $1 - $2"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% Magnitudes",
+      "replace": "$1% 强度"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitudes",
+      "replace": "强度提高 $1%"
+    },
+    {
+      "regex": "\\[Charm\\] Slots",
+      "replace": "护身符插槽"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+) [Cc]harm [Ss]lot",
+      "replace": "$1 个护身符插槽"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage against Enemies in your Hindered",
+      "replace": "对你缓速的敌人造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage against Rare and Unique Enemies",
+      "replace": "对稀有怪和传奇怪造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Magnitude of your Curses",
+      "replace": "你诅咒的强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Aura Effect",
+      "replace": "光环效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Reservation Efficiency of Skills",
+      "replace": "技能保留效能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Companion Damage",
+      "replace": "伙伴伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Enduring Life Mantle",
+      "replace": "任意恒久生命护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Enduring Life Mantle",
+      "replace": "任意恒久生命护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Enduring Mana Mantle",
+      "replace": "任意恒久魔力护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Enduring Mana Mantle",
+      "replace": "任意恒久魔力护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Warpath Mantle",
+      "replace": "任意战意护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Warpath Mantle",
+      "replace": "任意战意护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Smothering Shadow Mantle",
+      "replace": "任意窒息暗影护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Smothering Shadow Mantle",
+      "replace": "任意窒息暗影护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Defiant Sphere Mantle",
+      "replace": "任意不屈之球护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Defiant Sphere Mantle",
+      "replace": "任意不屈之球护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Disciplined Response Mantle",
+      "replace": "任意纪律响应护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Disciplined Response Mantle",
+      "replace": "任意纪律响应护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Calculated Void Mantle",
+      "replace": "任意虚空算计护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Calculated Void Mantle",
+      "replace": "任意虚空算计护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Vampiric Cascade Mantle",
+      "replace": "任意吸血鬼瀑布护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Vampiric Cascade Mantle",
+      "replace": "任意吸血鬼瀑布护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Elemental Focus Mantle",
+      "replace": "任意元素集中护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Elemental Focus Mantle",
+      "replace": "任意元素集中护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage during any Spiritual Vigor Mantle",
+      "replace": "任意精神活力护符激活时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Movement Speed during any Spiritual Vigor Mantle",
+      "replace": "任意精神活力护符激活时移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Ailment Magnitude",
+      "replace": "异常状态强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you have a Companion",
+      "replace": "有伙伴在场时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Companion Attack Speed",
+      "replace": "伙伴攻击速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Companion Movement Speed",
+      "replace": "伙伴移动速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage against Enemies with Ailments",
+      "replace": "对带有异常状态的敌人伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Ailment Threshold",
+      "replace": "异常状态阈值提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Duration of Ailments",
+      "replace": "异常状态持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Effect of non-Damaging Ailments",
+      "replace": "非伤害型异常状态效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Duration of Movement Ailments",
+      "replace": "移动异常状态持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you are Hindered",
+      "replace": "被缓速时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you are Bleeding",
+      "replace": "流血时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you are Ignited",
+      "replace": "被点燃时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage while you are Poisoned",
+      "replace": "中毒时伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Resistances",
+      "replace": "元素抗性提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Chaos Resistance",
+      "replace": "混沌抗性提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Life Regeneration",
+      "replace": "生命再生提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Regeneration",
+      "replace": "魔力再生提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Energy Shield Recharge",
+      "replace": "能量护盾充能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mana Reservation Efficiency",
+      "replace": "魔力保留效能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Spirit Reservation Efficiency",
+      "replace": "精魂保留效能提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Trap Damage",
+      "replace": "陷阱伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mine Damage",
+      "replace": "地雷伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Trap Throwing Speed",
+      "replace": "陷阱投掷速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mine Laying Speed",
+      "replace": "布雷速度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Trap Cooldown Recovery",
+      "replace": "陷阱冷却恢复提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Mine Detonation Area of Effect",
+      "replace": "地雷爆破效果范围扩大 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Projectile Damage against Enemies in your Hindered",
+      "replace": "投射物对你缓速敌人造成的伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage for each Enemy in your Hindered",
+      "replace": "每个你缓速的敌人使伤害提高 $1%"
+    },
+    {
+      "regex": "Attacks have ([\\d\\.\\–\\-]+)% chance to inflict Withered",
+      "replace": "攻击有 $1% 的几率施加死亡凋零"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Withered Duration",
+      "replace": "死亡凋零持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Withered Magnitude",
+      "replace": "死亡凋零强度提高 $1%"
+    },
+    {
+      "regex": "Your Withered Magnitude is based on Enemy Elemental Resistances",
+      "replace": "你的死亡凋零强度基于敌人元素抗性"
+    },
+    {
+      "regex": "Enemies you Hinder deal ([\\d\\.\\–\\-]+)% reduced Damage",
+      "replace": "被你缓速的敌人伤害降低 $1%"
+    },
+    {
+      "regex": "Enemies you Hinder have ([\\d\\.\\–\\-]+)% reduced Movement Speed",
+      "replace": "被你缓速的敌人移动速度降低 $1%"
+    },
+    {
+      "regex": "Hinder has ([\\d\\.\\–\\-]+)% increased Magnitude",
+      "replace": "减速的强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Hinder Magnitude",
+      "replace": "减速强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Impale Ailment Magnitude",
+      "replace": "穿刺异常状态强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Impale Duration",
+      "replace": "穿刺持续时间延长 $1%"
+    },
+    {
+      "regex": "Attacks have ([\\d\\.\\–\\-]+)% chance to Impale Enemies",
+      "replace": "攻击有 $1% 的几率穿刺敌人"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Impale Effect",
+      "replace": "穿刺效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Duration",
+      "replace": "冻结持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Freeze Magnitude",
+      "replace": "冻结强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Chill Duration",
+      "replace": "冰缓持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Chill Magnitude",
+      "replace": "冰缓强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Shock Duration",
+      "replace": "感电持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Shock Magnitude",
+      "replace": "感电强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Ignite Duration",
+      "replace": "点燃持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Ignite Magnitude",
+      "replace": "点燃强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Poison Duration",
+      "replace": "中毒持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Poison Magnitude",
+      "replace": "中毒强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Bleeding Duration",
+      "replace": "流血持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Bleeding Magnitude",
+      "replace": "流血强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Ailment Duration",
+      "replace": "异常状态持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Maim Duration",
+      "replace": "瘫痪持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Maim Magnitude",
+      "replace": "瘫痪强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Blind Duration",
+      "replace": "致盲持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Blind Magnitude",
+      "replace": "致盲强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Brittle Duration",
+      "replace": "易碎持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Brittle Magnitude",
+      "replace": "易碎强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Sap Duration",
+      "replace": "脆弱持续时间延长 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Sap Magnitude",
+      "replace": "脆弱强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Exposure Effect",
+      "replace": "暴露效果提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Enfeeble Magnitude",
+      "replace": "衰弱强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Temporal Chains Magnitude",
+      "replace": "衰老强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Elemental Weakness Magnitude",
+      "replace": "元素虚弱强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Vulnerability Magnitude",
+      "replace": "脆弱印记强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Despair Magnitude",
+      "replace": "绝望强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Punishment Magnitude",
+      "replace": "惩罚强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Poacher's Mark Magnitude",
+      "replace": "猎人印记强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Assassin's Mark Magnitude",
+      "replace": "刺客印记强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Warlord's Mark Magnitude",
+      "replace": "督军印记强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Conductivity Magnitude",
+      "replace": "传导强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Frostbite Magnitude",
+      "replace": "冻伤强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Flammability Magnitude",
+      "replace": "易燃强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Scorch Magnitude",
+      "replace": "灼烧强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Brittle Magnitude",
+      "replace": "易碎强度提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Sap Magnitude",
+      "replace": "脆弱强度提高 $1%"
+    },
+    {
+      "regex": "Hits ignore ([\\d\\.\\–\\-]+)% Enemy Elemental Resistance",
+      "replace": "击中无视敌人 $1% 元素抗性"
+    },
+    {
+      "regex": "Hits ignore ([\\d\\.\\–\\-]+)% Enemy Chaos Resistance",
+      "replace": "击中无视敌人 $1% 混沌抗性"
+    },
+    {
+      "regex": "Hits ignore ([\\d\\.\\–\\-]+)% Enemy Physical Damage Resistance",
+      "replace": "击中无视敌人 $1% 物理伤害抗性"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time",
+      "replace": "持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Enduring Life Mantle",
+      "replace": "任意恒久生命护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Enduring Mana Mantle",
+      "replace": "任意恒久魔力护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Warpath Mantle",
+      "replace": "任意战意护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Smothering Shadow Mantle",
+      "replace": "任意窒息暗影护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Defiant Sphere Mantle",
+      "replace": "任意不屈之球护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Disciplined Response Mantle",
+      "replace": "任意纪律响应护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Calculated Void Mantle",
+      "replace": "任意虚空算计护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Vampiric Cascade Mantle",
+      "replace": "任意吸血鬼瀑布护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Elemental Focus Mantle",
+      "replace": "任意元素集中护符激活时持续伤害提高 $1%"
+    },
+    {
+      "regex": "([\\d\\.\\–\\-]+)% increased Damage over Time duringany Spiritual Vigor Mantle",
+      "replace": "任意精神活力护符激活时持续伤害提高 $1%"
     }
   ]
 }

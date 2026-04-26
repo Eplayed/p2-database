@@ -4,11 +4,15 @@ const fs = require('fs');
 const TARGET_URL = 'https://poe.ninja/poe2/builds'; // 这是首页，不是列表页
 const OUTPUT_FILE = 'class_list.json';
 
+// Chrome 路径
+const CHROME_PATH = "C:\\Users\\Administrator\\.cache\\puppeteer\\chrome\\win64-143.0.7499.146\\chrome-win64\\chrome.exe";
+
 (async () => {
     console.log('🚀 启动浏览器...');
     
     const browser = await puppeteer.launch({
         headless: "new",
+        executablePath: fs.existsSync(CHROME_PATH) ? CHROME_PATH : undefined,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 

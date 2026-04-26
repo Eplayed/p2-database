@@ -34,7 +34,7 @@ try {
 const BASE_URL = "https://poe.ninja/poe2/builds";
 
 const isDev = process.env.NODE_ENV === "dev";
-const MAX_RANK = isDev ? 3 : 20; // 抓取数量
+const MAX_RANK = 1; // 极简测试：只抓取 1 个玩家
 // 根据环境变量，dev
 
 const OUTPUT_DIR = isDev
@@ -47,7 +47,7 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 // 浏览器配置
 const CHROME_PATH = fs.existsSync("/opt/chrome/chrome")
   ? "/opt/chrome/chrome"
-  : ""; // 本地调试请填写本地 Chrome 路径
+  : "C:\\Users\\Administrator\\.cache\\puppeteer\\chrome\\win64-143.0.7499.146\\chrome-win64\\chrome.exe";
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
@@ -113,21 +113,51 @@ function translateItemName(itemName, baseType, frameType) {
   if (frameType === 3) {
     // 传奇物品
     const uniqueInfo = dictUnique[itemName];
+    let uniqueCn = null;
+    
     if (uniqueInfo) {
-      return uniqueInfo.cn;
-    }
-
-    // 如果找不到精确匹配，尝试模糊匹配
-    for (const [key, value] of Object.entries(dictUnique)) {
-      if (
-        key.toLowerCase().includes(itemName.toLowerCase()) ||
-        itemName.toLowerCase().includes(key.toLowerCase())
-      ) {
-        return value.cn;
+      uniqueCn = uniqueInfo.cn;
+    } else {
+      // 如果找不到精确匹配，尝试模糊匹配
+      for (const [key, value] of Object.entries(dictUnique)) {
+        if (
+          key.toLowerCase().includes(itemName.toLowerCase()) ||
+          itemName.toLowerCase().includes(key.toLowerCase())
+        ) {
+          uniqueCn = value.cn;
+          break;
+        }
       }
     }
 
-    return itemName;
+    // 翻译基底类型
+    let baseCn = null;
+    if (baseType) {
+      baseCn = dictBase[baseType];
+      if (!baseCn) {
+        // 尝试模糊匹配基底类型
+        for (const [key, value] of Object.entries(dictBase)) {
+          if (
+            key.toLowerCase().includes(baseType.toLowerCase()) ||
+            baseType.toLowerCase().includes(key.toLowerCase())
+          ) {
+            baseCn = value;
+            break;
+          }
+        }
+      }
+    }
+
+    // 构建最终翻译：传奇名 + 正确的基底类型
+    if (uniqueCn && baseCn) {
+      // 检查是否已经包含基底类型信息（避免重复）
+      if (!uniqueCn.includes(baseCn) && !baseCn.includes(uniqueCn.split(' ')[0])) {
+        return `${uniqueCn}（${baseCn}）`;
+      }
+      return uniqueCn;
+    }
+    
+    return uniqueCn || itemName;
   } else {
     // 普通物品翻译
 
@@ -277,11 +307,12 @@ function translateKeystoneName(keystoneName) {
 async function runTask() {
   console.log(`🚀 启动翻译爬虫 | 深度: ${MAX_RANK}`);
   console.log(`   输出目录: ${OUTPUT_DIR}`);
+  console.log(`   Chrome: ${CHROME_PATH}`);
 
   const browser = await puppeteer.launch({
     headless: "new",
-    executablePath: CHROME_PATH || undefined,
-    protocolTimeout: 2400000, // 增加 protocolTimeout 到 2400 秒
+    executablePath: CHROME_PATH,
+    protocolTimeout: 120000,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
