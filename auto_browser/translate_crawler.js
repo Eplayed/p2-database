@@ -310,7 +310,7 @@ async function runTask() {
   console.log(`   Chrome: ${CHROME_PATH}`);
 
   const browser = await puppeteer.launch({
-    headless: "new",
+    headless: true,
     protocolTimeout: 300000, // 5分钟超时
     args: [
       "--no-sandbox",
@@ -318,10 +318,8 @@ async function runTask() {
       "--disable-dev-shm-usage",
       "--disable-accelerated-2d-canvas",
       "--disable-gpu",
-      "--single-process",
       "--disable-blink-features=AutomationControlled",
       "--disable-web-security",
-      "--disable-features=IsolateOrigins,site-per-process",
     ],
   });
 
