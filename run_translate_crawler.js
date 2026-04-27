@@ -2,6 +2,7 @@
 
 require('dotenv').config({path: './auto_browser/.env'});
 const { runTask } = require('./auto_browser/translate_crawler');
+const { crawlCaiMoGuBuilds } = require('./auto_browser/crawl_caimogu');
 const uploadAll = require('./auto_browser/upload_to_oss');
 
 const isDev = process.env.NODE_ENV === 'dev';
@@ -23,14 +24,16 @@ console.log('');
 
 async function main() {
     try {
-        // 执行翻译任务
+        // 执行翻译任务（天梯数据）
         await runTask();
         
-        // 开发环境下执行OSS上传
-        // if (isDev) {
-            console.log('\n🚀 开始上传数据到OSS...');
-            await uploadAll();
-        // }
+        // 从踩蘑菇抓取热门BD
+        console.log('\n🌿 抓取踩蘑菇热门BD...');
+        await crawlCaiMoGuBuilds();
+        
+        // 上传到OSS
+        console.log('\n🚀 上传数据到OSS...');
+        await uploadAll();
         
         console.log('\n✅ 任务执行完成！');
         
