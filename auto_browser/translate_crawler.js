@@ -689,15 +689,31 @@ async function runTask() {
               }),
             })),
             // 🔧 修复 keystones 获取逻辑：优先从 API 获取，如果为空则从页面 DOM 提取
+            // 🔧 修复 icon 路径：提取相对路径，避免小程序拼接出双重 URL
             keystones: (() => {
               const apiKeystones = capturedData.keystones || [];
               if (apiKeystones.length > 0) {
-                return apiKeystones.map((keystone) => ({
-                  name: translateKeystoneName(keystone.name),
-                  originalName: keystone.name,
-                  // 只存相对路径，小程序会拼接 https://poe.ninja/poe2-assets/cdn/tree/
-                  icon: keystone.icon || '',
-                }));
+                return apiKeystones.map((keystone) => {
+                  // 提取相对路径
+                  let iconPath = keystone.icon || '';
+                  if (iconPath) {
+                    const match = iconPath.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
+                    if (match) {
+                      iconPath = `passives/${match[1]}`;
+                    } else if (iconPath.startsWith('http')) {
+                      // 如果是完整 URL，尝试提取末尾路径
+                      const urlMatch = iconPath.match(/\/([^/]+\.(png|webp))$/i);
+                      if (urlMatch) {
+                        iconPath = urlMatch[1];
+                      }
+                    }
+                  }
+                  return {
+                    name: translateKeystoneName(keystone.name),
+                    originalName: keystone.name,
+                    icon: iconPath,
+                  };
+                });
               }
 
               // 兜底：从页面提取 keystones 图标

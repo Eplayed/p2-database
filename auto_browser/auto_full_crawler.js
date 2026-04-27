@@ -225,9 +225,24 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
                 })),
               })),
               // 🔧 修复：优先从 API 获取 keystones，如果为空则从 DOM 提取
+              // 🔧 修复 icon 路径：提取相对路径
               keystones: (() => {
                 const apiKeystones = rootData.keystones || [];
-                if (apiKeystones.length > 0) return apiKeystones;
+                if (apiKeystones.length > 0) {
+                  return apiKeystones.map((keystone) => {
+                    let iconPath = keystone.icon || '';
+                    if (iconPath) {
+                      const match = iconPath.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
+                      if (match) {
+                        iconPath = `passives/${match[1]}`;
+                      } else if (iconPath.startsWith('http')) {
+                        const urlMatch = iconPath.match(/\/([^/]+\.(png|webp))$/i);
+                        if (urlMatch) iconPath = urlMatch[1];
+                      }
+                    }
+                    return { name: keystone.name, icon: iconPath };
+                  });
+                }
 
                 // 兜底：从天赋树区域提取 keystone 图标
                 try {
