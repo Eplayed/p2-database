@@ -479,11 +479,14 @@ async function runTask() {
             timeout: 120000,
           });
 
-          // 等待 SVG 渲染 + 滚动到底部
-          // 尝试多种选择器以兼容 PoE1 和 PoE2
+          // 等待天赋树渲染 (PoE2 用 Canvas，PoE1 用 SVG)
           try {
-            await page.waitForSelector("svg", { timeout: 8000 });
-          } catch (e) {}
+            await page.waitForSelector('[data-tooltip-canvas="true"] canvas, svg', { timeout: 15000 });
+            // 额外等待确保 Canvas 渲染完成
+            await new Promise(r => setTimeout(r, 3000));
+          } catch (e) {
+            console.warn("等待天赋树超时，继续尝试...");
+          }
           await page.evaluate(() =>
             window.scrollTo(0, document.body.scrollHeight)
           );
@@ -511,50 +514,66 @@ async function runTask() {
 
           if (!capturedData) throw new Error("数据提取失败");
 
-          // 截图天赋 (SVG -> Canvas -> Base64)
+          // 截图天赋 - 优先从 Canvas 截图 (PoE2 用 Canvas 渲染)，再回退 SVG
           const treeImgBase64 = await page.evaluate(async () => {
             return new Promise((resolve) => {
-              // 1. 精准定位 SVG - 尝试多种选择器以兼容 PoE1 和 PoE2
-              // PoE2 页面可能使用不同的类名，需要更广泛的匹配
+              // 方案1: 直接从 Canvas 截图 (PoE2 天赋树是 Canvas 渲染的)
+              const canvasEl = document.querySelector('[data-tooltip-canvas="true"] canvas');
+              if (canvasEl) {
+                try {
+                  const dataUrl = canvasEl.toDataURL("image/png", 1.0);
+                  if (dataUrl && dataUrl.length > 1000) {
+                    // 压缩成 JPEG 再返回 (减小体积)
+                    const img = new Image();
+                    img.onload = () => {
+                      const c = document.createElement("canvas");
+                      c.width = Math.min(img.width, 1200);
+                      c.height = Math.min(img.height, 1200 * (img.height / img.width));
+                      const ctx = c.getContext("2d");
+                      ctx.drawImage(img, 0, 0, c.width, c.height);
+                      resolve(c.toDataURL("image/jpeg", 0.6));
+                    };
+                    img.onerror = () => resolve(dataUrl); // 回退 PNG
+                    img.src = dataUrl;
+                    return;
+                  }
+                } catch (e) {
+                  console.warn("Canvas toDataURL failed:", e);
+                }
+              }
+
+              // 方案2: SVG 回退逻辑 (兼容 PoE1)
               let svgEl = null;
               const selectors = [
-                // PoE2 可能的类名
-                '[class*="PassiveSkillTree"] svg',
-                '[class*="skill-tree"] svg',
-                '[class*="passive-tree"] svg',
-                // PoE1 原有选择器
                 'svg.bg-transparent',
                 'svg[class*="passive"]',
-                // 兜底：任何 SVG
-                'svg',
-                // 更精确的 PoE2 选择器
                 '.skill-tree-svg',
                 '#passive-skill-tree',
+                'svg',
               ];
-              
+
               for (const sel of selectors) {
                 try {
                   svgEl = document.querySelector(sel);
                   if (svgEl) {
-                    console.log('SVG 选择器匹配:', sel);
+                    console.log("SVG 选择器匹配:", sel);
                     break;
                   }
                 } catch (e) {}
               }
-              
+
               if (!svgEl) return resolve(null);
-              
+
               const serializer = new XMLSerializer();
               const clonedSvg = svgEl.cloneNode(true);
               const originalNodes = svgEl.querySelectorAll("*");
               const clonedNodes = clonedSvg.querySelectorAll("*");
 
-              // 2. 样式内联 (Style Inlining) - 保留高亮的关键
+              // 样式内联 (Style Inlining) - 保留高亮的关键
               originalNodes.forEach((orig, i) => {
                 const clone = clonedNodes[i];
                 if (!clone) return;
                 const style = window.getComputedStyle(orig);
-                // 确保保留关键属性
                 [
                   "stroke",
                   "fill",
@@ -572,11 +591,9 @@ async function runTask() {
                 });
               });
 
-              // 3. 计算尺寸
+              // 计算尺寸
               const viewBox = svgEl.viewBox.baseVal;
-              // 限制最大宽度为 1200，高度按比例缩放
               const targetWidth = 1200;
-              // 防止 viewBox 为 0 导致除以 0 错误
               const targetHeight =
                 viewBox.width > 0 && viewBox.height > 0
                   ? targetWidth * (viewBox.height / viewBox.width)
@@ -587,94 +604,60 @@ async function runTask() {
               canvas.height = targetHeight;
               const ctx = canvas.getContext("2d");
 
-              // 填充深色背景 (Ninja 背景色)
               ctx.fillStyle = "#0b0f19";
               ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-              // 4. 序列化并替换所有 CSS 变量
-              // 必须将 CSS 变量替换为实际颜色，否则 Canvas 渲染为黑色/空白
+              // 序列化并替换所有 CSS 变量
               let svgString = serializer.serializeToString(clonedSvg);
 
-              // 完整的 CSS 变量替换表 - PoE1 和 PoE2 通用
               const cssVarReplacements = {
-                // PoE1 原有变量
-                '--color-coolgrey-900': '#111827',
-                '--color-coolgrey-800': '#1f2937',
-                '--color-coolgrey-700': '#374151',
-                '--color-coolgrey-600': '#4b5563',
-                '--color-coolgrey-500': '#6b7280',
-                '--color-coolgrey-400': '#9ca3af',
-                '--color-coolgrey-300': '#d1d5db',
-                '--color-emerald-500': '#10b981',
-                '--color-emerald-400': '#34d399',
-                '--color-yellow-400': '#facc15',
-                '--color-yellow-500': '#eab308',
-                '--color-orange-500': '#f97316',
-                '--color-orange-400': '#fb923c',
-                '--color-red-500': '#ef4444',
-                '--color-red-400': '#f87171',
-                '--color-blue-500': '#3b82f6',
-                '--color-blue-400': '#60a5fa',
-                
-                // PoE2 新增变量 - 已点天赋 (根据职业不同颜色)
-                '--color-node-allocated': '#10b981',   // 绿色 - 已点
-                '--color-node-allocable': '#6b7280',   // 灰色 - 可点
-                '--color-node-unallocable': '#374151', // 深灰 - 不可点
-                '--color-node-highlight': '#facc15',   // 黄色 - 高亮
-                '--color-path-active': '#10b981',     // 已激活路径
-                '--color-path-inactive': '#374151',    // 未激活路径
-                '--color-keystone': '#f97316',         // 关键天赋
-                '--color-notable': '#facc15',         // 显著天赋
-                
-                // 职业主题色
-                '--color-blood-mage': '#dc2626',      // 血法师
-                '--color-infernalist': '#f97316',     // 地狱骑士
-                '--color-ganker': '#22c55e',          // 死灵
-                '--color-deadeye': '#3b82f6',         // 死亡追逐
-                '--color-champion': '#eab308',        // 冠军
-                '--color-slayer': '#ef4444',           // 杀手
-                '--color-monk': '#a855f7',            // 武僧
-                '--color-summoner': '#06b6d4',        // 召唤师
-                '--color-warrior': '#f97316',          // 战士
-                '--color-ranger': '#22c55e',          // 游侠
-                '--color-witch': '#a855f7',           // 女巫
-                '--color-shadow': '#6366f1',          // 暗影
-                '--color-templar': '#eab308',         // 圣殿
-                '--color-marauder': '#f97316',         // 野蛮人
-                '--color-scion': '#ec4899',           // 贵族
-                
-                // 通用颜色
-                '--color-white': '#ffffff',
-                '--color-black': '#000000',
-                '--color-gray': '#6b7280',
+                "--color-coolgrey-900": "#111827",
+                "--color-coolgrey-800": "#1f2937",
+                "--color-coolgrey-700": "#374151",
+                "--color-coolgrey-600": "#4b5563",
+                "--color-coolgrey-500": "#6b7280",
+                "--color-coolgrey-400": "#9ca3af",
+                "--color-coolgrey-300": "#d1d5db",
+                "--color-emerald-500": "#10b981",
+                "--color-emerald-400": "#34d399",
+                "--color-yellow-400": "#facc15",
+                "--color-yellow-500": "#eab308",
+                "--color-orange-500": "#f97316",
+                "--color-orange-400": "#fb923c",
+                "--color-red-500": "#ef4444",
+                "--color-red-400": "#f87171",
+                "--color-blue-500": "#3b82f6",
+                "--color-blue-400": "#60a5fa",
+                "--color-node-allocated": "#10b981",
+                "--color-node-allocable": "#6b7280",
+                "--color-node-unallocable": "#374151",
+                "--color-node-highlight": "#facc15",
+                "--color-path-active": "#10b981",
+                "--color-path-inactive": "#374151",
+                "--color-keystone": "#f97316",
+                "--color-notable": "#facc15",
+                "--color-white": "#ffffff",
+                "--color-black": "#000000",
+                "--color-gray": "#6b7280",
               };
 
-              // 执行所有 CSS 变量替换
               for (const [cssVar, hexColor] of Object.entries(cssVarReplacements)) {
-                // 匹配 var(--xxx) 或 var(--xxx, fallback) 格式
-                const regex = new RegExp(`var\\(${cssVar}(?:\\s*,\\s*[^)]+)?\\)`, 'g');
+                const regex = new RegExp(`var\\(${cssVar}(?:\\s*,\\s*[^)]+)?\\)`, "g");
                 svgString = svgString.replace(regex, hexColor);
               }
 
               const img = new Image();
-              // 指定字符集防止乱码
               const blob = new Blob([svgString], {
                 type: "image/svg+xml;charset=utf-8",
               });
               const url = URL.createObjectURL(blob);
 
               img.onload = () => {
-                // 绘制并压缩
                 ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
-                const b64 = canvas.toDataURL("image/jpeg", 0.6); // 0.6 质量足够且体积小
-                resolve(b64);
+                resolve(canvas.toDataURL("image/jpeg", 0.6));
               };
 
-              img.onerror = (e) => {
-                console.log('SVG转图片失败');
-                resolve(null);
-              };
-
+              img.onerror = () => resolve(null);
               img.src = url;
             });
           });
