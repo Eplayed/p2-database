@@ -43,13 +43,13 @@ async function scrapeAndSave(targetUrl) {
         }
 
         // 2. 等待数据就位 (给网络请求一点时间)
-        // 同时等待 SVG 出现以便截图
+        // 同时等待 Canvas 出现以便截图
         console.log('⏳ 等待数据加载和天赋树渲染...');
         try {
             await Promise.all([
-                page.waitForSelector('svg.bg-transparent', { timeout: 15000 }),
-                // 等待一小会儿确保 CSS 变量生效
-                new Promise(r => setTimeout(r, 3000)) 
+                page.waitForSelector('[data-tooltip-canvas="true"] canvas', { timeout: 15000 }),
+                // 等待一小会儿确保 Canvas 渲染完成
+                new Promise(r => setTimeout(r, 2000))
             ]);
         } catch (e) {
             console.warn('⚠️ 等待超时，尝试强行抓取...');
@@ -77,9 +77,23 @@ async function scrapeAndSave(targetUrl) {
 
         console.log(`✅ 数据提取成功: ${rootData.name} (Lv.${rootData.level} ${rootData.class})`);
 
-        // 3. 生成天赋树图片 (你的高亮版逻辑)
+        // 3. 生成天赋树图片 - 从 Canvas 截图
         const treeImageBase64 = await page.evaluate(async () => {
             return new Promise(resolve => {
+                // 方案1: 直接从 Canvas 截图 (poe.ninja 用 Canvas 渲染天赋树)
+                const canvas = document.querySelector('[data-tooltip-canvas="true"] canvas');
+                if (canvas) {
+                    try {
+                        const dataUrl = canvas.toDataURL('image/png', 1.0);
+                        if (dataUrl && dataUrl.length > 1000) {
+                            return resolve(dataUrl);
+                        }
+                    } catch (e) {
+                        console.warn('Canvas toDataURL failed:', e);
+                    }
+                }
+
+                // 方案2: 回退到 SVG (如果有的话)
                 const svgEl = document.querySelector('svg.bg-transparent');
                 if (!svgEl) return resolve(null);
 
@@ -104,17 +118,17 @@ async function scrapeAndSave(targetUrl) {
                 });
 
                 const viewBox = svgEl.viewBox.baseVal;
-                const targetWidth = 1200; 
+                const targetWidth = 1200;
                 const targetHeight = viewBox.width ? targetWidth * (viewBox.height / viewBox.width) : 1000;
 
-                const canvas = document.createElement('canvas');
-                canvas.width = targetWidth;
-                canvas.height = targetHeight;
-                const ctx = canvas.getContext('2d');
+                const renderCanvas = document.createElement('canvas');
+                renderCanvas.width = targetWidth;
+                renderCanvas.height = targetHeight;
+                const ctx = renderCanvas.getContext('2d');
 
                 // 黑色背景
-                ctx.fillStyle = "#0b0f19"; 
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#0b0f19";
+                ctx.fillRect(0, 0, renderCanvas.width, renderCanvas.height);
 
                 const serializer = new XMLSerializer();
                 const svgString = serializer.serializeToString(clonedSvg);
@@ -124,8 +138,7 @@ async function scrapeAndSave(targetUrl) {
 
                 img.onload = () => {
                     ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
-                    // 导出 JPEG 0.7
-                    const base64 = canvas.toDataURL('image/jpeg', 0.7);
+                    const base64 = renderCanvas.toDataURL('image/jpeg', 0.7);
                     resolve(base64);
                 };
                 img.onerror = () => resolve(null);
