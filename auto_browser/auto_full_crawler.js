@@ -131,77 +131,59 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
             timeout: 60000,
           });
 
-          // --- 🔴 关键步骤：滚动到底部触发 SVG 渲染 ---
+          // --- 等待天赋树渲染 (PoE2 用 Canvas) ---
+          try {
+            await page.waitForSelector('[data-tooltip-canvas="true"] canvas', { timeout: 15000 });
+            await new Promise((r) => setTimeout(r, 3000)); // 等 Canvas 渲染完成
+          } catch (e) {
+            console.warn("等待天赋树 Canvas 超时");
+          }
           await page.evaluate(() =>
             window.scrollTo(0, document.body.scrollHeight)
           );
-          await new Promise((r) => setTimeout(r, 2000)); // 等待渲染
 
-          // 提取数据（内联你之前成功的 V6.2 逻辑）
-          const detail = await page.evaluate(async () => {
-            // 1. 尝试从内嵌数据获取
-            function getRawData() {
-              const script = document.getElementById("__NEXT_DATA__");
-              return script
-                ? JSON.parse(script.innerText).props?.pageProps?.character
-                : null;
-            }
-
-            // 2. 生成高亮天赋图
-            async function captureTree() {
-              const svgEl = document.querySelector("svg.bg-transparent");
-              if (!svgEl) return null;
-
-              const clonedSvg = svgEl.cloneNode(true);
-              const originalNodes = svgEl.querySelectorAll("*");
-              const clonedNodes = clonedSvg.querySelectorAll("*");
-
-              // 烘焙样式：保留点亮效果
-              originalNodes.forEach((orig, i) => {
-                const clone = clonedNodes[i];
-                if (!clone) return;
-                const style = window.getComputedStyle(orig);
-                ["stroke", "fill", "stroke-width", "opacity", "r"].forEach(
-                  (p) => {
-                    const v = style.getPropertyValue(p);
-                    if (v && v !== "auto")
-                      clone.style.setProperty(p, v, "important");
-                  }
-                );
-              });
-
-              const viewBox = svgEl.viewBox.baseVal;
-              const width = 1000;
-              const height = width * (viewBox.height / viewBox.width);
-              const canvas = document.createElement("canvas");
-              canvas.width = width;
-              canvas.height = height;
-              const ctx = canvas.getContext("2d");
-              ctx.fillStyle = "#0b0f19";
-              ctx.fillRect(0, 0, width, height);
-
-              const serializer = new XMLSerializer();
-              const svgBlob = new Blob(
-                [serializer.serializeToString(clonedSvg)],
-                { type: "image/svg+xml;charset=utf-8" }
-              );
-              const url = URL.createObjectURL(svgBlob);
-
-              return new Promise((resolve) => {
-                const img = new Image();
-                img.onload = () => {
-                  ctx.drawImage(img, 0, 0, width, height);
-                  resolve(canvas.toDataURL("image/jpeg", 0.6));
-                };
-                img.onerror = () => resolve(null);
-                img.src = url;
-              });
-            }
-
-            const data = getRawData();
-            const treeImg = await captureTree();
-            return data ? { ...data, treeImg } : null;
+          // --- 截图天赋树 (用 page.screenshot 截取 Canvas 区域，兼容 WebGL) ---
+          let treeImgBase64 = null;
+          const treeRect = await page.evaluate(() => {
+            const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
+            if (!tooltipCanvas) return null;
+            const rect = tooltipCanvas.getBoundingClientRect();
+            if (!rect || rect.width < 100 || rect.height < 100) return null;
+            return {
+              x: Math.round(rect.x),
+              y: Math.round(rect.y),
+              width: Math.round(rect.width),
+              height: Math.round(rect.height),
+            };
           });
+
+          if (treeRect && treeRect.width > 0) {
+            try {
+              const imgBuffer = await page.screenshot({
+                type: "jpeg",
+                quality: 60,
+                clip: {
+                  x: treeRect.x,
+                  y: treeRect.y,
+                  width: Math.min(treeRect.width, 1200),
+                  height: Math.min(treeRect.height, 1200),
+                },
+              });
+              treeImgBase64 = `data:image/jpeg;base64,${Buffer.from(imgBuffer).toString("base64")}`;
+              console.log(`天赋树截图成功: ${treeImgBase64.length} 字符`);
+            } catch (e) {
+              console.warn("天赋树截图失败:", e.message);
+            }
+          }
+
+          // --- 提取数据 ---
+          const detail = await page.evaluate(() => {
+            const script = document.getElementById("__NEXT_DATA__");
+            return script
+              ? JSON.parse(script.innerText).props?.pageProps?.character
+              : null;
+          });
+          if (detail) detail.treeImg = treeImgBase64;
 
           // 移除监听器
           page.off("response", onResponse);

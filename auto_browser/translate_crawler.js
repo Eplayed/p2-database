@@ -680,10 +680,8 @@ async function runTask() {
             keystones: (capturedData.keystones || []).map((keystone) => ({
               name: translateKeystoneName(keystone.name),
               originalName: keystone.name,
-              // 补全相对路径为完整 URL
-              icon: keystone.icon
-                ? (keystone.icon.startsWith('http') ? keystone.icon : `https://poe.ninja/${keystone.icon}`)
-                : '',
+              // 只存相对路径，小程序会拼接 https://poe.ninja/poe2-assets/cdn/tree/
+              icon: keystone.icon || '',
             })),
             passiveTreeImage: treeImgBase64,
           };
