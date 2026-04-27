@@ -514,153 +514,53 @@ async function runTask() {
 
           if (!capturedData) throw new Error("数据提取失败");
 
-          // 截图天赋 - 优先从 Canvas 截图 (PoE2 用 Canvas 渲染)，再回退 SVG
-          const treeImgBase64 = await page.evaluate(async () => {
-            return new Promise((resolve) => {
-              // 方案1: 直接从 Canvas 截图 (PoE2 天赋树是 Canvas 渲染的)
-              const canvasEl = document.querySelector('[data-tooltip-canvas="true"] canvas');
-              if (canvasEl) {
-                try {
-                  const dataUrl = canvasEl.toDataURL("image/png", 1.0);
-                  if (dataUrl && dataUrl.length > 1000) {
-                    // 压缩成 JPEG 再返回 (减小体积)
-                    const img = new Image();
-                    img.onload = () => {
-                      const c = document.createElement("canvas");
-                      c.width = Math.min(img.width, 1200);
-                      c.height = Math.min(img.height, 1200 * (img.height / img.width));
-                      const ctx = c.getContext("2d");
-                      ctx.drawImage(img, 0, 0, c.width, c.height);
-                      resolve(c.toDataURL("image/jpeg", 0.6));
-                    };
-                    img.onerror = () => resolve(dataUrl); // 回退 PNG
-                    img.src = dataUrl;
-                    return;
-                  }
-                } catch (e) {
-                  console.warn("Canvas toDataURL failed:", e);
-                }
-              }
+          // 截图天赋 - 方案1: 用 Puppeteer page.screenshot 截取天赋树区域 (兼容 WebGL)
+          let treeImgBase64 = null;
 
-              // 方案2: SVG 回退逻辑 (兼容 PoE1)
-              let svgEl = null;
-              const selectors = [
-                'svg.bg-transparent',
-                'svg[class*="passive"]',
-                '.skill-tree-svg',
-                '#passive-skill-tree',
-                'svg',
-              ];
+          // 获取天赋树区域坐标
+          const treeRect = await page.evaluate(() => {
+            const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
+            if (!tooltipCanvas) return null;
 
-              for (const sel of selectors) {
-                try {
-                  svgEl = document.querySelector(sel);
-                  if (svgEl) {
-                    console.log("SVG 选择器匹配:", sel);
-                    break;
-                  }
-                } catch (e) {}
-              }
+            const rect = tooltipCanvas.getBoundingClientRect();
+            if (!rect || rect.width < 100 || rect.height < 100) return null;
 
-              if (!svgEl) return resolve(null);
+            const canvasEl = tooltipCanvas.querySelector('canvas');
+            let canvasType = 'unknown';
+            if (canvasEl) {
+              if (canvasEl.getContext('webgl2') || canvasEl.getContext('webgl')) canvasType = 'webgl';
+              else if (canvasEl.getContext('2d')) canvasType = '2d';
+            }
 
-              const serializer = new XMLSerializer();
-              const clonedSvg = svgEl.cloneNode(true);
-              const originalNodes = svgEl.querySelectorAll("*");
-              const clonedNodes = clonedSvg.querySelectorAll("*");
-
-              // 样式内联 (Style Inlining) - 保留高亮的关键
-              originalNodes.forEach((orig, i) => {
-                const clone = clonedNodes[i];
-                if (!clone) return;
-                const style = window.getComputedStyle(orig);
-                [
-                  "stroke",
-                  "fill",
-                  "stroke-width",
-                  "opacity",
-                  "r",
-                  "cx",
-                  "cy",
-                  "display",
-                  "visibility",
-                ].forEach((p) => {
-                  const v = style.getPropertyValue(p);
-                  if (v && v !== "auto" && v !== "none")
-                    clone.style.setProperty(p, v, "important");
-                });
-              });
-
-              // 计算尺寸
-              const viewBox = svgEl.viewBox.baseVal;
-              const targetWidth = 1200;
-              const targetHeight =
-                viewBox.width > 0 && viewBox.height > 0
-                  ? targetWidth * (viewBox.height / viewBox.width)
-                  : 1200;
-
-              const canvas = document.createElement("canvas");
-              canvas.width = targetWidth;
-              canvas.height = targetHeight;
-              const ctx = canvas.getContext("2d");
-
-              ctx.fillStyle = "#0b0f19";
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-              // 序列化并替换所有 CSS 变量
-              let svgString = serializer.serializeToString(clonedSvg);
-
-              const cssVarReplacements = {
-                "--color-coolgrey-900": "#111827",
-                "--color-coolgrey-800": "#1f2937",
-                "--color-coolgrey-700": "#374151",
-                "--color-coolgrey-600": "#4b5563",
-                "--color-coolgrey-500": "#6b7280",
-                "--color-coolgrey-400": "#9ca3af",
-                "--color-coolgrey-300": "#d1d5db",
-                "--color-emerald-500": "#10b981",
-                "--color-emerald-400": "#34d399",
-                "--color-yellow-400": "#facc15",
-                "--color-yellow-500": "#eab308",
-                "--color-orange-500": "#f97316",
-                "--color-orange-400": "#fb923c",
-                "--color-red-500": "#ef4444",
-                "--color-red-400": "#f87171",
-                "--color-blue-500": "#3b82f6",
-                "--color-blue-400": "#60a5fa",
-                "--color-node-allocated": "#10b981",
-                "--color-node-allocable": "#6b7280",
-                "--color-node-unallocable": "#374151",
-                "--color-node-highlight": "#facc15",
-                "--color-path-active": "#10b981",
-                "--color-path-inactive": "#374151",
-                "--color-keystone": "#f97316",
-                "--color-notable": "#facc15",
-                "--color-white": "#ffffff",
-                "--color-black": "#000000",
-                "--color-gray": "#6b7280",
-              };
-
-              for (const [cssVar, hexColor] of Object.entries(cssVarReplacements)) {
-                const regex = new RegExp(`var\\(${cssVar}(?:\\s*,\\s*[^)]+)?\\)`, "g");
-                svgString = svgString.replace(regex, hexColor);
-              }
-
-              const img = new Image();
-              const blob = new Blob([svgString], {
-                type: "image/svg+xml;charset=utf-8",
-              });
-              const url = URL.createObjectURL(blob);
-
-              img.onload = () => {
-                ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
-                resolve(canvas.toDataURL("image/jpeg", 0.6));
-              };
-
-              img.onerror = () => resolve(null);
-              img.src = url;
-            });
+            return {
+              x: Math.round(rect.x),
+              y: Math.round(rect.y),
+              width: Math.round(rect.width),
+              height: Math.round(rect.height),
+              canvasType,
+            };
           });
+
+          if (treeRect && treeRect.width > 0) {
+            try {
+              const imgBuffer = await page.screenshot({
+                type: 'jpeg',
+                quality: 60,
+                clip: {
+                  x: treeRect.x,
+                  y: treeRect.y,
+                  width: Math.min(treeRect.width, 1200),
+                  height: Math.min(treeRect.height, 1200),
+                },
+              });
+              treeImgBase64 = `data:image/jpeg;base64,${Buffer.from(imgBuffer).toString('base64')}`;
+              console.log(`天赋树截图成功: ${treeImgBase64.length} 字符 (${treeRect.canvasType})`);
+            } catch (e) {
+              console.warn('page.screenshot 失败:', e.message);
+            }
+          } else {
+            console.warn('未找到天赋树区域，跳过截图');
+          }
 
           // 数据清洗 + 翻译
           const detailData = {
@@ -779,8 +679,11 @@ async function runTask() {
             })),
             keystones: (capturedData.keystones || []).map((keystone) => ({
               name: translateKeystoneName(keystone.name),
-              originalName: keystone.name, // 保留原英文名
-              icon: keystone.icon,
+              originalName: keystone.name,
+              // 补全相对路径为完整 URL
+              icon: keystone.icon
+                ? (keystone.icon.startsWith('http') ? keystone.icon : `https://poe.ninja/${keystone.icon}`)
+                : '',
             })),
             passiveTreeImage: treeImgBase64,
           };
