@@ -305,6 +305,140 @@ function translateKeystoneName(keystoneName) {
     : keystoneName;
 }
 
+// 生成 community.json（热门BD推荐）
+async function generateCommunityJSON(allLadders, classList) {
+  console.log("\n📝 生成 community.json...");
+
+  const communityBuilds = [];
+  const classNameMap = {};
+  classList.forEach(cls => {
+    classNameMap[cls.name] = cls.name;
+  });
+
+  // PoE2 职业中文映射
+  const classCNMap = {
+    'Blood Mage': '血法师',
+    'Infernalist': '狱咒师',
+    'Deadeye': '死亡射手',
+    'Champion': '冠军',
+    'Slayer': '杀手',
+    'Inquisitor': '审判者',
+    'Witch': '女巫',
+    'Templar': '圣殿骑士',
+    'Marauder': '野蛮人',
+    'Shadow': '暗影',
+    'Ranger': '游侠',
+    'Scion': '贵族',
+    'Druid': '德鲁伊',
+    'Oracle': '神谕者',
+    'Pathfinder': '漫游者',
+    'Shaman': '萨满',
+    'Warrior': '战士',
+    'Chronomancer': '时空法师',
+    'Gemling': '宝石骑士',
+    'Summoner': '召唤师'
+  };
+
+  // 从天梯数据中提取热门BD
+  for (const clsName in allLadders) {
+    const players = allLadders[clsName];
+    const topPlayer = players[0]; // 取每个职业第一名
+
+    if (!topPlayer || !topPlayer.detail) continue;
+
+    const detail = topPlayer.detail;
+    const mainSkill = detail.skills?.[0]?.links?.[0];
+    const mainSkillName = mainSkill?.originalName || mainSkill?.name || '';
+    const supportSkills = detail.skills?.[0]?.links?.slice(1, 5).map(s => s.name || s.originalName || '') || [];
+
+    // 获取职业中文名
+    const classCN = classCNMap[clsName] || clsName;
+
+    // 提取标签
+    const tags = [mainSkillName];
+    if (supportSkills.length > 0) tags.push('辅助');
+    tags.push('天梯BD');
+
+    // 构建BD对象
+    const build = {
+      id: `PoE2_${clsName.replace(/\s+/g, '_')}_Top${topPlayer.rank}`,
+      meta: {
+        title: `${classCN}${mainSkillName}流派`,
+        author: topPlayer.account || '天梯玩家',
+        class: clsName,
+        name: classCN,
+        tags: tags
+      },
+      intro: {
+        desc: `${classCN}职业天梯排名第${topPlayer.rank}玩家的BD配置，主打${mainSkillName}。`,
+        pros: [
+          `${mainSkillName}输出强力`,
+          `天梯验证强度可靠`,
+          `适合追求强度的玩家`
+        ],
+        cons: [
+          `造价可能较高`,
+          `需要一定操作技巧`
+        ]
+      },
+      skills: detail.skills || [],
+      keystones: detail.keystones || [],
+      equipment: {
+        mainSkill: mainSkillName,
+        supports: supportSkills,
+        notes: '数据来源于poe.ninja天梯'
+      },
+      // 保留原始数据引用
+      source: {
+        rank: topPlayer.rank,
+        account: topPlayer.account,
+        level: topPlayer.level,
+        ladderLink: topPlayer.link || ''
+      }
+    };
+
+    communityBuilds.push(build);
+  }
+
+  // 如果没有足够数据，保留一条示例
+  if (communityBuilds.length === 0) {
+    communityBuilds.push({
+      id: 'PoE2_Example',
+      meta: {
+        title: '示例BD',
+        author: '系统',
+        class: 'Druid',
+        name: '德鲁伊',
+        tags: ['旋风击', '天梯BD']
+      },
+      intro: {
+        desc: '暂无数据，请等待下次更新',
+        pros: ['等待数据抓取'],
+        cons: ['暂无']
+      },
+      skills: [],
+      keystones: [],
+      equipment: { mainSkill: '-', supports: [], notes: '' },
+      source: { rank: 0, account: '', level: 0, ladderLink: '' }
+    });
+  }
+
+  return communityBuilds;
+}
+
+// 保存 community.json 到 miniprogram_data 目录
+function saveCommunityJSON(communityData, outputDir) {
+  const miniprogramDir = path.join(outputDir, 'miniprogram_data');
+  if (!fs.existsSync(miniprogramDir)) {
+    fs.mkdirSync(miniprogramDir, { recursive: true });
+  }
+
+  const communityPath = path.join(miniprogramDir, 'community.json');
+  fs.writeFileSync(communityPath, JSON.stringify(communityData, null, 2));
+  console.log(`   ✅ community.json 已保存 (${communityData.length} 条BD)`);
+  return communityPath;
+}
+
 async function runTask() {
   console.log(`🚀 启动翻译爬虫 | 深度: ${MAX_RANK}`);
   console.log(`   输出目录: ${OUTPUT_DIR}`);
@@ -833,6 +967,10 @@ async function runTask() {
       path.join(OUTPUT_DIR, "all_ladders_translated.json"),
       JSON.stringify(lightData, null, 2)
     );
+
+    // 生成并保存 community.json（热门BD推荐）
+    const communityData = await generateCommunityJSON(allLadders, classList);
+    saveCommunityJSON(communityData, OUTPUT_DIR);
 
     console.log("\n✅ 翻译数据抓取完成！");
     console.log(`📁 输出目录: ${OUTPUT_DIR}`);
