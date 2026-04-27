@@ -115,3 +115,19 @@ const base64 = `data:image/jpeg;base64,${Buffer.from(imgBuffer).toString('base64
 
 - `base-data/dist/dict_gem.json` 需要持续更新 PoE2 新增宝石
 - 2026-04-27 已补充 89 个新宝石（含 Rune 系列、Soul Core 系列、Vaal 系列等）
+
+### 踩蘑菇 BD 推荐爬虫
+
+**脚本**: `auto_browser/crawl_caimogu.js`
+
+**数据源**: https://www.caimogu.com/poe2/home (踩蘑菇网)
+
+**抓取内容**:
+- 标题、作者、标签等文字信息
+- 完整技能树和装备数据需进入详情页二次抓取
+
+**OSS 路径**:
+```
+poe2-ladders/miniprogram_data/community.json
+```
+完整 URL: `https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/poe2-ladders/miniprogram_data/community.json`

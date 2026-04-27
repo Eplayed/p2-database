@@ -158,7 +158,7 @@ async function crawlCaiMoGuBuilds() {
     // 上传到OSS
     console.log("3️⃣  上传到OSS...");
     const client = new OSS(OSS_CONFIG);
-    await client.put("poe2-ladders/release/miniprogram_data/community.json", outputPath);
+    await client.put("poe2-ladders/miniprogram_data/community.json", outputPath);
     console.log("   ✅ OSS上传成功!");
 
     return builds;
