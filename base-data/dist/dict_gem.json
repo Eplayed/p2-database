@@ -85,7 +85,6 @@
   "Ice-Tipped Arrows": "冰尖箭矢",
   "Firebolt": "火焰弹",
   "Ice Nova": "冰霜新星",
-  "Detonate Dead": "爆灵术",
   "Volatile Dead": "灵体火球",
   "Raise Zombie": "魔卫复苏",
   "Spark": "电球",
@@ -129,7 +128,6 @@
   "Skeletal Arsonist": "魔侍焚焰使",
   "Skeletal Cleric": "魔侍祭司",
   "Vulnerability": "脆弱",
-  "Soulrend": "裂魂术",
   "Sigil of Power": "威能法印",
   "Flame Wall": "烈焰之墙",
   "Hexblast": "魔蛊爆炸",
@@ -847,5 +845,7 @@
   "Corpse Walk": "尸体漫步",
   "Flesh Offering": "血肉奉献",
   "Spirit Offering": "灵魂奉献",
-  "Offerings": "奉献"
+  "Offerings": "奉献",
+  "Soulrend": "裂魂术",
+  "Detonate Dead": "爆破尸体"
 }

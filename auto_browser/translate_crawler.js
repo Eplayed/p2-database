@@ -515,9 +515,10 @@ async function runTask() {
           if (!capturedData) throw new Error("数据提取失败");
 
           // 截图天赋 - 方案1: 用 Puppeteer page.screenshot 截取天赋树区域 (兼容 WebGL)
+          // 🔧 修复：必须使用绝对坐标（相对坐标 + 滚动位置）
           let treeImgBase64 = null;
 
-          // 获取天赋树区域坐标
+          // 获取天赋树区域坐标（使用绝对坐标）
           const treeRect = await page.evaluate(() => {
             const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
             if (!tooltipCanvas) return null;
@@ -532,25 +533,35 @@ async function runTask() {
               else if (canvasEl.getContext('2d')) canvasType = '2d';
             }
 
+            // 使用绝对坐标：相对位置 + 滚动偏移
             return {
-              x: Math.round(rect.x),
-              y: Math.round(rect.y),
+              x: Math.round(rect.x + window.scrollX),
+              y: Math.round(rect.y + window.scrollY),
               width: Math.round(rect.width),
               height: Math.round(rect.height),
               canvasType,
+              // 调试信息
+              relX: Math.round(rect.x),
+              relY: Math.round(rect.y),
+              scrollX: window.scrollX,
+              scrollY: window.scrollY
             };
           });
 
           if (treeRect && treeRect.width > 0) {
             try {
+              // 确保页面滚动到正确位置
+              await page.evaluate(() => window.scrollTo(0, 0));
+              await new Promise(r => setTimeout(r, 500));
+
               const imgBuffer = await page.screenshot({
                 type: 'jpeg',
-                quality: 60,
+                quality: 80,
                 clip: {
                   x: treeRect.x,
                   y: treeRect.y,
                   width: Math.min(treeRect.width, 1200),
-                  height: Math.min(treeRect.height, 1200),
+                  height: Math.min(treeRect.height, 1200)
                 },
               });
               treeImgBase64 = `data:image/jpeg;base64,${Buffer.from(imgBuffer).toString('base64')}`;
@@ -677,12 +688,52 @@ async function runTask() {
                 };
               }),
             })),
-            keystones: (capturedData.keystones || []).map((keystone) => ({
-              name: translateKeystoneName(keystone.name),
-              originalName: keystone.name,
-              // 只存相对路径，小程序会拼接 https://poe.ninja/poe2-assets/cdn/tree/
-              icon: keystone.icon || '',
-            })),
+            // 🔧 修复 keystones 获取逻辑：优先从 API 获取，如果为空则从页面 DOM 提取
+            keystones: (() => {
+              const apiKeystones = capturedData.keystones || [];
+              if (apiKeystones.length > 0) {
+                return apiKeystones.map((keystone) => ({
+                  name: translateKeystoneName(keystone.name),
+                  originalName: keystone.name,
+                  // 只存相对路径，小程序会拼接 https://poe.ninja/poe2-assets/cdn/tree/
+                  icon: keystone.icon || '',
+                }));
+              }
+
+              // 兜底：从页面提取 keystones 图标
+              try {
+                const domKeystones = page.evaluate(() => {
+                  // 查找天赋树区域内的所有图片
+                  const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
+                  if (!tooltipCanvas) return [];
+
+                  const imgs = tooltipCanvas.querySelectorAll('img');
+                  const keystones = [];
+
+                  imgs.forEach(img => {
+                    const src = img.src || '';
+                    // 匹配 keystone 图标 URL
+                    if (src.includes('/keystone') || src.includes('/Keystone')) {
+                      // 提取相对路径
+                      const match = src.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
+                      if (match) {
+                        const iconPath = `passives/${match[1]}`;
+                        // 从 tooltip 或 alt 获取名称
+                        const altText = img.alt || img.getAttribute('data-tooltip') || '';
+                        const name = altText.replace(/<[^>]*>/g, '').trim() || iconPath;
+                        keystones.push({ name, icon: iconPath });
+                      }
+                    }
+                  });
+
+                  return keystones;
+                });
+                return domKeystones || [];
+              } catch (e) {
+                console.warn('DOM 提取 keystones 失败:', e.message);
+                return [];
+              }
+            })(),
             passiveTreeImage: treeImgBase64,
           };
 

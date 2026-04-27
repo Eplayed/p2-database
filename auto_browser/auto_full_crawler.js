@@ -143,15 +143,17 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
           );
 
           // --- 截图天赋树 (用 page.screenshot 截取 Canvas 区域，兼容 WebGL) ---
+          // 🔧 修复：必须使用绝对坐标（相对坐标 + 滚动位置）
           let treeImgBase64 = null;
           const treeRect = await page.evaluate(() => {
             const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
             if (!tooltipCanvas) return null;
             const rect = tooltipCanvas.getBoundingClientRect();
             if (!rect || rect.width < 100 || rect.height < 100) return null;
+            // 使用绝对坐标：相对位置 + 滚动偏移
             return {
-              x: Math.round(rect.x),
-              y: Math.round(rect.y),
+              x: Math.round(rect.x + window.scrollX),
+              y: Math.round(rect.y + window.scrollY),
               width: Math.round(rect.width),
               height: Math.round(rect.height),
             };
@@ -159,9 +161,13 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
 
           if (treeRect && treeRect.width > 0) {
             try {
+              // 确保页面滚动到顶部
+              await page.evaluate(() => window.scrollTo(0, 0));
+              await new Promise((r) => setTimeout(r, 500));
+
               const imgBuffer = await page.screenshot({
                 type: "jpeg",
-                quality: 60,
+                quality: 80,
                 clip: {
                   x: treeRect.x,
                   y: treeRect.y,
@@ -218,7 +224,36 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
                   isSupport: g.itemData?.support,
                 })),
               })),
-              keystones: rootData.keystones || [],
+              // 🔧 修复：优先从 API 获取 keystones，如果为空则从 DOM 提取
+              keystones: (() => {
+                const apiKeystones = rootData.keystones || [];
+                if (apiKeystones.length > 0) return apiKeystones;
+
+                // 兜底：从天赋树区域提取 keystone 图标
+                try {
+                  const domKeystones = page.evaluate(() => {
+                    const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
+                    if (!tooltipCanvas) return [];
+                    const imgs = tooltipCanvas.querySelectorAll('img');
+                    const keystones = [];
+                    imgs.forEach(img => {
+                      const src = img.src || '';
+                      if (src.includes('/keystone') || src.includes('/Keystone')) {
+                        const match = src.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
+                        if (match) {
+                          const altText = img.alt || img.getAttribute('data-tooltip') || '';
+                          const name = altText.replace(/<[^>]*>/g, '').trim() || match[1];
+                          keystones.push({ name, icon: `passives/${match[1]}` });
+                        }
+                      }
+                    });
+                    return keystones;
+                  });
+                  return domKeystones || [];
+                } catch (e) {
+                  return [];
+                }
+              })(),
               passiveTreeImage: detail?.treeImg || null,
             };
             player.detail = cleaned;
