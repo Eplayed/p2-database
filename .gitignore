@@ -1,26 +1,34 @@
+# Dependencies
+node_modules/
 
-node_modules
+# OS files
 .DS_Store
-translated-data
+
+# Environment and config
 .npmrc
 .cache
+oss-config.json
+auto_browser/.env
 
-# Build and Release Folders
+# Debug screenshots and logs
+*.png
+*.log
+
+# Crawler data files (generated at runtime)
+auto_browser/data/
+auto_browser/*.json
+!auto_browser/.gitkeep
+
+# Translated data (generated at runtime)
+translated-data/
+
+# Build folders
 bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
-
-# Other files and folders
 .settings/
-
-# Executables
 *.swf
 *.air
 *.ipa
 *.apk
-
-
-
-oss-config.json
-auto_browser/.env

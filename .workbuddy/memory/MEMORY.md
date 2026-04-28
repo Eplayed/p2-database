@@ -116,7 +116,50 @@ const base64 = `data:image/jpeg;base64,${Buffer.from(imgBuffer).toString('base64
 - `base-data/dist/dict_gem.json` 需要持续更新 PoE2 新增宝石
 - 2026-04-27 已补充 89 个新宝石（含 Rune 系列、Soul Core 系列、Vaal 系列等）
 
-### 踩蘑菇 BD 推荐爬虫
+### 踩蘑菇精华帖爬虫（完整流程）
+
+**新增脚本**:
+- `auto_browser/crawl_caimogu_essence_full.js` - 爬取精华帖列表和详情
+- `auto_browser/transform_caimogu_data.js` - 转换为小程序数据格式
+
+**数据源**: https://www.caimogu.cc/circle/449.html (流放之路2:降临 圈子)
+
+**爬取流程**:
+1. 访问圈子页面，点击"精华"筛选
+2. 滚动加载所有精华帖（最多30次滚动）
+3. 进入每个详情页抓取内容、图片、标签
+4. 转换数据格式
+5. 上传到 OSS
+
+**输出数据结构**:
+```json
+{
+  "id": "CaiMoGu_2168287",
+  "meta": {
+    "title": "BD攻略标题",
+    "author": "作者名",
+    "class": "Druid",
+    "tags": ["开荒", "攻坚"]
+  },
+  "skills": [...],
+  "passive_tree": {...},
+  "source": {...}
+}
+```
+
+**GitHub Actions 更新** (`.github/workflows/auto-crawl.yml`):
+- 新增步骤：运行精华帖爬虫
+- 新增步骤：运行数据转换脚本
+- OSS 路径: `poe2-ladders/miniprogram_data/community.json`
+
+**小程序加载地址**:
+```
+https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/poe2-ladders/miniprogram_data/community.json
+```
+
+---
+
+### 踩蘑菇 BD 推荐爬虫（早期版本）
 
 **脚本**: `auto_browser/crawl_caimogu.js`
 

@@ -4,14 +4,25 @@
   "main": "merge_data.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+
+    "dev": "NODE_ENV=dev node run_crawler.js",
+    "prod": "NODE_ENV=production node run_crawler.js",
+
     "cron:dev": "NODE_ENV=dev node run_translate_crawler.js",
     "cron:prod": "NODE_ENV=production node run_translate_crawler.js",
-    "start": "npm run cron:prod"
+
+    "start": "npm run prod",
+    "start:dev": "npm run dev",
+
+    "crawl:all": "node run_crawler.js --all",
+    "crawl:essence": "node run_crawler.js --essence",
+    "crawl:hot": "node run_crawler.js --hot",
+    "crawl:translate": "node run_crawler.js --translate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "PoE2 流放之路2 数据爬虫 - 整合踩蘑菇精华帖、天梯翻译、热门BD等功能",
   "dependencies": {
     "ali-oss": "^6.23.0",
     "dotenv": "^17.4.2",

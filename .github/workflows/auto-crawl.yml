@@ -86,25 +86,31 @@ jobs:
         OSS_ENDPOINT=https://oss-cn-hangzhou.aliyuncs.com
         EOF
 
-    - name: Ensure translated-data directory exists
+    - name: Ensure directories exist
       run: |
         mkdir -p translated-data/release translated-data/dev
+        mkdir -p auto_browser/data/screenshots
 
-    - name: Run crawl and upload (production)
+    - name: Run unified crawler (production)
       if: steps.env.outputs.env_name == 'production'
-      run: npm run cron:prod
+      run: node run_crawler.js --all
+      env:
+        NODE_ENV: production
+        CI: true
 
-    - name: Run crawl and upload (dev)
+    - name: Run unified crawler (dev)
       if: steps.env.outputs.env_name == 'dev'
-      run: npm run cron:dev
-
-    - name: Run crawl hot builds
-      run: node run_crawl_hot_builds.js
+      run: node run_crawler.js --translate --hot
+      env:
+        NODE_ENV: dev
+        CI: true
 
     - name: Upload artifacts (for debugging)
       if: failure()
       uses: actions/upload-artifact@v4
       with:
-        name: translated-data-${{ steps.env.outputs.env_name }}
-        path: translated-data/
+        name: crawl-data-${{ github.run_number }}
+        path: |
+          translated-data/
+          auto_browser/data/
         retention-days: 7
