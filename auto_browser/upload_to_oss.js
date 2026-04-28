@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const OSS = require('ali-oss');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
-const envConfig = require('./env-config');
+const config = require('./config');
 
 // --- ⚙️ OSS 配置 (使用环境变量或硬编码) ---
 const OSS_CONFIG = {
@@ -33,7 +33,7 @@ function getAllFiles(dirPath, arrayOfFiles) {
 }
 
 module.exports = async function uploadAll() {
-    console.log(`\n🚀 [OSS上传] 目标前缀: ${envConfig.ossPath}`);
+    console.log(`\n🚀 [OSS上传] 目标前缀: ${config.ossPath}`);
     
     let client;
     try {
@@ -43,7 +43,7 @@ module.exports = async function uploadAll() {
         return;
     }
 
-    const DATA_DIR = envConfig.dataDir;
+    const DATA_DIR = config.dataDir;
     
     if (!fs.existsSync(DATA_DIR)) {
         console.error('❌ 数据目录不存在，跳过上传');
@@ -60,7 +60,7 @@ module.exports = async function uploadAll() {
     for (const localPath of filesToUpload) {
         // 计算远程路径
         const relativePath = path.relative(DATA_DIR, localPath).split(path.sep).join('/');
-        const remotePath = `${envConfig.ossPath}${relativePath}`;
+        const remotePath = `${config.ossPath}${relativePath}`;
 
         try {
             await client.put(remotePath, localPath);
