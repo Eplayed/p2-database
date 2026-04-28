@@ -442,5 +442,19 @@ async function main() {
 
 main().catch(console.error);
 
-// 导出主函数供 run_crawler.js 调用
-module.exports = main;
+// 直接运行时执行
+if (require.main === module) {
+  console.log('开始执行数据转换...\n');
+  main()
+    .then(() => {
+      console.log('\n✅ 数据转换完成');
+      process.exit(0);
+    })
+    .catch(err => {
+      console.error('\n❌ 数据转换失败:', err.message);
+      process.exit(1);
+    });
+}
+
+// 导出函数供外部调用
+module.exports = { main, transformPost };

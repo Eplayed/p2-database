@@ -347,3 +347,17 @@ async function crawlEssencePosts() {
 
 // 导出函数
 module.exports = { crawlEssencePosts };
+
+// 直接运行时执行
+if (require.main === module) {
+  console.log('开始执行爬虫...\n');
+  crawlEssencePosts()
+    .then(() => {
+      console.log('\n✅ 爬虫执行完成');
+      process.exit(0);
+    })
+    .catch(err => {
+      console.error('\n❌ 爬虫执行失败:', err.message);
+      process.exit(1);
+    });
+}
