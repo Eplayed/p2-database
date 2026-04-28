@@ -92,8 +92,8 @@ async function runTranslateCrawler() {
   console.log('='.repeat(50));
 
   try {
-    const runTranslate = require('./run_translate_crawler');
-    await runTranslate();
+    const { runTask } = require('./auto_browser/translate_crawler');
+    await runTask();
     console.log('✅ 翻译爬虫完成');
   } catch (e) {
     console.error('❌ 翻译爬虫失败:', e.message);
