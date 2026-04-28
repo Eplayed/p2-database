@@ -1,11 +1,11 @@
-name: Auto Crawl and Upload to OSS
+name: 天梯翻译爬虫
 
 on:
   push:
     branches: [ main ]
   schedule:
-    # 北京时间每天上午 9 点执行 (UTC+8 = UTC+0 - 8小时)
-    - cron: '0 1 */3 * *'
+    # 北京时间每天上午 9 点执行
+    - cron: '0 1 * * *'
   workflow_dispatch: # 允许手动触发
     inputs:
       environment:
@@ -93,14 +93,14 @@ jobs:
 
     - name: Run unified crawler (production)
       if: steps.env.outputs.env_name == 'production'
-      run: node run_crawler.js --all
+      run: node run_crawler.js --translate
       env:
         NODE_ENV: production
         CI: true
 
     - name: Run unified crawler (dev)
       if: steps.env.outputs.env_name == 'dev'
-      run: node run_crawler.js --translate --hot
+      run: node run_crawler.js --translate
       env:
         NODE_ENV: dev
         CI: true
