@@ -17,7 +17,10 @@
     "crawl:all": "node run_crawler.js --all",
     "crawl:essence": "node run_crawler.js --essence",
     "crawl:hot": "node run_crawler.js --hot",
-    "crawl:translate": "node run_crawler.js --translate"
+    "crawl:translate": "node run_crawler.js --translate",
+    "crawl:news": "node auto_browser/crawl_news.js",
+    "crawl:news:detail": "node auto_browser/crawl_news_detail.js",
+    "crawl:news:all": "node auto_browser/crawl_news_with_details.js"
   },
   "keywords": [],
   "author": "",

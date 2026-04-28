@@ -1,0 +1,92 @@
+name: 更新踩蘑菇精华帖BD
+
+on:
+  schedule:
+    # 北京时间每天上午 9 点执行 (UTC+8 = UTC+0 - 8小时)
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+    inputs:
+      skip_oss:
+        description: '跳过OSS上传（仅本地测试）'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  crawl-essence-builds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Puppeteer dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libatk-bridge2.0-0 \
+            libdrm2 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxrandr2 \
+            libgbm1 \
+            libxss1 \
+            libasound2t64 \
+            chromium \
+            chromium-browser
+
+      - name: Install Chrome for Puppeteer
+        run: |
+          npx puppeteer browsers install chrome
+          echo "PUPPETEER_EXECUTABLE_PATH=$(npx puppeteer browsers path chrome)" >> $GITHUB_ENV
+
+      - name: Increase max open files limit
+        run: ulimit -n 4096
+
+      - name: Create .env file
+        run: |
+          mkdir -p auto_browser
+          cat > auto_browser/.env << EOF
+          OSS_REGION=oss-cn-hangzhou
+          OSS_BUCKET=poe2-all-class
+          OSS_ACCESS_KEY_ID=${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET=${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          NODE_ENV=production
+          EOF
+
+      - name: Ensure screenshots directory exists
+        run: mkdir -p auto_browser/data/screenshots
+
+      - name: Run essence posts crawler
+        run: node auto_browser/crawl_caimogu_essence.js
+        env:
+          CI: true
+          NODE_ENV: production
+
+      - name: Run hot builds crawler
+        run: node auto_browser/crawl_hot_builds.js
+        env:
+          CI: true
+          NODE_ENV: production
+
+      - name: Upload artifacts (for debugging)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-data-${{ github.run_number }}
+          path: |
+            auto_browser/data/*.json
+            auto_browser/data/screenshots/*.png
+          retention-days: 7
