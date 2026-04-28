@@ -251,3 +251,6 @@ async function main() {
 }
 
 main().catch(console.error);
+
+// 导出主函数供 run_crawler.js 调用
+module.exports = main;

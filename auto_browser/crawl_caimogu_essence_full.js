@@ -293,5 +293,5 @@ async function crawlEssencePosts() {
   }
 }
 
-// 运行爬虫
-crawlEssencePosts().catch(console.error);
+// 导出函数
+module.exports = { crawlEssencePosts };
