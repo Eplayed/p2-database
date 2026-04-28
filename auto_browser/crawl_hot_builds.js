@@ -20,7 +20,7 @@ const OSS_CONFIG = {
 const DATA_DIR = path.join(__dirname, 'data');
 
 // OSS 上传路径
-const OSS_PATH = process.env.PROD_OSS_PATH || 'release/';
+const OSS_PATH = process.env.PROD_OSS_PATH || 'poe2-ladders/miniprogram_data/';
 
 // 目标URL
 const TARGET_URL = 'https://poe2.caimogu.cc/planner#/plan/community-builds';
