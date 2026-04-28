@@ -201,9 +201,17 @@ async function crawlEssencePosts() {
           const timeEl = document.querySelector('.post-time, .time, .date, [class*="time"], [class*="date"]');
           result.publishTime = timeEl?.textContent?.trim() || "";
 
-          // 浏览量、点赞
+          // 浏览量、点赞、收藏
           const viewEl = document.querySelector('[class*="view"]');
           result.viewCount = viewEl?.textContent?.trim() || "";
+
+          // 点赞数
+          const likeEl = document.querySelector('[class*="like"], [class*="thumb"], .like-count, .点赞');
+          result.likeCount = likeEl?.textContent?.trim() || "0";
+
+          // 收藏数
+          const favEl = document.querySelector('[class*="fav"], [class*="collect"], .favorite-count, .收藏');
+          result.favorites = favEl?.textContent?.trim() || "0";
 
           // 内容 - 使用正确的选择器
           const contentEl = document.querySelector('.post-content, #post-content, [class*="post-content"]');
