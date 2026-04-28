@@ -214,10 +214,13 @@ async function main() {
   }
 
   const rawData = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf8'));
-  console.log(`📊 原始数据: ${rawData.summary?.detailedPosts || 0} 个详情帖`);
+  console.log(`📊 原始数据: ${rawData.summary?.detailedPosts || 0} 个详情帖, ${rawData.summary?.validPosts?.length || 0} 个有效BD帖子`);
 
-  // 2. 转换数据
-  const transformed = rawData.detailedPosts
+  // 2. 转换数据 - 优先使用 validPosts，否则使用 detailedPosts
+  const sourcePosts = rawData.validPosts?.length > 0 ? rawData.validPosts : rawData.detailedPosts;
+  console.log(`📊 使用数据源: ${sourcePosts.length} 个帖子`);
+
+  const transformed = sourcePosts
     .filter(post => post.content && post.content.length > 50) // 过滤无效帖子
     .map(transformPost)
     .filter(post => post.meta.title); // 过滤无标题帖子

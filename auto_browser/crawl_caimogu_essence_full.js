@@ -134,13 +134,24 @@ async function crawlEssencePosts() {
         if (text.length < 5 || text.length > 200) return;
         if (text.includes("登录") || text.includes("注册") || text.includes("发帖")) return;
 
+      // 过滤非BD攻略帖
+        const excludeKeywords = ['登录', '注册', '发帖', '公告', '置顶', '工具', '讨论', '新增', '更新', '说明', '介绍', '招募', 'QQ群', '微信', '群号', '圈子'];
+        if (excludeKeywords.some(kw => text.includes(kw))) return;
+
+        // BD攻略帖通常包含这些关键词
+        const bdKeywords = ['BD', 'bd', 'Build', '攻略', 'build', '流派', '开荒', '速刷', '刷图', '通关', '毕业', '装备', '技能', '天赋', '升华', '职业', '女巫', '圣殿', '判官', '寡妇', '战士', '刺客', '游侠', '野蛮人', '决斗', '贵族', '暗影', '欺诈'];
+
         seenIds.add(match[1]);
         posts.push({
           id: match[1],
           title: text,
-          href: href.startsWith("http") ? href : "https://www.caimogu.cc" + href
+          href: href.startsWith("http") ? href : "https://www.caimogu.cc" + href,
+          isLikelyBD: bdKeywords.some(kw => text.includes(kw))
         });
       });
+
+      // 按BD可能性排序，BD帖子优先
+      posts.sort((a, b) => (b.isLikelyBD ? 1 : 0) - (a.isLikelyBD ? 1 : 0));
 
       return posts;
     });
@@ -253,8 +264,38 @@ async function crawlEssencePosts() {
       await delay(1500);
     }
 
-    // 第五步：保存数据
-    console.log("\n5. 保存数据...");
+    // 第五步：过滤低质量帖子（确保是BD攻略）
+    console.log("\n5. 过滤低质量帖子...");
+
+    // BD攻略帖应该包含内容且内容长度足够
+    const validPosts = detailedPosts.filter(post => {
+      // 标题太短或太长的过滤
+      if (!post.title || post.title.length < 5) return false;
+      if (post.title.length > 100) return false;
+
+      // 过滤公告帖特征
+      const titleLower = post.title.toLowerCase();
+      if (titleLower.includes('公告') || titleLower.includes('置顶') || titleLower.includes('工具')) {
+        return false;
+      }
+
+      // 内容太短的不是有效攻略
+      if (!post.content || post.content.length < 100) return false;
+
+      // 过滤导航菜单内容（通常是"置顶"、"流放之路2:降临"等）
+      if (post.content.includes('流放之路2新增工具讨论圈子') ||
+          post.content.includes('请勿发无关帖子') ||
+          post.content.includes('禁止')) {
+        return false;
+      }
+
+      return true;
+    });
+
+    console.log(`   过滤后有效帖子: ${validPosts.length} 个`);
+
+    // 第六步：保存数据
+    console.log("\n6. 保存数据...");
 
     const output = {
       source: "caimogu.cc/circle/449",
@@ -263,10 +304,12 @@ async function crawlEssencePosts() {
       crawlTime: new Date().toISOString(),
       summary: {
         totalPosts: postLinks.length,
-        detailedPosts: detailedPosts.length
+        detailedPosts: detailedPosts.length,
+        validPosts: validPosts.length
       },
       postLinks: postLinks,
-      detailedPosts: detailedPosts
+      detailedPosts: detailedPosts,
+      validPosts: validPosts // 只包含有效BD帖子
     };
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2), "utf8");
@@ -276,9 +319,10 @@ async function crawlEssencePosts() {
     console.log("\n=== 抓取结果摘要 ===");
     console.log(`帖子总数: ${postLinks.length}`);
     console.log(`详情页抓取: ${detailedPosts.length}`);
+    console.log(`有效BD帖子: ${validPosts.length}`);
 
-    console.log("\n=== 前5个帖子详情 ===");
-    detailedPosts.slice(0, 5).forEach((post, i) => {
+    console.log("\n=== 前5个有效BD帖子 ===");
+    validPosts.slice(0, 5).forEach((post, i) => {
       console.log(`\n${i + 1}. ${post.title}`);
       console.log(`   作者: ${post.author} | 时间: ${post.publishTime}`);
       console.log(`   内容: ${post.summary?.substring(0, 100)}...`);
