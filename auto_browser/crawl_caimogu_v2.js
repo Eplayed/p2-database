@@ -499,7 +499,7 @@ async function parseDetailPage(page, planid, buildInfo = {}) {
       return { icons, groups };
     });
 
-    // 解析技能
+    // 解析技能 - 适配小程序详情页格式
     const parsedSkills = [];
     let currentGroup = null;
     let groupIndex = 0;
@@ -510,18 +510,15 @@ async function parseDetailPage(page, planid, buildInfo = {}) {
         if (parsed.isSupport) {
           // 辅助宝石添加到当前链接
           if (currentGroup) {
-            currentGroup.supportSkills.push(parsed.name);
+            currentGroup.links.push({ name: parsed.name, isSupport: true });
           }
         } else {
           // 主技能开始新组
-          if (currentGroup && currentGroup.mainSkills.length > 0) {
+          if (currentGroup && currentGroup.links.length > 0) {
             groupIndex++;
           }
           currentGroup = {
             groupName: `技能组 ${groupIndex + 1}`,
-            groupIndex: groupIndex,
-            mainSkills: [parsed.name],
-            supportSkills: [],
             links: [{ name: parsed.name, isSupport: false }]
           };
           parsedSkills.push(currentGroup);
@@ -529,20 +526,25 @@ async function parseDetailPage(page, planid, buildInfo = {}) {
       }
     }
 
-    // 补充辅助技能到链接
-    let linkIndex = 0;
-    for (const group of parsedSkills) {
-      for (const support of group.supportSkills) {
-        group.links.push({ name: support, isSupport: true });
-      }
-    }
-
     result.skills = parsedSkills;
 
     // 生成简介
     if (result.meta.title) {
-      result.intro.desc = `来自踩蘑菇网的热门BD「${result.meta.title}」，${result.meta.name}职业。`;
+      const updateTimeStr = result.source.updateTime ? `，更新于 ${result.source.updateTime}` : '';
+      result.intro.desc = `来自踩蘑菇网的热门BD「${result.meta.title}」，${result.meta.name}职业${updateTimeStr}。`;
     }
+
+    // 添加装备提示信息（踩蘑菇网详情页可能不包含详细装备数据）
+    result.equipment = {
+      notes: `数据来源：踩蘑菇网 | 更新时间: ${result.source.updateTime || '未知'} | 收藏:${buildInfo.favours || 0} 点赞:${buildInfo.likes || 0}`,
+      core_uniques: [],
+      rare_priority: []
+    };
+
+    // 更新来源信息
+    result.source.favorites = buildInfo.favours || 0;
+    result.source.likes = buildInfo.likes || 0;
+    result.source.url = `https://poe2.caimogu.cc/planner#/plan/${planid}`;
 
     // 生成ID
     const idBase = result.meta.title.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '').substring(0, 10);
