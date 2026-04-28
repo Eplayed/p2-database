@@ -70,13 +70,13 @@ jobs:
         run: mkdir -p auto_browser/data/screenshots
 
       - name: Run essence posts crawler
-        run: node auto_browser/crawl_caimogu_essence.js
+        run: node auto_browser/crawl_caimogu_essence_full.js
         env:
           CI: true
           NODE_ENV: production
 
-      - name: Run hot builds crawler
-        run: node auto_browser/crawl_hot_builds.js
+      - name: Transform essence data
+        run: node auto_browser/transform_caimogu_data.js
         env:
           CI: true
           NODE_ENV: production
