@@ -9,7 +9,11 @@ const BASE_URL = "https://poe.ninja/poe2/builds";
 const MAX_RANK = process.env.MAX_RANK || envConfig.crawler.maxRank || 20;
 const OUTPUT_DIR = path.join(__dirname, '..', 'data');
 
-if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
+// 🆕 确保 data/ 和 data/players/ 目录存在
+if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+const PLAYER_DIR = path.join(OUTPUT_DIR, 'players');
+if (!fs.existsSync(PLAYER_DIR)) fs.mkdirSync(PLAYER_DIR, { recursive: true });
+console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
 
 (async () => {
   console.log(
@@ -320,15 +324,10 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
             console.log(`         ✅ 成功 (装备:${cleaned.equipment.length})`);
 
             // 🆕 保存单个玩家详情到 players/ 目录
-            const playerDir = path.join(OUTPUT_DIR, 'players');
-            if (!fs.existsSync(playerDir)) {
-              fs.mkdirSync(playerDir, { recursive: true });
-            }
-
             // 文件名处理：# 替换为 _
             const sanitize = (str) => (str || '').replace(/#/g, '_');
             const playerFileName = `${sanitize(player.account)}_${sanitize(player.name)}.json`;
-            const playerFilePath = path.join(playerDir, playerFileName);
+            const playerFilePath = path.join(PLAYER_DIR, playerFileName);
 
             fs.writeFileSync(playerFilePath, JSON.stringify(cleaned, null, 2));
             console.log(`         💾 已保存: players/${playerFileName}`);

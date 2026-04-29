@@ -137,8 +137,7 @@ async function runFullCrawler() {
         resolve();
       } else {
         console.error(`❌ 完整爬虫失败，退出码: ${code}`);
-        // 不阻塞主流程，继续运行
-        resolve();
+        reject(new Error(`完整爬虫失败，退出码: ${code}`));  // 改为 reject
       }
     });
   });
