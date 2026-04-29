@@ -7,7 +7,7 @@ const envConfig = require("./env-config");
 const BASE_URL = "https://poe.ninja/poe2/builds";
 // 优先级：命令行参数 > env-config > 硬编码
 const MAX_RANK = process.env.MAX_RANK || envConfig.crawler.maxRank || 20;
-const OUTPUT_DIR = "./data";
+const OUTPUT_DIR = path.join(__dirname, '..', 'data');
 
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
 
@@ -274,6 +274,20 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
             player.detail = cleaned;
             detailedPlayers.push(player);
             console.log(`         ✅ 成功 (装备:${cleaned.equipment.length})`);
+
+            // 🆕 保存单个玩家详情到 players/ 目录
+            const playerDir = path.join(OUTPUT_DIR, 'players');
+            if (!fs.existsSync(playerDir)) {
+              fs.mkdirSync(playerDir, { recursive: true });
+            }
+
+            // 文件名处理：# 替换为 _
+            const sanitize = (str) => (str || '').replace(/#/g, '_');
+            const playerFileName = `${sanitize(player.account)}_${sanitize(player.name)}.json`;
+            const playerFilePath = path.join(playerDir, playerFileName);
+
+            fs.writeFileSync(playerFilePath, JSON.stringify(cleaned, null, 2));
+            console.log(`         💾 已保存: players/${playerFileName}`);
           }
         } catch (err) {
           console.error(`         ❌ 失败: ${err.message}`);

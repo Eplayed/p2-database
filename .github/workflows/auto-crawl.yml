@@ -93,14 +93,14 @@ jobs:
 
     - name: Run unified crawler (production)
       if: steps.env.outputs.env_name == 'production'
-      run: node run_crawler.js --translate
+      run: node run_crawler.js --translate --full
       env:
         NODE_ENV: production
         CI: true
 
     - name: Run unified crawler (dev)
       if: steps.env.outputs.env_name == 'dev'
-      run: node run_crawler.js --translate
+      run: node run_crawler.js --translate --full
       env:
         NODE_ENV: dev
         CI: true
@@ -114,3 +114,20 @@ jobs:
           translated-data/
           auto_browser/data/
         retention-days: 7
+
+    - name: Aggregate ladder analysis data
+      run: node scripts/aggregate_analysis.js
+
+    - name: Upload ladder_analysis.json to OSS (production)
+      if: steps.env.outputs.env_name == 'production'
+      run: node scripts/upload_analysis.js
+      env:
+        NODE_ENV: production
+        OSS_PATH: 'release/'
+
+    - name: Upload ladder_analysis.json to OSS (dev)
+      if: steps.env.outputs.env_name == 'dev'
+      run: node scripts/upload_analysis.js
+      env:
+        NODE_ENV: dev
+        OSS_PATH: 'dev/'

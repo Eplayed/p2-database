@@ -8,12 +8,14 @@
  *   node run_crawler.js --essence       # 只运行精华帖爬虫
  *   node run_crawler.js --hot           # 只运行热门BD爬虫
  *   node run_crawler.js --translate      # 只运行翻译爬虫
+ *   node run_crawler.js --full          # 运行完整爬虫（含玩家详情）
  */
 
 require('dotenv').config({ path: __dirname + '/auto_browser/.env' });
 
 const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
 
 // 解析命令行参数
 const args = process.argv.slice(2);
@@ -22,6 +24,7 @@ const flags = {
   essence: args.includes('--essence') || args.includes('-e'),
   hot: args.includes('--hot') || args.includes('-h'),
   translate: args.includes('--translate') || args.includes('-t'),
+  full: args.includes('--full') || args.includes('-f'),
   help: args.includes('--help') || args.includes('-h')
 };
 
@@ -36,11 +39,13 @@ function printHelp() {
   --essence, -e  只运行精华帖爬虫
   --hot, -h      只运行热门BD爬虫
   --translate, -t 只运行翻译爬虫
+  --full, -f     运行完整爬虫（含玩家详情）
   --help         显示帮助
 
 示例:
   node run_crawler.js --all
   node run_crawler.js --essence --hot
+  node run_crawler.js --full
   `);
   process.exit(0);
 }
@@ -114,6 +119,31 @@ async function transformEssenceData() {
   }
 }
 
+async function runFullCrawler() {
+  console.log('\n' + '='.repeat(50));
+  console.log('🎯 完整爬虫 (含玩家详情)');
+  console.log('='.repeat(50));
+  
+  return new Promise((resolve, reject) => {
+    const child = spawn('node', ['auto_browser/auto_full_crawler.js'], {
+      cwd: __dirname,
+      stdio: 'inherit',
+      shell: true
+    });
+    
+    child.on('close', (code) => {
+      if (code === 0) {
+        console.log('✅ 完整爬虫完成');
+        resolve();
+      } else {
+        console.error(`❌ 完整爬虫失败，退出码: ${code}`);
+        // 不阻塞主流程，继续运行
+        resolve();
+      }
+    });
+  });
+}
+
 async function main() {
   console.log('\n' + '═'.repeat(50));
   console.log('🚀 P2-Database 统一爬虫启动');
@@ -129,7 +159,12 @@ async function main() {
     if (flags.all || flags.translate) {
       await runTranslateCrawler();
     }
-
+    
+    // 1.5 运行完整爬虫（含玩家详情）
+    if (flags.all || flags.full) {
+      await runFullCrawler();
+    }
+    
     // 2. 运行热门BD爬虫
     if (flags.all || flags.hot) {
       await runHotBuildsCrawler();
