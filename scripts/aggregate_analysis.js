@@ -13,12 +13,6 @@ const INPUT_FILE = path.join(ROOT, 'all_ladders_translated.json')
 const PLAYER_DIR = path.join(ROOT, 'data', 'players')
 const OUTPUT_FILE = path.join(ROOT, 'ladder_analysis.json')
 
-// 文件名处理（与前端/crawler一致）
-const sanitizeForFileName = (str) => {
-  if (!str) return 'unknown'
-  return str.replace(/#/g, '_')
-}
-
 // 聚合统计
 const aggregateStats = (playerDetails) => {
   const skillCount = {}
@@ -97,39 +91,30 @@ const toSortedArray = (obj, max = 10) => {
 const main = async () => {
   console.log('开始天梯分析数据聚合...')
 
-  // 1. 读取天梯总览数据
-  if (!fs.existsSync(INPUT_FILE)) {
-    console.error('错误：找不到', INPUT_FILE)
-    process.exit(1)
-  }
+  // 1. 读取天梯总览数据（用于职业分布统计）
+  let ladderData = {}
+  let updateTime = ''
+  let classCount = {}
+  let totalPlayers = 0
 
-  const ladderData = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf-8'))
-  const { updateTime, ladders } = ladderData
+  if (fs.existsSync(INPUT_FILE)) {
+    ladderData = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf-8'))
+    updateTime = ladderData.updateTime || ''
+    const ladders = ladderData.ladders
 
-  if (!ladders) {
-    console.error('错误：all_ladders_translated.json 格式不正确')
-    process.exit(1)
-  }
-
-  // 2. 计算职业分布 & 收集所有玩家
-  const classCount = {}
-  const allPlayers = []
-
-  for (const [cls, players] of Object.entries(ladders)) {
-    classCount[cls] = players.length
-    for (const p of players) {
-      allPlayers.push({
-        cls,
-        account: p.account,
-        name: p.name
-      })
+    if (ladders) {
+      for (const [cls, players] of Object.entries(ladders)) {
+        classCount[cls] = players.length
+        totalPlayers += players.length
+      }
     }
+  } else {
+    console.warn('⚠️ 找不到 all_ladders_translated.json，跳过职业分布统计')
   }
 
-  const totalPlayers = allPlayers.length
-  console.log(`总玩家数: ${totalPlayers}`)
+  console.log(`天梯总览: ${totalPlayers} 位玩家, ${Object.keys(classCount).length} 个职业`)
 
-  // 3. 读取职业列表
+  // 2. 读取职业列表
   let classesData = []
   try {
     const classesPath = path.join(ROOT, 'data', 'classes.json')
@@ -140,8 +125,8 @@ const main = async () => {
     console.log('无法读取职业列表，使用默认数据')
   }
 
-  // 4. 读取所有玩家详情 JSON（本地文件）
-  console.log(`开始读取 ${allPlayers.length} 位玩家详情...`)
+  // 3. 🔧 直接读取 data/players/ 目录下的所有 JSON 文件
+  console.log(`读取玩家详情目录: ${PLAYER_DIR}`)
 
   if (!fs.existsSync(PLAYER_DIR)) {
     console.error('错误：找不到玩家数据目录', PLAYER_DIR)
@@ -149,26 +134,29 @@ const main = async () => {
     process.exit(1)
   }
 
+  const playerFiles = fs.readdirSync(PLAYER_DIR).filter(f => f.endsWith('.json'))
+  console.log(`发现 ${playerFiles.length} 个玩家详情文件`)
+
+  if (playerFiles.length === 0) {
+    console.error('错误：players/ 目录下没有 JSON 文件')
+    process.exit(1)
+  }
+
   const playerDetails = []
   let loadCount = 0
 
-  for (const p of allPlayers) {
-    if (!p.account || !p.name) continue
-    const key = `${sanitizeForFileName(p.account)}_${sanitizeForFileName(p.name)}`
-    const filePath = path.join(PLAYER_DIR, `${key}.json`)
-
-    if (fs.existsSync(filePath)) {
-      try {
-        const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-        playerDetails.push(data)
-        loadCount++
-      } catch (e) {
-        // 忽略读取失败的玩家
-      }
+  for (const file of playerFiles) {
+    try {
+      const filePath = path.join(PLAYER_DIR, file)
+      const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+      playerDetails.push(data)
+      loadCount++
+    } catch (e) {
+      console.warn(`  读取失败: ${file} - ${e.message}`)
     }
 
     if (loadCount % 50 === 0) {
-      console.log(`  已读取 ${loadCount}/${allPlayers.length}...`)
+      console.log(`  已读取 ${loadCount}/${playerFiles.length}...`)
     }
   }
 
@@ -179,13 +167,24 @@ const main = async () => {
     process.exit(1)
   }
 
-  // 5. 聚合统计
+  // 🔧 从玩家详情中补充职业分布统计（如果 all_ladders_translated.json 不可用）
+  if (totalPlayers === 0) {
+    const classFromDetails = {}
+    for (const p of playerDetails) {
+      const cls = p.info?.class || 'Unknown'
+      classFromDetails[cls] = (classFromDetails[cls] || 0) + 1
+    }
+    classCount = classFromDetails
+    totalPlayers = playerDetails.length
+  }
+
+  // 4. 聚合统计
   console.log('开始聚合统计...')
   const stats = aggregateStats(playerDetails)
 
   const sampledCount = playerDetails.length
 
-  // 6. 构建输出数据
+  // 5. 构建输出数据
   const classDistribution = Object.entries(classCount)
     .map(([name, count]) => {
       const clsInfo = classesData.find(c => c.name === name) || {}
@@ -232,7 +231,7 @@ const main = async () => {
     }))
 
   const output = {
-    updateTime: updateTime || '',
+    updateTime: updateTime || new Date().toISOString(),
     totalPlayers,
     sampledPlayers: playerDetails.length,
     classDistribution,
@@ -242,9 +241,11 @@ const main = async () => {
     topKeystones
   }
 
-  // 7. 写入文件
+  // 6. 写入文件
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2), 'utf-8')
   console.log(`\n聚合完成！输出文件: ${OUTPUT_FILE}`)
+  console.log(`  - 总玩家数: ${totalPlayers}`)
+  console.log(`  - 采样玩家数: ${playerDetails.length}`)
   console.log(`  - 职业分布: ${classDistribution.length} 个职业`)
   console.log(`  - 热门主技能: ${topActiveSkills.length} 个`)
   console.log(`  - 热门辅助技能: ${topSupportSkills.length} 个`)
