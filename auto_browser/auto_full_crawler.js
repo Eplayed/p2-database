@@ -20,7 +20,7 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
 
   const browser = await puppeteer.launch({
     headless: envConfig.crawler.headless,
-    protocolTimeout: 240000, // 增加 protocolTimeout 到 240 秒
+    protocolTimeout: 600000, // 增加到 10 分钟
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
@@ -110,6 +110,21 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
           `      (${i + 1}/${players.length}) 正在解析: ${player.name}`
         );
 
+        // 🔧 页面健康检查：如果页面崩溃，重新创建
+        try {
+          await page.evaluate(() => document.title);
+        } catch (e) {
+          console.warn('      ⚠️ 页面已崩溃，重新创建...');
+          try {
+            await page.close();
+          } catch (e) {}
+          page = await browser.newPage();
+          await page.setViewport({ width: 1440, height: 900 });
+          await page.setUserAgent(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+          );
+        }
+
         try {
           // 拦截网络请求拿原始数据
           let networkJson = null;
@@ -126,10 +141,38 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
           };
           page.on("response", onResponse);
 
-          await page.goto(player.link, {
-            waitUntil: "domcontentloaded",
-            timeout: 60000,
-          });
+          // 🔧 添加重试逻辑
+          let gotoSuccess = false;
+          for (let retry = 0; retry < 3; retry++) {
+            try {
+              await page.goto(player.link, {
+                waitUntil: "domcontentloaded",
+                timeout: 120000, // 增加到 2 分钟
+              });
+              gotoSuccess = true;
+              break;
+            } catch (e) {
+              console.warn(`      ⚠️ 页面加载失败 (尝试 ${retry + 1}/3): ${e.message}`);
+              if (retry < 2) {
+                await new Promise((r) => setTimeout(r, 5000)); // 等待 5 秒后重试
+                // 重新创建页面
+                try {
+                  await page.close();
+                } catch (e) {}
+                page = await browser.newPage();
+                await page.setViewport({ width: 1440, height: 900 });
+                await page.setUserAgent(
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+                );
+              }
+            }
+          }
+
+          if (!gotoSuccess) {
+            console.error(`      ❌ 页面加载失败，跳过此玩家`);
+            page.off("response", onResponse);
+            continue;
+          }
 
           // --- 等待天赋树渲染 (PoE2 用 Canvas) ---
           try {
@@ -198,6 +241,50 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
           const rootData = detail || networkJson;
 
           if (rootData) {
+            // 🔧 单独提取 keystones (避免嵌套 evaluate)
+            let keystones = [];
+            try {
+              const apiKeystones = rootData.keystones || [];
+              if (apiKeystones.length > 0) {
+                keystones = apiKeystones.map((keystone) => {
+                  let iconPath = keystone.icon || '';
+                  if (iconPath) {
+                    const match = iconPath.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
+                    if (match) {
+                      iconPath = `passives/${match[1]}`;
+                    } else if (iconPath.startsWith('http')) {
+                      const urlMatch = iconPath.match(/\/([^/]+\.(png|webp))$/i);
+                      if (urlMatch) iconPath = urlMatch[1];
+                    }
+                  }
+                  return { name: keystone.name, icon: iconPath };
+                });
+              } else {
+                // 兜底：从 DOM 提取
+                const domKeystones = await page.evaluate(() => {
+                  const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
+                  if (!tooltipCanvas) return [];
+                  const imgs = tooltipCanvas.querySelectorAll('img');
+                  const results = [];
+                  imgs.forEach(img => {
+                    const src = img.src || '';
+                    if (src.includes('/keystone') || src.includes('/Keystone')) {
+                      const match = src.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
+                      if (match) {
+                        const altText = img.alt || img.getAttribute('data-tooltip') || '';
+                        const name = altText.replace(/<[^>]*>/g, '').trim() || match[1];
+                        results.push({ name, icon: `passives/${match[1]}` });
+                      }
+                    }
+                  });
+                  return results;
+                });
+                keystones = domKeystones || [];
+              }
+            } catch (e) {
+              console.warn('      ⚠️ 提取 keystones 失败:', e.message);
+            }
+
             // 清洗逻辑 (Equipment, Skills 等格式化)
             const cleaned = {
               info: {
@@ -224,53 +311,10 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
                   isSupport: g.itemData?.support,
                 })),
               })),
-              // 🔧 修复：优先从 API 获取 keystones，如果为空则从 DOM 提取
-              // 🔧 修复 icon 路径：提取相对路径
-              keystones: (() => {
-                const apiKeystones = rootData.keystones || [];
-                if (apiKeystones.length > 0) {
-                  return apiKeystones.map((keystone) => {
-                    let iconPath = keystone.icon || '';
-                    if (iconPath) {
-                      const match = iconPath.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
-                      if (match) {
-                        iconPath = `passives/${match[1]}`;
-                      } else if (iconPath.startsWith('http')) {
-                        const urlMatch = iconPath.match(/\/([^/]+\.(png|webp))$/i);
-                        if (urlMatch) iconPath = urlMatch[1];
-                      }
-                    }
-                    return { name: keystone.name, icon: iconPath };
-                  });
-                }
-
-                // 兜底：从天赋树区域提取 keystone 图标
-                try {
-                  const domKeystones = page.evaluate(() => {
-                    const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
-                    if (!tooltipCanvas) return [];
-                    const imgs = tooltipCanvas.querySelectorAll('img');
-                    const keystones = [];
-                    imgs.forEach(img => {
-                      const src = img.src || '';
-                      if (src.includes('/keystone') || src.includes('/Keystone')) {
-                        const match = src.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
-                        if (match) {
-                          const altText = img.alt || img.getAttribute('data-tooltip') || '';
-                          const name = altText.replace(/<[^>]*>/g, '').trim() || match[1];
-                          keystones.push({ name, icon: `passives/${match[1]}` });
-                        }
-                      }
-                    });
-                    return keystones;
-                  });
-                  return domKeystones || [];
-                } catch (e) {
-                  return [];
-                }
-              })(),
+              keystones: keystones,
               passiveTreeImage: detail?.treeImg || null,
             };
+
             player.detail = cleaned;
             detailedPlayers.push(player);
             console.log(`         ✅ 成功 (装备:${cleaned.equipment.length})`);
@@ -289,6 +333,7 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
             fs.writeFileSync(playerFilePath, JSON.stringify(cleaned, null, 2));
             console.log(`         💾 已保存: players/${playerFileName}`);
           }
+
         } catch (err) {
           console.error(`         ❌ 失败: ${err.message}`);
         }
@@ -296,7 +341,6 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
       }
       allLadders[cls.name] = detailedPlayers;
     }
-
     // ==========================================
     // 阶段 3: 保存汇总结果
     // ==========================================
