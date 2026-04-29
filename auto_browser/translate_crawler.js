@@ -34,8 +34,8 @@ try {
 const BASE_URL = "https://poe.ninja/poe2/builds";
 
 const isDev = process.env.NODE_ENV === "dev";
-// 根据环境设置抓取深度：dev=1个，production=10个
-const MAX_RANK = isDev ? 1 : 10;
+// 根据环境设置抓取深度：dev=1个，production=7个（避免超时）
+const MAX_RANK = isDev ? 1 : 7;
 // 根据环境变量，dev
 
 const OUTPUT_DIR = isDev
