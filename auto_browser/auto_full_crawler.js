@@ -8,6 +8,7 @@ const BASE_URL = "https://poe.ninja/poe2/builds";
 // 优先级：命令行参数 > env-config > 硬编码
 const MAX_RANK = process.env.MAX_RANK || envConfig.crawler.maxRank || 20;
 const OUTPUT_DIR = path.join(__dirname, '..', 'data');
+const BROWSER_RESTART_INTERVAL = 30; // 🔧 每处理 N 个玩家重启浏览器
 
 // 🆕 确保 data/ 和 data/players/ 目录存在
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -15,33 +16,44 @@ const PLAYER_DIR = path.join(OUTPUT_DIR, 'players');
 if (!fs.existsSync(PLAYER_DIR)) fs.mkdirSync(PLAYER_DIR, { recursive: true });
 console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
 
-(async () => {
-  console.log(
-    `🚀 [V5.5 全站爬虫] 启动 | 环境: ${
-      process.env.NODE_ENV || "dev"
-    } | 目标深度: ${MAX_RANK}`
-  );
+// 🔧 浏览器管理工具函数
+const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+const BROWSER_ARGS = [
+  "--no-sandbox",
+  "--disable-setuid-sandbox",
+  "--disable-dev-shm-usage",
+  "--disable-accelerated-2d-canvas",
+  "--disable-gpu",
+  "--single-process",
+  "--disable-blink-features=AutomationControlled",
+  "--disable-web-security",
+];
 
-  const browser = await puppeteer.launch({
+async function launchBrowser() {
+  return puppeteer.launch({
     headless: envConfig.crawler.headless,
-    protocolTimeout: 600000, // 增加到 10 分钟
-    args: [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-      "--disable-accelerated-2d-canvas",
-      "--disable-gpu",
-      "--single-process",
-      "--disable-blink-features=AutomationControlled",
-      "--disable-web-security",
-    ],
+    protocolTimeout: 300000, // 5 分钟
+    args: BROWSER_ARGS,
   });
+}
 
+async function createPage(browser) {
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 900 });
-  await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  await page.setUserAgent(UA);
+  return page;
+}
+
+(async () => {
+  console.log(
+    `🚀 [V5.6 全站爬虫] 启动 | 环境: ${
+      process.env.NODE_ENV || "dev"
+    } | 目标深度: ${MAX_RANK} | 浏览器重启间隔: ${BROWSER_RESTART_INTERVAL}`
   );
+
+  let browser = await launchBrowser();
+  let page = await createPage(browser);
+  let globalPlayerCount = 0; // 🔧 全局玩家计数器
 
   try {
     // ==========================================
@@ -50,14 +62,11 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
     console.log("\n1️⃣  正在扫描职业入口...");
     await page.goto(BASE_URL, { waitUntil: "domcontentloaded" });
 
-    // 这里的筛选逻辑加固，确保能抓到 Pathfinder 等所有职业
     const classList = await page.evaluate(() => {
       const results = [];
-      // 找寻所有包含 class= 参数的 a 标签
       const links = Array.from(document.querySelectorAll('a[href*="class="]'));
       links.forEach((link) => {
         const href = link.href;
-        // 排除 SSF, HC 等，只保留标准赛季
         if (
           href.includes("/builds/vaal?") &&
           !href.includes("hc-") &&
@@ -114,19 +123,14 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
           `      (${i + 1}/${players.length}) 正在解析: ${player.name}`
         );
 
-        // 🔧 页面健康检查：如果页面崩溃，重新创建
-        try {
-          await page.evaluate(() => document.title);
-        } catch (e) {
-          console.warn('      ⚠️ 页面已崩溃，重新创建...');
-          try {
-            await page.close();
-          } catch (e) {}
-          page = await browser.newPage();
-          await page.setViewport({ width: 1440, height: 900 });
-          await page.setUserAgent(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-          );
+        // 🔧 定期重启浏览器，防止长时间运行导致连接超时
+        globalPlayerCount++;
+        if (globalPlayerCount % BROWSER_RESTART_INTERVAL === 0) {
+          console.log(`      🔄 已处理 ${globalPlayerCount} 个玩家，重启浏览器...`);
+          try { await browser.close(); } catch (e) {}
+          browser = await launchBrowser();
+          page = await createPage(browser);
+          console.log(`      ✅ 浏览器重启完成`);
         }
 
         try {
@@ -145,29 +149,25 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
           };
           page.on("response", onResponse);
 
-          // 🔧 添加重试逻辑
+          // 🔧 添加重试逻辑（含浏览器重启）
           let gotoSuccess = false;
           for (let retry = 0; retry < 3; retry++) {
             try {
               await page.goto(player.link, {
                 waitUntil: "domcontentloaded",
-                timeout: 120000, // 增加到 2 分钟
+                timeout: 120000,
               });
               gotoSuccess = true;
               break;
             } catch (e) {
               console.warn(`      ⚠️ 页面加载失败 (尝试 ${retry + 1}/3): ${e.message}`);
               if (retry < 2) {
-                await new Promise((r) => setTimeout(r, 5000)); // 等待 5 秒后重试
-                // 重新创建页面
-                try {
-                  await page.close();
-                } catch (e) {}
-                page = await browser.newPage();
-                await page.setViewport({ width: 1440, height: 900 });
-                await page.setUserAgent(
-                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-                );
+                await new Promise((r) => setTimeout(r, 5000));
+                // 🔧 重启整个浏览器，而不只是页面
+                try { await browser.close(); } catch (e) {}
+                browser = await launchBrowser();
+                page = await createPage(browser);
+                console.log(`      ✅ 浏览器重启完成`);
               }
             }
           }
@@ -181,7 +181,7 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
           // --- 等待天赋树渲染 (PoE2 用 Canvas) ---
           try {
             await page.waitForSelector('[data-tooltip-canvas="true"] canvas', { timeout: 15000 });
-            await new Promise((r) => setTimeout(r, 3000)); // 等 Canvas 渲染完成
+            await new Promise((r) => setTimeout(r, 3000));
           } catch (e) {
             console.warn("等待天赋树 Canvas 超时");
           }
@@ -190,14 +190,12 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
           );
 
           // --- 截图天赋树 (用 page.screenshot 截取 Canvas 区域，兼容 WebGL) ---
-          // 🔧 修复：必须使用绝对坐标（相对坐标 + 滚动位置）
           let treeImgBase64 = null;
           const treeRect = await page.evaluate(() => {
             const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
             if (!tooltipCanvas) return null;
             const rect = tooltipCanvas.getBoundingClientRect();
             if (!rect || rect.width < 100 || rect.height < 100) return null;
-            // 使用绝对坐标：相对位置 + 滚动偏移
             return {
               x: Math.round(rect.x + window.scrollX),
               y: Math.round(rect.y + window.scrollY),
@@ -208,7 +206,6 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
 
           if (treeRect && treeRect.width > 0) {
             try {
-              // 确保页面滚动到顶部
               await page.evaluate(() => window.scrollTo(0, 0));
               await new Promise((r) => setTimeout(r, 500));
 
@@ -324,7 +321,6 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
             console.log(`         ✅ 成功 (装备:${cleaned.equipment.length})`);
 
             // 🆕 保存单个玩家详情到 players/ 目录
-            // 文件名处理：# 替换为 _
             const sanitize = (str) => (str || '').replace(/#/g, '_');
             const playerFileName = `${sanitize(player.account)}_${sanitize(player.name)}.json`;
             const playerFilePath = path.join(PLAYER_DIR, playerFileName);
@@ -335,6 +331,14 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
 
         } catch (err) {
           console.error(`         ❌ 失败: ${err.message}`);
+          // 🔧 如果是 Protocol 错误，重启浏览器
+          if (err.message && (err.message.includes('Protocol') || err.message.includes('Target closed') || err.message.includes('Session closed'))) {
+            console.log(`      🔄 检测到浏览器连接错误，重启浏览器...`);
+            try { await browser.close(); } catch (e) {}
+            browser = await launchBrowser();
+            page = await createPage(browser);
+            console.log(`      ✅ 浏览器重启完成`);
+          }
         }
         await new Promise((r) => setTimeout(r, 1000)); // 频率控制
       }
@@ -358,6 +362,6 @@ console.log(`📁 玩家数据将保存到: ${PLAYER_DIR}`);
   } catch (e) {
     console.error("❌ 发生崩溃:", e);
   } finally {
-    await browser.close();
+    try { await browser.close(); } catch (e) {}
   }
 })();
