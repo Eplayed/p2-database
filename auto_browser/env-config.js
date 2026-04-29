@@ -23,7 +23,7 @@ module.exports = {
     // 爬取配置
     crawler: {
         headless: isProd ? "new" : false, // 生产环境无头，开发环境有头方便调试
-        maxRank: isProd ? 20 : 3,         // 生产环境抓前20，开发环境抓前3个
+        maxRank: isProd ? 7 : 3,         // 生产环境抓前7，开发环境抓前3个
         timeout: 60000
     }
 };

@@ -6,7 +6,7 @@ const envConfig = require("./env-config");
 
 // 配置控制
 const BASE_URL = "https://poe.ninja/poe2/builds";
-const MAX_RANK = process.env.MAX_RANK || envConfig.crawler.maxRank || 20;
+const MAX_RANK = process.env.MAX_RANK || envConfig.crawler.maxRank || 7;
 const OUTPUT_DIR = path.join(__dirname, '..', 'data');
 const API_CONCURRENCY = 3; // 🔧 API 并发数
 const API_RETRY = 3;       // 🔧 API 重试次数
