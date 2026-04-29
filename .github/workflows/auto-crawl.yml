@@ -26,6 +26,7 @@ env:
 jobs:
   crawl-and-upload:
     runs-on: ubuntu-latest
+    timeout-minutes: 25  # 设置超时时间为 25 分钟（留 5 分钟缓冲）
 
     steps:
     - name: Checkout repository
@@ -47,8 +48,9 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Install Puppeteer dependencies
+    - name: Install system dependencies for Puppeteer
       run: |
+        # 更新并安装必要的系统库
         sudo apt-get update
         sudo apt-get install -y \
           libnss3 \
@@ -61,22 +63,35 @@ jobs:
           libgbm1 \
           libxss1 \
           libasound2t64 \
-          chromium \
-          chromium-browser
+          libpangocairo-1.0-0 \
+          libgtk-3-0 \
+          fonts-liberation \
+          wget \
+          gnupg
 
     - name: Install Chrome for Puppeteer
       run: |
         npx puppeteer browsers install chrome
         echo "PUPPETEER_EXECUTABLE_PATH=$(npx puppeteer browsers path chrome)" >> $GITHUB_ENV
 
-    - name: Increase max open files limit (prevent ulimit error)
-      run: ulimit -n 4096
+    - name: Optimize system for CI
+      run: |
+        # 增加文件描述符限制
+        ulimit -n 8192
+        # 禁用不必要的服务释放内存
+        sudo sysctl -w vm.swappiness=10
+        # 显示系统状态
+        echo "=== System Memory ==="
+        free -h
+        echo "=== Disk Space ==="
+        df -h / /home
 
     - name: Create auto_browser/.env file
       run: |
         mkdir -p auto_browser
         cat > auto_browser/.env << EOF
         NODE_ENV=${{ steps.env.outputs.env_name }}
+        CI=true
         DEV_OSS_PATH=dev/
         PROD_OSS_PATH=release/
         OSS_REGION=oss-cn-hangzhou
@@ -97,6 +112,7 @@ jobs:
       env:
         NODE_ENV: production
         CI: true
+      timeout-minutes: 20  # 爬虫最多运行 20 分钟
 
     - name: Run unified crawler (dev)
       if: steps.env.outputs.env_name == 'dev'
@@ -104,6 +120,7 @@ jobs:
       env:
         NODE_ENV: dev
         CI: true
+      timeout-minutes: 20
 
     - name: Upload artifacts (for debugging)
       if: failure()

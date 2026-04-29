@@ -34,9 +34,12 @@ try {
 const BASE_URL = "https://poe.ninja/poe2/builds";
 
 const isDev = process.env.NODE_ENV === "dev";
+const isCI = process.env.CI === "true";  // 检测是否在 CI 环境
 // 根据环境设置抓取深度：dev=1个，production=7个（避免超时）
 const MAX_RANK = isDev ? 1 : 7;
-// 根据环境变量，dev
+
+// 浏览器定期重启策略（每处理 N 个职业后重启）
+const BROWSER_RESTART_INTERVAL = isCI ? 3 : 10;  // CI 环境更频繁重启
 
 const OUTPUT_DIR = isDev
   ? path.join(__dirname, "../translated-data/dev")
@@ -45,13 +48,106 @@ const OUTPUT_DIR = isDev
 // 确保输出目录存在
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
-// 浏览器配置
-const CHROME_PATH = fs.existsSync("/opt/chrome/chrome")
-  ? "/opt/chrome/chrome"
-  : ""; // 让 puppeteer 自动选择 Chrome
+// 检测 Chrome 路径（GitHub Actions 使用 npx puppeteer 自带 Chrome）
+let CHROME_PATH = "";
+if (fs.existsSync("/opt/chrome/chrome")) {
+  CHROME_PATH = "/opt/chrome/chrome";
+} else if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+  CHROME_PATH = process.env.PUPPETEER_EXECUTABLE_PATH;
+}
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+// 🔧 创建浏览器实例（优化版本）
+async function createBrowser(retryCount = 0) {
+  const maxRetries = 3;
+  
+  const launchOptions = {
+    headless: true,
+    protocolTimeout: 300000, // 5分钟协议超时
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",           // 解决 CI 内存问题
+      "--disable-accelerated-2d-canvas",
+      "--disable-gpu",
+      "--disable-blink-features=AutomationControlled",
+      "--disable-web-security",
+      "--disable-features=IsolateOrigins,site-per-process",
+      "--disable-extensions",
+      "--disable-background-networking",
+      "--disable-default-apps",
+      "--disable-sync",
+      "--disable-translate",
+      "--metrics-recording-only",
+      "--mute-audio",
+      "--no-first-run",
+      "--safebrowsing-disable-auto-update",
+      "--ignore-certificate-errors",
+      "--ignore-ssl-errors",
+      "--ignore-certificate-errors-spki-list",
+      // 内存优化
+      "--disable-memory-info",
+      "--disable-oom-killer",
+      // 连接优化
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-renderer-backgrounding",
+    ],
+  };
+  
+  // 只有明确指定路径时才使用
+  if (CHROME_PATH) {
+    launchOptions.executablePath = CHROME_PATH;
+  }
+  
+  try {
+    console.log(`   🔧 启动浏览器... (重试 ${retryCount}/${maxRetries})`);
+    return await puppeteer.launch(launchOptions);
+  } catch (err) {
+    console.error(`   ❌ 浏览器启动失败: ${err.message}`);
+    if (retryCount < maxRetries) {
+      await new Promise(r => setTimeout(r, 3000 * (retryCount + 1)));
+      return createBrowser(retryCount + 1);
+    }
+    throw new Error(`浏览器启动失败，已重试 ${maxRetries} 次`);
+  }
+}
+
+// 🔧 创建页面实例（优化版本）
+async function createPage(browser) {
+  const page = await browser.newPage();
+  
+  await page.setViewport({ width: 1280, height: 720 });  // 降低分辨率节省内存
+  await page.setUserAgent(USER_AGENT);
+  
+  // 请求拦截（减少不必要的请求）
+  await page.setRequestInterception(true);
+  page.on("request", (req) => {
+    const resourceType = req.resourceType();
+    const skipTypes = [
+      "media", "font", "texttrack", "object", "beacon", 
+      "csp_report", "imageset", "websocket", "manifest"
+    ];
+    if (skipTypes.includes(resourceType)) {
+      req.abort();
+    } else {
+      req.continue();
+    }
+  });
+  
+  // 错误处理
+  page.on("error", (err) => {
+    console.warn(`   ⚠️ 页面错误: ${err.message}`);
+  });
+  
+  page.on("close", () => {
+    console.log("   📌 页面已关闭");
+  });
+  
+  return page;
+}
 
 // 🔧 安全文件名生成函数 - 支持多语言
 function generateSafeFileName(text, prefix = "") {
@@ -439,53 +535,35 @@ function saveCommunityJSON(communityData, outputDir) {
   return communityPath;
 }
 
+// 🔧 安全的页面关闭函数
+async function safeClosePage(page) {
+  if (!page || page.isClosed()) return;
+  try {
+    await page.close();
+  } catch (e) {
+    // 忽略关闭错误
+  }
+}
+
 async function runTask() {
   console.log(`🚀 启动翻译爬虫 | 深度: ${MAX_RANK}`);
   console.log(`   输出目录: ${OUTPUT_DIR}`);
-  console.log(`   Chrome: ${CHROME_PATH}`);
+  console.log(`   CI 环境: ${isCI}`);
+  console.log(`   浏览器重启间隔: 每 ${BROWSER_RESTART_INTERVAL} 个职业`);
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    protocolTimeout: 300000, // 5分钟超时
-    args: [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-      "--disable-accelerated-2d-canvas",
-      "--disable-gpu",
-      "--disable-blink-features=AutomationControlled",
-      "--disable-web-security",
-    ],
-  });
-
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1920, height: 1080 });
-  await page.setUserAgent(USER_AGENT);
-
-  // 请求拦截
-  await page.setRequestInterception(true);
-  page.on("request", (req) => {
-    const resourceType = req.resourceType();
-    if (
-      [
-        "media",
-        "font",
-        "texttrack",
-        "object",
-        "beacon",
-        "csp_report",
-        "imageset",
-      ].includes(resourceType)
-    ) {
-      req.abort();
-    } else {
-      req.continue();
-    }
-  });
+  let browser = null;
+  let page = null;
+  let classProcessedCount = 0;  // 记录已处理的职业数
+  
+  // 全局错误处理标志
+  let shouldStop = false;
 
   try {
-    // 阶段 1: 抓取职业列表
-    console.log("1️⃣  获取职业列表...");
+    // 阶段 1: 创建浏览器并获取职业列表
+    browser = await createBrowser();
+    page = await createPage(browser);
+    
+    console.log("\n1️⃣  获取职业列表...");
     await page.goto(BASE_URL, {
       waitUntil: "domcontentloaded",
       timeout: 120000,
@@ -903,6 +981,30 @@ async function runTask() {
         await new Promise((r) => setTimeout(r, 500));
       }
       allLadders[cls.name] = detailedPlayers;
+      
+      // 🔧 定期重启浏览器（防止内存泄漏和协议错误）
+      classProcessedCount++;
+      if (classProcessedCount >= BROWSER_RESTART_INTERVAL && classProcessedCount < classList.length) {
+        console.log(`   🔄 定期重启浏览器 (已处理 ${classProcessedCount} 个职业)...`);
+        await safeClosePage(page);
+        try {
+          await browser.close();
+        } catch (e) {}
+        
+        // 等待 GC
+        await new Promise(r => setTimeout(r, 2000));
+        
+        // 重新创建浏览器和页面
+        browser = await createBrowser();
+        page = await createPage(browser);
+        
+        // 重新访问基础页面（保持会话）
+        try {
+          await page.goto(BASE_URL, { waitUntil: "domcontentloaded", timeout: 60000 });
+        } catch (e) {
+          console.warn(`   ⚠️ 重新访问基础页面失败: ${e.message}`);
+        }
+      }
     }
 
     // 阶段 3: 保存翻译后的数据
@@ -979,11 +1081,25 @@ async function runTask() {
         Object.keys(dictUnique).length
       } 传奇物品, ${Object.keys(dictGem).length} 技能宝石`
     );
+    console.log(`🔄 共处理 ${classProcessedCount} 个职业，重启浏览器 ${Math.floor(classProcessedCount / BROWSER_RESTART_INTERVAL)} 次`);
   } catch (e) {
-    console.error("❌ 任务崩溃:", e);
+    console.error("❌ 任务崩溃:", e.message);
+    // 保存已抓取的数据（如果有任何数据）
+    if (typeof allLadders !== 'undefined' && Object.keys(allLadders).length > 0) {
+      console.log("💾 保存已抓取的数据...");
+      // ... 保存逻辑
+    }
     throw e;
   } finally {
-    await browser.close();
+    // 🔧 安全关闭页面和浏览器
+    await safeClosePage(page);
+    if (browser) {
+      try {
+        await browser.close();
+      } catch (e) {
+        console.warn("浏览器关闭时出错:", e.message);
+      }
+    }
   }
 }
 
