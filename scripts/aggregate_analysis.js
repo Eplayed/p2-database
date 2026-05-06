@@ -63,7 +63,7 @@ const aggregateStats = (playerDetails) => {
     }
 
     // 统计核心天赋
-    if (player.keystones) {
+    if (Array.isArray(player.keystones)) {
       const seenKs = new Set()
       for (const ks of player.keystones) {
         if (!ks.name || seenKs.has(ks.name)) continue
