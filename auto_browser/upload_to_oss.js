@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const OSS = require('ali-oss');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
-const config = require('./config');
+const envConfig = require('./env-config');  // 使用 env-config.js（支持环境切换）
 
-// --- ⚙️ OSS 配置 (使用环境变量或硬编码) ---
+// --- ⚙️ OSS 配置 ---
 const OSS_CONFIG = {
     region: process.env.OSS_REGION || 'oss-cn-hangzhou',
     accessKeyId: process.env.OSS_ACCESS_KEY_ID,
@@ -33,7 +33,10 @@ function getAllFiles(dirPath, arrayOfFiles) {
 }
 
 module.exports = async function uploadAll() {
-    console.log(`\n🚀 [OSS上传] 目标前缀: ${config.ossPath}`);
+    console.log(`\n🚀 [OSS上传] 环境: ${envConfig.isProd ? 'production' : 'dev'}`);
+    console.log(`   本地目录: ${envConfig.dataDir}`);
+    console.log(`   OSS 路径: ${envConfig.ossPath}`);
+    console.log(`   CI 模式: ${envConfig.crawler.headless === "new"}`);
     
     let client;
     try {
@@ -43,7 +46,7 @@ module.exports = async function uploadAll() {
         return;
     }
 
-    const DATA_DIR = config.dataDir;
+    const DATA_DIR = envConfig.dataDir;
     
     if (!fs.existsSync(DATA_DIR)) {
         console.error('❌ 数据目录不存在，跳过上传');
@@ -60,7 +63,7 @@ module.exports = async function uploadAll() {
     for (const localPath of filesToUpload) {
         // 计算远程路径
         const relativePath = path.relative(DATA_DIR, localPath).split(path.sep).join('/');
-        const remotePath = `${config.ossPath}${relativePath}`;
+        const remotePath = `${envConfig.ossPath}${relativePath}`;
 
         try {
             await client.put(remotePath, localPath);

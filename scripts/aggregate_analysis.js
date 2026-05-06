@@ -1,17 +1,22 @@
 /**
  * 天梯分析数据预聚合脚本
- * 读取 all_ladders_translated.json + data/players/*.json
- * 输出 ladder_analysis.json 供前端直接使用
+ * 读取 all_ladders_translated.json + translated-data/{env}/players/*.json
+ * 输出 ladder_analysis.json（与爬虫输出同目录，便于 OSS 统一上传）
  */
 
 const fs = require('fs')
 const path = require('path')
 
-// 路径配置
+// 环境检测
+const isProd = process.env.NODE_ENV === 'production'
+
+// 路径配置（与 translate_crawler.js 保持一致）
 const ROOT = path.join(__dirname, '..')
-const INPUT_FILE = path.join(ROOT, 'all_ladders_translated.json')
-const PLAYER_DIR = path.join(ROOT, 'data', 'players')
-const OUTPUT_FILE = path.join(ROOT, 'ladder_analysis.json')
+const DATA_DIR = path.join(ROOT, 'translated-data', isProd ? 'release' : 'dev')
+const INPUT_FILE = path.join(DATA_DIR, 'all_ladders_translated.json')
+const PLAYER_DIR = path.join(DATA_DIR, 'players')
+const OUTPUT_FILE = path.join(DATA_DIR, 'ladder_analysis.json')
+const CLASSES_FILE = path.join(DATA_DIR, 'classes.json')
 
 // 聚合统计
 const aggregateStats = (playerDetails) => {
@@ -89,7 +94,8 @@ const toSortedArray = (obj, max = 10) => {
 
 // 主函数
 const main = async () => {
-  console.log('开始天梯分析数据聚合...')
+  console.log(`开始天梯分析数据聚合... [${isProd ? 'production' : 'dev'}]`)
+  console.log(`  数据目录: ${DATA_DIR}`)
 
   // 1. 读取天梯总览数据（用于职业分布统计）
   let ladderData = {}
@@ -117,7 +123,7 @@ const main = async () => {
   // 2. 读取职业列表
   let classesData = []
   try {
-    const classesPath = path.join(ROOT, 'data', 'classes.json')
+    const classesPath = CLASSES_FILE
     if (fs.existsSync(classesPath)) {
       classesData = JSON.parse(fs.readFileSync(classesPath, 'utf-8'))
     }
