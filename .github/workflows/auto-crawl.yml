@@ -3,10 +3,7 @@ name: 天梯翻译爬虫
 on:
   push:
     branches: [ main ]
-  schedule:
-    # 北京时间每天上午 9 点执行
-    - cron: '0 1 * * *'
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch: # 仅手动触发
     inputs:
       environment:
         description: '运行环境'
