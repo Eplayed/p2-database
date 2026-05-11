@@ -2,7 +2,7 @@
 
 require('dotenv').config({path: './auto_browser/.env'});
 const { runTask } = require('./auto_browser/translate_crawler');
-const { crawlCaiMoGuBuilds } = require('./auto_browser/crawl_caimogu');
+const { crawlEssencePosts } = require('./auto_browser/crawl_caimogu_essence_full');
 const uploadAll = require('./auto_browser/upload_to_oss');
 
 const isDev = process.env.NODE_ENV === 'dev';
@@ -28,8 +28,8 @@ async function main() {
         await runTask();
         
         // 从踩蘑菇抓取热门BD
-        console.log('\n🌿 抓取踩蘑菇热门BD...');
-        await crawlCaiMoGuBuilds();
+        console.log('\n🌿 抓取踩蘑菇精华帖...');
+        await crawlEssencePosts();
         
         // 上传到OSS
         console.log('\n🚀 上传数据到OSS...');

@@ -20,7 +20,15 @@
     "crawl:translate": "node run_crawler.js --translate",
     "crawl:news": "node auto_browser/crawl_news.js",
     "crawl:news:detail": "node auto_browser/crawl_news_detail.js",
-    "crawl:news:all": "node auto_browser/crawl_news_with_details.js"
+    "crawl:news:all": "node auto_browser/crawl_news_with_details.js",
+
+    "v2": "node crawlers/run.js",
+    "v2:all": "node crawlers/run.js --all",
+    "v2:dict": "node crawlers/run.js --dict",
+    "v2:ladder": "NODE_ENV=production node crawlers/run.js --ladder",
+    "v2:ladder:dev": "NODE_ENV=dev node crawlers/run.js --ladder",
+    "v2:dev": "NODE_ENV=dev node crawlers/run.js --all",
+    "v2:prod": "NODE_ENV=production node crawlers/run.js --all"
   },
   "keywords": [],
   "author": "",
