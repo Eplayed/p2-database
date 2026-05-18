@@ -2,19 +2,19 @@ const puppeteer = require('puppeteer');
 const OSS = require('ali-oss');
 const fs = require('fs');
 const path = require('path');
-const config = require('./config');
-require('dotenv').config();
+const envConfig = require('./env-config');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 // --- 配置区域 ---
 const TARGET_URL = 'https://www.caimogu.cc/circle/449.html'; // 采蘑菇 PoE2 专区
 const OUTPUT_FILE = 'news_caimogu.json';
 
-// OSS 配置 (使用 config.js)
+// OSS 配置 (使用环境变量 + env-config)
 const OSS_CONFIG = {
-    region: config.oss.region,
-    accessKeyId: config.oss.accessKeyId,
-    accessKeySecret: config.oss.accessKeySecret,
-    bucket: config.oss.bucket
+    region: process.env.OSS_REGION || 'oss-cn-hangzhou',
+    accessKeyId: process.env.OSS_ACCESS_KEY_ID,
+    accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET,
+    bucket: process.env.OSS_BUCKET
 };
 
 // 代理配置
@@ -22,7 +22,7 @@ const USE_PROXY = process.env.USE_PROXY === "true";
 const LOCAL_PROXY = "http://127.0.0.1:7890";
 
 // 确保 data 目录存在
-const OUTPUT_DIR = config.dataDir;
+const OUTPUT_DIR = envConfig.dataDir;
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
 const USER_AGENT =
@@ -153,7 +153,7 @@ async function crawlNews() {
 
         console.log('☁️ 正在上传至阿里云 OSS...');
         const client = new OSS(OSS_CONFIG);
-        const ossPath = `${config.ossPath}${OUTPUT_FILE}`;
+        const ossPath = `${envConfig.ossPath}${OUTPUT_FILE}`;
         const content = Buffer.from(JSON.stringify(finalJson, null, 2));
 
         const result = await client.put(ossPath, content);
