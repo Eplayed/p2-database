@@ -1033,19 +1033,6 @@ async function runTask() {
         );
 
         if (p.detail) {
-          // 优化: 将 passiveTreeImage (base64, ~100KB) 拆成独立 .jpg 文件
-          // JSON 中替换为 passiveTreeImageUrl 引用，减少 JSON 体积 80%+
-          if (p.detail.passiveTreeImage && p.detail.passiveTreeImage.startsWith('data:image/')) {
-            const base64Data = p.detail.passiveTreeImage.split(',')[1];
-            if (base64Data) {
-              const imgBuffer = Buffer.from(base64Data, 'base64');
-              const imgFileName = detailFileName.replace('.json', '_tree.jpg');
-              fs.writeFileSync(path.join(PLAYER_DATA_DIR, imgFileName), imgBuffer);
-              // 存 OSS 路径（相对路径，前端拼接 OSS 域名）
-              p.detail.passiveTreeImageUrl = `players/${imgFileName}`;
-              delete p.detail.passiveTreeImage;
-            }
-          }
           fs.writeFileSync(
             path.join(PLAYER_DATA_DIR, detailFileName),
             JSON.stringify(p.detail, null, 2)
