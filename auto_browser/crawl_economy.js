@@ -1,15 +1,14 @@
-require("dotenv").config();
+require("dotenv").config({ path: require("path").join(__dirname, ".env") });
 const puppeteer = require("puppeteer"); // 本地调试用完整版
 const fs = require("fs");
 const path = require("path");
 const uploadAll = require("./upload_to_oss");
-// const envConfig = require("./env-config");
-const config = require("./config");
+const envConfig = require("./env-config");
 
 // --- 0. 配置 ---
 const TARGET_URL = "https://poe.ninja/poe2/economy/vaal/currency";
 const OUTPUT_FILE = "economy.json";
-const OUTPUT_DIR = config.dataDir || "./data";
+const OUTPUT_DIR = envConfig.dataDir || "./data";
 
 // 🔴 修改：根据环境变量判断是否使用代理
 // 在 GitHub Actions 中我们不设置 USE_PROXY，在本地 .env 里可以设置 USE_PROXY=true
