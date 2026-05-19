@@ -21,6 +21,12 @@ auto_browser/data/
 *.png
 *.zip
 
+# Config (contains secrets)
+config/
+
+# Backup files
+*.bak
+
 # Legacy
 auto_browser/*.json
 !auto_browser/package.json
