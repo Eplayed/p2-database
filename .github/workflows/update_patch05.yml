@@ -1,0 +1,78 @@
+name: Update PoE2 0.5 Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '运行环境'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - dev
+          - production
+      refresh_economy:
+        description: '先刷新通用经济数据，再生成 0.5 经济榜'
+        required: true
+        default: false
+        type: boolean
+
+jobs:
+  update-patch05:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create auto_browser/.env file
+        run: |
+          mkdir -p auto_browser
+          cat > auto_browser/.env << EOF
+          NODE_ENV=${{ inputs.environment }}
+          OSS_REGION=oss-cn-hangzhou
+          OSS_BUCKET=poe2-all-class
+          OSS_ACCESS_KEY_ID=${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET=${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          EOF
+
+      - name: Refresh economy and generate 0.5 data
+        if: ${{ inputs.refresh_economy }}
+        env:
+          NODE_ENV: ${{ inputs.environment }}
+          CI: true
+        run: node crawlers/patch05/run_with_economy.js
+
+      - name: Generate 0.5 data
+        if: ${{ !inputs.refresh_economy }}
+        env:
+          NODE_ENV: ${{ inputs.environment }}
+          CI: true
+        run: node crawlers/patch05/index.js
+
+      - name: Upload to OSS
+        env:
+          NODE_ENV: ${{ inputs.environment }}
+          CI: true
+          OSS_REGION: oss-cn-hangzhou
+          OSS_BUCKET: poe2-all-class
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+        run: node -e "require('./auto_browser/upload_to_oss')()"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: patch05-data-${{ github.run_number }}
+          path: translated-data/
+          retention-days: 7

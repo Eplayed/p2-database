@@ -1,6 +1,7 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
+const https = require("https");
 require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 // 加载翻译字典
@@ -35,8 +36,8 @@ const BASE_URL = "https://poe.ninja/poe2/builds";
 
 const isDev = process.env.NODE_ENV === "dev";
 const isCI = process.env.CI === "true";  // 检测是否在 CI 环境
-// 根据环境设置抓取深度：dev=1个，production=7个（避免超时）
-const MAX_RANK = isDev ? 1 : 7;
+// 根据环境设置抓取深度：dev=1个，production=3个（提速）
+const MAX_RANK = isDev ? 1 : 3;
 
 // 浏览器定期重启策略（每处理 N 个职业后重启）
 const BROWSER_RESTART_INTERVAL = isCI ? 3 : 10;  // CI 环境更频繁重启
@@ -545,6 +546,62 @@ async function safeClosePage(page) {
   }
 }
 
+// ========== 新 API 辅助函数 ==========
+
+async function getBuildId(leagueUrl = 'vaal') {
+  return new Promise((resolve, reject) => {
+    const url = 'https://poe.ninja/poe2/api/data/index-state';
+    https.get(url, {
+      headers: {
+        'User-Agent': USER_AGENT,
+        'Referer': 'https://poe.ninja/poe2/builds',
+        'Accept': 'application/json',
+      }
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          const sv = json.snapshotVersions?.find(s => s.url === leagueUrl);
+          if (sv) {
+            console.log(`   📌 Build ID: ${sv.version} (${sv.snapshotName})`);
+            resolve({ buildId: sv.version, overview: sv.snapshotName });
+          } else {
+            reject(new Error(`lease ${leagueUrl} not found in index-state`));
+          }
+        } catch (e) {
+          reject(new Error(`Index-state parse error: ${e.message}`));
+        }
+      });
+    }).on('error', reject);
+  });
+}
+
+async function fetchCharacterData(buildId, account, name, overview) {
+  return new Promise((resolve, reject) => {
+    const params = `account=${encodeURIComponent(account)}&name=${encodeURIComponent(name)}&overview=${overview}&timeMachine=`;
+    const url = `https://poe.ninja/poe2/api/builds/${buildId}/character?${params}`;
+    https.get(url, {
+      headers: {
+        'User-Agent': USER_AGENT,
+        'Referer': `https://poe.ninja/poe2/builds/vaal/character/${encodeURIComponent(account)}/${encodeURIComponent(name)}`,
+        'Accept': 'application/json',
+      }
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(data));
+        } catch (e) {
+          reject(new Error(`Character API parse error: ${e.message}`));
+        }
+      });
+    }).on('error', reject);
+  });
+}
+
 async function runTask() {
   console.log(`🚀 启动翻译爬虫 | 深度: ${MAX_RANK}`);
   console.log(`   输出目录: ${OUTPUT_DIR}`);
@@ -554,11 +611,16 @@ async function runTask() {
   let browser = null;
   let page = null;
   let classProcessedCount = 0;  // 记录已处理的职业数
+  let buildId, overview;  // poe.ninja build ID
   
   // 全局错误处理标志
   let shouldStop = false;
 
   try {
+    // 阶段 0: 获取 Build ID（纯 HTTP，不需要浏览器）
+    console.log("\n0️⃣  获取 Build ID...");
+    ({ buildId, overview } = await getBuildId('vaal'));
+
     // 阶段 1: 创建浏览器并获取职业列表
     browser = await createBrowser();
     page = await createPage(browser);
@@ -626,7 +688,9 @@ async function runTask() {
         console.warn(`   ⚠️ [${cls.name}] 等待列表超时，尝试强行抓取`);
       }
 
-      const players = await page.evaluate((limit) => {
+      let players = [];
+      try {
+        players = await page.evaluate((limit) => {
         const rows = Array.from(document.querySelectorAll("tbody tr"));
         const validRows = rows.filter((r) =>
           r.querySelector("td:nth-child(1) a")
@@ -661,6 +725,10 @@ async function runTask() {
           })
           .filter((p) => p !== null);
       }, MAX_RANK);
+      } catch (e) {
+        console.warn(`   ⚠️ [${cls.name}] 提取玩家列表失败: ${e.message}`);
+        continue;
+      }
 
       console.log(`   📋 解析 ${players.length} 名玩家...`);
       const detailedPlayers = [];
@@ -669,63 +737,23 @@ async function runTask() {
         const player = players[i];
 
         let capturedData = null;
-        const responseListener = async (response) => {
-          if (capturedData) return;
-          const url = response.url();
-          // 宽松匹配 API
-          if (
-            url.includes("/api/builds/") &&
-            url.includes("/character") &&
-            response.request().method() !== "OPTIONS"
-          ) {
-            try {
-              const json = await response.json();
-              if (json && (json.items || json.character)) capturedData = json;
-            } catch (err) {}
-          }
-        };
-        page.on("response", responseListener);
 
         try {
-          await page.goto(player.link, {
-            waitUntil: "domcontentloaded",
-            timeout: 120000,
-          });
+          // v3.1 新方案：直接调用 HTTP API 获取角色数据（比 Puppeteer 快 10 倍+）
+          capturedData = await fetchCharacterData(buildId, player.account, player.name, overview);
+          if (!capturedData) throw new Error("Character API 返回空数据");
 
-          // 等待天赋树渲染 (PoE2 用 Canvas，PoE1 用 SVG)
+          // 导航到角色页面（仅用于天赋树截图，数据已通过 API 获取）
           try {
-            await page.waitForSelector('[data-tooltip-canvas="true"] canvas, svg', { timeout: 15000 });
-            // 额外等待确保 Canvas 渲染完成
+            await page.goto(player.link, {
+              waitUntil: "domcontentloaded",
+              timeout: 60000,
+            });
+            await page.waitForSelector('[data-tooltip-canvas="true"] canvas, svg', { timeout: 15000 }).catch(() => {});
             await new Promise(r => setTimeout(r, 3000));
           } catch (e) {
-            console.warn("等待天赋树超时，继续尝试...");
+            console.warn("   ⚠️ 天赋树页面加载超时，跳过截图");
           }
-          await page.evaluate(() =>
-            window.scrollTo(0, document.body.scrollHeight)
-          );
-          await new Promise((r) => setTimeout(r, 2000)); // 等动画
-
-          // 等待数据截获
-          let attempts = 0;
-          while (!capturedData && attempts < 10) {
-            await new Promise((r) => setTimeout(r, 200));
-            attempts++;
-          }
-
-          // 兜底：从页面提取
-          if (!capturedData) {
-            capturedData = await page.evaluate(() => {
-              try {
-                return JSON.parse(
-                  document.getElementById("__NEXT_DATA__").innerText
-                ).props?.pageProps?.character;
-              } catch (e) {
-                return null;
-              }
-            });
-          }
-
-          if (!capturedData) throw new Error("数据提取失败");
 
           // 截图天赋 - 方案1: 用 Puppeteer page.screenshot 截取天赋树区域 (兼容 WebGL)
           // 🔧 修复：必须使用绝对坐标（相对坐标 + 滚动位置）
@@ -975,7 +1003,7 @@ async function runTask() {
         } catch (err) {
           console.error(`      ❌ 失败: ${err.message}`);
         } finally {
-          page.off("response", responseListener);
+          // v3.1: 不再需要移除 responseListener（未使用 Puppeteer API 拦截）
         }
 
         await new Promise((r) => setTimeout(r, 500));

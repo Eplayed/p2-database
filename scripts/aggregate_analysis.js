@@ -10,7 +10,7 @@ const path = require('path')
 // 环境检测
 const isProd = process.env.NODE_ENV === 'production'
 
-// 路径配置（与 translate_crawler.js 保持一致）
+// 路径配置（与 crawlers/ninja-ladder/index.js 保持一致）
 const ROOT = path.join(__dirname, '..')
 const DATA_DIR = path.join(ROOT, 'translated-data', isProd ? 'release' : 'dev')
 const INPUT_FILE = path.join(DATA_DIR, 'all_ladders_translated.json')

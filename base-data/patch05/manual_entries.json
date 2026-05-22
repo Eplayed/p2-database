@@ -1,0 +1,123 @@
+[
+  {
+    "id": "feature_return_of_the_ancients",
+    "category": "feature",
+    "name": "0.5 回归上古",
+    "enName": "Return of the Ancients",
+    "summary": "0.5 大版本主题，重点包含新赛季、终局重做、异界推进和新 Boss 内容。",
+    "effect": "作为 0.5 资料中心的总入口，用于聚合赛季机制、终局清单和新经济资料。",
+    "tags": ["0.5", "版本专题", "终局"],
+    "sourceKey": "poe2db_version_050",
+    "confidence": "high"
+  },
+  {
+    "id": "feature_runes_of_aldur",
+    "category": "feature",
+    "name": "奥杜尔秘符",
+    "enName": "Runes of Aldur",
+    "summary": "0.5 赛季玩法，围绕符文、符文锻造和符文结界展开。",
+    "effect": "玩家需要识别不同符文和相关赛季奖励，小程序优先提供中文速查。",
+    "tags": ["奥杜尔秘符", "赛季", "符文"],
+    "sourceKey": "poe2db_runes_of_aldur",
+    "confidence": "high"
+  },
+  {
+    "id": "rune_system_runeforging",
+    "category": "rune",
+    "name": "符文锻造",
+    "enName": "Runeforging",
+    "summary": "奥杜尔秘符赛季的核心交互，用于围绕符文和相关奖励进行打造。",
+    "effect": "资料速查页应把符文锻造和符文类型放在同一个检索分类中。",
+    "tags": ["符文", "符文锻造", "赛季机制"],
+    "sourceKey": "poe2db_runeforging",
+    "confidence": "high"
+  },
+  {
+    "id": "rune_system_runic_ward",
+    "category": "rune",
+    "name": "符文结界",
+    "enName": "Runic Ward",
+    "summary": "0.5 赛季相关的新机制关键词，和卡古兰技能、赛季符文存在联动。",
+    "effect": "前端显示为独立词条，方便玩家按中文关键词检索。",
+    "tags": ["符文结界", "卡古兰", "赛季机制"],
+    "sourceKey": "poe2db_runes_of_aldur",
+    "confidence": "medium"
+  },
+  {
+    "id": "currency_alloy_currency",
+    "category": "currency",
+    "name": "合金通货",
+    "enName": "Alloy Currency",
+    "summary": "0.5 版本新增的一类赛季相关通货。",
+    "effect": "新经济榜应把合金通货从常规通货中拆分为单独分类，方便观察价格。",
+    "tags": ["新通货", "合金", "经济榜"],
+    "sourceKey": "poe2db_version_050",
+    "confidence": "medium"
+  },
+  {
+    "id": "currency_ancient_runes",
+    "category": "currency",
+    "name": "古代符文",
+    "enName": "Ancient Runes",
+    "summary": "0.5 新增符文相关物品分类。",
+    "effect": "先作为资料速查和新经济榜分类，后续根据 poe2db 具体条目拆成单个物品。",
+    "tags": ["符文", "新物品", "经济榜"],
+    "sourceKey": "poe2db_version_050",
+    "confidence": "medium"
+  },
+  {
+    "id": "currency_meta_crafting_runes",
+    "category": "currency",
+    "name": "元工艺符文",
+    "enName": "Meta-crafting Runes",
+    "summary": "0.5 新增符文相关物品分类。",
+    "effect": "用于资料速查分类和后续经济榜价格跟踪。",
+    "tags": ["符文", "工艺", "经济榜"],
+    "sourceKey": "poe2db_version_050",
+    "confidence": "medium"
+  },
+  {
+    "id": "gem_kalguuran_skills",
+    "category": "kalguuran_gem",
+    "name": "卡古兰技能",
+    "enName": "Kalguuran Skills",
+    "summary": "0.5 新增技能体系，和赛季机制存在关联。",
+    "effect": "资料速查页单独建分类，后续拆分为具体技能和辅助宝石条目。",
+    "tags": ["卡古兰", "技能", "辅助宝石"],
+    "sourceKey": "poe2db_kalguuran_skills",
+    "confidence": "high"
+  },
+  {
+    "id": "endgame_atlas_masters",
+    "category": "endgame",
+    "name": "异界大师",
+    "enName": "Atlas Masters",
+    "summary": "0.5 终局推进相关系统。",
+    "effect": "终局清单需要追踪大师解锁、任务线推进和奖励节点。",
+    "tags": ["终局", "异界", "清单"],
+    "sourceKey": "poe2db_version_050",
+    "confidence": "medium"
+  },
+  {
+    "id": "endgame_fortress",
+    "category": "endgame",
+    "name": "要塞",
+    "enName": "Fortress",
+    "summary": "0.5 终局推进和 Boss 解锁相关目标。",
+    "effect": "终局清单以要塞推进作为关键检查项之一。",
+    "tags": ["终局", "要塞", "Boss"],
+    "sourceKey": "poe2db_version_050",
+    "confidence": "medium"
+  },
+  {
+    "id": "boss_pinnacle_bosses",
+    "category": "boss",
+    "name": "巅峰 Boss",
+    "enName": "Pinnacle Bosses",
+    "summary": "0.5 终局 Boss 内容的总分类。",
+    "effect": "第一版先做总览和解锁清单，等掉落数据稳定后再拆成单个 Boss 图鉴。",
+    "tags": ["Boss", "终局", "掉落"],
+    "sourceKey": "poe2db_version_050",
+    "confidence": "medium"
+  }
+]

@@ -1,9 +1,6 @@
 name: 更新踩蘑菇精华帖BD
 
 on:
-  schedule:
-    # 北京时间每天上午 9 点执行 (UTC+8 = UTC+0 - 8小时)
-    - cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       skip_oss:

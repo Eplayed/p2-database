@@ -32,3 +32,23 @@ jobs:
           OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
           NODE_ENV: production
         run: node auto_browser/crawl_economy.js
+
+      - name: Refresh 0.5 economy output
+        env:
+          CI: true
+          OSS_REGION: oss-cn-hangzhou
+          OSS_BUCKET: poe2-all-class
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          NODE_ENV: production
+        run: node crawlers/patch05/index.js
+
+      - name: Upload refreshed 0.5 economy data
+        env:
+          CI: true
+          OSS_REGION: oss-cn-hangzhou
+          OSS_BUCKET: poe2-all-class
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          NODE_ENV: production
+        run: node -e "require('./auto_browser/upload_to_oss')()"

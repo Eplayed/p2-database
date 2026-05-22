@@ -1,10 +1,15 @@
 /**
  * 上传 ladder_analysis.json 到 OSS
+ * 读取 translated-data/{env}/ladder_analysis.json
  */
 
 const OSS = require('ali-oss')
 const fs = require('fs')
 const path = require('path')
+
+const isProd = process.env.NODE_ENV === 'production'
+const dataDir = path.join(__dirname, '..', 'translated-data', isProd ? 'release' : 'dev')
+const localPath = path.join(dataDir, 'ladder_analysis.json')
 
 const client = new OSS({
   region: process.env.OSS_REGION || 'oss-cn-hangzhou',
@@ -13,10 +18,9 @@ const client = new OSS({
   accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET,
 })
 
-// OSS 路径：poe2-ladders/release/ladder_analysis.json
-const envPath = (process.env.OSS_PATH || 'release/').replace(/\/+$/, '')
+// OSS 路径：poe2-ladders/{env}/ladder_analysis.json
+const envPath = (process.env.OSS_PATH || (isProd ? 'release' : 'dev')).replace(/\/+$/, '')
 const ossKey = `poe2-ladders/${envPath}/ladder_analysis.json`
-const localPath = path.join(__dirname, '..', 'ladder_analysis.json')
 
 async function upload() {
   if (!fs.existsSync(localPath)) {
@@ -24,12 +28,17 @@ async function upload() {
     process.exit(1)
   }
 
-  console.log('上传到 OSS:', ossKey)
+  console.log('  源文件:', localPath)
+  console.log('  上传到 OSS:', ossKey)
   const result = await client.put(ossKey, localPath)
-  console.log('✅ 上传成功:', result.url)
+  console.log('  ✅ 上传成功:', result.url)
 }
 
-upload().catch(err => {
-  console.error('❌ 上传失败:', err.message)
-  process.exit(1)
-})
+if (require.main === module) {
+  upload().catch(err => {
+    console.error('❌ 上传失败:', err.message)
+    process.exit(1)
+  })
+}
+
+module.exports = { upload }
