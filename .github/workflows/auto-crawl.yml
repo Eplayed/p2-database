@@ -104,6 +104,18 @@ jobs:
         CI: true
       timeout-minutes: 20
 
+    - name: Refresh starter recommendations
+      run: node crawlers/starter/index.js
+      env:
+        NODE_ENV: ${{ steps.env.outputs.env_name }}
+        CI: true
+
+    - name: Upload starter recommendations
+      run: node -e "require('./auto_browser/upload_to_oss')()"
+      env:
+        NODE_ENV: ${{ steps.env.outputs.env_name }}
+        CI: true
+
     - name: Upload artifacts (for debugging)
       if: failure()
       uses: actions/upload-artifact@v4

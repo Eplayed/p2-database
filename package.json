@@ -22,6 +22,8 @@
     "crawl:patch05:economy:dev": "NODE_ENV=dev node crawlers/patch05/economy.js",
     "crawl:patch05:with-economy": "NODE_ENV=production node crawlers/patch05/run_with_economy.js",
     "crawl:patch05:with-economy:dev": "NODE_ENV=dev node crawlers/patch05/run_with_economy.js",
+    "build:starter": "NODE_ENV=production node crawlers/starter/index.js",
+    "build:starter:dev": "NODE_ENV=dev node crawlers/starter/index.js",
 
     "crawl:news": "NODE_ENV=production node auto_browser/crawl_news.js",
     "crawl:news:dev": "NODE_ENV=dev node auto_browser/crawl_news.js",

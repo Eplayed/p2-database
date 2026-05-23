@@ -1,244 +1,206 @@
-# PoE2-Database 数据爬虫
+# PoE2-Database 数据项目
 
-> 流放之路2（PoE2）数据爬虫项目，为微信小程序「PoE2 流放助手」提供数据支撑。
-> 数据链路：poe.ninja API + poe2db.tw/cn + 踩蘑菇社区 → 爬虫翻译 → 阿里云 OSS → 小程序。
+> 为微信小程序「PoE2 流放助手」提供 PoE2 天梯、新闻、经济、0.5 资料、开荒推荐等数据。  
+> 数据链路：poe.ninja / poe2db / 踩蘑菇 / 人工精选源数据 -> 本项目生成 JSON -> 阿里云 OSS -> 小程序读取。
 
----
+## 当前状态
 
-## 架构概览
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         数据源                                    │
-├──────────────────┬──────────────────┬───────────────────────────┤
-│  poe.ninja API   │  poe2db.tw/cn    │  踩蘑菇社区               │
-│  (天梯排名+详情)  │  (中文翻译字典)   │  (精华帖/社区BD)          │
-└────────┬─────────┴────────┬─────────┴──────────┬────────────────┘
-         │                  │                    │
-         ▼                  ▼                    ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    crawlers/run.js (v3 统一入口)                  │
-│  ├─ poe2db-dict/     翻译字典自动生成 (HTTP)                     │
-│  ├─ ninja-ladder/    天梯爬虫 + 翻译 (HTTP API)                   │
-│  ├─ capture_trees.js 天赋树截图 (Puppeteer)                      │
-│  └─ auto_browser/    辅助模块 (OSS上传/经济/新闻/精华帖)          │
-└────────────────────────────┬────────────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                translated-data/{env}/                             │
-│  ├─ all_ladders_translated.json   天梯索引+翻译                   │
-│  ├─ classes.json                  职业列表                       │
-│  ├─ players/*.json                玩家详情                       │
-│  ├─ players/*_tree.jpg            天赋树截图 (独立文件)           │
-│  ├─ ladder_analysis.json          预聚合统计                     │
-│  └─ miniprogram_data/community.json  热门BD                     │
-└────────────────────────────┬────────────────────────────────────┘
-                             │
-                             ▼
-              阿里云 OSS → 微信小程序「PoE2 流放助手」
-```
-
----
-
-## 快速开始
-
-### 安装
-
-```bash
-npm install
-cp auto_browser/.env.example auto_browser/.env
-# 编辑 .env 填入 OSS 密钥
-```
-
-### 运行
-
-```bash
-# 完整的生产流程（字典+天梯+截图+上传）
-npm run crawl:all
-
-# 只运行天梯爬虫（生产环境）
-npm run crawl:ladder
-
-# 生成 0.5 中文资料（生产环境）
-npm run crawl:patch05
-
-# 开发模式调试
-npm run dev
-
-# 查看所有命令
-node crawlers/run.js --help
-```
-
----
-
-## 统一入口 crawlers/run.js
-
-```bash
-node crawlers/run.js [选项]
-
-选项:
-  --dict        更新翻译字典 (从 poe2db.tw/cn 抓取)
-  --ladder      运行天梯爬虫 (poe.ninja HTTP API)
-  --trees       天赋树截图 (Puppeteer, 需要浏览器)
-  --upload      上传数据到 OSS
-  --all          运行全部 (字典 + 天梯 + 截图 + 上传)
-  --essence     踩蘑菇精华帖爬虫
-  --hot          热门BD爬虫
-  --help, -h    显示帮助
-
-默认行为 (无参数): 天梯爬虫 + 上传 + 分析
-```
-
----
+- 天梯数据：抓取 poe.ninja 页面数据，生成天梯索引、玩家详情、职业统计和 `ladder_analysis.json`。
+- 新闻数据：抓取踩蘑菇快捷导航和新闻详情，输出 `news_caimogu.json` 与 `news_details/*`。
+- 通用经济：抓取 poe.ninja currency 行情，输出 `economy.json`。
+- 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`。
+- 0.5 新经济观察：生成 `patch05_economy.json` 和 `patch05_economy_watch.json`，支持待行情、观察中、可参考、高波动状态。
+- 开荒推荐 MVP：由人工精选源 `base-data/starter/starter_builds.json` 生成小程序用 `miniprogram_data/starters.json`。
+- OSS 上传：统一上传 `translated-data/{dev|release}` 下的产物。
 
 ## 目录结构
 
-```
+```text
 p2-database/
-├── crawlers/                    # ⭐ 核心爬虫
-│   ├── run.js                   #    统一入口 (v3)
-│   ├── poe2db-dict/             #    翻译字典自动爬虫 (HTTP)
-│   │   ├── index.js
-│   │   ├── http_client.js       #    HTTP 请求 (限速+重试)
-│   │   ├── parser.js            #    HTML 解析
-│   │   ├── crawl_base_items.js  #    基础物品 (30个类别)
-│   │   ├── crawl_gems.js        #    技能宝石 (600+)
-│   │   └── crawl_uniques.js     #    传奇物品
-│   ├── patch05/                 #    0.5 中文资料数据管线
-│   └── ninja-ladder/            #    天梯爬虫
-│       ├── index.js             #    主流程
-│       ├── ninja_api.js         #    poe.ninja API 封装
-│       ├── translator.js        #    翻译模块
-│       ├── community.js         #    community.json 生成
-│       └── capture_trees.js     #    天赋树截图 (Puppeteer)
-├── auto_browser/                # 辅助模块
-│   ├── crawl_economy.js         #    通货汇率爬虫
-│   ├── crawl_news.js            #    新闻列表爬虫
-│   ├── crawl_news_detail.js     #    新闻详情爬虫
-│   ├── crawl_news_with_details.js #  新闻完整爬虫
-│   ├── crawl_caimogu_essence_full.js # 精华帖爬虫
-│   ├── crawl_hot_builds.js      #    热门BD爬虫
-│   ├── transform_caimogu_data.js #   精华帖数据转换
-│   ├── upload_to_oss.js         #    OSS 上传 (Content-Type/Cache-Control)
-│   └── env-config.js            #    环境配置 (NODE_ENV)
-├── base-data/                   # 翻译字典
-│   ├── dist/                    #    编译后的字典 (dict_*.json)
-│   ├── base-item/*.json         #    源数据
-│   └── merge_data.js            #    字典编译脚本
-├── scripts/                     # 数据处理脚本
-│   ├── aggregate_analysis.js    #    天梯分析预聚合
-│   ├── split_passive_tree.js    #    passiveTreeImage拆分 (后处理)
-│   └── upload_analysis.js       #    分析数据上传
-├── translated-data/             # 爬虫输出
-│   ├── dev/                     #    开发环境数据
-│   └── release/                 #    生产环境数据
-├── .github/workflows/           # GitHub Actions
-│   ├── auto-crawl.yml           #    天梯爬虫
-│   ├── update_economy.yml       #    通货汇率
-│   ├── update_news.yml          #    新闻数据
-│   └── essence_builds.yml       #    精华帖爬虫
-└── package.json
+├── auto_browser/
+│   ├── crawl_economy.js                 # 通用经济行情
+│   ├── crawl_news*.js                   # 踩蘑菇新闻
+│   ├── translate_crawler.js             # 天梯页面抓取入口
+│   ├── upload_to_oss.js                 # OSS 上传
+│   └── env-config.js                    # dev/release 路径配置
+├── base-data/
+│   ├── patch05/                         # 0.5 资料人工源与中文覆盖
+│   └── starter/starter_builds.json      # 开荒推荐人工精选源
+├── crawlers/
+│   ├── run.js                           # 统一入口
+│   ├── patch05/                         # 0.5 资料与经济观察管线
+│   ├── starter/                         # 开荒推荐生成
+│   └── poe2db-dict/                     # poe2db 字典抓取
+├── scripts/
+│   ├── aggregate_analysis.js            # 天梯统计聚合
+│   └── upload_analysis.js               # 天梯统计上传
+├── translated-data/
+│   ├── dev/                             # 开发环境输出
+│   └── release/                         # 生产环境输出
+└── docs/                                # 工作计划与维护文档
 ```
 
----
-
-## NPM Scripts
+## 常用命令
 
 ```bash
-# 核心爬虫
-npm start             # 生产模式 (天梯+上传)
-npm run dev           # 开发模式 (天梯+上传, 3人/职业)
-npm run crawl:all     # 完整流程 (字典+天梯+截图+上传)
+# 安装依赖
+npm install
 
-# 独立功能
-npm run crawl:dict        # 翻译字典
-npm run crawl:ladder      # 天梯爬虫 (production)
-npm run crawl:ladder:dev  # 天梯爬虫 (dev)
-npm run crawl:trees       # 天赋树截图
-npm run crawl:essence     # 精华帖爬虫
-npm run crawl:hot         # 热门BD爬虫
-npm run crawl:patch05     # 0.5 中文资料
-npm run crawl:patch05:dev # 0.5 中文资料 (dev)
+# 天梯数据，生产环境
+npm run crawl:ladder
 
-# 独立爬虫
-npm run crawl:news         # 新闻列表
-npm run crawl:news:detail  # 新闻详情
-npm run crawl:news:all     # 新闻完整
-npm run crawl:economy      # 通货汇率
+# 天梯数据，开发环境
+npm run crawl:ladder:dev
+
+# 新闻列表 + 详情，生产环境
+npm run crawl:news:all
+
+# 0.5 资料，生产环境
+npm run crawl:patch05
+
+# 0.5 资料，开发环境
+npm run crawl:patch05:dev
+
+# 刷新通用经济，并重新生成 0.5 新经济观察
+npm run crawl:patch05:with-economy
+
+# 生成开荒推荐，生产环境
+npm run build:starter
+
+# 生成开荒推荐，开发环境
+npm run build:starter:dev
+
+# 上传 translated-data/{env} 到 OSS
+NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 ```
 
----
+## 开服后推荐操作
 
-## 环境配置
-
-### .env 文件 (auto_browser/.env)
+0.5 开服后，建议按下面顺序跑数据：
 
 ```bash
-NODE_ENV=production
-OSS_REGION=oss-cn-hangzhou
-OSS_BUCKET=poe2-all-class
-OSS_ACCESS_KEY_ID=your_key
-OSS_ACCESS_KEY_SECRET=your_secret
+cd /Users/zhangyajun/Documents/project/p2-database
+
+# 1. 刷新新闻
+npm run crawl:news:all
+
+# 2. 刷新通用经济 + 0.5 新经济观察
+npm run crawl:patch05:with-economy
+
+# 3. 刷新真实天梯数据
+CI=true NODE_ENV=production node crawlers/run.js --ladder --upload
+
+# 4. 用最新天梯分析重新生成开荒推荐
+npm run build:starter
+
+# 5. 上传所有 release 数据
+NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 ```
 
-### 环境差异
+建议节奏：
 
-| 配置 | dev | production |
-|------|-----|------------|
-| 数据目录 | translated-data/dev | translated-data/release |
-| OSS 路径 | poe2-ladders/dev/ | poe2-ladders/release/ |
-| 抓取深度 | 3 人/职业 | 7 人/职业 |
+- 开服前：每天跑一次 `npm run crawl:patch05`，确认资料结构正常。
+- 开服当天：每 4-6 小时跑一次 `npm run crawl:patch05:with-economy`，积累经济快照。
+- 开服后 12-24 小时：跑天梯，观察真实职业/升华热度。
+- 开服后 3 天：根据真实行情和天梯，把人工源数据里的概念条目拆细、调整开荒推荐评分。
 
----
+## 输出到 OSS 的关键文件
 
-## GitHub Actions
-
-| 工作流 | 触发 | 功能 |
-|--------|------|------|
-| auto-crawl.yml | push main / 手动 | 天梯爬虫 + 上传 |
-| update_economy.yml | 定时 (4次/天) | 通货汇率数据 |
-| update_news.yml | 定时 (每天9点) | 新闻列表 + 详情 |
-| essence_builds.yml | 手动 | 精华帖爬虫 |
-
----
-
-## OSS 输出路径
-
-Bucket: `poe2-all-class` / Region: `oss-cn-hangzhou`
-
-```
-poe2-ladders/
-├── release/
-│   ├── all_ladders_translated.json   # 天梯索引 (~30KB)
-│   ├── classes.json                   # 职业列表 (~1KB)
-│   ├── ladder_analysis.json           # 预聚合统计 (~14KB)
-│   ├── players/*.json                 # 玩家详情 (~28KB, gzip后7KB)
-│   ├── players/*_tree.jpg             # 天赋树截图 (~99KB)
-│   └─ miniprogram_data/
-│       ├── community.json             # 热门BD (~194KB)
-│       └─ mods/                       # 词缀数据
-├── dev/
-│   └── (同上结构，数据量少)
-├── poe2-economy/
-│   ├── economy.json                   # 通货汇率
-│   ├── news_caimogu.json              # 新闻列表
-│   └─ news_details/*.json             # 新闻详情
-└── version.json                       # 版本检查
+```text
+poe2-ladders/release/
+├── all_ladders_translated.json
+├── classes.json
+├── ladder_analysis.json
+├── players/*.json
+├── news_caimogu.json
+├── news_details/*.json
+├── miniprogram_data/
+│   ├── community.json
+│   ├── community_full.json
+│   └── starters.json
+└── patch-0.5/
+    ├── version.json
+    ├── patch05_index.json
+    ├── patch05_items.json
+    ├── patch05_runes.json
+    ├── patch05_currencies.json
+    ├── patch05_economy.json
+    ├── patch05_economy_watch.json
+    ├── patch05_kalguuran_gems.json
+    ├── patch05_bosses.json
+    ├── patch05_endgame_checklist.json
+    └── patch05_sources.json
 ```
 
----
+通用经济仍上传到：
 
-## 最近更新
+```text
+poe2-economy/economy.json
+```
 
-### 2026-05-21 — v3 版本合并
-- ✅ 删除 v1 Puppeteer 爬虫 (`translate_crawler.js`, `auto_full_crawler.js`, `run_crawler.js`, `run_translate_crawler.js`)
-- ✅ 统一入口 `crawlers/run.js`：字典、天梯(HTTP)、天赋树截图(Puppeteer)、精华帖、热门BD
-- ✅ CI workflow 更新为 `crawlers/run.js --ladder --upload`
-- ✅ 天梯数据流程完成后自动运行 analysis + 上传分析结果
+## 自动化
 
-### 2026-05-18
-- ✅ 修复 crawl_news 系列脚本 `MODULE_NOT_FOUND` 错误
-- ✅ 统一所有爬虫配置：`./config` → `env-config.js` + `process.env`
-- ✅ passiveTreeImage 拆分：base64 → 独立 _tree.jpg 文件 (节省 9.1MB)
-- ✅ OSS 上传增加 Content-Type/Cache-Control 头
+| Workflow | 触发 | 当前用途 |
+|---|---|---|
+| `update_economy.yml` | 定时 + 手动 | 刷新通用经济、0.5 经济观察并上传 |
+| `update_news.yml` | 定时 + 手动 | 刷新踩蘑菇新闻列表与详情 |
+| `update_patch05.yml` | 手动 | 刷新 0.5 资料、经济观察、开荒推荐相关数据 |
+| `auto-crawl.yml` | 手动 | 刷新天梯、分析、开荒推荐 |
+| `essence_builds.yml` | 手动 | 踩蘑菇精华帖/BD 相关数据 |
+
+注意：已取消“push 自动执行天梯翻译爬虫”和“自动执行踩蘑菇精华帖 BD”。这些任务需要手动触发，避免误跑和消耗。
+
+## 需要手动维护
+
+- `base-data/patch05/manual_entries.json`
+  - 0.5 新物品、新符文、新合金、新 Boss、新机制的人工源。
+  - 开服后要把“合金通货/古代符文”这类概念条目拆成具体物品。
+- `base-data/patch05/overrides.zh-CN.json`
+  - 中文名、摘要、标签、分类修正。
+- `base-data/starter/starter_builds.json`
+  - 开荒推荐人工精选源。
+  - 开服后根据真实天梯、价格和社区反馈调整 `tier`、`starterScore`、标签和说明。
+- `crawlers/patch05/economy.js`
+  - 经济观察阈值。当前逻辑：35% 以上高波动，快照 3 次以上且波动小于 12% 可参考。
+- OSS 密钥与微信合法域名配置。
+
+## 不需要手动维护
+
+- `translated-data/{dev|release}` 下的生成产物。
+- `patch05_economy_watch.json` 的摘要、状态、涨跌雷达。
+- `economy-history/*.json` 快照历史。
+- `miniprogram_data/starters.json`，由 `build:starter` 生成。
+- `ladder_analysis.json`，由天梯爬虫后的聚合脚本生成。
+
+## 后续路线图
+
+### P0：提测前保持稳定
+
+- 确认 `update_economy.yml` 能稳定生成并上传 `patch05_economy_watch.json`。
+- 确认 `crawl:news:all` 上传后的新闻在小程序首页展示最新 0.5 内容。
+- 保持小程序读取路径不再变动。
+
+### P1：开服后 24 小时
+
+- 跑真实天梯数据，校准开荒推荐的热度和排序。
+- 检查 0.5 新经济物品是否开始出现在 poe.ninja 行情里。
+- 给 `manual_entries.json` 补充具体符文/合金名称和 alias。
+
+### P2：开服后 3 天
+
+- 把“0.5 预选”开荒推荐改成“天梯验证/社区验证/观察中”。
+- 新经济观察增加更细分类：Boss 门票、符文、合金、特殊底材。
+- 社区热门 BD 只做候选池，不自动进入推荐榜。
+
+### P3：长期
+
+- 做经济历史趋势图数据。
+- 做 BD 候选审核流：社区抓取 -> 候选 JSON -> 人工确认 -> starters.json。
+- 根据广告流量，优先强化高打开频率功能：经济观察、开荒推荐、天梯分析、新闻。
+
+## 相关文档
+
+- `docs/20260522_PATCH05_DATA_PLAN.md`
+- `docs/20260522_STARTER_MVP_PLAN.md`
+- `docs/20260523_PATCH05_ECONOMY_WATCH_MAINTENANCE.md`
+

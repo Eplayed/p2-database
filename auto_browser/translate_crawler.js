@@ -26,6 +26,19 @@ try {
   if (fs.existsSync(statsPath)) {
     dictStats = JSON.parse(fs.readFileSync(statsPath, "utf8"));
   }
+  const passivePath = path.join(baseDataDir, "dict_passive.json");
+  if (fs.existsSync(passivePath)) {
+    dictPassive = JSON.parse(fs.readFileSync(passivePath, "utf8"));
+  } else {
+    const rawPassivePath = path.join(__dirname, "../base-data/passives.json");
+    if (fs.existsSync(rawPassivePath)) {
+      const rawPassives = JSON.parse(fs.readFileSync(rawPassivePath, "utf8"));
+      dictPassive = rawPassives.reduce((map, item) => {
+        if (item.en) map[item.en] = { cn: item.cn, img: item.img };
+        return map;
+      }, {});
+    }
+  }
   console.log("✅ 翻译字典加载成功");
 } catch (e) {
   console.error("❌ 翻译字典加载失败", e);
@@ -45,6 +58,165 @@ const BROWSER_RESTART_INTERVAL = isCI ? 3 : 10;  // CI 环境更频繁重启
 const OUTPUT_DIR = isDev
   ? path.join(__dirname, "../translated-data/dev")
   : path.join(__dirname, "../translated-data/release");
+
+const QUEST_REWARD_CATALOG = [
+  {
+    originalText: "+10% to [Resistances|Cold Resistance]",
+    act: "Act 1",
+    actName: "第一章",
+    source: "Clearfell - Beira of the Rotten Pack",
+    sourceCn: "克利尔菲尔 - 腐化兽群的贝拉",
+  },
+  {
+    originalText: "+30 to [Spirit|Spirit]",
+    act: "Act 1",
+    actName: "第一章",
+    source: "Freythorn - The King in the Mists",
+    sourceCn: "弗雷索恩 - 迷雾之王",
+  },
+  {
+    originalText: "+20 to maximum Life",
+    act: "Act 1",
+    actName: "第一章",
+    source: "Ogham Manor - Candlemass, the Living Rite",
+    sourceCn: "奥甘庄园 - 活祭仪式烛火",
+  },
+  {
+    originalText: "30% increased [Charm] Charges gained",
+    act: "Act 2",
+    actName: "第二章",
+    source: "Valley of the Titans - Medallion",
+    sourceCn: "泰坦之谷 - 勋章",
+  },
+  {
+    originalText: "+1 [Charm] Slot",
+    act: "Act 2",
+    actName: "第二章",
+    source: "Valley of the Titans - Medallion",
+    sourceCn: "泰坦之谷 - 勋章",
+  },
+  {
+    originalText: "+10% to [Resistances|Lightning Resistance]",
+    act: "Act 2",
+    actName: "第二章",
+    source: "The Spires of Deshar - Sisters of Garukhan",
+    sourceCn: "德沙尖塔 - 加鲁坎姐妹",
+  },
+  {
+    originalText: "30% increased [AilmentThreshold|Elemental Ailment Threshold]",
+    act: "Act 3",
+    actName: "第三章",
+    source: "The Venom Crypts - Venom Draught",
+    sourceCn: "剧毒墓穴 - 毒液药剂",
+  },
+  {
+    originalText: "+30 to [Spirit|Spirit]",
+    act: "Act 3",
+    actName: "第三章",
+    source: "The Azak Bog - Ignagduk, the Bog Witch",
+    sourceCn: "阿扎克沼泽 - 沼泽女巫伊格纳杜克",
+  },
+  {
+    originalText: "+10% to [Resistances|Fire Resistance]",
+    act: "Act 3",
+    actName: "第三章",
+    source: "Jiquani's Machinarium - Blackjaw, the Remnant",
+    sourceCn: "吉卡尼的机械迷城 - 遗存者黑颚",
+  },
+  {
+    originalText: "30% increased Life Recovery from [Flask|Flasks]",
+    act: "Act 4",
+    actName: "第四章",
+    source: "Abandoned Prison - Goddess of Justice",
+    sourceCn: "废弃监狱 - 正义女神",
+  },
+  {
+    originalText: "5% increased maximum Mana",
+    act: "Act 4",
+    actName: "第四章",
+    source: "Eye of Hinekora - Navali's Rest",
+    sourceCn: "希内寇拉之眼 - 娜瓦莉安息处",
+  },
+  {
+    originalText: "+5% to [Resistances|Fire Resistance]",
+    act: "Act 4",
+    actName: "第四章",
+    source: "Halls of the Dead - Ngamahu's Test",
+    sourceCn: "死者大厅 - 纳玛乎的试炼",
+  },
+  {
+    originalText: "+5% to [Resistances|Cold Resistance]",
+    act: "Act 4",
+    actName: "第四章",
+    source: "Halls of the Dead - Tasalio's Test",
+    sourceCn: "死者大厅 - 塔萨里奥的试炼",
+  },
+  {
+    originalText: "+5% to [Resistances|Lightning Resistance]",
+    act: "Act 4",
+    actName: "第四章",
+    source: "Halls of the Dead - Tawhoa's Test",
+    sourceCn: "死者大厅 - 塔霍亚的试炼",
+  },
+  {
+    originalText: "+40 to [Spirit|Spirit]",
+    act: "Interludes",
+    actName: "间章",
+    source: "Kriar Village - Lythara, the Wayward Spear",
+    sourceCn: "克里亚尔村 - 迷途之矛莉萨拉",
+  },
+  {
+    originalText: "5% increased maximum Life",
+    act: "Interludes",
+    actName: "间章",
+    source: "The Khari Crossing - Molten Shrine",
+    sourceCn: "卡里渡口 - 熔火神龛",
+  },
+  {
+    originalText: "3% increased Movement Speed",
+    act: "Interludes",
+    actName: "间章",
+    source: "Qimah - The Seven Pillars",
+    sourceCn: "齐玛 - 七柱",
+  },
+];
+
+const ITEM_TERM_TRANSLATIONS = {
+  Charm: "咒符",
+  Charms: "咒符",
+  Flask: "药剂",
+  Flasks: "药剂",
+  Rune: "符文",
+  Staff: "长杖",
+  "Wand or Staff": "魔杖或长杖",
+  Wand: "魔杖",
+  Armour: "护甲",
+  Weapon: "武器",
+  Quality: "品质",
+  "Stack Size": "堆叠数量",
+  "Limited to": "限制",
+  Level: "等级",
+  Charges: "充能",
+  Charge: "充能",
+  Guard: "护卫",
+  Stunned: "被晕眩",
+  Stun: "晕眩",
+  Shock: "感电",
+  Magnitude: "幅度",
+  Archon: "执政官",
+  Bonded: "羁绊",
+  Lightning: "闪电",
+  Fire: "火焰",
+  Cold: "冰霜",
+  Spell: "法术",
+  Skills: "技能",
+};
+
+const RUNE_NAME_TRANSLATIONS = {
+  "Greater Storm Rune": "高阶风暴符文",
+  "Storm Rune": "风暴符文",
+  "Hedgewitch Assandra's Rune of Wisdom": "荒篱女巫阿桑德拉的智慧符文",
+};
 
 // 确保输出目录存在
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -335,11 +507,8 @@ function translateItemName(itemName, baseType, frameType) {
     }
 
     if (cnBase) {
-      // 构建最终翻译：物品前缀 + 基础类型
-      const prefix = itemName.split(" ")[0]; // 取第一个词作为前缀
-      if (prefix && cnBase && !cnBase.includes(prefix)) {
-        // 如果有前缀且前缀不在翻译中，添加前缀
-        return `${itemName} (${cnBase})`;
+      if (itemName && itemName !== cnBase) {
+        return `${cnBase}（${itemName}）`;
       }
       return cnBase || itemName;
     }
@@ -348,58 +517,242 @@ function translateItemName(itemName, baseType, frameType) {
     return itemName;
   }
 }
+function cleanNinjaText(line) {
+  if (!line) return "";
+  return String(line)
+    .replace(/\[(?:[^\]|]+\|)?([^\]]+)\]/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function applyTermTranslations(text) {
+  let result = text;
+  const terms = Object.keys(ITEM_TERM_TRANSLATIONS).sort((a, b) => b.length - a.length);
+  terms.forEach((en) => {
+    const cn = ITEM_TERM_TRANSLATIONS[en];
+    result = result.replace(new RegExp(`\\b${escapeRegExp(en)}\\b`, "g"), cn);
+  });
+  result = result
+    .replace(/闪电\s+法术/g, "闪电法术")
+    .replace(/火焰\s+法术/g, "火焰法术")
+    .replace(/冰霜\s+法术/g, "冰霜法术")
+    .replace(/混沌\s+法术/g, "混沌法术");
+  return result;
+}
+
+function escapeRegExp(text) {
+  return String(text).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function translateSingleMod(line) {
+  let text = cleanNinjaText(line);
+  if (!text) return "";
+
+  const exact = {
+    Charm: "咒符",
+    Flask: "药剂",
+    "[Rune|Rune]": "符文",
+    Rune: "符文",
+    Quality: "品质",
+    "Stack Size": "堆叠数量",
+    "Limited to": "限制",
+  };
+  if (exact[text]) return exact[text];
+
+  const customPatterns = [
+    { regex: /^Lasts ([\d.]+) Seconds$/i, replace: "持续 $1 秒" },
+    { regex: /^Consumes ([\d.]+) of ([\d.]+) Charges on use$/i, replace: "使用时消耗 $1 / $2 充能" },
+    { regex: /^Currently has ([\d.]+) Charges$/i, replace: "当前有 $1 充能" },
+    { regex: /^Used when you become Stunned$/i, replace: "你被晕眩时自动使用" },
+    { regex: /^Cannot be Stunned$/i, replace: "不会被晕眩" },
+    { regex: /^Also grants ([\d.]+) Guard$/i, replace: "同时获得 $1 护卫" },
+    { regex: /^([\d.]+)% reduced Charges per use$/i, replace: "每次使用消耗的充能降低 $1%" },
+    { regex: /^([\d.]+)% increased Charm Charges gained$/i, replace: "咒符获得的充能提高 $1%" },
+    { regex: /^\+([\d.]+) Charm Slot$/i, replace: "+$1 咒符栏位" },
+    { regex: /^([\d.]+)% increased Life Recovery from Flasks$/i, replace: "药剂的生命回复提高 $1%" },
+    { regex: /^([\d.]+)% increased maximum Mana$/i, replace: "最大魔力提高 $1%" },
+    { regex: /^([\d.]+)% increased maximum Life$/i, replace: "最大生命提高 $1%" },
+    { regex: /^([\d.]+)% increased Movement Speed$/i, replace: "移动速度提高 $1%" },
+    { regex: /^\+([\d.]+)% to (Fire|Cold|Lightning|Chaos) Resistance$/i, replace: "+$1% $2抗性" },
+    { regex: /^\+([\d.]+) to maximum Life$/i, replace: "+$1 最大生命" },
+    { regex: /^\+([\d.]+) to Spirit$/i, replace: "+$1 精魂" },
+    { regex: /^([\d.]+)% increased Elemental Ailment Threshold$/i, replace: "元素异常状态阈值提高 $1%" },
+    { regex: /^Gain ([\d.]+)% of Damage as Extra (Fire|Cold|Lightning|Chaos|Physical) Damage$/i, replace: "获得相当于伤害 $1% 的额外$2伤害" },
+    { regex: /^\+([\d.]+) to Level of all (.+) Skills$/i, replace: "+$1 所有$2技能等级" },
+    { regex: /^([\d.]+)% increased Critical Hit Chance for Spells$/i, replace: "法术暴击率提高 $1%" },
+    { regex: /^([\d.]+)% increased Cast Speed$/i, replace: "施法速度提高 $1%" },
+    { regex: /^([\d.]+)% increased (Fire|Cold|Lightning|Chaos|Physical|Spell) Damage$/i, replace: "$2伤害提高 $1%" },
+    { regex: /^Wand or Staff: (.+)$/i, replace: "魔杖或长杖：$1" },
+    { regex: /^Bonded: Archon recovery period expires ([\d.]+)% faster$/i, replace: "羁绊：执政官恢复期结束速度加快 $1%" },
+    { regex: /^Bonded: ([\d.]+)% increased Magnitude of Shock you inflict$/i, replace: "羁绊：你施加的感电幅度提高 $1%" },
+  ];
+
+  for (const pattern of customPatterns) {
+    if (pattern.regex.test(text)) {
+      return applyTermTranslations(text.replace(pattern.regex, pattern.replace));
+    }
+  }
+
+  for (const pattern of dictStats.patterns) {
+    const regex = new RegExp(pattern.regex, "i");
+    if (regex.test(text)) {
+      return applyTermTranslations(text.replace(regex, pattern.replace));
+    }
+  }
+
+  for (const [en, cn] of Object.entries(dictStats.keywords)) {
+    if (text.includes(en)) {
+      text = text.split(en).join(cn);
+    }
+  }
+
+  text = text.replace(/When you kill a/, "当你击败");
+  text = text.replace(/monster/, "怪物");
+  text = text.replace(/you gain its/, "你获得其");
+  text = text.replace(/for (\d+) seconds/, "持续 $1 秒");
+  text = text.replace(/闪电\s+法术/g, "闪电法术");
+  text = text.replace(/火焰\s+法术/g, "火焰法术");
+  text = text.replace(/冰霜\s+法术/g, "冰霜法术");
+  text = text.replace(/混沌\s+法术/g, "混沌法术");
+
+  return applyTermTranslations(text);
+}
+
 // 🔧 词缀翻译核心函数
 function translateMods(modList) {
   if (!modList || modList.length === 0) return "";
-
-  const translatedLines = modList.map((line) => {
-    // 1. 清理 Ninja 的特殊格式
-    // 例如: "20% increased [EnergyShield|Energy Shield]" -> "20% increased Energy Shield"
-    let text = line.replace(/\[.*?\|(.*?)\]/g, "$1");
-
-    // 2. 关键词替换 (Keywords)
-    // 遍历字典中的关键词，将英文单词替换为中文
-    // 注意：这里只是替换名词，句子结构还没变
-    for (const [en, cn] of Object.entries(dictStats.keywords)) {
-      // 使用正则全局替换，注意转义特殊字符
-      // 单词边界保护 \b 防止部分匹配 (例如 'Life' 匹配到 'Life Regeneration')
-      // 但对于复合词，我们直接替换即可
-      if (text.includes(en)) {
-        text = text.split(en).join(cn);
-      }
-    }
-
-    // 3. 句式模版替换 (Patterns)
-    // 例如: "42% increased 能量护盾" -> "能量护盾提高 42%"
-    for (const pattern of dictStats.patterns) {
-      const regex = new RegExp(pattern.regex, "i"); // 'i' 忽略大小写
-      if (regex.test(text)) {
-        text = text.replace(regex, pattern.replace);
-        break; // 匹配到一个模式通常就可以了，跳出循环
-      }
-    }
-
-    // 4. 处理一些未能完全匹配但包含中文的句子，优化可读性
-    // 比如 "When you kill a 稀有 monster..." -> 简单的补丁
-    text = text.replace(/When you kill a/, "当你击败");
-    text = text.replace(/monster/, "怪物");
-    text = text.replace(/you gain its/, "你获得其");
-    text = text.replace(/for (\d+) seconds/, "持续 $1 秒");
-
-    return text;
-  });
-
-  return translatedLines.join("\n");
+  return modList.map(translateSingleMod).join("\n");
 }
 
 function translateGemName(gemName) {
-  return dictGem[gemName] || gemName;
+  if (!gemName) return gemName;
+  if (dictGem[gemName]) return dictGem[gemName];
+  if (RUNE_NAME_TRANSLATIONS[gemName]) return RUNE_NAME_TRANSLATIONS[gemName];
+  return applyTermTranslations(gemName);
 }
 
 function translateKeystoneName(keystoneName) {
   return dictPassive[keystoneName]
     ? dictPassive[keystoneName].cn
     : keystoneName;
+}
+
+function translateProperty(property) {
+  if (!property || !property.name) return '';
+  let text = property.name;
+  const values = property.values || [];
+  values.forEach((value, index) => {
+    const replacement = Array.isArray(value) ? value[0] : value;
+    text = text.replace(`{${index}}`, replacement);
+  });
+  return translateMods([text]);
+}
+
+function buildItemDesc(itemData) {
+  const groups = [
+    { key: 'properties', color: '#c8c8c8', type: 'property' },
+    { key: 'implicitMods', color: '#8888ff' },
+    { key: 'explicitMods', color: '#8888ff' },
+    { key: 'runeMods', color: '#0d6efd' },
+    { key: 'desecratedMods', color: '#b066ff' },
+    { key: 'bondedMods', color: '#0d6efd' },
+    { key: 'craftedMods', color: '#af6025' },
+    { key: 'enchantMods', color: '#af6025' },
+    { key: 'utilityMods', color: '#71c17b' },
+  ];
+
+  const lines = [];
+  groups.forEach(group => {
+    const values = itemData[group.key] || [];
+    values.forEach(value => {
+      const text = group.type === 'property' ? translateProperty(value) : translateMods([value]);
+      if (text) lines.push(`<span style="color:${group.color}">${text}</span><br/>`);
+    });
+  });
+
+  if (itemData.corrupted) {
+    lines.push(`<span style="color:#e22626">已腐化</span>`);
+  }
+  if (itemData.fractured) {
+    lines.push(`<span style="color:#e22626">已破裂</span>`);
+  }
+  if (itemData.desecrated) {
+    lines.push(`<span style="color:#b066ff">已亵渎</span>`);
+  }
+
+  return lines.join('\n');
+}
+
+function getDisplayItemName(itemData) {
+  const originalName = itemData.name || itemData.typeLine || itemData.baseType || 'Unknown Item';
+  const translatedName = translateItemName(
+    itemData.name || itemData.typeLine || itemData.baseType,
+    itemData.baseType,
+    itemData.frameType
+  );
+  return {
+    originalName,
+    translatedName,
+  };
+}
+
+function normalizeSocketedItems(itemData) {
+  return (itemData.socketedItems || []).map((gem) => {
+    const gemName = gem.name || gem.typeLine || gem.baseType || "未知宝石";
+    return {
+      name: translateGemName(gemName),
+      originalName: gemName,
+      icon: gem.icon,
+      isSupport: !!gem.support,
+    };
+  });
+}
+
+function normalizeCharacterItem(item) {
+  const i = item.itemData || item;
+  const names = getDisplayItemName(i);
+
+  return {
+    slot: item.inventoryId || i.inventoryId || item.itemSlot || '',
+    itemSlot: item.itemSlot,
+    name: names.translatedName,
+    originalName: names.originalName,
+    baseType: i.baseType || "",
+    typeLine: i.typeLine || "",
+    icon: i.icon,
+    rarity: i.frameType,
+    itemLevel: i.ilvl || 0,
+    desc: buildItemDesc(i),
+    gems: normalizeSocketedItems(i),
+  };
+}
+
+function normalizeQuestStats(stats) {
+  const usedByText = {};
+  return (stats || []).map(stat => {
+    const currentIndex = usedByText[stat] || 0;
+    const candidates = QUEST_REWARD_CATALOG.filter(item => item.originalText === stat);
+    const meta = candidates[currentIndex] || candidates[0] || {};
+    const metaIndex = meta.originalText ? QUEST_REWARD_CATALOG.indexOf(meta) : 999;
+    usedByText[stat] = currentIndex + 1;
+    return {
+      act: meta.act || "Other",
+      actName: meta.actName || "其他",
+      source: meta.source || "",
+      sourceCn: meta.sourceCn || "",
+      order: metaIndex,
+      text: translateMods([stat]),
+      originalText: stat,
+    };
+  });
+}
+
+function normalizeDefensiveStats(stats) {
+  return stats || {};
+}
+
+function normalizePassiveCounts(counts) {
+  return counts || {};
 }
 
 // 生成 community.json（热门BD推荐）
@@ -823,99 +1176,13 @@ async function runTask() {
               account: capturedData.account,
               league: capturedData.league,
             },
-            equipment: (capturedData.items || []).map((item) => {
-              const i = item.itemData || item;
-              const originalName = i.name || i.baseType;
-              const translatedName = translateItemName(
-                i.name,
-                i.baseType,
-                i.frameType
-              );
-              // --- 🔴 新增：处理词缀 ---
-              // 分别处理不同类型的词缀，保持颜色标记
-              const translatedMods = {
-                implicit: [],   // 基底词缀 - #8888ff
-                explicit: [],   // 显式词缀 - #8888ff
-                rune: [],       // 符文词缀 - #0d6efd
-                enchant: [],    // 附魔词缀 - #af6025
-                corrupted: false // 腐化状态 - #e22626
-              };
-
-              // 1. 基底词缀 (Implicit)
-              if (i.implicitMods) {
-                translatedMods.implicit = i.implicitMods.map(m => 
-                  `<span style="color:#8888ff">${translateMods([m])}</span><br/>`
-                );
-              }
-
-              // 2. 显式词缀 (Explicit)
-              if (i.explicitMods) {
-                translatedMods.explicit = i.explicitMods.map(m => 
-                  `<span style="color:#8888ff">${translateMods([m])}</span><br/>`
-                );
-              }
-
-              // 3. 符文词缀 (Runes)
-              if (i.runeMods) {
-                translatedMods.rune = i.runeMods.map(m => 
-                  `<span style="color:#0d6efd">${translateMods([m])}</span><br/>`
-                );
-              }
-
-              // 4. 附魔词缀 (Enchants)
-              if (i.enchantMods) {
-                translatedMods.enchant = i.enchantMods.map(m => 
-                  `<span style="color:#af6025">${translateMods([m])}</span><br/>`
-                );
-              }
-
-              // 5. 腐化状态
-              if (i.corrupted) {
-                translatedMods.corrupted = true;
-              }
-
-              // 组合所有词缀描述
-              const descLines = [];
-              if (translatedMods.implicit.length > 0) {
-                descLines.push(...translatedMods.implicit);
-              }
-              if (translatedMods.explicit.length > 0) {
-                descLines.push(...translatedMods.explicit);
-              }
-              if (translatedMods.rune.length > 0) {
-                descLines.push(...translatedMods.rune);
-              }
-              if (translatedMods.enchant.length > 0) {
-                descLines.push(...translatedMods.enchant);
-              }
-              if (translatedMods.corrupted) {
-                descLines.push(`<span style="color:#e22626">已腐化</span>`);
-              }
-
-              const translatedDesc = descLines.join('\n');
-
-              // --- 🔴 新增：处理镶嵌宝石 ---
-              const socketedGems = (i.socketedItems || []).map((gem) => {
-                const gemName = gem.name || gem.typeLine || "未知宝石";
-                return {
-                  name: translateGemName(gemName),
-                  originalName: gemName,
-                  icon: gem.icon,
-                  isSupport: gem.support,
-                };
-              });
-
-              return {
-                slot: item.inventoryId,
-                name: translatedName,
-                originalName: originalName, // 保留原英文名
-                baseType: i.baseType || "", // 保存baseType用于翻译调试
-                icon: i.icon,
-                rarity: i.frameType,
-                desc: translatedDesc, // 使用翻译后的文本
-                gems: socketedGems, // 添加镶嵌宝石
-              };
-            }),
+            defensiveStats: normalizeDefensiveStats(capturedData.defensiveStats),
+            questStats: normalizeQuestStats(capturedData.questStats),
+            passiveCounts: normalizePassiveCounts(capturedData.passiveCounts),
+            pathOfBuildingExport: capturedData.pathOfBuildingExport || '',
+            flasks: (capturedData.flasks || []).map(normalizeCharacterItem),
+            jewels: (capturedData.jewels || []).map(normalizeCharacterItem),
+            equipment: (capturedData.items || []).map(normalizeCharacterItem),
             skills: (capturedData.skills || []).map((s) => ({
               gems: (s.allGems || []).map((g) => {
                 const originalName = g.name;

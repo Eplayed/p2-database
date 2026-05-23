@@ -156,7 +156,7 @@ async function main() {
     entryCount: entries.length,
   };
   const checklist = buildChecklist();
-  const patch05Economy = buildPatch05Economy({
+  const patch05EconomyResult = buildPatch05Economy({
     currencies: grouped.currencies,
     updatedAt: now,
   });
@@ -166,7 +166,8 @@ async function main() {
     'patch05_items.json': grouped.items,
     'patch05_runes.json': grouped.runes,
     'patch05_currencies.json': grouped.currencies,
-    'patch05_economy.json': patch05Economy,
+    'patch05_economy.json': patch05EconomyResult.economy,
+    'patch05_economy_watch.json': patch05EconomyResult.watch,
     'patch05_kalguuran_gems.json': grouped.kalguuranGems,
     'patch05_bosses.json': grouped.bosses,
     'patch05_endgame_checklist.json': checklist,

@@ -1,0 +1,266 @@
+[
+  {
+    "id": "patch05_witch_minion_infernalist",
+    "status": "preseason",
+    "tier": "S",
+    "class": "Witch",
+    "ascendancy": "Infernalist",
+    "title": "女巫召唤开荒",
+    "mainSkill": "召唤系技能",
+    "author": "人工精选",
+    "recommendation": {
+      "starterScore": 95,
+      "difficulty": 2,
+      "gearDependency": 1,
+      "bossing": 4,
+      "mapping": 4,
+      "survival": 4
+    },
+    "tags": ["新手友好", "低造价", "剧情顺滑", "可转型"],
+    "summary": "依靠召唤物承担输出和承伤，装备压力低，适合 0.5 新赛季首号开荒。",
+    "pros": ["对装备要求低", "操作压力小", "剧情推进稳定"],
+    "cons": ["前期清图速度不是最快", "召唤物手感需要适应"],
+    "leveling": [
+      "优先补足生命、抗性和召唤物伤害。",
+      "剧情阶段先保证召唤物数量和生存，再追求输出词缀。",
+      "进入异界后根据掉落转向召唤、献祭或热门女巫终局 BD。"
+    ],
+    "equipment": {
+      "coreUniques": [],
+      "rarePriority": [
+        { "slot": "武器", "stats": ["召唤物伤害", "技能等级", "施法速度"] },
+        { "slot": "防具", "stats": ["生命", "抗性", "能量护盾"] }
+      ]
+    },
+    "sources": [
+      {
+        "name": "0.5 版本预选",
+        "type": "manual",
+        "url": "",
+        "checkedAt": "2026-05-22",
+        "confidence": "medium",
+        "note": "赛季未开服，先按机制适配和开荒门槛人工审核。"
+      }
+    ]
+  },
+  {
+    "id": "patch05_sorceress_stormweaver_lightning",
+    "status": "preseason",
+    "tier": "S",
+    "class": "Sorceress",
+    "ascendancy": "Stormweaver",
+    "title": "风暴编织者闪电法术",
+    "mainSkill": "闪电系法术",
+    "author": "人工精选",
+    "recommendation": {
+      "starterScore": 91,
+      "difficulty": 3,
+      "gearDependency": 2,
+      "bossing": 4,
+      "mapping": 5,
+      "survival": 3
+    },
+    "tags": ["清图快", "法术开荒", "版本热门", "可终局"],
+    "summary": "法术技能升级曲线稳定，清图效率高，适合愿意走位和管理防御的玩家。",
+    "pros": ["清图节奏好", "技能替换空间大", "后续可转多种法术终局"],
+    "cons": ["身板需要装备补强", "Boss 战更吃走位"],
+    "leveling": [
+      "剧情阶段优先选择手感好的闪电主技能。",
+      "装备先补生命、抗性、施法速度和法术伤害。",
+      "异界初期不要过度牺牲防御换伤害。"
+    ],
+    "equipment": {
+      "coreUniques": [],
+      "rarePriority": [
+        { "slot": "法杖/法器", "stats": ["法术伤害", "闪电伤害", "技能等级"] },
+        { "slot": "防具", "stats": ["生命", "抗性", "能量护盾"] }
+      ]
+    },
+    "sources": [
+      {
+        "name": "0.5 版本预选",
+        "type": "manual",
+        "url": "",
+        "checkedAt": "2026-05-22",
+        "confidence": "medium",
+        "note": "赛季未开服，等待 0.5 天梯数据验证。"
+      }
+    ]
+  },
+  {
+    "id": "patch05_ranger_deadeye_projectile",
+    "status": "preseason",
+    "tier": "A",
+    "class": "Ranger",
+    "ascendancy": "Deadeye",
+    "title": "锐眼投射物开荒",
+    "mainSkill": "弓/投射物技能",
+    "author": "人工精选",
+    "recommendation": {
+      "starterScore": 86,
+      "difficulty": 3,
+      "gearDependency": 3,
+      "bossing": 3,
+      "mapping": 5,
+      "survival": 3
+    },
+    "tags": ["清图快", "手感好", "可转型"],
+    "summary": "适合喜欢高速刷图的玩家，前期手感好，但武器更新会明显影响伤害。",
+    "pros": ["跑图速度快", "打击感直接", "后续转型路线多"],
+    "cons": ["武器依赖高于法术/召唤", "防御需要主动补足"],
+    "leveling": [
+      "武器伤害跟不上时优先更新弓或弩。",
+      "黄装优先补抗性、生命和移动速度。",
+      "打 Boss 时降低贪输出，优先保证机动空间。"
+    ],
+    "equipment": {
+      "coreUniques": [],
+      "rarePriority": [
+        { "slot": "武器", "stats": ["物理/元素点伤", "攻击速度", "投射物相关词缀"] },
+        { "slot": "鞋子", "stats": ["移动速度", "生命", "抗性"] }
+      ]
+    },
+    "sources": [
+      {
+        "name": "0.5 版本预选",
+        "type": "manual",
+        "url": "",
+        "checkedAt": "2026-05-22",
+        "confidence": "medium",
+        "note": "按开荒手感和装备门槛人工审核。"
+      }
+    ]
+  },
+  {
+    "id": "patch05_mercenary_crossbow_grenades",
+    "status": "preseason",
+    "tier": "A",
+    "class": "Mercenary",
+    "ascendancy": "Witchhunter",
+    "title": "佣兵弩炮/榴弹开荒",
+    "mainSkill": "弩与榴弹技能",
+    "author": "人工精选",
+    "recommendation": {
+      "starterScore": 82,
+      "difficulty": 3,
+      "gearDependency": 3,
+      "bossing": 4,
+      "mapping": 4,
+      "survival": 3
+    },
+    "tags": ["Boss 稳", "中等造价", "可终局"],
+    "summary": "弩系技能对单体表现稳定，适合喜欢节奏型输出和中距离战斗的玩家。",
+    "pros": ["单体能力不错", "技能组合灵活", "装备成长清晰"],
+    "cons": ["技能手感需要练习", "清图速度依赖技能搭配"],
+    "leveling": [
+      "保持武器等级更新，优先找高伤害弩。",
+      "遇到卡关 Boss 时补抗性和护甲，再补输出。",
+      "异界初期用稳定单体能力先解锁关键内容。"
+    ],
+    "equipment": {
+      "coreUniques": [],
+      "rarePriority": [
+        { "slot": "弩", "stats": ["武器伤害", "攻击速度", "元素点伤"] },
+        { "slot": "防具", "stats": ["生命", "抗性", "护甲"] }
+      ]
+    },
+    "sources": [
+      {
+        "name": "0.5 版本预选",
+        "type": "manual",
+        "url": "",
+        "checkedAt": "2026-05-22",
+        "confidence": "medium",
+        "note": "按开荒门槛和 Boss 表现人工审核。"
+      }
+    ]
+  },
+  {
+    "id": "patch05_monk_invoker_elemental",
+    "status": "preseason",
+    "tier": "A",
+    "class": "Monk",
+    "ascendancy": "Invoker",
+    "title": "武僧元素近战",
+    "mainSkill": "元素近战技能",
+    "author": "人工精选",
+    "recommendation": {
+      "starterScore": 78,
+      "difficulty": 4,
+      "gearDependency": 3,
+      "bossing": 4,
+      "mapping": 4,
+      "survival": 3
+    },
+    "tags": ["操作向", "可终局", "手感好"],
+    "summary": "输出和机动性都不错，但近战开荒更吃操作，推荐给熟悉机制的玩家。",
+    "pros": ["机动性好", "爆发能力强", "后期上限不错"],
+    "cons": ["近战容错较低", "新手需要更多练习"],
+    "leveling": [
+      "剧情阶段不要忽视防御和抗性。",
+      "优先选择手感稳定的主技能，不频繁换体系。",
+      "遇到高压 Boss 时降低输出贪心，先熟悉机制。"
+    ],
+    "equipment": {
+      "coreUniques": [],
+      "rarePriority": [
+        { "slot": "武器", "stats": ["元素点伤", "攻击速度", "暴击相关词缀"] },
+        { "slot": "防具", "stats": ["生命", "抗性", "闪避/能量护盾"] }
+      ]
+    },
+    "sources": [
+      {
+        "name": "0.5 版本预选",
+        "type": "manual",
+        "url": "",
+        "checkedAt": "2026-05-22",
+        "confidence": "medium",
+        "note": "适合有操作基础的玩家，等待天梯验证后调整评级。"
+      }
+    ]
+  },
+  {
+    "id": "patch05_warrior_titan_slam",
+    "status": "preseason",
+    "tier": "B",
+    "class": "Warrior",
+    "ascendancy": "Titan",
+    "title": "泰坦重击开荒",
+    "mainSkill": "重击/近战技能",
+    "author": "人工精选",
+    "recommendation": {
+      "starterScore": 74,
+      "difficulty": 3,
+      "gearDependency": 4,
+      "bossing": 4,
+      "mapping": 3,
+      "survival": 4
+    },
+    "tags": ["坦度高", "Boss 稳", "武器依赖"],
+    "summary": "生存能力好，Boss 稳定，但武器更新和手感会影响开荒体验。",
+    "pros": ["容错较高", "单体稳定", "装备方向直观"],
+    "cons": ["清图节奏偏慢", "比较依赖武器伤害"],
+    "leveling": [
+      "武器是伤害核心，卡伤害时优先换武器。",
+      "优先补生命、抗性和护甲，保持近战容错。",
+      "适合想稳扎稳打推进剧情和 Boss 的玩家。"
+    ],
+    "equipment": {
+      "coreUniques": [],
+      "rarePriority": [
+        { "slot": "双手武器", "stats": ["高物理伤害", "攻击速度", "命中/暴击"] },
+        { "slot": "防具", "stats": ["生命", "抗性", "护甲"] }
+      ]
+    },
+    "sources": [
+      {
+        "name": "0.5 版本预选",
+        "type": "manual",
+        "url": "",
+        "checkedAt": "2026-05-22",
+        "confidence": "medium",
+        "note": "推荐给偏好稳健推进的玩家，开服后根据经济和天梯热度调整。"
+      }
+    ]
+  }
+]
