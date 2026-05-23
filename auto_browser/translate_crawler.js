@@ -49,8 +49,8 @@ const BASE_URL = "https://poe.ninja/poe2/builds";
 
 const isDev = process.env.NODE_ENV === "dev";
 const isCI = process.env.CI === "true";  // 检测是否在 CI 环境
-// 根据环境设置抓取深度：dev=1个，production=3个（提速）
-const MAX_RANK = isDev ? 1 : 3;
+// 根据环境设置抓取深度：dev=1个，production=7个
+const MAX_RANK = isDev ? 1 : Number(process.env.MAX_RANK || 7);
 
 // 浏览器定期重启策略（每处理 N 个职业后重启）
 const BROWSER_RESTART_INTERVAL = isCI ? 3 : 10;  // CI 环境更频繁重启
