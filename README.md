@@ -150,6 +150,32 @@ poe2-economy/economy.json
 
 注意：已取消“push 自动执行天梯翻译爬虫”和“自动执行踩蘑菇精华帖 BD”。这些任务需要手动触发，避免误跑和消耗。
 
+## 本地数据控制台
+
+为了减少新赛季维护时反复输入命令，项目提供了一个本地可视化控制台：
+
+```bash
+npm run dashboard
+```
+
+启动后打开：
+
+```text
+http://localhost:5177
+```
+
+第一版控制台支持：
+
+- 切换 `release` / `dev` 环境。
+- 单独运行：抓取新闻、抓取天梯并聚合分析、刷新通用经济、生成 0.5 资料、生成开荒推荐、上传 OSS。
+- 单独运行“刷新经济 + 生成 0.5 数据”，对应 `update_economy.yml` 里“刷新通用经济 + 重新生成 0.5 经济观察”的本地版本。
+- 一键运行推荐流程：新闻 -> 天梯 -> 刷新经济并生成 0.5 数据 -> 开荒推荐 -> 上传 OSS。
+- 查看每个任务上次运行状态、运行时间和日志。
+- 运行中可以点击“停止当前任务”终止长任务。
+- 查看当前环境输出摘要：文件数量、天梯人数、新闻条数、开荒 BD 条数、0.5 资料条数、调研配置状态。
+
+运行日志和状态写入 `dashboard/runtime/`，该目录只保留本地运行状态，不需要提交。
+
 ## 需要手动维护
 
 - `base-data/patch05/manual_entries.json`
@@ -162,6 +188,8 @@ poe2-economy/economy.json
   - 开服后根据真实天梯、价格和社区反馈调整 `tier`、`starterScore`、标签和说明。
 - `crawlers/patch05/economy.js`
   - 经济观察阈值。当前逻辑：35% 以上高波动，快照 3 次以上且波动小于 12% 可参考。
+- `base-data/miniprogram_config/feature_survey.json`
+  - 小程序功能调研开关和选项。赛季初保持 `enabled: false`，赛季末需要调研时改为 `true` 后上传 OSS。
 - OSS 密钥与微信合法域名配置。
 
 ## 不需要手动维护
@@ -203,4 +231,3 @@ poe2-economy/economy.json
 - `docs/20260522_PATCH05_DATA_PLAN.md`
 - `docs/20260522_STARTER_MVP_PLAN.md`
 - `docs/20260523_PATCH05_ECONOMY_WATCH_MAINTENANCE.md`
-

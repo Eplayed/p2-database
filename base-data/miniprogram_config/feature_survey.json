@@ -1,0 +1,24 @@
+{
+  "enabled": false,
+  "campaignId": "season_05_end_survey",
+  "title": "功能调研",
+  "subtitle": "帮我判断下一版先做什么",
+  "usedQuestion": "你最近最常用哪个功能？",
+  "wantedQuestion": "你最希望接下来优先做什么？",
+  "usedOptions": [
+    { "label": "开荒清单", "value": "starter_checklist" },
+    { "label": "开荒推荐", "value": "starter_builds" },
+    { "label": "天梯榜/BD解析", "value": "ladder_builds" },
+    { "label": "0.5资料速查", "value": "patch05_lookup" },
+    { "label": "新经济榜", "value": "economy_watch" },
+    { "label": "词缀查询", "value": "modifiers" }
+  ],
+  "wantedOptions": [
+    { "label": "真实物价提醒", "value": "price_alerts" },
+    { "label": "更多中文BD", "value": "more_cn_builds" },
+    { "label": "剧情地图攻略", "value": "campaign_maps" },
+    { "label": "装备估价/词缀评分", "value": "item_valuation" },
+    { "label": "Boss攻略", "value": "boss_guides" },
+    { "label": "离线收藏/进度云同步", "value": "cloud_progress" }
+  ]
+}

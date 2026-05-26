@@ -118,8 +118,6 @@ async function crawlNewsWithDetails() {
 
         console.log(`📊 抓取成功，共获取 ${newsData.length} 个分类板块`);
 
-        await browser.close();
-
         // --- 构造最终 JSON ---
         const finalJson = {
             updated_at: new Date().toISOString(),
@@ -147,7 +145,8 @@ async function crawlNewsWithDetails() {
         let detailResults = [];
         if (allUrls.length > 0) {
             const concurrency = process.env.CI ? 2 : 1; // CI 环境使用并发
-            detailResults = await crawlMultipleArticles(allUrls, concurrency);
+            await page.close().catch(() => {});
+            detailResults = await crawlMultipleArticles(allUrls, concurrency, browser);
         }
 
         // --- 收集详情文件路径 ---

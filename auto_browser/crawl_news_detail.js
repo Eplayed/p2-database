@@ -25,10 +25,7 @@ const USER_AGENT =
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
 // --- 抓取单个详情页 ---
-async function crawlArticleDetail(articleUrl, uploadToOSS = true) {
-    console.log(`🔍 正在抓取详情页: ${articleUrl}`);
-
-    // 构建启动参数
+async function createBrowser() {
     const launchArgs = [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -41,20 +38,29 @@ async function crawlArticleDetail(articleUrl, uploadToOSS = true) {
         launchArgs.push(`--proxy-server=${LOCAL_PROXY}`);
     }
 
-    // 启动浏览器
-    const browser = await puppeteer.launch({
+    return puppeteer.launch({
         headless: process.env.CI ? "new" : false,
         args: launchArgs,
         defaultViewport: { width: 1920, height: 1080 }
     });
+}
 
-    const page = await browser.newPage();
-
-    // 反爬虫设置
+async function preparePage(page) {
     await page.setUserAgent(USER_AGENT);
     await page.evaluateOnNewDocument(() => {
         Object.defineProperty(navigator, 'webdriver', { get: () => false });
     });
+}
+
+// --- 抓取单个详情页 ---
+async function crawlArticleDetail(articleUrl, uploadToOSS = true, sharedBrowser = null) {
+    console.log(`🔍 正在抓取详情页: ${articleUrl}`);
+
+    const ownsBrowser = !sharedBrowser;
+    const browser = sharedBrowser || await createBrowser();
+
+    const page = await browser.newPage();
+    await preparePage(page);
 
     try {
         // 访问页面 (详情页有时候图片较多，稍微多等一会)
@@ -168,12 +174,13 @@ async function crawlArticleDetail(articleUrl, uploadToOSS = true) {
         console.error(`   ❌ 抓取失败: ${articleUrl}`, e.message);
         return null;
     } finally {
-        await browser.close();
+        await page.close().catch(() => {});
+        if (ownsBrowser) await browser.close();
     }
 }
 
 // --- 批量抓取详情页 ---
-async function crawlMultipleArticles(articleUrls, concurrency = 1) {
+async function crawlMultipleArticles(articleUrls, concurrency = 1, sharedBrowser = null) {
     console.log(`\n📰 [详情页爬虫] 开始抓取 ${articleUrls.length} 篇文章 (并发数: ${concurrency})`);
 
     const results = [];
@@ -189,7 +196,7 @@ async function crawlMultipleArticles(articleUrls, concurrency = 1) {
         const batch = chunks[i];
 
         const batchResults = await Promise.all(
-            batch.map(url => crawlArticleDetail(url, false)) // false 表示不单独上传 OSS
+            batch.map(url => crawlArticleDetail(url, false, sharedBrowser)) // false 表示不单独上传 OSS
         );
 
         results.push(...batchResults.filter(r => r !== null));
@@ -239,4 +246,4 @@ if (require.main === module) {
     crawlArticleDetail(TEST_URL, true).catch(console.error);
 }
 
-module.exports = { crawlArticleDetail, crawlMultipleArticles, uploadDetailsToOSS };
+module.exports = { crawlArticleDetail, crawlMultipleArticles, uploadDetailsToOSS, createBrowser, preparePage };

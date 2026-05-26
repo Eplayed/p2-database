@@ -7,6 +7,7 @@
 
     "start": "NODE_ENV=production node crawlers/run.js",
     "dev": "NODE_ENV=dev node crawlers/run.js",
+    "dashboard": "node dashboard/server.js",
 
     "crawl": "node crawlers/run.js",
     "crawl:all": "node crawlers/run.js --all",

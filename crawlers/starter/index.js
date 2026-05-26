@@ -39,6 +39,12 @@ function uniq(values) {
   });
 }
 
+function normalizeDate(value, fallback) {
+  const timestamp = Date.parse(value || '');
+  if (Number.isNaN(timestamp)) return fallback;
+  return new Date(timestamp).toISOString();
+}
+
 function getClassTrendMap() {
   const analysis = readJson(LADDER_FILE, null);
   const trendMap = {};
@@ -62,11 +68,22 @@ function normalizeBuild(entry, trendMap, now) {
   const recommendation = entry.recommendation || {};
   const tags = uniq([entry.status === 'preseason' ? '0.5预选' : '', entry.tier ? entry.tier + '级' : '', ...(entry.tags || [])]);
   const source = Array.isArray(entry.sources) && entry.sources.length ? entry.sources[0] : null;
+  const updatedAt = normalizeDate(entry.updatedAt || (source && source.checkedAt), now);
+  const defaultSkills = [
+    {
+      groupName: '开荒主线',
+      note: entry.mainSkill || '按掉落和手感选择主技能',
+      links: [
+        { name: entry.mainSkill || '主技能', isSupport: false },
+        { name: '按需搭配辅助', isSupport: true }
+      ]
+    }
+  ];
 
   return {
     id: entry.id || slugify([className, ascendancy, entry.title].join('-')),
     schemaVersion: 1,
-    updatedAt: now,
+    updatedAt,
     status: entry.status || 'reviewed',
     tier: entry.tier || 'A',
     meta: {
@@ -102,21 +119,13 @@ function normalizeBuild(entry, trendMap, now) {
       pros: entry.pros || [],
       cons: entry.cons || []
     },
-    skills: [
-      {
-        groupName: '开荒主线',
-        note: entry.mainSkill || '按掉落和手感选择主技能',
-        links: [
-          { name: entry.mainSkill || '主技能', isSupport: false },
-          { name: '按需搭配辅助', isSupport: true }
-        ]
-      }
-    ],
+    skills: Array.isArray(entry.skills) && entry.skills.length ? entry.skills : defaultSkills,
     equipment: {
       core_uniques: (entry.equipment && entry.equipment.coreUniques) || [],
       rare_priority: (entry.equipment && entry.equipment.rarePriority) || []
     },
     leveling_tips: entry.leveling || [],
+    guide_sections: entry.guideSections || [],
     sources: entry.sources || []
   };
 }
@@ -147,6 +156,8 @@ function buildStarterData() {
   const builds = manualBuilds
     .map(entry => normalizeBuild(entry, trendMap, now))
     .sort((a, b) => {
+      const updatedDiff = (Date.parse(b.updatedAt || '') || 0) - (Date.parse(a.updatedAt || '') || 0);
+      if (updatedDiff !== 0) return updatedDiff;
       if (b.recommendation.starterScore !== a.recommendation.starterScore) {
         return b.recommendation.starterScore - a.recommendation.starterScore;
       }
