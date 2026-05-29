@@ -58,6 +58,12 @@ const TASKS = [
     command: ['node', ['crawlers/starter/index.js']],
   },
   {
+    id: 'story_guide',
+    name: '抓取剧情地图攻略',
+    description: '抓取剧情章节地图、点位、奖励和路线，生成小程序剧情攻略数据。',
+    command: ['node', ['crawlers/story-guide/index.js']],
+  },
+  {
     id: 'upload',
     name: '上传 OSS',
     description: '上传当前环境 translated-data 到 OSS。',
@@ -66,8 +72,8 @@ const TASKS = [
   {
     id: 'release_flow',
     name: '一键更新推荐流程',
-    description: '依次执行：新闻、天梯、0.5资料/经济、开荒推荐、上传 OSS。',
-    steps: ['news_all', 'ladder', 'patch05_with_economy', 'starter', 'upload'],
+    description: '依次执行：新闻、天梯、0.5资料/经济、开荒推荐、剧情地图攻略、上传 OSS。',
+    steps: ['news_all', 'ladder', 'patch05_with_economy', 'starter', 'story_guide', 'upload'],
   },
 ];
 

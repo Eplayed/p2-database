@@ -25,6 +25,10 @@
     "crawl:patch05:with-economy:dev": "NODE_ENV=dev node crawlers/patch05/run_with_economy.js",
     "build:starter": "NODE_ENV=production node crawlers/starter/index.js",
     "build:starter:dev": "NODE_ENV=dev node crawlers/starter/index.js",
+    "crawl:story-guide": "NODE_ENV=production node crawlers/story-guide/index.js",
+    "crawl:story-guide:dev": "NODE_ENV=dev node crawlers/story-guide/index.js",
+    "crawl:story-guide:upload": "NODE_ENV=production node crawlers/story-guide/index.js --upload",
+    "crawl:story-guide:upload:dev": "NODE_ENV=dev node crawlers/story-guide/index.js --upload",
 
     "crawl:news": "NODE_ENV=production node auto_browser/crawl_news.js",
     "crawl:news:dev": "NODE_ENV=dev node auto_browser/crawl_news.js",

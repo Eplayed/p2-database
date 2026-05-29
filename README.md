@@ -1,7 +1,7 @@
 # PoE2-Database 数据项目
 
-> 为微信小程序「PoE2 流放助手」提供 PoE2 天梯、新闻、经济、0.5 资料、开荒推荐等数据。  
-> 数据链路：poe.ninja / poe2db / 踩蘑菇 / 人工精选源数据 -> 本项目生成 JSON -> 阿里云 OSS -> 小程序读取。
+> 为微信小程序「PoE2 流放助手」提供 PoE2 天梯、新闻、经济、0.5 资料、开荒推荐、剧情地图攻略等数据。  
+> 数据链路：poe.ninja / poe2db / 踩蘑菇 / poe2ggg / 人工精选源数据 -> 本项目生成 JSON -> 阿里云 OSS -> 小程序读取。
 
 ## 当前状态
 
@@ -11,6 +11,7 @@
 - 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`。
 - 0.5 新经济观察：生成 `patch05_economy.json` 和 `patch05_economy_watch.json`，支持待行情、观察中、可参考、高波动状态。
 - 开荒推荐 MVP：由人工精选源 `base-data/starter/starter_builds.json` 生成小程序用 `miniprogram_data/starters.json`。
+- 剧情地图攻略：抓取 poe2ggg 公开剧情攻略接口，输出 `miniprogram_data/story_guides.json`，包含章节地图、点位坐标、奖励和路线提示。
 - OSS 上传：统一上传 `translated-data/{dev|release}` 下的产物。
 
 ## 目录结构
@@ -30,6 +31,7 @@ p2-database/
 │   ├── run.js                           # 统一入口
 │   ├── patch05/                         # 0.5 资料与经济观察管线
 │   ├── starter/                         # 开荒推荐生成
+│   ├── story-guide/                     # 剧情地图攻略抓取
 │   └── poe2db-dict/                     # poe2db 字典抓取
 ├── scripts/
 │   ├── aggregate_analysis.js            # 天梯统计聚合
@@ -69,6 +71,12 @@ npm run build:starter
 
 # 生成开荒推荐，开发环境
 npm run build:starter:dev
+
+# 抓取剧情地图攻略，生产环境
+npm run crawl:story-guide
+
+# 抓取剧情地图攻略并单独上传 OSS
+npm run crawl:story-guide:upload
 
 # 上传 translated-data/{env} 到 OSS
 NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
@@ -167,9 +175,9 @@ http://localhost:5177
 第一版控制台支持：
 
 - 切换 `release` / `dev` 环境。
-- 单独运行：抓取新闻、抓取天梯并聚合分析、刷新通用经济、生成 0.5 资料、生成开荒推荐、上传 OSS。
+- 单独运行：抓取新闻、抓取天梯并聚合分析、刷新通用经济、生成 0.5 资料、生成开荒推荐、抓取剧情地图攻略、上传 OSS。
 - 单独运行“刷新经济 + 生成 0.5 数据”，对应 `update_economy.yml` 里“刷新通用经济 + 重新生成 0.5 经济观察”的本地版本。
-- 一键运行推荐流程：新闻 -> 天梯 -> 刷新经济并生成 0.5 数据 -> 开荒推荐 -> 上传 OSS。
+- 一键运行推荐流程：新闻 -> 天梯 -> 刷新经济并生成 0.5 数据 -> 开荒推荐 -> 剧情地图攻略 -> 上传 OSS。
 - 查看每个任务上次运行状态、运行时间和日志。
 - 运行中可以点击“停止当前任务”终止长任务。
 - 查看当前环境输出摘要：文件数量、天梯人数、新闻条数、开荒 BD 条数、0.5 资料条数、调研配置状态。
