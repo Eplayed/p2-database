@@ -58,6 +58,24 @@ const TASKS = [
     command: ['node', ['crawlers/starter/index.js']],
   },
   {
+    id: 'starter_hot_posts',
+    name: '1. 抓取热门 BD 帖输入',
+    description: '先从踩蘑菇热门 BD 页面抓帖子文本，写入 base-data/starter/agent_posts。只准备输入，不生成候选 JSON。',
+    command: ['node', ['crawlers/starter-agent/crawl_hot_posts.js']],
+  },
+  {
+    id: 'starter_agent',
+    name: '2. 从输入抽取候选 JSON',
+    description: '读取 base-data/starter/agent_posts 里的帖子文本，生成 candidates 和 starter_candidates.json。不会主动抓帖子。',
+    command: ['node', ['crawlers/starter-agent/index.js']],
+  },
+  {
+    id: 'starter_agent_refresh',
+    name: '抓取热门 BD + 抽候选',
+    description: '一步执行：先抓热门 BD 帖输入，再生成候选 JSON。仍只供人工审核，不进入正式推荐榜。',
+    steps: ['starter_hot_posts', 'starter_agent'],
+  },
+  {
     id: 'story_guide',
     name: '抓取剧情地图攻略',
     description: '抓取剧情章节地图、点位、奖励和路线，生成小程序剧情攻略数据。',

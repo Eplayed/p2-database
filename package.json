@@ -4,11 +4,9 @@
   "main": "merge_data.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "start": "NODE_ENV=production node crawlers/run.js",
     "dev": "NODE_ENV=dev node crawlers/run.js",
     "dashboard": "node dashboard/server.js",
-
     "crawl": "node crawlers/run.js",
     "crawl:all": "node crawlers/run.js --all",
     "crawl:dict": "node crawlers/run.js --dict",
@@ -29,13 +27,18 @@
     "crawl:story-guide:dev": "NODE_ENV=dev node crawlers/story-guide/index.js",
     "crawl:story-guide:upload": "NODE_ENV=production node crawlers/story-guide/index.js --upload",
     "crawl:story-guide:upload:dev": "NODE_ENV=dev node crawlers/story-guide/index.js --upload",
-
     "crawl:news": "NODE_ENV=production node auto_browser/crawl_news.js",
     "crawl:news:dev": "NODE_ENV=dev node auto_browser/crawl_news.js",
     "crawl:news:detail": "node auto_browser/crawl_news_detail.js",
     "crawl:news:all": "NODE_ENV=production node auto_browser/crawl_news_with_details.js",
     "crawl:news:all:dev": "NODE_ENV=dev node auto_browser/crawl_news_with_details.js",
-    "crawl:economy": "node auto_browser/crawl_economy.js"
+    "crawl:economy": "node auto_browser/crawl_economy.js",
+    "crawl:starter-hot": "NODE_ENV=production node crawlers/starter-agent/crawl_hot_posts.js",
+    "crawl:starter-hot:dev": "NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js",
+    "agent:starter": "NODE_ENV=production node crawlers/starter-agent/index.js",
+    "agent:starter:dev": "NODE_ENV=dev node crawlers/starter-agent/index.js",
+    "agent:starter:refresh": "npm run crawl:starter-hot && npm run agent:starter",
+    "agent:starter:refresh:dev": "npm run crawl:starter-hot:dev && npm run agent:starter:dev"
   },
   "keywords": [],
   "author": "",

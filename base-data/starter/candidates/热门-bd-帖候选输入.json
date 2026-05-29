@@ -1,0 +1,75 @@
+{
+  "id": "热门-bd-帖候选输入",
+  "status": "candidate",
+  "reviewStatus": "needs_review",
+  "confidence": "low",
+  "title": "热门 BD 帖候选输入",
+  "author": "待确认",
+  "class": "",
+  "ascendancy": "",
+  "mainSkill": "",
+  "tags": [],
+  "sourceMetrics": {
+    "hotScore": 0,
+    "views": 0,
+    "replies": 0,
+    "likes": 0,
+    "favorites": 0
+  },
+  "summary": "把踩蘑菇热门 BD 帖复制成 `.md` / `.txt` 放到这里，然后运行： ```bash npm run agent:starter",
+  "levelingPlan": [
+    {
+      "stage": "1-12 级",
+      "summary": "技能：...",
+      "mainSkills": [
+        "技能：..."
+      ],
+      "passives": [
+        "天赋：..."
+      ],
+      "gearTips": [],
+      "ascendancy": [],
+      "transition": [],
+      "notes": [],
+      "sourceLines": [
+        "技能：...",
+        "天赋：..."
+      ]
+    },
+    {
+      "stage": "转职：...",
+      "summary": "```",
+      "mainSkills": [],
+      "passives": [],
+      "gearTips": [],
+      "ascendancy": [],
+      "transition": [],
+      "notes": [
+        "```",
+        "stage 会根据帖子里的标题提取，不需要固定写法。"
+      ],
+      "sourceLines": [
+        "```",
+        "stage 会根据帖子里的标题提取，不需要固定写法。"
+      ]
+    }
+  ],
+  "extractedAt": "2026-05-29T08:11:56.978Z",
+  "sources": [
+    {
+      "name": "热门 BD 帖候选",
+      "type": "agent_candidate",
+      "url": "",
+      "checkedAt": "2026-05-29",
+      "confidence": "low",
+      "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
+    }
+  ],
+  "reviewHints": [
+    "缺少原帖 URL",
+    "缺少基础职业",
+    "缺少升华/转职",
+    "缺少主技能",
+    "缺少升华/转职/转型节点"
+  ]
+}

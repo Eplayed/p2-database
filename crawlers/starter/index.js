@@ -125,6 +125,10 @@ function normalizeBuild(entry, trendMap, now) {
       rare_priority: (entry.equipment && entry.equipment.rarePriority) || []
     },
     leveling_tips: entry.leveling || [],
+    leveling_plan: Array.isArray(entry.levelingPlan) ? entry.levelingPlan : [],
+    ascendancy_order: Array.isArray(entry.ascendancyOrder) ? entry.ascendancyOrder : [],
+    transition_timing: entry.transitionTiming || '',
+    agent_review: entry.agentReview || null,
     guide_sections: entry.guideSections || [],
     sources: entry.sources || []
   };

@@ -1,0 +1,102 @@
+{
+  "id": "witch-infernalist-示例-女巫召唤-0-5-开荒路线",
+  "status": "candidate",
+  "reviewStatus": "needs_review",
+  "confidence": "low",
+  "title": "示例：女巫召唤 0.5 开荒路线",
+  "author": "示例作者",
+  "class": "Witch",
+  "ascendancy": "Infernalist",
+  "mainSkill": "召唤系技能",
+  "tags": [
+    "新手友好",
+    "低造价"
+  ],
+  "sourceMetrics": {
+    "hotScore": 0,
+    "views": 0,
+    "replies": 0,
+    "likes": 0,
+    "favorites": 0
+  },
+  "summary": "",
+  "levelingPlan": [
+    {
+      "stage": "1-12 级：剧情起步",
+      "summary": "技能：先用掉落的召唤技能推进，主技能保持可持续输出。",
+      "mainSkills": [
+        "技能：先用掉落的召唤技能推进，主技能保持可持续输出。",
+        "装备：武器找 +技能等级 或召唤物伤害，防具补生命抗性。"
+      ],
+      "passives": [
+        "天赋：优先点召唤物伤害和生存，再补自己生命。"
+      ],
+      "gearTips": [
+        "天赋：优先点召唤物伤害和生存，再补自己生命。",
+        "装备：武器找 +技能等级 或召唤物伤害，防具补生命抗性。"
+      ],
+      "ascendancy": [],
+      "transition": [],
+      "notes": [],
+      "sourceLines": [
+        "技能：先用掉落的召唤技能推进，主技能保持可持续输出。",
+        "天赋：优先点召唤物伤害和生存，再补自己生命。",
+        "装备：武器找 +技能等级 或召唤物伤害，防具补生命抗性。"
+      ]
+    },
+    {
+      "stage": "第三章：后 转职前",
+      "summary": "技能：补足召唤物数量，辅助选择伤害或生存向。",
+      "mainSkills": [
+        "技能：补足召唤物数量，辅助选择伤害或生存向。"
+      ],
+      "passives": [
+        "天赋：向召唤物持续伤害和生命圈推进。"
+      ],
+      "gearTips": [
+        "天赋：向召唤物持续伤害和生命圈推进。"
+      ],
+      "ascendancy": [],
+      "transition": [],
+      "notes": [],
+      "sourceLines": [
+        "技能：补足召唤物数量，辅助选择伤害或生存向。",
+        "天赋：向召唤物持续伤害和生命圈推进。"
+      ]
+    },
+    {
+      "stage": "转型：如果掉落关键装备，再考虑转终局召唤版本。",
+      "summary": "装备：抗性补满，武器继续找技能等级。",
+      "mainSkills": [
+        "装备：抗性补满，武器继续找技能等级。"
+      ],
+      "passives": [],
+      "gearTips": [
+        "装备：抗性补满，武器继续找技能等级。"
+      ],
+      "ascendancy": [],
+      "transition": [],
+      "notes": [
+        "注意：示例文件只用于验证抽取格式，正式数据请替换为真实热门帖。"
+      ],
+      "sourceLines": [
+        "装备：抗性补满，武器继续找技能等级。",
+        "注意：示例文件只用于验证抽取格式，正式数据请替换为真实热门帖。"
+      ]
+    }
+  ],
+  "extractedAt": "2026-05-29T08:11:56.980Z",
+  "sources": [
+    {
+      "name": "热门 BD 帖候选",
+      "type": "agent_candidate",
+      "url": "https://example.com/replace-with-real-post",
+      "checkedAt": "2026-05-29",
+      "confidence": "low",
+      "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
+    }
+  ],
+  "reviewHints": [
+    "缺少升华/转职/转型节点"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "simon盾墙开荒自用",
+  "status": "candidate",
+  "reviewStatus": "needs_review",
+  "confidence": "low",
+  "title": "Simon盾墙开荒自用",
+  "author": "玩家02715470",
+  "class": "",
+  "ascendancy": "",
+  "mainSkill": "",
+  "tags": [
+    "升级"
+  ],
+  "sourceMetrics": {
+    "hotScore": 0,
+    "views": 0,
+    "replies": 0,
+    "likes": 0,
+    "favorites": 0
+  },
+  "summary": "自动抓取自踩蘑菇热门 BD 区。该文件只作为 Agent 候选输入，发布前需要人工审核。 作者：玩家02715470| 更新时间: 2026年05月23日 赛季：末裔德鲁伊",
+  "levelingPlan": [],
+  "extractedAt": "2026-05-29T09:21:24.877Z",
+  "sources": [
+    {
+      "name": "踩蘑菇热门BD",
+      "type": "agent_candidate",
+      "url": "",
+      "checkedAt": "2026-05-29",
+      "confidence": "low",
+      "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
+    }
+  ],
+  "reviewHints": [
+    "缺少原帖 URL",
+    "缺少基础职业",
+    "缺少升华/转职",
+    "缺少主技能",
+    "未识别到开荒阶段"
+  ]
+}

@@ -11,6 +11,7 @@
 - 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`。
 - 0.5 新经济观察：生成 `patch05_economy.json` 和 `patch05_economy_watch.json`，支持待行情、观察中、可参考、高波动状态。
 - 开荒推荐 MVP：由人工精选源 `base-data/starter/starter_builds.json` 生成小程序用 `miniprogram_data/starters.json`。
+- 热门 BD 候选池：可定期抓取踩蘑菇热门 BD 帖到 `base-data/starter/agent_posts`，再由 `agent:starter` 生成候选 JSON，人工审核后再进入正式开荒推荐。
 - 剧情地图攻略：抓取 poe2ggg 公开剧情攻略接口，输出 `miniprogram_data/story_guides.json`，包含章节地图、点位坐标、奖励和路线提示。
 - OSS 上传：统一上传 `translated-data/{dev|release}` 下的产物。
 
@@ -31,6 +32,7 @@ p2-database/
 │   ├── run.js                           # 统一入口
 │   ├── patch05/                         # 0.5 资料与经济观察管线
 │   ├── starter/                         # 开荒推荐生成
+│   ├── starter-agent/                   # 热门 BD 帖候选抓取与结构化抽取
 │   ├── story-guide/                     # 剧情地图攻略抓取
 │   └── poe2db-dict/                     # poe2db 字典抓取
 ├── scripts/
@@ -72,6 +74,18 @@ npm run build:starter
 # 生成开荒推荐，开发环境
 npm run build:starter:dev
 
+# 抓取踩蘑菇热门 BD 帖到 agent_posts，生产环境
+npm run crawl:starter-hot
+
+# 抓取踩蘑菇热门 BD 帖到 agent_posts，开发环境
+npm run crawl:starter-hot:dev
+
+# 从 agent_posts 抽取候选 JSON，开发环境
+npm run agent:starter:dev
+
+# 抓取热门 BD 帖并立即生成候选 JSON，开发环境
+npm run agent:starter:refresh:dev
+
 # 抓取剧情地图攻略，生产环境
 npm run crawl:story-guide
 
@@ -111,6 +125,47 @@ NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 - 开服当天：每 4-6 小时跑一次 `npm run crawl:patch05:with-economy`，积累经济快照。
 - 开服后 12-24 小时：跑天梯，观察真实职业/升华热度。
 - 开服后 3 天：根据真实行情和天梯，把人工源数据里的概念条目拆细、调整开荒推荐评分。
+
+## 热门 BD 候选池
+
+热门 BD 候选池的目标是“先收集、再审核”，不自动覆盖正式推荐榜。
+
+```bash
+cd /Users/zhangyajun/Documents/project/p2-database
+
+# 1. 抓取热门 BD 帖文本到 base-data/starter/agent_posts
+npm run crawl:starter-hot:dev
+
+# 2. 把 agent_posts 转成候选 JSON
+npm run agent:starter:dev
+```
+
+产物：
+
+```text
+base-data/starter/agent_posts/caimogu-hot-bd-*.md
+base-data/starter/hot_posts_manifest.json
+base-data/starter/candidates/*.json
+translated-data/{dev|release}/miniprogram_data/starter_candidates.json
+```
+
+可选参数：
+
+```bash
+# 只抓前 10 条
+NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js --limit=10
+
+# 只抓列表摘要，不进入详情页
+NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js --no-detail
+
+# 保留旧的自动抓取输入文件
+NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js --keep-old
+
+# 默认无头运行；需要观察浏览器时再打开可视浏览器
+NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js --headed
+```
+
+2 天一次的定时抓取使用 Codex 自动化配置，不放在 GitHub Actions，也不使用 macOS `launchd`。自动化只运行抓取输入步骤，生成 `agent_posts` 和 `hot_posts_manifest.json`；候选 JSON 仍建议你按需手动运行 `npm run agent:starter:dev` 生成并审核。
 
 ## 输出到 OSS 的关键文件
 
@@ -176,6 +231,7 @@ http://localhost:5177
 
 - 切换 `release` / `dev` 环境。
 - 单独运行：抓取新闻、抓取天梯并聚合分析、刷新通用经济、生成 0.5 资料、生成开荒推荐、抓取剧情地图攻略、上传 OSS。
+- 单独运行：抓取热门 BD 帖、抽取 BD 候选 JSON。
 - 单独运行“刷新经济 + 生成 0.5 数据”，对应 `update_economy.yml` 里“刷新通用经济 + 重新生成 0.5 经济观察”的本地版本。
 - 一键运行推荐流程：新闻 -> 天梯 -> 刷新经济并生成 0.5 数据 -> 开荒推荐 -> 剧情地图攻略 -> 上传 OSS。
 - 查看每个任务上次运行状态、运行时间和日志。
