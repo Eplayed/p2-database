@@ -8,13 +8,13 @@ class: "女巫"
 ascendancy: "巫妖"
 mainSkill: "魔力残片"
 tags: "升级, 攻坚, 硬核模式, 女巫, 巫妖"
-views: 745
+views: 849
 replies: 0
 likes: 2
 favorites: 9
-hotScore: 1745
+hotScore: 1849
 confidence: low
-fetchedAt: "2026-05-29T13:08:14.452Z"
+fetchedAt: "2026-05-29T23:37:18.427Z"
 ---
 
 # 0.5雷弹COC

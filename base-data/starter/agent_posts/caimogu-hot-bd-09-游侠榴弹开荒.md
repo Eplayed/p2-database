@@ -8,13 +8,13 @@ class: "游侠"
 ascendancy: 
 mainSkill: "战弩射击"
 tags: "升级, 游侠"
-views: 463
+views: 487
 replies: 0
 likes: 1
 favorites: 2
-hotScore: 713
+hotScore: 737
 confidence: low
-fetchedAt: "2026-05-29T13:08:14.457Z"
+fetchedAt: "2026-05-29T23:37:18.501Z"
 ---
 
 # 游侠榴弹开荒

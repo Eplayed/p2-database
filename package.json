@@ -37,8 +37,12 @@
     "crawl:starter-hot:dev": "NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js",
     "agent:starter": "NODE_ENV=production node crawlers/starter-agent/index.js",
     "agent:starter:dev": "NODE_ENV=dev node crawlers/starter-agent/index.js",
+    "agent:starter:promote": "NODE_ENV=production node crawlers/starter/promote_candidates.js",
+    "agent:starter:promote:dev": "NODE_ENV=dev node crawlers/starter/promote_candidates.js",
     "agent:starter:refresh": "npm run crawl:starter-hot && npm run agent:starter",
-    "agent:starter:refresh:dev": "npm run crawl:starter-hot:dev && npm run agent:starter:dev"
+    "agent:starter:refresh:dev": "npm run crawl:starter-hot:dev && npm run agent:starter:dev",
+    "data:starter:publish": "NODE_ENV=production node crawlers/starter-agent/crawl_hot_posts.js && NODE_ENV=production node crawlers/starter-agent/index.js && NODE_ENV=production node crawlers/starter/promote_candidates.js && NODE_ENV=production node crawlers/starter/index.js && NODE_ENV=production node -e \"require('./auto_browser/upload_to_oss')()\"",
+    "data:starter:refresh:dev": "NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js && NODE_ENV=dev node crawlers/starter-agent/index.js && NODE_ENV=dev node crawlers/starter/promote_candidates.js && NODE_ENV=dev node crawlers/starter/index.js"
   },
   "keywords": [],
   "author": "",

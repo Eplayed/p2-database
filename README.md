@@ -83,8 +83,14 @@ npm run crawl:starter-hot:dev
 # 从 agent_posts 抽取候选 JSON，开发环境
 npm run agent:starter:dev
 
+# 把候选池中适合开荒的 BD 提升到正式开荒源
+npm run agent:starter:promote
+
 # 抓取热门 BD 帖并立即生成候选 JSON，开发环境
 npm run agent:starter:refresh:dev
+
+# 完整刷新开荒/热门BD数据并上传 OSS，生产环境
+npm run data:starter:publish
 
 # 抓取剧情地图攻略，生产环境
 npm run crawl:story-guide
@@ -138,6 +144,15 @@ npm run crawl:starter-hot:dev
 
 # 2. 把 agent_posts 转成候选 JSON
 npm run agent:starter:dev
+
+# 3. 人工确认候选质量后，把适合开荒的候选提升到正式开荒源
+npm run agent:starter:promote
+
+# 4. 重新生成小程序 starters.json
+npm run build:starter
+
+# 或生产环境一条命令完成：抓取 -> 候选 -> 提升 -> 生成 -> 上传 OSS
+npm run data:starter:publish
 ```
 
 产物：
@@ -165,7 +180,13 @@ NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js --keep-old
 NODE_ENV=dev node crawlers/starter-agent/crawl_hot_posts.js --headed
 ```
 
-2 天一次的定时抓取使用 Codex 自动化配置，不放在 GitHub Actions，也不使用 macOS `launchd`。自动化只运行抓取输入步骤，生成 `agent_posts` 和 `hot_posts_manifest.json`；候选 JSON 仍建议你按需手动运行 `npm run agent:starter:dev` 生成并审核。
+2 天一次的定时抓取使用 Codex 自动化配置，不放在 GitHub Actions，也不使用 macOS `launchd`。如果只是收集素材，自动化运行 `npm run crawl:starter-hot:dev` 即可；如果要让小程序线上两个 tab 都更新，运行 `npm run data:starter:publish`。
+
+小程序数据更新关系：
+
+- `赛季开荒` 读取 OSS 的 `miniprogram_data/starters.json`，由 `starter_builds.json` 生成。
+- `热门BD` 读取 OSS 的 `miniprogram_data/starter_candidates.json`，小程序端会过滤开荒/升级/备战条目，只展示非开荒热门 BD。
+- 发布过支持新版缓存和热门BD tab 的小程序后，后续只要刷新 OSS 数据即可更新页面内容；不需要重新上传代码包。
 
 ## 输出到 OSS 的关键文件
 

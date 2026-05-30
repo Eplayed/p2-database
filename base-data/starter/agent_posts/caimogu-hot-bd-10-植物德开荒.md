@@ -8,13 +8,13 @@ class: "德鲁伊"
 ascendancy: "神谕者"
 mainSkill: "纠缠"
 tags: "德鲁伊, 神谕者"
-views: 721
+views: 740
 replies: 0
 likes: 1
 favorites: 5
-hotScore: 1271
+hotScore: 1290
 confidence: low
-fetchedAt: "2026-05-29T13:08:14.457Z"
+fetchedAt: "2026-05-29T23:37:18.501Z"
 ---
 
 # 植物德开荒

@@ -70,10 +70,22 @@ const TASKS = [
     command: ['node', ['crawlers/starter-agent/index.js']],
   },
   {
+    id: 'starter_promote',
+    name: '3. 候选提升到开荒源',
+    description: '把热门候选中适合开荒的条目提升到 base-data/starter/starter_builds.json，供赛季开荒 tab 使用。',
+    command: ['node', ['crawlers/starter/promote_candidates.js']],
+  },
+  {
     id: 'starter_agent_refresh',
     name: '抓取热门 BD + 抽候选',
     description: '一步执行：先抓热门 BD 帖输入，再生成候选 JSON。仍只供人工审核，不进入正式推荐榜。',
     steps: ['starter_hot_posts', 'starter_agent'],
+  },
+  {
+    id: 'starter_data_publish',
+    name: '更新开荒/热门BD并上传',
+    description: '完整数据流程：抓热门BD、抽候选、提升开荒推荐、生成 starters.json、上传 OSS。小程序无需改代码即可读取新数据。',
+    steps: ['starter_hot_posts', 'starter_agent', 'starter_promote', 'starter', 'upload'],
   },
   {
     id: 'story_guide',

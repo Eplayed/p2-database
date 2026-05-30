@@ -13,11 +13,11 @@
     "锐眼"
   ],
   "sourceMetrics": {
-    "hotScore": 1038,
-    "views": 588,
+    "hotScore": 1305,
+    "views": 655,
     "replies": 0,
     "likes": 1,
-    "favorites": 4
+    "favorites": 6
   },
   "summary": "自动抓取自踩蘑菇热门 BD 区。该文件只作为 Agent 候选输入，发布前需要人工审核。",
   "levelingPlan": [
@@ -100,7 +100,7 @@
       ]
     }
   ],
-  "extractedAt": "2026-05-29T13:08:14.832Z",
+  "extractedAt": "2026-05-29T23:37:19.178Z",
   "sources": [
     {
       "name": "踩蘑菇热门BD",
