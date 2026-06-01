@@ -1,12 +1,12 @@
 require("dotenv").config({ path: require("path").join(__dirname, ".env") });
 const puppeteer = require("puppeteer"); // 本地调试用完整版
 const fs = require("fs");
+const https = require("https");
 const path = require("path");
 const uploadAll = require("./upload_to_oss");
 const envConfig = require("./env-config");
 
 // --- 0. 配置 ---
-const TARGET_URL = "https://poe.ninja/poe2/economy/vaal/currency";
 const OUTPUT_FILE = "economy.json";
 const OUTPUT_DIR = envConfig.dataDir || "./data";
 
@@ -138,8 +138,47 @@ function capitalize(str) {
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 
+function getJson(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, {
+      headers: {
+        "User-Agent": USER_AGENT,
+        "Referer": "https://poe.ninja/poe2/economy",
+        "Accept": "application/json",
+      },
+    }, (res) => {
+      let data = "";
+      res.on("data", chunk => data += chunk);
+      res.on("end", () => {
+        try {
+          resolve(JSON.parse(data));
+        } catch (error) {
+          reject(new Error(`poe.ninja index-state 解析失败: ${error.message}`));
+        }
+      });
+    }).on("error", reject);
+  });
+}
+
+async function getActiveEconomyLeague() {
+  const indexState = await getJson("https://poe.ninja/poe2/api/data/index-state");
+  const preferredUrl = process.env.POE_NINJA_ECONOMY_LEAGUE || "";
+  const league = preferredUrl
+    ? indexState.economyLeagues?.find(item => item.url === preferredUrl)
+    : indexState.economyLeagues?.find(item => item.indexed && !item.hardcore);
+
+  if (!league) {
+    throw new Error(`未找到 poe.ninja 经济赛季: ${preferredUrl || "indexed softcore"}`);
+  }
+
+  return league;
+}
+
 async function runEconomyTask() {
   console.log("💰 [汇率爬虫 V5.0] 启动...");
+  const league = await getActiveEconomyLeague();
+  const targetUrl = `https://poe.ninja/poe2/economy/${league.url}/currency`;
+  console.log(`   🏷️  当前赛季: ${league.displayName || league.name} (${league.url})`);
   // 🔴 修改：构建启动参数
   const launchArgs = [
     "--no-sandbox",
@@ -186,9 +225,9 @@ async function runEconomyTask() {
       }
     });
 
-    console.log(`   🔗 访问: ${TARGET_URL}`);
+    console.log(`   🔗 访问: ${targetUrl}`);
     try {
-      await page.goto(TARGET_URL, {
+      await page.goto(targetUrl, {
         waitUntil: "domcontentloaded",
         timeout: 60000,
       });
@@ -236,7 +275,7 @@ async function runEconomyTask() {
 
     const finalData = {
       updateTime: new Date().toISOString(),
-      league: "Fate of the Vaal",
+      league: league.displayName || league.name,
       rates: rates,
     };
 

@@ -194,15 +194,19 @@ const main = async () => {
   const classDistribution = Object.entries(classCount)
     .map(([name, count]) => {
       const clsInfo = classesData.find(c => c.name === name) || {}
+      const realPercent = Number(clsInfo.percent)
       return {
         name,
         displayName: clsInfo.displayName || name,
         count,
-        percent: totalPlayers > 0 ? (count / totalPlayers) * 100 : 0,
+        sampleCount: count,
+        percent: Number.isFinite(realPercent)
+          ? realPercent
+          : (totalPlayers > 0 ? (count / totalPlayers) * 100 : 0),
         icon: clsInfo.icon || `https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/${name.toLowerCase().replace(/ /g, '-')}.webp`
       }
     })
-    .sort((a, b) => b.count - a.count)
+    .sort((a, b) => b.percent - a.percent)
 
   const topActiveSkills = toSortedArray(
     Object.fromEntries(
@@ -232,7 +236,7 @@ const main = async () => {
   const topKeystones = toSortedArray(stats.keystoneCount)
     .map(k => ({
       ...k,
-      icon: k.icon ? `https://poe.ninja/poe2-assets/cdn/tree/${k.icon}` : '',
+      icon: k.icon ? `https://assets.poe.ninja/poe2/tree/${k.icon}` : '',
       percent: (k.count / sampledCount) * 100
     }))
 

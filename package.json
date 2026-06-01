@@ -12,6 +12,8 @@
     "crawl:dict": "node crawlers/run.js --dict",
     "crawl:ladder": "NODE_ENV=production node crawlers/run.js --ladder",
     "crawl:ladder:dev": "NODE_ENV=dev node crawlers/run.js --ladder",
+    "refresh:ladder-distribution": "NODE_ENV=production node scripts/refresh_ladder_distribution.js && NODE_ENV=production node scripts/aggregate_analysis.js && NODE_ENV=production node scripts/upload_analysis.js",
+    "refresh:ladder-distribution:dev": "NODE_ENV=dev node scripts/refresh_ladder_distribution.js && NODE_ENV=dev node scripts/aggregate_analysis.js",
     "crawl:trees": "node crawlers/run.js --trees",
     "crawl:essence": "node crawlers/run.js --essence",
     "crawl:hot": "node crawlers/run.js --hot",

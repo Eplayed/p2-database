@@ -6,6 +6,7 @@
 const OSS = require('ali-oss')
 const fs = require('fs')
 const path = require('path')
+require('dotenv').config({ path: path.join(__dirname, '../auto_browser/.env') })
 
 const isProd = process.env.NODE_ENV === 'production'
 const dataDir = path.join(__dirname, '..', 'translated-data', isProd ? 'release' : 'dev')

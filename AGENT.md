@@ -32,6 +32,11 @@
   `base-data/starter/starter_builds.json`
 - OSS 上传入口是：
   `auto_browser/upload_to_oss.js`
+- 天梯爬虫默认从 poe.ninja `index-state` 自动选择当前 `indexed: true` 的国际服赛季。
+- 只有排查历史赛季时才设置：
+  `POE_NINJA_LEAGUE=<league-url>`
+- 经济爬虫同样自动选择当前已索引的国际服赛季；生产上传会同步兼容路径：
+  `poe2-economy/economy.json`
 
 ## 热门 BD 流程
 
@@ -125,3 +130,4 @@
 - 先跑数据，再看产物，再上传 OSS。
 - 先检查 `translated-data/release`，再决定是否需要动小程序。
 - 对赛季中改动，优先做“新增脚本/新增字段/新增候选流程”，少做重构。
+- 天梯抓取到 `0` 个职业或 `0` 位玩家时必须失败退出，禁止覆盖已有 release 数据。

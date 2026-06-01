@@ -88,5 +88,22 @@ module.exports = async function uploadAll() {
             console.error(`   ❌ 失败: ${relativePath}`, e.message);
         }
     }
+
+    // 小程序首页和市场页仍读取历史兼容路径，生产上传时保持同步。
+    const economyPath = path.join(DATA_DIR, 'economy.json');
+    if (envConfig.isProd && fs.existsSync(economyPath)) {
+        try {
+            await client.put('poe2-economy/economy.json', economyPath, {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Cache-Control': 'max-age=60',
+                },
+            });
+            console.log('   ✅ 已同步兼容路径: poe2-economy/economy.json');
+        } catch (e) {
+            console.error('   ❌ 兼容路径同步失败: poe2-economy/economy.json', e.message);
+        }
+    }
+
     console.log(`📊 上传完成: ${successCount}/${filesToUpload.length}`);
 };

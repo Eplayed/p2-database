@@ -50,7 +50,8 @@ const BASE_URL = "https://poe.ninja/poe2/builds";
 const isDev = process.env.NODE_ENV === "dev";
 const isCI = process.env.CI === "true";  // 检测是否在 CI 环境
 // 根据环境设置抓取深度：dev=1个，production=7个
-const MAX_RANK = isDev ? 1 : Number(process.env.MAX_RANK || 7);
+const MAX_RANK = Number(process.env.MAX_RANK || (isDev ? 1 : 7));
+const MAX_CLASSES = Number(process.env.MAX_CLASSES || 0);
 
 // 浏览器定期重启策略（每处理 N 个职业后重启）
 const BROWSER_RESTART_INTERVAL = isCI ? 3 : 10;  // CI 环境更频繁重启
@@ -901,7 +902,7 @@ async function safeClosePage(page) {
 
 // ========== 新 API 辅助函数 ==========
 
-async function getBuildId(leagueUrl = 'vaal') {
+async function getBuildId(preferredLeagueUrl = process.env.POE_NINJA_LEAGUE || '') {
   return new Promise((resolve, reject) => {
     const url = 'https://poe.ninja/poe2/api/data/index-state';
     https.get(url, {
@@ -916,12 +917,21 @@ async function getBuildId(leagueUrl = 'vaal') {
       res.on('end', () => {
         try {
           const json = JSON.parse(data);
+          const indexedLeague = json.economyLeagues?.find(
+            league => league.indexed && !league.hardcore
+          );
+          const leagueUrl = preferredLeagueUrl || indexedLeague?.url;
           const sv = json.snapshotVersions?.find(s => s.url === leagueUrl);
           if (sv) {
             console.log(`   📌 Build ID: ${sv.version} (${sv.snapshotName})`);
-            resolve({ buildId: sv.version, overview: sv.snapshotName });
+            console.log(`   🏷️  当前赛季: ${sv.name} (${sv.url})`);
+            resolve({
+              buildId: sv.version,
+              overview: sv.snapshotName,
+              leagueUrl: sv.url,
+            });
           } else {
-            reject(new Error(`lease ${leagueUrl} not found in index-state`));
+            reject(new Error(`league ${leagueUrl || '(empty)'} not found in index-state`));
           }
         } catch (e) {
           reject(new Error(`Index-state parse error: ${e.message}`));
@@ -931,14 +941,14 @@ async function getBuildId(leagueUrl = 'vaal') {
   });
 }
 
-async function fetchCharacterData(buildId, account, name, overview) {
+async function fetchCharacterData(buildId, account, name, overview, leagueUrl) {
   return new Promise((resolve, reject) => {
     const params = `account=${encodeURIComponent(account)}&name=${encodeURIComponent(name)}&overview=${overview}&timeMachine=`;
     const url = `https://poe.ninja/poe2/api/builds/${buildId}/character?${params}`;
     https.get(url, {
       headers: {
         'User-Agent': USER_AGENT,
-        'Referer': `https://poe.ninja/poe2/builds/vaal/character/${encodeURIComponent(account)}/${encodeURIComponent(name)}`,
+        'Referer': `${BASE_URL}/${leagueUrl}/character/${encodeURIComponent(account)}/${encodeURIComponent(name)}`,
         'Accept': 'application/json',
       }
     }, (res) => {
@@ -964,7 +974,7 @@ async function runTask() {
   let browser = null;
   let page = null;
   let classProcessedCount = 0;  // 记录已处理的职业数
-  let buildId, overview;  // poe.ninja build ID
+  let buildId, overview, leagueUrl;  // poe.ninja build ID
   
   // 全局错误处理标志
   let shouldStop = false;
@@ -972,51 +982,51 @@ async function runTask() {
   try {
     // 阶段 0: 获取 Build ID（纯 HTTP，不需要浏览器）
     console.log("\n0️⃣  获取 Build ID...");
-    ({ buildId, overview } = await getBuildId('vaal'));
+    ({ buildId, overview, leagueUrl } = await getBuildId());
+    const leagueBaseUrl = `${BASE_URL}/${leagueUrl}`;
 
     // 阶段 1: 创建浏览器并获取职业列表
     browser = await createBrowser();
     page = await createPage(browser);
     
     console.log("\n1️⃣  获取职业列表...");
-    await page.goto(BASE_URL, {
+    await page.goto(leagueBaseUrl, {
       waitUntil: "domcontentloaded",
       timeout: 120000,
     });
 
     try {
-      await page.waitForFunction(
-        () => document.body.innerText.includes("FATE OF THE VAAL"),
-        { timeout: 30000 }
-      );
+      await page.waitForSelector('[role="option"] .class-name', { timeout: 30000 });
     } catch (e) {}
 
-    const classList = await page.evaluate(() => {
+    let classList = await page.evaluate((activeLeagueUrl) => {
       const results = [];
-      const links = Array.from(document.querySelectorAll('a[href*="class="]'));
-      links.forEach((link) => {
-        const href = link.href;
-        if (
-          href.includes("/builds/vaal?") &&
-          !href.includes("hc-") &&
-          !href.includes("ssf-") &&
-          !href.includes("ruthless-")
-        ) {
-          const h4 = link.querySelector("h4");
-          const name = h4 ? h4.innerText.trim() : "";
-          if (name && !results.find((r) => r.name === name)) {
-            results.push({ name, link: href });
-          }
+      const options = Array.from(document.querySelectorAll('[role="option"]'));
+      options.forEach((option) => {
+        const name = option.querySelector(".class-name")?.innerText.trim() || "";
+        const percentageText = option.querySelector(".class-percentage")?.innerText.trim() || "";
+        const percentageMatch = option.style.borderImageSource.match(/([\d.]+)%/);
+        const percent = percentageMatch
+          ? Number(percentageMatch[1])
+          : Number.parseFloat(percentageText);
+        if (name && !results.find((result) => result.name === name)) {
+          results.push({
+            name,
+            link: `${location.origin}/poe2/builds/${activeLeagueUrl}?class=${encodeURIComponent(name)}`,
+            percent: Number.isFinite(percent) ? percent : 0,
+          });
         }
       });
       return results;
-    });
+    }, leagueUrl);
+    if (MAX_CLASSES > 0) {
+      classList = classList.slice(0, MAX_CLASSES);
+    }
 
     console.log(`   ✅ 发现 ${classList.length} 个职业`);
-    fs.writeFileSync(
-      path.join(OUTPUT_DIR, "classes.json"),
-      JSON.stringify(classList, null, 2)
-    );
+    if (classList.length === 0) {
+      throw new Error(`未识别到职业列表，停止写入 release 数据。赛季: ${leagueUrl}`);
+    }
 
     // 阶段 2: 遍历职业 -> 抓取详情并翻译
     console.log("\n2️⃣  抓取并翻译玩家数据...");
@@ -1093,7 +1103,7 @@ async function runTask() {
 
         try {
           // v3.1 新方案：直接调用 HTTP API 获取角色数据（比 Puppeteer 快 10 倍+）
-          capturedData = await fetchCharacterData(buildId, player.account, player.name, overview);
+          capturedData = await fetchCharacterData(buildId, player.account, player.name, overview, leagueUrl);
           if (!capturedData) throw new Error("Character API 返回空数据");
 
           // 导航到角色页面（仅用于天赋树截图，数据已通过 API 获取）
@@ -1279,7 +1289,10 @@ async function runTask() {
       
       // 🔧 定期重启浏览器（防止内存泄漏和协议错误）
       classProcessedCount++;
-      if (classProcessedCount >= BROWSER_RESTART_INTERVAL && classProcessedCount < classList.length) {
+      if (
+        classProcessedCount % BROWSER_RESTART_INTERVAL === 0 &&
+        classProcessedCount < classList.length
+      ) {
         console.log(`   🔄 定期重启浏览器 (已处理 ${classProcessedCount} 个职业)...`);
         await safeClosePage(page);
         try {
@@ -1295,7 +1308,7 @@ async function runTask() {
         
         // 重新访问基础页面（保持会话）
         try {
-          await page.goto(BASE_URL, { waitUntil: "domcontentloaded", timeout: 60000 });
+          await page.goto(leagueBaseUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
         } catch (e) {
           console.warn(`   ⚠️ 重新访问基础页面失败: ${e.message}`);
         }
@@ -1304,6 +1317,12 @@ async function runTask() {
 
     // 阶段 3: 保存翻译后的数据
     console.log("\n3️⃣ 保存翻译数据...");
+    const detailedPlayerCount = Object.values(allLadders)
+      .reduce((sum, players) => sum + players.length, 0);
+    if (detailedPlayerCount === 0) {
+      throw new Error(`未抓取到任何玩家详情，停止写入 release 数据。赛季: ${leagueUrl}`);
+    }
+
     const PLAYER_DATA_DIR = path.join(OUTPUT_DIR, "players");
     // 如果有翻译数据，则删除旧的翻译数据
     if (fs.existsSync(PLAYER_DATA_DIR)) {
@@ -1363,6 +1382,9 @@ async function runTask() {
     // 保存主索引文件
     const lightData = {
       updateTime: new Date().toISOString(),
+      league: leagueUrl,
+      overview,
+      buildId,
       classes: classList,
       ladders: lightLadders,
       translationInfo: {
@@ -1372,6 +1394,11 @@ async function runTask() {
         translatedAt: new Date().toISOString(),
       },
     };
+
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, "classes.json"),
+      JSON.stringify(classList, null, 2)
+    );
 
     fs.writeFileSync(
       path.join(OUTPUT_DIR, "all_ladders_translated.json"),

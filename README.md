@@ -53,6 +53,9 @@ npm install
 # 天梯数据，生产环境
 npm run crawl:ladder
 
+# 天梯数据并上传 OSS，生产环境
+CI=true NODE_ENV=production node crawlers/run.js --ladder --upload
+
 # 天梯数据，开发环境
 npm run crawl:ladder:dev
 
@@ -101,6 +104,10 @@ npm run crawl:story-guide:upload
 # 上传 translated-data/{env} 到 OSS
 NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 ```
+
+天梯爬虫会从 poe.ninja `index-state` 自动选择当前已索引的国际服赛季。排查历史赛季时，可临时使用 `POE_NINJA_LEAGUE=<league-url>` 覆盖自动选择结果。抓取结果为空时脚本会直接失败退出，不会覆盖已有 release 数据。
+
+经济爬虫也会自动选择当前已索引的国际服赛季。生产上传时会同时更新 `poe2-ladders/release/economy.json` 和小程序仍在使用的兼容路径 `poe2-economy/economy.json`。
 
 ## 开服后推荐操作
 

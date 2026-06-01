@@ -93,7 +93,6 @@ function runSpawn(scriptPath, label) {
     const child = spawn('node', [scriptPath], {
       cwd: path.join(__dirname, '..'),
       stdio: 'inherit',
-      shell: true,
       env: { ...process.env },
     });
     child.on('close', (code) => {
