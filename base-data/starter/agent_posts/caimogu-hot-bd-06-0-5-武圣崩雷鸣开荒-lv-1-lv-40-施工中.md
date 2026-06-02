@@ -8,13 +8,13 @@ class: "僧侣"
 ascendancy: 
 mainSkill: "节杖打击"
 tags: "升级, 僧侣"
-views: 966
+views: 1946
 replies: 0
-likes: 2
-favorites: 7
-hotScore: 1766
+likes: 4
+favorites: 12
+hotScore: 3346
 confidence: low
-fetchedAt: "2026-05-29T23:37:18.495Z"
+fetchedAt: "2026-06-01T14:17:26.301Z"
 ---
 
 # 0.5 武圣崩雷鸣开荒 Lv.1~Lv.40 [施工中]

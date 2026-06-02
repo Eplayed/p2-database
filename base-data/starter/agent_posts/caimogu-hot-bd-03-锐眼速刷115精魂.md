@@ -8,13 +8,13 @@ class: "游侠"
 ascendancy: "锐眼"
 mainSkill: "冰霜射击"
 tags: "游侠, 锐眼"
-views: 655
+views: 1230
 replies: 0
 likes: 1
-favorites: 6
-hotScore: 1305
+favorites: 8
+hotScore: 2080
 confidence: low
-fetchedAt: "2026-05-29T23:37:18.487Z"
+fetchedAt: "2026-06-01T14:17:26.299Z"
 ---
 
 # 锐眼速刷115精魂

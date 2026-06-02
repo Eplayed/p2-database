@@ -8,13 +8,13 @@ class: "游侠"
 ascendancy: "锐眼"
 mainSkill: "连枷打击"
 tags: "游侠, 锐眼"
-views: 1147
+views: 1218
 replies: 0
 likes: 1
 favorites: 4
-hotScore: 1597
+hotScore: 1668
 confidence: low
-fetchedAt: "2026-05-29T23:37:18.497Z"
+fetchedAt: "2026-06-01T14:17:26.302Z"
 ---
 
 # （备战0.5）锐眼电矛开荒

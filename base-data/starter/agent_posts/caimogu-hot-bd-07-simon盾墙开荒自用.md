@@ -8,13 +8,13 @@ class: "战士"
 ascendancy: "战争使者"
 mainSkill: "七伤破"
 tags: "升级, 战士, 战争使者"
-views: 928
+views: 1098
 replies: 0
 likes: 1
 favorites: 5
-hotScore: 1478
+hotScore: 1648
 confidence: low
-fetchedAt: "2026-05-29T23:37:18.496Z"
+fetchedAt: "2026-06-01T14:17:26.301Z"
 ---
 
 # Simon盾墙开荒自用

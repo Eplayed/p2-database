@@ -13,8 +13,8 @@
     "血法师"
   ],
   "sourceMetrics": {
-    "hotScore": 456,
-    "views": 356,
+    "hotScore": 670,
+    "views": 570,
     "replies": 0,
     "likes": 0,
     "favorites": 1
@@ -88,13 +88,13 @@
       ]
     }
   ],
-  "extractedAt": "2026-05-29T23:37:19.182Z",
+  "extractedAt": "2026-06-01T14:17:26.833Z",
   "sources": [
     {
       "name": "踩蘑菇热门BD",
       "type": "agent_candidate",
       "url": "https://poe2.caimogu.cc/planner#/plan/0OWEThKA",
-      "checkedAt": "2026-05-29",
+      "checkedAt": "2026-06-01",
       "confidence": "low",
       "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
     }

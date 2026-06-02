@@ -8,13 +8,13 @@ class: "女巫"
 ascendancy: "血法师"
 mainSkill: "魔力残片"
 tags: "女巫, 血法师"
-views: 356
+views: 570
 replies: 0
 likes: 0
 favorites: 1
-hotScore: 456
+hotScore: 670
 confidence: low
-fetchedAt: "2026-05-29T23:37:18.487Z"
+fetchedAt: "2026-06-01T14:17:26.300Z"
 ---
 
 # 诅咒光环最终版本寂灭弹

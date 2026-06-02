@@ -1,5 +1,442 @@
 [
   {
+    "id": "caimogu_6m2ktshg",
+    "status": "community_candidate",
+    "tier": "A",
+    "class": "Huntress",
+    "ascendancy": "",
+    "title": "靈魂行者旋風王朝玩完不笑可以確診抑鬱了！",
+    "mainSkill": "回旋挥斩",
+    "author": "玩家00037754",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
+    "recommendation": {
+      "starterScore": 82,
+      "difficulty": 3,
+      "gearDependency": 3,
+      "bossing": 3,
+      "mapping": 5,
+      "survival": 3
+    },
+    "tags": [
+      "开服热门",
+      "社区验证",
+      "升级",
+      "攻坚",
+      "独狼模式",
+      "女猎手"
+    ],
+    "summary": "来自踩蘑菇开服热门 BD：女猎手 回旋挥斩。当前浏览 2113、收藏 16，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "pros": [
+      "开服社区热度较高",
+      "带有原帖技能装配",
+      "后续可按真实反馈继续校准"
+    ],
+    "cons": [
+      "候选数据仍有缺项，建议查看原帖确认"
+    ],
+    "skills": [
+      {
+        "groupName": "1. 默认",
+        "note": "回旋挥斩",
+        "links": [
+          {
+            "name": "回旋挥斩",
+            "isSupport": false
+          },
+          {
+            "name": "狂怒 III",
+            "isSupport": true
+          },
+          {
+            "name": "击退",
+            "isSupport": true
+          },
+          {
+            "name": "快速攻击 III",
+            "isSupport": true
+          },
+          {
+            "name": "瑞佛的凶猛",
+            "isSupport": true
+          },
+          {
+            "name": "精准增强 II",
+            "isSupport": true
+          }
+        ]
+      },
+      {
+        "groupName": "1. 默认",
+        "note": "旋龙",
+        "links": [
+          {
+            "name": "旋龙",
+            "isSupport": false
+          },
+          {
+            "name": "投射物加速 III",
+            "isSupport": true
+          },
+          {
+            "name": "封冻枢纽",
+            "isSupport": true
+          },
+          {
+            "name": "持续时间延长 II",
+            "isSupport": true
+          },
+          {
+            "name": "齐射",
+            "isSupport": true
+          },
+          {
+            "name": "撤退 III",
+            "isSupport": true
+          }
+        ]
+      },
+      {
+        "groupName": "1. 默认",
+        "note": "冰尖箭矢",
+        "links": [
+          {
+            "name": "冰尖箭矢",
+            "isSupport": false
+          },
+          {
+            "name": "元素军械 II",
+            "isSupport": true
+          },
+          {
+            "name": "元素集中",
+            "isSupport": true
+          },
+          {
+            "name": "冷却回复 II",
+            "isSupport": true
+          },
+          {
+            "name": "终结 II",
+            "isSupport": true
+          }
+        ]
+      },
+      {
+        "groupName": "1. 默认",
+        "note": "寒冰之捷",
+        "links": [
+          {
+            "name": "寒冰之捷",
+            "isSupport": false
+          },
+          {
+            "name": "冰霜协调",
+            "isSupport": true
+          },
+          {
+            "name": "范围扩大 II",
+            "isSupport": true
+          },
+          {
+            "name": "元素军械 II",
+            "isSupport": true
+          }
+        ]
+      },
+      {
+        "groupName": "1. 默认",
+        "note": "连炮",
+        "links": [
+          {
+            "name": "连炮",
+            "isSupport": false
+          },
+          {
+            "name": "快速施法 II",
+            "isSupport": true
+          },
+          {
+            "name": "冷却回复 II",
+            "isSupport": true
+          },
+          {
+            "name": "强化能量球",
+            "isSupport": true
+          },
+          {
+            "name": "永续充能",
+            "isSupport": true
+          }
+        ]
+      },
+      {
+        "groupName": "1. 默认",
+        "note": "战斗狂怒",
+        "links": [
+          {
+            "name": "战斗狂怒",
+            "isSupport": false
+          },
+          {
+            "name": "能量球激增 II",
+            "isSupport": true
+          }
+        ]
+      },
+      {
+        "groupName": "1. 默认",
+        "note": "刺骨寒冰",
+        "links": [
+          {
+            "name": "刺骨寒冰",
+            "isSupport": false
+          },
+          {
+            "name": "霜咬 I",
+            "isSupport": true
+          }
+        ]
+      },
+      {
+        "groupName": "1. 默认",
+        "note": "驯服野兽",
+        "links": [
+          {
+            "name": "驯服野兽",
+            "isSupport": false
+          },
+          {
+            "name": "忠诚",
+            "isSupport": true
+          }
+        ]
+      }
+    ],
+    "leveling": [
+      "优先按原帖技能装配推进剧情。",
+      "剧情阶段先补生命、抗性和移动速度，再追求输出。",
+      "进入异界后按天梯和价格变化决定是否转型。"
+    ],
+    "levelingPlan": [
+      {
+        "stage": "开荒：BD信息",
+        "summary": "技能：1. 默认 / 回旋挥斩 + 狂怒 III + 击退 + 快速攻击 III + 瑞佛的凶猛 + 精准增强 II",
+        "mainSkills": [
+          "技能：1. 默认 / 回旋挥斩 + 狂怒 III + 击退 + 快速攻击 III + 瑞佛的凶猛 + 精准增强 II",
+          "技能：1. 默认 / 旋龙 + 投射物加速 III + 封冻枢纽 + 持续时间延长 II + 齐射 + 撤退 III",
+          "技能：1. 默认 / 冰尖箭矢 + 元素军械 II + 元素集中 + 冷却回复 II + 终结 II",
+          "技能：1. 默认 / 寒冰之捷 + 冰霜协调 + 范围扩大 II + 元素军械 II",
+          "技能：1. 默认 / 连炮 + 快速施法 II + 冷却回复 II + 强化能量球 + 永续充能",
+          "技能：1. 默认 / 战斗狂怒 + 能量球激增 II",
+          "技能：1. 默认 / 刺骨寒冰 + 霜咬 I",
+          "技能：1. 默认 / 驯服野兽 + 忠诚"
+        ],
+        "passives": [
+          "天赋：详见原帖天赋树，候选入库前需要人工确认关键路径。"
+        ],
+        "gearTips": [
+          "装备：十字长矛",
+          "装备：红玉戒指",
+          "装备：破旧兜帽",
+          "装备：皮革背心",
+          "装备：黄玉戒指",
+          "装备：愤怒短杖",
+          "装备：生皮短靴",
+          "装备：绒皮护腕"
+        ],
+        "ascendancy": [],
+        "transition": [],
+        "notes": [
+          "原帖：https://poe2.caimogu.cc/planner#/plan/6M2KTshg",
+          "作者：玩家00037754",
+          "职业：女猎手",
+          "标签：升级、攻坚、独狼模式、女猎手"
+        ],
+        "sourceLines": [
+          "原帖：https://poe2.caimogu.cc/planner#/plan/6M2KTshg",
+          "作者：玩家00037754",
+          "职业：女猎手",
+          "标签：升级、攻坚、独狼模式、女猎手",
+          "技能：1. 默认 / 回旋挥斩 + 狂怒 III + 击退 + 快速攻击 III + 瑞佛的凶猛 + 精准增强 II",
+          "技能：1. 默认 / 旋龙 + 投射物加速 III + 封冻枢纽 + 持续时间延长 II + 齐射 + 撤退 III",
+          "技能：1. 默认 / 冰尖箭矢 + 元素军械 II + 元素集中 + 冷却回复 II + 终结 II",
+          "技能：1. 默认 / 寒冰之捷 + 冰霜协调 + 范围扩大 II + 元素军械 II",
+          "技能：1. 默认 / 连炮 + 快速施法 II + 冷却回复 II + 强化能量球 + 永续充能",
+          "技能：1. 默认 / 战斗狂怒 + 能量球激增 II",
+          "技能：1. 默认 / 刺骨寒冰 + 霜咬 I",
+          "技能：1. 默认 / 驯服野兽 + 忠诚",
+          "装备：十字长矛",
+          "装备：红玉戒指",
+          "装备：破旧兜帽",
+          "装备：皮革背心",
+          "装备：黄玉戒指",
+          "装备：愤怒短杖",
+          "装备：生皮短靴",
+          "装备：绒皮护腕",
+          "天赋：详见原帖天赋树，候选入库前需要人工确认关键路径。"
+        ]
+      },
+      {
+        "stage": "开荒：作者说明",
+        "summary": "光環技能：戰旗換三項（戰旗加成高但不好用且不常駐）",
+        "mainSkills": [
+          "光環技能：戰旗換三項（戰旗加成高但不好用且不常駐）",
+          "磨難之軛-血石項鍊 每種異常=20more 通過升華獲得常駐感電、技能體系本身自帶常駐緩=40more",
+          "升華技能：靈現奔鼠-致盲2-閃電曝露-感電-感電傳導（這個技能模擬器目前沒有更新）",
+          "副手權杖：1、徵兆權杖 - 賦予技能: 絕滅恨惡（可以蹭暴擊率詞綴帶高精魂百分比就行其他無所謂）",
+          "靈體可以抓火焰或者冰霜地面的（推薦火焰、因為輔助技能有冰凍附加冰龍捲、升華有感電地面此時BB帶火焰地面=根本不缺元素永不空風）",
+          "天賦加點優先點出下方與死共舞，然後往上走（如想要更絲滑高效的刷圖體驗可以自行補足足夠的範圍、投射物速度、投射物數量、綠球上限、彈幕的技能CD等相關詞條）"
+        ],
+        "passives": [
+          "世界第一競速BD分享原貼鏈接：https://mobalytics.gg/poe-2/builds/twister-huntress-levelling?weaponSet=set2&ws-ngf5-f7d82102-7e77-4a44-ad24-33b67e8ae7bf=activeVariantId%2C3#deb32975-e1df-4edb-8796-5d77c0f47021-passive-tree-2",
+          "5.30 3点46（天赋点武器1缺失4点 补齐！）"
+        ],
+        "gearTips": [
+          "項鏈推薦：1、自製項鏈優先投射物等級>抗性\\生命",
+          "副手攻速武器：1、去劇情第二章商人購買白、藍色1.7攻速基地的武器，使用高階迅捷精華可獲取2.1左右的攻速武器",
+          "購買傳奇長矛：天銀 羽翅長矛（滿roll就是百分之30攻速與自製武器差距僅5%並且價格很貴、建議價格下來了在購買）",
+          "戒指、手套任意高點傷+抗性（屬性不夠補屬性也行）",
+          "不然帶靈體也可以帶火焰地面的暗金傳奇鞋子 看個人",
+          "追求掠食本能开启亚马逊或者灵行者的猫头鹰装备。",
+          "生命药剂恢复效果提高30%",
+          "全局防御提高15% 或 所有元素抗性+5% 或 冷却回复速度提高12%",
+          "武器天賦1（全部為攻速加點 放一把高攻速武器至欄位1並設置迴旋斬綁定武器1）",
+          "武器天賦2（全部為傷害加點 放高DPS武器為武器欄位2並設置旋風綁定武器2）",
+          "5.30 3点46（天赋点武器1缺失4点 补齐！）"
+        ],
+        "ascendancy": [],
+        "transition": [],
+        "notes": [
+          "5.31更新",
+          "胸甲推薦：西里的戰衣 20額外冰與高額生存（前期略貴 國際服第二天11D）",
+          "鴨爪：",
+          "引導之掌：眼 神殿權杖 引導之掌：靈 神殿權杖 引導之掌：心 神殿權杖 任意3選一 額外冰最優解、 3、幻夢者之掌（爆炸神龕清圖很絲滑 很貴氪佬考慮的）",
+          "雞爪-火焰巔峰掉落、也是用的最多的中期可考慮更換",
+          "基地看個人愛好、有些人喜歡走閃避、閃盾、純盾、純血、護甲、閃避+護甲 這些都是可以的",
+          "靈活搭配都行 最省事的就是純閃避|血量（不用補屬性但是生存面不如其他類型）",
+          "5.30最新更新（靈魂行者 投射物數量+投射物效果翻倍+感電地面升華）",
+          "天賦更新85+ 全屏大龍捲 毀天滅地（新賽季怪物強度大加強捨棄近戰貼臉肉搏的方式）",
+          "輸出手法：翻滾觸發升華加成+旋風X3+彈幕+旋風=全屏清空！",
+          "被動加成：",
+          "泰坦之谷：",
+          "+1 魅力，30% 充能生成（左）",
+          "毒液地窖药剂：",
+          "眩晕阈值提高 25%",
+          "弃坑监狱礼拜堂：",
+          "亡者图腾殿堂：",
+          "力量、敏捷、智力各+5",
+          "七柱之基玛：",
+          "操作手法：",
+          "使用旋风斩2-3次之前旋风.",
+          "当你获得时冰尖箭，在之前施放旋风。它将的物理伤害旋风转换为冰霜伤害，使其能够通过冻结并产生冰冻地面霜冻枢纽.",
+          "你也可以使用弹幕来清理大群敌人并提升单体目标伤害。",
+          "单体目标：",
+          "与清理相同，但使用战争旗帜，这会提供25%的额外攻击伤害，并提高攻击速度。",
+          "你还拥有冰冻印记以获得更多的冻结积聚，并获得30%的冷气伤害。",
+          "你需要使用格挡 + 寒霜之牙对首领使用以获得寒冷地面。当你获得冰尖箭和霜冻枢纽开启旋风你可以停止使用格挡和寒霜之牙.",
+          "備註：第一章冰霜地面解決方法：（使用格擋后的刺骨寒冰反擊產生冰霜地面至等級14級更換冰蔟箭）",
+          "虎牙皮皮楓 直播房號：132867（因為最近在國際服練習開荒用的繁體還望見諒！）"
+        ],
+        "sourceLines": [
+          "世界第一競速BD分享原貼鏈接：https://mobalytics.gg/poe-2/builds/twister-huntress-levelling?weaponSet=set2&ws-ngf5-f7d82102-7e77-4a44-ad24-33b67e8ae7bf=activeVariantId%2C3#deb32975-e1df-4edb-8796-5d77c0f47021-passive-tree-2",
+          "5.31更新",
+          "光環技能：戰旗換三項（戰旗加成高但不好用且不常駐）",
+          "項鏈推薦：1、自製項鏈優先投射物等級>抗性\\生命",
+          "磨難之軛-血石項鍊 每種異常=20more 通過升華獲得常駐感電、技能體系本身自帶常駐緩=40more",
+          "胸甲推薦：西里的戰衣 20額外冰與高額生存（前期略貴 國際服第二天11D）",
+          "升華技能：靈現奔鼠-致盲2-閃電曝露-感電-感電傳導（這個技能模擬器目前沒有更新）",
+          "副手權杖：1、徵兆權杖 - 賦予技能: 絕滅恨惡（可以蹭暴擊率詞綴帶高精魂百分比就行其他無所謂）",
+          "鴨爪：",
+          "引導之掌：眼 神殿權杖 引導之掌：靈 神殿權杖 引導之掌：心 神殿權杖 任意3選一 額外冰最優解、 3、幻夢者之掌（爆炸神龕清圖很絲滑 很貴氪佬考慮的）",
+          "雞爪-火焰巔峰掉落、也是用的最多的中期可考慮更換",
+          "副手攻速武器：1、去劇情第二章商人購買白、藍色1.7攻速基地的武器，使用高階迅捷精華可獲取2.1左右的攻速武器",
+          "購買傳奇長矛：天銀 羽翅長矛（滿roll就是百分之30攻速與自製武器差距僅5%並且價格很貴、建議價格下來了在購買）",
+          "戒指、手套任意高點傷+抗性（屬性不夠補屬性也行）",
+          "基地看個人愛好、有些人喜歡走閃避、閃盾、純盾、純血、護甲、閃避+護甲 這些都是可以的",
+          "靈活搭配都行 最省事的就是純閃避|血量（不用補屬性但是生存面不如其他類型）",
+          "5.30最新更新（靈魂行者 投射物數量+投射物效果翻倍+感電地面升華）",
+          "天賦更新85+ 全屏大龍捲 毀天滅地（新賽季怪物強度大加強捨棄近戰貼臉肉搏的方式）",
+          "輸出手法：翻滾觸發升華加成+旋風X3+彈幕+旋風=全屏清空！",
+          "靈體可以抓火焰或者冰霜地面的（推薦火焰、因為輔助技能有冰凍附加冰龍捲、升華有感電地面此時BB帶火焰地面=根本不缺元素永不空風）",
+          "不然帶靈體也可以帶火焰地面的暗金傳奇鞋子 看個人",
+          "被動加成：",
+          "追求掠食本能开启亚马逊或者灵行者的猫头鹰装备。",
+          "泰坦之谷：",
+          "+1 魅力，30% 充能生成（左）",
+          "毒液地窖药剂：",
+          "眩晕阈值提高 25%",
+          "弃坑监狱礼拜堂：",
+          "生命药剂恢复效果提高30%",
+          "亡者图腾殿堂：",
+          "力量、敏捷、智力各+5",
+          "七柱之基玛：",
+          "全局防御提高15% 或 所有元素抗性+5% 或 冷却回复速度提高12%",
+          "操作手法：",
+          "使用旋风斩2-3次之前旋风.",
+          "当你获得时冰尖箭，在之前施放旋风。它将的物理伤害旋风转换为冰霜伤害，使其能够通过冻结并产生冰冻地面霜冻枢纽.",
+          "你也可以使用弹幕来清理大群敌人并提升单体目标伤害。",
+          "单体目标：",
+          "与清理相同，但使用战争旗帜，这会提供25%的额外攻击伤害，并提高攻击速度。",
+          "你还拥有冰冻印记以获得更多的冻结积聚，并获得30%的冷气伤害。",
+          "你需要使用格挡 + 寒霜之牙对首领使用以获得寒冷地面。当你获得冰尖箭和霜冻枢纽开启旋风你可以停止使用格挡和寒霜之牙.",
+          "備註：第一章冰霜地面解決方法：（使用格擋后的刺骨寒冰反擊產生冰霜地面至等級14級更換冰蔟箭）",
+          "武器天賦1（全部為攻速加點 放一把高攻速武器至欄位1並設置迴旋斬綁定武器1）",
+          "武器天賦2（全部為傷害加點 放高DPS武器為武器欄位2並設置旋風綁定武器2）",
+          "天賦加點優先點出下方與死共舞，然後往上走（如想要更絲滑高效的刷圖體驗可以自行補足足夠的範圍、投射物速度、投射物數量、綠球上限、彈幕的技能CD等相關詞條）",
+          "虎牙皮皮楓 直播房號：132867（因為最近在國際服練習開荒用的繁體還望見諒！）",
+          "5.30 3点46（天赋点武器1缺失4点 补齐！）"
+        ]
+      }
+    ],
+    "equipment": {
+      "coreUniques": [],
+      "rarePriority": [
+        {
+          "slot": "武器",
+          "stats": [
+            "技能等级",
+            "攻击/施法速度",
+            "核心伤害词缀"
+          ]
+        },
+        {
+          "slot": "防具",
+          "stats": [
+            "生命",
+            "抗性",
+            "移动速度"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "name": "踩蘑菇热门 BD",
+        "type": "community_agent",
+        "url": "https://poe2.caimogu.cc/planner#/plan/6M2KTshg",
+        "checkedAt": "2026-06-01",
+        "confidence": "low",
+        "note": "由热门 BD 候选池提升，原候选 reviewHints: 缺少升华/转职、缺少升华/转职/转型节点"
+      }
+    ],
+    "agentReview": {
+      "sourceCandidateId": "女猎手-靈魂行者旋風王朝玩完不笑可以確診抑鬱了",
+      "reviewStatus": "needs_review",
+      "promotedAt": "2026-06-01T14:17:27.186Z",
+      "reviewHints": [
+        "缺少升华/转职",
+        "缺少升华/转职/转型节点"
+      ],
+      "sourceMetrics": {
+        "hotScore": 3963,
+        "views": 2113,
+        "replies": 0,
+        "likes": 5,
+        "favorites": 16
+      }
+    }
+  },
+  {
     "id": "caimogu_5iukf51t",
     "status": "community_hot",
     "tier": "S",
@@ -8,7 +445,7 @@
     "title": "0.5雷弹COC",
     "mainSkill": "魔力残片",
     "author": "ˇ",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
     "recommendation": {
       "starterScore": 92,
       "difficulty": 4,
@@ -27,7 +464,7 @@
       "硬核模式",
       "女巫"
     ],
-    "summary": "来自踩蘑菇开服热门 BD：巫妖 魔力残片。当前浏览 849、收藏 9，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "summary": "来自踩蘑菇开服热门 BD：巫妖 魔力残片。当前浏览 1422、收藏 11，适合作为社区开荒候选，发布前仍保留人工复核标记。",
     "pros": [
       "开服社区热度较高",
       "带有原帖技能装配",
@@ -333,7 +770,7 @@
         "name": "踩蘑菇热门 BD",
         "type": "community_agent",
         "url": "https://poe2.caimogu.cc/planner#/plan/5IUKF51t",
-        "checkedAt": "2026-05-29",
+        "checkedAt": "2026-06-01",
         "confidence": "medium",
         "note": "由热门 BD 候选池提升，原候选 reviewHints: 无"
       }
@@ -341,29 +778,29 @@
     "agentReview": {
       "sourceCandidateId": "女巫-巫妖-0-5雷弹coc",
       "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.449Z",
+      "promotedAt": "2026-06-01T14:17:27.187Z",
       "reviewHints": [],
       "sourceMetrics": {
-        "hotScore": 1849,
-        "views": 849,
+        "hotScore": 2672,
+        "views": 1422,
         "replies": 0,
-        "likes": 2,
-        "favorites": 9
+        "likes": 3,
+        "favorites": 11
       }
     }
   },
   {
     "id": "caimogu_rhiila7d",
     "status": "community_hot",
-    "tier": "A",
+    "tier": "S",
     "class": "Ranger",
     "ascendancy": "Deadeye",
     "title": "銳眼旋風升级",
     "mainSkill": "闪电箭矢",
     "author": "我欲乘风去明月",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
     "recommendation": {
-      "starterScore": 83,
+      "starterScore": 92,
       "difficulty": 3,
       "gearDependency": 3,
       "bossing": 3,
@@ -373,11 +810,12 @@
     "tags": [
       "开服热门",
       "社区验证",
+      "高热度",
       "升级",
       "游侠",
       "锐眼"
     ],
-    "summary": "来自踩蘑菇开服热门 BD：锐眼 闪电箭矢。当前浏览 442、收藏 5，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "summary": "来自踩蘑菇开服热门 BD：锐眼 闪电箭矢。当前浏览 876、收藏 9，适合作为社区开荒候选，发布前仍保留人工复核标记。",
     "pros": [
       "开服社区热度较高",
       "带有原帖技能装配",
@@ -703,7 +1141,7 @@
         "name": "踩蘑菇热门 BD",
         "type": "community_agent",
         "url": "https://poe2.caimogu.cc/planner#/plan/RHIila7d",
-        "checkedAt": "2026-05-29",
+        "checkedAt": "2026-06-01",
         "confidence": "medium",
         "note": "由热门 BD 候选池提升，原候选 reviewHints: 无"
       }
@@ -711,14 +1149,14 @@
     "agentReview": {
       "sourceCandidateId": "游侠-锐眼-銳眼旋風升级",
       "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.450Z",
+      "promotedAt": "2026-06-01T14:17:27.187Z",
       "reviewHints": [],
       "sourceMetrics": {
-        "hotScore": 992,
-        "views": 442,
+        "hotScore": 1926,
+        "views": 876,
         "replies": 0,
-        "likes": 1,
-        "favorites": 5
+        "likes": 3,
+        "favorites": 9
       }
     }
   },
@@ -731,7 +1169,7 @@
     "title": "0.5 武圣崩雷鸣开荒 Lv.1~Lv.40 [施工中]",
     "mainSkill": "节杖打击",
     "author": "二分桃酥",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
     "recommendation": {
       "starterScore": 87,
       "difficulty": 3,
@@ -746,7 +1184,7 @@
       "升级",
       "僧侣"
     ],
-    "summary": "来自踩蘑菇开服热门 BD：僧侣 节杖打击。当前浏览 966、收藏 7，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "summary": "来自踩蘑菇开服热门 BD：僧侣 节杖打击。当前浏览 1946、收藏 12，适合作为社区开荒候选，发布前仍保留人工复核标记。",
     "pros": [
       "开服社区热度较高",
       "带有原帖技能装配",
@@ -1181,7 +1619,7 @@
         "name": "踩蘑菇热门 BD",
         "type": "community_agent",
         "url": "https://poe2.caimogu.cc/planner#/plan/0TnhjYmS",
-        "checkedAt": "2026-05-29",
+        "checkedAt": "2026-06-01",
         "confidence": "low",
         "note": "由热门 BD 候选池提升，原候选 reviewHints: 缺少升华/转职"
       }
@@ -1189,31 +1627,31 @@
     "agentReview": {
       "sourceCandidateId": "僧侣-0-5-武圣崩雷鸣开荒-lv-1-lv-40-施工中",
       "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.451Z",
+      "promotedAt": "2026-06-01T14:17:27.187Z",
       "reviewHints": [
         "缺少升华/转职"
       ],
       "sourceMetrics": {
-        "hotScore": 1766,
-        "views": 966,
+        "hotScore": 3346,
+        "views": 1946,
         "replies": 0,
-        "likes": 2,
-        "favorites": 7
+        "likes": 4,
+        "favorites": 12
       }
     }
   },
   {
     "id": "caimogu_co2rduim",
     "status": "community_hot",
-    "tier": "A",
+    "tier": "S",
     "class": "Warrior",
     "ascendancy": "Warbringer",
     "title": "Simon盾墙开荒自用",
     "mainSkill": "七伤破",
     "author": "玩家02715470",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
     "recommendation": {
-      "starterScore": 88,
+      "starterScore": 90,
       "difficulty": 3,
       "gearDependency": 3,
       "bossing": 4,
@@ -1223,12 +1661,13 @@
     "tags": [
       "开服热门",
       "社区验证",
+      "高热度",
       "Boss 稳",
       "升级",
       "战士",
       "战争使者"
     ],
-    "summary": "来自踩蘑菇开服热门 BD：战争使者 七伤破。当前浏览 928、收藏 5，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "summary": "来自踩蘑菇开服热门 BD：战争使者 七伤破。当前浏览 1098、收藏 5，适合作为社区开荒候选，发布前仍保留人工复核标记。",
     "pros": [
       "开服社区热度较高",
       "带有原帖技能装配",
@@ -1456,7 +1895,7 @@
         "name": "踩蘑菇热门 BD",
         "type": "community_agent",
         "url": "https://poe2.caimogu.cc/planner#/plan/cO2RDUIM",
-        "checkedAt": "2026-05-29",
+        "checkedAt": "2026-06-01",
         "confidence": "medium",
         "note": "由热门 BD 候选池提升，原候选 reviewHints: 无"
       }
@@ -1464,11 +1903,11 @@
     "agentReview": {
       "sourceCandidateId": "战士-战争使者-simon盾墙开荒自用",
       "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.451Z",
+      "promotedAt": "2026-06-01T14:17:27.187Z",
       "reviewHints": [],
       "sourceMetrics": {
-        "hotScore": 1478,
-        "views": 928,
+        "hotScore": 1648,
+        "views": 1098,
         "replies": 0,
         "likes": 1,
         "favorites": 5
@@ -1484,7 +1923,7 @@
     "title": "锐眼冰射骑鸟150稀有60移速",
     "mainSkill": "恐喙鸟坐骑",
     "author": "召唤师大王",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
     "recommendation": {
       "starterScore": 92,
       "difficulty": 3,
@@ -1503,7 +1942,7 @@
       "游侠",
       "锐眼"
     ],
-    "summary": "来自踩蘑菇开服热门 BD：锐眼 恐喙鸟坐骑。当前浏览 1338、收藏 5，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "summary": "来自踩蘑菇开服热门 BD：锐眼 恐喙鸟坐骑。当前浏览 1532、收藏 6，适合作为社区开荒候选，发布前仍保留人工复核标记。",
     "pros": [
       "开服社区热度较高",
       "带有原帖技能装配",
@@ -1639,7 +2078,7 @@
         "name": "踩蘑菇热门 BD",
         "type": "community_agent",
         "url": "https://poe2.caimogu.cc/planner#/plan/vz4LDYNy",
-        "checkedAt": "2026-05-29",
+        "checkedAt": "2026-06-01",
         "confidence": "medium",
         "note": "由热门 BD 候选池提升，原候选 reviewHints: 无"
       }
@@ -1647,29 +2086,29 @@
     "agentReview": {
       "sourceCandidateId": "游侠-锐眼-锐眼冰射骑鸟150稀有60移速",
       "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.451Z",
+      "promotedAt": "2026-06-01T14:17:27.187Z",
       "reviewHints": [],
       "sourceMetrics": {
-        "hotScore": 1888,
-        "views": 1338,
+        "hotScore": 2182,
+        "views": 1532,
         "replies": 0,
         "likes": 1,
-        "favorites": 5
+        "favorites": 6
       }
     }
   },
   {
     "id": "caimogu_snsat0ua",
     "status": "community_hot",
-    "tier": "A",
+    "tier": "S",
     "class": "Ranger",
     "ascendancy": "Deadeye",
     "title": "（备战0.5）锐眼电矛开荒",
     "mainSkill": "连枷打击",
     "author": "我要猛刷",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
     "recommendation": {
-      "starterScore": 90,
+      "starterScore": 91,
       "difficulty": 4,
       "gearDependency": 3,
       "bossing": 3,
@@ -1679,11 +2118,12 @@
     "tags": [
       "开服热门",
       "社区验证",
+      "高热度",
       "清图快",
       "游侠",
       "锐眼"
     ],
-    "summary": "来自踩蘑菇开服热门 BD：锐眼 连枷打击。当前浏览 1147、收藏 4，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "summary": "来自踩蘑菇开服热门 BD：锐眼 连枷打击。当前浏览 1218、收藏 4，适合作为社区开荒候选，发布前仍保留人工复核标记。",
     "pros": [
       "开服社区热度较高",
       "带有原帖技能装配",
@@ -1900,7 +2340,7 @@
         "name": "踩蘑菇热门 BD",
         "type": "community_agent",
         "url": "https://poe2.caimogu.cc/planner#/plan/SnsAt0ua",
-        "checkedAt": "2026-05-29",
+        "checkedAt": "2026-06-01",
         "confidence": "medium",
         "note": "由热门 BD 候选池提升，原候选 reviewHints: 无"
       }
@@ -1908,11 +2348,11 @@
     "agentReview": {
       "sourceCandidateId": "游侠-锐眼-备战0-5-锐眼电矛开荒",
       "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.451Z",
+      "promotedAt": "2026-06-01T14:17:27.187Z",
       "reviewHints": [],
       "sourceMetrics": {
-        "hotScore": 1597,
-        "views": 1147,
+        "hotScore": 1668,
+        "views": 1218,
         "replies": 0,
         "likes": 1,
         "favorites": 4
@@ -1928,9 +2368,9 @@
     "title": "游侠榴弹开荒",
     "mainSkill": "战弩射击",
     "author": "ATiw",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
+    "updatedAt": "2026-06-01T14:17:27.184Z",
     "recommendation": {
-      "starterScore": 70,
+      "starterScore": 73,
       "difficulty": 3,
       "gearDependency": 3,
       "bossing": 4,
@@ -1944,7 +2384,7 @@
       "升级",
       "游侠"
     ],
-    "summary": "来自踩蘑菇开服热门 BD：游侠 战弩射击。当前浏览 487、收藏 2，适合作为社区开荒候选，发布前仍保留人工复核标记。",
+    "summary": "来自踩蘑菇开服热门 BD：游侠 战弩射击。当前浏览 601、收藏 3，适合作为社区开荒候选，发布前仍保留人工复核标记。",
     "pros": [
       "开服社区热度较高",
       "带有原帖技能装配",
@@ -2167,7 +2607,7 @@
         "name": "踩蘑菇热门 BD",
         "type": "community_agent",
         "url": "https://poe2.caimogu.cc/planner#/plan/y9vJzeU8",
-        "checkedAt": "2026-05-29",
+        "checkedAt": "2026-06-01",
         "confidence": "low",
         "note": "由热门 BD 候选池提升，原候选 reviewHints: 缺少升华/转职、缺少升华/转职/转型节点"
       }
@@ -2175,230 +2615,17 @@
     "agentReview": {
       "sourceCandidateId": "游侠-游侠榴弹开荒",
       "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.452Z",
+      "promotedAt": "2026-06-01T14:17:27.187Z",
       "reviewHints": [
         "缺少升华/转职",
         "缺少升华/转职/转型节点"
       ],
       "sourceMetrics": {
-        "hotScore": 737,
-        "views": 487,
+        "hotScore": 951,
+        "views": 601,
         "replies": 0,
         "likes": 1,
-        "favorites": 2
-      }
-    }
-  },
-  {
-    "id": "caimogu_b5tv9gav",
-    "status": "community_hot",
-    "tier": "A",
-    "class": "Druid",
-    "ascendancy": "Oracle",
-    "title": "植物德开荒",
-    "mainSkill": "纠缠",
-    "author": "半长风",
-    "updatedAt": "2026-05-29T23:47:53.440Z",
-    "recommendation": {
-      "starterScore": 86,
-      "difficulty": 3,
-      "gearDependency": 3,
-      "bossing": 3,
-      "mapping": 4,
-      "survival": 3
-    },
-    "tags": [
-      "开服热门",
-      "社区验证",
-      "德鲁伊",
-      "神谕者"
-    ],
-    "summary": "来自踩蘑菇开服热门 BD：神谕者 纠缠。当前浏览 740、收藏 5，适合作为社区开荒候选，发布前仍保留人工复核标记。",
-    "pros": [
-      "开服社区热度较高",
-      "带有原帖技能装配",
-      "后续可按真实反馈继续校准"
-    ],
-    "cons": [
-      "仍需结合自身掉落和操作习惯调整"
-    ],
-    "skills": [
-      {
-        "groupName": "1. 默认",
-        "note": "纠缠",
-        "links": [
-          {
-            "name": "纠缠",
-            "isSupport": false
-          },
-          {
-            "name": "势大力沉",
-            "isSupport": true
-          },
-          {
-            "name": "分叉裂缝 II",
-            "isSupport": true
-          },
-          {
-            "name": "特化暴击",
-            "isSupport": true
-          },
-          {
-            "name": "范围扩大 II",
-            "isSupport": true
-          },
-          {
-            "name": "审慎施法",
-            "isSupport": true
-          }
-        ]
-      },
-      {
-        "groupName": "1. 默认",
-        "note": "暴击时施放",
-        "links": [
-          {
-            "name": "暴击时施放",
-            "isSupport": false
-          },
-          {
-            "name": "鞭笞藤蔓",
-            "isSupport": true
-          },
-          {
-            "name": "势大力沉",
-            "isSupport": true
-          },
-          {
-            "name": "范围扩大 II",
-            "isSupport": true
-          },
-          {
-            "name": "特化暴击",
-            "isSupport": true
-          },
-          {
-            "name": "多重范围施法",
-            "isSupport": true
-          }
-        ]
-      },
-      {
-        "groupName": "1. 默认",
-        "note": "雷霆风暴",
-        "links": [
-          {
-            "name": "雷霆风暴",
-            "isSupport": false
-          },
-          {
-            "name": "护甲破坏者 II",
-            "isSupport": true
-          },
-          {
-            "name": "特化暴击",
-            "isSupport": true
-          },
-          {
-            "name": "审慎施法",
-            "isSupport": true
-          },
-          {
-            "name": "脆弱护甲",
-            "isSupport": true
-          },
-          {
-            "name": "过载",
-            "isSupport": true
-          }
-        ]
-      }
-    ],
-    "leveling": [
-      "优先按原帖技能装配推进剧情。",
-      "剧情阶段先补生命、抗性和移动速度，再追求输出。",
-      "进入异界后按天梯和价格变化决定是否转型。"
-    ],
-    "levelingPlan": [
-      {
-        "stage": "开荒：BD信息",
-        "summary": "技能：1. 默认 / 纠缠 + 势大力沉 + 分叉裂缝 II + 特化暴击 + 范围扩大 II + 审慎施法",
-        "mainSkills": [
-          "技能：1. 默认 / 纠缠 + 势大力沉 + 分叉裂缝 II + 特化暴击 + 范围扩大 II + 审慎施法",
-          "技能：1. 默认 / 暴击时施放 + 鞭笞藤蔓 + 势大力沉 + 范围扩大 II + 特化暴击 + 多重范围施法",
-          "技能：1. 默认 / 雷霆风暴 + 护甲破坏者 II + 特化暴击 + 审慎施法 + 脆弱护甲 + 过载"
-        ],
-        "passives": [
-          "天赋：详见原帖天赋树，候选入库前需要人工确认关键路径。"
-        ],
-        "gearTips": [
-          "技能：1. 默认 / 雷霆风暴 + 护甲破坏者 II + 特化暴击 + 审慎施法 + 脆弱护甲 + 过载"
-        ],
-        "ascendancy": [
-          "推荐升华：神谕者"
-        ],
-        "transition": [],
-        "notes": [
-          "原帖：https://poe2.caimogu.cc/planner#/plan/B5tv9gAv",
-          "作者：半长风",
-          "职业：德鲁伊 / 神谕者",
-          "标签：德鲁伊、神谕者"
-        ],
-        "sourceLines": [
-          "原帖：https://poe2.caimogu.cc/planner#/plan/B5tv9gAv",
-          "作者：半长风",
-          "职业：德鲁伊 / 神谕者",
-          "标签：德鲁伊、神谕者",
-          "推荐升华：神谕者",
-          "技能：1. 默认 / 纠缠 + 势大力沉 + 分叉裂缝 II + 特化暴击 + 范围扩大 II + 审慎施法",
-          "技能：1. 默认 / 暴击时施放 + 鞭笞藤蔓 + 势大力沉 + 范围扩大 II + 特化暴击 + 多重范围施法",
-          "技能：1. 默认 / 雷霆风暴 + 护甲破坏者 II + 特化暴击 + 审慎施法 + 脆弱护甲 + 过载",
-          "天赋：详见原帖天赋树，候选入库前需要人工确认关键路径。"
-        ]
-      }
-    ],
-    "equipment": {
-      "coreUniques": [],
-      "rarePriority": [
-        {
-          "slot": "武器",
-          "stats": [
-            "技能等级",
-            "攻击/施法速度",
-            "核心伤害词缀"
-          ]
-        },
-        {
-          "slot": "防具",
-          "stats": [
-            "生命",
-            "抗性",
-            "移动速度"
-          ]
-        }
-      ]
-    },
-    "sources": [
-      {
-        "name": "踩蘑菇热门 BD",
-        "type": "community_agent",
-        "url": "https://poe2.caimogu.cc/planner#/plan/B5tv9gAv",
-        "checkedAt": "2026-05-29",
-        "confidence": "medium",
-        "note": "由热门 BD 候选池提升，原候选 reviewHints: 无"
-      }
-    ],
-    "agentReview": {
-      "sourceCandidateId": "德鲁伊-神谕者-植物德开荒",
-      "reviewStatus": "needs_review",
-      "promotedAt": "2026-05-29T23:47:53.452Z",
-      "reviewHints": [],
-      "sourceMetrics": {
-        "hotScore": 1290,
-        "views": 740,
-        "replies": 0,
-        "likes": 1,
-        "favorites": 5
+        "favorites": 3
       }
     }
   },

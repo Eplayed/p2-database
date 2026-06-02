@@ -13,11 +13,11 @@
     "僧侣"
   ],
   "sourceMetrics": {
-    "hotScore": 1766,
-    "views": 966,
+    "hotScore": 3346,
+    "views": 1946,
     "replies": 0,
-    "likes": 2,
-    "favorites": 7
+    "likes": 4,
+    "favorites": 12
   },
   "summary": "5 武圣崩雷鸣开荒 Lv.1~Lv.40 [施工中] 自动抓取自踩蘑菇热门 BD 区。该文件只作为 Agent 候选输入，发布前需要人工审核。",
   "levelingPlan": [
@@ -301,13 +301,13 @@
       ]
     }
   ],
-  "extractedAt": "2026-05-29T23:37:19.185Z",
+  "extractedAt": "2026-06-01T14:17:26.835Z",
   "sources": [
     {
       "name": "踩蘑菇热门BD",
       "type": "agent_candidate",
       "url": "https://poe2.caimogu.cc/planner#/plan/0TnhjYmS",
-      "checkedAt": "2026-05-29",
+      "checkedAt": "2026-06-01",
       "confidence": "low",
       "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
     }

@@ -8,13 +8,13 @@ class: "游侠"
 ascendancy: "锐眼"
 mainSkill: "恐喙鸟坐骑"
 tags: "升级, 攻坚, 游侠, 锐眼"
-views: 1338
+views: 1532
 replies: 0
 likes: 1
-favorites: 5
-hotScore: 1888
+favorites: 6
+hotScore: 2182
 confidence: low
-fetchedAt: "2026-05-29T23:37:18.497Z"
+fetchedAt: "2026-06-01T14:17:26.302Z"
 ---
 
 # 锐眼冰射骑鸟150稀有60移速

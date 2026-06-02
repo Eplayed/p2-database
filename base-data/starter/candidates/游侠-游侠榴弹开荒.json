@@ -13,11 +13,11 @@
     "游侠"
   ],
   "sourceMetrics": {
-    "hotScore": 737,
-    "views": 487,
+    "hotScore": 951,
+    "views": 601,
     "replies": 0,
     "likes": 1,
-    "favorites": 2
+    "favorites": 3
   },
   "summary": "自动抓取自踩蘑菇热门 BD 区。该文件只作为 Agent 候选输入，发布前需要人工审核。",
   "levelingPlan": [
@@ -65,13 +65,13 @@
       ]
     }
   ],
-  "extractedAt": "2026-05-29T23:37:19.188Z",
+  "extractedAt": "2026-06-01T14:17:26.836Z",
   "sources": [
     {
       "name": "踩蘑菇热门BD",
       "type": "agent_candidate",
       "url": "https://poe2.caimogu.cc/planner#/plan/y9vJzeU8",
-      "checkedAt": "2026-05-29",
+      "checkedAt": "2026-06-01",
       "confidence": "low",
       "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
     }

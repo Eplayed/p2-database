@@ -8,13 +8,13 @@ class: "游侠"
 ascendancy: "锐眼"
 mainSkill: "闪电箭矢"
 tags: "升级, 游侠, 锐眼"
-views: 442
+views: 876
 replies: 0
-likes: 1
-favorites: 5
-hotScore: 992
+likes: 3
+favorites: 9
+hotScore: 1926
 confidence: low
-fetchedAt: "2026-05-29T23:37:18.491Z"
+fetchedAt: "2026-06-01T14:17:26.300Z"
 ---
 
 # 銳眼旋風升级
