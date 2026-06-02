@@ -27,6 +27,8 @@ function normalizeEntry(entry, overrides = {}) {
     enName: override.enName || entry.enName || '',
     summary: override.summary || entry.summary || '',
     effect: override.effect || entry.effect || '',
+    obtainMethod: override.obtainMethod || entry.obtainMethod || '',
+    usageAdvice: override.usageAdvice || entry.usageAdvice || '',
     tags: override.tags || entry.tags || [],
     aliases: override.aliases || entry.aliases || [],
     needsTranslation: Boolean(override.needsTranslation || (!override.name && !entry.name)),

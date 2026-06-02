@@ -27,6 +27,13 @@ function getAllFiles(dirPath, arrayOfFiles) {
     return arrayOfFiles;
 }
 
+function getJsonCacheControl(relativePath) {
+    if (relativePath.endsWith('patch-0.5/version.json')) return 'max-age=300';
+    if (relativePath.includes('patch-0.5/patch05_economy')) return 'max-age=300';
+    if (relativePath.endsWith('patch-0.5/patch05_catalog.json')) return 'max-age=3600';
+    return 'max-age=60';
+}
+
 module.exports = async function uploadAll() {
     console.log(`\n🚀 [OSS上传] 环境: ${envConfig.isProd ? 'production' : 'dev'}`);
     console.log(`   本地目录: ${envConfig.dataDir}`);
@@ -63,7 +70,7 @@ module.exports = async function uploadAll() {
         if (ext === '.json') {
             options.headers = {
                 'Content-Type': 'application/json; charset=utf-8',
-                'Cache-Control': 'max-age=60',
+                'Cache-Control': getJsonCacheControl(relativePath),
             };
         }
         // JPG 文件（天赋树截图）

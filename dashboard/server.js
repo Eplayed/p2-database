@@ -22,88 +22,111 @@ const MIME_TYPES = {
 
 const TASKS = [
   {
+    id: 'patch05_daily_publish',
+    name: '一键更新 0.5 日常数据',
+    description: '推荐日常使用：依次刷新新闻、经济与 0.5 数据、剧情地图攻略，并上传 OSS。不抓天梯，不自动提升热门 BD。',
+    group: 'recommended',
+    steps: ['news_all', 'patch05_with_economy', 'story_guide', 'upload'],
+  },
+  {
+    id: 'release_flow',
+    name: '一键完整刷新',
+    description: '耗时较长：依次执行新闻、天梯、0.5 数据、正式开荒推荐、剧情地图攻略和 OSS 上传。',
+    group: 'recommended',
+    steps: ['news_all', 'ladder', 'patch05_with_economy', 'starter', 'story_guide', 'upload'],
+  },
+  {
+    id: 'starter_agent_refresh',
+    name: '抓取热门 BD + 抽候选',
+    description: '安全流程：抓取热门 BD 帖并生成候选 JSON，只供人工审核，不进入正式推荐榜。',
+    group: 'recommended',
+    steps: ['starter_hot_posts', 'starter_agent'],
+  },
+  {
     id: 'news_all',
     name: '抓取新闻',
     description: '抓取踩蘑菇新闻列表和详情，生成小程序新闻数据。',
+    group: 'single',
     command: ['node', ['auto_browser/crawl_news_with_details.js']],
   },
   {
     id: 'ladder',
     name: '抓取天梯 + 聚合分析',
     description: '抓取 poe.ninja 天梯数据，并生成职业、技能、装备趋势分析。',
+    group: 'single',
     command: ['node', ['crawlers/run.js', '--ladder']],
   },
   {
-    id: 'economy',
-    name: '刷新通用经济',
-    description: '抓取 poe.ninja 通货汇率，更新当前环境 economy.json。',
-    command: ['node', ['auto_browser/crawl_economy.js']],
-  },
-  {
-    id: 'patch05',
-    name: '生成 0.5 资料',
-    description: '基于现有 economy.json 生成 0.5 资料速查、终局清单、新经济观察。',
-    command: ['node', ['crawlers/patch05/index.js']],
-  },
-  {
     id: 'patch05_with_economy',
-    name: '刷新经济 + 生成 0.5 数据',
-    description: '等价于先刷新通用经济，再生成 0.5 资料和新经济观察。',
+    name: '刷新经济与 0.5 聚合',
+    description: '抓取通货汇率，并生成 0.5 资料速查、终局清单和新经济观察。',
+    group: 'single',
     command: ['node', ['crawlers/patch05/run_with_economy.js']],
   },
   {
     id: 'starter',
     name: '生成开荒推荐',
     description: '从 base-data/starter 生成小程序开荒推荐 starters.json。',
+    group: 'single',
     command: ['node', ['crawlers/starter/index.js']],
-  },
-  {
-    id: 'starter_hot_posts',
-    name: '1. 抓取热门 BD 帖输入',
-    description: '先从踩蘑菇热门 BD 页面抓帖子文本，写入 base-data/starter/agent_posts。只准备输入，不生成候选 JSON。',
-    command: ['node', ['crawlers/starter-agent/crawl_hot_posts.js']],
-  },
-  {
-    id: 'starter_agent',
-    name: '2. 从输入抽取候选 JSON',
-    description: '读取 base-data/starter/agent_posts 里的帖子文本，生成 candidates 和 starter_candidates.json。不会主动抓帖子。',
-    command: ['node', ['crawlers/starter-agent/index.js']],
-  },
-  {
-    id: 'starter_promote',
-    name: '3. 候选提升到开荒源',
-    description: '把热门候选中适合开荒的条目提升到 base-data/starter/starter_builds.json，供赛季开荒 tab 使用。',
-    command: ['node', ['crawlers/starter/promote_candidates.js']],
-  },
-  {
-    id: 'starter_agent_refresh',
-    name: '抓取热门 BD + 抽候选',
-    description: '一步执行：先抓热门 BD 帖输入，再生成候选 JSON。仍只供人工审核，不进入正式推荐榜。',
-    steps: ['starter_hot_posts', 'starter_agent'],
-  },
-  {
-    id: 'starter_data_publish',
-    name: '更新开荒/热门BD并上传',
-    description: '完整数据流程：抓热门BD、抽候选、提升开荒推荐、生成 starters.json、上传 OSS。小程序无需改代码即可读取新数据。',
-    steps: ['starter_hot_posts', 'starter_agent', 'starter_promote', 'starter', 'upload'],
   },
   {
     id: 'story_guide',
     name: '抓取剧情地图攻略',
     description: '抓取剧情章节地图、点位、奖励和路线，生成小程序剧情攻略数据。',
+    group: 'single',
     command: ['node', ['crawlers/story-guide/index.js']],
   },
   {
     id: 'upload',
     name: '上传 OSS',
     description: '上传当前环境 translated-data 到 OSS。',
+    group: 'single',
     command: ['node', ['-e', "require('./auto_browser/upload_to_oss')()"]],
   },
   {
-    id: 'release_flow',
-    name: '一键更新推荐流程',
-    description: '依次执行：新闻、天梯、0.5资料/经济、开荒推荐、剧情地图攻略、上传 OSS。',
-    steps: ['news_all', 'ladder', 'patch05_with_economy', 'starter', 'story_guide', 'upload'],
+    id: 'economy',
+    name: '仅刷新通用经济',
+    description: '只更新 economy.json，不重新生成 0.5 聚合数据。用于排查经济爬虫。',
+    group: 'advanced',
+    command: ['node', ['auto_browser/crawl_economy.js']],
+  },
+  {
+    id: 'patch05',
+    name: '仅生成 0.5 资料',
+    description: '基于已有 economy.json 生成 0.5 数据，不重新抓行情。用于排查聚合逻辑。',
+    group: 'advanced',
+    command: ['node', ['crawlers/patch05/index.js']],
+  },
+  {
+    id: 'starter_hot_posts',
+    name: '1. 抓取热门 BD 帖输入',
+    description: '先从踩蘑菇热门 BD 页面抓帖子文本，写入 base-data/starter/agent_posts。只准备输入，不生成候选 JSON。',
+    group: 'advanced',
+    command: ['node', ['crawlers/starter-agent/crawl_hot_posts.js']],
+  },
+  {
+    id: 'starter_agent',
+    name: '2. 从输入抽取候选 JSON',
+    description: '读取 base-data/starter/agent_posts 里的帖子文本，生成 candidates 和 starter_candidates.json。不会主动抓帖子。',
+    group: 'advanced',
+    command: ['node', ['crawlers/starter-agent/index.js']],
+  },
+  {
+    id: 'starter_promote',
+    name: '3. 候选提升到开荒源',
+    description: '人工检查候选后再使用：把适合开荒的条目提升到正式源。',
+    group: 'advanced',
+    dangerous: true,
+    command: ['node', ['crawlers/starter/promote_candidates.js']],
+  },
+  {
+    id: 'starter_data_publish',
+    name: '更新开荒/热门BD并上传',
+    description: '谨慎使用：会自动抓取、提升候选、生成开荒推荐并上传。仅在已确认候选质量后运行。',
+    group: 'advanced',
+    dangerous: true,
+    steps: ['starter_hot_posts', 'starter_agent', 'starter_promote', 'starter', 'upload'],
   },
 ];
 
@@ -186,6 +209,8 @@ function getArrayLength(data) {
   if (data && Array.isArray(data.items)) return data.items.length;
   if (data && Array.isArray(data.news)) return data.news.length;
   if (data && Array.isArray(data.data)) return data.data.length;
+  if (data && Array.isArray(data.candidates)) return data.candidates.length;
+  if (data && Array.isArray(data.guides)) return data.guides.length;
   if (data && data.counters && Number.isFinite(Number(data.counters.total))) return Number(data.counters.total);
   if (data && Array.isArray(data.categories)) {
     return data.categories.reduce((sum, item) => sum + Number(item.count || 0), 0);
@@ -225,7 +250,8 @@ function getDataSummary(environment) {
     keyFiles: {
       news: summarizeJson(path.join(dataDir, 'news_caimogu.json')),
       starters: summarizeJson(path.join(dataDir, 'miniprogram_data/starters.json')),
-      community: summarizeJson(path.join(dataDir, 'miniprogram_data/community.json')),
+      hotBdCandidates: summarizeJson(path.join(dataDir, 'miniprogram_data/starter_candidates.json')),
+      storyGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/story_guides.json')),
       surveyConfig: summarizeJson(path.join(dataDir, 'miniprogram_config/feature_survey.json')),
     },
     ladder: {

@@ -170,7 +170,7 @@ h2 {
 
 .panel-actions {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 
@@ -197,10 +197,43 @@ h2 {
   opacity: 0.45;
 }
 
+.log-follow-status {
+  align-self: center;
+  color: var(--ok);
+  font-size: 12px;
+}
+
+.log-follow-status.paused {
+  color: var(--gold-soft);
+}
+
 .task-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+}
+
+.task-group + .task-group {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.task-group-head {
+  margin-bottom: 14px;
+}
+
+.task-group-head h3 {
+  margin: 0;
+  color: var(--gold-soft);
+  font-size: 18px;
+}
+
+.task-group-head p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .task-card {
@@ -215,11 +248,21 @@ h2 {
   border-color: var(--line-strong);
 }
 
+.task-card.dangerous {
+  border-color: rgba(255, 107, 107, 0.32);
+}
+
 .task-title-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+
+.task-badges {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
 }
 
 .task-title {
@@ -235,6 +278,11 @@ h2 {
   background: var(--gold);
   font-size: 12px;
   font-weight: 800;
+}
+
+.danger-badge {
+  color: #2b1111;
+  background: #ff8a8a;
 }
 
 .task-desc {

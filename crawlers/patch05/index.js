@@ -4,6 +4,7 @@ require('dotenv').config({ path: require('path').join(__dirname, '../../auto_bro
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const envConfig = require('../../auto_browser/env-config');
 const { fetchWithRetry } = require('../poe2db-dict/http_client');
 const { SOURCES } = require('./sources');
@@ -26,6 +27,14 @@ function writeJson(fileName, data) {
   const filePath = path.join(PATCH_DIR, fileName);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   console.log(`   ✅ ${path.relative(ROOT, filePath)}`);
+}
+
+function createContentVersion(data) {
+  return crypto
+    .createHash('sha256')
+    .update(JSON.stringify(data))
+    .digest('hex')
+    .slice(0, 12);
 }
 
 async function fetchSourcePages() {
@@ -135,6 +144,32 @@ async function main() {
 
   const grouped = groupEntries(entries);
   const now = new Date().toISOString();
+  const quickStart = [
+    {
+      stage: '剧情开荒',
+      title: '优先解锁符文锻造',
+      description: '跟随赛季任务解锁维金符文锻造，先理解符文配方和遗物遭遇。',
+      entryId: 'rune_system_runeforging',
+    },
+    {
+      stage: '装备过渡',
+      title: '用符文结界补足生存',
+      description: '开荒期先把符文结界当作防御补强，再根据 BD 需求决定投入。',
+      entryId: 'rune_system_runic_ward',
+    },
+    {
+      stage: '进入异界',
+      title: '推进大师与要塞',
+      description: '优先完成异界大师任务和要塞地图，逐步获取长期异界收益。',
+      entryId: 'endgame_atlas_masters',
+    },
+    {
+      stage: '经济观察',
+      title: '新通货先观察再投入',
+      description: '合金通货、古代符文和元工艺符文价格波动大，先看每日行情。',
+      entryId: 'currency_alloy_currency',
+    },
+  ];
   const index = {
     version: '0.5.0',
     seasonName: '奥杜尔秘符',
@@ -148,9 +183,25 @@ async function main() {
       { key: 'checklist', name: '终局清单', file: 'patch05_endgame_checklist.json', count: 6 },
     ],
   };
+  const catalogCore = {
+    version: '0.5.0',
+    seasonName: '奥杜尔秘符',
+    categories: index.categories,
+    quickStart,
+    entries,
+  };
+  const contentVersion = createContentVersion(catalogCore);
+  const catalog = {
+    ...catalogCore,
+    schemaVersion: 1,
+    contentVersion,
+    updatedAt: now,
+  };
   const version = {
     version: '0.5.0',
-    schemaVersion: 1,
+    schemaVersion: 2,
+    contentVersion,
+    catalogFile: 'patch05_catalog.json',
     updatedAt: now,
     sourceCount: sourcePages.length,
     entryCount: entries.length,
@@ -162,6 +213,7 @@ async function main() {
   });
   const files = {
     'version.json': version,
+    'patch05_catalog.json': catalog,
     'patch05_index.json': index,
     'patch05_items.json': grouped.items,
     'patch05_runes.json': grouped.runes,

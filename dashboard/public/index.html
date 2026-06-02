@@ -33,7 +33,7 @@
             <button class="ghost-btn" id="refreshBtn">刷新状态</button>
           </div>
         </div>
-        <div class="task-grid" id="taskGrid"></div>
+        <div id="taskGrid"></div>
       </section>
 
       <section class="panel log-panel">
@@ -41,6 +41,10 @@
           <div>
             <h2>运行日志</h2>
             <p id="logTitle">暂无运行任务</p>
+          </div>
+          <div class="panel-actions">
+            <span class="log-follow-status" id="logFollowStatus">自动跟随日志</span>
+            <button class="ghost-btn" id="scrollLogBottomBtn" hidden>回到底部</button>
           </div>
         </div>
         <pre id="logOutput">选择并运行一个任务后，这里会显示日志。</pre>

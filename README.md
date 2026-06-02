@@ -3,12 +3,17 @@
 > 为微信小程序「PoE2 流放助手」提供 PoE2 天梯、新闻、经济、0.5 资料、开荒推荐、剧情地图攻略等数据。  
 > 数据链路：poe.ninja / poe2db / 踩蘑菇 / poe2ggg / 人工精选源数据 -> 本项目生成 JSON -> 阿里云 OSS -> 小程序读取。
 
+首次接手或准备新功能前，先读：
+
+- `docs/PROJECT_OVERVIEW.md`
+- `AGENT.md`
+
 ## 当前状态
 
 - 天梯数据：抓取 poe.ninja 页面数据，生成天梯索引、玩家详情、职业统计和 `ladder_analysis.json`。
 - 新闻数据：抓取踩蘑菇快捷导航和新闻详情，输出 `news_caimogu.json` 与 `news_details/*`。
 - 通用经济：抓取 poe.ninja currency 行情，输出 `economy.json`。
-- 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`。
+- 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`；新版小程序读取轻量 `version.json` 和统一 `patch05_catalog.json`。
 - 0.5 新经济观察：生成 `patch05_economy.json` 和 `patch05_economy_watch.json`，支持待行情、观察中、可参考、高波动状态。
 - 开荒推荐 MVP：由人工精选源 `base-data/starter/starter_builds.json` 生成小程序用 `miniprogram_data/starters.json`。
 - 热门 BD 候选池：可定期抓取踩蘑菇热门 BD 帖到 `base-data/starter/agent_posts`，再由 `agent:starter` 生成候选 JSON，人工审核后再进入正式开荒推荐。
@@ -70,6 +75,9 @@ npm run crawl:patch05:dev
 
 # 刷新通用经济，并重新生成 0.5 新经济观察
 npm run crawl:patch05:with-economy
+
+# 日常一键更新：新闻 -> 经济与 0.5 聚合 -> 剧情攻略 -> 上传 OSS
+npm run data:patch05:publish
 
 # 生成开荒推荐，生产环境
 npm run build:starter
@@ -159,6 +167,7 @@ npm run agent:starter:promote
 npm run build:starter
 
 # 或生产环境一条命令完成：抓取 -> 候选 -> 提升 -> 生成 -> 上传 OSS
+# 注意：它会自动提升候选，只在已确认候选质量后使用。
 npm run data:starter:publish
 ```
 
@@ -208,9 +217,14 @@ poe2-ladders/release/
 ├── miniprogram_data/
 │   ├── community.json
 │   ├── community_full.json
-│   └── starters.json
+│   ├── starters.json
+│   ├── starter_candidates.json
+│   └── story_guides.json
+├── miniprogram_config/
+│   └── feature_survey.json
 └── patch-0.5/
     ├── version.json
+    ├── patch05_catalog.json
     ├── patch05_index.json
     ├── patch05_items.json
     ├── patch05_runes.json
@@ -222,6 +236,8 @@ poe2-ladders/release/
     ├── patch05_endgame_checklist.json
     └── patch05_sources.json
 ```
+
+`version.json` 包含由资料内容生成的 `contentVersion`。小程序每 6 小时最多检查一次版本，只有内容变化时才下载 `patch05_catalog.json`。经济数据仍由市场页按需加载，不会跟资料页一起重复下载。
 
 通用经济仍上传到：
 
@@ -258,12 +274,17 @@ http://localhost:5177
 第一版控制台支持：
 
 - 切换 `release` / `dev` 环境。
-- 单独运行：抓取新闻、抓取天梯并聚合分析、刷新通用经济、生成 0.5 资料、生成开荒推荐、抓取剧情地图攻略、上传 OSS。
+- 常用流程置顶：
+  - `一键更新 0.5 日常数据`：新闻 -> 经济与 0.5 聚合 -> 剧情地图攻略 -> 上传 OSS。
+  - `一键完整刷新`：新闻 -> 天梯 -> 经济与 0.5 聚合 -> 开荒推荐 -> 剧情地图攻略 -> 上传 OSS。
+  - `抓取热门 BD + 抽候选`：只生成候选池，不自动提升到正式推荐。
+- 单项更新：新闻、天梯、经济与 0.5 聚合、开荒推荐、剧情地图攻略、上传 OSS。
+- 高级与排障：仅抓经济、仅生成 0.5 资料、热门 BD 拆分步骤、候选提升与谨慎发布。
 - 单独运行：抓取热门 BD 帖、抽取 BD 候选 JSON。
 - 单独运行“刷新经济 + 生成 0.5 数据”，对应 `update_economy.yml` 里“刷新通用经济 + 重新生成 0.5 经济观察”的本地版本。
-- 一键运行推荐流程：新闻 -> 天梯 -> 刷新经济并生成 0.5 数据 -> 开荒推荐 -> 剧情地图攻略 -> 上传 OSS。
 - 查看每个任务上次运行状态、运行时间和日志。
 - 运行中可以点击“停止当前任务”终止长任务。
+- 日志默认自动滚动到底部；手动向上滚动后会暂停跟随，点击“回到底部”恢复。
 - 查看当前环境输出摘要：文件数量、天梯人数、新闻条数、开荒 BD 条数、0.5 资料条数、调研配置状态。
 
 运行日志和状态写入 `dashboard/runtime/`，该目录只保留本地运行状态，不需要提交。
@@ -317,6 +338,13 @@ http://localhost:5177
 - 做经济历史趋势图数据。
 - 做 BD 候选审核流：社区抓取 -> 候选 JSON -> 人工确认 -> starters.json。
 - 根据广告流量，优先强化高打开频率功能：经济观察、开荒推荐、天梯分析、新闻。
+
+## 深入说明
+
+- `docs/PROJECT_OVERVIEW.md`
+  - 完整数据管线、手动维护边界、已知限制、Dashboard 使用方式。
+  - 2026 年 6 月 5 日国服开服前后的操作清单。
+  - 剧情攻略 V2 与热门 BD Agent 的后续方向。
 
 ## 相关文档
 

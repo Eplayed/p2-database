@@ -23,6 +23,8 @@
     "crawl:patch05:economy:dev": "NODE_ENV=dev node crawlers/patch05/economy.js",
     "crawl:patch05:with-economy": "NODE_ENV=production node crawlers/patch05/run_with_economy.js",
     "crawl:patch05:with-economy:dev": "NODE_ENV=dev node crawlers/patch05/run_with_economy.js",
+    "data:patch05:publish": "NODE_ENV=production node auto_browser/crawl_news_with_details.js && NODE_ENV=production node crawlers/patch05/run_with_economy.js && NODE_ENV=production node crawlers/story-guide/index.js && NODE_ENV=production node -e \"require('./auto_browser/upload_to_oss')()\"",
+    "data:patch05:publish:dev": "NODE_ENV=dev node auto_browser/crawl_news_with_details.js && NODE_ENV=dev node crawlers/patch05/run_with_economy.js && NODE_ENV=dev node crawlers/story-guide/index.js && NODE_ENV=dev node -e \"require('./auto_browser/upload_to_oss')()\"",
     "build:starter": "NODE_ENV=production node crawlers/starter/index.js",
     "build:starter:dev": "NODE_ENV=dev node crawlers/starter/index.js",
     "crawl:story-guide": "NODE_ENV=production node crawlers/story-guide/index.js",

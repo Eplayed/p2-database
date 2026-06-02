@@ -3,12 +3,16 @@ const state = {
   tasks: [],
   status: null,
   activeRunId: '',
+  logAutoFollow: true,
 };
 
+const LOG_BOTTOM_THRESHOLD = 32;
 const taskGrid = document.querySelector('#taskGrid');
 const summaryEl = document.querySelector('#summary');
 const logOutput = document.querySelector('#logOutput');
 const logTitle = document.querySelector('#logTitle');
+const logFollowStatus = document.querySelector('#logFollowStatus');
+const scrollLogBottomBtn = document.querySelector('#scrollLogBottomBtn');
 const refreshBtn = document.querySelector('#refreshBtn');
 const stopBtn = document.querySelector('#stopBtn');
 
@@ -76,9 +80,11 @@ function renderSummary(summary) {
       note: `新闻条数 / 开荒 BD 条数`,
     },
     {
-      label: '社区 BD',
-      value: keyFiles.community?.count || 0,
-      note: keyFiles.community?.updatedAt ? formatTime(keyFiles.community.updatedAt) : '无文件',
+      label: '热门 BD 候选',
+      value: keyFiles.hotBdCandidates?.count || 0,
+      note: keyFiles.hotBdCandidates?.updatedAt
+        ? formatTime(keyFiles.hotBdCandidates.updatedAt)
+        : '无文件',
     },
     {
       label: '天梯分析',
@@ -91,9 +97,11 @@ function renderSummary(summary) {
       note: summary.patch05.file ? formatTime(summary.patch05.file.updatedAt) : '无文件',
     },
     {
-      label: '调研配置',
-      value: keyFiles.surveyConfig ? '已配置' : '无',
-      note: keyFiles.surveyConfig ? formatTime(keyFiles.surveyConfig.updatedAt) : 'miniprogram_config',
+      label: '剧情攻略 / 调研',
+      value: `${keyFiles.storyGuides?.count || 0} / ${keyFiles.surveyConfig ? '已配置' : '无'}`,
+      note: keyFiles.storyGuides?.updatedAt
+        ? `攻略更新 ${formatTime(keyFiles.storyGuides.updatedAt)}`
+        : '无剧情攻略文件',
     },
   ];
 
@@ -114,16 +122,35 @@ function renderTasks() {
   const currentRun = state.status && state.status.currentRun;
   const runs = (state.status && state.status.state && state.status.state.runs) || {};
   const disabled = Boolean(currentRun);
+  const groups = [
+    {
+      id: 'recommended',
+      title: '常用流程',
+      description: '日常维护优先从这里开始。组合流程会按顺序执行，并在最后上传 OSS。',
+    },
+    {
+      id: 'single',
+      title: '单项更新',
+      description: '需要只刷新某一类数据，或者定位问题时使用。',
+    },
+    {
+      id: 'advanced',
+      title: '高级与排障',
+      description: '拆分步骤和可能修改正式开荒源的操作。标记为谨慎的任务请先检查候选数据。',
+    },
+  ];
 
-  taskGrid.innerHTML = state.tasks
-    .map(task => {
+  const renderTask = task => {
       const run = runs[task.id];
       const isFlow = Array.isArray(task.steps);
       return `
-        <article class="task-card ${isFlow ? 'flow' : ''}">
+        <article class="task-card ${isFlow ? 'flow' : ''} ${task.dangerous ? 'dangerous' : ''}">
           <div class="task-title-row">
             <span class="task-title">${task.name}</span>
-            ${isFlow ? '<span class="badge">流程</span>' : ''}
+            <span class="task-badges">
+              ${isFlow ? '<span class="badge">流程</span>' : ''}
+              ${task.dangerous ? '<span class="badge danger-badge">谨慎</span>' : ''}
+            </span>
           </div>
           <p class="task-desc">${task.description}</p>
           <div class="task-meta">
@@ -135,6 +162,21 @@ function renderTasks() {
             ${currentRun && currentRun.taskId === task.id ? '运行中...' : '运行'}
           </button>
         </article>
+      `;
+  };
+
+  taskGrid.innerHTML = groups
+    .map(group => {
+      const tasks = state.tasks.filter(task => (task.group || 'single') === group.id);
+      if (!tasks.length) return '';
+      return `
+        <section class="task-group">
+          <div class="task-group-head">
+            <h3>${group.title}</h3>
+            <p>${group.description}</p>
+          </div>
+          <div class="task-grid">${tasks.map(renderTask).join('')}</div>
+        </section>
       `;
     })
     .join('');
@@ -185,17 +227,45 @@ async function loadLog(runId) {
   try {
     const res = await fetch(`/api/logs?runId=${encodeURIComponent(runId)}`);
     const text = await res.text();
-    logOutput.textContent = text || '暂无日志';
-    logOutput.scrollTop = logOutput.scrollHeight;
+    const shouldFollow = state.logAutoFollow || isLogNearBottom();
+    const nextText = text || '暂无日志';
+    if (logOutput.textContent !== nextText) {
+      const previousScrollTop = logOutput.scrollTop;
+      logOutput.textContent = nextText;
+      if (shouldFollow) scrollLogToBottom();
+      else logOutput.scrollTop = previousScrollTop;
+    }
   } catch (error) {
     logOutput.textContent = error.message;
   }
 }
 
+function isLogNearBottom() {
+  return logOutput.scrollHeight - logOutput.scrollTop - logOutput.clientHeight <= LOG_BOTTOM_THRESHOLD;
+}
+
+function updateLogFollowUi() {
+  logFollowStatus.textContent = state.logAutoFollow ? '自动跟随日志' : '已暂停自动跟随';
+  logFollowStatus.classList.toggle('paused', !state.logAutoFollow);
+  scrollLogBottomBtn.hidden = state.logAutoFollow;
+}
+
+function scrollLogToBottom() {
+  state.logAutoFollow = true;
+  logOutput.scrollTop = logOutput.scrollHeight;
+  updateLogFollowUi();
+}
+
+function handleLogScroll() {
+  state.logAutoFollow = isLogNearBottom();
+  updateLogFollowUi();
+}
+
 async function runTask(taskId) {
   const task = state.tasks.find(item => item.id === taskId);
   if (!task) return;
-  if (!window.confirm(`在 ${state.env} 环境运行「${task.name}」？`)) return;
+  const warning = task.dangerous ? '\n\n这是谨慎操作，请确认你已经检查过候选数据。' : '';
+  if (!window.confirm(`在 ${state.env} 环境运行「${task.name}」？${warning}`)) return;
 
   try {
     const data = await requestJson('/api/run', {
@@ -204,6 +274,8 @@ async function runTask(taskId) {
       body: JSON.stringify({ taskId, environment: state.env }),
     });
     state.activeRunId = data.run.runId;
+    state.logAutoFollow = true;
+    updateLogFollowUi();
     logTitle.textContent = `${data.run.taskName} · ${data.run.environment} · 启动中`;
     logOutput.textContent = '任务已启动，等待日志输出...';
     await loadStatus();
@@ -227,6 +299,9 @@ async function boot() {
   bindEnvSwitch();
   refreshBtn.addEventListener('click', loadStatus);
   stopBtn.addEventListener('click', stopCurrentTask);
+  scrollLogBottomBtn.addEventListener('click', scrollLogToBottom);
+  logOutput.addEventListener('scroll', handleLogScroll);
+  updateLogFollowUi();
   await loadTasks();
   await loadStatus();
   window.setInterval(loadStatus, 2500);
