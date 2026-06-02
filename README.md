@@ -13,7 +13,7 @@
 - 天梯数据：抓取 poe.ninja 页面数据，生成天梯索引、玩家详情、职业统计和 `ladder_analysis.json`。
 - 新闻数据：抓取踩蘑菇快捷导航和新闻详情，输出 `news_caimogu.json` 与 `news_details/*`。
 - 通用经济：抓取 poe.ninja currency 行情，输出 `economy.json`。
-- 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`；新版小程序读取轻量 `version.json` 和统一 `patch05_catalog.json`。
+- 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`；新版小程序读取轻量 `version.json` 和统一 `patch05_catalog.json`。图文必看机制与 Boss 攻略维护在 `base-data/patch05/guide_content.json`。
 - 0.5 新经济观察：生成 `patch05_economy.json` 和 `patch05_economy_watch.json`，支持待行情、观察中、可参考、高波动状态。
 - 开荒推荐 MVP：由人工精选源 `base-data/starter/starter_builds.json` 生成小程序用 `miniprogram_data/starters.json`。
 - 热门 BD 候选池：可定期抓取踩蘑菇热门 BD 帖到 `base-data/starter/agent_posts`，再由 `agent:starter` 生成候选 JSON，人工审核后再进入正式开荒推荐。

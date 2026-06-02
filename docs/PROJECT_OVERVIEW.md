@@ -62,6 +62,7 @@ poe2-economy/economy.json
 
 - `version.json` 是轻量检查文件，包含由资料内容生成的 `contentVersion`。
 - `patch05_catalog.json` 是资料速查页统一读取的玩家资料包。
+- `guide_content.json` 提供图文必看机制与 Boss 攻略。Boss 数据必须有来源；未确认的专属掉落应明确标注，不要猜测补全。
 - 小程序每 6 小时最多检查一次版本；仅在 `contentVersion` 变化时下载 catalog。
 - 旧的拆分 JSON 继续生成，兼容尚未更新的小程序版本。
 
@@ -118,6 +119,7 @@ lsof -nP -iTCP:5177 -sTCP:LISTEN
 | 文件 | 用途 |
 |---|---|
 | `base-data/patch05/manual_entries.json` | 0.5 新机制、新通货、新 Boss 的人工源 |
+| `base-data/patch05/guide_content.json` | 0.5 图文必看机制与 Boss 解锁、技能、击杀技巧、掉落 |
 | `base-data/patch05/overrides.zh-CN.json` | 中文名称、摘要、标签、分类修正 |
 | `base-data/starter/starter_builds.json` | 正式开荒推荐源 |
 | `base-data/miniprogram_config/feature_survey.json` | 小程序功能调研开关 |

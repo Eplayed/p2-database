@@ -130,6 +130,10 @@ async function main() {
   console.log('');
 
   const manualEntries = readJson(path.join(BASE_DIR, 'manual_entries.json'), []);
+  const guideContent = readJson(path.join(BASE_DIR, 'guide_content.json'), {
+    mustWatch: [],
+    bossGuides: [],
+  });
   const overridesJson = readJson(path.join(BASE_DIR, 'overrides.zh-CN.json'), { entries: {} });
   const overrides = loadOverrides(overridesJson);
 
@@ -188,6 +192,8 @@ async function main() {
     seasonName: '奥杜尔秘符',
     categories: index.categories,
     quickStart,
+    mustWatch: guideContent.mustWatch || [],
+    bossGuides: guideContent.bossGuides || [],
     entries,
   };
   const contentVersion = createContentVersion(catalogCore);

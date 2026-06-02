@@ -45,6 +45,9 @@
   `patch-0.5/version.json`
   `patch-0.5/patch05_catalog.json`
   `version.json` 的 `contentVersion` 由玩家资料内容生成；只有内容变化时小程序才重新下载 catalog。旧拆分 JSON 仍保留用于兼容。
+- 0.5 图文必看机制和 Boss 攻略人工源：
+  `base-data/patch05/guide_content.json`
+  Boss 技能、击杀技巧和掉落必须保留来源；未确认内容要明确标注，不要凭空补齐。
 
 ## 热门 BD 流程
 

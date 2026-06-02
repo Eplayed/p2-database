@@ -1,0 +1,96 @@
+{
+  "mustWatch": [
+    {
+      "key": "runes",
+      "title": "奥杜尔秘符",
+      "subtitle": "每张地图都能遇到遗物",
+      "description": "把符文配方刻入遗物，再击败强化敌人，才能领取打造出的装备。",
+      "highlights": ["遗物拥有 2 到 10 个插槽", "符文越多，敌人波次和难度越高", "遗物怪物会掉落维金"],
+      "entryId": "feature_runes_of_aldur",
+      "visual": "aldur"
+    },
+    {
+      "key": "alloy",
+      "title": "符文锻造",
+      "subtitle": "剧情阶段逐步解锁",
+      "description": "跟随法罗任务解锁维金符文锻造，用维金为护甲添加符文结界。",
+      "highlights": ["第一幕解锁符文结界", "第二幕解锁 13 种合金通货", "第四幕解锁 13 种古代符文"],
+      "entryId": "rune_system_runeforging",
+      "visual": "runeforge"
+    },
+    {
+      "key": "ward",
+      "title": "符文结界",
+      "subtitle": "新的防御资源",
+      "description": "生命降到 1 时，符文结界会开始承受伤害，并且可以独立恢复。",
+      "highlights": ["低于 55 级护甲添加结界没有副作用", "高等级护甲会牺牲部分基础防御", "开荒生存不足时值得优先关注"],
+      "entryId": "rune_system_runic_ward",
+      "visual": "ward"
+    },
+    {
+      "key": "skills",
+      "title": "卡古兰技能",
+      "subtitle": "新技能与辅助宝石",
+      "description": "遗物制作可获得卡古兰技能。它们消耗符文结界，不受职业、属性或武器限制。",
+      "highlights": ["新增 21 种技能", "新增 8 种辅助宝石", "结合天梯观察主流用法"],
+      "entryId": "gem_kalguuran_skills",
+      "visual": "skill"
+    },
+    {
+      "key": "boss",
+      "title": "终局 Boss",
+      "subtitle": "三条重点首领线",
+      "description": "终局新增多条故事线与首领挑战。先推进异界解锁，再根据攻略准备防御和走位。",
+      "highlights": ["库勒马克容器", "The Bodach", "Tangmazu"],
+      "entryId": "boss_pinnacle_bosses",
+      "visual": "boss"
+    }
+  ],
+  "bossGuides": [
+    {
+      "id": "vessel_of_kulemak",
+      "name": "库勒马克容器",
+      "enName": "Vessel of Kulemak",
+      "series": "深渊终局",
+      "summary": "完成深渊终局推进后，在灵魂之井挑战的巅峰首领。",
+      "unlock": "沿异界深渊裂隙推进，完成三个深渊阵营首领后取得进入灵魂之井的钥匙。",
+      "skills": ["闪电巨型光束：会造成闪电伤害并强化感电效果。", "传送重砸：无法通过翻滚闪避或格挡，需要提前离开落点。", "横扫与地面持续伤害：注意近身横扫、地雷和危险地面。"],
+      "tips": ["看到传送落点后立刻横向离开，不要依赖翻滚硬吃重砸。", "场地出现危险地面时优先调整站位，再处理输出窗口。", "挑战高强度版本前先补足闪电抗性与持续作战能力。"],
+      "drops": ["库勒马克之握（Grip of Kulemak）：该首领专属戒指。战斗中与石化巫妖互动，可以在掉落前为戒指追加最多 4 条亵渎词缀。"],
+      "source": {
+        "name": "poe2db - Vessel of Kulemak",
+        "url": "https://poe2db.tw/us/Vessel_of_Kulemak"
+      }
+    },
+    {
+      "id": "the_bodach",
+      "name": "博达赫",
+      "enName": "The Bodach",
+      "series": "仪式终局",
+      "summary": "仪式终局故事线中的巅峰首领，移动速度快，并包含多阶段范围攻击。",
+      "unlock": "推进仪式终局故事线，完成 Rite of the Nameless 对应内容后挑战。",
+      "skills": ["远程拳击：左右拳会打出较远距离的范围伤害。", "吸附与地面效果：技能数据包含吸附、危险地面和喷涌效果。", "第二阶段连段：会出现陨石、重砸和连续攻击组合。"],
+      "tips": ["保持移动并预留位移，不要长时间站在首领正前方。", "进入第二阶段后减少贪刀，优先躲避陨石和连续重砸。", "技能数据仍在结合实战补充，首次挑战以熟悉机制为主。"],
+      "drops": ["专属掉落仍在持续校验，当前先以解锁和稳定击杀为目标。"],
+      "source": {
+        "name": "poe2db - The Bodach",
+        "url": "https://poe2db.tw/us/The_Bodach"
+      }
+    },
+    {
+      "id": "tangmazu",
+      "name": "坦格玛祖",
+      "enName": "Tangmazu",
+      "series": "迷雾终局",
+      "summary": "迷雾终局故事线中的巅峰首领。公开资料仍在完善，优先记录解锁路线和掉落线索。",
+      "unlock": "推进迷雾终局故事线，深入枯萎柳树并完成对应挑战后进入首领战。",
+      "skills": ["公开技能资料仍在补充中。", "首次挑战建议保留足够容错，先观察阶段变化和场地机制。"],
+      "tips": ["优先保证生存，不要在未知机制阶段连续贪刀。", "开服初期结合社区实战继续补充技能预警和阶段打法。"],
+      "drops": ["已确认存在坦格玛祖的圣香炉（Tangmazu's Thurible）族裔辅助宝石。", "专属掉落归属与掉率仍需实战校验。"],
+      "source": {
+        "name": "poe2db - Tangmazu",
+        "url": "https://poe2db.tw/us/Tangmazu"
+      }
+    }
+  ]
+}
