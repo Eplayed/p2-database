@@ -1,6 +1,6 @@
 # p2-database 项目说明
 
-> 更新日期：2026-06-02  
+> 更新日期：2026-06-03  
 > 用途：下次继续开发前，先读本文件，再按需要查看对应爬虫。
 
 ## 1. 项目定位
@@ -32,8 +32,8 @@ daily-talk 微信小程序
 |---|---|---|---|---|
 | 天梯与玩家详情 | `poe.ninja` Builds | `npm run crawl:ladder` | `all_ladders_translated.json`、`classes.json`、`players/*.json`、`ladder_analysis.json` | GitHub Actions 手动 |
 | 职业真实分布刷新 | `poe.ninja` Builds | `npm run refresh:ladder-distribution` | `classes.json`、`ladder_analysis.json` | 手动 |
-| 通用经济 | `poe.ninja` Economy | `npm run crawl:economy` | `economy.json` | GitHub Actions 每日 4 次 |
-| 0.5 资料与经济观察 | `poe2db` + 人工源 + `economy.json` | `npm run crawl:patch05:with-economy` | `patch-0.5/version.json`、`patch05_catalog.json`、经济 JSON | 经济 Workflow 自动联动；也可手动 |
+| poe.ninja 经济摘要 | `poe.ninja` Economy API | `npm run crawl:economy:ninja` | `miniprogram_data/economy_digest.json`、`economy.json`、`economy-icons/*` | GitHub Actions 每日 4 次；Dashboard 可手动 |
+| 0.5 资料与经济观察 | `poe2db` + 人工源 + 经济摘要 | `npm run crawl:patch05:with-economy` | `patch-0.5/version.json`、`patch05_catalog.json`、经济 JSON | 经济 Workflow 自动联动；也可手动 |
 | 新闻列表与详情 | 踩蘑菇快捷导航 | `npm run crawl:news:all` | `news_caimogu.json`、`news_details/*.json` | GitHub Actions 每天 1 次 |
 | 正式开荒推荐 | 人工精选源 + 天梯分析 | `npm run build:starter` | `miniprogram_data/starters.json` | 手动 |
 | 热门 BD 候选池 | 踩蘑菇 Planner 接口 | `npm run agent:starter:refresh:dev` | `starter_candidates.json`、`base-data/starter/candidates/*.json` | Codex 自动化收集；人工审核后再提升 |
@@ -52,10 +52,13 @@ OSS 主路径：
 poe2-ladders/release/
 ```
 
-通用经济兼容路径：
+经济摘要与兼容路径：
 
 ```text
+poe2-ladders/release/miniprogram_data/economy_digest.json
+poe2-ladders/release/miniprogram_data/economy-icons/*
 poe2-economy/economy.json
+poe2-economy/economy_digest.json
 ```
 
 0.5 资料缓存约定：
@@ -98,7 +101,9 @@ Dashboard 适合日常维护：
 
 - 在 `dev` / `release` 间切换。
 - 日常优先运行置顶的 `一键更新 0.5 日常数据`：
-  `新闻 -> 经济与 0.5 聚合 -> 剧情攻略 -> 上传 OSS`。
+  `新闻 -> 经济摘要与 0.5 聚合 -> 剧情攻略 -> 上传 OSS`。
+- 开服期需要快速更新价格时，运行 `一键更新 0.5 经济榜`：
+  `poe.ninja 经济摘要 -> 0.5 聚合 -> 上传 OSS`。
 - 需要重新抓天梯时再运行 `一键完整刷新`。
 - 单独刷新新闻、天梯、经济与 0.5 聚合、开荒推荐、剧情攻略。
 - 抓取热门 BD 帖、生成候选、人工审核后发布。
@@ -123,7 +128,7 @@ lsof -nP -iTCP:5177 -sTCP:LISTEN
 | `base-data/patch05/overrides.zh-CN.json` | 中文名称、摘要、标签、分类修正 |
 | `base-data/starter/starter_builds.json` | 正式开荒推荐源 |
 | `base-data/miniprogram_config/feature_survey.json` | 小程序功能调研开关 |
-| `auto_browser/crawl_economy.js` 中的 `MANUAL_DICT` | 新通货中文名补充 |
+| `crawlers/economy/ninja_digest.js` 中的 `MANUAL_TRANSLATIONS` | 新通货、符文、门票中文名补充 |
 
 不应手工编辑：
 
@@ -198,7 +203,7 @@ https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/initialChapters.json
 国际服数据可以继续作为先行参考，但国服经济和玩家偏好可能不同：
 
 1. 新闻保持每日更新。
-2. 经济每 4-6 小时检查一次，确认有真实行情再把状态从“待行情”改为“可参考”。
+2. 经济每 4-6 小时跑一次 Dashboard 的 `一键更新 0.5 经济榜`，确认小程序市场页不再显示旧行情。
 3. 开荒推荐保留“人工精选 / 国际服验证”语义，不把国际服热度写成国服结论。
 4. 观察用户反馈，优先修复数据错误，不增加大功能。
 
@@ -228,7 +233,7 @@ npm run build:starter
 NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 ```
 
-5. 根据真实掉落和行情拆细符文、合金、Boss 门票等经济分类。
+5. 根据真实掉落和行情继续补充 `MANUAL_TRANSLATIONS`，优先校准符文、合金、族裔宝石、Boss 门票和开荒材料中文名。
 
 注意：`npm run data:starter:publish` 会自动抓取、提升、生成并上传，适合已经确认候选质量后的快捷发布，不适合第一次抓取后盲跑。
 

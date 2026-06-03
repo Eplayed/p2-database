@@ -24,9 +24,16 @@ const TASKS = [
   {
     id: 'patch05_daily_publish',
     name: '一键更新 0.5 日常数据',
-    description: '推荐日常使用：依次刷新新闻、经济与 0.5 数据、剧情地图攻略，并上传 OSS。不抓天梯，不自动提升热门 BD。',
+    description: '推荐日常使用：依次刷新新闻、poe.ninja 新经济摘要、0.5 数据、剧情地图攻略，并上传 OSS。不抓天梯，不自动提升热门 BD。',
     group: 'recommended',
     steps: ['news_all', 'patch05_with_economy', 'story_guide', 'upload'],
+  },
+  {
+    id: 'economy_daily_publish',
+    name: '一键更新 0.5 经济榜',
+    description: '只刷新 poe.ninja 经济摘要、0.5 新经济观察并上传 OSS。开服期建议优先跑这个，速度快、成本低。',
+    group: 'recommended',
+    steps: ['economy_digest', 'patch05', 'upload'],
   },
   {
     id: 'release_flow',
@@ -59,9 +66,16 @@ const TASKS = [
   {
     id: 'patch05_with_economy',
     name: '刷新经济与 0.5 聚合',
-    description: '抓取通货汇率，并生成 0.5 资料速查、终局清单和新经济观察。',
+    description: '抓取 poe.ninja 经济摘要，并生成 0.5 资料速查、终局清单和新经济观察。',
     group: 'single',
     command: ['node', ['crawlers/patch05/run_with_economy.js']],
+  },
+  {
+    id: 'economy_digest',
+    name: '抓取 poe.ninja 经济摘要',
+    description: '直接请求 poe.ninja PoE2 经济 API，生成 economy_digest.json、兼容 economy.json 和展示图标。',
+    group: 'single',
+    command: ['node', ['crawlers/economy/ninja_digest.js']],
   },
   {
     id: 'starter',
@@ -86,8 +100,8 @@ const TASKS = [
   },
   {
     id: 'economy',
-    name: '仅刷新通用经济',
-    description: '只更新 economy.json，不重新生成 0.5 聚合数据。用于排查经济爬虫。',
+    name: '仅刷新通用经济兼容文件',
+    description: '旧入口，当前等同于抓取 poe.ninja 经济摘要并生成兼容 economy.json。用于排查旧命令。',
     group: 'advanced',
     command: ['node', ['auto_browser/crawl_economy.js']],
   },
@@ -234,6 +248,7 @@ function getDataSummary(environment) {
   const ladder = readJson(path.join(dataDir, 'all_ladders_translated.json'), null);
   const ladderAnalysis = readJson(path.join(dataDir, 'ladder_analysis.json'), null);
   const economyWatch = readJson(path.join(dataDir, 'patch-0.5/patch05_economy_watch.json'), null);
+  const economyDigest = readJson(path.join(dataDir, 'miniprogram_data/economy_digest.json'), null);
   const patchIndex = readJson(path.join(dataDir, 'patch-0.5/patch05_index.json'), null);
 
   const ladderClasses = ladder && ladder.ladders ? Object.keys(ladder.ladders) : [];
@@ -252,6 +267,7 @@ function getDataSummary(environment) {
       starters: summarizeJson(path.join(dataDir, 'miniprogram_data/starters.json')),
       hotBdCandidates: summarizeJson(path.join(dataDir, 'miniprogram_data/starter_candidates.json')),
       storyGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/story_guides.json')),
+      economyDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/economy_digest.json')),
       surveyConfig: summarizeJson(path.join(dataDir, 'miniprogram_config/feature_survey.json')),
     },
     ladder: {
@@ -269,6 +285,8 @@ function getDataSummary(environment) {
       file: getFileInfo(path.join(dataDir, 'patch-0.5/patch05_index.json')),
       entries: patchIndex ? getArrayLength(patchIndex) : 0,
       economyWatch: economyWatch ? getArrayLength(economyWatch) : 0,
+      economyItems: economyDigest && economyDigest.summary ? economyDigest.summary.selectedItemCount : 0,
+      economyUpdatedAt: economyDigest && economyDigest.updatedAt ? economyDigest.updatedAt : '',
     },
   };
 }

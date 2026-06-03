@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Crawler & Upload
+      - name: Refresh poe.ninja economy digest
         env:
           CI: true
           OSS_REGION: oss-cn-hangzhou
@@ -31,7 +31,7 @@ jobs:
           OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
           OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
           NODE_ENV: production
-        run: node auto_browser/crawl_economy.js
+        run: node crawlers/economy/ninja_digest.js
 
       - name: Refresh 0.5 economy output
         env:

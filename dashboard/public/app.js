@@ -97,6 +97,15 @@ function renderSummary(summary) {
       note: summary.patch05.file ? formatTime(summary.patch05.file.updatedAt) : '无文件',
     },
     {
+      label: '新经济榜',
+      value: summary.patch05.economyItems || keyFiles.economyDigest?.count || 0,
+      note: summary.patch05.economyUpdatedAt
+        ? `经济更新 ${formatTime(summary.patch05.economyUpdatedAt)}`
+        : keyFiles.economyDigest?.updatedAt
+          ? formatTime(keyFiles.economyDigest.updatedAt)
+          : '无经济摘要',
+    },
+    {
       label: '剧情攻略 / 调研',
       value: `${keyFiles.storyGuides?.count || 0} / ${keyFiles.surveyConfig ? '已配置' : '无'}`,
       note: keyFiles.storyGuides?.updatedAt
