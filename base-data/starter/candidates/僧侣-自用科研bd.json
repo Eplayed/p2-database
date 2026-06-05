@@ -1,0 +1,85 @@
+{
+  "id": "僧侣-自用科研bd",
+  "status": "candidate",
+  "reviewStatus": "needs_review",
+  "confidence": "low",
+  "title": "自用科研bd",
+  "author": "小白",
+  "class": "僧侣",
+  "ascendancy": "",
+  "mainSkill": "霹雳闪",
+  "tags": [
+    "僧侣"
+  ],
+  "sourceMetrics": {
+    "hotScore": 7,
+    "views": 7,
+    "replies": 0,
+    "likes": 0,
+    "favorites": 0
+  },
+  "summary": "自动抓取自踩蘑菇热门 BD 区。该文件只作为 Agent 候选输入，发布前需要人工审核。",
+  "levelingPlan": [
+    {
+      "stage": "开荒：BD信息",
+      "summary": "技能：1. 默认 / 霹雳闪 + 拉其塔之流 + 元素军械 II + 战争铁拳 II + 盲点 + 投射物减速 II",
+      "mainSkills": [
+        "技能：1. 默认 / 霹雳闪 + 拉其塔之流 + 元素军械 II + 战争铁拳 II + 盲点 + 投射物减速 II",
+        "技能：1. 默认 / 能量球调节",
+        "技能：1. 默认 / 暴击时施放 + 夜星 + 致盲 II + 狂野碎片 II + 投射物加速 III + 精准暴击"
+      ],
+      "passives": [
+        "天赋：详见原帖天赋树，候选入库前需要人工确认关键路径。"
+      ],
+      "gearTips": [],
+      "ascendancy": [],
+      "transition": [],
+      "notes": [
+        "原帖：https://poe2.caimogu.cc/planner#/plan/UMdDGtYU",
+        "作者：小白",
+        "职业：僧侣",
+        "标签：僧侣"
+      ],
+      "sourceLines": [
+        "原帖：https://poe2.caimogu.cc/planner#/plan/UMdDGtYU",
+        "作者：小白",
+        "职业：僧侣",
+        "标签：僧侣",
+        "技能：1. 默认 / 霹雳闪 + 拉其塔之流 + 元素军械 II + 战争铁拳 II + 盲点 + 投射物减速 II",
+        "技能：1. 默认 / 能量球调节",
+        "技能：1. 默认 / 暴击时施放 + 夜星 + 致盲 II + 狂野碎片 II + 投射物加速 III + 精准暴击",
+        "天赋：详见原帖天赋树，候选入库前需要人工确认关键路径。"
+      ]
+    },
+    {
+      "stage": "开荒：作者说明",
+      "summary": "优先堆满暴击,崩雷鸣减速触发电球后,电球加速在怪没死完前大厨暴击,利用石拳手套暴击得球,互相转",
+      "mainSkills": [],
+      "passives": [],
+      "gearTips": [],
+      "ascendancy": [],
+      "transition": [],
+      "notes": [
+        "优先堆满暴击,崩雷鸣减速触发电球后,电球加速在怪没死完前大厨暴击,利用石拳手套暴击得球,互相转"
+      ],
+      "sourceLines": [
+        "优先堆满暴击,崩雷鸣减速触发电球后,电球加速在怪没死完前大厨暴击,利用石拳手套暴击得球,互相转"
+      ]
+    }
+  ],
+  "extractedAt": "2026-06-03T12:11:06.945Z",
+  "sources": [
+    {
+      "name": "踩蘑菇热门BD",
+      "type": "agent_candidate",
+      "url": "https://poe2.caimogu.cc/planner#/plan/UMdDGtYU",
+      "checkedAt": "2026-06-03",
+      "confidence": "low",
+      "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
+    }
+  ],
+  "reviewHints": [
+    "缺少升华/转职",
+    "缺少升华/转职/转型节点"
+  ]
+}
