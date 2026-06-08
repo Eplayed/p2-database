@@ -183,25 +183,119 @@ const QUEST_REWARD_CATALOG = [
 ];
 
 const ITEM_TERM_TRANSLATIONS = {
+  "All Equipment": "所有装备",
+  "Martial Weapons": "战斗武器",
+  "Martial Weapon": "战斗武器",
+  Martial: "战斗",
+  "Body Armours": "胸甲",
+  "Body Armour": "胸甲",
   Charm: "咒符",
   Charms: "咒符",
   Flask: "药剂",
   Flasks: "药剂",
   Rune: "符文",
+  Idol: "雕像",
+  Jewel: "珠宝",
+  Amulet: "护身符",
+  Crossbow: "战弩",
+  Crossbows: "战弩",
+  Grenade: "榴弹",
+  Projectile: "投射物",
+  Projectiles: "投射物",
   Staff: "长杖",
   "Wand or Staff": "魔杖或长杖",
+  Sceptres: "权杖",
+  Sceptre: "权杖",
+  Bows: "弓",
+  Bow: "弓",
   Wand: "魔杖",
   Armour: "护甲",
+  Helmets: "头盔",
+  Helmet: "头盔",
+  Gloves: "手套",
+  Boots: "靴子",
+  Belt: "腰带",
+  Ring: "戒指",
+  Shield: "盾牌",
   Weapon: "武器",
+  "Reload Time": "装填时间",
+  "Attack per Second": "每秒攻击次数",
+  "per Second": "每秒",
+  "Projectile Range": "投射物射程",
+  "Rarity of Items found": "物品稀有度",
+  "Cast Speed": "施法速度",
   Quality: "品质",
+  Modifiers: "词缀",
   "Stack Size": "堆叠数量",
   "Limited to": "限制",
+  "Runic Ward": "符文护盾",
+  "Evasion Rating": "闪避值",
+  Evasion: "闪避",
+  "Energy Shield": "能量护盾",
+  "Global": "全局",
+  "Attacks": "攻击",
+  "Attack": "攻击",
+  "Damage": "伤害",
+  Physical: "物理",
+  "Onslaught": "猛攻",
+  "Tailwind": "顺风",
+  "Experience": "经验",
+  "Power Charge": "暴击球",
+  "Power Charges": "暴击球",
+  "Elemental Infusion": "元素注能",
+  "Elemental Infusions": "元素注能",
+  "Elemental Ground Surfaces": "元素地面效果",
+  "Elemental Ground Surface": "元素地面效果",
+  "Fully Broken Armour": "护甲完全破坏",
+  "Non-Damaging Ailments": "非伤害型异常状态",
+  "Elemental Ailments": "元素异常状态",
+  "Elemental Ailment": "元素异常状态",
+  Ailments: "异常状态",
+  Ailment: "异常状态",
+  Poison: "中毒",
+  Poisons: "中毒",
+  "Rare or Unique Enemies": "稀有或传奇敌人",
+  Enemies: "敌人",
+  Enemy: "敌人",
+  "Gold Dropped by Slain Enemies": "被击败敌人掉落的金币",
+  "Command Skills": "指令技能",
+  "Command Skill": "指令技能",
+  Minions: "召唤生物",
+  Minion: "召唤生物",
+  Allies: "友军",
+  Companion: "伙伴",
+  Presence: "存在范围",
+  "Allies in your Presence": "你存在范围内的友军",
+  "Base Life Regeneration": "基础生命再生",
+  "Low Mana": "低魔力",
+  "Low Life": "低生命",
+  "Cost Efficiency": "消耗效能",
+  "Reservation Efficiency": "保留效能",
+  "Life Cost Efficiency": "生命消耗效能",
+  "Life Recovery Rate": "生命回复率",
+  "Mana Recovery rate": "魔力回复率",
+  "Skill Effect Duration": "技能效果持续时间",
+  "Cooldown Recovery Rate": "冷却回复速度",
+  "Movement Speed": "移动速度",
+  "Recharge Rate": "充能回复速度",
+  "Recharge": "充能回复",
+  "Meta Skills": "元技能",
+  "Herald Skills": "捷技能",
+  "Minion Skills": "召唤生物技能",
+  "Suffix Modifier": "后缀词缀",
+  "Prefix Modifier": "前缀词缀",
+  "Modifier": "词缀",
+  allowed: "上限",
   Level: "等级",
   Charges: "充能",
   Charge: "充能",
   Guard: "护卫",
+  "Light Radius": "照亮范围",
   Stunned: "被晕眩",
   Stun: "晕眩",
+  Ignited: "燃烧",
+  Chilled: "冰缓",
+  Ground: "地面",
   Shock: "感电",
   Magnitude: "幅度",
   Archon: "执政官",
@@ -209,15 +303,240 @@ const ITEM_TERM_TRANSLATIONS = {
   Lightning: "闪电",
   Fire: "火焰",
   Cold: "冰霜",
+  Chaos: "混沌",
   Spell: "法术",
+  "Wind Skills": "风技能",
+  Wind: "风",
   Skills: "技能",
 };
 
 const RUNE_NAME_TRANSLATIONS = {
+  "Greater Adept Rune": "高级行家符文",
+  "Greater Glacial Rune": "高级冰川符文",
+  "Greater Iron Rune": "高级钢铁符文",
   "Greater Storm Rune": "高阶风暴符文",
+  "Greater Desert Rune": "高级沙漠符文",
+  "Greater Body Rune": "高级肉体符文",
+  "Greater Mind Rune": "高级心灵符文",
+  "Greater Robust Rune": "高级健壮符文",
+  "Greater Resolve Rune": "高级决心符文",
+  "Greater Vision Rune": "高级远见符文",
+  "Greater Rune of Alacrity": "高级迅捷符文",
+  "Perfect Iron Rune": "完美钢铁符文",
+  "Perfect Body Rune": "完美肉体符文",
+  "Perfect Mind Rune": "完美心灵符文",
+  "Perfect Storm Rune": "完美风暴符文",
+  "Iron Rune": "钢铁符文",
+  "Glacial Rune": "冰川符文",
+  "Desert Rune": "沙漠符文",
+  "Charging Rune": "充能符文",
+  "Rune of the Hunt": "狩猎符文",
   "Storm Rune": "风暴符文",
   "Hedgewitch Assandra's Rune of Wisdom": "荒篱女巫阿桑德拉的智慧符文",
+  "Craiceann's Rune of Warding": "克雷斯安的守护符文",
+  "Saqawal's Rune of Memory": "萨卡瓦尔的记忆符文",
+  "Saqawal's Rune of the Sky": "萨卡瓦尔的天空符文",
+  "Farrul's Rune of the Chase": "法鲁尔的追猎符文",
+  "Farrul's Rune of the Hunt": "法鲁尔的狩猎符文",
+  "Countess Seske's Rune of Archery": "塞丝克伯爵夫人的箭术符文",
+  "Thane Grannell's Rune of Mastery": "格兰内尔领主的掌控符文",
+  "The Greatwolf's Rune of Willpower": "巨狼的意志符文",
+  "Fenumus' Rune of Spinning": "费努姆斯的飞旋符文",
+  "Fenumus' Rune of Agony": "费努姆斯的痛苦符文",
+  "Fenumus' Rune of Draining": "费努姆斯的汲取符文",
+  "Warding Rune of Reinforcement": "守护强化符文",
+  "Serle's Triumph": "瑟勒的凯旋",
+  "Soul Core of Tacati": "塔卡提的灵魂核心",
+  "Soul Core of Quipolatl": "奎波拉特的灵魂核心",
+  "Soul Core of Citaqualotl": "希塔夸洛特的灵魂核心",
+  "Soul Core of Zantipi": "赞提皮的灵魂核心",
+  "Soul Core of Zalatl": "扎拉特尔的灵魂核心",
+  "Tzamoto's Soul Core of Ferocity": "扎莫托的凶暴灵魂核心",
+  "Xopec's Soul Core of Power": "佐佩克的力量灵魂核心",
+  "Quipolatl's Soul Core of Flow": "奎波拉特尔的流动灵魂核心",
+  "Jiquani's Thesis": "吉夸尼的论题",
+  "Guatelitzi's Thesis": "瓜特利齐的论题",
+  "Tacati's Soul Core of Affliction": "塔卡提的苦痛灵魂核心",
+  "Uruk's Smelting": "厄罗克的熔炼术",
+  "Olroth's Conviction": "奥尔罗斯的信念",
+  "Rakiata's Flow": "拉其塔之流",
+  "Vorana's Siege": "沃拉娜的围攻",
+  "Herald of Ice": "冰霜之捷",
+  "Herald of Ash": "灰烬之捷",
+  "Herald of Thunder": "闪电之捷",
+  "Herald of Blood": "鲜血之捷",
+  "Herald of Plague": "瘟疫之捷",
+  "Hollow Focus": "空心专注",
+  "Ghost Dance": "幽灵舞步",
+  "Righteous Descent": "正义降临",
+  "Crossbow Shot": "战弩射击",
+  "Purity of Fire": "火焰净化",
+  "Purity of Lightning": "闪电净化",
+  "Purity of Ice": "冰霜净化",
+  Discipline: "纪律",
+  Blasphemy: "渎神",
+  "Cast on Critical": "暴击时施放",
+  Spellslinger: "法术挥洒",
+  "Power Siphon": "力量抽取",
+  "Raise Shield": "举盾",
+  "Spear Throw": "投矛",
+  "Cast on Elemental Ailment": "元素异常时施放",
+  "The Taming": "驯服之戒",
+  "Primate Idol": "灵长雕像",
+  Fireflower: "火焰花",
+  "Concussive Runes": "震荡符文",
+  "Eyes of the Runefather": "符文之父之眼",
 };
+
+const SOCKETABLE_PREFIX_TRANSLATIONS = {
+  Lesser: "低阶",
+  Greater: "高级",
+  Perfect: "完美",
+  Ancient: "古代",
+  Warding: "守护",
+};
+
+const SOCKETABLE_TRAIT_TRANSLATIONS = {
+  Iron: "钢铁",
+  Glacial: "冰川",
+  Storm: "风暴",
+  Desert: "沙漠",
+  Body: "肉体",
+  Mind: "心灵",
+  Adept: "行家",
+  Robust: "健壮",
+  Resolve: "决心",
+  Vision: "远见",
+  Inspiration: "启发",
+  Rebirth: "重生",
+  Ward: "护盾",
+  Charging: "充能",
+  Alacrity: "迅捷",
+  Leadership: "领导",
+  Splinters: "碎片",
+  Prowess: "英勇",
+  Detonation: "爆破",
+  Witchcraft: "巫术",
+  Hunt: "狩猎",
+  Accumulation: "积累",
+  Renown: "名望",
+  Reach: "射程",
+  Foundations: "根基",
+  Acrobatics: "杂技",
+  Heart: "心脏",
+  Recovery: "回复",
+  Grace: "优雅",
+  Claws: "利爪",
+  Agony: "痛苦",
+  Cruelty: "残酷",
+  Spring: "春日",
+  Draining: "汲取",
+};
+
+const SOCKETABLE_PROPER_TRANSLATIONS = {
+  Farrul: "法鲁尔",
+  Fenumus: "费努姆斯",
+  Craiceann: "克雷斯安",
+  Saqawal: "萨卡瓦尔",
+  "The Greatwolf": "巨狼",
+  "Thane Grannell": "格兰内尔领主",
+  "Thane Leld": "莱尔德领主",
+  "Countess Seske": "塞丝克伯爵夫人",
+  "Courtesan Mannan": "曼南宫廷侍女",
+  "Hedgewitch Assandra": "荒篱女巫阿桑德拉",
+  Azcapa: "阿兹卡帕",
+  Jiquani: "吉夸尼",
+  Zalatl: "扎拉特尔",
+  Topotante: "托波坦特",
+  Opiloti: "奥皮洛蒂",
+  Guatelitzi: "瓜特利齐",
+  Hayoxi: "哈约希",
+  Ticaba: "提卡巴",
+  Uromoti: "乌罗莫提",
+  Atmohua: "阿特莫瓦",
+  Citaqualotl: "希塔夸洛特",
+  Estazunti: "埃斯塔尊提",
+};
+
+const PASSIVE_NAME_TRANSLATIONS = {
+  "Dance with Death": "与亡共舞",
+  "Ghost Dance": "幽灵舞步",
+  "Righteous Descent": "正义降临",
+  Conduit: "能量连接",
+  Resonance: "共鸣",
+  "Blood Magic": "祭血术",
+  "Giant's Blood": "巨人之血",
+  "Giants Blood": "巨人之血",
+  "Chaos Inoculation": "异灵之体",
+  "Eldritch Battery": "异能魔力",
+  "Pain Attunement": "苦痛灵曲",
+  "Whispers of Doom": "灭世之语",
+};
+
+const PASSIVE_ICON_OVERRIDES = {
+  "Dance with Death": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DancewithDeathKeystone.webp",
+  Conduit: "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneConduit.webp",
+  Resonance: "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/ResonanceKeystone.webp",
+  "Blood Magic": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneBloodMagic.webp",
+  "Giants Blood": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/GiantBloodKeystone.webp",
+  "Giant's Blood": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/GiantBloodKeystone.webp",
+  "Chaos Inoculation": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneChaosInoculation.webp",
+  "Eldritch Battery": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneEldritchBattery.webp",
+  "Pain Attunement": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystonePainAttunement.webp",
+  "Whispers of Doom": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/KeystoneWhispersofDoom.webp",
+};
+
+function translateSocketableName(name) {
+  if (!name) return name;
+  if (RUNE_NAME_TRANSLATIONS[name]) return RUNE_NAME_TRANSLATIONS[name];
+
+  const normalizedName = String(name).replace(/['’]/g, "'");
+  for (const [en, cn] of Object.entries(RUNE_NAME_TRANSLATIONS)) {
+    if (en.replace(/['’]/g, "'") === normalizedName) return cn;
+  }
+
+  let match = normalizedName.match(/^(Lesser|Greater|Perfect) ([A-Za-z]+) Rune$/);
+  if (match) {
+    const tier = SOCKETABLE_PREFIX_TRANSLATIONS[match[1]] || match[1];
+    const trait = SOCKETABLE_TRAIT_TRANSLATIONS[match[2]] || match[2];
+    return `${tier}${trait}符文`;
+  }
+
+  match = normalizedName.match(/^([A-Za-z]+) Rune$/);
+  if (match) {
+    const trait = SOCKETABLE_TRAIT_TRANSLATIONS[match[1]] || match[1];
+    return `${trait}符文`;
+  }
+
+  match = normalizedName.match(/^(Ancient|Warding)? ?Rune of ([A-Za-z]+)$/);
+  if (match) {
+    const prefix = match[1] ? `${SOCKETABLE_PREFIX_TRANSLATIONS[match[1]] || match[1]}` : "";
+    const trait = SOCKETABLE_TRAIT_TRANSLATIONS[match[2]] || match[2];
+    return `${prefix}${trait}符文`;
+  }
+
+  match = normalizedName.match(/^(.+)'s Rune of ([A-Za-z]+)$/);
+  if (match) {
+    const owner = SOCKETABLE_PROPER_TRANSLATIONS[match[1]] || match[1];
+    const trait = SOCKETABLE_TRAIT_TRANSLATIONS[match[2]] || match[2];
+    return `${owner}的${trait}符文`;
+  }
+
+  match = normalizedName.match(/^Soul Core of ([A-Za-z]+)$/);
+  if (match) {
+    const owner = SOCKETABLE_PROPER_TRANSLATIONS[match[1]] || match[1];
+    return `${owner}的灵魂核心`;
+  }
+
+  match = normalizedName.match(/^(.+)'s Soul Core of ([A-Za-z]+)$/);
+  if (match) {
+    const owner = SOCKETABLE_PROPER_TRANSLATIONS[match[1]] || match[1];
+    const trait = SOCKETABLE_TRAIT_TRANSLATIONS[match[2]] || match[2];
+    return `${owner}的${trait}灵魂核心`;
+  }
+
+  return null;
+}
 
 // 确保输出目录存在
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -381,6 +700,9 @@ function generateUniqueFileName(account, name, timestamp) {
 
 // 翻译函数
 function translateItemName(itemName, baseType, frameType) {
+  const manualItemName = translateSocketableName(itemName) || translateSocketableName(baseType);
+  if (manualItemName) return manualItemName;
+
   if (frameType === 3) {
     // 传奇物品
     const uniqueInfo = dictUnique[itemName];
@@ -537,7 +859,73 @@ function applyTermTranslations(text) {
     .replace(/闪电\s+法术/g, "闪电法术")
     .replace(/火焰\s+法术/g, "火焰法术")
     .replace(/冰霜\s+法术/g, "冰霜法术")
-    .replace(/混沌\s+法术/g, "混沌法术");
+    .replace(/混沌\s+法术/g, "混沌法术")
+    .replace(/护甲,\s*闪避\s+and\s+能量护盾/gi, "护甲、闪避与能量护盾")
+    .replace(/护甲,\s*Evasion\s+and\s+能量护盾/gi, "护甲、闪避与能量护盾")
+    .replace(/Physical伤害/g, "物理伤害")
+    .replace(/品质 \((火焰|冰霜|闪电|防御|魔力) 词缀\)/g, "品质（$1词缀）")
+    .replace(/提高\s+([\d.]+)%\s+effect of 护甲完全破坏/gi, "护甲完全破坏效果提高 $1%")
+    .replace(/提高\s+([\d.]+)%\s+幅度 of 感电 you inflict/gi, "你施加的感电幅度提高 $1%")
+    .replace(/提高\s+([\d.]+)%\s+幅度 of 非伤害型异常状态 you inflict/gi, "你施加的非伤害型异常状态幅度提高 $1%")
+    .replace(/提高\s+([\d.]+)%\s+Duration of 元素异常状态 on Enemies/gi, "敌人身上的元素异常状态持续时间延长 $1%")
+    .replace(/against 稀有或传奇敌人/gi, "对稀有或传奇敌人")
+    .replace(/while on 低魔力/gi, "低魔力时")
+    .replace(/while on 低生命/gi, "低生命时")
+    .replace(/while Shapeshifted/gi, "变形时")
+    .replace(/with this weapon/gi, "使用此武器")
+    .replace(/when collecting an 元素注能 to gain an additional 元素注能 of the same type/gi, "收集元素注能时，额外获得一个相同类型的元素注能")
+    .replace(/chance when you gain a 暴击球 to gain an additional 暴击球/gi, "几率在获得暴击球时额外获得一个暴击球")
+    .replace(/chance to gain an additional random 充能 when you gain a 充能/gi, "几率在获得充能时额外获得一个随机充能")
+    .replace(/执政官 recovery period expires/gi, "执政官恢复期结束速度")
+    .replace(/经验 gain/gi, "经验获取")
+    .replace(/技能 have/gi, "技能")
+    .replace(/攻击 have/gi, "攻击")
+    .replace(/Can roll Marksman modifiers/gi, "可以掷出神射手词缀")
+    .replace(/友军 in your 存在范围/gi, "你存在范围内的友军")
+    .replace(/You and 你存在范围内的友军/gi, "你和你存在范围内的友军")
+    .replace(/你和友军 in your 存在范围/gi, "你和你存在范围内的友军")
+    .replace(/你存在范围内的友军 deal ([\d.]+) to ([\d.]+) added 攻击 (火焰|冰霜|闪电|混沌|物理)伤害/gi, "你存在范围内的友军攻击附加 $1 - $2 $3伤害")
+    .replace(/你存在范围内的友军 have 施法速度加快 ([\d.]+)%/gi, "你存在范围内的友军施法速度加快 $1%")
+    .replace(/你存在范围内的友军 have 攻击速度加快 ([\d.]+)%/gi, "你存在范围内的友军攻击速度加快 $1%")
+    .replace(/你存在范围内的友军 have 命中值提高 ([\d.]+)%/gi, "你存在范围内的友军命中值提高 $1%")
+    .replace(/你存在范围内的友军 have 所有元素抗性 \+([\d.]+)%/gi, "你存在范围内的友军所有元素抗性 +$1%")
+    .replace(/你存在范围内的友军 have 混沌抗性 \+([\d.]+)%/gi, "你存在范围内的友军混沌抗性 +$1%")
+    .replace(/([\d.]+)% of your 基础生命再生 is granted to 你存在范围内的友军/gi, "你基础生命再生的 $1% 应用于你存在范围内的友军")
+    .replace(/获得相当于伤害 ([\d.]+)% 的额外Chaos伤害/gi, "获得相当于伤害 $1% 的额外混沌伤害")
+    .replace(/Gain ([\d.]+)% of 物理伤害 as extra 混沌伤害/gi, "获得相当于物理伤害 $1% 的额外混沌伤害")
+    .replace(/提高 ([\d.]+)% 照亮范围/gi, "照亮范围扩大 $1%")
+    .replace(/降低 ([\d.]+)% 照亮范围/gi, "照亮范围缩小 $1%")
+    .replace(/召唤生物 have 冷却回复速度加快 ([\d.]+)% for 指令技能/gi, "召唤生物的指令技能冷却回复速度加快 $1%")
+    .replace(/提高 ([\d.]+)% 伤害 变形时/gi, "变形时伤害提高 $1%")
+    .replace(/攻击伤害提高 ([\d.]+)% 变形时/gi, "变形时攻击伤害提高 $1%")
+    .replace(/风 技能/gi, "风技能")
+    .replace(/风技能 which can be boosted by 元素地面效果 can be boosted by multiple 元素地面效果/gi, "可被元素地面效果强化的风技能，可同时受到多个元素地面效果强化")
+    .replace(/风技能 which can be boosted by 元素地面效果 count as being boosted by 燃烧, 感电, and 冰缓 地面/gi, "可被元素地面效果强化的风技能，视为已受到燃烧、感电和冰缓地面强化")
+    .replace(/风技能 which can be boosted by 元素地面效果 count as being boosted by 燃烧 地面/gi, "可被元素地面效果强化的风技能，视为已受到燃烧地面强化")
+    .replace(/Grants effect of Guided Freezing Shrine/gi, "获得指引冰冻神龛效果")
+    .replace(/Grants effect of Guided Meteoric Shrine/gi, "获得指引陨火神龛效果")
+    .replace(/Grants effect of Dreaming Gloom Shrine/gi, "获得梦魇幽暗神龛效果")
+    .replace(/Inflict Abyssal Wasting 击中时/gi, "击中时施加深渊枯萎")
+    .replace(/降低 ([\d.]+)% 存在范围 Area of Effect/gi, "存在范围缩小 $1%")
+    .replace(/提高 ([\d.]+)% 存在范围 Area of Effect/gi, "存在范围扩大 $1%")
+    .replace(/附加 ([\d.]+)\s*[-–]\s*([\d.]+) (物理|火焰|冰霜|闪电|混沌) 伤害/g, "附加 $1 - $2 $3伤害")
+    .replace(/Grenade 技能 火焰 an additional Projectile/gi, "榴弹技能发射 1 个额外投射物")
+    .replace(/([\d.]+)% chance to gain 猛攻 on Killing Hits with this 武器/gi, "使用此武器击败敌人时有 $1% 几率获得猛攻")
+    .replace(/Targets can be affected by \+([\d.]+) of your 中毒 at the same time/gi, "目标可同时承受你额外 $1 层中毒")
+    .replace(/降低 ([\d.]+)% 中毒 Duration/gi, "中毒持续时间缩短 $1%")
+    .replace(/所有Projectile技能等级/g, "所有投射物技能等级")
+    .replace(/Crossbows:/g, "战弩：")
+    .replace(/Body 护甲/g, "胸甲")
+    .replace(/攻击 per Second/g, "每秒攻击次数")
+    .replace(/Socket-bound/gi, "插槽绑定")
+    .replace(/to 品质 of all 技能/gi, "所有技能品质")
+    .replace(/Item 能量护盾 on Equipped 头盔/gi, "已装备头盔上的物品能量护盾")
+    .replace(/Increases and Reductions to 移动速度 also apply to 能量护盾 充能回复 Rate/gi, "移动速度的提高与降低也套用于能量护盾充能回复速度")
+    .replace(/能量护盾 充能回复 starts/gi, "能量护盾开始充能回复")
+    .replace(/Chaos抗性/g, "混沌抗性")
+    .replace(/\bto 攻击\b/g, "至攻击")
+    .replace(/\bper player level\b/gi, "每角色等级")
+    .replace(/\bon Hit\b/gi, "击中时");
   return result;
 }
 
@@ -555,10 +943,20 @@ function translateSingleMod(line) {
     "[Rune|Rune]": "符文",
     Rune: "符文",
     Quality: "品质",
+    Spirit: "精魂",
+    Idol: "雕像",
+    Crossbow: "战弩",
+    "Reload Time": "装填时间",
     "Stack Size": "堆叠数量",
     "Limited to": "限制",
   };
   if (exact[text]) return exact[text];
+
+  const prefixMatch = text.match(/^(All Equipment|Martial Weapons?|Body Armours?|Body Armour|Wand or Staff|Armour|Helmets?|Gloves|Boots|Weapon|Sceptres?|Bows?|Shield|Belt|Crossbows?):\s*(.+)$/i);
+  if (prefixMatch) {
+    const prefix = applyTermTranslations(prefixMatch[1]);
+    return `${prefix}：${translateSingleMod(prefixMatch[2])}`;
+  }
 
   const customPatterns = [
     { regex: /^Lasts ([\d.]+) Seconds$/i, replace: "持续 $1 秒" },
@@ -576,9 +974,85 @@ function translateSingleMod(line) {
     { regex: /^([\d.]+)% increased Movement Speed$/i, replace: "移动速度提高 $1%" },
     { regex: /^\+([\d.]+)% to (Fire|Cold|Lightning|Chaos) Resistance$/i, replace: "+$1% $2抗性" },
     { regex: /^\+([\d.]+) to maximum Life$/i, replace: "+$1 最大生命" },
+    { regex: /^\+([\d.]+) to maximum Mana$/i, replace: "+$1 最大魔力" },
     { regex: /^\+([\d.]+) to Spirit$/i, replace: "+$1 精魂" },
+    { regex: /^Quality \((Fire|Cold|Lightning|Defence|Mana) Modifiers\)$/i, replace: "品质（$1词缀）" },
+    { regex: /^([\d.]+)% increased Damage for each type of Elemental Ailment on Enemy$/i, replace: "敌人每有一种元素异常状态，伤害提高 $1%" },
+    { regex: /^Enemies take ([\d.]+)% increased Damage for each Elemental Ailment type among your Ailments on them$/i, replace: "敌人身上每有一种你施加的元素异常状态，受到的伤害提高 $1%" },
+    { regex: /^([\d.]+)% reduced Duration of Ignite, Shock and Chill on Enemies$/i, replace: "敌人身上的点燃、感电和冰缓持续时间缩短 $1%" },
+    { regex: /^Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces$/i, replace: "可被元素地面效果强化的风技能，可同时受到多个元素地面效果强化" },
+    { regex: /^Wind Skills which can be boosted by Elemental Ground Surfaces count as being boosted by Ignited, Shocked, and Chilled Ground$/i, replace: "可被元素地面效果强化的风技能，视为已受到燃烧、感电和冰缓地面强化" },
+    { regex: /^Wind Skills which can be boosted by Elemental Ground Surfaces count as being boosted by Ignited Ground$/i, replace: "可被元素地面效果强化的风技能，视为已受到燃烧地面强化" },
+    { regex: /^Allies in your Presence deal ([\d.]+) to ([\d.]+) added Attack (Fire|Cold|Lightning|Chaos|Physical) Damage$/i, replace: "你存在范围内的友军攻击附加 $1 - $2 $3伤害" },
+    { regex: /^Allies in your Presence have ([\d.]+)% increased Cast Speed$/i, replace: "你存在范围内的友军施法速度加快 $1%" },
+    { regex: /^Allies in your Presence have ([\d.]+)% increased Critical Damage Bonus$/i, replace: "你存在范围内的友军暴击伤害加成提高 $1%" },
+    { regex: /^Allies in your Presence have \+([\d.]+)% to all Elemental Resistances$/i, replace: "你存在范围内的友军所有元素抗性 +$1%" },
+    { regex: /^([\d.]+)% of your Base Life Regeneration is granted to Allies in your Presence$/i, replace: "你基础生命再生的 $1% 应用于你存在范围内的友军" },
+    { regex: /^([\d.]+)% increased Light Radius$/i, replace: "照亮范围扩大 $1%" },
+    { regex: /^([\d.]+)% reduced Light Radius$/i, replace: "照亮范围缩小 $1%" },
+    { regex: /^Grants effect of Guided Freezing Shrine$/i, replace: "获得指引冰冻神龛效果" },
+    { regex: /^Grants effect of Guided Meteoric Shrine$/i, replace: "获得指引陨火神龛效果" },
+    { regex: /^Grants effect of Dreaming Gloom Shrine$/i, replace: "获得梦魇幽暗神龛效果" },
+    { regex: /^Your Maximum Resistances are ([\d.]+)%$/i, replace: "你的最大抗性为 $1%" },
+    { regex: /^Withered you inflict also increases (Fire|Cold|Lightning|Chaos|Physical) Damage taken$/i, replace: "你施加的凋零也会提高承受的$1伤害" },
+    { regex: /^Using a Mana Flask grants Guard equal to ([\d.]+)% of Flask's recovery amount for ([\d.]+) seconds$/i, replace: "使用魔力药剂时获得等同于药剂回复量 $1% 的护卫，持续 $2 秒" },
+    { regex: /^Grenade Skills fire an additional Projectile$/i, replace: "榴弹技能发射 1 个额外投射物" },
+    { regex: /^([\d.]+)% reduced Projectile Range$/i, replace: "投射物射程缩短 $1%" },
+    { regex: /^([\d.]+)% reduced Rarity of Items found$/i, replace: "物品稀有度降低 $1%" },
+    { regex: /^([\d.]+)% reduced Cast Speed$/i, replace: "施法速度降低 $1%" },
+    { regex: /^Inflict Abyssal Wasting on Hit$/i, replace: "击中时施加深渊枯萎" },
+    { regex: /^You and Allies in your Presence have ([\d.]+)% increased Attack Speed$/i, replace: "你和你存在范围内的友军攻击速度加快 $1%" },
+    { regex: /^You and Allies in your Presence have \+([\d.]+)% to Chaos Resistance$/i, replace: "你和你存在范围内的友军混沌抗性 +$1%" },
+    { regex: /^\+([\d.]+) to Evasion Rating$/i, replace: "+$1 闪避值" },
     { regex: /^([\d.]+)% increased Elemental Ailment Threshold$/i, replace: "元素异常状态阈值提高 $1%" },
+    { regex: /^Adds ([\d.]+)\s*[-–]\s*([\d.]+) (Fire|Cold|Lightning|Chaos|Physical) Damage$/i, replace: "附加 $1 - $2 $3伤害" },
+    { regex: /^Adds ([\d.]+)\s*[-–]\s*([\d.]+) (Fire|Cold|Lightning|Chaos|Physical) Damage to Attacks$/i, replace: "攻击附加 $1 - $2 $3伤害" },
     { regex: /^Gain ([\d.]+)% of Damage as Extra (Fire|Cold|Lightning|Chaos|Physical) Damage$/i, replace: "获得相当于伤害 $1% 的额外$2伤害" },
+    { regex: /^Gain ([\d.]+)% of Damage as Extra Damage of all Elements$/i, replace: "获得相当于伤害 $1% 的额外全元素伤害" },
+    { regex: /^Attacks Gain ([\d.]+)% of Damage as Extra (Fire|Cold|Lightning|Chaos|Physical) Damage$/i, replace: "攻击获得相当于伤害 $1% 的额外$2伤害" },
+    { regex: /^([\d.]+)% increased Physical Damage$/i, replace: "物理伤害提高 $1%" },
+    { regex: /^([\d.]+)% increased Armour, Evasion and Energy Shield$/i, replace: "护甲、闪避与能量护盾提高 $1%" },
+    { regex: /^([\d.]+)% increased effect of Fully Broken Armour$/i, replace: "护甲完全破坏效果提高 $1%" },
+    { regex: /^([\d.]+)% increased Magnitude of Shock you inflict$/i, replace: "你施加的感电幅度提高 $1%" },
+    { regex: /^([\d.]+)% increased Magnitude of Non-Damaging Ailments you inflict$/i, replace: "你施加的非伤害型异常状态幅度提高 $1%" },
+    { regex: /^([\d.]+)% increased Duration of Elemental Ailments on Enemies$/i, replace: "敌人身上的元素异常状态持续时间延长 $1%" },
+    { regex: /^([\d.]+)% increased Attack Damage against Rare or Unique Enemies$/i, replace: "对稀有或传奇敌人的攻击伤害提高 $1%" },
+    { regex: /^([\d.]+)% increased Quantity of Gold Dropped by Slain Enemies$/i, replace: "被击败敌人掉落的金币数量提高 $1%" },
+    { regex: /^Minions have ([\d.]+)% increased Cooldown Recovery Rate for Command Skills$/i, replace: "召唤生物的指令技能冷却回复速度提高 $1%" },
+    { regex: /^Allies in your Presence have ([\d.]+)% increased Movement Speed$/i, replace: "你存在范围内的友军移动速度提高 $1%" },
+    { regex: /^Allies in your Presence have ([\d.]+)% increased Attack Speed$/i, replace: "你存在范围内的友军攻击速度提高 $1%" },
+    { regex: /^Allies in your Presence deal ([\d.]+)% increased Damage$/i, replace: "你存在范围内的友军伤害提高 $1%" },
+    { regex: /^Minions have ([\d.]+)% increased maximum Life$/i, replace: "召唤生物最大生命提高 $1%" },
+    { regex: /^Minions Revive ([\d.]+)% faster$/i, replace: "召唤生物复活速度加快 $1%" },
+    { regex: /^Enemies you Curse have -([\d.]+)% to Chaos Resistance$/i, replace: "你诅咒的敌人混沌抗性 -$1%" },
+    { regex: /^Enemies you Curse take ([\d.]+)% increased Damage$/i, replace: "你诅咒的敌人受到的伤害提高 $1%" },
+    { regex: /^([\d.]+)% increased Area of Effect of Curses$/i, replace: "诅咒效果范围扩大 $1%" },
+    { regex: /^Curses activate ([\d.]+)% faster$/i, replace: "诅咒激活速度加快 $1%" },
+    { regex: /^([\d.]+)% increased Reservation Efficiency of Herald Skills$/i, replace: "捷技能的保留效能提高 $1%" },
+    { regex: /^([\d.]+)% increased Reservation Efficiency of Minion Skills$/i, replace: "召唤生物技能的保留效能提高 $1%" },
+    { regex: /^Meta Skills have ([\d.]+)% increased Reservation Efficiency$/i, replace: "元技能的保留效能提高 $1%" },
+    { regex: /^([\d.]+)% increased Skill Effect Duration ([\d.]+)% increased Cooldown Recovery Rate$/i, replace: "技能效果持续时间延长 $1%，冷却回复速度提高 $2%" },
+    { regex: /^([\d.]+)% reduced Slowing Potency of Debuffs on You$/i, replace: "你身上减益的减速效力降低 $1%" },
+    { regex: /^([\d.]+)% increased Mana Recovery rate while your Companion is in your Presence$/i, replace: "伙伴在你的存在范围内时，魔力回复率提高 $1%" },
+    { regex: /^([\d.]+)% increased Life Recovery Rate while your Companion is in your Presence$/i, replace: "伙伴在你的存在范围内时，生命回复率提高 $1%" },
+    { regex: /^([\d.]+)% increased Armour, Evasion and Energy Shield while your Companion is in your Presence$/i, replace: "伙伴在你的存在范围内时，护甲、闪避与能量护盾提高 $1%" },
+    { regex: /^([\d.]+)% increased Life Cost Efficiency$/i, replace: "生命消耗效能提高 $1%" },
+    { regex: /^([\d.]+)% increased Cost Efficiency$/i, replace: "消耗效能提高 $1%" },
+    { regex: /^([\d.]+)% increased Area of Effect$/i, replace: "效果范围扩大 $1%" },
+    { regex: /^\+([\d.]+) to maximum Rage$/i, replace: "+$1 最大怒火" },
+    { regex: /^\+([\d.]+)% to Quality of all Skills$/i, replace: "所有技能品质 +$1%" },
+    { regex: /^Bow Attacks fire ([\d.]+) additional Arrow$/i, replace: "弓类攻击发射 $1 支额外箭矢" },
+    { regex: /^([\d.]+)% increased Projectile Speed$/i, replace: "投射物速度加快 $1%" },
+    { regex: /^Has \+([\d.]+) Evasion Rating per player level$/i, replace: "每角色等级 +$1 闪避值" },
+    { regex: /^Has \+([\d.]+) maximum Energy Shield per player level$/i, replace: "每角色等级 +$1 最大能量护盾" },
+    { regex: /^([\d.]+)% more Global Evasion Rating and Energy Shield$/i, replace: "全局闪避值和能量护盾总增 $1%" },
+    { regex: /^([\d.]+)% chance to gain Onslaught for ([\d.]+) seconds on Hit$/i, replace: "击中时有 $1% 几率获得猛攻，持续 $2 秒" },
+    { regex: /^Gain Tailwind on Critical Hit, no more than once per second$/i, replace: "暴击时获得顺风，每秒最多一次" },
+    { regex: /^Lose all Tailwind when Hit$/i, replace: "被击中时失去所有顺风" },
+    { regex: /^([\d.]+)% increased Experience gain$/i, replace: "获得经验提高 $1%" },
+    { regex: /^\+([\d.]+) Suffix Modifier allowed$/i, replace: "可拥有 +$1 条后缀词缀" },
+    { regex: /^\+([\d.]+) Prefix Modifier allowed$/i, replace: "可拥有 +$1 条前缀词缀" },
+    { regex: /^([\d.]+)% increased Freeze Buildup$/i, replace: "冻结积蓄值提高 $1%" },
     { regex: /^\+([\d.]+) to Level of all (.+) Skills$/i, replace: "+$1 所有$2技能等级" },
     { regex: /^([\d.]+)% increased Critical Hit Chance for Spells$/i, replace: "法术暴击率提高 $1%" },
     { regex: /^([\d.]+)% increased Cast Speed$/i, replace: "施法速度提高 $1%" },
@@ -628,14 +1102,37 @@ function translateMods(modList) {
 function translateGemName(gemName) {
   if (!gemName) return gemName;
   if (dictGem[gemName]) return dictGem[gemName];
-  if (RUNE_NAME_TRANSLATIONS[gemName]) return RUNE_NAME_TRANSLATIONS[gemName];
+  const manualName = translateSocketableName(gemName);
+  if (manualName) return manualName;
+  const noApostropheName = gemName.replace(/['’]/g, "");
+  if (dictGem[noApostropheName]) return dictGem[noApostropheName];
   return applyTermTranslations(gemName);
 }
 
 function translateKeystoneName(keystoneName) {
+  if (PASSIVE_NAME_TRANSLATIONS[keystoneName]) return PASSIVE_NAME_TRANSLATIONS[keystoneName];
   return dictPassive[keystoneName]
     ? dictPassive[keystoneName].cn
     : keystoneName;
+}
+
+function normalizePassiveIconPath(icon, name) {
+  if (PASSIVE_ICON_OVERRIDES[name]) return PASSIVE_ICON_OVERRIDES[name];
+  if (!icon) return "";
+  const iconText = String(icon);
+  if (/^https?:\/\//i.test(iconText)) {
+    const passivesMatch = iconText.match(/\/passives\/([^?#]+\.(?:png|webp))/i);
+    if (passivesMatch) return `https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/${passivesMatch[1]}`;
+    return iconText;
+  }
+  const cleanPath = iconText.replace(/^\/+/, "");
+  if (cleanPath.startsWith("passives/")) {
+    return `https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/${cleanPath}`;
+  }
+  if (/\.(?:png|webp)$/i.test(cleanPath)) {
+    return `https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/${cleanPath}`;
+  }
+  return cleanPath;
 }
 
 function translateProperty(property) {
@@ -705,6 +1202,8 @@ function normalizeSocketedItems(itemData) {
       originalName: gemName,
       icon: gem.icon,
       isSupport: !!gem.support,
+      rarity: gem.frameType,
+      desc: buildItemDesc(gem),
     };
   });
 }
@@ -1208,24 +1707,13 @@ async function runTask() {
             })),
             // 🔧 修复 keystones 获取逻辑：优先从 API 获取，如果为空则从页面 DOM 提取
             // 🔧 修复 icon 路径：提取相对路径，避免小程序拼接出双重 URL
-            keystones: (() => {
-              const apiKeystones = capturedData.keystones || [];
+            keystones: await (async () => {
+              const apiKeystones = Array.isArray(capturedData.keystones)
+                ? capturedData.keystones
+                : [];
               if (apiKeystones.length > 0) {
                 return apiKeystones.map((keystone) => {
-                  // 提取相对路径
-                  let iconPath = keystone.icon || '';
-                  if (iconPath) {
-                    const match = iconPath.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
-                    if (match) {
-                      iconPath = `passives/${match[1]}`;
-                    } else if (iconPath.startsWith('http')) {
-                      // 如果是完整 URL，尝试提取末尾路径
-                      const urlMatch = iconPath.match(/\/([^/]+\.(png|webp))$/i);
-                      if (urlMatch) {
-                        iconPath = urlMatch[1];
-                      }
-                    }
-                  }
+                  const iconPath = normalizePassiveIconPath(keystone.icon, keystone.name);
                   return {
                     name: translateKeystoneName(keystone.name),
                     originalName: keystone.name,
@@ -1236,7 +1724,7 @@ async function runTask() {
 
               // 兜底：从页面提取 keystones 图标
               try {
-                const domKeystones = page.evaluate(() => {
+                const domKeystones = await page.evaluate(() => {
                   // 查找天赋树区域内的所有图片
                   const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
                   if (!tooltipCanvas) return [];
@@ -1248,21 +1736,22 @@ async function runTask() {
                     const src = img.src || '';
                     // 匹配 keystone 图标 URL
                     if (src.includes('/keystone') || src.includes('/Keystone')) {
-                      // 提取相对路径
-                      const match = src.match(/\/passives\/([^?]+\.png|\/[^?]+\.webp)/i);
-                      if (match) {
-                        const iconPath = `passives/${match[1]}`;
-                        // 从 tooltip 或 alt 获取名称
-                        const altText = img.alt || img.getAttribute('data-tooltip') || '';
-                        const name = altText.replace(/<[^>]*>/g, '').trim() || iconPath;
-                        keystones.push({ name, icon: iconPath });
-                      }
+                      const altText = img.alt || img.getAttribute('data-tooltip') || '';
+                      const name = altText.replace(/<[^>]*>/g, '').trim() || src;
+                      keystones.push({ name, icon: src });
                     }
                   });
 
                   return keystones;
                 });
-                return domKeystones || [];
+                const normalizedDomKeystones = Array.isArray(domKeystones)
+                  ? domKeystones
+                  : Object.values(domKeystones || {});
+                return normalizedDomKeystones.map((keystone) => ({
+                  name: translateKeystoneName(keystone.name),
+                  originalName: keystone.name,
+                  icon: normalizePassiveIconPath(keystone.icon, keystone.name),
+                }));
               } catch (e) {
                 console.warn('DOM 提取 keystones 失败:', e.message);
                 return [];

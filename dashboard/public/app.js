@@ -134,7 +134,7 @@ function renderTasks() {
   const groups = [
     {
       id: 'recommended',
-      title: '常用流程',
+      title: '一键发布',
       description: '日常维护优先从这里开始。组合流程会按顺序执行，并在最后上传 OSS。',
     },
     {
@@ -143,9 +143,14 @@ function renderTasks() {
       description: '需要只刷新某一类数据，或者定位问题时使用。',
     },
     {
+      id: 'starter',
+      title: 'BD 候选 / 开荒推荐',
+      description: '热门 BD 候选先人工审核，再决定是否提升到正式推荐。',
+    },
+    {
       id: 'advanced',
       title: '高级与排障',
-      description: '拆分步骤和可能修改正式开荒源的操作。标记为谨慎的任务请先检查候选数据。',
+      description: '慢任务或全量刷新。只在发布前校验、数据混乱或大版本维护时使用。',
     },
   ];
 
