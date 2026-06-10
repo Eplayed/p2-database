@@ -36,6 +36,13 @@ const TASKS = [
     steps: ['economy_digest', 'patch05', 'upload'],
   },
   {
+    id: 'cn_market_publish',
+    name: '更新国服 DD373 行情并上传',
+    description: '试运行：抓取 DD373 国服奥杜尔秘符赛季核心通货价格，生成国服行情参考并上传 OSS。',
+    group: 'recommended',
+    steps: ['cn_market_dd373', 'upload'],
+  },
+  {
     id: 'ladder_bd_publish',
     name: '刷新天梯/BD解析并上传',
     description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译和天梯分析，并上传 OSS。修复 BD 解析翻译或符文显示后运行这个。',
@@ -83,6 +90,13 @@ const TASKS = [
     description: '直接请求 poe.ninja PoE2 经济 API，生成 economy_digest.json、兼容 economy.json 和展示图标。',
     group: 'single',
     command: ['node', ['crawlers/economy/ninja_digest.js']],
+  },
+  {
+    id: 'cn_market_dd373',
+    name: '抓取 DD373 国服行情',
+    description: '抓取 DD373 流放之路：降临奥杜尔秘符赛季核心通货公开商品列表，生成 cn_market_digest.json。',
+    group: 'single',
+    command: ['node', ['crawlers/cn-market/dd373_currency.js']],
   },
   {
     id: 'patch05',
@@ -260,6 +274,7 @@ function getDataSummary(environment) {
       hotBdCandidates: summarizeJson(path.join(dataDir, 'miniprogram_data/starter_candidates.json')),
       storyGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/story_guides.json')),
       economyDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/economy_digest.json')),
+      cnMarketDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json')),
       surveyConfig: summarizeJson(path.join(dataDir, 'miniprogram_config/feature_survey.json')),
     },
     ladder: {
@@ -279,6 +294,7 @@ function getDataSummary(environment) {
       economyWatch: economyWatch ? getArrayLength(economyWatch) : 0,
       economyItems: economyDigest && economyDigest.summary ? economyDigest.summary.selectedItemCount : 0,
       economyUpdatedAt: economyDigest && economyDigest.updatedAt ? economyDigest.updatedAt : '',
+      cnMarketItems: readJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json'), null)?.summary?.availableCount || 0,
     },
   };
 }

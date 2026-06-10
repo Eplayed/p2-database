@@ -35,6 +35,7 @@ daily-talk 微信小程序
 | 天梯与玩家详情 | `poe.ninja` Builds | `npm run crawl:ladder` | `all_ladders_translated.json`、`classes.json`、`players/*.json`、`ladder_analysis.json` | GitHub Actions 手动 |
 | 职业真实分布刷新 | `poe.ninja` Builds | `npm run refresh:ladder-distribution` | `classes.json`、`ladder_analysis.json` | 手动 |
 | poe.ninja 经济摘要 | `poe.ninja` Economy API | `npm run crawl:economy:ninja` | `miniprogram_data/economy_digest.json`、`economy.json`、`economy-icons/*` | GitHub Actions 每日 4 次；Dashboard 可手动 |
+| 国服 DD373 行情试运行 | DD373 公开商品列表 | `npm run crawl:cn-market:dd373` | `miniprogram_data/cn_market_digest.json`、本地 `cn_market_raw.json` | GitHub Actions 每 15 分钟触发，随机等待 0-300 秒 |
 | 0.5 资料与经济观察 | `poe2db` + 人工源 + 经济摘要 | `npm run crawl:patch05:with-economy` | `patch-0.5/version.json`、`patch05_catalog.json`、经济 JSON | 经济 Workflow 自动联动；也可手动 |
 | 新闻列表与详情 | 踩蘑菇快捷导航 | `npm run crawl:news:all` | `news_caimogu.json`、`news_details/*.json` | GitHub Actions 每天 1 次 |
 | 正式开荒推荐 | 人工精选源 + 天梯分析 | `npm run build:starter` | `miniprogram_data/starters.json` | 手动 |
@@ -61,6 +62,7 @@ poe2-ladders/release/miniprogram_data/economy_digest.json
 poe2-ladders/release/miniprogram_data/economy-icons/*
 poe2-economy/economy.json
 poe2-economy/economy_digest.json
+poe2-economy/cn_market_digest.json
 ```
 
 0.5 资料缓存约定：
@@ -104,6 +106,8 @@ Dashboard 适合日常维护：
 - 在 `dev` / `release` 间切换。
 - 开服期需要快速更新价格时，优先运行 `一键更新经济榜并上传`：
   `poe.ninja 经济摘要 -> 0.5 聚合 -> 上传 OSS`。
+- 国服行情试运行时，运行 `更新国服 DD373 行情并上传`：
+  `DD373 核心通货行情 -> 上传 OSS`。当前只作为观察数据，不建议直接写成“实时成交价”。
 - 修复装备词缀、技能、符文/镶嵌翻译，或需要刷新 BD 解析详情时，运行 `刷新天梯/BD解析并上传`：
   `天梯玩家详情 -> 天梯聚合分析 -> 上传 OSS`。
 - 日常要同时刷新新闻、经济、0.5 资料和剧情攻略时，运行 `一键更新日常数据并上传`：
@@ -133,6 +137,7 @@ lsof -nP -iTCP:5177 -sTCP:LISTEN
 | `base-data/miniprogram_config/feature_survey.json` | 小程序功能调研开关 |
 | `auto_browser/translate_crawler.js` 中的名称映射和词缀规则 | 天梯、BD 解析、装备、技能、符文、灵魂核心、镶嵌内容中文化 |
 | `crawlers/economy/ninja_digest.js` 中的 `MANUAL_TRANSLATIONS` | 新通货、符文、合金、灵魂核心、族裔辅助宝石、门票中文名补充 |
+| `crawlers/cn-market/dd373_currency.js` 中的 `DD373_ITEMS` | 国服 DD373 试运行通货白名单和商品页 URL |
 
 不应手工编辑：
 
@@ -208,8 +213,9 @@ https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/initialChapters.json
 
 1. 新闻保持每日更新。
 2. 经济每 4-6 小时跑一次 Dashboard 的 `一键更新 0.5 经济榜`，确认小程序市场页不再显示旧行情。
-3. 开荒推荐保留“人工精选 / 国际服验证”语义，不把国际服热度写成国服结论。
-4. 观察用户反馈，优先修复数据错误，不增加大功能。
+3. DD373 国服行情先用 `update_cn_market_dd373.yml` 观察几天：重点看神圣石、崇高石、混沌石的样本数、最低价、中位价是否和网页人工查看一致。
+4. 开荒推荐保留“人工精选 / 国际服验证”语义，不把国际服热度写成国服结论。
+5. 观察用户反馈，优先修复数据错误，不增加大功能。
 
 ### 开服后 24-72 小时
 

@@ -29,6 +29,7 @@ function getAllFiles(dirPath, arrayOfFiles) {
 
 function getJsonCacheControl(relativePath) {
     if (relativePath.endsWith('miniprogram_data/economy_digest.json')) return 'max-age=300';
+    if (relativePath.endsWith('miniprogram_data/cn_market_digest.json')) return 'max-age=60';
     if (relativePath.endsWith('patch-0.5/version.json')) return 'max-age=300';
     if (relativePath.includes('patch-0.5/patch05_economy')) return 'max-age=300';
     if (relativePath.endsWith('patch-0.5/patch05_catalog.json')) return 'max-age=3600';
@@ -55,7 +56,7 @@ module.exports = async function uploadAll() {
     }
 
     const allFiles = getAllFiles(DATA_DIR);
-    const filesToUpload = allFiles.filter(f => !f.includes('all_data_full') && !f.endsWith('economy_raw.json'));
+    const filesToUpload = allFiles.filter(f => !f.includes('all_data_full') && !f.endsWith('economy_raw.json') && !f.endsWith('cn_market_raw.json'));
 
     console.log(`   待上传: ${filesToUpload.length} 个文件`);
 
@@ -131,6 +132,21 @@ module.exports = async function uploadAll() {
             console.log('   ✅ 已同步兼容路径: poe2-economy/economy_digest.json');
         } catch (e) {
             console.error('   ❌ 兼容路径同步失败: poe2-economy/economy_digest.json', e.message);
+        }
+    }
+
+    const cnMarketDigestPath = path.join(DATA_DIR, 'miniprogram_data/cn_market_digest.json');
+    if (envConfig.isProd && fs.existsSync(cnMarketDigestPath)) {
+        try {
+            await client.put('poe2-economy/cn_market_digest.json', cnMarketDigestPath, {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Cache-Control': 'max-age=60',
+                },
+            });
+            console.log('   ✅ 已同步兼容路径: poe2-economy/cn_market_digest.json');
+        } catch (e) {
+            console.error('   ❌ 兼容路径同步失败: poe2-economy/cn_market_digest.json', e.message);
         }
     }
 

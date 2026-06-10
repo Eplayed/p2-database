@@ -1,0 +1,83 @@
+name: Update CN Market DD373
+
+on:
+  schedule:
+    # 试运行：每 15 分钟触发一次，任务内随机等待 0-300 秒后抓取。
+    # 实际访问间隔约 10-20 分钟浮动，用于降低固定频率访问风险。
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '运行环境'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - dev
+          - production
+      skip_random_delay:
+        description: '跳过随机等待（手动测试用）'
+        required: true
+        default: false
+        type: boolean
+
+concurrency:
+  group: cn-market-dd373
+  cancel-in-progress: false
+
+jobs:
+  update-cn-market:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create auto_browser/.env file
+        run: |
+          mkdir -p auto_browser
+          cat > auto_browser/.env << EOF
+          NODE_ENV=${{ github.event.inputs.environment || 'production' }}
+          CI=true
+          OSS_REGION=oss-cn-hangzhou
+          OSS_BUCKET=poe2-all-class
+          OSS_ACCESS_KEY_ID=${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET=${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          EOF
+
+      - name: Refresh DD373 CN market digest
+        env:
+          CI: true
+          NODE_ENV: ${{ github.event.inputs.environment || 'production' }}
+          DD373_DELAY_MIN_SECONDS: 0
+          DD373_DELAY_MAX_SECONDS: ${{ github.event.inputs.skip_random_delay == 'true' && '0' || '300' }}
+          DD373_ITEM_DELAY_MS: 1500
+        run: node crawlers/cn-market/dd373_currency.js
+
+      - name: Upload to OSS
+        env:
+          CI: true
+          NODE_ENV: ${{ github.event.inputs.environment || 'production' }}
+          OSS_REGION: oss-cn-hangzhou
+          OSS_BUCKET: poe2-all-class
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+        run: node -e "require('./auto_browser/upload_to_oss')()"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cn-market-dd373-${{ github.run_number }}
+          path: |
+            translated-data/
+          retention-days: 7

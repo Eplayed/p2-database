@@ -23,6 +23,7 @@
 - 天梯数据：抓取 poe.ninja 页面数据，生成天梯索引、玩家详情、职业统计和 `ladder_analysis.json`。
 - 新闻数据：抓取踩蘑菇快捷导航和新闻详情，输出 `news_caimogu.json` 与 `news_details/*`。
 - poe.ninja 经济摘要：直接请求 poe.ninja PoE2 Economy API，输出 `miniprogram_data/economy_digest.json`、兼容 `economy.json` 和 `miniprogram_data/economy-icons/*`。
+- 国服 DD373 行情试运行：抓取 DD373「流放之路：降临 / 奥杜尔秘符赛季」核心通货公开商品列表，输出 `miniprogram_data/cn_market_digest.json`。这是行情参考，不承诺实时成交价。
 - 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`；新版小程序读取轻量 `version.json` 和统一 `patch05_catalog.json`。图文必看机制与 Boss 攻略维护在 `base-data/patch05/guide_content.json`。
 - 0.5 新经济观察：基于 `economy_digest.json` / `economy.json` 生成 `patch05_economy.json` 和 `patch05_economy_watch.json`，同时小程序市场页直接读取经济摘要展示核心汇率、新经济、符文合金、开荒材料、终局门票和涨跌榜。
 - 开荒推荐 MVP：由人工精选源 `base-data/starter/starter_builds.json` 生成小程序用 `miniprogram_data/starters.json`。
@@ -46,6 +47,7 @@ p2-database/
 ├── crawlers/
 │   ├── run.js                           # 统一入口
 │   ├── economy/                         # poe.ninja 经济摘要与图标保存
+│   ├── cn-market/                       # 国服 DD373 行情试运行
 │   ├── patch05/                         # 0.5 资料与经济观察管线
 │   ├── starter/                         # 开荒推荐生成
 │   ├── starter-agent/                   # 热门 BD 帖候选抓取与结构化抽取
@@ -89,6 +91,12 @@ npm run crawl:economy:ninja
 
 # 只刷新 poe.ninja 经济摘要，开发环境
 npm run crawl:economy:ninja:dev
+
+# 只刷新 DD373 国服核心通货行情，生产环境
+npm run crawl:cn-market:dd373
+
+# 刷新 DD373 国服核心通货行情并上传 OSS，生产环境
+npm run data:cn-market:publish
 
 # 刷新经济摘要，并重新生成 0.5 新经济观察
 npm run crawl:patch05:with-economy
@@ -143,9 +151,12 @@ poe2-ladders/release/miniprogram_data/economy-icons/*
 poe2-ladders/release/economy.json
 poe2-economy/economy.json
 poe2-economy/economy_digest.json
+poe2-economy/cn_market_digest.json
 ```
 
 `economy_digest.json` 是小程序优先读取的精简摘要，当前约 100KB；完整行情只写入本地 `economy_raw.json` 排查用，不上传 OSS。
+
+`cn_market_digest.json` 是国服行情试运行摘要，当前只抓 DD373 的神圣石、崇高石、混沌石三个核心通货。GitHub Actions `update_cn_market_dd373.yml` 每 15 分钟触发一次，并随机等待 0-300 秒后抓取，实际访问间隔约 10-20 分钟。先观察几天数据稳定性，再决定是否接入小程序页面。
 
 ## 开服后推荐操作
 

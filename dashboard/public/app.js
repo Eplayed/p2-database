@@ -106,6 +106,13 @@ function renderSummary(summary) {
           : '无经济摘要',
     },
     {
+      label: '国服行情',
+      value: summary.patch05.cnMarketItems || keyFiles.cnMarketDigest?.count || 0,
+      note: keyFiles.cnMarketDigest?.updatedAt
+        ? `DD373 更新 ${formatTime(keyFiles.cnMarketDigest.updatedAt)}`
+        : '无 DD373 行情',
+    },
+    {
       label: '剧情攻略 / 调研',
       value: `${keyFiles.storyGuides?.count || 0} / ${keyFiles.surveyConfig ? '已配置' : '无'}`,
       note: keyFiles.storyGuides?.updatedAt
