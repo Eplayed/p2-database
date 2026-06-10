@@ -29,6 +29,55 @@ const DD373_ITEMS = [
     url: 'https://www.dd373.com/s-bcntax-c-mxgtdd-h32hgr-fvdp4e.html',
     priority: 'core',
   },
+  {
+    id: 'vaal_orb',
+    name: '瓦尔宝珠',
+    enName: 'Vaal Orb',
+    url: 'https://www.dd373.com/s-bcntax-c-vfjkfa-h32hgr-fvdp4e.html',
+    priority: 'core',
+  },
+  {
+    id: 'perfect_jewellers_orb',
+    name: '完美工匠石',
+    enName: "Perfect Jeweller's Orb",
+    url: 'https://www.dd373.com/s-bcntax-c-hadn2w-h32hgr-fvdp4e.html',
+    priority: 'core',
+  },
+  {
+    id: 'greater_jewellers_orb',
+    name: '高级工匠石',
+    enName: "Greater Jeweller's Orb",
+    url: 'https://www.dd373.com/s-bcntax-c-gf9efe-h32hgr-fvdp4e.html',
+    priority: 'core',
+  },
+  {
+    id: 'gemcutters_prism',
+    name: '宝石匠的棱镜',
+    enName: "Gemcutter's Prism",
+    url: 'https://www.dd373.com/s-bcntax-c-bvraj0-h32hgr-fvdp4e.html',
+    priority: 'core',
+  },
+  {
+    id: 'fracturing_orb',
+    name: '破裂石',
+    enName: 'Fracturing Orb',
+    url: 'https://www.dd373.com/s-bcntax-c-qe2dvd-h32hgr-fvdp4e.html',
+    priority: 'core',
+  },
+  {
+    id: 'orb_of_annulment',
+    name: '无效石',
+    enName: 'Orb of Annulment',
+    url: 'https://www.dd373.com/s-bcntax-c-e1p60q-h32hgr-fvdp4e.html',
+    priority: 'core',
+  },
+  {
+    id: 'mirror_of_kalandra',
+    name: '卡兰德的魔镜',
+    enName: 'Mirror of Kalandra',
+    url: 'https://www.dd373.com/s-bcntax-c-0u3xp9-h32hgr-fvdp4e.html',
+    priority: 'core',
+  },
 ];
 
 function ensureDir(dirPath) {

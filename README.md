@@ -156,7 +156,7 @@ poe2-economy/cn_market_digest.json
 
 `economy_digest.json` 是小程序优先读取的精简摘要，当前约 100KB；完整行情只写入本地 `economy_raw.json` 排查用，不上传 OSS。
 
-`cn_market_digest.json` 是国服行情试运行摘要，当前只抓 DD373 的神圣石、崇高石、混沌石三个核心通货。GitHub Actions `update_cn_market_dd373.yml` 每 15 分钟触发一次，并随机等待 0-300 秒后抓取，实际访问间隔约 10-20 分钟。先观察几天数据稳定性，再决定是否接入小程序页面。
+`cn_market_digest.json` 是国服行情试运行摘要，当前抓 DD373 的神圣石、崇高石、混沌石、瓦尔宝珠、完美工匠石、高级工匠石、宝石匠的棱镜、破裂石、无效石、卡兰德的魔镜十个核心通货。GitHub Actions `update_cn_market_dd373.yml` 每 15 分钟触发一次，并随机等待 0-300 秒后抓取，实际访问间隔约 10-20 分钟。先观察几天数据稳定性，再决定是否接入小程序页面。
 
 ## 开服后推荐操作
 
