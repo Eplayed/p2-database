@@ -24,6 +24,7 @@
 - 新闻数据：抓取踩蘑菇快捷导航和新闻详情，输出 `news_caimogu.json` 与 `news_details/*`。
 - poe.ninja 经济摘要：直接请求 poe.ninja PoE2 Economy API，输出 `miniprogram_data/economy_digest.json`、兼容 `economy.json` 和 `miniprogram_data/economy-icons/*`。
 - 国服 DD373 行情试运行：抓取 DD373「流放之路：降临 / 奥杜尔秘符赛季」核心通货公开商品列表，输出 `miniprogram_data/cn_market_digest.json`。这是行情参考，不承诺实时成交价。
+- 千岛国服行情核验：通过本地 Dashboard 读取当前 Chrome 千岛页面可见行情，输出 `miniprogram_data/cn_market_qiandao_digest.json`。默认要求页面筛选为 `国服 / 赛季 / 普通`，不放入 GitHub Actions 高频自动任务。
 - 0.5 资料：从 poe2db 和人工维护数据生成 `patch-0.5/*.json`；新版小程序读取轻量 `version.json` 和统一 `patch05_catalog.json`。图文必看机制与 Boss 攻略维护在 `base-data/patch05/guide_content.json`。
 - 0.5 新经济观察：基于 `economy_digest.json` / `economy.json` 生成 `patch05_economy.json` 和 `patch05_economy_watch.json`，同时小程序市场页直接读取经济摘要展示核心汇率、新经济、符文合金、开荒材料、终局门票和涨跌榜。
 - 开荒推荐 MVP：由人工精选源 `base-data/starter/starter_builds.json` 生成小程序用 `miniprogram_data/starters.json`。
@@ -47,7 +48,7 @@ p2-database/
 ├── crawlers/
 │   ├── run.js                           # 统一入口
 │   ├── economy/                         # poe.ninja 经济摘要与图标保存
-│   ├── cn-market/                       # 国服 DD373 行情试运行
+│   ├── cn-market/                       # 国服 DD373 行情与千岛本地核验
 │   ├── patch05/                         # 0.5 资料与经济观察管线
 │   ├── starter/                         # 开荒推荐生成
 │   ├── starter-agent/                   # 热门 BD 帖候选抓取与结构化抽取
@@ -97,6 +98,13 @@ npm run crawl:cn-market:dd373
 
 # 刷新 DD373 国服核心通货行情并上传 OSS，生产环境
 npm run data:cn-market:publish
+
+# 读取当前 Chrome 千岛页面可见行情，开发环境
+# 需要先在 Chrome 打开千岛通货页并切到“国服 / 赛季 / 普通”
+npm run crawl:cn-market:qiandao:dev
+
+# 读取当前 Chrome 千岛页面可见行情并上传 OSS，生产环境
+npm run data:cn-market:qiandao:publish
 
 # 刷新经济摘要，并重新生成 0.5 新经济观察
 npm run crawl:patch05:with-economy
@@ -320,6 +328,14 @@ http://localhost:5177
   - `刷新天梯/BD解析并上传`：天梯玩家详情 -> 天梯聚合分析 -> 上传 OSS。修复装备词缀、技能、符文/镶嵌翻译后优先跑这个。
   - `一键更新日常数据并上传`：新闻 -> 经济摘要 -> 0.5 资料/经济观察 -> 剧情地图攻略 -> 上传 OSS。
 - 单项更新：新闻、天梯/BD解析、经济摘要、0.5 资料/经济观察、开荒推荐、剧情地图攻略、上传 OSS。
+- 单项更新：
+  - `抓取 DD373 国服行情`：适合自动定时和上传 OSS。
+  - `读取千岛当前页面行情（手动核验）`：只读取当前 Chrome 千岛通货页可见文字，默认必须是 `国服 / 赛季 / 普通`，适合先检查解析结果。
+  - `读取千岛行情并上传（本地核验）`：读取当前 Chrome 千岛通货页可见文字后上传 OSS，适合 dashboard 本地自动运行。
+- 本地自动运行：
+  - 页面保持打开时生效，可以给任意 dashboard 任务设置间隔和浮动时间。
+  - 到点会先弹出 5 秒倒计时；千岛任务会提醒先确认 Chrome 当前页面是 `国服 / 赛季 / 普通`。千岛建议选择 `读取千岛行情并上传（本地核验）`，间隔 120 分钟，浮动 10 分钟。
+  - 若关闭 dashboard 页面或电脑休眠，前端倒计时不会触发。需要无监督稳定定时的任务仍应使用 GitHub Actions 或 Codex 自动化。
 - BD 候选 / 开荒推荐：
   - `抓取热门 BD 候选`：抓帖 -> 抽候选，只生成候选池，不自动提升到正式推荐。
   - `发布人工开荒/热门 BD`：基于已人工维护的开荒源生成并上传。

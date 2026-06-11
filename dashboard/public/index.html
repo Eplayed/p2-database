@@ -22,6 +22,37 @@
 
       <section class="status-grid" id="summary"></section>
 
+      <section class="panel automation-panel">
+        <div class="panel-head">
+          <div>
+            <h2>本地自动运行</h2>
+            <p>页面保持打开时生效；到点会先弹出 5 秒倒计时，确认区服和页面状态后再运行。</p>
+          </div>
+          <div class="panel-actions">
+            <button class="ghost-btn" id="automationSaveBtn">保存设置</button>
+            <button class="danger-btn" id="automationToggleBtn">开启自动运行</button>
+          </div>
+        </div>
+        <div class="automation-grid">
+          <label class="field">
+            <span>任务</span>
+            <select id="automationTaskSelect"></select>
+          </label>
+          <label class="field">
+            <span>间隔（分钟）</span>
+            <input id="automationIntervalInput" type="number" min="10" step="5" value="120" />
+          </label>
+          <label class="field">
+            <span>浮动（分钟）</span>
+            <input id="automationJitterInput" type="number" min="0" step="1" value="10" />
+          </label>
+          <div class="automation-status">
+            <span id="automationStatusText">未开启</span>
+            <span id="automationNextText">下次：-</span>
+          </div>
+        </div>
+      </section>
+
       <section class="panel">
         <div class="panel-head">
           <div>
@@ -50,6 +81,19 @@
         <pre id="logOutput">选择并运行一个任务后，这里会显示日志。</pre>
       </section>
     </main>
+
+    <div class="countdown-mask" id="countdownMask" hidden>
+      <div class="countdown-card">
+        <span class="countdown-eyebrow">自动运行提醒</span>
+        <h2 id="countdownTitle">准备运行任务</h2>
+        <p id="countdownMessage">请确认页面状态正确。</p>
+        <strong id="countdownNumber">5</strong>
+        <div class="countdown-actions">
+          <button class="ghost-btn" id="countdownRunNowBtn">立即运行</button>
+          <button class="danger-btn" id="countdownCancelBtn">取消本次</button>
+        </div>
+      </div>
+    </div>
 
     <script src="/app.js"></script>
   </body>

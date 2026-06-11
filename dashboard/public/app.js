@@ -4,9 +4,18 @@ const state = {
   status: null,
   activeRunId: '',
   logAutoFollow: true,
+  automation: {
+    enabled: false,
+    taskId: 'cn_market_qiandao_publish',
+    intervalMinutes: 120,
+    jitterMinutes: 10,
+    nextRunAt: 0,
+  },
+  countdown: null,
 };
 
 const LOG_BOTTOM_THRESHOLD = 32;
+const AUTOMATION_STORAGE_KEY = 'p2-dashboard-automation-v1';
 const taskGrid = document.querySelector('#taskGrid');
 const summaryEl = document.querySelector('#summary');
 const logOutput = document.querySelector('#logOutput');
@@ -15,6 +24,19 @@ const logFollowStatus = document.querySelector('#logFollowStatus');
 const scrollLogBottomBtn = document.querySelector('#scrollLogBottomBtn');
 const refreshBtn = document.querySelector('#refreshBtn');
 const stopBtn = document.querySelector('#stopBtn');
+const automationTaskSelect = document.querySelector('#automationTaskSelect');
+const automationIntervalInput = document.querySelector('#automationIntervalInput');
+const automationJitterInput = document.querySelector('#automationJitterInput');
+const automationSaveBtn = document.querySelector('#automationSaveBtn');
+const automationToggleBtn = document.querySelector('#automationToggleBtn');
+const automationStatusText = document.querySelector('#automationStatusText');
+const automationNextText = document.querySelector('#automationNextText');
+const countdownMask = document.querySelector('#countdownMask');
+const countdownTitle = document.querySelector('#countdownTitle');
+const countdownMessage = document.querySelector('#countdownMessage');
+const countdownNumber = document.querySelector('#countdownNumber');
+const countdownRunNowBtn = document.querySelector('#countdownRunNowBtn');
+const countdownCancelBtn = document.querySelector('#countdownCancelBtn');
 
 function formatTime(value) {
   if (!value) return '无记录';
@@ -34,6 +56,11 @@ function formatDuration(ms) {
   return `${(ms / 1000).toFixed(1)}s`;
 }
 
+function formatDateTime(timestamp) {
+  if (!timestamp) return '-';
+  return formatTime(new Date(timestamp).toISOString());
+}
+
 function statusText(run) {
   if (!run) return '未运行';
   if (run.status === 'success') return '成功';
@@ -42,6 +69,12 @@ function statusText(run) {
   if (run.status === 'stopping') return '停止中';
   if (run.status === 'stopped') return '已停止';
   return run.status || '未知';
+}
+
+function clampNumber(value, min, fallback) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return fallback;
+  return Math.max(min, number);
 }
 
 function statusClass(run) {
@@ -210,6 +243,7 @@ function renderTasks() {
 async function loadTasks() {
   const data = await requestJson('/api/tasks');
   state.tasks = data.tasks;
+  renderAutomationTaskOptions();
   renderTasks();
 }
 
@@ -282,11 +316,11 @@ function handleLogScroll() {
   updateLogFollowUi();
 }
 
-async function runTask(taskId) {
+async function runTask(taskId, options = {}) {
   const task = state.tasks.find(item => item.id === taskId);
   if (!task) return;
   const warning = task.dangerous ? '\n\n这是谨慎操作，请确认你已经检查过候选数据。' : '';
-  if (!window.confirm(`在 ${state.env} 环境运行「${task.name}」？${warning}`)) return;
+  if (!options.skipConfirm && !window.confirm(`在 ${state.env} 环境运行「${task.name}」？${warning}`)) return;
 
   try {
     const data = await requestJson('/api/run', {
@@ -305,6 +339,177 @@ async function runTask(taskId) {
   }
 }
 
+function loadAutomationSettings() {
+  try {
+    const raw = window.localStorage.getItem(AUTOMATION_STORAGE_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    state.automation = {
+      ...state.automation,
+      ...saved,
+      intervalMinutes: clampNumber(saved.intervalMinutes, 10, 120),
+      jitterMinutes: clampNumber(saved.jitterMinutes, 0, 10),
+      nextRunAt: Number(saved.nextRunAt) || 0,
+    };
+  } catch (error) {
+    console.warn('读取自动运行设置失败:', error);
+  }
+}
+
+function saveAutomationSettings() {
+  window.localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automation));
+}
+
+function renderAutomationTaskOptions() {
+  if (!automationTaskSelect) return;
+  automationTaskSelect.innerHTML = state.tasks
+    .map(task => `<option value="${task.id}">${task.name}</option>`)
+    .join('');
+  if (state.tasks.some(task => task.id === state.automation.taskId)) {
+    automationTaskSelect.value = state.automation.taskId;
+  } else if (state.tasks[0]) {
+    state.automation.taskId = state.tasks[0].id;
+    automationTaskSelect.value = state.automation.taskId;
+  }
+}
+
+function getAutomationTask() {
+  return state.tasks.find(task => task.id === state.automation.taskId);
+}
+
+function computeNextRunAt(from = Date.now()) {
+  const intervalMs = state.automation.intervalMinutes * 60 * 1000;
+  const jitterMs = state.automation.jitterMinutes * 60 * 1000;
+  const offset = jitterMs ? Math.round((Math.random() * 2 - 1) * jitterMs) : 0;
+  return from + Math.max(10 * 60 * 1000, intervalMs + offset);
+}
+
+function syncAutomationForm() {
+  if (!automationTaskSelect) return;
+  automationTaskSelect.value = state.automation.taskId;
+  automationIntervalInput.value = state.automation.intervalMinutes;
+  automationJitterInput.value = state.automation.jitterMinutes;
+}
+
+function updateAutomationUi() {
+  const task = getAutomationTask();
+  automationToggleBtn.textContent = state.automation.enabled ? '关闭自动运行' : '开启自动运行';
+  automationToggleBtn.classList.toggle('active', state.automation.enabled);
+  automationStatusText.textContent = state.automation.enabled
+    ? `已开启：${task ? task.name : state.automation.taskId}`
+    : '未开启';
+  automationNextText.textContent = state.automation.enabled
+    ? `下次：${formatDateTime(state.automation.nextRunAt)}`
+    : '下次：-';
+}
+
+function applyAutomationForm() {
+  state.automation.taskId = automationTaskSelect.value || state.automation.taskId;
+  state.automation.intervalMinutes = clampNumber(automationIntervalInput.value, 10, 120);
+  state.automation.jitterMinutes = clampNumber(automationJitterInput.value, 0, 10);
+  if (state.automation.enabled) state.automation.nextRunAt = computeNextRunAt();
+  saveAutomationSettings();
+  syncAutomationForm();
+  updateAutomationUi();
+}
+
+function toggleAutomation() {
+  applyAutomationForm();
+  state.automation.enabled = !state.automation.enabled;
+  state.automation.nextRunAt = state.automation.enabled ? computeNextRunAt() : 0;
+  saveAutomationSettings();
+  updateAutomationUi();
+}
+
+function getAutomationMessage(task) {
+  if (task && task.id.includes('qiandao')) {
+    return '请确认 Chrome 当前千岛页面已切到“国服 / 赛季 / 普通”。倒计时结束后会读取当前页面可见行情。';
+  }
+  return '倒计时结束后会自动运行该任务；如不想执行，可以取消本次。';
+}
+
+function closeCountdown() {
+  if (state.countdown && state.countdown.timer) window.clearInterval(state.countdown.timer);
+  state.countdown = null;
+  countdownMask.hidden = true;
+}
+
+async function executeCountdownTask() {
+  const taskId = state.countdown && state.countdown.taskId;
+  closeCountdown();
+  if (!taskId) return;
+  await runTask(taskId, { skipConfirm: true });
+  state.automation.nextRunAt = computeNextRunAt();
+  saveAutomationSettings();
+  updateAutomationUi();
+}
+
+function startAutomationCountdown(task) {
+  if (!task || state.countdown) return;
+  let seconds = 5;
+  countdownTitle.textContent = `即将运行：${task.name}`;
+  countdownMessage.textContent = getAutomationMessage(task);
+  countdownNumber.textContent = seconds;
+  countdownMask.hidden = false;
+
+  const timer = window.setInterval(() => {
+    seconds -= 1;
+    countdownNumber.textContent = seconds;
+    if (seconds <= 0) executeCountdownTask();
+  }, 1000);
+
+  state.countdown = {
+    taskId: task.id,
+    timer,
+  };
+}
+
+function skipCurrentAutomationRun() {
+  closeCountdown();
+  state.automation.nextRunAt = computeNextRunAt();
+  saveAutomationSettings();
+  updateAutomationUi();
+}
+
+function tickAutomation() {
+  if (!state.automation.enabled) return;
+  if (state.countdown) return;
+  if (!state.automation.nextRunAt) {
+    state.automation.nextRunAt = computeNextRunAt();
+    saveAutomationSettings();
+    updateAutomationUi();
+    return;
+  }
+  if (Date.now() < state.automation.nextRunAt) return;
+
+  const currentRun = state.status && state.status.currentRun;
+  if (currentRun) {
+    state.automation.nextRunAt = Date.now() + 5 * 60 * 1000;
+    saveAutomationSettings();
+    updateAutomationUi();
+    return;
+  }
+
+  startAutomationCountdown(getAutomationTask());
+}
+
+function bindAutomation() {
+  loadAutomationSettings();
+  syncAutomationForm();
+  updateAutomationUi();
+  automationSaveBtn.addEventListener('click', () => {
+    applyAutomationForm();
+    window.alert('自动运行设置已保存');
+  });
+  automationToggleBtn.addEventListener('click', toggleAutomation);
+  countdownCancelBtn.addEventListener('click', skipCurrentAutomationRun);
+  countdownRunNowBtn.addEventListener('click', executeCountdownTask);
+  window.setInterval(() => {
+    tickAutomation();
+    updateAutomationUi();
+  }, 1000);
+}
+
 function bindEnvSwitch() {
   document.querySelectorAll('.env-btn').forEach(button => {
     button.addEventListener('click', async () => {
@@ -318,6 +523,7 @@ function bindEnvSwitch() {
 
 async function boot() {
   bindEnvSwitch();
+  bindAutomation();
   refreshBtn.addEventListener('click', loadStatus);
   stopBtn.addEventListener('click', stopCurrentTask);
   scrollLogBottomBtn.addEventListener('click', scrollLogToBottom);

@@ -36,6 +36,7 @@ daily-talk 微信小程序
 | 职业真实分布刷新 | `poe.ninja` Builds | `npm run refresh:ladder-distribution` | `classes.json`、`ladder_analysis.json` | 手动 |
 | poe.ninja 经济摘要 | `poe.ninja` Economy API | `npm run crawl:economy:ninja` | `miniprogram_data/economy_digest.json`、`economy.json`、`economy-icons/*` | GitHub Actions 每日 4 次；Dashboard 可手动 |
 | 国服 DD373 行情试运行 | DD373 公开商品列表 | `npm run crawl:cn-market:dd373` | `miniprogram_data/cn_market_digest.json`、本地 `cn_market_raw.json` | GitHub Actions 每 15 分钟触发，随机等待 0-300 秒 |
+| 千岛国服行情核验 | 当前 Chrome 千岛通货页可见行情 | `npm run crawl:cn-market:qiandao:dev` / `npm run data:cn-market:qiandao:publish` | `miniprogram_data/cn_market_qiandao_digest.json`、本地 `cn_market_qiandao_raw.json` | Dashboard 本地自动运行；默认要求 `国服 / 赛季 / 普通` |
 | 0.5 资料与经济观察 | `poe2db` + 人工源 + 经济摘要 | `npm run crawl:patch05:with-economy` | `patch-0.5/version.json`、`patch05_catalog.json`、经济 JSON | 经济 Workflow 自动联动；也可手动 |
 | 新闻列表与详情 | 踩蘑菇快捷导航 | `npm run crawl:news:all` | `news_caimogu.json`、`news_details/*.json` | GitHub Actions 每天 1 次 |
 | 正式开荒推荐 | 人工精选源 + 天梯分析 | `npm run build:starter` | `miniprogram_data/starters.json` | 手动 |
@@ -108,6 +109,8 @@ Dashboard 适合日常维护：
   `poe.ninja 经济摘要 -> 0.5 聚合 -> 上传 OSS`。
 - 国服行情试运行时，运行 `更新国服 DD373 行情并上传`：
   `DD373 核心通货行情 -> 上传 OSS`。当前只作为观察数据，不建议直接写成“实时成交价”。
+- 千岛行情核验时，先在 Chrome 打开千岛通货页，并确认筛选为 `国服 / 赛季 / 普通`。只检查解析结果时运行 `读取千岛当前页面行情（手动核验）`；需要更新 OSS 时运行 `读取千岛行情并上传（本地核验）`。
+- Dashboard 支持“本地自动运行”：选择任意任务、设置间隔和浮动时间，页面保持打开时到点弹出 5 秒倒计时。千岛建议选择 `读取千岛行情并上传（本地核验）`，设置为 120 分钟、浮动 10 分钟；其他稳定任务也可设置，但需要无监督定时的任务优先放 GitHub Actions。
 - 修复装备词缀、技能、符文/镶嵌翻译，或需要刷新 BD 解析详情时，运行 `刷新天梯/BD解析并上传`：
   `天梯玩家详情 -> 天梯聚合分析 -> 上传 OSS`。
 - 日常要同时刷新新闻、经济、0.5 资料和剧情攻略时，运行 `一键更新日常数据并上传`：

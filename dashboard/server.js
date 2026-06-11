@@ -43,6 +43,13 @@ const TASKS = [
     steps: ['cn_market_dd373', 'upload'],
   },
   {
+    id: 'cn_market_qiandao_publish',
+    name: '读取千岛行情并上传（本地核验）',
+    description: '读取当前 Chrome 千岛通货页可见行情，默认要求国服/赛季/普通，生成千岛行情参考并上传 OSS。运行前会在 Dashboard 倒计时提醒核对页面。',
+    group: 'recommended',
+    steps: ['cn_market_qiandao', 'upload'],
+  },
+  {
     id: 'ladder_bd_publish',
     name: '刷新天梯/BD解析并上传',
     description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译和天梯分析，并上传 OSS。修复 BD 解析翻译或符文显示后运行这个。',
@@ -97,6 +104,13 @@ const TASKS = [
     description: '抓取 DD373 流放之路：降临奥杜尔秘符赛季核心通货公开商品列表，生成 cn_market_digest.json。',
     group: 'single',
     command: ['node', ['crawlers/cn-market/dd373_currency.js']],
+  },
+  {
+    id: 'cn_market_qiandao',
+    name: '读取千岛当前页面行情（手动核验）',
+    description: '只读取当前 Chrome 打开的千岛通货页可见文字，生成 cn_market_qiandao_digest.json。需要先在 Chrome 打开千岛并开启“允许 Apple 事件中的 JavaScript”；不适合 GitHub Actions 定时。',
+    group: 'single',
+    command: ['node', ['crawlers/cn-market/qiandao_currency.js']],
   },
   {
     id: 'patch05',
@@ -275,6 +289,7 @@ function getDataSummary(environment) {
       storyGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/story_guides.json')),
       economyDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/economy_digest.json')),
       cnMarketDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json')),
+      cnMarketQiandaoDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/cn_market_qiandao_digest.json')),
       surveyConfig: summarizeJson(path.join(dataDir, 'miniprogram_config/feature_survey.json')),
     },
     ladder: {
