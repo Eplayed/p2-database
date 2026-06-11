@@ -4,17 +4,17 @@ url: "https://poe2.caimogu.cc/planner#/plan/wT26Q0Vw"
 author: "活生生的尸体"
 source: "踩蘑菇热门BD"
 sourceName: "踩蘑菇热门BD"
-class: "僧侣"
-ascendancy: "施法者"
+class: "女巫"
+ascendancy: 
 mainSkill: "移风岚"
-tags: "攻坚, 僧侣, 施法者"
-views: 80
+tags: "攻坚, 女巫"
+views: 101
 replies: 0
 likes: 0
-favorites: 1
-hotScore: 180
+favorites: 2
+hotScore: 301
 confidence: low
-fetchedAt: "2026-06-03T12:11:06.360Z"
+fetchedAt: "2026-06-08T08:42:53.969Z"
 ---
 
 # 0.5白僧
@@ -24,9 +24,8 @@ fetchedAt: "2026-06-03T12:11:06.360Z"
 ## 开荒：BD信息
 - 原帖：https://poe2.caimogu.cc/planner#/plan/wT26Q0Vw
 - 作者：活生生的尸体
-- 职业：僧侣 / 施法者
-- 标签：攻坚、僧侣、施法者
-- 推荐升华：施法者
+- 职业：女巫
+- 标签：攻坚、女巫
 - 技能：1. 默认 / 移风岚 + 元素军械 II + 快速攻击 II + 亢奋 + 精准暴击 + 分叉裂缝 II
 - 技能：1. 默认 / 汲能击 + 精准暴击 + 近战 II + 元素军械 II + 炽烈绝杀 + 能量球激增 II
 - 技能：1. 默认 / 霹雳闪 + 元素集中 + 元素军械 II + 精准暴击 + 战争铁拳 II + 永续充能

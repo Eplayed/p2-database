@@ -8,13 +8,13 @@ class: "僧侣"
 ascendancy: "夏乌拉侍僧"
 mainSkill: "投身裂隙"
 tags: "僧侣, 夏乌拉侍僧"
-views: 24
+views: 31
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 24
+hotScore: 31
 confidence: low
-fetchedAt: "2026-06-03T12:11:06.356Z"
+fetchedAt: "2026-06-08T08:42:53.971Z"
 ---
 
 # 黑僧光环师1

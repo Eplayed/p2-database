@@ -1,33 +1,33 @@
 {
   "schemaVersion": 1,
   "source": "https://poe2.caimogu.cc/planner#/plan/community-builds",
-  "fetchedAt": "2026-06-03T12:11:06.361Z",
+  "fetchedAt": "2026-06-08T08:42:53.973Z",
   "count": 10,
   "detailFetched": 10,
   "files": [
     {
+      "title": "0.5白僧",
+      "author": "活生生的尸体",
+      "url": "https://poe2.caimogu.cc/planner#/plan/wT26Q0Vw",
+      "file": "base-data/starter/agent_posts/caimogu-hot-bd-01-0-5白僧.md"
+    },
+    {
       "title": "我的箭下什么都有",
       "author": "叫果不吃果",
       "url": "https://poe2.caimogu.cc/planner#/plan/NTG2BIwV",
-      "file": "base-data/starter/agent_posts/caimogu-hot-bd-01-我的箭下什么都有.md"
+      "file": "base-data/starter/agent_posts/caimogu-hot-bd-02-我的箭下什么都有.md"
     },
     {
       "title": "黑僧光环师1",
       "author": "玩家02400450",
       "url": "https://poe2.caimogu.cc/planner#/plan/L2nlf2Em",
-      "file": "base-data/starter/agent_posts/caimogu-hot-bd-02-黑僧光环师1.md"
+      "file": "base-data/starter/agent_posts/caimogu-hot-bd-03-黑僧光环师1.md"
     },
     {
       "title": "巫妖召唤狂热",
       "author": "玩家02400450",
       "url": "https://poe2.caimogu.cc/planner#/plan/8jh6OWyv",
-      "file": "base-data/starter/agent_posts/caimogu-hot-bd-03-巫妖召唤狂热.md"
-    },
-    {
-      "title": "自用沙门徒",
-      "author": "Ozaki",
-      "url": "https://poe2.caimogu.cc/planner#/plan/IGSWDe99",
-      "file": "base-data/starter/agent_posts/caimogu-hot-bd-04-自用沙门徒.md"
+      "file": "base-data/starter/agent_posts/caimogu-hot-bd-04-巫妖召唤狂热.md"
     },
     {
       "title": "门徒先行版",
@@ -60,10 +60,10 @@
       "file": "base-data/starter/agent_posts/caimogu-hot-bd-09-自用旋风暴击.md"
     },
     {
-      "title": "0.5白僧",
-      "author": "活生生的尸体",
-      "url": "https://poe2.caimogu.cc/planner#/plan/wT26Q0Vw",
-      "file": "base-data/starter/agent_posts/caimogu-hot-bd-10-0-5白僧.md"
+      "title": "0.5自用回血暴击旋风",
+      "author": "annian",
+      "url": "https://poe2.caimogu.cc/planner#/plan/a067N00W",
+      "file": "base-data/starter/agent_posts/caimogu-hot-bd-10-0-5自用回血暴击旋风.md"
     }
   ]
 }
