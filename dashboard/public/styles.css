@@ -413,6 +413,10 @@ h2 {
   backdrop-filter: blur(4px);
 }
 
+.countdown-mask[hidden] {
+  display: none;
+}
+
 .countdown-card {
   width: min(460px, 100%);
   padding: 26px;
