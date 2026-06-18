@@ -8,13 +8,13 @@ class: "僧侣"
 ascendancy: 
 mainSkill: "旋风击"
 tags: "攻坚, 僧侣"
-views: 86
+views: 94
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 86
+hotScore: 94
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.972Z"
+fetchedAt: "2026-06-18T05:56:34.359Z"
 ---
 
 # 连击武圣自用

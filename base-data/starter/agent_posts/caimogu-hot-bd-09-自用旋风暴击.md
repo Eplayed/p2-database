@@ -8,13 +8,13 @@ class: "女猎手"
 ascendancy: "仪式行者"
 mainSkill: "拳击"
 tags: "女猎手, 仪式行者"
-views: 31
+views: 37
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 31
+hotScore: 37
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.972Z"
+fetchedAt: "2026-06-18T05:56:34.359Z"
 ---
 
 # 自用旋风暴击

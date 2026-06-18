@@ -8,13 +8,13 @@ class: "女术者"
 ascendancy: "瓦拉煞的门徒"
 mainSkill: "寒霜爆"
 tags: "升级, 女术者, 瓦拉煞的门徒"
-views: 45
+views: 51
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 45
+hotScore: 51
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.971Z"
+fetchedAt: "2026-06-18T05:56:34.359Z"
 ---
 
 # 门徒先行版

@@ -13,8 +13,8 @@
     "锐眼"
   ],
   "sourceMetrics": {
-    "hotScore": 12,
-    "views": 12,
+    "hotScore": 51,
+    "views": 51,
     "replies": 0,
     "likes": 0,
     "favorites": 0
@@ -70,13 +70,13 @@
       ]
     }
   ],
-  "extractedAt": "2026-06-03T12:11:06.940Z",
+  "extractedAt": "2026-06-18T05:56:34.583Z",
   "sources": [
     {
       "name": "踩蘑菇热门BD",
       "type": "agent_candidate",
       "url": "https://poe2.caimogu.cc/planner#/plan/NTG2BIwV",
-      "checkedAt": "2026-06-03",
+      "checkedAt": "2026-06-18",
       "confidence": "low",
       "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
     }

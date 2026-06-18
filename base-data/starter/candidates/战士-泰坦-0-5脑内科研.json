@@ -13,8 +13,8 @@
     "泰坦"
   ],
   "sourceMetrics": {
-    "hotScore": 113,
-    "views": 113,
+    "hotScore": 129,
+    "views": 129,
     "replies": 0,
     "likes": 0,
     "favorites": 0
@@ -79,13 +79,13 @@
       ]
     }
   ],
-  "extractedAt": "2026-06-03T12:11:06.945Z",
+  "extractedAt": "2026-06-18T05:56:34.585Z",
   "sources": [
     {
       "name": "踩蘑菇热门BD",
       "type": "agent_candidate",
       "url": "https://poe2.caimogu.cc/planner#/plan/syuAfMp2",
-      "checkedAt": "2026-06-03",
+      "checkedAt": "2026-06-18",
       "confidence": "low",
       "note": "Agent/脚本从热门 BD 帖抽取的候选数据，发布前需要人工审核。"
     }

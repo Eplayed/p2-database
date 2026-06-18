@@ -8,13 +8,13 @@ class: "女猎手"
 ascendancy: 
 mainSkill: "回旋挥斩"
 tags: "女猎手"
-views: 35
+views: 40
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 35
+hotScore: 40
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.973Z"
+fetchedAt: "2026-06-18T05:56:34.360Z"
 ---
 
 # 0.5自用回血暴击旋风

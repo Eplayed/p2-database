@@ -61,14 +61,14 @@ function getClassTrendMap() {
   return trendMap;
 }
 
-function normalizeBuild(entry, trendMap, now) {
+function normalizeBuild(entry, trendMap, now, options = {}) {
   const className = entry.class || '';
   const ascendancy = entry.ascendancy || '';
   const trend = trendMap[String(ascendancy || className).toLowerCase()] || trendMap[String(className).toLowerCase()] || null;
   const recommendation = entry.recommendation || {};
   const tags = uniq([entry.status === 'preseason' ? '0.5预选' : '', entry.tier ? entry.tier + '级' : '', ...(entry.tags || [])]);
   const source = Array.isArray(entry.sources) && entry.sources.length ? entry.sources[0] : null;
-  const updatedAt = normalizeDate(entry.updatedAt || (source && source.checkedAt), now);
+  const updatedAt = options.refreshUpdatedAt ? now : normalizeDate(entry.updatedAt || (source && source.checkedAt), now);
   const defaultSkills = [
     {
       groupName: '开荒主线',
@@ -149,7 +149,7 @@ function validateBuilds(builds) {
   return errors;
 }
 
-function buildStarterData() {
+function buildStarterData(options = {}) {
   const now = new Date().toISOString();
   const manualBuilds = readJson(SOURCE_FILE, []);
   if (!Array.isArray(manualBuilds) || !manualBuilds.length) {
@@ -158,7 +158,7 @@ function buildStarterData() {
 
   const trendMap = getClassTrendMap();
   const builds = manualBuilds
-    .map(entry => normalizeBuild(entry, trendMap, now))
+    .map(entry => normalizeBuild(entry, trendMap, now, options))
     .sort((a, b) => {
       const updatedDiff = (Date.parse(b.updatedAt || '') || 0) - (Date.parse(a.updatedAt || '') || 0);
       if (updatedDiff !== 0) return updatedDiff;
@@ -176,6 +176,9 @@ function buildStarterData() {
 
   writeJson(OUTPUT_FILE, builds);
   console.log(`   ✅ ${path.relative(ROOT, OUTPUT_FILE)} (${builds.length} 条)`);
+  if (options.refreshUpdatedAt) {
+    console.log(`   ℹ️ 已刷新赛季开荒榜单更新时间: ${now}`);
+  }
   return builds;
 }
 

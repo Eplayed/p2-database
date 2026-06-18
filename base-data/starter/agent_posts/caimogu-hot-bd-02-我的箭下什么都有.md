@@ -8,13 +8,13 @@ class: "游侠"
 ascendancy: "锐眼"
 mainSkill: "弓射击"
 tags: "游侠, 锐眼"
-views: 28
+views: 51
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 28
+hotScore: 51
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.971Z"
+fetchedAt: "2026-06-18T05:56:34.358Z"
 ---
 
 # 我的箭下什么都有

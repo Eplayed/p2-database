@@ -8,13 +8,13 @@ class: "女巫"
 ascendancy: 
 mainSkill: "移风岚"
 tags: "攻坚, 女巫"
-views: 101
+views: 107
 replies: 0
 likes: 0
 favorites: 2
-hotScore: 301
+hotScore: 307
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.969Z"
+fetchedAt: "2026-06-18T05:56:34.356Z"
 ---
 
 # 0.5白僧

@@ -8,13 +8,13 @@ class: "僧侣"
 ascendancy: 
 mainSkill: "霹雳闪"
 tags: "僧侣"
-views: 11
+views: 16
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 11
+hotScore: 16
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.972Z"
+fetchedAt: "2026-06-18T05:56:34.359Z"
 ---
 
 # 自用科研bd

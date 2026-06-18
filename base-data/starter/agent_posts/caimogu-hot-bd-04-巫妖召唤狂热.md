@@ -8,13 +8,13 @@ class: "女巫"
 ascendancy: "巫妖"
 mainSkill: "灵体：{0}"
 tags: "女巫, 巫妖"
-views: 129
+views: 156
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 129
+hotScore: 156
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.971Z"
+fetchedAt: "2026-06-18T05:56:34.358Z"
 ---
 
 # 巫妖召唤狂热

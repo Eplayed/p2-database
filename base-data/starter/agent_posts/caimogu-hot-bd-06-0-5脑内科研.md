@@ -8,13 +8,13 @@ class: "战士"
 ascendancy: "泰坦"
 mainSkill: "重盾冲锋"
 tags: "战士, 泰坦"
-views: 123
+views: 129
 replies: 0
 likes: 0
 favorites: 0
-hotScore: 123
+hotScore: 129
 confidence: low
-fetchedAt: "2026-06-08T08:42:53.972Z"
+fetchedAt: "2026-06-18T05:56:34.359Z"
 ---
 
 # 0.5脑内科研
