@@ -6,7 +6,7 @@ const state = {
   logAutoFollow: true,
   automation: {
     enabled: false,
-    taskId: 'cn_market_qiandao_publish',
+    taskId: 'patch05_daily_publish',
     intervalMinutes: 120,
     jitterMinutes: 10,
     nextRunAt: 0,
@@ -108,16 +108,9 @@ function renderSummary(summary) {
       note: `${summary.ladder.classes} 个职业 · ${summary.ladder.updateTime || '无更新时间'}`,
     },
     {
-      label: '新闻 / 开荒',
-      value: `${keyFiles.news?.count || 0} / ${keyFiles.starters?.count || 0}`,
-      note: `新闻条数 / 开荒 BD 条数`,
-    },
-    {
-      label: '热门 BD 候选',
-      value: keyFiles.hotBdCandidates?.count || 0,
-      note: keyFiles.hotBdCandidates?.updatedAt
-        ? formatTime(keyFiles.hotBdCandidates.updatedAt)
-        : '无文件',
+      label: '新闻',
+      value: keyFiles.news?.count || 0,
+      note: keyFiles.news?.updatedAt ? formatTime(keyFiles.news.updatedAt) : '无文件',
     },
     {
       label: '天梯分析',
@@ -174,23 +167,8 @@ function renderTasks() {
   const groups = [
     {
       id: 'recommended',
-      title: '一键发布',
-      description: '日常维护优先从这里开始。组合流程会按顺序执行，并在最后上传 OSS。',
-    },
-    {
-      id: 'single',
-      title: '单项更新',
-      description: '需要只刷新某一类数据，或者定位问题时使用。',
-    },
-    {
-      id: 'starter',
-      title: 'BD 候选 / 开荒推荐',
-      description: '热门 BD 候选先人工审核，再决定是否提升到正式推荐。',
-    },
-    {
-      id: 'advanced',
-      title: '高级与排障',
-      description: '慢任务或全量刷新。只在发布前校验、数据混乱或大版本维护时使用。',
+      title: '一键更新',
+      description: '只保留当前最常用流程。底层脚本不单独展示，流程会按顺序执行并上传 OSS。',
     },
   ];
 
@@ -422,9 +400,6 @@ function toggleAutomation() {
 }
 
 function getAutomationMessage(task) {
-  if (task && task.id.includes('qiandao')) {
-    return '请确认 Chrome 当前千岛页面已切到“国服 / 赛季 / 普通”。倒计时结束后会读取当前页面可见行情。';
-  }
   return '倒计时结束后会自动运行该任务；如不想执行，可以取消本次。';
 }
 

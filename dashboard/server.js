@@ -24,30 +24,9 @@ const TASKS = [
   {
     id: 'patch05_daily_publish',
     name: '一键更新日常数据并上传',
-    description: '日常推荐：新闻、poe.ninja 经济摘要、0.5 资料、剧情地图攻略一起刷新，并上传 OSS。不抓天梯，不改开荒 BD 源。',
+    description: '日常推荐：新闻、poe.ninja 经济摘要、0.5 资料、DD373 国服行情一起刷新，并上传 OSS。不抓天梯，不更新剧情攻略。',
     group: 'recommended',
-    steps: ['news_all', 'economy_digest', 'patch05', 'story_guide', 'upload'],
-  },
-  {
-    id: 'economy_daily_publish',
-    name: '一键更新经济榜并上传',
-    description: '开服期高频任务：只刷新 poe.ninja 经济摘要、0.5 新经济观察并上传 OSS。速度快，适合每天多次跑。',
-    group: 'recommended',
-    steps: ['economy_digest', 'patch05', 'upload'],
-  },
-  {
-    id: 'cn_market_publish',
-    name: '更新国服 DD373 行情并上传',
-    description: '试运行：抓取 DD373 国服奥杜尔秘符赛季核心通货价格，生成国服行情参考并上传 OSS。',
-    group: 'recommended',
-    steps: ['cn_market_dd373', 'upload'],
-  },
-  {
-    id: 'cn_market_qiandao_publish',
-    name: '读取千岛行情并上传（本地核验）',
-    description: '读取当前 Chrome 千岛通货页可见行情，默认要求国服/赛季/普通，生成千岛行情参考并上传 OSS。运行前会在 Dashboard 倒计时提醒核对页面。',
-    group: 'recommended',
-    steps: ['cn_market_qiandao', 'upload'],
+    steps: ['news_all', 'economy_digest', 'patch05', 'cn_market_dd373', 'upload'],
   },
   {
     id: 'ladder_bd_publish',
@@ -57,31 +36,11 @@ const TASKS = [
     steps: ['ladder', 'upload'],
   },
   {
-    id: 'release_flow',
-    name: '完整刷新全部数据并上传',
-    description: '慢任务：新闻、天梯/BD解析、经济、0.5 资料、开荒推荐、剧情攻略全部刷新并上传。发布前或大版本数据混乱时使用。',
-    group: 'advanced',
-    steps: ['news_all', 'ladder', 'economy_digest', 'patch05', 'starter', 'story_guide', 'upload'],
-  },
-  {
-    id: 'starter_agent_refresh',
-    name: '抓取热门 BD 候选',
-    description: '安全流程：抓取热门 BD 帖并生成候选 JSON，只供人工审核，不进入正式推荐榜。',
-    group: 'starter',
-    steps: ['starter_hot_posts', 'starter_agent'],
-  },
-  {
-    id: 'starter_publish',
-    name: '发布人工开荒/热门 BD',
-    description: '根据已人工维护好的 base-data/starter 生成 starters.json 并上传 OSS。不自动抓帖，不自动提升候选。',
-    group: 'starter',
-    steps: ['starter', 'upload'],
-  },
-  {
     id: 'news_all',
     name: '抓取新闻',
     description: '抓取踩蘑菇新闻列表和详情，生成小程序新闻数据。',
     group: 'single',
+    hidden: true,
     command: ['node', ['auto_browser/crawl_news_with_details.js']],
   },
   {
@@ -89,6 +48,7 @@ const TASKS = [
     name: '抓取天梯 + 聚合分析',
     description: '抓取 poe.ninja 天梯玩家详情，生成 players/*.json、职业/技能/装备趋势分析；会刷新 BD 解析里的装备、技能、符文/镶嵌翻译。',
     group: 'single',
+    hidden: true,
     command: ['node', ['crawlers/run.js', '--ladder']],
   },
   {
@@ -96,6 +56,7 @@ const TASKS = [
     name: '抓取 poe.ninja 经济摘要',
     description: '直接请求 poe.ninja PoE2 经济 API，生成 economy_digest.json、兼容 economy.json 和展示图标。',
     group: 'single',
+    hidden: true,
     command: ['node', ['crawlers/economy/ninja_digest.js']],
   },
   {
@@ -103,64 +64,24 @@ const TASKS = [
     name: '抓取 DD373 国服行情',
     description: '抓取 DD373 流放之路：降临奥杜尔秘符赛季核心通货公开商品列表，生成 cn_market_digest.json。',
     group: 'single',
+    hidden: true,
     command: ['node', ['crawlers/cn-market/dd373_currency.js']],
-  },
-  {
-    id: 'cn_market_qiandao',
-    name: '读取千岛当前页面行情（手动核验）',
-    description: '只读取当前 Chrome 打开的千岛通货页可见文字，生成 cn_market_qiandao_digest.json。需要先在 Chrome 打开千岛并开启“允许 Apple 事件中的 JavaScript”；不适合 GitHub Actions 定时。',
-    group: 'single',
-    command: ['node', ['crawlers/cn-market/qiandao_currency.js']],
   },
   {
     id: 'patch05',
     name: '生成 0.5 资料/经济观察',
     description: '基于已有经济摘要生成 0.5 资料速查、终局清单和新经济观察。不重新抓行情。',
     group: 'single',
+    hidden: true,
     command: ['node', ['crawlers/patch05/index.js']],
-  },
-  {
-    id: 'starter',
-    name: '生成开荒推荐',
-    description: '从 base-data/starter 生成小程序开荒推荐 starters.json。',
-    group: 'single',
-    command: ['node', ['crawlers/starter/index.js']],
-  },
-  {
-    id: 'story_guide',
-    name: '抓取剧情地图攻略',
-    description: '抓取剧情章节地图、点位、奖励和路线，生成小程序剧情攻略数据。',
-    group: 'single',
-    command: ['node', ['crawlers/story-guide/index.js']],
   },
   {
     id: 'upload',
     name: '上传 OSS',
     description: '上传当前环境 translated-data 到 OSS。',
     group: 'single',
+    hidden: true,
     command: ['node', ['-e', "require('./auto_browser/upload_to_oss')()"]],
-  },
-  {
-    id: 'starter_hot_posts',
-    name: '1. 抓取热门 BD 帖输入',
-    description: '先从踩蘑菇热门 BD 页面抓帖子文本，写入 base-data/starter/agent_posts。只准备输入，不生成候选 JSON。',
-    group: 'starter',
-    command: ['node', ['crawlers/starter-agent/crawl_hot_posts.js']],
-  },
-  {
-    id: 'starter_agent',
-    name: '2. 从输入抽取候选 JSON',
-    description: '读取 base-data/starter/agent_posts 里的帖子文本，生成 candidates 和 starter_candidates.json。不会主动抓帖子。',
-    group: 'starter',
-    command: ['node', ['crawlers/starter-agent/index.js']],
-  },
-  {
-    id: 'starter_promote',
-    name: '3. 候选提升到开荒源',
-    description: '人工检查候选后再使用：把适合开荒的条目提升到正式源。',
-    group: 'starter',
-    dangerous: true,
-    command: ['node', ['crawlers/starter/promote_candidates.js']],
   },
 ];
 
@@ -284,12 +205,9 @@ function getDataSummary(environment) {
     fileCount: countFiles(dataDir),
     keyFiles: {
       news: summarizeJson(path.join(dataDir, 'news_caimogu.json')),
-      starters: summarizeJson(path.join(dataDir, 'miniprogram_data/starters.json')),
-      hotBdCandidates: summarizeJson(path.join(dataDir, 'miniprogram_data/starter_candidates.json')),
       storyGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/story_guides.json')),
       economyDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/economy_digest.json')),
       cnMarketDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json')),
-      cnMarketQiandaoDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/cn_market_qiandao_digest.json')),
       surveyConfig: summarizeJson(path.join(dataDir, 'miniprogram_config/feature_survey.json')),
     },
     ladder: {
@@ -467,7 +385,11 @@ function serveStatic(req, res, pathname) {
 
 async function handleApi(req, res, pathname, searchParams) {
   if (req.method === 'GET' && pathname === '/api/tasks') {
-    sendJson(res, { tasks: TASKS.map(({ command, ...task }) => task) });
+    sendJson(res, {
+      tasks: TASKS
+        .filter(task => !task.hidden)
+        .map(({ command, hidden, ...task }) => task),
+    });
     return;
   }
 

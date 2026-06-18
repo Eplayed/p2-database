@@ -60,12 +60,6 @@ jobs:
           CI: true
         run: node crawlers/patch05/index.js
 
-      - name: Generate starter recommendations
-        env:
-          NODE_ENV: ${{ inputs.environment }}
-          CI: true
-        run: node crawlers/starter/index.js
-
       - name: Upload to OSS
         env:
           NODE_ENV: ${{ inputs.environment }}
