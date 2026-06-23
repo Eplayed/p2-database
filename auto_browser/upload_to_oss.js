@@ -30,6 +30,10 @@ function getAllFiles(dirPath, arrayOfFiles) {
 function getJsonCacheControl(relativePath) {
     if (relativePath.endsWith('miniprogram_data/economy_digest.json')) return 'max-age=300';
     if (relativePath.endsWith('miniprogram_data/cn_market_digest.json')) return 'max-age=60';
+    if (relativePath.endsWith('miniprogram_data/ladder_build_index.json')) return 'max-age=300';
+    if (relativePath.includes('miniprogram_data/ladder_build_details/')) return 'max-age=3600';
+    if (relativePath.endsWith('miniprogram_data/problem_guides_manifest.json')) return 'max-age=300';
+    if (relativePath.endsWith('miniprogram_data/problem_guides.json')) return 'max-age=43200';
     if (relativePath.endsWith('patch-0.5/version.json')) return 'max-age=300';
     if (relativePath.includes('patch-0.5/patch05_economy')) return 'max-age=300';
     if (relativePath.endsWith('patch-0.5/patch05_catalog.json')) return 'max-age=3600';

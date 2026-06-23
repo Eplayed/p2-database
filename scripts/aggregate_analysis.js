@@ -6,6 +6,11 @@
 
 const fs = require('fs')
 const path = require('path')
+const {
+  buildLadderBuildIndex,
+  loadTranslationMaps,
+  writeLadderBuildIndex
+} = require('./build_ladder_build_index')
 
 // 环境检测
 const isProd = process.env.NODE_ENV === 'production'
@@ -16,6 +21,7 @@ const DATA_DIR = path.join(ROOT, 'translated-data', isProd ? 'release' : 'dev')
 const INPUT_FILE = path.join(DATA_DIR, 'all_ladders_translated.json')
 const PLAYER_DIR = path.join(DATA_DIR, 'players')
 const OUTPUT_FILE = path.join(DATA_DIR, 'ladder_analysis.json')
+const BUILD_INDEX_FILE = path.join(DATA_DIR, 'miniprogram_data', 'ladder_build_index.json')
 const CLASSES_FILE = path.join(DATA_DIR, 'classes.json')
 
 // 聚合统计
@@ -253,6 +259,15 @@ const main = async () => {
 
   // 6. 写入文件
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2), 'utf-8')
+
+  const buildIndex = buildLadderBuildIndex({
+    playerDetails,
+    classesData,
+    updatedAt: output.updateTime,
+    ...loadTranslationMaps()
+  })
+  const buildCatalog = writeLadderBuildIndex(buildIndex, BUILD_INDEX_FILE)
+
   console.log(`\n聚合完成！输出文件: ${OUTPUT_FILE}`)
   console.log(`  - 总玩家数: ${totalPlayers}`)
   console.log(`  - 采样玩家数: ${playerDetails.length}`)
@@ -261,6 +276,8 @@ const main = async () => {
   console.log(`  - 热门辅助技能: ${topSupportSkills.length} 个`)
   console.log(`  - 热门传奇装备: ${topUniqueEquipment.length} 个`)
   console.log(`  - 热门核心天赋: ${topKeystones.length} 个`)
+  console.log(`  - 技能查BD: ${buildCatalog.skills.length} 个技能`)
+  console.log(`  - 装备查BD: ${buildCatalog.equipment.length} 件传奇装备`)
 }
 
 main().catch(err => {

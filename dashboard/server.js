@@ -24,16 +24,16 @@ const TASKS = [
   {
     id: 'patch05_daily_publish',
     name: '一键更新日常数据并上传',
-    description: '日常推荐：新闻、poe.ninja 经济摘要、0.5 资料、DD373 国服行情一起刷新，并上传 OSS。不抓天梯，不更新剧情攻略。',
+    description: '日常推荐：新闻、poe.ninja 经济摘要、0.5 资料、DD373 国服行情、流放急救箱一起刷新，并上传 OSS。不抓天梯，不更新剧情攻略。',
     group: 'recommended',
-    steps: ['news_all', 'economy_digest', 'patch05', 'cn_market_dd373', 'upload'],
+    steps: ['news_all', 'economy_digest', 'patch05', 'cn_market_dd373', 'problem_guides', 'upload'],
   },
   {
     id: 'ladder_bd_publish',
     name: '刷新天梯/BD解析并上传',
-    description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译和天梯分析，并上传 OSS。修复 BD 解析翻译或符文显示后运行这个。',
+    description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译、天梯分析及技能/装备查 BD 索引，并上传 OSS。',
     group: 'recommended',
-    steps: ['ladder', 'upload'],
+    steps: ['ladder', 'ladder_build_index', 'upload'],
   },
   {
     id: 'news_all',
@@ -46,10 +46,18 @@ const TASKS = [
   {
     id: 'ladder',
     name: '抓取天梯 + 聚合分析',
-    description: '抓取 poe.ninja 天梯玩家详情，生成 players/*.json、职业/技能/装备趋势分析；会刷新 BD 解析里的装备、技能、符文/镶嵌翻译。',
+    description: '抓取 poe.ninja 天梯玩家详情，生成 players/*.json、职业/技能/装备趋势分析；会刷新 BD 解析里的装备、技能、符文/镶嵌翻译。聚合阶段也会先生成一次查 BD 索引。',
     group: 'single',
     hidden: true,
     command: ['node', ['crawlers/run.js', '--ladder']],
+  },
+  {
+    id: 'ladder_build_index',
+    name: '生成技能/装备查 BD 索引',
+    description: '从当前 players/*.json 重新生成轻量目录和按需详情，确保小程序查询数据与本次天梯玩家详情一致。',
+    group: 'single',
+    hidden: true,
+    command: ['node', ['scripts/build_ladder_build_index.js']],
   },
   {
     id: 'economy_digest',
@@ -74,6 +82,14 @@ const TASKS = [
     group: 'single',
     hidden: true,
     command: ['node', ['crawlers/patch05/index.js']],
+  },
+  {
+    id: 'problem_guides',
+    name: '生成流放急救箱',
+    description: '合并人工整理的问题排查清单，生成小程序可动态读取的 problem_guides.json。',
+    group: 'single',
+    hidden: true,
+    command: ['node', ['scripts/build_problem_guides.js']],
   },
   {
     id: 'upload',
@@ -188,6 +204,7 @@ function getDataSummary(environment) {
   const dataDir = getDataDir(environment);
   const ladder = readJson(path.join(dataDir, 'all_ladders_translated.json'), null);
   const ladderAnalysis = readJson(path.join(dataDir, 'ladder_analysis.json'), null);
+  const ladderBuildIndex = readJson(path.join(dataDir, 'miniprogram_data/ladder_build_index.json'), null);
   const economyWatch = readJson(path.join(dataDir, 'patch-0.5/patch05_economy_watch.json'), null);
   const economyDigest = readJson(path.join(dataDir, 'miniprogram_data/economy_digest.json'), null);
   const patchIndex = readJson(path.join(dataDir, 'patch-0.5/patch05_index.json'), null);
@@ -208,6 +225,7 @@ function getDataSummary(environment) {
       storyGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/story_guides.json')),
       economyDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/economy_digest.json')),
       cnMarketDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json')),
+      problemGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/problem_guides.json')),
       surveyConfig: summarizeJson(path.join(dataDir, 'miniprogram_config/feature_survey.json')),
     },
     ladder: {
@@ -220,6 +238,11 @@ function getDataSummary(environment) {
       file: getFileInfo(path.join(dataDir, 'ladder_analysis.json')),
       classes: ladderAnalysis && Array.isArray(ladderAnalysis.classDistribution) ? ladderAnalysis.classDistribution.length : 0,
       updatedAt: ladderAnalysis && ladderAnalysis.generatedAt ? ladderAnalysis.generatedAt : '',
+    },
+    ladderBuildIndex: {
+      file: getFileInfo(path.join(dataDir, 'miniprogram_data/ladder_build_index.json')),
+      skills: ladderBuildIndex && Array.isArray(ladderBuildIndex.skills) ? ladderBuildIndex.skills.length : 0,
+      equipment: ladderBuildIndex && Array.isArray(ladderBuildIndex.equipment) ? ladderBuildIndex.equipment.length : 0,
     },
     patch05: {
       file: getFileInfo(path.join(dataDir, 'patch-0.5/patch05_index.json')),

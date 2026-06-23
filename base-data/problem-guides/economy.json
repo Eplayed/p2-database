@@ -1,0 +1,28 @@
+{
+  "id": "economy",
+  "title": "资源卡点",
+  "description": "通货换算、仓库整理和物品取舍。",
+  "items": [
+    {
+      "id": "stash_mess",
+      "title": "仓库太乱，不知道留什么",
+      "summary": "先保留通货、地图、关键底子和当前 BD 会用到的装备。",
+      "level": "开荒仓库",
+      "symptoms": ["仓库爆满", "不知道哪些该卖", "怕把值钱东西丢了"],
+      "checks": [
+        "通货、地图、碎片和赛季材料单独分区。",
+        "当前 BD 会用到的武器、底子和抗性装备先保留。",
+        "低等级过渡黄装定期清理。",
+        "不认识的传奇先用装备查 BD 看是否有人在用。",
+        "高价值通货先不要随手花掉。"
+      ],
+      "donts": ["别把所有稀有装备都存起来。", "别把不认识的通货随手换掉。"],
+      "actions": [
+        { "text": "查看装备查 BD", "url": "/pages-sub/ladder-analysis/index?tab=equipment" },
+        { "text": "查看今日换算", "url": "/pages-sub/market/index?tab=cn" }
+      ],
+      "sourceType": "manual",
+      "confidence": "experience"
+    }
+  ]
+}

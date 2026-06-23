@@ -118,6 +118,13 @@ function renderSummary(summary) {
       note: summary.ladderAnalysis.file ? formatTime(summary.ladderAnalysis.file.updatedAt) : '无文件',
     },
     {
+      label: '查 BD 索引',
+      value: `${summary.ladderBuildIndex.skills} / ${summary.ladderBuildIndex.equipment}`,
+      note: summary.ladderBuildIndex.file
+        ? `技能 / 传奇装备 · ${formatTime(summary.ladderBuildIndex.file.updatedAt)}`
+        : '无索引文件',
+    },
+    {
       label: '0.5 资料',
       value: summary.patch05.entries,
       note: summary.patch05.file ? formatTime(summary.patch05.file.updatedAt) : '无文件',
@@ -137,6 +144,11 @@ function renderSummary(summary) {
       note: keyFiles.cnMarketDigest?.updatedAt
         ? `DD373 更新 ${formatTime(keyFiles.cnMarketDigest.updatedAt)}`
         : '无 DD373 行情',
+    },
+    {
+      label: '流放急救箱',
+      value: keyFiles.problemGuides?.count || 0,
+      note: keyFiles.problemGuides?.updatedAt ? formatTime(keyFiles.problemGuides.updatedAt) : '无文件',
     },
     {
       label: '剧情攻略 / 调研',

@@ -1,0 +1,69 @@
+{
+  "id": "build",
+  "title": "BD 卡点",
+  "description": "抄 BD、查技能和换装备时最容易卡住的问题。",
+  "items": [
+    {
+      "id": "choose_build",
+      "title": "不知道抄哪个 BD",
+      "summary": "优先看当前天梯真实玩家，而不是只看标题。",
+      "level": "开荒到异界",
+      "symptoms": ["热门帖子太多", "不知道哪个适合自己", "怕抄到过时 BD"],
+      "checks": [
+        "先选自己当前职业或想玩的主技能。",
+        "看天梯中是否有多个高等级玩家在用。",
+        "优先选择装备门槛低、核心机制清楚的 BD。",
+        "注意角色等级、赛季和更新时间。",
+        "用技能查 BD 看同技能常见辅助和职业分布。"
+      ],
+      "donts": ["别只看标题里的高伤害。", "别直接抄满配终局装备。"],
+      "actions": [
+        { "text": "查看天梯榜", "url": "/pages/ladder/index" },
+        { "text": "查看技能查 BD", "url": "/pages-sub/ladder-analysis/index?tab=skill" }
+      ],
+      "sourceType": "ladder",
+      "confidence": "data"
+    },
+    {
+      "id": "skill_links",
+      "title": "技能搭配看不懂",
+      "summary": "先看主技能，再看辅助技能是否围绕同一套伤害机制。",
+      "level": "BD 解析",
+      "symptoms": ["辅助技能不知道怎么选", "同一个技能别人伤害更高", "技能栏看起来很乱"],
+      "checks": [
+        "确认主技能是攻击、法术、召唤还是持续伤害。",
+        "辅助技能优先服务主技能的伤害类型和触发方式。",
+        "查看天梯同技能玩家最常见辅助。",
+        "不要同时堆太多不相关机制。",
+        "保留位移、防御和光环类实用技能。"
+      ],
+      "donts": ["别看到高等级辅助就全塞上。", "别忽略保命技能。"],
+      "actions": [
+        { "text": "查看技能查 BD", "url": "/pages-sub/ladder-analysis/index?tab=skill" },
+        { "text": "查看 BD 详情", "url": "/pages/ladder/index" }
+      ],
+      "sourceType": "manual_and_ladder",
+      "confidence": "mixed"
+    },
+    {
+      "id": "gear_upgrade",
+      "title": "装备不知道换什么",
+      "summary": "先换影响主机制的核心装备，再补生存短板。",
+      "level": "装备过渡",
+      "symptoms": ["有点通货但不知道买什么", "换了装备提升不明显", "不知道传奇是不是必需"],
+      "checks": [
+        "先确定主技能吃武器、法术等级、召唤等级还是异常伤害。",
+        "对照同职业天梯玩家常见传奇和关键部位。",
+        "抗性、生存没补齐前，不要只买输出装。",
+        "先换低成本大提升部位，再考虑昂贵毕业装。"
+      ],
+      "donts": ["别为了单件传奇拆掉整套抗性。", "别只看别人最贵装备。"],
+      "actions": [
+        { "text": "查看装备查 BD", "url": "/pages-sub/ladder-analysis/index?tab=equipment" },
+        { "text": "查看今日换算", "url": "/pages-sub/market/index?tab=cn" }
+      ],
+      "sourceType": "manual_and_ladder",
+      "confidence": "mixed"
+    }
+  ]
+}

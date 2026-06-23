@@ -1,0 +1,90 @@
+{
+  "id": "endgame",
+  "title": "异界卡点",
+  "description": "刚进异界后常见的断图、死亡、刮痧和收益问题。",
+  "items": [
+    {
+      "id": "map_sustain",
+      "title": "地图不够 / 经常断图",
+      "summary": "先稳地图池，再考虑高投入收益玩法。",
+      "level": "刚进异界",
+      "symptoms": ["地图越刷越少", "低阶图接不上", "不知道要不要买图"],
+      "checks": [
+        "通用异界天赋先点地图续航、地图掉落相关节点。",
+        "低阶图先留一部分补图，不要全部合掉或卖掉。",
+        "打不过的词缀先避开，别硬开高惩罚地图。",
+        "优先把地图池做起来，再追求玩法收益。"
+      ],
+      "donts": ["别一断图就买图。", "别直接照抄高投入收益路线。", "别把所有低阶图一次性清空。"],
+      "actions": [
+        { "text": "查看开荒清单", "url": "/pages/checklist/index" },
+        { "text": "查看今日换算", "url": "/pages-sub/market/index?tab=cn" }
+      ],
+      "sourceType": "manual",
+      "confidence": "experience"
+    },
+    {
+      "id": "mapping_death",
+      "title": "刷图容易死",
+      "summary": "先排防御短板，不要只盯输出。",
+      "level": "异界过渡",
+      "symptoms": ["小怪一碰就死", "精英怪爆发扛不住", "升级经验总掉"],
+      "checks": [
+        "火焰、冰霜、闪电抗性优先补到安全线。",
+        "护甲、闪避、能量护盾或格挡至少有一条明确防御路线。",
+        "药剂和护符触发条件要适合当前死亡原因。",
+        "地图词缀里额外伤害、降抗、无法恢复等词缀先避开。",
+        "对照同职业天梯玩家，看他们生命、护盾和防御层怎么堆。"
+      ],
+      "donts": ["别只换输出装备。", "别一边抗性缺口很大一边硬冲高阶图。"],
+      "actions": [
+        { "text": "查看天梯 BD", "url": "/pages/ladder/index" },
+        { "text": "查看装备查 BD", "url": "/pages-sub/ladder-analysis/index?tab=equipment" }
+      ],
+      "sourceType": "manual",
+      "confidence": "experience"
+    },
+    {
+      "id": "boss_low_damage",
+      "title": "打 Boss 刮痧",
+      "summary": "先确认主技能、辅助技能和武器基础是否拖后腿。",
+      "level": "异界 Boss",
+      "symptoms": ["Boss 血条掉得很慢", "机制打久了容易失误", "换装备不知道先换哪里"],
+      "checks": [
+        "主技能等级、品质和关键辅助是否跟上。",
+        "武器或法术核心装备的基础数值是否过低。",
+        "是否缺少穿透、诅咒、暴击、异常或增伤机制。",
+        "技能连法是否和天梯同技能玩家差距很大。",
+        "先用技能查 BD 看同技能常见职业和辅助。"
+      ],
+      "donts": ["别只看面板数字。", "别用低等级主技能硬打高阶 Boss。"],
+      "actions": [
+        { "text": "查看技能查 BD", "url": "/pages-sub/ladder-analysis/index?tab=skill" },
+        { "text": "查看天梯趋势", "url": "/pages-sub/ladder-analysis/index" }
+      ],
+      "sourceType": "manual_and_ladder",
+      "confidence": "mixed"
+    },
+    {
+      "id": "low_profit",
+      "title": "收益太低",
+      "summary": "先判断地图等级、玩法投入和仓库识别，不要用短时间体验下结论。",
+      "level": "异界收益",
+      "symptoms": ["刷半小时像白打", "不知道什么值钱", "怀疑路线没收益"],
+      "checks": [
+        "地图等级和怪物强度是否足够支撑收益。",
+        "玩法天赋是否点到核心收益节点。",
+        "词缀、地图品质和投入是否太低。",
+        "仓库里通货、底子和高价值材料有没有被忽略。",
+        "用今日换算先看核心通货大概热度。"
+      ],
+      "donts": ["别照着别人最高收益截图判断自己路线。", "别用半小时样本否定整个玩法。"],
+      "actions": [
+        { "text": "查看今日换算", "url": "/pages-sub/market/index?tab=cn" },
+        { "text": "查看天梯趋势", "url": "/pages-sub/ladder-analysis/index" }
+      ],
+      "sourceType": "manual_and_market",
+      "confidence": "mixed"
+    }
+  ]
+}

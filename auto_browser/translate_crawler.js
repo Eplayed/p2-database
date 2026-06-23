@@ -3,6 +3,10 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 require("dotenv").config({ path: path.join(__dirname, ".env") });
+const {
+  getBrowserRestartInterval,
+  isRecoverableBrowserError,
+} = require("./puppeteer_resilience");
 
 // 加载翻译字典
 let dictBase = {},
@@ -53,8 +57,10 @@ const isCI = process.env.CI === "true";  // 检测是否在 CI 环境
 const MAX_RANK = Number(process.env.MAX_RANK || (isDev ? 1 : 7));
 const MAX_CLASSES = Number(process.env.MAX_CLASSES || 0);
 
-// 浏览器定期重启策略（每处理 N 个职业后重启）
-const BROWSER_RESTART_INTERVAL = isCI ? 3 : 10;  // CI 环境更频繁重启
+// WebGL 天赋树连续渲染会积累资源，本地和 CI 都定期重建浏览器会话。
+const BROWSER_RESTART_INTERVAL = getBrowserRestartInterval({
+  value: process.env.BROWSER_RESTART_INTERVAL,
+});
 
 const OUTPUT_DIR = isDev
   ? path.join(__dirname, "../translated-data/dev")
@@ -617,16 +623,20 @@ async function createPage(browser) {
   
   // 请求拦截（减少不必要的请求）
   await page.setRequestInterception(true);
-  page.on("request", (req) => {
+  page.on("request", async (req) => {
     const resourceType = req.resourceType();
     const skipTypes = [
       "media", "font", "texttrack", "object", "beacon", 
       "csp_report", "imageset", "websocket", "manifest"
     ];
-    if (skipTypes.includes(resourceType)) {
-      req.abort();
-    } else {
-      req.continue();
+    try {
+      if (skipTypes.includes(resourceType)) {
+        await req.abort();
+      } else {
+        await req.continue();
+      }
+    } catch (error) {
+      // 页面导航或关闭时，请求可能已经失效；不能让事件回调产生未处理拒绝。
     }
   });
   
@@ -1399,6 +1409,27 @@ async function safeClosePage(page) {
   }
 }
 
+async function restartBrowserSession(browser, initialUrl = '') {
+  if (browser) {
+    try {
+      await browser.close();
+    } catch (error) {}
+  }
+
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  const nextBrowser = await createBrowser();
+  const nextPage = await createPage(nextBrowser);
+
+  if (initialUrl) {
+    await nextPage.goto(initialUrl, {
+      waitUntil: "domcontentloaded",
+      timeout: 120000,
+    });
+  }
+
+  return { browser: nextBrowser, page: nextPage };
+}
+
 // ========== 新 API 辅助函数 ==========
 
 async function getBuildId(preferredLeagueUrl = process.env.POE_NINJA_LEAGUE || '') {
@@ -1547,7 +1578,25 @@ async function runTask() {
           { timeout: 15000 }
         );
       } catch (e) {
-        console.warn(`   ⚠️ [${cls.name}] 等待列表超时，尝试强行抓取`);
+        if (isRecoverableBrowserError(e)) {
+          console.warn(`   ⚠️ [${cls.name}] 浏览器会话异常，重建后重试职业列表: ${e.message}`);
+          try {
+            ({ browser, page } = await restartBrowserSession(browser, leagueBaseUrl));
+            await page.goto(cls.link, {
+              waitUntil: "domcontentloaded",
+              timeout: 120000,
+            });
+            await page.waitForFunction(
+              () => document.querySelectorAll("tbody tr").length > 0,
+              { timeout: 15000 }
+            );
+          } catch (retryError) {
+            console.warn(`   ⚠️ [${cls.name}] 重建浏览器后仍无法读取列表: ${retryError.message}`);
+            continue;
+          }
+        } else {
+          console.warn(`   ⚠️ [${cls.name}] 等待列表超时，尝试强行抓取`);
+        }
       }
 
       let players = [];
@@ -1768,6 +1817,14 @@ async function runTask() {
           console.log(`      ✅ 成功 ${player.name}`);
         } catch (err) {
           console.error(`      ❌ 失败: ${err.message}`);
+          if (isRecoverableBrowserError(err)) {
+            console.warn("      🔄 浏览器会话失效，重建后继续下一位玩家");
+            try {
+              ({ browser, page } = await restartBrowserSession(browser, leagueBaseUrl));
+            } catch (restartError) {
+              throw new Error(`浏览器会话重建失败: ${restartError.message}`);
+            }
+          }
         } finally {
           // v3.1: 不再需要移除 responseListener（未使用 Puppeteer API 拦截）
         }
@@ -1783,23 +1840,10 @@ async function runTask() {
         classProcessedCount < classList.length
       ) {
         console.log(`   🔄 定期重启浏览器 (已处理 ${classProcessedCount} 个职业)...`);
-        await safeClosePage(page);
         try {
-          await browser.close();
-        } catch (e) {}
-        
-        // 等待 GC
-        await new Promise(r => setTimeout(r, 2000));
-        
-        // 重新创建浏览器和页面
-        browser = await createBrowser();
-        page = await createPage(browser);
-        
-        // 重新访问基础页面（保持会话）
-        try {
-          await page.goto(leagueBaseUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+          ({ browser, page } = await restartBrowserSession(browser, leagueBaseUrl));
         } catch (e) {
-          console.warn(`   ⚠️ 重新访问基础页面失败: ${e.message}`);
+          throw new Error(`定期重建浏览器会话失败: ${e.message}`);
         }
       }
     }

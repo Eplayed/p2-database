@@ -7,6 +7,7 @@
 首次接手先读：
 
 - `docs/PROJECT_OVERVIEW.md`
+- `docs/DESIGN.md`
 - `AGENT.md`
 
 ## 当前产品决策
@@ -22,6 +23,8 @@
 ## 当前数据能力
 
 - 天梯与 BD 解析：玩家、职业、装备、技能、符文、天赋和趋势聚合。
+- 技能/装备查 BD：由玩家详情生成轻量搜索目录，搭配与代表玩家详情按需加载。
+- 流放急救箱：人工确认的问题排查清单，跳转到天梯、经济、清单等已有工具。
 - 翻译字典：poe2db 中文数据与人工映射。
 - poe.ninja 经济：核心汇率、赛季物品、终局门票和涨跌摘要。
 - 国服行情参考：DD373 公开样本换算。
@@ -41,9 +44,9 @@ npm run dashboard
 当前只保留三类日常能力：
 
 1. `一键更新日常数据并上传`
-   新闻 -> poe.ninja 经济 -> 0.5 -> DD373 -> OSS。
+   新闻 -> poe.ninja 经济 -> 0.5 -> DD373 -> 流放急救箱 -> OSS。
 2. `刷新天梯/BD解析并上传`
-   天梯玩家详情 -> BD 解析 -> 趋势聚合 -> OSS。
+   天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> OSS。
 3. Dashboard 内部隐藏步骤
    仅供上述组合任务调用，不单独展示。
 
@@ -57,6 +60,9 @@ npm run crawl:ladder
 npm run crawl:ladder:dev
 CI=true NODE_ENV=production node crawlers/run.js --ladder --upload
 
+# 仅基于现有玩家详情重建技能/装备查 BD 索引
+npm run build:ladder-index
+
 # 新闻
 npm run crawl:news:all
 npm run crawl:news:all:dev
@@ -68,6 +74,10 @@ npm run data:economy:publish
 # DD373 国服行情参考
 npm run crawl:cn-market:dd373
 npm run data:cn-market:publish
+
+# 流放急救箱
+npm run build:problem-guides
+npm run build:problem-guides:dev
 
 # 0.5 资料
 npm run crawl:patch05
@@ -95,6 +105,10 @@ translated-data/release/
 │   ├── economy_digest.json
 │   ├── economy-icons/*
 │   ├── cn_market_digest.json
+│   ├── problem_guides.json
+│   ├── problem_guides_manifest.json
+│   ├── ladder_build_index.json
+│   ├── ladder_build_details/*.json
 │   └── story_guides.json
 └── patch-0.5/
     ├── version.json
@@ -131,6 +145,7 @@ poe2-economy/cn_market_digest.json
 - `base-data/patch05/overrides.zh-CN.json`：中文名和分类修正。
 - `auto_browser/translate_crawler.js`：装备、技能、符文和词缀翻译规则。
 - `crawlers/economy/ninja_digest.js`：新经济物品中文映射。
+- `base-data/problem-guides/*.json`：流放急救箱问题、排查项和跳转入口。
 - `base-data/miniprogram_config/feature_survey.json`：功能调研开关。
 - OSS 密钥与微信合法域名。
 
