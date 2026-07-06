@@ -24,6 +24,7 @@
 
 - 天梯与 BD 解析：玩家、职业、装备、技能、符文、天赋和趋势聚合。
 - 技能/装备查 BD：由玩家详情生成轻量搜索目录，搭配与代表玩家详情按需加载。
+- 首页复访摘要：把经济、天梯和急救箱聚合成 `daily_return_digest.json`，供小程序首页“今日变化”快速展示和分享。
 - 流放急救箱：人工确认的问题排查清单，跳转到天梯、经济、清单等已有工具。
 - 翻译字典：poe2db 中文数据与人工映射。
 - poe.ninja 经济：核心汇率、赛季物品、终局门票和涨跌摘要。
@@ -44,9 +45,9 @@ npm run dashboard
 当前只保留三类日常能力：
 
 1. `一键更新日常数据并上传`
-   新闻 -> poe.ninja 经济 -> 0.5 -> DD373 -> 流放急救箱 -> OSS。
+   新闻 -> poe.ninja 经济 -> 0.5 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
 2. `刷新天梯/BD解析并上传`
-   天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> OSS。
+   天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 首页复访摘要 -> OSS。
 3. Dashboard 内部隐藏步骤
    仅供上述组合任务调用，不单独展示。
 
@@ -79,6 +80,10 @@ npm run data:cn-market:publish
 npm run build:problem-guides
 npm run build:problem-guides:dev
 
+# 首页今日变化/复访摘要
+npm run build:daily-return
+npm run build:daily-return:dev
+
 # 0.5 资料
 npm run crawl:patch05
 npm run crawl:patch05:with-economy
@@ -105,6 +110,7 @@ translated-data/release/
 │   ├── economy_digest.json
 │   ├── economy-icons/*
 │   ├── cn_market_digest.json
+│   ├── daily_return_digest.json
 │   ├── problem_guides.json
 │   ├── problem_guides_manifest.json
 │   ├── ladder_build_index.json

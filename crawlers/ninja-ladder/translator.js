@@ -23,6 +23,15 @@ function loadDicts() {
     if (fs.existsSync(gemPath)) {
       dictGem = JSON.parse(fs.readFileSync(gemPath, 'utf8'));
     }
+    const rawGemPath = path.join(__dirname, '../../base-data/gems.json');
+    if (fs.existsSync(rawGemPath)) {
+      const rawGems = JSON.parse(fs.readFileSync(rawGemPath, 'utf8'));
+      for (const item of Array.isArray(rawGems) ? rawGems : []) {
+        if (item && item.en && item.cn && !dictGem[item.en]) {
+          dictGem[item.en] = item.cn;
+        }
+      }
+    }
 
     const uniquePath = path.join(DICT_DIR, 'dict_unique.json');
     if (fs.existsSync(uniquePath)) {

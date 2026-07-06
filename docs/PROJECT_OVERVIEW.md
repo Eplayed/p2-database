@@ -13,6 +13,7 @@
 | 天梯/BD解析 | poe.ninja | `all_ladders_translated.json`、`players/*.json` | Dashboard 手动 |
 | 天梯趋势 | 天梯聚合 | `ladder_analysis.json` | 随天梯更新 |
 | 技能/装备查BD | 玩家详情聚合 | `ladder_build_index.json`、`ladder_build_details/*.json` | 随天梯更新 |
+| 首页复访摘要 | 经济 + 天梯 + 急救箱聚合 | `daily_return_digest.json` | 随日常/天梯更新 |
 | 经济摘要 | poe.ninja | `economy_digest.json`、图标 | GitHub Actions + Dashboard |
 | 国服行情 | DD373 公开样本 | `cn_market_digest.json` | GitHub Actions + Dashboard |
 | 流放急救箱 | 人工确认问题库 | `problem_guides.json`、`problem_guides_manifest.json` | Dashboard/手动 |
@@ -44,9 +45,9 @@ npm run dashboard
 可见任务：
 
 1. `一键更新日常数据并上传`
-   新闻 -> poe.ninja 经济 -> 0.5 资料 -> DD373 -> 流放急救箱 -> OSS。
+   新闻 -> poe.ninja 经济 -> 0.5 资料 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
 2. `刷新天梯/BD解析并上传`
-   天梯玩家详情 -> 趋势聚合 -> 技能/装备查 BD 索引 -> OSS。索引会在上传前显式重建，避免小程序读取旧数据。
+   天梯玩家详情 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 首页复访摘要 -> OSS。索引会在上传前显式重建，避免小程序读取旧数据。
 
 日常任务不包含千岛、剧情地图、starter 或热门社区 BD。
 
@@ -69,6 +70,13 @@ npm run dashboard
 3. 按装备反查使用职业与关联 BD。
 4. 两个真实玩家 BD 的差异对比数据。
 5. 用户关注职业、技能、装备和通货所需的轻量摘要。
+
+## 首页复访摘要
+
+- 脚本：`scripts/build_daily_return_digest.js`。
+- 产物：`translated-data/{env}/miniprogram_data/daily_return_digest.json`。
+- 用途：小程序首页“今日变化”和原生分享卡，减少首页为了复访信息反复拉多份大 JSON。
+- 数据边界：只汇总现有产物，不新增抓取；热门技能/装备来自真实天梯样本，急救箱推荐来自人工确认问题库。
 
 ## 技能/装备查BD数据结构
 

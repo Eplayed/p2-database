@@ -25,6 +25,15 @@ try {
   dictGem = JSON.parse(
     fs.readFileSync(path.join(baseDataDir, "dict_gem.json"), "utf8")
   );
+  const rawGemPath = path.join(__dirname, "../base-data/gems.json");
+  if (fs.existsSync(rawGemPath)) {
+    const rawGems = JSON.parse(fs.readFileSync(rawGemPath, "utf8"));
+    for (const item of Array.isArray(rawGems) ? rawGems : []) {
+      if (item && item.en && item.cn && !dictGem[item.en]) {
+        dictGem[item.en] = item.cn;
+      }
+    }
+  }
   // 尝试加载词缀字典，如果不存在则使用默认空对象
   const statsPath = path.join(baseDataDir, "dict_stats.json");
   if (fs.existsSync(statsPath)) {

@@ -24,16 +24,16 @@ const TASKS = [
   {
     id: 'patch05_daily_publish',
     name: '一键更新日常数据并上传',
-    description: '日常推荐：新闻、poe.ninja 经济摘要、0.5 资料、DD373 国服行情、流放急救箱一起刷新，并上传 OSS。不抓天梯，不更新剧情攻略。',
+    description: '日常推荐：新闻、poe.ninja 经济摘要、0.5 资料、DD373 国服行情、流放急救箱、首页复访摘要一起刷新，并上传 OSS。不抓天梯，不更新剧情攻略。',
     group: 'recommended',
-    steps: ['news_all', 'economy_digest', 'patch05', 'cn_market_dd373', 'problem_guides', 'upload'],
+    steps: ['news_all', 'economy_digest', 'patch05', 'cn_market_dd373', 'problem_guides', 'daily_return_digest', 'upload'],
   },
   {
     id: 'ladder_bd_publish',
     name: '刷新天梯/BD解析并上传',
     description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译、天梯分析及技能/装备查 BD 索引，并上传 OSS。',
     group: 'recommended',
-    steps: ['ladder', 'ladder_build_index', 'upload'],
+    steps: ['ladder', 'ladder_build_index', 'daily_return_digest', 'upload'],
   },
   {
     id: 'news_all',
@@ -90,6 +90,14 @@ const TASKS = [
     group: 'single',
     hidden: true,
     command: ['node', ['scripts/build_problem_guides.js']],
+  },
+  {
+    id: 'daily_return_digest',
+    name: '生成首页复访摘要',
+    description: '基于经济、天梯和急救箱现有产物，生成首页今日变化 daily_return_digest.json。',
+    group: 'single',
+    hidden: true,
+    command: ['node', ['scripts/build_daily_return_digest.js']],
   },
   {
     id: 'upload',

@@ -1,0 +1,76 @@
+{
+  "id": "ascendancy",
+  "title": "升华卡点",
+  "description": "升华解锁、第四次升华准备和试炼失败排查。",
+  "items": [
+    {
+      "id": "fourth_ascendancy_unlock",
+      "title": "第四次升华在哪里做",
+      "summary": "四升看两件事：门票是否够等级，以及你走塞克玛还是混沌试炼路线。",
+      "level": "异界中后期",
+      "symptoms": [
+        "不知道第四次升华从哪里拿",
+        "不知道四升门票是哪一种",
+        "看到不同攻略说法不一样",
+        "不确定自己现在能不能去打"
+      ],
+      "checks": [
+        "先确认前三次升华已经完成，角色已经拿到前 6 点升华点。",
+        "路线一：塞克玛试炼。地点是第 2 章解锁的 Trial of the Sekhemas/塞克玛试炼入口，门票看巨灵硬币 Djinn Barya。",
+        "塞克玛四升要用区域等级 75+、4 层的巨灵硬币。打完整 4 层并击败最终 Boss 后，领取最后 2 点升华。",
+        "路线二：混沌试炼。地点是第 3 章解锁的 Trial of Chaos/混沌试炼入口，门票看铭刻通牒 Inscribed Ultimatum。",
+        "混沌四升要围绕区域等级 75+、10 轮的铭刻通牒推进。只清 10 轮通常是前一档升华，最后 2 点还要打 Trialmaster。",
+        "打 Trialmaster 前，需要准备 Cowardly Fate、Deadly Fate、Victorious Fate 这 3 个命运碎片，碎片来自 10 轮混沌试炼里的三个试炼 Boss。",
+        "不知道选哪条：怕连续惩罚、伤害还没成型时优先考虑塞克玛；能稳定处理房间词缀、单体伤害够，再考虑混沌 Trialmaster 路线。",
+        "门票成本高时，先看同职业天梯玩家的防御层、主技能和药剂珠宝配置，再决定是否开票。"
+      ],
+      "donts": [
+        "别刚进异界就硬冲第四次升华。",
+        "别用低等级、层数不够或轮数不够的门票反复试四升。",
+        "别只清了 10 轮混沌试炼就以为一定能拿最后 2 点，Trialmaster 才是四升关键。",
+        "别在没看清房间惩罚、荣誉压力或碎片要求时连续消耗高价门票。"
+      ],
+      "actions": [
+        { "text": "查看天梯 BD", "url": "/pages/ladder/index" },
+        { "text": "查看技能查 BD", "url": "/pages-sub/ladder-analysis/index?tab=skill" },
+        { "text": "查看今日换算", "url": "/pages-sub/market/index?tab=cn" }
+      ],
+      "sourceType": "manual_and_verified_guides",
+      "confidence": "high"
+    },
+    {
+      "id": "fourth_ascendancy_fail",
+      "title": "第四次升华打不过",
+      "summary": "先分清卡在塞克玛 4 层、混沌 10 轮，还是 Trialmaster 本体。",
+      "level": "升华挑战",
+      "symptoms": [
+        "试炼里经常暴毙",
+        "Boss 打很久打不死",
+        "门票用了好几张还是失败",
+        "清完房间还是没拿到最后 2 点"
+      ],
+      "checks": [
+        "先看门票是否正确：塞克玛要 75+ 巨灵硬币并完成 4 层；混沌要 75+、10 轮铭刻通牒，并准备 3 个命运碎片打 Trialmaster。",
+        "塞克玛失败：优先检查荣誉、遗物和房间路线。少选增加荣誉损失、降低恢复、强迫硬吃伤害的房间。",
+        "塞克玛 Boss 打不过：补单体伤害、移动能力和容错，别只堆清图速度。",
+        "混沌 10 轮失败：优先避开降抗、无法恢复、怪物额外伤害、降低玩家伤害这类会越叠越危险的惩罚。",
+        "Trialmaster 打不过：把它当终局 Boss 准备，先补抗性、防御层、移动能力、药剂续航和单体输出。",
+        "伤害不足时，用技能查 BD 看同主技能常见辅助、关键装备和天赋走向。",
+        "门票价格高时，先用低成本装备补强，不要连续硬试。"
+      ],
+      "donts": [
+        "别只换输出装，防御没补齐会继续失败。",
+        "别看到别人一次过，就忽略自己的装备阶段。",
+        "别把所有通货都砸在一次挑战前。",
+        "别拿最贵的四升票练机制，先把路线和 Boss 技能看明白。"
+      ],
+      "actions": [
+        { "text": "查看装备查 BD", "url": "/pages-sub/ladder-analysis/index?tab=equipment" },
+        { "text": "查看技能查 BD", "url": "/pages-sub/ladder-analysis/index?tab=skill" },
+        { "text": "查看今日换算", "url": "/pages-sub/market/index?tab=cn" }
+      ],
+      "sourceType": "manual_and_verified_guides",
+      "confidence": "high"
+    }
+  ]
+}
