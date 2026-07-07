@@ -22,11 +22,11 @@ const MIME_TYPES = {
 
 const TASKS = [
   {
-    id: 'patch05_daily_publish',
+    id: 'daily_publish',
     name: '一键更新日常数据并上传',
-    description: '日常推荐：新闻、poe.ninja 经济摘要、0.5 资料、DD373 国服行情、流放急救箱、首页复访摘要一起刷新，并上传 OSS。不抓天梯，不更新剧情攻略。',
+    description: '日常推荐：poe.ninja 经济摘要、DD373 国服行情、流放急救箱、首页复访摘要一起刷新，并上传 OSS。不抓新闻、天梯，不更新剧情攻略，不更新已下架的 0.5 资料、赛季开荒/热门 BD。',
     group: 'recommended',
-    steps: ['news_all', 'economy_digest', 'patch05', 'cn_market_dd373', 'problem_guides', 'daily_return_digest', 'upload'],
+    steps: ['economy_digest', 'cn_market_dd373', 'problem_guides', 'daily_return_digest', 'upload'],
   },
   {
     id: 'ladder_bd_publish',
@@ -34,14 +34,6 @@ const TASKS = [
     description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译、天梯分析及技能/装备查 BD 索引，并上传 OSS。',
     group: 'recommended',
     steps: ['ladder', 'ladder_build_index', 'daily_return_digest', 'upload'],
-  },
-  {
-    id: 'news_all',
-    name: '抓取新闻',
-    description: '抓取踩蘑菇新闻列表和详情，生成小程序新闻数据。',
-    group: 'single',
-    hidden: true,
-    command: ['node', ['auto_browser/crawl_news_with_details.js']],
   },
   {
     id: 'ladder',
@@ -74,14 +66,6 @@ const TASKS = [
     group: 'single',
     hidden: true,
     command: ['node', ['crawlers/cn-market/dd373_currency.js']],
-  },
-  {
-    id: 'patch05',
-    name: '生成 0.5 资料/经济观察',
-    description: '基于已有经济摘要生成 0.5 资料速查、终局清单和新经济观察。不重新抓行情。',
-    group: 'single',
-    hidden: true,
-    command: ['node', ['crawlers/patch05/index.js']],
   },
   {
     id: 'problem_guides',
@@ -213,9 +197,7 @@ function getDataSummary(environment) {
   const ladder = readJson(path.join(dataDir, 'all_ladders_translated.json'), null);
   const ladderAnalysis = readJson(path.join(dataDir, 'ladder_analysis.json'), null);
   const ladderBuildIndex = readJson(path.join(dataDir, 'miniprogram_data/ladder_build_index.json'), null);
-  const economyWatch = readJson(path.join(dataDir, 'patch-0.5/patch05_economy_watch.json'), null);
   const economyDigest = readJson(path.join(dataDir, 'miniprogram_data/economy_digest.json'), null);
-  const patchIndex = readJson(path.join(dataDir, 'patch-0.5/patch05_index.json'), null);
 
   const ladderClasses = ladder && ladder.ladders ? Object.keys(ladder.ladders) : [];
   const ladderPlayers = ladderClasses.reduce((sum, className) => {
@@ -229,7 +211,6 @@ function getDataSummary(environment) {
     exists: fs.existsSync(dataDir),
     fileCount: countFiles(dataDir),
     keyFiles: {
-      news: summarizeJson(path.join(dataDir, 'news_caimogu.json')),
       storyGuides: summarizeJson(path.join(dataDir, 'miniprogram_data/story_guides.json')),
       economyDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/economy_digest.json')),
       cnMarketDigest: summarizeJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json')),
@@ -252,12 +233,9 @@ function getDataSummary(environment) {
       skills: ladderBuildIndex && Array.isArray(ladderBuildIndex.skills) ? ladderBuildIndex.skills.length : 0,
       equipment: ladderBuildIndex && Array.isArray(ladderBuildIndex.equipment) ? ladderBuildIndex.equipment.length : 0,
     },
-    patch05: {
-      file: getFileInfo(path.join(dataDir, 'patch-0.5/patch05_index.json')),
-      entries: patchIndex ? getArrayLength(patchIndex) : 0,
-      economyWatch: economyWatch ? getArrayLength(economyWatch) : 0,
-      economyItems: economyDigest && economyDigest.summary ? economyDigest.summary.selectedItemCount : 0,
-      economyUpdatedAt: economyDigest && economyDigest.updatedAt ? economyDigest.updatedAt : '',
+    economy: {
+      items: economyDigest && economyDigest.summary ? economyDigest.summary.selectedItemCount : 0,
+      updatedAt: economyDigest && economyDigest.updatedAt ? economyDigest.updatedAt : '',
       cnMarketItems: readJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json'), null)?.summary?.availableCount || 0,
     },
   };

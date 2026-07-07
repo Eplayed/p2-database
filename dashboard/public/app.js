@@ -6,7 +6,7 @@ const state = {
   logAutoFollow: true,
   automation: {
     enabled: false,
-    taskId: 'patch05_daily_publish',
+    taskId: 'daily_publish',
     intervalMinutes: 120,
     jitterMinutes: 10,
     nextRunAt: 0,
@@ -108,11 +108,6 @@ function renderSummary(summary) {
       note: `${summary.ladder.classes} 个职业 · ${summary.ladder.updateTime || '无更新时间'}`,
     },
     {
-      label: '新闻',
-      value: keyFiles.news?.count || 0,
-      note: keyFiles.news?.updatedAt ? formatTime(keyFiles.news.updatedAt) : '无文件',
-    },
-    {
       label: '天梯分析',
       value: summary.ladderAnalysis.classes,
       note: summary.ladderAnalysis.file ? formatTime(summary.ladderAnalysis.file.updatedAt) : '无文件',
@@ -125,22 +120,17 @@ function renderSummary(summary) {
         : '无索引文件',
     },
     {
-      label: '0.5 资料',
-      value: summary.patch05.entries,
-      note: summary.patch05.file ? formatTime(summary.patch05.file.updatedAt) : '无文件',
-    },
-    {
-      label: '新经济榜',
-      value: summary.patch05.economyItems || keyFiles.economyDigest?.count || 0,
-      note: summary.patch05.economyUpdatedAt
-        ? `经济更新 ${formatTime(summary.patch05.economyUpdatedAt)}`
+      label: '经济摘要',
+      value: summary.economy?.items || keyFiles.economyDigest?.count || 0,
+      note: summary.economy?.updatedAt
+        ? `poe.ninja ${formatTime(summary.economy.updatedAt)}`
         : keyFiles.economyDigest?.updatedAt
           ? formatTime(keyFiles.economyDigest.updatedAt)
           : '无经济摘要',
     },
     {
       label: '国服行情',
-      value: summary.patch05.cnMarketItems || keyFiles.cnMarketDigest?.count || 0,
+      value: summary.economy?.cnMarketItems || keyFiles.cnMarketDigest?.count || 0,
       note: keyFiles.cnMarketDigest?.updatedAt
         ? `DD373 更新 ${formatTime(keyFiles.cnMarketDigest.updatedAt)}`
         : '无 DD373 行情',
@@ -149,13 +139,6 @@ function renderSummary(summary) {
       label: '流放急救箱',
       value: keyFiles.problemGuides?.count || 0,
       note: keyFiles.problemGuides?.updatedAt ? formatTime(keyFiles.problemGuides.updatedAt) : '无文件',
-    },
-    {
-      label: '剧情攻略 / 调研',
-      value: `${keyFiles.storyGuides?.count || 0} / ${keyFiles.surveyConfig ? '已配置' : '无'}`,
-      note: keyFiles.storyGuides?.updatedAt
-        ? `攻略更新 ${formatTime(keyFiles.storyGuides.updatedAt)}`
-        : '无剧情攻略文件',
     },
   ];
 

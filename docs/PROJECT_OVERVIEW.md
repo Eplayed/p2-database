@@ -1,10 +1,10 @@
 # p2-database 项目说明
 
-最后更新：2026-06-23
+最后更新：2026-07-07
 
 ## 项目定位
 
-本项目负责把 poe.ninja、poe2db、DD373、踩蘑菇、poe2ggg 和人工维护内容转成小程序可读取的 JSON，并上传 OSS。
+本项目负责把 poe.ninja、poe2db、DD373、poe2ggg 和人工维护内容转成小程序可读取的 JSON，并上传 OSS。
 
 ## 当前模块
 
@@ -17,8 +17,6 @@
 | 经济摘要 | poe.ninja | `economy_digest.json`、图标 | GitHub Actions + Dashboard |
 | 国服行情 | DD373 公开样本 | `cn_market_digest.json` | GitHub Actions + Dashboard |
 | 流放急救箱 | 人工确认问题库 | `problem_guides.json`、`problem_guides_manifest.json` | Dashboard/手动 |
-| 0.5 资料 | poe2db + 人工源 | `patch-0.5/*.json` | Dashboard/手动 |
-| 新闻 | 踩蘑菇 | `news_caimogu.json`、详情 | GitHub Actions + Dashboard |
 | 剧情地图 | poe2ggg | `story_guides.json` | 低频手动 |
 
 ## 产品决策：下架独立开荒/热门 BD
@@ -30,9 +28,17 @@
 - 小程序移除赛季开荒和热门 BD 页面及入口。
 - Dashboard 移除 starter 更新任务。
 - package scripts 移除 starter 发布命令。
-- `auto-crawl.yml`、`update_patch05.yml` 不再生成 starter 数据。
+- `auto-crawl.yml` 不再生成 starter 数据。
 - 历史源码和基础数据暂不删除，避免误伤尚未提交的数据，也便于未来复盘。
 - 后续 BD 产品统一围绕 poe.ninja 天梯真实玩家数据演进。
+
+## 产品决策：下架 0.5 资料
+
+从 2026-07-06 起，小程序不再展示独立“0.5 资料”和“终局清单”入口。`crawlers/patch05`、`base-data/patch05` 和历史 `patch-0.5` 产物暂保留，但不再进入 Dashboard、npm 发布脚本或 GitHub Actions 更新链路。
+
+## 产品决策：下架新闻和精华帖 BD 更新
+
+从 2026-07-07 起，小程序不再展示独立新闻流，新闻数据不再进入 Dashboard、npm scripts 或 GitHub Actions。踩蘑菇精华帖 BD 也不再维护；热门 BD 统一走 poe.ninja 天梯真实玩家数据。
 
 ## Dashboard
 
@@ -45,11 +51,11 @@ npm run dashboard
 可见任务：
 
 1. `一键更新日常数据并上传`
-   新闻 -> poe.ninja 经济 -> 0.5 资料 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
+   poe.ninja 经济 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
 2. `刷新天梯/BD解析并上传`
    天梯玩家详情 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 首页复访摘要 -> OSS。索引会在上传前显式重建，避免小程序读取旧数据。
 
-日常任务不包含千岛、剧情地图、starter 或热门社区 BD。
+日常任务不包含新闻、千岛、剧情地图、0.5 资料、starter、踩蘑菇精华帖或热门社区 BD。
 
 ## 数据质量红线
 

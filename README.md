@@ -1,8 +1,8 @@
 # PoE2-Database 数据项目
 
-为微信小程序「PoE2 流放助手」生产天梯、BD 解析、经济、0.5 资料、新闻和剧情地图 JSON，并上传到阿里云 OSS。
+为微信小程序「PoE2 流放助手」生产天梯、BD 解析、经济、国服换算、急救箱和剧情地图 JSON，并上传到阿里云 OSS。
 
-数据链路：`poe.ninja / poe2db / DD373 / 踩蘑菇 / poe2ggg / 人工源 -> JSON -> OSS -> 小程序`。
+数据链路：`poe.ninja / poe2db / DD373 / poe2ggg / 人工源 -> JSON -> OSS -> 小程序`。
 
 首次接手先读：
 
@@ -14,11 +14,16 @@
 
 2026-06-18 起，小程序下架独立的“赛季开荒”和“热门 BD”功能，热门流派统一由 poe.ninja 天梯与玩家 BD 解析承载。
 
+2026-07-06 起，小程序下架独立“0.5 资料”和“终局清单”功能，`patch-0.5` 历史管线保留源码但不再进入 Dashboard、npm 发布脚本或 GitHub Actions 日常更新。
+
+2026-07-07 起，小程序不再展示独立新闻流，新闻爬虫和踩蘑菇精华帖 BD 抓取只作为历史源码保留，不再进入 Dashboard、npm 发布脚本或 GitHub Actions。
+
 - Dashboard 不再提供开荒推荐/热门 BD 更新任务。
 - npm scripts 不再暴露 starter 抓取、生成和发布命令。
 - GitHub Actions 不再自动生成 `starters.json`。
 - `crawlers/starter*` 与 `base-data/starter` 暂作为历史源码和数据保留，不参与当前发布链路。
 - OSS 上已有 `starters.json`、`starter_candidates.json` 可暂时保留兼容旧版小程序，但不会继续更新。
+- `auto_browser/crawl_news*.js`、`auto_browser/crawl_caimogu_essence_full.js` 等历史爬虫暂不删除，但不是当前维护任务。
 
 ## 当前数据能力
 
@@ -29,8 +34,6 @@
 - 翻译字典：poe2db 中文数据与人工映射。
 - poe.ninja 经济：核心汇率、赛季物品、终局门票和涨跌摘要。
 - 国服行情参考：DD373 公开样本换算。
-- 0.5 资料：机制、Boss、终局清单和经济观察。
-- 新闻：踩蘑菇新闻列表与详情。
 - 剧情地图：章节地图、点位、奖励和路线。
 
 ## Dashboard
@@ -42,14 +45,13 @@ npm run dashboard
 
 访问 `http://localhost:5177`。
 
-当前只保留三类日常能力：
+当前只保留两类可见能力：
 
 1. `一键更新日常数据并上传`
-   新闻 -> poe.ninja 经济 -> 0.5 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
+   poe.ninja 经济 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
 2. `刷新天梯/BD解析并上传`
    天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 首页复访摘要 -> OSS。
-3. Dashboard 内部隐藏步骤
-   仅供上述组合任务调用，不单独展示。
+隐藏步骤仅供上述组合任务调用，不单独展示。
 
 剧情攻略变化很少，不在 Dashboard 日常任务中；需要时使用命令行单独刷新。
 
@@ -63,10 +65,6 @@ CI=true NODE_ENV=production node crawlers/run.js --ladder --upload
 
 # 仅基于现有玩家详情重建技能/装备查 BD 索引
 npm run build:ladder-index
-
-# 新闻
-npm run crawl:news:all
-npm run crawl:news:all:dev
 
 # poe.ninja 经济
 npm run crawl:economy:ninja
@@ -84,10 +82,6 @@ npm run build:problem-guides:dev
 npm run build:daily-return
 npm run build:daily-return:dev
 
-# 0.5 资料
-npm run crawl:patch05
-npm run crawl:patch05:with-economy
-
 # 剧情地图，低频手动维护
 npm run crawl:story-guide
 npm run crawl:story-guide:upload
@@ -96,7 +90,7 @@ npm run crawl:story-guide:upload
 NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 ```
 
-## 关键产物
+## 当前关键产物
 
 ```text
 translated-data/release/
@@ -104,8 +98,6 @@ translated-data/release/
 ├── classes.json
 ├── ladder_analysis.json
 ├── players/*.json
-├── news_caimogu.json
-├── news_details/*.json
 ├── miniprogram_data/
 │   ├── economy_digest.json
 │   ├── economy-icons/*
@@ -116,12 +108,6 @@ translated-data/release/
 │   ├── ladder_build_index.json
 │   ├── ladder_build_details/*.json
 │   └── story_guides.json
-└── patch-0.5/
-    ├── version.json
-    ├── patch05_catalog.json
-    ├── patch05_economy_watch.json
-    ├── patch05_bosses.json
-    └── patch05_endgame_checklist.json
 ```
 
 生产上传还会同步兼容路径：
@@ -136,24 +122,25 @@ poe2-economy/cn_market_digest.json
 
 | Workflow | 触发 | 用途 |
 |---|---|---|
-| `update_economy.yml` | 定时 + 手动 | poe.ninja 经济与 0.5 经济观察 |
-| `update_news.yml` | 定时 + 手动 | 新闻列表与详情 |
+| `update_economy.yml` | 定时 + 手动 | poe.ninja 经济摘要 |
 | `update_cn_market_dd373.yml` | 定时 + 手动 | DD373 国服行情参考 |
-| `update_patch05.yml` | 手动 | 0.5 资料 |
 | `auto-crawl.yml` | 手动 | 天梯、BD 解析和趋势聚合 |
-| `essence_builds.yml` | 手动 | 历史精华帖数据，非当前推荐主线 |
 
 ## 维护边界
 
 需要人工维护：
 
-- `base-data/patch05/guide_content.json`：机制和 Boss 内容。
-- `base-data/patch05/overrides.zh-CN.json`：中文名和分类修正。
 - `auto_browser/translate_crawler.js`：装备、技能、符文和词缀翻译规则。
 - `crawlers/economy/ninja_digest.js`：新经济物品中文映射。
 - `base-data/problem-guides/*.json`：流放急救箱问题、排查项和跳转入口。
 - `base-data/miniprogram_config/feature_survey.json`：功能调研开关。
 - OSS 密钥与微信合法域名。
+
+历史保留但当前不维护：
+
+- `crawlers/patch05`、`base-data/patch05` 和历史 `patch-0.5` 产物。
+- `auto_browser/crawl_news*.js` 与历史新闻产物。
+- `auto_browser/crawl_caimogu_essence_full.js`、`transform_caimogu_data.js` 和 starter/精华帖历史数据。
 
 不需要人工编辑：
 
