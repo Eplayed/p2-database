@@ -32,7 +32,7 @@
 - 首页复访摘要：把经济、天梯和急救箱聚合成 `daily_return_digest.json`，供小程序首页“今日变化”快速展示和分享。
 - 流放急救箱：人工确认的问题排查清单，跳转到天梯、经济、清单等已有工具。
 - 翻译字典：poe2db 中文数据与人工映射。
-- poe.ninja 经济：核心汇率、赛季物品、终局门票和涨跌摘要。
+- poe.ninja 经济：首页轻量摘要与国际服分类通货参考；完整目录仅在用户打开国际服页时加载。
 - 国服行情参考：DD373 公开样本换算。
 - 剧情地图：章节地图、点位、奖励和路线。
 
@@ -48,7 +48,7 @@ npm run dashboard
 当前只保留两类可见能力：
 
 1. `一键更新日常数据并上传`
-   poe.ninja 经济 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
+   poe.ninja 经济（首页摘要 + 国际服通货目录） -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
 2. `刷新天梯/BD解析并上传`
    天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 首页复访摘要 -> OSS。
 隐藏步骤仅供上述组合任务调用，不单独展示。
@@ -100,6 +100,7 @@ translated-data/release/
 ├── players/*.json
 ├── miniprogram_data/
 │   ├── economy_digest.json
+│   ├── international_market_catalog.json
 │   ├── economy-icons/*
 │   ├── cn_market_digest.json
 │   ├── daily_return_digest.json
@@ -122,7 +123,7 @@ poe2-economy/cn_market_digest.json
 
 | Workflow | 触发 | 用途 |
 |---|---|---|
-| `update_economy.yml` | 定时 + 手动 | poe.ninja 经济摘要 |
+| `update_economy.yml` | 定时 + 手动 | poe.ninja 首页经济摘要与国际服分类通货目录 |
 | `update_cn_market_dd373.yml` | 定时 + 手动 | DD373 国服行情参考 |
 | `auto-crawl.yml` | 手动 | 天梯、BD 解析和趋势聚合 |
 
@@ -133,7 +134,7 @@ poe2-economy/cn_market_digest.json
 - `auto_browser/translate_crawler.js`：装备、技能、符文和词缀翻译规则。
 - `crawlers/economy/ninja_digest.js`：新经济物品中文映射。
 - `base-data/problem-guides/*.json`：流放急救箱问题、排查项和跳转入口。
-- `base-data/miniprogram_config/feature_survey.json`：功能调研开关。
+- `base-data/miniprogram_config/feature_survey.json`：功能调研问题与选项；赛季末通过 Dashboard 的“小程序功能调研”开关同步到 OSS。
 - OSS 密钥与微信合法域名。
 
 历史保留但当前不维护：
@@ -153,6 +154,6 @@ poe2-economy/cn_market_digest.json
 
 1. 保证天梯、BD 解析和中文翻译准确。
 2. 从天梯数据生成更有价值的职业、技能和装备趋势。
-3. 保证经济摘要与国服换算稳定。
+3. 保证国际服通货参考、经济摘要与国服换算稳定。
 4. 继续降低 OSS 下行和小程序重复请求。
 5. 暂不恢复独立的社区热门 BD/开荒推荐发布链路。

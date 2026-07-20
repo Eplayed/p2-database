@@ -8,6 +8,7 @@ const POECDN_BASE_URL = 'https://web.poecdn.com';
 const OSS_PUBLIC_BASE_URL = 'https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com';
 const DEFAULT_LEAGUE_URL = 'runesofaldur';
 const OUTPUT_FILE = 'economy_digest.json';
+const CATALOG_FILE = 'international_market_catalog.json';
 const LEGACY_FILE = 'economy.json';
 const ICON_DIR_NAME = 'economy-icons';
 
@@ -466,6 +467,36 @@ function buildLegacyEconomy(digest, categories = []) {
   };
 }
 
+function buildInternationalMarketCatalog(digest, categories = []) {
+  return {
+    schemaVersion: 1,
+    updatedAt: digest.updatedAt,
+    league: digest.league,
+    source: digest.source,
+    units: digest.units,
+    categories: categories.map(category => ({
+      type: category.type,
+      name: category.name,
+      priority: category.priority,
+      count: category.items.length,
+      items: category.items.map(item => ({
+        id: item.id,
+        detailsId: item.detailsId,
+        type: item.type,
+        category: item.category,
+        name: item.name,
+        enName: item.enName,
+        icon: item.icon,
+        valueInDivine: item.valueInDivine,
+        valueInExalted: item.valueInExalted,
+        valueText: item.valueText,
+        change7d: item.change7d,
+        volumePerHour: item.volumePerHour,
+      })),
+    })),
+  };
+}
+
 async function runNinjaEconomyDigest(options = {}) {
   const outputDir = options.outputDir || envConfig.dataDir;
   const translationIndex = buildTranslationIndex();
@@ -485,8 +516,8 @@ async function runNinjaEconomyDigest(options = {}) {
 
   const allItems = categories.flatMap(category => category.items);
   const selectedItems = dedupeItems(Object.values(buildSections(allItems)).flat());
-  const iconStats = await downloadIcons(selectedItems, outputDir);
-  console.log(`   图标: ${iconStats.total} 个需要展示，新增保存 ${iconStats.saved} 个`);
+  const iconStats = await downloadIcons(allItems, outputDir);
+  console.log(`   图标: ${iconStats.total} 个国际服物品，新增保存 ${iconStats.saved} 个`);
 
   const currencyCategory = categories.find(category => category.type === 'Currency');
   const coreRates = currencyCategory && currencyCategory.core && currencyCategory.core.rates
@@ -533,6 +564,11 @@ async function runNinjaEconomyDigest(options = {}) {
   fs.writeFileSync(digestPath, JSON.stringify(digest, null, 2));
   console.log(`   ✅ ${path.relative(path.join(__dirname, '../..'), digestPath)}`);
 
+  const catalogPath = path.join(outputDir, 'miniprogram_data', CATALOG_FILE);
+  const catalog = buildInternationalMarketCatalog(digest, categories);
+  fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2));
+  console.log(`   ✅ ${path.relative(path.join(__dirname, '../..'), catalogPath)}`);
+
   const rawPath = path.join(outputDir, 'economy_raw.json');
   fs.writeFileSync(rawPath, JSON.stringify({
     schemaVersion: 1,
@@ -561,4 +597,5 @@ module.exports = {
   ECONOMY_TYPES,
   runNinjaEconomyDigest,
   buildLegacyEconomy,
+  buildInternationalMarketCatalog,
 };

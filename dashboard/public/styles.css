@@ -201,6 +201,30 @@ h2 {
   background: linear-gradient(145deg, rgba(28, 34, 30, 0.9), rgba(20, 20, 20, 0.94));
 }
 
+.survey-control-panel {
+  background: linear-gradient(145deg, rgba(48, 39, 25, 0.9), rgba(20, 20, 20, 0.94));
+}
+
+.survey-control-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.survey-control-meta span:first-child {
+  color: var(--gold-soft);
+  font-weight: 800;
+}
+
+.danger-btn.active {
+  border-color: rgba(212, 175, 55, 0.45);
+  color: #1a160d;
+  background: var(--gold);
+}
+
 .automation-grid {
   display: grid;
   grid-template-columns: 1.4fr 0.75fr 0.75fr 1fr;
@@ -366,6 +390,10 @@ h2 {
 
 .status-success {
   color: var(--ok);
+}
+
+.status-partial {
+  color: var(--gold-soft);
 }
 
 .status-failed {

@@ -37,6 +37,10 @@ const countdownMessage = document.querySelector('#countdownMessage');
 const countdownNumber = document.querySelector('#countdownNumber');
 const countdownRunNowBtn = document.querySelector('#countdownRunNowBtn');
 const countdownCancelBtn = document.querySelector('#countdownCancelBtn');
+const surveyToggleBtn = document.querySelector('#surveyToggleBtn');
+const surveyControlStatus = document.querySelector('#surveyControlStatus');
+const surveyControlCampaign = document.querySelector('#surveyControlCampaign');
+const surveyControlHint = document.querySelector('#surveyControlHint');
 
 function formatTime(value) {
   if (!value) return '无记录';
@@ -64,6 +68,7 @@ function formatDateTime(timestamp) {
 function statusText(run) {
   if (!run) return '未运行';
   if (run.status === 'success') return '成功';
+  if (run.status === 'partial') return '部分完成';
   if (run.status === 'failed') return '失败';
   if (run.status === 'running') return '运行中';
   if (run.status === 'stopping') return '停止中';
@@ -155,6 +160,22 @@ function renderSummary(summary) {
     .join('');
 }
 
+function renderSurveyControl(summary) {
+  const survey = summary && summary.survey ? summary.survey : {};
+  const enabled = survey.enabled === true;
+  const currentRun = state.status && state.status.currentRun;
+
+  surveyControlStatus.textContent = `当前状态：${enabled ? '已开启' : '已关闭'}（${state.env}）`;
+  surveyControlCampaign.textContent = `调研批次：${survey.campaignId || '-'}`;
+  surveyControlHint.textContent = enabled
+    ? '玩家首页会显示“功能调研”入口；提交一次后本批次不再重复展示。'
+    : '关闭后，首页不显示功能调研入口；已提交的数据不会删除。';
+
+  surveyToggleBtn.textContent = enabled ? '关闭功能调研' : '开启功能调研';
+  surveyToggleBtn.classList.toggle('active', enabled);
+  surveyToggleBtn.disabled = Boolean(currentRun);
+}
+
 function renderTasks() {
   const currentRun = state.status && state.status.currentRun;
   const runs = (state.status && state.status.state && state.status.state.runs) || {};
@@ -165,7 +186,26 @@ function renderTasks() {
       title: '一键更新',
       description: '只保留当前最常用流程。底层脚本不单独展示，流程会按顺序执行并上传 OSS。',
     },
+    {
+      id: 'content_research',
+      title: '内容研究',
+      description: '为自媒体发现玩家问题和高讨论话题。结果只保存在本地选题素材，不会上传 OSS 或改变小程序数据。',
+    },
   ];
+
+  const forumSummary = state.status && state.status.forumResearch;
+  const forumTaskMeta = task => {
+    if (task.id !== 'forum_content_scan') return '';
+    if (!forumSummary) return '论坛选题池尚未通过 Dashboard 运行';
+    const d4 = forumSummary.sources?.d2core;
+    const poe2 = forumSummary.sources?.caimogu;
+    const rows = forumSummary.excel || {};
+    const sourceStats = source => {
+      const skipped = (source?.skippedExisting ?? 0) + (source?.skippedFilter ?? 0);
+      return `${source?.name || '来源'}：列表 ${source?.listCount ?? 0} · 候选 ${source?.eligibleCount ?? 0} · 新增 ${source?.newRows ?? 0} · 跳过 ${skipped}`;
+    };
+    return `最近采集：${forumSummary.status === 'success' ? '成功' : forumSummary.status === 'partial' ? '部分完成' : '失败'} · 暗黑4 ${rows.d4Rows || 0} 条 / POE2 ${rows.poe2Rows || 0} 条<br />${sourceStats(d4)}<br />${sourceStats(poe2)} · ${formatTime(forumSummary.finishedAt)}`;
+  };
 
   const renderTask = task => {
       const run = runs[task.id];
@@ -184,6 +224,7 @@ function renderTasks() {
             状态：<span class="${statusClass(run)}">${statusText(run)}</span><br />
             上次：${run ? formatTime(run.finishedAt || run.startedAt) : '无记录'}
             ${run && run.durationMs ? ` · ${formatDuration(run.durationMs)}` : ''}
+            ${forumTaskMeta(task) ? `<br />${forumTaskMeta(task)}` : ''}
           </div>
           <button class="run-btn" data-task-id="${task.id}" ${disabled ? 'disabled' : ''}>
             ${currentRun && currentRun.taskId === task.id ? '运行中...' : '运行'}
@@ -224,6 +265,7 @@ async function loadStatus() {
   const data = await requestJson(`/api/status?env=${state.env}`);
   state.status = data;
   renderSummary(data.summary);
+  renderSurveyControl(data.summary);
   renderTasks();
   stopBtn.disabled = !data.currentRun;
 
@@ -234,6 +276,27 @@ async function loadStatus() {
     await loadLog(currentRun.runId);
   } else if (state.activeRunId) {
     await loadLog(state.activeRunId);
+  }
+}
+
+async function toggleFeatureSurvey() {
+  const survey = state.status && state.status.summary && state.status.summary.survey;
+  const enabled = !(survey && survey.enabled === true);
+  const action = enabled ? '开启' : '关闭';
+  if (!window.confirm(`确定${action} ${state.env} 环境的功能调研吗？`)) return;
+
+  surveyToggleBtn.disabled = true;
+  try {
+    const data = await requestJson('/api/survey-config', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ environment: state.env, enabled }),
+    });
+    window.alert(`${action}成功，已同步到 OSS：${data.remotePath}`);
+    await loadStatus();
+  } catch (error) {
+    window.alert(error.message);
+    await loadStatus();
   }
 }
 
@@ -335,13 +398,14 @@ function saveAutomationSettings() {
 
 function renderAutomationTaskOptions() {
   if (!automationTaskSelect) return;
-  automationTaskSelect.innerHTML = state.tasks
+  const schedulableTasks = state.tasks.filter(task => !task.localOnly);
+  automationTaskSelect.innerHTML = schedulableTasks
     .map(task => `<option value="${task.id}">${task.name}</option>`)
     .join('');
-  if (state.tasks.some(task => task.id === state.automation.taskId)) {
+  if (schedulableTasks.some(task => task.id === state.automation.taskId)) {
     automationTaskSelect.value = state.automation.taskId;
-  } else if (state.tasks[0]) {
-    state.automation.taskId = state.tasks[0].id;
+  } else if (schedulableTasks[0]) {
+    state.automation.taskId = schedulableTasks[0].id;
     automationTaskSelect.value = state.automation.taskId;
   }
 }
@@ -495,6 +559,7 @@ async function boot() {
   bindEnvSwitch();
   bindAutomation();
   refreshBtn.addEventListener('click', loadStatus);
+  surveyToggleBtn.addEventListener('click', toggleFeatureSurvey);
   stopBtn.addEventListener('click', stopCurrentTask);
   scrollLogBottomBtn.addEventListener('click', scrollLogToBottom);
   logOutput.addEventListener('scroll', handleLogScroll);

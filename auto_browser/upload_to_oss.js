@@ -28,7 +28,8 @@ function getAllFiles(dirPath, arrayOfFiles) {
 }
 
 function getJsonCacheControl(relativePath) {
-    if (relativePath.endsWith('miniprogram_data/economy_digest.json')) return 'max-age=300';
+  if (relativePath.endsWith('miniprogram_data/economy_digest.json')) return 'max-age=300';
+  if (relativePath.endsWith('miniprogram_data/international_market_catalog.json')) return 'max-age=300';
     if (relativePath.endsWith('miniprogram_data/cn_market_digest.json')) return 'max-age=60';
     if (relativePath.endsWith('miniprogram_data/daily_return_digest.json')) return 'max-age=300';
     if (relativePath.endsWith('miniprogram_data/ladder_build_index.json')) return 'max-age=300';

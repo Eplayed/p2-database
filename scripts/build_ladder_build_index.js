@@ -152,21 +152,28 @@ const buildLadderBuildIndex = ({
   const players = entry => entry.players
     .sort((a, b) => b.level - a.level || a.name.localeCompare(b.name))
     .slice(0, 12)
-  const skills = Array.from(skillMap.values()).map(entry => ({
-    id: entry.id, name: entry.name, originalName: entry.originalName, icon: entry.icon,
-    count: entry.playerKeys.size,
-    percent: roundPercent(entry.playerKeys.size / totalPlayers * 100),
-    classes: top(entry.classes, 6), supportSkills: top(entry.supports, 8), players: players(entry)
-  })).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
-  const equipment = Array.from(equipmentMap.values()).map(entry => ({
-    id: entry.id, name: entry.name, originalName: entry.originalName, icon: entry.icon,
-    count: entry.playerKeys.size,
-    percent: roundPercent(entry.playerKeys.size / totalPlayers * 100),
-    slots: Array.from(entry.slots), classes: top(entry.classes, 6),
-    relatedSkills: top(entry.skills, 8), players: players(entry)
-  })).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+  const skills = Array.from(skillMap.values()).map(entry => {
+    const representative = players(entry)
+    return {
+      id: entry.id, name: entry.name, originalName: entry.originalName, icon: entry.icon,
+      count: entry.playerKeys.size,
+      percent: roundPercent(entry.playerKeys.size / totalPlayers * 100),
+      classes: top(entry.classes, 6), supportSkills: top(entry.supports, 8),
+      representative: representative[0] || null, players: representative
+    }
+  }).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+  const equipment = Array.from(equipmentMap.values()).map(entry => {
+    const representative = players(entry)
+    return {
+      id: entry.id, name: entry.name, originalName: entry.originalName, icon: entry.icon,
+      count: entry.playerKeys.size,
+      percent: roundPercent(entry.playerKeys.size / totalPlayers * 100),
+      slots: Array.from(entry.slots), classes: top(entry.classes, 6),
+      relatedSkills: top(entry.skills, 8), representative: representative[0] || null, players: representative
+    }
+  }).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
 
-  return { version: 1, updatedAt: updatedAt || new Date().toISOString(), totalPlayers, skills, equipment }
+  return { version: 2, updatedAt: updatedAt || new Date().toISOString(), totalPlayers, skills, equipment }
 }
 
 const writeLadderBuildIndex = (output, outputFile = OUTPUT_FILE) => {
