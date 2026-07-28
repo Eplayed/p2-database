@@ -32,6 +32,7 @@ function getJsonCacheControl(relativePath) {
   if (relativePath.endsWith('miniprogram_data/international_market_catalog.json')) return 'max-age=300';
     if (relativePath.endsWith('miniprogram_data/cn_market_digest.json')) return 'max-age=60';
     if (relativePath.endsWith('miniprogram_data/daily_return_digest.json')) return 'max-age=300';
+    if (relativePath.endsWith('miniprogram_data/follow_updates.json')) return 'max-age=300';
     if (relativePath.endsWith('miniprogram_data/ladder_build_index.json')) return 'max-age=300';
     if (relativePath.includes('miniprogram_data/ladder_build_details/')) return 'max-age=3600';
     if (relativePath.endsWith('miniprogram_data/problem_guides_manifest.json')) return 'max-age=300';

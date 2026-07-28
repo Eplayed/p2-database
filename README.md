@@ -4,6 +4,8 @@
 
 数据链路：`poe.ninja / poe2db / DD373 / poe2ggg / 人工源 -> JSON -> OSS -> 小程序`。
 
+另有独立的 POE1「流放赛季助手」数据线：`poe.ninja POE1 -> translated-data/poe1 -> poe1-season/{env}/ -> POE1 小程序`。它与 POE2 的生产目录、缓存和 OSS 路径完全隔离。
+
 首次接手先读：
 
 - `docs/PROJECT_OVERVIEW.md`
@@ -30,6 +32,7 @@
 - 天梯与 BD 解析：玩家、职业、装备、技能、符文、天赋和趋势聚合。
 - 技能/装备查 BD：由玩家详情生成轻量搜索目录，搭配与代表玩家详情按需加载。
 - 首页复访摘要：把经济、天梯和急救箱聚合成 `daily_return_digest.json`，供小程序首页“今日变化”快速展示和分享。
+- 我的关注变化：把技能、传奇装备和 DD373 国服通货生成 `follow_updates.json`；只在用户已关注时由小程序拉取，展示相对上一版的真实变化。
 - 流放急救箱：人工确认的问题排查清单，跳转到天梯、经济、清单等已有工具。
 - 翻译字典：poe2db 中文数据与人工映射。
 - poe.ninja 经济：首页轻量摘要与国际服分类通货参考；完整目录仅在用户打开国际服页时加载。
@@ -48,9 +51,9 @@ npm run dashboard
 当前只保留两类可见能力：
 
 1. `一键更新日常数据并上传`
-   poe.ninja 经济（首页摘要 + 国际服通货目录） -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
+   poe.ninja 经济（首页摘要 + 国际服通货目录） -> DD373 -> 流放急救箱 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 2. `刷新天梯/BD解析并上传`
-   天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 首页复访摘要 -> OSS。
+   天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 隐藏步骤仅供上述组合任务调用，不单独展示。
 
 剧情攻略变化很少，不在 Dashboard 日常任务中；需要时使用命令行单独刷新。
@@ -82,13 +85,25 @@ npm run build:problem-guides:dev
 npm run build:daily-return
 npm run build:daily-return:dev
 
+# 我的关注变化摘要
+npm run build:follow-updates
+npm run build:follow-updates:dev
+
 # 剧情地图，低频手动维护
 npm run crawl:story-guide
 npm run crawl:story-guide:upload
 
 # 上传当前 release 产物
 NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
+
+# POE1 流放赛季助手：真实天梯角色 + 游戏内经济，生成后上传专用 OSS 前缀
+npm run poe1:ladder
+npm run poe1:economy
+npm run poe1:upload
+npm run poe1:publish
 ```
+
+Dashboard 中也提供 `更新 POE1 抄 BD / 看行情` 一键任务，按“天梯摘要 -> 经济摘要 -> POE1 专用 OSS 上传”执行；它与 POE2 的日常/天梯任务相互隔离。
 
 ## 当前关键产物
 
@@ -104,6 +119,7 @@ translated-data/release/
 │   ├── economy-icons/*
 │   ├── cn_market_digest.json
 │   ├── daily_return_digest.json
+│   ├── follow_updates.json
 │   ├── problem_guides.json
 │   ├── problem_guides_manifest.json
 │   ├── ladder_build_index.json
@@ -119,12 +135,26 @@ poe2-economy/economy_digest.json
 poe2-economy/cn_market_digest.json
 ```
 
+## POE1 数据线
+
+POE1 当前服务独立小程序 `poe-mini` 的两条移动端主路径：`抄 BD` 与 `看行情`。
+
+```text
+translated-data/poe1/release/miniprogram_data/
+├── ladder_digest.json  # 当前赛季前 100 天梯角色、职业、主技能与热门技能
+└── economy_digest.json # 通货、碎片、精华、圣油的游戏内混沌石换算与 7 日变化
+```
+
+生产 OSS 前缀是 `poe1-season/release/miniprogram_data/`，缓存为经济 5 分钟、天梯 15 分钟。小程序读取失败时回退到本地样例，不应白屏。
+
+数据边界：只展示 poe.ninja 的公开游戏内数据；不抓取现实货币报价，也不提供第三方交易入口。
+
 ## 自动化
 
 | Workflow | 触发 | 用途 |
 |---|---|---|
-| `update_economy.yml` | 定时 + 手动 | poe.ninja 首页经济摘要与国际服分类通货目录 |
-| `update_cn_market_dd373.yml` | 定时 + 手动 | DD373 国服行情参考 |
+| `update_economy.yml` | 定时 + 手动 | poe.ninja 首页经济摘要与国际服分类通货目录，并刷新我的关注摘要 |
+| `update_cn_market_dd373.yml` | 定时 + 手动 | DD373 国服行情参考，并刷新我的关注摘要 |
 | `auto-crawl.yml` | 手动 | 天梯、BD 解析和趋势聚合 |
 
 ## 维护边界

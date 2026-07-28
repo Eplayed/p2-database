@@ -1,10 +1,10 @@
 # p2-database 项目说明
 
-最后更新：2026-07-07
+最后更新：2026-07-28
 
 ## 项目定位
 
-本项目负责把 poe.ninja、poe2db、DD373、poe2ggg 和人工维护内容转成小程序可读取的 JSON，并上传 OSS。
+本项目负责把 poe.ninja、poe2db、DD373、poe2ggg 和人工维护内容转成小程序可读取的 JSON，并上传 OSS。POE2 是当前主线；POE1 赛季助手使用独立目录和 OSS 前缀，绝不覆盖 POE2 产物。
 
 ## 当前模块
 
@@ -14,10 +14,13 @@
 | 天梯趋势 | 天梯聚合 | `ladder_analysis.json` | 随天梯更新 |
 | 技能/装备查BD | 玩家详情聚合 | `ladder_build_index.json`、`ladder_build_details/*.json` | 随天梯更新 |
 | 首页复访摘要 | 经济 + 天梯 + 急救箱聚合 | `daily_return_digest.json` | 随日常/天梯更新 |
+| 我的关注变化 | 天梯查 BD 索引 + DD373 公开样本 | `follow_updates.json` | 随日常/天梯更新 |
 | 国际服通货参考 | poe.ninja | `economy_digest.json`、`international_market_catalog.json`、图标 | GitHub Actions + Dashboard |
 | 国服行情 | DD373 公开样本 | `cn_market_digest.json` | GitHub Actions + Dashboard |
 | 流放急救箱 | 人工确认问题库 | `problem_guides.json`、`problem_guides_manifest.json` | Dashboard/手动 |
 | 剧情地图 | poe2ggg | `story_guides.json` | 低频手动 |
+| POE1 抄BD | poe.ninja POE1 Builds | `translated-data/poe1/*/ladder_digest.json` | 命令行发布 |
+| POE1 看行情 | poe.ninja POE1 Economy | `translated-data/poe1/*/economy_digest.json` | 命令行发布 |
 
 ## 产品决策：下架独立开荒/热门 BD
 
@@ -51,9 +54,11 @@ npm run dashboard
 可见任务：
 
 1. `一键更新日常数据并上传`
-   poe.ninja 经济（首页摘要 + 国际服通货目录） -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
+   poe.ninja 经济（首页摘要 + 国际服通货目录） -> DD373 -> 流放急救箱 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 2. `刷新天梯/BD解析并上传`
-   天梯玩家详情 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 首页复访摘要 -> OSS。索引会在上传前显式重建，避免小程序读取旧数据。
+   天梯玩家详情 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 我的关注变化 -> 首页复访摘要 -> OSS。索引会在上传前显式重建，避免小程序读取旧数据。
+3. `更新 POE1 抄 BD / 看行情`
+   POE1 当前赛季公开天梯摘要 -> 游戏内经济摘要 -> `poe1-season` 专用 OSS 前缀。与 POE2 任务完全隔离。
 
 日常任务不包含新闻、千岛、剧情地图、0.5 资料、starter、踩蘑菇精华帖或热门社区 BD。
 
@@ -103,6 +108,13 @@ Dashboard 另有独立的“更新论坛选题池”任务。它顺序采集 D2C
 - 产物：`translated-data/{env}/miniprogram_data/daily_return_digest.json`。
 - 用途：小程序首页“今日变化”和原生分享卡，减少首页为了复访信息反复拉多份大 JSON。
 - 数据边界：只汇总现有产物，不新增抓取；热门技能/装备来自真实天梯样本，急救箱推荐来自人工确认问题库。
+
+## 我的关注变化
+
+- 脚本：`scripts/build_follow_updates.js`。
+- 产物：`translated-data/{env}/miniprogram_data/follow_updates.json`。
+- 范围：技能、传奇装备、DD373 国服通货；比较上一版同一稳定 ID 的使用人数或单价。
+- 没有可靠上一版时 `change` 为 `null`，前台仅显示当前数据，禁止伪造涨跌。
 
 ## 技能/装备查BD数据结构
 

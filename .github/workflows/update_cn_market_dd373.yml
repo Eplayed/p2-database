@@ -64,6 +64,11 @@ jobs:
           DD373_ITEM_DELAY_MS: 1500
         run: node crawlers/cn-market/dd373_currency.js
 
+      - name: Refresh follow updates
+        env:
+          NODE_ENV: ${{ github.event.inputs.environment || 'production' }}
+        run: node scripts/build_follow_updates.js
+
       - name: Upload to OSS
         env:
           CI: true

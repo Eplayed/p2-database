@@ -33,6 +33,11 @@ jobs:
           NODE_ENV: production
         run: node crawlers/economy/ninja_digest.js
 
+      - name: Refresh follow updates
+        env:
+          NODE_ENV: production
+        run: node scripts/build_follow_updates.js
+
       - name: Upload refreshed economy data
         env:
           CI: true

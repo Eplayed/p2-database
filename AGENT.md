@@ -2,7 +2,7 @@
 
 ## 项目定位
 
-`p2-database` 是「PoE2 流放助手」的数据生产端。核心任务是稳定生成 JSON 并上传 OSS，不是制作独立网站。
+`p2-database` 是流放之路系列小程序的数据生产端。当前主线仍是「PoE2 流放助手」；新增 POE1 数据必须使用独立目录与 OSS 前缀，不能覆盖 POE2 产物。
 
 开始开发前先读：
 
@@ -36,7 +36,9 @@
 3. poe.ninja 经济摘要与 DD373 国服行情参考。
 4. 流放急救箱：人工确认的问题排查清单，动态给小程序读取。
 5. 首页复访摘要：聚合天梯、经济和急救箱，减少小程序多源请求。
-6. 低频剧情地图数据。
+6. 我的关注变化：为已关注的技能、装备与国服通货生成轻量变化摘要。
+7. 低频剧情地图数据。
+8. POE1 赛季助手：poe.ninja 天梯角色摘要与游戏内通货行情。
 
 ## 已下架功能
 
@@ -61,9 +63,10 @@
 
 ## 当前发布链路
 
-- 日常：poe.ninja 经济 -> DD373 -> 流放急救箱 -> 首页复访摘要 -> OSS。
-- 天梯：poe.ninja 天梯 -> 玩家详情/BD解析 -> 聚合分析 -> 技能/装备查 BD 索引 -> OSS。
+- 日常：poe.ninja 经济 -> DD373 -> 流放急救箱 -> 我的关注变化 -> 首页复访摘要 -> OSS。
+- 天梯：poe.ninja 天梯 -> 玩家详情/BD解析 -> 聚合分析 -> 技能/装备查 BD 索引 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 - 剧情地图：低频手动刷新，不进入日常组合任务。
+- POE1：`poe1:ladder` -> `poe1:economy` -> `poe1:upload`，产物位于 `translated-data/poe1/{env}`，仅上传到 `poe1-season/{env}/`。
 
 ## 关键约束
 
@@ -71,6 +74,7 @@
 - 赛季中优先做兼容性改动，不随意改变 OSS JSON 结构。
 - 新英文残留优先补权威中文映射，不能用生硬逐词替换冒充准确翻译。
 - OSS 上传入口是 `auto_browser/upload_to_oss.js`。
+- POE1 不得调用 `auto_browser/upload_to_oss.js`；它只服务 POE2。POE1 使用 `scripts/upload_poe1_to_oss.js`。
 - 急救箱内容源是 `base-data/problem-guides/*.json`，不要用 AI 直接生成未审核结论；前台只展示玩家问题、排查项和下一步工具。
 - 不要修改或删除用户尚未提交的 `base-data/starter` 历史数据。
 
@@ -83,6 +87,7 @@
 - `npm run build:problem-guides`
 - `npm run build:daily-return`
 - `npm run crawl:story-guide`
+- `npm run poe1:publish`
 
 ## 推荐工作方式
 
