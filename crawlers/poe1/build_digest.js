@@ -7,17 +7,54 @@ const { selectPrimaryChallengeLeague } = require('./league');
 const API_ROOT = 'https://poe.ninja/poe1/api';
 const env = process.env.NODE_ENV === 'dev' ? 'dev' : 'release';
 const outputDir = path.join(__dirname, '../../translated-data/poe1', env, 'miniprogram_data');
+const EQUIPMENT_LIMIT = 100;
+const DETAIL_CONCURRENCY = 1;
+const DETAIL_REQUEST_DELAY_MS = 900;
+const REQUEST_TIMEOUT_MS = 20000;
+const MAX_RETRY_AFTER_MS = 15000;
+const SLOT_NAMES = {
+  1: '头盔',
+  2: '手套',
+  3: '胸甲',
+  4: '项链',
+  5: '鞋子',
+  6: '副手',
+  7: '武器',
+  8: '戒指',
+  9: '戒指',
+  10: '武器',
+  11: '腰带',
+  12: '珠宝',
+  14: '药剂'
+};
+
+async function fetchWithTimeout(url, options = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } catch (error) {
+    if (error.name === 'AbortError') throw new Error(`请求超时 ${url}`);
+    throw error;
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 async function fetchJson(url) {
-  const response = await fetch(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
+  const response = await fetchWithTimeout(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
   if (!response.ok) throw new Error(`${response.status} ${url}`);
   return response.json();
 }
 
 async function fetchBuffer(url) {
-  const response = await fetch(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
+  const response = await fetchWithTimeout(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
   if (!response.ok) throw new Error(`${response.status} ${url}`);
   return Buffer.from(await response.arrayBuffer());
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function getListValue(lists, id, index) {
@@ -53,6 +90,172 @@ function translateDictionaryList(value, dictionary, translator) {
 function firstScalar(value) {
   if (Array.isArray(value)) return value[0] ?? null;
   return value ?? null;
+}
+
+function compactTextList(values, limit = 4) {
+  return (values || [])
+    .flatMap((value) => `${value || ''}`.split('\n'))
+    .map((value) => value.trim())
+    .filter(Boolean)
+    .slice(0, limit);
+}
+
+function compactProperties(properties, limit = 3) {
+  return (properties || [])
+    .map((item) => {
+      const values = (item.values || []).map((value) => Array.isArray(value) ? value[0] : value).filter(Boolean);
+      return values.length ? `${item.name}: ${values.join(' / ')}` : item.name;
+    })
+    .filter(Boolean)
+    .slice(0, limit);
+}
+
+function compactSockets(item) {
+  const socketedGems = new Map((item.socketedItems || []).map((gem) => [gem.socket, gem]));
+  return (item.sockets || []).map((socket, index, sockets) => {
+    const gem = socketedGems.get(index);
+    return {
+      index,
+      group: socket.group,
+      color: socket.sColour || socket.attr || '',
+      linkedPrev: index > 0 && sockets[index - 1].group === socket.group,
+      gem: gem ? {
+        name: translateSkill(gem.baseType || gem.typeLine),
+        nameEn: gem.baseType || gem.typeLine || '',
+        icon: gem.icon || ''
+      } : null
+    };
+  });
+}
+
+function compactItem(wrapper, section) {
+  const item = wrapper?.itemData || wrapper;
+  if (!item) return null;
+  const name = item.name || item.typeLine || item.baseType || '未命名装备';
+  return {
+    slot: SLOT_NAMES[wrapper?.itemSlot] || section || '装备',
+    section,
+    name,
+    typeLine: item.name ? item.typeLine : item.baseType,
+    baseType: item.baseType || '',
+    rarity: item.frameTypeId || '',
+    icon: item.icon || '',
+    corrupted: Boolean(item.corrupted),
+    sockets: compactSockets(item),
+    properties: compactProperties(item.properties),
+    implicitMods: compactTextList(item.implicitMods, 3),
+    explicitMods: compactTextList(item.explicitMods, 5)
+  };
+}
+
+function compactSkillGroup(group, mainSkill) {
+  const gems = (group.allGems || [])
+    .map((gem, index) => {
+      const nameEn = gem.name || gem.itemData?.baseType || gem.itemData?.typeLine || '';
+      const name = translateSkill(nameEn);
+      return {
+        name,
+        nameEn,
+        icon: gem.itemData?.icon || '',
+        level: gem.level || '',
+        quality: gem.quality || '',
+        isSupport: Boolean(gem.itemData?.support),
+        isMain: index === 0 || name === mainSkill || nameEn === mainSkill
+      };
+    })
+    .filter((gem) => gem.nameEn);
+  if (!gems.length) return null;
+  return {
+    slot: SLOT_NAMES[group.itemSlot] || '技能',
+    main: gems[0],
+    gems: gems.slice(0, 8)
+  };
+}
+
+function flattenSkillGems(skillGroups, mainSkill) {
+  const seen = new Set();
+  const gems = [];
+  for (const group of skillGroups) {
+    for (const gem of group.gems) {
+      const key = gem.nameEn || gem.name;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      gems.push({
+        ...gem,
+        isMain: gem.isMain || gem.name === mainSkill || gem.nameEn === mainSkill
+      });
+    }
+  }
+  return gems.slice(0, 16);
+}
+
+function makeSourceUrl(league, account, character) {
+  return `https://poe.ninja/poe1/builds/${league.url}/character/${encodeURIComponent(account)}/${encodeURIComponent(character)}`;
+}
+
+async function fetchCharacterDetail(snapshot, build) {
+  const params = new URLSearchParams({
+    account: build.account,
+    name: build.character,
+    overview: snapshot.snapshotName,
+    type: snapshot.type || 'exp',
+    timeMachine: ''
+  });
+  const url = `${API_ROOT}/builds/${snapshot.version}/character?${params.toString()}`;
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const response = await fetchWithTimeout(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
+    if (response.ok) return response.json();
+    if (response.status !== 429 || attempt === 3) throw new Error(`${response.status} ${url}`);
+    const retryAfter = Number(response.headers.get('Retry-After'));
+    const waitMs = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 5000 * (attempt + 1);
+    if (waitMs > MAX_RETRY_AFTER_MS) throw new Error(`429 限流等待过长，跳过详情`);
+    console.warn(`   poe.ninja 限流，等待 ${Math.round(waitMs / 1000)} 秒后重试 ${build.character}`);
+    await sleep(waitMs);
+  }
+  throw new Error(`详情读取失败 ${url}`);
+}
+
+function applyCharacterDetail(build, detail) {
+  const equipment = (detail.items || []).map((item) => compactItem(item, '装备')).filter(Boolean);
+  const flasks = (detail.flasks || []).map((item) => compactItem(item, '药剂')).filter(Boolean);
+  const jewels = (detail.jewels || []).map((item) => compactItem(item, '珠宝')).filter(Boolean);
+  const skillGroups = (detail.skills || []).map((group) => compactSkillGroup(group, build.mainSkill)).filter(Boolean);
+  const skillGems = flattenSkillGems(skillGroups, build.mainSkill);
+  const mainSkillIcon = skillGems.find((gem) => gem.isMain)?.icon || skillGems[0]?.icon || build.mainSkillIcon || '';
+  return {
+    ...build,
+    mainSkillIcon,
+    skillGems,
+    skillGroups,
+    equipment,
+    flasks,
+    jewels,
+    itemCount: equipment.length + flasks.length + jewels.length
+  };
+}
+
+async function enrichBuildDetails(builds, snapshot) {
+  const enriched = builds.map((build) => ({ ...build, equipment: [], flasks: [], jewels: [], itemCount: 0 }));
+  let cursor = 0;
+
+  async function worker() {
+    while (cursor < Math.min(enriched.length, EQUIPMENT_LIMIT)) {
+      const index = cursor;
+      cursor += 1;
+      const build = enriched[index];
+      try {
+        const detail = await fetchCharacterDetail(snapshot, build);
+        enriched[index] = applyCharacterDetail(build, detail);
+        console.log(`   装备 ${index + 1}/${Math.min(enriched.length, EQUIPMENT_LIMIT)} ${build.character}: ${enriched[index].itemCount} 件`);
+        await sleep(DETAIL_REQUEST_DELAY_MS);
+      } catch (error) {
+        console.warn(`   装备 ${index + 1}/${Math.min(enriched.length, EQUIPMENT_LIMIT)} ${build.character} 跳过: ${error.message}`);
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: DETAIL_CONCURRENCY }, worker));
+  return enriched;
 }
 
 function makeBuilds(result, dictionaries, league) {
@@ -94,7 +297,7 @@ function makeBuilds(result, dictionaries, league) {
         dps: firstScalar(getListValue(lists, 'dps', index))
       },
       summary: `${league.displayName} 天梯第 ${index + 1} 名角色`,
-      sourceUrl: `https://poe.ninja/builds/${league.url}/character/${encodeURIComponent(account)}/${encodeURIComponent(character)}`
+      sourceUrl: makeSourceUrl(league, account, character)
     });
   }
   return builds;
@@ -109,6 +312,17 @@ function makePopularSkills(result, dictionaries) {
     .filter((item) => item.nameEn && item.count > 0)
     .sort((a, b) => b.count - a.count)
     .slice(0, 12);
+}
+
+function getSkillIconMap(builds) {
+  const iconMap = new Map();
+  for (const build of builds) {
+    for (const gem of build.skillGems || []) {
+      if (gem.nameEn && gem.icon && !iconMap.has(gem.nameEn)) iconMap.set(gem.nameEn, gem.icon);
+      if (gem.name && gem.icon && !iconMap.has(gem.name)) iconMap.set(gem.name, gem.icon);
+    }
+  }
+  return iconMap;
 }
 
 async function getDictionaries(result) {
@@ -131,7 +345,12 @@ async function buildDigest() {
   const result = SearchResult.decode(payload).result;
   if (!result?.total) throw new Error('天梯搜索结果为空');
   const dictionaries = await getDictionaries(result);
-  const builds = makeBuilds(result, dictionaries, league);
+  const builds = await enrichBuildDetails(makeBuilds(result, dictionaries, league), snapshot);
+  const skillIconMap = getSkillIconMap(builds);
+  const popularSkills = makePopularSkills(result, dictionaries).map((skill) => ({
+    ...skill,
+    icon: skillIconMap.get(skill.nameEn) || skillIconMap.get(skill.name) || ''
+  }));
   const output = {
     schemaVersion: 1,
     updatedAt: new Date().toISOString(),
@@ -139,7 +358,7 @@ async function buildDigest() {
     league: { name: league.name, url: league.url, displayName: league.displayName },
     totalCharacters: result.total,
     builds,
-    popularSkills: makePopularSkills(result, dictionaries)
+    popularSkills
   };
 
   fs.mkdirSync(outputDir, { recursive: true });
