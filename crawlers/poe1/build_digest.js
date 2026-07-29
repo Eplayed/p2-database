@@ -234,6 +234,7 @@ function applyCharacterDetail(build, detail) {
   const skillGroups = (detail.skills || []).map((group) => compactSkillGroup(group, build.mainSkill)).filter(Boolean);
   const skillGems = flattenSkillGems(skillGroups, build.mainSkill);
   const mainSkillIcon = skillGems.find((gem) => gem.isMain)?.icon || skillGems[0]?.icon || build.mainSkillIcon || '';
+  const passiveSelection = Array.isArray(detail.passiveSelection) ? detail.passiveSelection : [];
   return {
     ...build,
     mainSkillIcon,
@@ -242,6 +243,10 @@ function applyCharacterDetail(build, detail) {
     equipment,
     flasks,
     jewels,
+    passiveNodeCount: passiveSelection.length,
+    passiveTreeName: detail.passiveTreeName || '',
+    passiveTreeImage: detail.passiveTreeImage || detail.passiveTreeImageUrl || '',
+    hasPathOfBuilding: Boolean(detail.pathOfBuildingExport),
     itemCount: equipment.length + flasks.length + jewels.length
   };
 }
