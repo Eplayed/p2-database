@@ -1,7 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const { SearchResult, SearchResultDictionary } = require('./ninja_search_proto');
-const { translateClass, translateKeyPassive, translateSkill } = require('./translations');
+const {
+  translateBaseItem,
+  translateClass,
+  translateItemName,
+  translateKeyPassive,
+  translateSkill,
+  translateStatText
+} = require('./translations');
 const { selectPrimaryChallengeLeague } = require('./league');
 
 const API_ROOT = 'https://poe.ninja/poe1/api';
@@ -97,6 +104,7 @@ function compactTextList(values, limit = 4) {
     .flatMap((value) => `${value || ''}`.split('\n'))
     .map((value) => value.trim())
     .filter(Boolean)
+    .map(translateStatText)
     .slice(0, limit);
 }
 
@@ -104,7 +112,7 @@ function compactProperties(properties, limit = 3) {
   return (properties || [])
     .map((item) => {
       const values = (item.values || []).map((value) => Array.isArray(value) ? value[0] : value).filter(Boolean);
-      return values.length ? `${item.name}: ${values.join(' / ')}` : item.name;
+      return translateStatText(values.length ? `${item.name}: ${values.join(' / ')}` : item.name);
     })
     .filter(Boolean)
     .slice(0, limit);
@@ -131,13 +139,17 @@ function compactSockets(item) {
 function compactItem(wrapper, section) {
   const item = wrapper?.itemData || wrapper;
   if (!item) return null;
-  const name = item.name || item.typeLine || item.baseType || '未命名装备';
+  const nameEn = item.name || item.typeLine || item.baseType || '未命名装备';
+  const typeLineEn = item.name ? item.typeLine : item.baseType;
   return {
     slot: SLOT_NAMES[wrapper?.itemSlot] || section || '装备',
     section,
-    name,
-    typeLine: item.name ? item.typeLine : item.baseType,
-    baseType: item.baseType || '',
+    name: translateItemName(nameEn),
+    nameEn,
+    typeLine: translateBaseItem(typeLineEn),
+    typeLineEn: typeLineEn || '',
+    baseType: translateBaseItem(item.baseType),
+    baseTypeEn: item.baseType || '',
     rarity: item.frameTypeId || '',
     icon: item.icon || '',
     corrupted: Boolean(item.corrupted),
