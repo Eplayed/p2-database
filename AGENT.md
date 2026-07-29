@@ -38,7 +38,7 @@
 5. 首页复访摘要：聚合天梯、经济和急救箱，减少小程序多源请求。
 6. 我的关注变化：为已关注的技能、装备与国服通货生成轻量变化摘要。
 7. 低频剧情地图数据。
-8. POE1 赛季助手：poe.ninja 天梯角色摘要与游戏内通货行情。
+8. POE1 赛季助手：poe.ninja 天梯角色摘要、技能组合、关键天赋、基础防御/DPS 与游戏内通货行情。
 
 ## 已下架功能
 
@@ -75,6 +75,7 @@
 - 新英文残留优先补权威中文映射，不能用生硬逐词替换冒充准确翻译。
 - OSS 上传入口是 `auto_browser/upload_to_oss.js`。
 - POE1 不得调用 `auto_browser/upload_to_oss.js`；它只服务 POE2。POE1 使用 `scripts/upload_poe1_to_oss.js`。
+- POE1 `ladder_digest.json` 当前是移动端摘要，不是完整角色详情；只有当数据端稳定抓到装备/天赋树后，前台才扩展装备页。
 - 急救箱内容源是 `base-data/problem-guides/*.json`，不要用 AI 直接生成未审核结论；前台只展示玩家问题、排查项和下一步工具。
 - 不要修改或删除用户尚未提交的 `base-data/starter` 历史数据。
 

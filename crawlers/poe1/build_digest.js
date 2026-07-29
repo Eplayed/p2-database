@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { SearchResult, SearchResultDictionary } = require('./ninja_search_proto');
-const { translateClass, translateSkill } = require('./translations');
+const { translateClass, translateKeyPassive, translateSkill } = require('./translations');
 const { selectPrimaryChallengeLeague } = require('./league');
 
 const API_ROOT = 'https://poe.ninja/poe1/api';
@@ -36,10 +36,30 @@ function translateSkills(value, dictionary) {
   return indexes.map((index) => translateSkill(dictionary[index])).filter(Boolean);
 }
 
+function translateDictionaryList(value, dictionary, translator) {
+  const indexes = Array.isArray(value) ? value : [];
+  return indexes
+    .map((index) => {
+      const nameEn = dictionary[index];
+      if (!nameEn) return null;
+      return {
+        name: translator(nameEn),
+        nameEn
+      };
+    })
+    .filter(Boolean);
+}
+
+function firstScalar(value) {
+  if (Array.isArray(value)) return value[0] ?? null;
+  return value ?? null;
+}
+
 function makeBuilds(result, dictionaries, league) {
   const lists = new Map(result.valueLists.map((list) => [list.id, list.values]));
   const classDictionary = dictionaries.get('class') || [];
   const gemDictionary = dictionaries.get('gem') || [];
+  const keyPassiveDictionary = dictionaries.get('keypassive') || [];
   const limit = Math.min(lists.get('name')?.length || 0, 100);
   const builds = [];
 
@@ -49,6 +69,7 @@ function makeBuilds(result, dictionaries, league) {
     const level = getListValue(lists, 'level', index);
     const classIndex = getListValue(lists, 'class', index);
     const skills = translateSkills(getListValue(lists, 'skills', index), gemDictionary);
+    const keyPassives = translateDictionaryList(getListValue(lists, 'keypassives', index), keyPassiveDictionary, translateKeyPassive);
     // The public search result may include private/incomplete characters with
     // no indexed main skill. They are not useful for a "copy this build" list.
     if (!character || !account || !level || !skills.length) continue;
@@ -65,6 +86,13 @@ function makeBuilds(result, dictionaries, league) {
       classNameEn: classDictionary[classIndex] || '',
       mainSkill,
       skills: skills.slice(0, 5),
+      keyPassives: keyPassives.slice(0, 10),
+      stats: {
+        life: firstScalar(getListValue(lists, 'life', index)),
+        energyShield: firstScalar(getListValue(lists, 'energyshield', index)),
+        effectiveHitPool: firstScalar(getListValue(lists, 'ehp', index)),
+        dps: firstScalar(getListValue(lists, 'dps', index))
+      },
       summary: `${league.displayName} 天梯第 ${index + 1} 名角色`,
       sourceUrl: `https://poe.ninja/builds/${league.url}/character/${encodeURIComponent(account)}/${encodeURIComponent(character)}`
     });
@@ -84,7 +112,7 @@ function makePopularSkills(result, dictionaries) {
 }
 
 async function getDictionaries(result) {
-  const needed = result.dictionaries.filter((item) => item.id === 'class' || item.id === 'gem');
+  const needed = result.dictionaries.filter((item) => item.id === 'class' || item.id === 'gem' || item.id === 'keypassive');
   const entries = await Promise.all(needed.map(async (item) => {
     const buffer = await fetchBuffer(`${API_ROOT}/builds/dictionary/${item.hash}`);
     return [item.id, SearchResultDictionary.decode(buffer).values];

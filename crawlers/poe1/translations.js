@@ -12,6 +12,8 @@ const SKILL_NAMES = {
   'Lightning Arrow': '闪电箭', 'Tornado Shot': '龙卷射击', 'Ice Shot': '冰霜射击',
   'Righteous Fire': '正义之火', 'Spark': '电球', 'Fireball': '火球',
   'Lightning Strike': '闪电打击', 'Molten Strike': '熔岩打击', 'Cleave': '劈砍',
+  'Desecrate': '亵渎', 'Autoexertion': '自动竭尽', 'General\'s Cry': '将军之吼',
+  'Lacerate of Butchering': '屠戮破空斩',
   'Cyclone': '旋风斩', 'Summon Raging Spirit': '召唤愤怒狂灵', 'Raise Spectre': '召唤幻影',
   'Raise Zombie': '召唤魔侍', 'Vaal Skeletons': '瓦尔召唤魔侍', 'Soulrend': '灵魂吸取',
   'Hexblast': '咒术枯萎', 'Essence Drain': '精华吸取', 'Contagion': '传染',
@@ -29,6 +31,21 @@ const SKILL_NAMES = {
   'Elemental Hit of the Spectrum': '光谱元素打击', 'Kinetic Fusillade': '力量齐射',
   'Cyclone of Tumult': '暴乱旋风斩', 'Shield Crush': '盾牌碾压',
   'Ethereal Knives of the Massacre': '屠戮虚影短刃'
+};
+
+const KEY_PASSIVE_NAMES = {
+  'Chaos Inoculation': '混沌免疫',
+  'Conduit': '导流',
+  'Divine Flesh': '神圣血肉',
+  'Eldritch Battery': '异能魔力',
+  'Elemental Equilibrium': '元素之相',
+  'Ghost Dance': '鬼舞',
+  'Glancing Blows': '侧身之击',
+  'Iron Reflexes': '钢铁反射',
+  'Pain Attunement': '苦痛灵曲',
+  'Supreme Ostentation': '至高炫耀',
+  'Unwavering Stance': '霸体',
+  'Versatile Combatant': '全能斗士'
 };
 
 const CURRENCY_NAMES = {
@@ -54,4 +71,8 @@ function translateCurrency(value) {
   return CURRENCY_NAMES[value] || value || '未命名通货';
 }
 
-module.exports = { translateClass, translateSkill, translateCurrency };
+function translateKeyPassive(value) {
+  return KEY_PASSIVE_NAMES[value] || value || '未知关键天赋';
+}
+
+module.exports = { translateClass, translateSkill, translateCurrency, translateKeyPassive };

@@ -141,7 +141,7 @@ POE1 当前服务独立小程序 `poe-mini` 的两条移动端主路径：`抄 B
 
 ```text
 translated-data/poe1/release/miniprogram_data/
-├── ladder_digest.json  # 当前赛季前 100 天梯角色、职业、主技能与热门技能
+├── ladder_digest.json  # 当前赛季前 100 天梯角色、职业、主技能、技能组合、关键天赋与基础防御/DPS 摘要
 └── economy_digest.json # 通货、碎片、精华、圣油的游戏内混沌石换算与 7 日变化
 ```
 
