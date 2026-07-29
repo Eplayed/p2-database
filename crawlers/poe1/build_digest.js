@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { SearchResult, SearchResultDictionary } = require('./ninja_search_proto');
 const { translateClass, translateSkill } = require('./translations');
+const { selectPrimaryChallengeLeague } = require('./league');
 
 const API_ROOT = 'https://poe.ninja/poe1/api';
 const env = process.env.NODE_ENV === 'dev' ? 'dev' : 'release';
@@ -93,7 +94,7 @@ async function getDictionaries(result) {
 
 async function buildDigest() {
   const indexState = await fetchJson(`${API_ROOT}/data/index-state`);
-  const league = indexState.buildLeagues.find((item) => !/hardcore|ssf/i.test(item.name));
+  const league = selectPrimaryChallengeLeague(indexState.buildLeagues, indexState.snapshotVersions);
   if (!league) throw new Error('未找到当前 POE1 赛季');
   const snapshot = indexState.snapshotVersions.find((item) => item.url === league.url && item.type === 'exp');
   if (!snapshot) throw new Error(`未找到 ${league.name} 的天梯快照`);

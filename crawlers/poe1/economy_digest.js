@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { translateCurrency } = require('./translations');
+const { selectPrimaryChallengeLeague } = require('./league');
 
 const API_ROOT = 'https://poe.ninja/poe1/api';
 const env = process.env.NODE_ENV === 'dev' ? 'dev' : 'release';
@@ -55,7 +56,7 @@ function selectCore(items) {
 
 async function buildEconomyDigest() {
   const indexState = await fetchJson(`${API_ROOT}/data/index-state`);
-  const league = indexState.economyLeagues.find((item) => !/hardcore|standard/i.test(item.name));
+  const league = selectPrimaryChallengeLeague(indexState.economyLeagues);
   if (!league) throw new Error('未找到当前 POE1 经济赛季');
   const payloads = await Promise.all(categories.map(async (category) => ({
     category,

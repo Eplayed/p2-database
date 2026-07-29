@@ -1,0 +1,43 @@
+name: Update POE1 Season Data
+
+on:
+  schedule:
+    # 每两小时刷新一次；新赛季数据出现在 poe.ninja 后会自动切换，不需要改小程序代码。
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: poe1-season-data
+  cancel-in-progress: false
+
+jobs:
+  update-poe1-season-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Refresh POE1 ladder and economy
+        env:
+          NODE_ENV: production
+        run: npm run poe1:ladder && npm run poe1:economy
+
+      - name: Upload POE1 data to OSS
+        env:
+          NODE_ENV: production
+          OSS_REGION: oss-cn-hangzhou
+          OSS_BUCKET: poe2-all-class
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+        run: node scripts/upload_poe1_to_oss.js
