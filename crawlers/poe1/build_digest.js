@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { SearchResult, SearchResultDictionary } = require('./ninja_search_proto');
 const {
   translateBaseItem,
   translateClass,
@@ -9,16 +8,17 @@ const {
   translateSkill,
   translateStatText
 } = require('./translations');
-const { selectPrimaryChallengeLeague } = require('./league');
 
-const API_ROOT = 'https://poe.ninja/poe1/api';
 const env = process.env.NODE_ENV === 'dev' ? 'dev' : 'release';
 const outputDir = path.join(__dirname, '../../translated-data/poe1', env, 'miniprogram_data');
-const EQUIPMENT_LIMIT = 100;
-const DETAIL_CONCURRENCY = 1;
-const DETAIL_REQUEST_DELAY_MS = 900;
+const QQ_ROOT = 'https://poe.qq.com/act/a202010118poena';
+const DEFAULT_SEASON = process.env.POE1_SEASON || 's29_normal';
+const NEXT_SEASON = process.env.POE1_NEXT_SEASON || 's30_normal';
+const NEXT_SEASON_START = new Date(process.env.POE1_NEXT_SEASON_START || '2026-07-31T10:00:00+08:00').getTime();
+const DETAIL_LIMIT = Number(process.env.POE1_DETAIL_LIMIT || 100);
+const DETAIL_CONCURRENCY = Number(process.env.POE1_DETAIL_CONCURRENCY || 2);
+const DETAIL_REQUEST_DELAY_MS = Number(process.env.POE1_DETAIL_DELAY_MS || 250);
 const REQUEST_TIMEOUT_MS = 20000;
-const MAX_RETRY_AFTER_MS = 15000;
 const SLOT_NAMES = {
   1: '头盔',
   2: '手套',
@@ -32,7 +32,12 @@ const SLOT_NAMES = {
   10: '武器',
   11: '腰带',
   12: '珠宝',
+  13: '副手',
   14: '药剂'
+};
+const SEASON_LABELS = {
+  s29_normal: '费西亚的遗产',
+  s30_normal: '永火之咒'
 };
 
 async function fetchWithTimeout(url, options = {}) {
@@ -48,67 +53,80 @@ async function fetchWithTimeout(url, options = {}) {
   }
 }
 
-async function fetchJson(url) {
-  const response = await fetchWithTimeout(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
+async function fetchJson(url, options = {}) {
+  const response = await fetchWithTimeout(url, {
+    headers: {
+      'user-agent': 'poe-season-helper/1.0',
+      referer: `${QQ_ROOT}/challenge/index.html`
+    },
+    ...options
+  });
   if (!response.ok) throw new Error(`${response.status} ${url}`);
   return response.json();
 }
 
-async function fetchBuffer(url) {
-  const response = await fetchWithTimeout(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
-  if (!response.ok) throw new Error(`${response.status} ${url}`);
-  return Buffer.from(await response.arrayBuffer());
+async function tryFetchJson(url) {
+  try {
+    return await fetchJson(url);
+  } catch (error) {
+    return null;
+  }
 }
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function getListValue(lists, id, index) {
-  const value = lists.get(id)?.[index];
-  if (!value) return null;
-  if (value.str) return value.str;
-  if (value.strs?.length) return value.strs;
-  if (value.numbers?.length) return value.numbers;
-  // Dictionary key 0 is valid. For list-backed scalar fields it should not be
-  // discarded just because protobufjs represents it as the default value.
-  return value.number;
+function getPreferredSnapshotName() {
+  if (Date.now() >= NEXT_SEASON_START) return NEXT_SEASON;
+  return DEFAULT_SEASON;
 }
 
-function translateSkills(value, dictionary) {
-  const indexes = Array.isArray(value) ? value : [];
-  return indexes.map((index) => translateSkill(dictionary[index])).filter(Boolean);
+async function fetchRankInfo() {
+  const preferred = getPreferredSnapshotName();
+  const candidates = Array.from(new Set([preferred, DEFAULT_SEASON, 's29_normal']));
+  for (const snapshotName of candidates) {
+    const url = `${QQ_ROOT}/js/rankinfo_${encodeURIComponent(snapshotName)}.json`;
+    const data = await tryFetchJson(url);
+    if (data && Array.isArray(data.names) && Array.isArray(data.accounts)) {
+      return { snapshotName, url, data };
+    }
+    console.warn(`   国服天梯快照暂不可用: ${snapshotName}`);
+  }
+  throw new Error('未找到可用的国服天梯快照');
 }
 
-function translateDictionaryList(value, dictionary, translator) {
-  const indexes = Array.isArray(value) ? value : [];
-  return indexes
-    .map((index) => {
-      const nameEn = dictionary[index];
-      if (!nameEn) return null;
-      return {
-        name: translator(nameEn),
-        nameEn
-      };
-    })
-    .filter(Boolean);
+function djb2Hash(value) {
+  const text = String(value);
+  let hash = 0;
+  for (let index = 0; index < text.length; index += 1) {
+    hash = (((hash << 5) - hash) + text.charCodeAt(index)) & 0xFFFFFFFF;
+  }
+  hash >>>= 0;
+  return (`00000000${hash.toString(16)}`).slice(-8);
 }
 
-function firstScalar(value) {
-  if (Array.isArray(value)) return value[0] ?? null;
-  return value ?? null;
+function makeBuildId(account, character) {
+  return `${account}-${character}`.replace(/[^a-zA-Z0-9_\-\u4e00-\u9fa5]/g, '_').toLowerCase();
+}
+
+function getArrayValue(values, index, fallback = null) {
+  return Array.isArray(values) && values[index] !== undefined ? values[index] : fallback;
+}
+
+function normalizeText(value) {
+  return `${value || ''}`.replace(/\r/g, '').trim();
 }
 
 function compactTextList(values, limit = 4) {
   return (values || [])
-    .flatMap((value) => `${value || ''}`.split('\n'))
-    .map((value) => value.trim())
+    .flatMap((value) => normalizeText(value).split('\n'))
+    .map((value) => translateStatText(value.trim()))
     .filter(Boolean)
-    .map(translateStatText)
     .slice(0, limit);
 }
 
-function compactProperties(properties, limit = 3) {
+function compactProperties(properties, limit = 4) {
   return (properties || [])
     .map((item) => {
       const values = (item.values || []).map((value) => Array.isArray(value) ? value[0] : value).filter(Boolean);
@@ -125,11 +143,11 @@ function compactSockets(item) {
     return {
       index,
       group: socket.group,
-      color: socket.sColour || socket.attr || '',
+      color: socket.sColour || socket.attr || socket.colour || '',
       linkedPrev: index > 0 && sockets[index - 1].group === socket.group,
       gem: gem ? {
-        name: translateSkill(gem.baseType || gem.typeLine),
-        nameEn: gem.baseType || gem.typeLine || '',
+        name: translateSkill(gem.baseType || gem.typeLine || gem.name),
+        nameEn: gem.baseType || gem.typeLine || gem.name || '',
         icon: gem.icon || ''
       } : null
     };
@@ -139,39 +157,50 @@ function compactSockets(item) {
 function compactItem(wrapper, section) {
   const item = wrapper?.itemData || wrapper;
   if (!item) return null;
-  const nameEn = item.name || item.typeLine || item.baseType || '未命名装备';
-  const typeLineEn = item.name ? item.typeLine : item.baseType;
+  const nameRaw = normalizeText(item.name || item.typeLine || item.baseType || '未命名装备');
+  const typeLineRaw = normalizeText(item.name ? item.typeLine : item.baseType);
   return {
     slot: SLOT_NAMES[wrapper?.itemSlot] || section || '装备',
     section,
-    name: translateItemName(nameEn),
-    nameEn,
-    typeLine: translateBaseItem(typeLineEn),
-    typeLineEn: typeLineEn || '',
+    name: translateItemName(nameRaw),
+    nameEn: nameRaw,
+    typeLine: translateBaseItem(typeLineRaw),
+    typeLineEn: typeLineRaw || '',
     baseType: translateBaseItem(item.baseType),
     baseTypeEn: item.baseType || '',
-    rarity: item.frameTypeId || '',
+    rarity: item.frameTypeId || item.frameType || '',
     icon: item.icon || '',
     corrupted: Boolean(item.corrupted),
     sockets: compactSockets(item),
     properties: compactProperties(item.properties),
-    implicitMods: compactTextList(item.implicitMods, 3),
-    explicitMods: compactTextList(item.explicitMods, 5)
+    implicitMods: compactTextList(item.implicitMods, 4),
+    explicitMods: compactTextList(item.explicitMods, 6)
   };
 }
 
+function gemName(gem) {
+  return normalizeText(gem?.name || gem?.itemData?.baseType || gem?.itemData?.typeLine);
+}
+
+function gemIcon(gem) {
+  return gem?.itemData?.icon || '';
+}
+
 function compactSkillGroup(group, mainSkill) {
-  const gems = (group.allGems || [])
+  const mainGems = Array.isArray(group.gem) && group.gem.length ? group.gem : [];
+  const supportGems = Array.isArray(group.supportGems) ? group.supportGems : [];
+  const allGems = mainGems.length || supportGems.length ? [...mainGems, ...supportGems] : (group.allGems || []);
+  const gems = allGems
     .map((gem, index) => {
-      const nameEn = gem.name || gem.itemData?.baseType || gem.itemData?.typeLine || '';
+      const nameEn = gemName(gem);
       const name = translateSkill(nameEn);
       return {
         name,
         nameEn,
-        icon: gem.itemData?.icon || '',
+        icon: gemIcon(gem),
         level: gem.level || '',
         quality: gem.quality || '',
-        isSupport: Boolean(gem.itemData?.support),
+        isSupport: Boolean(gem.itemData?.support || /（辅）|\(辅\)|Support/i.test(nameEn)),
         isMain: index === 0 || name === mainSkill || nameEn === mainSkill
       };
     })
@@ -198,199 +227,208 @@ function flattenSkillGems(skillGroups, mainSkill) {
       });
     }
   }
-  return gems.slice(0, 16);
+  return gems.slice(0, 18);
 }
 
-function makeSourceUrl(league, account, character) {
-  return `https://poe.ninja/poe1/builds/${league.url}/character/${encodeURIComponent(account)}/${encodeURIComponent(character)}`;
+function pickMainSkillFromDetail(detail, fallback) {
+  const groups = Array.isArray(detail.skills) ? detail.skills : [];
+  const dpsSkills = groups
+    .flatMap((group) => group.dps || [])
+    .filter((item) => item.name && Number(item.dps) > 0)
+    .sort((a, b) => Number(b.dps || 0) - Number(a.dps || 0));
+  if (dpsSkills[0]?.name) return translateSkill(dpsSkills[0].name);
+  const mainGem = groups.flatMap((group) => group.gem || []).map(gemName).find(Boolean);
+  return translateSkill(mainGem || fallback);
 }
 
-async function fetchCharacterDetail(snapshot, build) {
-  const params = new URLSearchParams({
-    account: build.account,
-    name: build.character,
-    overview: snapshot.snapshotName,
-    type: snapshot.type || 'exp',
-    timeMachine: ''
-  });
-  const url = `${API_ROOT}/builds/${snapshot.version}/character?${params.toString()}`;
-  for (let attempt = 0; attempt < 4; attempt += 1) {
-    const response = await fetchWithTimeout(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
-    if (response.ok) return response.json();
-    if (response.status !== 429 || attempt === 3) throw new Error(`${response.status} ${url}`);
-    const retryAfter = Number(response.headers.get('Retry-After'));
-    const waitMs = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 5000 * (attempt + 1);
-    if (waitMs > MAX_RETRY_AFTER_MS) throw new Error(`429 限流等待过长，跳过详情`);
-    console.warn(`   poe.ninja 限流，等待 ${Math.round(waitMs / 1000)} 秒后重试 ${build.character}`);
-    await sleep(waitMs);
+function compactKeyPassives(build, detail) {
+  const keyStones = Array.isArray(detail.keyStones) ? detail.keyStones : [];
+  if (!keyStones.length) return build.keyPassives || [];
+  return keyStones.map((passive) => ({
+    name: translateKeyPassive(passive.name),
+    nameEn: passive.name || '',
+    icon: passive.icon || '',
+    type: 'Keystone',
+    typeLabel: '关键天赋',
+    stats: compactTextList(passive.stats, 5)
+  }));
+}
+
+function makeSourceUrl(snapshotName, account, character) {
+  return `${QQ_ROOT}/challenge/index.html?season=${encodeURIComponent(snapshotName)}&account=${encodeURIComponent(account)}&character=${encodeURIComponent(character)}`;
+}
+
+async function fetchCharacterDetail(snapshotName, build) {
+  const hash = djb2Hash(`${build.account}_${build.character}`);
+  const url = `${QQ_ROOT}/js/char/${encodeURIComponent(snapshotName)}/${hash}.json`;
+  return fetchJson(url);
+}
+
+function makeInitialBuilds(rankInfo, snapshotName) {
+  const limit = Math.min(rankInfo.names.length, 300);
+  const builds = [];
+  for (let index = 0; index < limit; index += 1) {
+    const character = getArrayValue(rankInfo.names, index, '');
+    const account = getArrayValue(rankInfo.accounts, index, '');
+    if (!character || !account) continue;
+    const classNameEn = rankInfo.classNames[getArrayValue(rankInfo.classes, index, -1)] || '';
+    const activeSkillIndexes = Array.from(new Set(getArrayValue(rankInfo.activeSkillUse, index, [])));
+    const skills = activeSkillIndexes
+      .map((skillIndex) => rankInfo.activeSkills[skillIndex])
+      .filter(Boolean)
+      .map((skill) => translateSkill(skill.name));
+    const mainSkillData = activeSkillIndexes.map((skillIndex) => rankInfo.activeSkills[skillIndex]).find(Boolean);
+    const rank = Number(getArrayValue(rankInfo.ladderRanks, index, index + 1));
+    builds.push({
+      id: makeBuildId(account, character),
+      rank: Number.isFinite(rank) ? rank : index + 1,
+      character,
+      account,
+      level: Number(getArrayValue(rankInfo.levels, index, 0)) || 0,
+      className: translateClass(classNameEn),
+      classNameEn,
+      leagueName: SEASON_LABELS[snapshotName] || snapshotName,
+      mainSkill: translateSkill(mainSkillData?.name || skills[0] || ''),
+      mainSkillEn: mainSkillData?.name || '',
+      mainSkillIcon: mainSkillData?.icon || '',
+      skills: skills.slice(0, 6),
+      keyPassives: [],
+      stats: {
+        life: getArrayValue(rankInfo.life, index),
+        energyShield: getArrayValue(rankInfo.energyShield, index),
+        mana: getArrayValue(rankInfo.mana, index),
+        armour: getArrayValue(rankInfo.armour, index),
+        evasionRating: getArrayValue(rankInfo.evasionRating, index),
+        fireResist: getArrayValue(rankInfo.fireResist, index),
+        coldResist: getArrayValue(rankInfo.coldResist, index),
+        lightningResist: getArrayValue(rankInfo.lightningResist, index),
+        chaosResist: getArrayValue(rankInfo.chaosResist, index),
+        movementSpeed: getArrayValue(rankInfo.movementSpeed, index),
+        effectiveHitPool: getArrayValue(rankInfo.totalEHP, index),
+        maxHitPhysical: getArrayValue(rankInfo.maxHitPhysical, index)
+      },
+      summary: `国服天梯第 ${Number.isFinite(rank) ? rank : index + 1} 名角色`,
+      sourceUrl: makeSourceUrl(snapshotName, account, character)
+    });
   }
-  throw new Error(`详情读取失败 ${url}`);
+  return builds.sort((a, b) => a.rank - b.rank);
 }
 
 function applyCharacterDetail(build, detail) {
+  const mainSkill = pickMainSkillFromDetail(detail, build.mainSkill);
   const equipment = (detail.items || []).map((item) => compactItem(item, '装备')).filter(Boolean);
   const flasks = (detail.flasks || []).map((item) => compactItem(item, '药剂')).filter(Boolean);
   const jewels = (detail.jewels || []).map((item) => compactItem(item, '珠宝')).filter(Boolean);
-  const skillGroups = (detail.skills || []).map((group) => compactSkillGroup(group, build.mainSkill)).filter(Boolean);
-  const skillGems = flattenSkillGems(skillGroups, build.mainSkill);
-  const mainSkillIcon = skillGems.find((gem) => gem.isMain)?.icon || skillGems[0]?.icon || build.mainSkillIcon || '';
+  const skillGroups = (detail.skills || []).map((group) => compactSkillGroup(group, mainSkill)).filter(Boolean);
+  const skillGems = flattenSkillGems(skillGroups, mainSkill);
+  const mainSkillGem = skillGems.find((gem) => gem.isMain) || skillGems[0];
   const passiveSelection = Array.isArray(detail.passiveSelection) ? detail.passiveSelection : [];
   return {
     ...build,
-    mainSkillIcon,
+    level: Number(detail.level || build.level) || build.level,
+    className: translateClass(detail.class || build.classNameEn),
+    classNameEn: detail.class || build.classNameEn,
+    leagueName: build.leagueName || detail.league || '',
+    mainSkill,
+    mainSkillEn: mainSkillGem?.nameEn || build.mainSkillEn || mainSkill,
+    mainSkillIcon: mainSkillGem?.icon || build.mainSkillIcon || '',
+    skills: skillGems.filter((gem) => !gem.isSupport).map((gem) => gem.name).slice(0, 6),
     skillGems,
     skillGroups,
     equipment,
     flasks,
     jewels,
+    keyPassives: compactKeyPassives(build, detail),
     passiveNodeCount: passiveSelection.length,
-    passiveTreeName: detail.passiveTreeName || '',
-    passiveTreeImage: detail.passiveTreeImage || detail.passiveTreeImageUrl || '',
+    passiveTreeName: '国服天赋树',
+    passiveTreeUrl: detail.passiveTreeUrl || '',
+    passiveTreeImage: detail.passiveTreeImage || '',
+    sourceUrl: detail.passiveTreeUrl || build.sourceUrl,
     hasPathOfBuilding: Boolean(detail.pathOfBuildingExport),
     itemCount: equipment.length + flasks.length + jewels.length
   };
 }
 
-async function enrichBuildDetails(builds, snapshot) {
+async function enrichBuildDetails(builds, snapshotName) {
   const enriched = builds.map((build) => ({ ...build, equipment: [], flasks: [], jewels: [], itemCount: 0 }));
+  const total = Math.min(enriched.length, DETAIL_LIMIT);
   let cursor = 0;
 
   async function worker() {
-    while (cursor < Math.min(enriched.length, EQUIPMENT_LIMIT)) {
+    while (cursor < total) {
       const index = cursor;
       cursor += 1;
       const build = enriched[index];
       try {
-        const detail = await fetchCharacterDetail(snapshot, build);
+        const detail = await fetchCharacterDetail(snapshotName, build);
         enriched[index] = applyCharacterDetail(build, detail);
-        console.log(`   装备 ${index + 1}/${Math.min(enriched.length, EQUIPMENT_LIMIT)} ${build.character}: ${enriched[index].itemCount} 件`);
-        await sleep(DETAIL_REQUEST_DELAY_MS);
+        console.log(`   详情 ${index + 1}/${total} ${build.character}: ${enriched[index].itemCount} 件`);
       } catch (error) {
-        console.warn(`   装备 ${index + 1}/${Math.min(enriched.length, EQUIPMENT_LIMIT)} ${build.character} 跳过: ${error.message}`);
+        console.warn(`   详情 ${index + 1}/${total} ${build.character} 跳过: ${error.message}`);
       }
+      if (DETAIL_REQUEST_DELAY_MS > 0) await sleep(DETAIL_REQUEST_DELAY_MS);
     }
   }
 
-  await Promise.all(Array.from({ length: DETAIL_CONCURRENCY }, worker));
+  await Promise.all(Array.from({ length: Math.max(1, DETAIL_CONCURRENCY) }, worker));
   return enriched;
 }
 
-function makeBuilds(result, dictionaries, league) {
-  const lists = new Map(result.valueLists.map((list) => [list.id, list.values]));
-  const classDictionary = dictionaries.get('class') || [];
-  const gemDictionary = dictionaries.get('gem') || [];
-  const keyPassiveDictionary = dictionaries.get('keypassive') || [];
-  const limit = Math.min(lists.get('name')?.length || 0, 100);
-  const builds = [];
-
-  for (let index = 0; index < limit; index += 1) {
-    const character = getListValue(lists, 'name', index);
-    const account = getListValue(lists, 'account', index);
-    const level = getListValue(lists, 'level', index);
-    const classIndex = getListValue(lists, 'class', index);
-    const skills = translateSkills(getListValue(lists, 'skills', index), gemDictionary);
-    const keyPassives = translateDictionaryList(getListValue(lists, 'keypassives', index), keyPassiveDictionary, translateKeyPassive);
-    // The public search result may include private/incomplete characters with
-    // no indexed main skill. They are not useful for a "copy this build" list.
-    if (!character || !account || !level || !skills.length) continue;
-
-    const className = translateClass(classDictionary[classIndex]);
-    const mainSkill = skills[0] || '未识别主技能';
-    builds.push({
-      id: `${account}-${character}`.replace(/[^a-zA-Z0-9_-]/g, '_').toLowerCase(),
-      rank: index + 1,
-      character,
-      account,
-      level,
-      className,
-      classNameEn: classDictionary[classIndex] || '',
-      mainSkill,
-      skills: skills.slice(0, 5),
-      keyPassives: keyPassives.slice(0, 10),
-      stats: {
-        life: firstScalar(getListValue(lists, 'life', index)),
-        energyShield: firstScalar(getListValue(lists, 'energyshield', index)),
-        effectiveHitPool: firstScalar(getListValue(lists, 'ehp', index)),
-        dps: firstScalar(getListValue(lists, 'dps', index))
-      },
-      summary: `${league.displayName} 天梯第 ${index + 1} 名角色`,
-      sourceUrl: makeSourceUrl(league, account, character)
-    });
+function makePopularSkills(rankInfo) {
+  const counter = new Map();
+  for (const skills of rankInfo.activeSkillUse || []) {
+    for (const skillIndex of new Set(skills || [])) {
+      const skill = rankInfo.activeSkills[skillIndex];
+      if (!skill?.name) continue;
+      const current = counter.get(skill.name) || { name: translateSkill(skill.name), nameEn: skill.name, icon: skill.icon || '', count: 0 };
+      current.count += 1;
+      if (!current.icon && skill.icon) current.icon = skill.icon;
+      counter.set(skill.name, current);
+    }
   }
-  return builds;
-}
-
-function makePopularSkills(result, dictionaries) {
-  const skillDimension = result.dimensions.find((dimension) => dimension.id === 'skills');
-  const skills = dictionaries.get('gem') || [];
-  if (!skillDimension) return [];
-  return skillDimension.counts
-    .map((item) => ({ name: translateSkill(skills[item.key]), nameEn: skills[item.key], count: item.count }))
-    .filter((item) => item.nameEn && item.count > 0)
+  return Array.from(counter.values())
     .sort((a, b) => b.count - a.count)
     .slice(0, 12);
 }
 
-function getSkillIconMap(builds) {
-  const iconMap = new Map();
-  for (const build of builds) {
-    for (const gem of build.skillGems || []) {
-      if (gem.nameEn && gem.icon && !iconMap.has(gem.nameEn)) iconMap.set(gem.nameEn, gem.icon);
-      if (gem.name && gem.icon && !iconMap.has(gem.name)) iconMap.set(gem.name, gem.icon);
-    }
-  }
-  return iconMap;
-}
-
-async function getDictionaries(result) {
-  const needed = result.dictionaries.filter((item) => item.id === 'class' || item.id === 'gem' || item.id === 'keypassive');
-  const entries = await Promise.all(needed.map(async (item) => {
-    const buffer = await fetchBuffer(`${API_ROOT}/builds/dictionary/${item.hash}`);
-    return [item.id, SearchResultDictionary.decode(buffer).values];
-  }));
-  return new Map(entries);
+function makeLeague(snapshotName, rankInfo) {
+  const displayName = SEASON_LABELS[snapshotName] || SEASON_LABELS[rankInfo.season] || rankInfo.season || snapshotName;
+  return {
+    name: rankInfo.season || snapshotName,
+    url: snapshotName,
+    displayName
+  };
 }
 
 async function buildDigest() {
-  const indexState = await fetchJson(`${API_ROOT}/data/index-state`);
-  const league = selectPrimaryChallengeLeague(indexState.buildLeagues, indexState.snapshotVersions);
-  if (!league) throw new Error('未找到当前 POE1 赛季');
-  const snapshot = indexState.snapshotVersions.find((item) => item.url === league.url && item.type === 'exp');
-  if (!snapshot) throw new Error(`未找到 ${league.name} 的天梯快照`);
-
-  const payload = await fetchBuffer(`${API_ROOT}/builds/${snapshot.version}/search?overview=${encodeURIComponent(snapshot.snapshotName)}`);
-  const result = SearchResult.decode(payload).result;
-  if (!result?.total) throw new Error('天梯搜索结果为空');
-  const dictionaries = await getDictionaries(result);
-  const builds = await enrichBuildDetails(makeBuilds(result, dictionaries, league), snapshot);
-  const skillIconMap = getSkillIconMap(builds);
-  const popularSkills = makePopularSkills(result, dictionaries).map((skill) => ({
-    ...skill,
-    icon: skillIconMap.get(skill.nameEn) || skillIconMap.get(skill.name) || ''
-  }));
+  const { snapshotName, url, data: rankInfo } = await fetchRankInfo();
+  const league = makeLeague(snapshotName, rankInfo);
+  const builds = await enrichBuildDetails(makeInitialBuilds(rankInfo, snapshotName), snapshotName);
   const output = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     updatedAt: new Date().toISOString(),
-    source: { name: 'poe.ninja POE1 Builds', url: `https://poe.ninja/builds/${league.url}` },
-    league: { name: league.name, url: league.url, displayName: league.displayName },
-    totalCharacters: result.total,
+    source: { name: '国服官方天梯', url: `${QQ_ROOT}/challenge/index.html`, dataUrl: url },
+    league,
+    totalCharacters: rankInfo.total || builds.length,
+    snapshotName,
+    generatedAt: rankInfo.generatedAt || '',
     builds,
-    popularSkills
+    popularSkills: makePopularSkills(rankInfo)
   };
 
   fs.mkdirSync(outputDir, { recursive: true });
   const outputPath = path.join(outputDir, 'ladder_digest.json');
   fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`);
-  console.log(`✅ POE1 天梯摘要已生成: ${outputPath}`);
-  console.log(`   赛季: ${league.name} | 样本: ${result.total} | 展示角色: ${builds.length}`);
+  console.log(`✅ POE1 国服天梯摘要已生成: ${outputPath}`);
+  console.log(`   赛季: ${league.displayName} (${snapshotName}) | 样本: ${output.totalCharacters} | 展示角色: ${builds.length}`);
   return output;
 }
 
 if (require.main === module) {
   buildDigest().catch((error) => {
-    console.error('❌ POE1 天梯摘要生成失败:', error.message);
+    console.error('❌ POE1 国服天梯摘要生成失败:', error.message);
     process.exitCode = 1;
   });
 }
 
-module.exports = { buildDigest, makeBuilds, makePopularSkills };
+module.exports = { buildDigest, makeInitialBuilds, makePopularSkills, djb2Hash };

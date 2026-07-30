@@ -4,7 +4,7 @@
 
 数据链路：`poe.ninja / poe2db / DD373 / poe2ggg / 人工源 -> JSON -> OSS -> 小程序`。
 
-另有独立的 POE1「流放赛季助手」数据线：`poe.ninja POE1 -> translated-data/poe1 -> poe1-season/{env}/ -> POE1 小程序`。它与 POE2 的生产目录、缓存和 OSS 路径完全隔离。
+另有独立的 POE1「流放赛季助手」数据线：`国服官方天梯 / poe.ninja 游戏内经济 / 人工校对开荒 BD -> translated-data/poe1 -> poe1-season/{env}/ -> POE1 小程序`。它与 POE2 的生产目录、缓存和 OSS 路径完全隔离。
 
 首次接手先读：
 
@@ -96,14 +96,16 @@ npm run crawl:story-guide:upload
 # 上传当前 release 产物
 NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 
-# POE1 流放赛季助手：真实天梯角色 + 游戏内经济，生成后上传专用 OSS 前缀
+# POE1 流放赛季助手：国服官方天梯 + 开荒 BD + 游戏内经济，生成后上传专用 OSS 前缀
 npm run poe1:ladder
+npm run poe1:starter
+npm run poe1:starter:terms
 npm run poe1:economy
 npm run poe1:upload
 npm run poe1:publish
 ```
 
-Dashboard 中也提供 `更新 POE1 抄 BD / 看行情` 一键任务，按“天梯摘要 -> 经济摘要 -> POE1 专用 OSS 上传”执行；它与 POE2 的日常/天梯任务相互隔离。
+Dashboard 中也提供 `更新 POE1 抄 BD / 看行情` 一键任务，按“国服官方天梯 -> 开荒 BD -> 开荒术语匹配 -> 天赋树截图 -> 经济摘要 -> POE1 专用 OSS 上传”执行；它与 POE2 的日常/天梯任务相互隔离。
 
 ## 当前关键产物
 
@@ -137,17 +139,34 @@ poe2-economy/cn_market_digest.json
 
 ## POE1 数据线
 
-POE1 当前服务独立小程序 `poe-mini` 的两条移动端主路径：`抄 BD` 与 `看行情`。
+POE1 当前服务独立小程序 `poe-mini` 的三条移动端主路径：`抄 BD`、`开荒 BD` 与 `看行情`。
 
 ```text
 translated-data/poe1/release/miniprogram_data/
-├── ladder_digest.json  # 当前赛季前 100 天梯角色、职业、主技能、技能组合、关键天赋与基础防御/DPS 摘要
-└── economy_digest.json # 通货、碎片、精华、圣油的游戏内混沌石换算与 7 日变化
+├── ladder_digest.json       # 国服官方天梯角色、职业、主技能、装备、技能组合、关键天赋、天赋树和基础防御/DPS 摘要
+├── starter_builds.json      # 人工校对 docx 生成的开荒 BD 结构化列表和详情
+├── starter_terms_enrichment.json # 开荒 BD 技能/装备/天赋术语与国服官方天梯真实数据的匹配结果
+├── passive_trees/*.jpg      # 天梯 BD 天赋树截图
+└── economy_digest.json      # 通货、碎片、精华、圣油的游戏内混沌石换算与 7 日变化
 ```
 
-生产 OSS 前缀是 `poe1-season/release/miniprogram_data/`，缓存为经济 5 分钟、天梯 15 分钟。小程序读取失败时回退到本地样例，不应白屏。
+生产 OSS 前缀是 `poe1-season/release/miniprogram_data/`，缓存为经济 5 分钟、天梯 15 分钟。小程序读取失败时回退到本地真实快照，不应白屏。
 
-数据边界：只展示 poe.ninja 的公开游戏内数据；不抓取现实货币报价，也不提供第三方交易入口。
+天梯源说明：
+
+- 主源是国服官方天梯 `https://poe.qq.com/act/a202010118poena/challenge/index.html` 公开 JSON。
+- S29 快照名为 `s29_normal`，赛季名「费西亚的遗产」。
+- S30 赛季「永火之咒」预计 2026-07-31 10:00 开放；脚本会优先尝试 `s30_normal`，官方 JSON 未开放时自动回退 S29。
+- 详情 JSON 通过官方账号与角色名哈希定位，生成时会跳过 404 或空详情，禁止因部分失败覆盖为空数据。
+
+开荒 BD 源说明：
+
+- 默认读取 `/Users/zhangyajun/Downloads/poe-bd-国服译名校对` 下的 `*.docx`。
+- 可用 `POE1_STARTER_SOURCE_DIR` 覆盖来源目录。
+- 生成器只做结构化清洗，不判定强度；新增 BD 时优先保证国服译名、职业、主技能、技能链接、装备、天赋、升华和升级流程清楚。
+- `starter_terms_enrichment.json` 是开荒 BD 真实数据增强的第一步：先抽取技能、装备、天赋和英文括注，优先匹配国服官方天梯中出现过的真实图标/标准名；未匹配项后续再进入 PoEDB 或人工映射，不直接在前台硬猜。
+
+数据边界：只展示公开游戏内数据和人工校对攻略；不抓取现实货币报价，也不提供第三方交易入口。
 
 ## 自动化
 

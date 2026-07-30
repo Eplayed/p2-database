@@ -38,7 +38,7 @@
 5. 首页复访摘要：聚合天梯、经济和急救箱，减少小程序多源请求。
 6. 我的关注变化：为已关注的技能、装备与国服通货生成轻量变化摘要。
 7. 低频剧情地图数据。
-8. POE1 赛季助手：poe.ninja 天梯角色摘要、技能组合、关键天赋、基础防御/DPS 与游戏内通货行情。
+8. POE1 赛季助手：国服官方天梯角色摘要、装备、技能组合、关键天赋、天赋树截图、基础防御/DPS、人工校对开荒 BD 与游戏内通货行情。
 
 ## 已下架功能
 
@@ -66,7 +66,7 @@
 - 日常：poe.ninja 经济 -> DD373 -> 流放急救箱 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 - 天梯：poe.ninja 天梯 -> 玩家详情/BD解析 -> 聚合分析 -> 技能/装备查 BD 索引 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 - 剧情地图：低频手动刷新，不进入日常组合任务。
-- POE1：`poe1:ladder` -> `poe1:economy` -> `poe1:upload`，产物位于 `translated-data/poe1/{env}`，仅上传到 `poe1-season/{env}/`。
+- POE1：`poe1:ladder` -> `poe1:starter` -> `poe1:starter:terms` -> `poe1_passive_trees` -> `poe1:economy` -> `poe1:upload`，产物位于 `translated-data/poe1/{env}`，仅上传到 `poe1-season/{env}/`。
 
 ## 关键约束
 
@@ -75,7 +75,10 @@
 - 新英文残留优先补权威中文映射，不能用生硬逐词替换冒充准确翻译。
 - OSS 上传入口是 `auto_browser/upload_to_oss.js`。
 - POE1 不得调用 `auto_browser/upload_to_oss.js`；它只服务 POE2。POE1 使用 `scripts/upload_poe1_to_oss.js`。
-- POE1 `ladder_digest.json` 当前是移动端摘要，不是完整角色详情；只有当数据端稳定抓到装备/天赋树后，前台才扩展装备页。
+- POE1 天梯主源是国服官方天梯，不要把 poe.ninja 再作为 POE1 天梯主源；poe.ninja 目前只用于 POE1 游戏内经济。
+- POE1 `starter_builds.json` 来自人工校对 docx，默认目录 `/Users/zhangyajun/Downloads/poe-bd-国服译名校对`，可通过 `POE1_STARTER_SOURCE_DIR` 覆盖。
+- POE1 `starter_terms_enrichment.json` 是开荒 BD 真实数据增强工作台。已匹配项可用于图标/标准名，未匹配项进入 PoEDB 或人工映射；不要把未匹配项当成可靠游戏资料展示。
+- POE1 `ladder_digest.json` 是移动端摘要；字段可以包含装备、技能和天赋树截图，但不要在前端需要之外盲目塞完整原始详情。
 - 急救箱内容源是 `base-data/problem-guides/*.json`，不要用 AI 直接生成未审核结论；前台只展示玩家问题、排查项和下一步工具。
 - 不要修改或删除用户尚未提交的 `base-data/starter` 历史数据。
 
@@ -89,6 +92,8 @@
 - `npm run build:daily-return`
 - `npm run crawl:story-guide`
 - `npm run poe1:publish`
+- `npm run poe1:starter`
+- `npm run poe1:starter:terms`
 
 ## 推荐工作方式
 

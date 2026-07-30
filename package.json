@@ -39,9 +39,13 @@
     "data:economy:publish": "NODE_ENV=production node crawlers/economy/ninja_digest.js && NODE_ENV=production node -e \"require('./auto_browser/upload_to_oss')()\"",
     "data:economy:publish:dev": "NODE_ENV=dev node crawlers/economy/ninja_digest.js && NODE_ENV=dev node -e \"require('./auto_browser/upload_to_oss')()\"",
     "poe1:ladder": "NODE_ENV=production node crawlers/poe1/build_digest.js",
+    "poe1:starter": "NODE_ENV=production node crawlers/poe1/starter_builds.js",
+    "poe1:starter:terms": "NODE_ENV=production node crawlers/poe1/starter_terms.js",
+    "poe1:trees": "NODE_ENV=production node crawlers/poe1/capture_passive_trees.js",
+    "poe1:trees:dev": "NODE_ENV=dev node crawlers/poe1/capture_passive_trees.js",
     "poe1:economy": "NODE_ENV=production node crawlers/poe1/economy_digest.js",
     "poe1:upload": "NODE_ENV=production node scripts/upload_poe1_to_oss.js",
-    "poe1:publish": "NODE_ENV=production node crawlers/poe1/build_digest.js && NODE_ENV=production node crawlers/poe1/economy_digest.js && NODE_ENV=production node scripts/upload_poe1_to_oss.js"
+    "poe1:publish": "NODE_ENV=production node crawlers/poe1/build_digest.js && NODE_ENV=production node crawlers/poe1/starter_builds.js && NODE_ENV=production node crawlers/poe1/starter_terms.js && NODE_ENV=production node crawlers/poe1/capture_passive_trees.js && NODE_ENV=production node crawlers/poe1/economy_digest.js && NODE_ENV=production node scripts/upload_poe1_to_oss.js"
   },
   "keywords": [],
   "author": "",

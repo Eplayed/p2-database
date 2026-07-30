@@ -1,0 +1,2095 @@
+{
+  "updatedAt": "2026-07-30T06:46:57.621Z",
+  "builds": [
+    {
+      "id": "念动齐射图腾圣宗",
+      "order": 1,
+      "title": "念动齐射图腾圣宗 (Kinetic Fusillade Ballista Hierophant)",
+      "author": "Palsteron",
+      "className": "圣宗",
+      "mainSkill": "念动齐射图腾",
+      "tags": [
+        "开荒",
+        "图腾",
+        "近战",
+        "召唤",
+        "低造价",
+        "Boss"
+      ],
+      "summary": "召唤弩炮图腾向敌人发射加特林子弹，以毁灭性的爆炸终结敌人。念动齐射图腾圣宗是一个全能型强力BD，结合了高Boss伤害、不错的清图速度和防御能力。作为强力开荒BD，不需要昂贵的装备即可完成游戏中所有内容。念动齐射发射小型致命投射物，击中目标时爆炸。配合弩炮图腾辅助，可以放置最多8个图腾，全部发射念动齐射产生数百个投射物，形成爆炸猛攻造成惊人伤害。",
+      "difficulty": "适合开荒",
+      "sourceFile": "01_念动齐射图腾圣宗.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "召唤弩炮图腾向敌人发射加特林子弹，以毁灭性的爆炸终结敌人。念动齐射图腾圣宗是一个全能型强力BD，结合了高Boss伤害、不错的清图速度和防御能力。作为强力开荒BD，不需要昂贵的装备即可完成游戏中所有内容。念动齐射发射小型致命投射物，击中目标时爆炸。配合弩炮图腾辅助，可以放置最多8个图腾，全部发射念动齐射产生数百个投射物，形成爆炸猛攻造成惊人伤害。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "装备容易获取",
+            "远程攻击，Boss战轻松",
+            "图腾玩法，操作简单",
+            "开荒强度高，无需昂贵暗金",
+            "中后期可转幻芒圣盾（Aegis Aurora）防御体系"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "图腾玩法（有人不喜欢）",
+            "不算特别肉",
+            "需要持续放置图腾"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "念动齐射需要持续时间缩短（辅）才能正常释放投射物",
+            "威尔玛的报偿（Wilma's Requital）将施法速度转化为攻击速度，是核心增伤装备",
+            "最多可放置8个图腾",
+            "中后期可切换幻芒圣盾（Aegis Aurora） + 斗转星移（Glancing Blows）防御体系"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "念动齐射（Kinetic Fusillade） + 弩炮图腾（辅）（Ballista Totem Support） + 持续时间缩短（辅）（Less Duration Support） + 高阶齐射（辅）（Greater Volley Support） + 武器元素伤害（辅）（Elemental Damage with Attacks Support） + 提高暴击伤害（辅）（Increased Critical Damage Support）",
+            "光环",
+            "愤怒（Anger） + 元素净化（Purity of Elements） + 暴风之盾（Tempest Shield） + 精准（Precision）+ 赤嚣（辅）（Arrogance Support）",
+            "位移技能",
+            "重盾冲锋（Shield Charge） + 快速攻击（辅）（Faster Attacks Support） + 冰霜闪现（Frostblink）",
+            "防御技能",
+            "钢铁之肤（Steelskin）/熔岩护盾（Molten Shell） + 受伤时施放（辅）（Cast when Damage Taken Support）",
+            "其他",
+            "奥法烙印（Arcanist Brand） + 元素要害（Elemental Weakness） + 烈焰之墙（Flame Wall） + 龙卷旋风（Tornado）（奥术烙印+元素虚弱+火焰墙+龙卷风） + 狂怒（Frenzy，获得狂怒球）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "前期：用精华制作的法杖，优先附加火焰/闪电/冰冷伤害",
+            "中期：法杖基底（Kinetic Wand），用憎恨/愤怒/愤怒精华制作",
+            "后期：高DPS法杖，暴击率、攻击速度、穿透抗性",
+            "胸甲",
+            "前期：高生命+抗性护甲",
+            "后期：高护甲+能量护盾胸甲，可用致密化石制作",
+            "头盔",
+            "高生命+抗性",
+            "后期可考虑意义的光辉（The Light of Meaning）（每节点7%护甲增加）",
+            "手套",
+            "德瑞的精神手套（Doedre's Tenure）（前期廉价增伤）",
+            "后期：高生命+抗性+暴露效果",
+            "鞋子",
+            "高生命+抗性+移动速度",
+            "戒指",
+            "附加攻击伤害",
+            "抗性补足"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心天赋：Ancestral Bond（先祖羁绊，+1图腾）、Iron Will（钢铁意志）",
+            "图腾伤害和生命相关天赋",
+            "暴击率和暴击伤害",
+            "元素攻击伤害",
+            "生命和抗性",
+            "格挡率（配合幻芒圣盾（Aegis Aurora））",
+            "魔力保留效率",
+            "注意：未使用幻芒圣盾（Aegis Aurora）前不要点斗转星移（Glancing Blows）"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "信念追求（Pursuit of Faith）- 图腾放置速度+1图腾",
+            "觉醒仪式（Ritual of Awakening）- 伤害+生命魔力回复",
+            "力量信念（Conviction of Power）- 耐力球+暴击球",
+            "血统升华（推荐Aul的The King's Heritage）",
+            "万神殿与盗贼",
+            "万神殿主神：The Brine King（海王）",
+            "万神殿副神：Abberath（山羊神）",
+            "盗贼任务：帮助Alira（阿里拉）",
+            "升级路线",
+            "1-32级用火系法术+法术图腾升级",
+            "先建一个游侠角色，拿水银药剂（Quicksilver Flask）和齐射（辅）（Volley Support）后删除",
+            "32级后转念动齐射，需要4连才能启动",
+            "第三章图书馆购买：持续时间缩短（辅）、念动齐射、弩炮图腾（辅）、狂怒、赤嚣（辅）",
+            "刚转型时感觉弱是正常的，宝石都在升级中",
+            "注意事项与FAQ",
+            "需要避免的地图词缀？",
+            "减少格挡率、敌人暴击率/暴击伤害增加、玩家最大抗性降低、光环效果降低、无法回复生命和ES、无法回复魔力"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.532Z"
+    },
+    {
+      "id": "流血猛击转酋长正义之火",
+      "order": 2,
+      "title": "流血猛击处刑者 → 酋长正义之火（两阶段BD）",
+      "author": "PhazePlays（阶段一）/ Pohx（阶段二）",
+      "className": "酋长",
+      "mainSkill": "流血猛击处刑者 → 正义之火",
+      "tags": [
+        "开荒",
+        "近战",
+        "点燃",
+        "流血",
+        "毒伤",
+        "Boss"
+      ],
+      "summary": "本BD包含两个阶段：前期使用流血猛击处刑者开荒，后期转为酋长正义之火。两个阶段玩法完全不同，需要重新配装和洗点。",
+      "difficulty": "需要校对",
+      "sourceFile": "02_流血猛击转酋长正义之火.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "本BD包含两个阶段：前期使用流血猛击处刑者开荒，后期转为酋长正义之火。两个阶段玩法完全不同，需要重新配装和洗点。",
+            "PhazePlays的流血猛击处刑者BD，拥有屏幕级别的AOE覆盖范围。这是一个非常好玩的BD，拥有巨大的伤害、超强的过量偷取生命回复，以及无与伦比的伤害持续时间。开荒使用大地震击（Sunder），中后期转为震地之裂地之击（Vaal Ground Slam of Earthshaking）。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "优秀的清图和Boss能力",
+            "屏幕级别的AOE覆盖",
+            "非常肉",
+            "超强的过量偷取回复",
+            "伤害持续时间长",
+            "低成本快速清图，点燃扩散后更快",
+            "非常肉，90%+抗性+格挡上限+回复+斗转星移（Glancing Blows）",
+            "5+耐力球提供物理/元素减伤+大量生命回复",
+            "按键少，操作简单",
+            "堆叠火焰抗性即可无视冰冷和闪电抗性"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "攻击速度比野蛮人低",
+            "近战需要贴脸输出",
+            "单体伤害低（普通玩家2-4M DPS）",
+            "提升空间有限，其他BD提升更好",
+            "Boss伤害弱，可以打虚空石和守卫，但Uber不推荐"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "流血造成物理持续伤害，敌人移动时受到3倍伤害（Aggravate）",
+            "可以通过多种方式强制Aggravate流血",
+            "处刑者的过量偷取提供强大的生存能力",
+            "瓦尔：裂地之击有4次充能，几乎可以无限使用",
+            "正义之火持续对周围敌人造成火焰伤害",
+            "Hinekora, Death's Fury（升华名以国服面板为准）触发爆炸，随怪物密度增强",
+            "Ramako, Sun's Light帮助清怪",
+            "火焰陷阱作为单体输出",
+            "通过堆叠火焰抗性来获得最大抗性，后期靠血肉融合（Melding of the Flesh）补防御"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连（大地震击）",
+            "瓦尔：震地之裂地之击（Vaal Ground Slam of Earthshaking） + 战争铁拳（辅）（Fist of War Support） + 护体（辅）（Fortify Support） + 残暴（辅）（Brutality Support） + 近战物理伤害（辅）（Melee Physical Damage Support） + 凌厉（辅）（Cruelty Support，清图）/ 满血伤害（辅）（Damage on Full Life Support，Boss）/ 无常（辅）（Volatility Support，Boss）",
+            "瓦尔：裂地之击 6连",
+            "瓦尔：裂地之击（Vaal Ground Slam） + 残暴（辅）（Brutality Support） + 近战物理伤害（辅）（Melee Physical Damage Support） + 凌厉（辅）（Cruelty Support） + 满血伤害（辅）（Damage on Full Life Support） + 瘫痪（辅）（致残）",
+            "光环",
+            "尊严（Pride） + 血肉与岩石（Flesh and Stone，沙姿态） + 血与沙（Blood and Sand）",
+            "位移技能",
+            "跃击（Leap Slam） + 快速攻击（辅）（Faster Attacks Support） + 冰霜闪现（Frostblink）",
+            "战吼",
+            "震地战吼（Seismic Cry） + 激励战吼（Rallying Cry）（集结战吼） + 威吓战吼（Intimidating Cry）（威吓战吼）",
+            "其他",
+            "充能打击（Static Strike，帮助加剧流血） + 狂野怒火（Blood Rage） + 脆弱（Vulnerability）",
+            "正义之火 setup",
+            "正义之火（Righteous Fire） + 增加燃烧伤害（辅）（Burning Damage Support） + 元素集中（辅）（Elemental Focus Support） + 效能（辅）（Efficacy Support） + 点燃扩散（辅）（Ignite Proliferation Support） + 极速腐化（辅）（Swift Affliction Support）",
+            "火焰陷阱（单体）",
+            "火焰陷阱（Fire Trap） + 增加燃烧伤害（辅）（Burning Damage Support） + 效能（辅）（Efficacy Support） + 极速腐化（辅）（Swift Affliction Support）",
+            "光环",
+            "火焰净化（Purity of Fire） + 坚定（Determination） + 怨毒光环（Malevolence）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "前期：双手斧，优先物理伤害",
+            "中期：裂甲巨斧（Sundering Axe）基底",
+            "后期：瓦尔巨斧（Vaal Axe）基底，高物理伤害+攻击速度+流血伤害",
+            "胸甲",
+            "高生命+高护甲+物理伤害减免",
+            "可用致密化石或防御重铸制作",
+            "头盔",
+            "高生命+抗性",
+            "Eater影响：减少攻击魔力消耗",
+            "手套",
+            "高生命+抗性",
+            "后期：+2打击技能等级",
+            "鞋子",
+            "高生命+抗性+移动速度",
+            "猛攻/onslaught词缀",
+            "戒指",
+            "-魔力消耗（非常重要）"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：双手武器伤害、物理伤害、流血伤害",
+            "生命和护甲",
+            "攻击速度",
+            "暴击率和暴击伤害",
+            "耐力球",
+            "流血Aggravate相关天赋",
+            "Cluster Jewels：大型物理伤害集群+中型流血持续伤害集群",
+            "核心：最大火焰抗性、燃烧伤害、生命",
+            "耐力球相关天赋",
+            "格挡率和格挡恢复",
+            "生命回复",
+            "火焰伤害和范围",
+            "后期：Small Cluster 怨毒光环（Malevolence）",
+            "25%效果集群优化"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Bane of Legends（传奇克星）",
+            "Headsman（刽子手）",
+            "Brutal Fervour（狂热）",
+            "Impact（冲击，清图）/ Endless Hunger（无尽饥饿，生存）/ 血统升华",
+            "万神殿与盗贼",
+            "万神殿主神：The Brine King（海王）",
+            "万神殿副神：Garukhan（鸟神）",
+            "盗贼任务：开荒帮助Alira（阿里拉），后期转Eramir（全部杀死，+1天赋点）",
+            "升级路线",
+            "1-12级：用Spectral Throw升级",
+            "12级转大地震击（Sunder）",
+            "前期用2把Iron Ring和Rustic Sash增加伤害",
+            "到Destroyer天赋前必须有双手斧或锤",
+            "地图期：V1用Sunder单技能，V2用Sunder+Vaal Ground Slam双技能",
+            "中后期转Vaal Ground Slam of Earthshaking",
+            "注意事项与FAQ",
+            "魔力不够怎么办？"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.539Z"
+    },
+    {
+      "id": "刺客曼巴比诺流",
+      "order": 3,
+      "title": "刺客曼巴比诺流 (Viper Strike of the Mamba Assassin)",
+      "author": "Jungroan",
+      "className": "刺客",
+      "mainSkill": "曼巴比诺流",
+      "tags": [
+        "开荒",
+        "召唤",
+        "毒伤"
+      ],
+      "summary": "进阶向BD，由Jungroan开发。开荒使用弹跃之毒爆灵药（Poisonous Concoction of Bouncing），后期转为厨刀毒曼巴（Viper Strike of the Mamba）。毒爆灵药是强力开荒技能，无需武器即可输出，适合从零开始。后期转曼巴流获得更高的上限和更流畅的体验。",
+      "difficulty": "需要校对",
+      "sourceFile": "03_刺客曼巴比诺流.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "进阶向BD，由Jungroan开发。开荒使用弹跃之毒爆灵药（Poisonous Concoction of Bouncing），后期转为厨刀毒曼巴（Viper Strike of the Mamba）。毒爆灵药是强力开荒技能，无需武器即可输出，适合从零开始。后期转曼巴流获得更高的上限和更流畅的体验。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "开荒强力，无需武器依赖",
+            "毒系伤害，无视护甲",
+            "刺客升华提供强大的暴击和爆发",
+            "后期上限高",
+            "清图速度快"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "需要转型，两个阶段玩法不同",
+            "毒系需要堆叠命中和持续伤害",
+            "对操作有一定要求"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "毒爆灵药：投掷药水造成毒素伤害，弹跳版本可以多次弹跳",
+            "完美苦痛（完美苦痛（Perfect Agony））：持续伤害倍率等于暴击伤害倍率",
+            "曼巴之毒蛇打击：高频率攻击叠加剧毒",
+            "灾难使徒（Plague Bearer）储存并释放毒伤"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "毒爆灵药6连（开荒）",
+            "弹跃之毒爆灵药（Poisonous Concoction of Bouncing） + 高阶多重投射（辅）（Greater Multiple Projectiles Support） + 高阶齐射（辅）（Greater Volley Support） + 异常爆发（辅）（Unbound Ailments Support） + 邪恶投掷（辅）（Vicious Projectiles Support） + 提高暴击伤害（辅）（Increased Critical Damage Support）",
+            "曼巴之毒蛇打击6连（后期）",
+            "曼巴之毒蛇打击（Viper Strike of the Mamba） + 夜刃（辅）（Nightblade Support） + 高阶先祖召唤（辅）（Greater Ancestral Call Support） + ...",
+            "其他技能",
+            "灾难使徒（Plague Bearer） + 绝望（Despair）（绝望诅咒） + 暗影印记（Assassin's Mark） + 击中时施加印记（辅）（Mark On Hit Support） + 精准（Precision） + 元素净化（Purity of Elements） + 狂野怒火（Blood Rage） + 血肉与岩石（Flesh and Stone）",
+            "位移技能",
+            "重盾冲锋（Shield Charge） + 快速攻击（辅）（Faster Attacks Support） + 冰霜闪现（Frostblink）",
+            "防御技能",
+            "钢铁之肤（Steelskin） + 受伤时施放（辅）（Cast when Damage Taken Support）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器（后期）",
+            "比诺的厨刀（Bino's Kitchen Knife，高攻速+高暴击）",
+            "法师之血（Mageblood）版本：高属性+高伤害武器",
+            "胸甲",
+            "高生命+闪避+抗性",
+            "后期：高ES/闪避基底",
+            "头盔",
+            "高生命+抗性",
+            "后期：+2毒素/持续伤害技能等级",
+            "手套",
+            "高生命+抗性",
+            "攻击速度+暴击率",
+            "鞋子",
+            "高生命+抗性+移动速度",
+            "戒指",
+            "生命+抗性+命中",
+            "后期：法师之血（Mageblood）配合多药水",
+            "项链"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：完美苦痛（完美苦痛（Perfect Agony））（完美痛苦，DoT倍率=暴击伤害）",
+            "毒素持续伤害",
+            "暴击率和暴击伤害",
+            "生命和闪避",
+            "投射物伤害",
+            "命中",
+            "魔力保留效率"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Malice（恶意）",
+            "Opportunistic（投机）",
+            "Deadly Infusion（致命灌注）",
+            "Mistress of Macabre（死亡女主人）/ 其他",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "开荒使用毒爆灵药，无需武器",
+            "通过投掷药水造成毒素伤害",
+            "弹跳版本可以命中多个敌人",
+            "后期积累装备后转曼巴之毒蛇打击",
+            "注意事项与FAQ",
+            "为什么要转型？",
+            "毒爆灵药开荒强但后期上限有限，曼巴流后期上限更高",
+            "完美苦痛（完美苦痛（Perfect Agony））有什么用？"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.547Z"
+    },
+    {
+      "id": "充能打击处刑者",
+      "order": 4,
+      "title": "充能打击处刑者 (Static Strike Slayer)",
+      "author": "Alohaa",
+      "className": "处刑者",
+      "mainSkill": "充能打击",
+      "tags": [
+        "开荒",
+        "近战",
+        "召唤",
+        "流血"
+      ],
+      "summary": "Alohaa的充能打击处刑者BD，打击技能通用。充能打击（Static Strike）是一个物理伤害为主的近战打击技能，攻击时在敌人身上留下电荷，电荷会持续造成伤害。处刑者升华提供强大的偷取回复和范围伤害。本BD从双手斧开荒，61级后转为单手斧+盾牌暴击流。",
+      "difficulty": "需要校对",
+      "sourceFile": "04_充能打击处刑者.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "Alohaa的充能打击处刑者BD，打击技能通用。充能打击（Static Strike）是一个物理伤害为主的近战打击技能，攻击时在敌人身上留下电荷，电荷会持续造成伤害。处刑者升华提供强大的偷取回复和范围伤害。本BD从双手斧开荒，61级后转为单手斧+盾牌暴击流。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "打击技能通用框架",
+            "处刑者偷取回复强大",
+            "暴击流后期伤害高",
+            "可走格挡流防御",
+            "装备选择灵活"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "近战需要贴脸",
+            "需要一定装备积累",
+            "暴击流转型成本较高"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "充能打击攻击时在敌人身上留下电荷，持续造成伤害",
+            "物理伤害为主，通过Trinity等辅助转元素",
+            "处刑者的Impact增加AOE",
+            "伏击（Ambush）（伏击）提供高额暴击伤害（需单手武器）",
+            "多面好手（Versatile Combatant）：溢出攻击格挡转法术格挡"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "充能打击（Static Strike） + 近战物理伤害（辅）（Melee Physical Damage Support） + 无情（辅）（Ruthless Support） + 护体（辅）（Fortify Support） + 三位一体（辅）（Trinity Support） + 武器元素伤害（辅）（Elemental Damage with Attacks Support）/ 虚空震波（辅）（Void Shockwave Support）",
+            "伏击技能",
+            "伏击（伏击（Ambush））+ 助力之风（辅）（Second Wind Support）",
+            "光环",
+            "憎恨（Hatred） + 灰烬之捷（Herald of Ash） + 血肉与岩石（Flesh and Stone） + 精准（Precision）+ 赤嚣（辅）（Arrogance Support）",
+            "位移技能",
+            "重盾冲锋（Shield Charge） + 快速攻击（辅）（Faster Attacks Support） + 冰霜闪现（Frostblink）",
+            "其他",
+            "狂野怒火（Blood Rage） + 元素要害（Elemental Weakness） + 熔岩护盾（Molten Shell） + 受伤时施放（辅）（Cast when Damage Taken Support）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "开荒：双手斧（Jade Chopper起手）",
+            "61级后：Reaver Axe（掠夺者斧）单手斧",
+            "后期：高物理伤害+暴击率+攻击速度单手斧",
+            "盾牌",
+            "高格挡率+生命+抗性",
+            "后期：高护甲盾牌，配合多面好手（Versatile Combatant）",
+            "胸甲",
+            "高生命+高护甲+抗性",
+            "5-6连",
+            "头盔",
+            "高生命+抗性",
+            "手套",
+            "高生命+抗性+攻击速度",
+            "后期：物理伤害转冰冷",
+            "鞋子",
+            "高生命+抗性+移动速度",
+            "戒指"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：多面好手（Versatile Combatant）（全能战士）",
+            "斧头伤害和攻击速度",
+            "暴击率和暴击伤害",
+            "生命和护甲",
+            "格挡率",
+            "怒气相关",
+            "物理伤害",
+            "Cluster Jewels：大型持盾攻击伤害集群"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Impact（冲击）",
+            "Bane of Legends（传奇克星）",
+            "Brutal Fervour（狂热）",
+            "Headsman（刽子手）",
+            "万神殿与盗贼",
+            "万神殿主神：Soul of Lunaris（月神，注意冻免疫药水）",
+            "万神殿副神：Soul of Gruthkul（格鲁斯库尔）",
+            "盗贼任务：帮助Alira（阿里拉）",
+            "升级路线",
+            "1-11级：灵体投掷 + 几率流血（辅）",
+            "9级回城镇赌双手斧（Jade Chopper）",
+            "12级转充能打击 + 无情（辅） + 几率流血（辅）",
+            "第二章后获得灰烬之捷和狂野怒火",
+            "24级后迅捷光环",
+            "61级转单手斧暴击流，需要大量洗点",
+            "Storm Blade任务奖励Reaver Axe",
+            "注意事项与FAQ"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.553Z"
+    },
+    {
+      "id": "裂风雷球图腾",
+      "order": 5,
+      "title": "裂风雷球图腾 (Storm Burst Totem Hierophant)",
+      "author": "aer0plane",
+      "className": "",
+      "mainSkill": "裂风雷球图腾",
+      "tags": [
+        "开荒",
+        "图腾",
+        "Boss"
+      ],
+      "summary": "由aer0plane开发的裂风雷球图腾BD。雷球图腾是经典的图腾玩法，通过放置图腾发射雷球来清图和打Boss。圣宗升华提供额外图腾和图腾伤害，配合雷球的连锁和范围伤害，清图效率优秀。",
+      "difficulty": "需要校对",
+      "sourceFile": "05_裂风雷球图腾.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "由aer0plane开发的裂风雷球图腾BD。雷球图腾是经典的图腾玩法，通过放置图腾发射雷球来清图和打Boss。圣宗升华提供额外图腾和图腾伤害，配合雷球的连锁和范围伤害，清图效率优秀。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "图腾玩法安全",
+            "雷球清图范围大",
+            "圣宗升华强力",
+            "装备要求适中",
+            "远程输出安全"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "需要放置图腾",
+            "单体可能需要调整",
+            "依赖图腾存活"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "雷球图腾发射雷球攻击敌人",
+            "雷球可以连锁多个敌人",
+            "圣宗提供+1图腾和图腾伤害",
+            "图腾生命继承自玩家生命百分比"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "裂风雷球（Storm Burst） + 弩炮图腾（辅） / 法术图腾（辅）（Spell Totem Support） + 闪电穿透（辅）（Lightning Penetration Support） + 元素集中（辅）（Elemental Focus Support） + 提高暴击伤害（辅）（Increased Critical Damage Support） + 精准破坏（辅）（Controlled Destruction Support）",
+            "其他",
+            "光环、位移、防御技能等"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "法杖，优先法术伤害+暴击率",
+            "胸甲",
+            "高生命+能量护盾+抗性",
+            "6连",
+            "其他",
+            "生命+抗性为主",
+            "逐步提升伤害和防御"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "图腾伤害和生命",
+            "闪电伤害",
+            "暴击率和暴击伤害",
+            "生命和ES",
+            "魔力保留效率"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "信念追求（Pursuit of Faith）",
+            "觉醒仪式（Ritual of Awakening）",
+            "力量信念（Conviction of Power）",
+            "第四个升华点",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "参考圣宗图腾BD的升级路线",
+            "前期可用其他法术图腾过渡",
+            "注意事项与FAQ",
+            "BD特点？",
+            "图腾玩法，雷球清图范围大，圣宗升华强力",
+            "作者是谁？",
+            "aer0plane，可参考其角色页面查看具体配装",
+            "POB链接"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.558Z"
+    },
+    {
+      "id": "寒冬宝珠",
+      "order": 6,
+      "title": "寒冬宝珠 (Winter Orb)",
+      "author": "fubgun",
+      "className": "",
+      "mainSkill": "寒冬宝珠",
+      "tags": [
+        "开荒"
+      ],
+      "summary": "由fubgun开发的寒冬宝珠BD。寒冬宝珠是版本清图最快的BD之一，开荒期较弱但中后期强度极高。寒冬宝珠会在角色周围生成冰球，自动攻击附近敌人，配合适当的范围和投射物数量，可以达到全屏清图的效果。",
+      "difficulty": "需要校对",
+      "sourceFile": "06_寒冬宝珠.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "由fubgun开发的寒冬宝珠BD。寒冬宝珠是版本清图最快的BD之一，开荒期较弱但中后期强度极高。寒冬宝珠会在角色周围生成冰球，自动攻击附近敌人，配合适当的范围和投射物数量，可以达到全屏清图的效果。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "版本清图最快BD之一",
+            "中后期强度极高",
+            "自动攻击，操作简单",
+            "冰系伤害，可走暴击流",
+            "视觉效果华丽"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "开荒期较弱",
+            "需要一定装备积累",
+            "单体伤害需要优化",
+            "前期体验较差"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "寒冬宝珠在角色周围生成冰球，自动攻击敌人",
+            "冰球数量随技能等级增加",
+            "可以通过投射物速度和范围来增强清图",
+            "暴击流伤害更高",
+            "配合冰系穿透和暴击伤害提升输出"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "寒冬宝珠（Winter Orb） + 冰矛（Ice Spear）/投射物辅助 / 其他投射物辅助 + 冰霜穿透（辅）（Cold Penetration Support） + 提高暴击伤害（辅）（Increased Critical Damage Support） + 元素集中（辅）（Elemental Focus Support） + 急冻（辅）（Hypothermia Support）",
+            "其他",
+            "光环、位移、防御技能等"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "法杖，优先法术伤害+暴击率+冰伤害",
+            "胸甲",
+            "高生命+ES+抗性",
+            "6连",
+            "其他",
+            "生命+抗性+暴击为主",
+            "逐步提升伤害和防御"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "冰冷伤害",
+            "暴击率和暴击伤害",
+            "投射物伤害",
+            "生命和ES",
+            "范围效果"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "根据升华职业选择不同",
+            "常见：元素使/刺客/秘术师",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "前期可用其他冰系法术升级",
+            "积累装备后转寒冬宝珠",
+            "注意：开荒期较弱，需要耐心",
+            "注意事项与FAQ",
+            "为什么开荒弱？",
+            "需要较多的投射物数量和暴击支撑，前期装备不足时伤害和清图都一般",
+            "什么时候变强？",
+            "有一定装备基础后，特别是暴击率和投射物数量起来后，清图速度会质变",
+            "POB链接",
+            "说明：Fubgun的寒冬宝珠BD正在完善中，明天发布"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.563Z"
+    },
+    {
+      "id": "集束力量爆破流",
+      "order": 7,
+      "title": "集束力量爆破流 (Kinetic Blast of Clustering)",
+      "author": "正荣（死灵版）",
+      "className": "",
+      "mainSkill": "集束力量爆破流",
+      "tags": [
+        "开荒",
+        "图腾"
+      ],
+      "summary": "集束力量爆破（Kinetic Blast of Clustering）是清图 powerhouse，用爆炸的动能覆盖屏幕。力量爆破发射单个有效载荷投射物，击中目标时爆炸成多次爆炸。它内置伤害缩放，配合死灵或圣宗升华，可以达到极高的清图效率。有死灵和圣宗两个版本。",
+      "difficulty": "需要校对",
+      "sourceFile": "07_集束力量爆破流.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "集束力量爆破（Kinetic Blast of Clustering）是清图 powerhouse，用爆炸的动能覆盖屏幕。力量爆破发射单个有效载荷投射物，击中目标时爆炸成多次爆炸。它内置伤害缩放，配合死灵或圣宗升华，可以达到极高的清图效率。有死灵和圣宗两个版本。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "清图速度极快",
+            "爆炸覆盖全屏",
+            "内置伤害缩放",
+            "死灵/圣宗双版本可选",
+            "远程输出安全"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "单体伤害一般",
+            "需要一定装备支撑",
+            "死灵版ES流需要低血配置"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "集束之力量爆破发射投射物，击中时爆炸",
+            "每次爆炸可以触发更多爆炸",
+            "死灵版：走ES流，配合亡灵升华",
+            "圣宗版：图腾/法术伤害路线"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "死灵版主技能",
+            "集束之力量爆破（Kinetic Blast of Clustering） + 提高暴击伤害（辅）（Increased Critical Damage Support） + 分裂（辅）（Fork Support） + 圣洁鬼灵（辅）（Sacred Wisps Support） + 邪恶投掷（辅）（Vicious Projectiles Support） + 增幅（强辅）（Awakened Enhance Support）",
+            "圣宗版主技能",
+            "集束之力量爆破（Kinetic Blast of Clustering） + 投射物归返（辅）（Returning Projectiles Support） + ...",
+            "其他",
+            "法术节魔（Spellslinger）（法术狙击手） + 装甲奉献（Bone Offering）（骸骨奉献） + 绝望（Despair）（绝望） + 精准（Precision） + 暗影印记（Assassin's Mark） + 击中时施加印记（辅）（刺客印记+击中印记）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "法杖，优先法术伤害+暴击率+投射物伤害",
+            "胸甲",
+            "死灵版：高ES胸甲",
+            "圣宗版：高生命+ES+抗性",
+            "其他",
+            "根据版本不同调整",
+            "暴击率和暴击伤害重要"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "死灵版：灵能护体（Ghost Reaver）（鬼魂掠夺者）、ES流",
+            "圣宗版：图腾/法术伤害",
+            "暴击率和暴击伤害",
+            "投射物伤害",
+            "魔力保留效率"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "死灵版：奉献女魔（Mistress of Sacrifice）等",
+            "圣宗版：Pursuit of Faith等",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "前期可用其他法术升级",
+            "图书馆购买相关宝石",
+            "逐步转型力量爆破",
+            "注意事项与FAQ",
+            "死灵和圣宗哪个好？",
+            "死灵版ES流后期上限高但需要更多投资，圣宗版更适合开荒和中期",
+            "核心机制是什么？",
+            "力量爆破击中时产生多次爆炸，配合分叉/返回等辅助可以覆盖全屏",
+            "POB链接",
+            "死灵版POB：https://poedb.tw/pob/FOpumEpyfC"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.569Z"
+    },
+    {
+      "id": "闪电箭光谱元素打击锐眼",
+      "order": 8,
+      "title": "闪电箭矢/光谱之元素打击锐眼 (Lightning Arrow / Elemental Hit of the Spectrum Deadeye)",
+      "author": "fubgun",
+      "className": "锐眼",
+      "mainSkill": "闪电箭矢/光谱之元素打击",
+      "tags": [
+        "开荒",
+        "毒伤"
+      ],
+      "summary": "由fubgun开发的闪电箭矢/光谱之元素打击锐眼BD。锐眼升华提供强大的投射物和远程伤害加成，闪电箭矢和光谱之元素打击都是强力的远程攻击技能。详细内容可参考fubgun上期搬运的视频，内容非常全面。",
+      "difficulty": "需要校对",
+      "sourceFile": "08_闪电箭光谱元素打击锐眼.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "由fubgun开发的闪电箭矢/光谱之元素打击锐眼BD。锐眼升华提供强大的投射物和远程伤害加成，闪电箭矢和光谱之元素打击都是强力的远程攻击技能。详细内容可参考fubgun上期搬运的视频，内容非常全面。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "远程输出安全",
+            "锐眼投射物加成强力",
+            "清图速度快",
+            "闪电/元素伤害类型",
+            "装备选择灵活"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "远程弓类装备较贵",
+            "需要堆叠命中和暴击",
+            "防御相对较弱"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "闪电箭矢攻击时发射闪电链，击中后弹射",
+            "光谱之元素打击发射多个投射物",
+            "锐眼升华提供投射物伤害、穿透和尾流",
+            "元素伤害可走暴击流或元素超载"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "闪电箭矢（Lightning Arrow）/ 光谱之元素打击（Elemental Hit of the Spectrum） + 武器元素伤害（辅）（Elemental Damage with Attacks Support） + 提高暴击伤害（辅）（Increased Critical Damage Support） + 连锁（辅）（Chain Support） + 快速攻击（辅）（Faster Attacks Support） + 三位一体（辅）（Trinity Support）",
+            "其他",
+            "光环、位移、诅咒等"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "弓，优先物理伤害+暴击率+攻击速度",
+            "箭袋",
+            "高生命+暴击率+元素伤害",
+            "其他",
+            "生命+抗性+闪避为主",
+            "逐步提升伤害"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "弓/投射物伤害",
+            "暴击率和暴击伤害",
+            "元素伤害",
+            "生命和闪避",
+            "命中"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Far Shot（远射）",
+            "Endless Munitions（无尽弹药）",
+            "Master of the Arcane（奥术大师）",
+            "Ranger（游侠）/ Winds of the Vast（浩瀚之风）",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "参考锐眼弓系BD升级路线",
+            "前期可用分裂箭/毒素箭升级",
+            "注意事项与FAQ",
+            "闪电箭矢和光谱之元素打击选哪个？",
+            "根据个人喜好和装备选择，两者都是强力的远程打击技能",
+            "详细攻略在哪？",
+            "参考fubgun上期搬运的视频，内容非常全面",
+            "POB链接"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.575Z"
+    },
+    {
+      "id": "冰川之刺赤练镰刀地雷",
+      "order": 9,
+      "title": "冰川之刺/赤炼魔光地雷 (Glacial Cascade / Exsanguinate Mine)",
+      "author": "smokie_777（冰川之刺）",
+      "className": "",
+      "mainSkill": "冰川之刺/赤炼魔光地雷",
+      "tags": [
+        "开荒",
+        "召唤",
+        "地雷",
+        "Boss"
+      ],
+      "summary": "地雷系BD，有冰川之刺地雷和赤炼魔光地雷两个选择。裂隙之冰川之刺地雷（Glacial Cascade of the Fissure）是非常强的地雷BD，冰系伤害，配合地雷的自动追踪和范围伤害，清图和Boss都很强。赤炼魔光地雷（Exsanguinate Mine）是物理/混沌系地雷，持续伤害为主。",
+      "difficulty": "需要校对",
+      "sourceFile": "09_冰川之刺赤练镰刀地雷.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "地雷系BD，有冰川之刺地雷和赤炼魔光地雷两个选择。裂隙之冰川之刺地雷（Glacial Cascade of the Fissure）是非常强的地雷BD，冰系伤害，配合地雷的自动追踪和范围伤害，清图和Boss都很强。赤炼魔光地雷（Exsanguinate Mine）是物理/混沌系地雷，持续伤害为主。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "地雷自动追踪，清图效率高",
+            "冰川之刺：冰系暴击流，伤害高",
+            "赤炼魔光：持续伤害，无视护甲",
+            "元素使/欺诈师双版本",
+            "后期上限极高（冰川之刺127M DPS）"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "需要扔地雷的操作",
+            "前期体验一般",
+            "低血配置需要一定投资"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "地雷自动追踪最近的敌人并引爆",
+            "冰川之刺裂隙版：产生裂隙，多次重叠造成高伤害",
+            "高爆地雷（辅）增加单颗地雷伤害",
+            "地雷网（辅）增加地雷数量",
+            "充能地雷（辅）增加伤害",
+            "后期可走低血+Shavronne's Wrappings配置"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "冰川之刺6连",
+            "裂隙之冰川之刺（Glacial Cascade of the Fissure） + 地雷网（辅）（Minefield Support） + 充能地雷（辅）（Charged Mines Support） + 高爆地雷（辅）（High-Impact Mine Support） + 提高暴击伤害（辅）（Increased Critical Damage Support） + 急冻（辅）（Hypothermia Support）",
+            "赤炼魔光6连",
+            "赤炼魔光（Exsanguinate） + 收割（Reap） + 高爆地雷（辅）（High-Impact Mine Support） + 充能地雷（辅）（Charged Mines Support） + 地雷网（辅）（Minefield Support） + 陷阱及地雷伤害（辅）（Trap and Mine Damage Support）",
+            "触发技能",
+            "奥法烙印（Arcanist Brand）+ 寒霜爆（Frost Bomb）+ 冻伤（Frostbite）+ 自动化（Automation）+ 引爆地雷（Detonate Mines）",
+            "魔像",
+            "召唤烈焰魔像（Summon Flame Golem） + 召唤闪电魔像（Summon Lightning Golem） + 召唤巨石魔像（Summon Stone Golem） + 召唤寒冰魔像（Summon Ice Golem）",
+            "光环",
+            "憎恨（Hatred） + 优雅（Grace） + 暴风之盾（Tempest Shield） + 纯净之捷（Herald of Purity） + 后期：召唤飞掠者 + 彻骨（辅）+ 异常爆发（辅）",
+            "位移技能",
+            "重盾冲锋（Shield Charge） + 快速攻击（辅） + 动量（辅）（冲锋+快速攻击+动量） + 冰霜闪现（Frostblink）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "法杖/匕首，优先法术伤害+暴击率+冰伤害",
+            "后期：+1所有宝石+法术伤害武器",
+            "胸甲",
+            "前期：高生命+ES+抗性",
+            "后期：Shavronne's Wrappings（低血配置）",
+            "头盔",
+            "前期：高生命+抗性",
+            "后期：Archdemon Crown（大恶魔王冠，+2宝石等级+伤害辅助）",
+            "手套",
+            "高生命+抗性+法术伤害",
+            "冰冷暴露词缀",
+            "鞋子",
+            "高生命+抗性+移动速度",
+            "戒指",
+            "生命+抗性+魔力",
+            "后期：Lost Unity（先驱者堆叠）",
+            "项链"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心（冰川之刺）：Ghost Dance（幽灵之舞）、Pain Attunement（苦痛调和，低血）",
+            "地雷伤害和投掷速度",
+            "冰冷伤害和穿透",
+            "暴击率和暴击伤害",
+            "生命和ES",
+            "魔力保留效率",
+            "后期：Runegraft of Treachery（背叛符文嫁接）"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "元素使（冰川之刺）：",
+            "1. Shaper of Storms（风暴塑形者）/ Shaper of Winter",
+            "2. Mastermind of Discord（不谐大师）",
+            "3. Liege of the Primordial（原始君主）",
+            "4. Shaper of Winter / Bastion of Elements（元素堡垒）",
+            "欺诈师（赤炼魔光）：",
+            "1. Swift Killer（迅捷杀手）",
+            "2. Polymath（博学）",
+            "3. Escape Artist（逃脱大师）",
+            "4. Spellbreaker（破法者）",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：帮助Alira（阿里拉）",
+            "升级路线",
+            "1-31级：Rolling Magma + Elemental Proliferation升级",
+            "31级：图书馆买充能地雷（辅），转火屑地雷（Pyroclast Mine）"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.580Z"
+    },
+    {
+      "id": "元素使忏悔烙印点燃流",
+      "order": 10,
+      "title": "元素使忏悔烙印点燃流 (Penance Brand Ignite Elementalist)",
+      "author": "Zeeboub / Goratha",
+      "className": "元素使",
+      "mainSkill": "忏悔烙印点燃流",
+      "tags": [
+        "开荒",
+        "图腾",
+        "召唤",
+        "点燃",
+        "Boss"
+      ],
+      "summary": "忏悔烙印点燃元素使拥有惊人的清图潜力，火焰塑形（Shaper of Flames）和点燃扩散结合产生令人满足的爆炸链。忏悔烙印虽然是主技能，但在终game中很少施放，主要用来炸Boss和高血量精英怪。先驱者堆叠、爆炸来源和点燃扩散结合形成巨大的爆炸链，玩法类似自动炸弹人。",
+      "difficulty": "需要校对",
+      "sourceFile": "10_元素使忏悔烙印点燃流.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "忏悔烙印点燃元素使拥有惊人的清图潜力，火焰塑形（Shaper of Flames）和点燃扩散结合产生令人满足的爆炸链。忏悔烙印虽然是主技能，但在终game中很少施放，主要用来炸Boss和高血量精英怪。先驱者堆叠、爆炸来源和点燃扩散结合形成巨大的爆炸链，玩法类似自动炸弹人。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "清图极快，爆炸链爽感十足",
+            "点燃伤害，DoT类型",
+            "先驱者堆叠增伤",
+            "后期防御强大（Aegis+血肉融合）",
+            "操作简单，类似自动炸弹人"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "需要火焰塑形（Shaper of Flames）才能点燃（第一个升华）",
+            "装备有一定要求",
+            "前期需要Rolling Magma过渡"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "火焰塑形（Shaper of Flames）让所有伤害都能点燃",
+            "忏悔烙印积累能量后爆炸，完美配合点燃",
+            "抹灭（Obliteration）（湮灭）提供爆炸，配合点燃扩散形成连锁",
+            "先驱者堆叠：Lost Unity + Bringer of Ruin",
+            "后期：幻芒圣盾（Aegis Aurora） + 血肉融合（Melding of the Flesh）防御体系"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能（前期）",
+            "Rolling Magma（熔岩之核） + 元素扩散（辅）（元素扩散） + 几率点燃（辅）（燃烧） + 迅猛烙印（辅）（Swiftbrand Support）",
+            "主技能（后期）",
+            "忏悔烙印（Penance Brand） + 增加燃烧伤害（辅）（Burning Damage Support） + 点燃扩散（辅）（Ignite Proliferation Support） + 迅猛烙印（辅）（Swiftbrand Support） + 凌厉（辅）（Cruelty Support） + 碎影魔刃（辅）（Spellblade Support，配合奈可妲之灯（Nycta's Lantern））",
+            "先驱者",
+            "灰烬之捷（Herald of Ash） + 纯净之捷（Herald of Purity） + 后期加入：寒冰之捷（Herald of Ice）、闪电之捷（Herald of Thunder）",
+            "魔像",
+            "召唤闪电魔像（Summon Lightning Golem） + 召唤混沌魔像（召唤混沌魔像（Summon Chaos Golem）） + 召唤巨石魔像（Summon Stone Golem） + 召唤烈焰魔像（Summon Flame Golem）",
+            "其他技能",
+            "Flame Surge（火焰涌动，点燃后增伤） + Wave of Conviction（定罪波，暴露） + 易燃（Flammability）（易燃诅咒） + 元素要害（Elemental Weakness）",
+            "位移技能",
+            "重盾冲锋（Shield Charge） + 快速攻击（辅） + 动量（辅）（冲锋+快速攻击+动量） + 冰霜闪现（Frostblink） / 烈焰冲刺（Flame Dash）（冰霜闪现/火焰冲刺）",
+            "防御技能",
+            "钢铁之肤（Steelskin） + 受伤时施放（辅）（Cast when Damage Taken Support）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "前期：奈可妲之灯（Nycta's Lantern）（战斗法师，强力单手武器）",
+            "中期：抹灭（Obliteration）（湮灭，爆炸来源）",
+            "后期：女神的恩典（Grace of the Goddess）（女神之恩，高单伤）",
+            "胸甲",
+            "前期：高生命+ES+抗性",
+            "后期：Crusader影响爆炸胸甲 / 高ES护甲稀有胸甲",
+            "头盔",
+            "前期：Honourhome（+2宝石等级）",
+            "后期：Archdemon Crown（大恶魔王冠，+2宝石等级+燃烧伤害辅助）",
+            "手套",
+            "全局点燃扩散（手套基底词缀，非常重要）",
+            "鞋子",
+            "高生命+抗性+移动速度",
+            "戒指",
+            "前期：Lost Unity（先驱者堆叠核心）",
+            "后期：高属性+伤害+生命",
+            "项链"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：元素超载（Elemental Overload）（元素超载）",
+            "点燃伤害和持续时间",
+            "先驱者效果",
+            "魔像效果",
+            "生命和ES",
+            "格挡率",
+            "魔力保留效率",
+            "后期：Elegant Hubris（Caspiro变体，Supreme Ostentation）"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "火焰塑形（Shaper of Flames）（火焰塑形者）- 所有伤害可点燃，100%点燃几率",
+            "Liege of the Primordial（原始君主）- 魔像加成",
+            "Bringer of Ruin（毁灭使者）- 先驱者保留效率",
+            "Mastermind of Discord（不谐大师）- 暴露增强+魔力回复",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：前期帮助Alira（阿里拉），后期可转全部杀死",
+            "升级路线",
+            "1-28级：Rolling Magma + Elemental Proliferation + Combustion",
+            "配合圣焰图腾（Holy Flame Totem）和烈焰之墙（Flame Wall）增加单伤",
+            "28级转忏悔烙印（需要先拿火焰塑形（Shaper of Flames）升华）",
+            "前期用奈可妲之灯（Nycta's Lantern）大幅提升伤害",
+            "拿到抹灭（Obliteration）后清图质变",
+            "手套点燃扩散是核心机制",
+            "注意事项与FAQ",
+            "为什么需要火焰塑形（Shaper of Flames）？"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.586Z"
+    },
+    {
+      "id": "处刑将军战吼",
+      "order": 11,
+      "title": "处刑将军战吼 (General's Cry Slayer)",
+      "author": "sanavixx",
+      "className": "",
+      "mainSkill": "处刑将军战吼",
+      "tags": [
+        "开荒",
+        "近战",
+        "召唤"
+      ],
+      "summary": "将军战吼处刑者BD，通过将军战吼召唤幻影战士使用大地震击攻击敌人。配合嚣狂之旋风斩作为主要清图技能，将军战吼作为爆发和单伤。处刑者升华提供强大的偷取回复和范围伤害。",
+      "difficulty": "需要校对",
+      "sourceFile": "11_处刑将军战吼.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "将军战吼处刑者BD，通过将军战吼召唤幻影战士使用大地震击攻击敌人。配合嚣狂之旋风斩作为主要清图技能，将军战吼作为爆发和单伤。处刑者升华提供强大的偷取回复和范围伤害。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "将军战吼爆发伤害高",
+            "旋风斩清图流畅",
+            "处刑者偷取回复强",
+            "可走格挡流防御",
+            "操作手感好"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "需要战吼充能管理",
+            "近战需要贴脸",
+            "装备有一定要求"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "General's Cry召唤幻影战士使用大地震击",
+            "自动增助（Autoexertion）自动施加战吼效果",
+            "嚣狂之旋风斩作为主要清图技能",
+            "多面好手（Versatile Combatant）：溢出攻击格挡转法术格挡",
+            "处刑者的Impact增加AOE"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "将军战吼 setup",
+            "将军之吼（General's Cry） + 震地之裂地之击（Ground Slam of Earthshaking） + 自动增助（Autoexertion）（自动施加） + 粉碎（辅）（Pulverise Support） + 近战物理伤害（辅）（Melee Physical Damage Support） + 残暴（辅）（Brutality Support）",
+            "旋风斩6连",
+            "嚣狂之旋风斩（Cyclone of Tumult） + 近战物理伤害（辅）（Melee Physical Damage Support） + 残暴（辅）（Brutality Support） + 灌能吟唱（辅）（Infused Channelling Support） + 粉碎（辅）（Pulverise Support） + 虚空震波（辅）（Void Shockwave Support）",
+            "光环",
+            "尊严（Pride） + 元素净化（Purity of Elements） + 血肉与岩石（Flesh and Stone） + 血与沙（Blood and Sand）",
+            "其他",
+            "暗影印记（Assassin's Mark） + 击中时施加印记（辅） + Lifetap（刺客印记+击中印记+生命偷取） + 狂野怒火（Blood Rage） + 钢铁之肤（Steelskin） + 自动化（Automation） + Lifetap（钢铁之肤+自动+生命偷取）",
+            "位移技能",
+            "冰霜闪现（Frostblink）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "长杖，优先物理伤害+暴击率+攻击速度",
+            "胸甲",
+            "高生命+高护甲+抗性",
+            "6连",
+            "其他",
+            "生命+抗性+护甲为主",
+            "格挡率装备"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：多面好手（Versatile Combatant）（全能战士）、霸体（Unwavering Stance）（坚定姿态）",
+            "长杖伤害和暴击",
+            "物理伤害",
+            "生命和护甲",
+            "格挡率",
+            "怒气",
+            "穿刺"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Impact（冲击）",
+            "Bane of Legends（传奇克星）",
+            "Brutal Fervour（狂热）",
+            "Headsman（刽子手）",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "参考处刑者近战升级路线",
+            "前期可用Sunder升级",
+            "注意事项与FAQ",
+            "光环怎么全开？",
+            "需要Charisma涂油、头盔RMR eldritch词缀9%+、魔力专精（Mana Mastery）、Runegraft of Treachery",
+            "更多信息？",
+            "访问www.sanavixx.com获取完整攻略、Atlas策略、制作视频和FAQ",
+            "POB链接"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.593Z"
+    },
+    {
+      "id": "处刑虚空震波旋风斩",
+      "order": 12,
+      "title": "处刑虚空震波旋风斩 (Cyclone 虚空震波 Slayer)",
+      "author": "博兹拉克",
+      "className": "",
+      "mainSkill": "处刑虚空震波旋风斩",
+      "tags": [
+        "开荒",
+        "近战"
+      ],
+      "summary": "由博兹拉克开发的虚空震波旋风斩处刑者BD。旋风斩是经典的近战清图技能，配合虚空震波（辅）（Void Shockwave Support）（虚空震波辅助）可以在攻击时产生震波，大幅提升清图范围和伤害。处刑者升华提供强大的偷取回复和范围伤害加成。",
+      "difficulty": "需要校对",
+      "sourceFile": "12_处刑虚空震波旋风斩.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "由博兹拉克开发的虚空震波旋风斩处刑者BD。旋风斩是经典的近战清图技能，配合虚空震波（辅）（Void Shockwave Support）（虚空震波辅助）可以在攻击时产生震波，大幅提升清图范围和伤害。处刑者升华提供强大的偷取回复和范围伤害加成。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "旋风斩清图流畅",
+            "虚空震波增加范围和伤害",
+            "处刑者偷取回复强",
+            "暴击流伤害高",
+            "操作简单，按住就行"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "近战需要贴脸",
+            "需要一定装备积累",
+            "引导技能有魔力消耗"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "旋风斩引导时持续攻击周围敌人",
+            "虚空震波（辅）（Void Shockwave Support）在攻击时产生震波，增加AOE和伤害",
+            "处刑者的Impact增加AOE范围",
+            "暴击流：高暴击率+高暴击伤害",
+            "盛怒（Berserk）提供增伤和减伤"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "旋风斩（Cyclone） + 虚空震波（辅）（Void Shockwave Support） + 近战物理伤害（辅）（Melee Physical Damage Support） + 粉碎（辅）（Pulverise Support） + 灌能吟唱（辅）（Infused Channelling Support） + 残暴（辅）（Brutality Support）",
+            "光环",
+            "尊严（Pride） + 坚定（Determination） + 血肉与岩石（Flesh and Stone） + 血与沙（Blood and Sand）",
+            "其他",
+            "盛怒（Berserk） + 狂野怒火（Blood Rage） + 精准（Precision）+ 赤嚣（辅）（Arrogance Support） + 暗影印记（Assassin's Mark） + 击中时施加印记（辅） + Lifetap（刺客印记+击中印记+生命偷取） + 战旗（War Banner） + 脆弱（Vulnerability）",
+            "位移技能",
+            "跃击（Leap Slam） + 快速攻击（辅）（跃击+快速攻击） + 冰霜闪现（Frostblink）",
+            "防御技能",
+            "瓦尔：熔岩护盾（Vaal Molten Shell） + 自动化（Automation）（瓦尔熔岩护盾+自动）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "长杖，优先物理伤害+暴击率+攻击速度",
+            "胸甲",
+            "高生命+高护甲+抗性",
+            "6连",
+            "其他",
+            "生命+抗性+护甲为主",
+            "暴击伤害装备"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "长杖伤害和暴击",
+            "物理伤害",
+            "生命和护甲",
+            "暴击率和暴击伤害",
+            "穿刺",
+            "范围效果",
+            "魔力保留效率"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Impact（冲击）",
+            "Bane of Legends（传奇克星）",
+            "Brutal Fervour（狂热）",
+            "Headsman（刽子手）",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "参考处刑者近战升级路线",
+            "前期可用Sunder升级，后期转旋风斩",
+            "注意事项与FAQ",
+            "虚空震波有什么用？",
+            "在旋风斩攻击时产生震波，大幅增加清图范围和伤害",
+            "为什么用长杖？",
+            "长杖提供暴击率和暴击伤害加成，适合暴击流旋风斩",
+            "POB链接"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.598Z"
+    },
+    {
+      "id": "圣宗大法师冰霜新星流",
+      "order": 13,
+      "title": "圣宗大法师冰霜新星流 (Ice Nova of Frostbolts Archmage Hierophant)",
+      "author": "Spicysushi",
+      "className": "圣宗",
+      "mainSkill": "大法师冰霜新星流",
+      "tags": [
+        "开荒",
+        "图腾",
+        "召唤",
+        "Boss"
+      ],
+      "summary": "由Spicysushi开发的大法师冰霜新星圣宗BD。寒冰弹之冰霜新星（Ice Nova of Frostbolts）配合大法师（辅）（Archmage Support），通过高魔力池获得巨大的伤害加成。圣宗升华提供图腾和魔力相关加成。强度依然在线，但开荒首日手感偏笨重。",
+      "difficulty": "需要校对",
+      "sourceFile": "13_圣宗大法师冰霜新星流.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "由Spicysushi开发的大法师冰霜新星圣宗BD。寒冰弹之冰霜新星（Ice Nova of Frostbolts）配合大法师（辅）（Archmage Support），通过高魔力池获得巨大的伤害加成。圣宗升华提供图腾和魔力相关加成。强度依然在线，但开荒首日手感偏笨重。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "大法师伤害加成高",
+            "冰霜新星清图范围大",
+            "圣宗升华强力",
+            "后期上限高（42M DPS）",
+            "可走暴击+格挡流"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "开荒首日手感偏笨重",
+            "需要高魔力池支撑",
+            "魔力管理重要",
+            "需要一定装备积累"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "大法师（辅）根据最大魔力增加法术伤害",
+            "Ice Nova of Frostbolts发射冰霜弹，击中后产生冰霜新星",
+            "Spell Echo让技能施放两次",
+            "法术凝聚增加强度层数，提升伤害",
+            "青春永驻（Eternal Youth）：ES回复应用于生命",
+            "后期可走暴击+格挡双体系"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "寒冰弹之寒冰弹之冰霜新星（Ice Nova of Frostbolts） + 大法师（辅）（Archmage Support） + 启迪（辅）（Inspiration Support）/ 秘能波动（辅）（Arcane Surge Support） + 法术凝聚（辅）（Intensify Support） + 施法回响（辅）（Spell Echo Support） + 提高暴击伤害（辅）（Increased Critical Damage Support）",
+            "冰霜弹 setup",
+            "寒冰弹（Frostbolt）（冰霜弹） + 高阶齐射（辅）（Greater Volley Support）",
+            "光环",
+            "奋锐光环（Zealotry）（狂热）+ 永恒祝福（辅）（Eternal Blessing Support） + 清晰（Clarity） + 元素净化（Purity of Elements）/ 优雅（Grace） + 后期：更多光环",
+            "诅咒",
+            "元素要害（Elemental Weakness） + 衰弱（Enfeeble）（衰弱） + 惩戒（Punishment）（惩罚） + 暗影印记（Assassin's Mark） + 奥法烙印（Arcanist Brand）（刺客印记+奥术烙印） + 导电（Conductivity）（导电）",
+            "防御技能",
+            "奥术斗篷（Arcane Cloak） + 持续时间总增（辅） + 自动化（Automation）（奥术斗篷+持续时间+自动） + 冰霜护盾（Frost Shield）（冰霜护盾） + 威能法印（Sigil of Power）（力量印记）",
+            "位移技能",
+            "冰霜闪现（Frostblink） of Wintry Blast + 快速施法（辅）（寒冬冲击冰霜闪现+快速施法） + 普通冰霜闪现（Frostblink）也可以同时用"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "双持法杖，优先法术伤害+暴击率+施法速度+魔力",
+            "72级和83级在Faustus赌法杖",
+            "胸甲",
+            "高生命+ES+抗性+魔力",
+            "后期：卫道之袍（Cloak of Defiance）（6连）",
+            "头盔",
+            "高生命+ES+抗性",
+            "奇塔弗之渴望（Kitava's Thirst）（核心暗金）",
+            "手套",
+            "高生命+ES+抗性+法术伤害",
+            "冰冷暴露词缀",
+            "鞋子",
+            "高生命+抗性+移动速度",
+            "猛攻词缀",
+            "戒指",
+            "生命+抗性+魔力",
+            "后期：高属性+伤害"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：青春永驻（Eternal Youth）（永恒青春）",
+            "魔力和魔力回复",
+            "冰冷伤害和法术伤害",
+            "暴击率和暴击伤害",
+            "生命和ES",
+            "格挡率",
+            "魔力保留效率",
+            "电荷效果"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "信念追求（Pursuit of Faith）",
+            "觉醒仪式（Ritual of Awakening）",
+            "力量信念（Conviction of Power）",
+            "第四个升华点",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "前期：2把Goat Horn武器，火系法术升级",
+            "辅助宝石选择灵活",
+            "Unleash在38级感觉很好",
+            "后期可以转大法师",
+            "BA左右走MoM和Eternal Blessing",
+            "Vortex of projection、天雷之珠（Ball Lightning） of orbiting都是大法师build的好选择",
+            "72级和83级在Faustus赌法杖",
+            "注意事项与FAQ"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.605Z"
+    },
+    {
+      "id": "剧毒旋风锐眼",
+      "order": 14,
+      "title": "剧毒旋风锐眼 (瓦尔：剧毒旋风（Vaal Venom Gyre） Deadeye)",
+      "author": "Kankar",
+      "className": "锐眼",
+      "mainSkill": "剧毒旋风",
+      "tags": [
+        "开荒",
+        "近战",
+        "毒伤",
+        "Boss"
+      ],
+      "summary": "Kankar的敏捷堆叠剧毒旋风锐眼BD。瓦尔：剧毒旋风（Vaal Venom Gyre）是一个强力的近战投射物技能，投掷回旋刀刃攻击敌人。锐眼升华提供投射物伤害和尾流加成。通过堆叠敏捷获得高额伤害，配合夜刃和 Elusive（灵巧状态）机制，伤害和生存兼备。",
+      "difficulty": "需要校对",
+      "sourceFile": "14_剧毒旋风锐眼.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "Kankar的敏捷堆叠剧毒旋风锐眼BD。瓦尔：剧毒旋风（Vaal Venom Gyre）是一个强力的近战投射物技能，投掷回旋刀刃攻击敌人。锐眼升华提供投射物伤害和尾流加成。通过堆叠敏捷获得高额伤害，配合夜刃和 Elusive（灵巧状态）机制，伤害和生存兼备。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "Dex堆叠，伤害成长高",
+            "剧毒旋风清图快",
+            "锐眼投射物加成强力",
+            "后期DPS极高（104M）",
+            "可使用盾牌增加防御"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "相对较脆",
+            "需要name locking打Boss",
+            "敏捷堆叠需要大量投资"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "剧毒旋风投掷回旋刀刃，击中后返回",
+            "零点射击（Point Blank）：近距离投射物伤害更高",
+            "夜刃：增强 Elusive（灵巧状态）效果",
+            "Dex堆叠：每点敏捷增加投射物伤害",
+            "回旋之刃（Whirling Blades） + name locking打Boss可造成3-4倍伤害"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "瓦尔：剧毒旋风（Vaal Venom Gyre） + 夜刃（辅）（Nightblade Support） + 武器元素伤害（辅）（Elemental Damage with Attacks Support） + 无常（辅）（Volatility Support） + 不洁三体（辅）（Unholy Trinity Support） + 高阶分裂（辅）（Greater Fork Support）",
+            "位移技能",
+            "回旋之刃（Whirling Blades） + Fortify + 快速攻击（辅） + 动量（辅）（回旋之刃+强化+快速攻击+动量）",
+            "诅咒",
+            "狙击印记（Sniper's Mark） + 击中时施加印记（辅） + 增幅（辅）+ 赤炼（辅）（狙击手印记+击中印记+增强+生命偷取）",
+            "光环",
+            "雷霆（Wrath） + 优雅（Grace） + 启蒙（辅）（启蒙（辅）（Enlighten Support）） + 血肉与岩石（Flesh and Stone）",
+            "其他",
+            "盛怒（Berserk） + 狂野怒火（Blood Rage） + 暴风之盾（Tempest Shield） + 钢铁之肤（Steelskin） + 自动化（Automation） + 持续时间总增（辅）（钢铁之肤+自动+持续时间）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "爪子，优先物理伤害+暴击率+攻击速度",
+            "高DPS基底",
+            "盾牌",
+            "高生命+闪避+抗性",
+            "格挡率",
+            "胸甲",
+            "高生命+闪避+抗性",
+            "6连",
+            "头盔",
+            "高生命+闪避+抗性",
+            "手套",
+            "高生命+闪避+抗性+攻击速度",
+            "鞋子",
+            "高生命+闪避+抗性+移动速度",
+            "戒指",
+            "生命+抗性+敏捷",
+            "属性堆叠"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：零点射击（Point Blank）（零距离）",
+            "爪子伤害和暴击",
+            "敏捷堆叠（每16敏捷+1%投射物伤害）",
+            "生命和闪避",
+            "暴击率和暴击伤害",
+            "法术压制",
+            "格挡率",
+            "魔力保留效率"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Far Shot（远射）",
+            "Endless Munitions（无尽弹药）",
+            "Master of the Arcane（奥术大师）",
+            "Ranger（游侠）/ Winds of the Vast（浩瀚之风）",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：帮助Alira（阿里拉，+15%元素抗性，更容易堆满抗性从而从装备获得更多敏捷）",
+            "升级路线",
+            "第五章获取剧毒旋风和分裂（辅）（Fork Support）放副手升级",
+            "打Boss需要用name locking（按住技能键锁定目标）",
+            "回旋之刃（Whirling Blades）配合name locking可让剧毒旋风对Boss造成3-4倍伤害",
+            "注意事项与FAQ",
+            "剧毒旋风还是Cobra Lash？",
+            "Cobra Lash被削弱了，现在剧毒旋风更好",
+            "其他升华怎么样？",
+            "守望者、刺客、处刑者是锐眼之后的好选择。锐眼开荒更好因为有Tailwind和额外投射物"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.610Z"
+    },
+    {
+      "id": "勇士流血七伤破",
+      "order": 15,
+      "title": "勇士流血七伤破 (Boneshatter Juggernaut)",
+      "author": "Zizaran",
+      "className": "勇士",
+      "mainSkill": "流血七伤破",
+      "tags": [
+        "开荒",
+        "近战",
+        "流血",
+        "Boss"
+      ],
+      "summary": "Zizaran推荐的勇士流血七伤破BD，近战版本T0。重创之七伤破（Boneshatter of Complex Trauma）是一个强力的近战打击技能，每次攻击都会对自己造成伤害，但同时造成高额物理伤害和流血。勇士升华提供强大的护甲、耐力球和伤害减免，是最肉的近战BD之一。",
+      "difficulty": "需要校对",
+      "sourceFile": "15_勇士流血七伤破.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "Zizaran推荐的勇士流血七伤破BD，近战版本T0。重创之七伤破（Boneshatter of Complex Trauma）是一个强力的近战打击技能，每次攻击都会对自己造成伤害，但同时造成高额物理伤害和流血。勇士升华提供强大的护甲、耐力球和伤害减免，是最肉的近战BD之一。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "近战版本T0级别",
+            "非常肉，护甲+耐力球+生命回复",
+            "流血伤害，无视护甲",
+            "勇士升华生存能力极强",
+            "装备路线清晰"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "自伤机制需要管理",
+            "近战需要贴脸",
+            "不能打无法眩晕的怪物（严重影响清图）"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "Boneshatter攻击时对自己造成伤害，同时增加伤害",
+            "Complex Trauma变体：每次打击增加更多伤害和自伤",
+            "流血Aggravate：施加战吼的攻击有25%几率Aggravate流血",
+            "耐力球提供物理减伤和流血伤害加成",
+            "永不动摇（Unflinching）：被击中时获得耐力球",
+            "禁断典仪自伤触发永不动摇（Unflinching）获得耐力球"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "Boneshatter of Complex Trauma（复杂创伤七伤破） + 无常（辅）（Volatility Support） + 近战物理伤害（辅）（Melee Physical Damage Support） + 残暴（辅）（Brutality Support） + 无情（辅）（Ruthless Support） + 近战击晕获得耐力球（辅）（Endurance Charge on Melee Stun Support）",
+            "战吼 setup",
+            "自动增助（Autoexertion）（自动施加） + 魔武战号（Battlemage's Cry）（战斗法师战吼） + 脆弱（Vulnerability） + 先祖战吼（Ancestral Cry）（先祖战吼）",
+            "光环",
+            "尊严（Pride） + 坚定（Determination）（可选）",
+            "位移技能",
+            "跃击（Leap Slam） + 快速攻击（辅） + 动量（辅）（跃击+快速攻击+动量） + 冰霜闪现（Frostblink）",
+            "其他",
+            "狂野怒火（Blood Rage） + 坚决战吼（Enduring Cry）（持续战吼） + 瓦尔：熔岩护盾（Vaal Molten Shell） + 受伤时施放（辅）（Cast when Damage Taken Support） + 赤炼（辅）（Lifetap Support） + 禁断典仪（Forbidden Rite，触发耐力球）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "双手斧，优先物理伤害+攻击速度+流血几率",
+            "加密词缀前缀：%物理伤害+25%流血几率",
+            "胸甲",
+            "高生命+高护甲+抗性",
+            "物理伤害减免词缀",
+            "头盔",
+            "高生命+护甲+抗性",
+            "Eater影响：减少攻击魔力消耗",
+            "手套",
+            "高生命+护甲+抗性",
+            "+2打击技能等级",
+            "Eater影响：流血几率/Aggravate几率",
+            "鞋子",
+            "高生命+护甲+抗性+移动速度",
+            "戒指",
+            "冈姆的远见（Kaom's Sign）（核心暗金，+1耐力球）",
+            "后期：腐化+1耐力球的稀有戒指"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "核心：坚毅之心（Resolute Technique）（坚决技术，必中）",
+            "双手斧伤害",
+            "物理伤害和流血伤害",
+            "生命和护甲",
+            "耐力球相关",
+            "流血Aggravate",
+            "护甲专精：全护甲装备+1%最大元素抗性",
+            "保护专精：抗性不会被诅咒降低、腐化之血无法感染"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "永不动摇（Unflinching）（坚定不移）- 被击中获得耐力球",
+            "Unrelenting（不屈不挠）- 耐力球减伤增强",
+            "Unyielding（坚不可摧）- 生命和护甲增加",
+            "Unstoppable（势不可挡）/ 血统升华",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "用Sunder升级到Merciless迷宫",
+            "武器升级：稀有Rustic Sash + 磨刀石 + 双手斧 = 50-64%物理伤害魔法斧",
+            "不要太早转七伤破，至少拿到永不动摇（Unflinching）或Inexorable再转",
+            "建议同时开坚定来减轻自伤",
+            "注意事项与FAQ",
+            "3.29有什么变化？",
+            "减少魔力消耗改为增加魔力消耗效率，可能让前期魔力回复更难。戒指可以腐化+1最大耐力球。物理反射改为荆棘，可以轻松应对。",
+            "可以用护身符吗？"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.616Z"
+    },
+    {
+      "id": "闪打处刑者",
+      "order": 16,
+      "title": "闪打处刑者 (Flicker Strike Slayer)",
+      "author": "magefist",
+      "className": "处刑者",
+      "mainSkill": "闪打",
+      "tags": [
+        "开荒",
+        "近战"
+      ],
+      "summary": "由magefist开发的闪打处刑者BD。闪现打击（Flicker Strike）是一个高速移动的近战打击技能，击杀敌人后可以再次施放，形成连续闪烁的效果。处刑者升华提供强大的偷取回复和范围伤害。使用欧罗的贡品（Oro's Sacrifice）作为武器，走火焰伤害路线。",
+      "difficulty": "需要校对",
+      "sourceFile": "16_闪打处刑者.docx",
+      "sections": [
+        {
+          "key": "summary",
+          "title": "简介",
+          "items": [
+            "由magefist开发的闪打处刑者BD。闪现打击（Flicker Strike）是一个高速移动的近战打击技能，击杀敌人后可以再次施放，形成连续闪烁的效果。处刑者升华提供强大的偷取回复和范围伤害。使用欧罗的贡品（Oro's Sacrifice）作为武器，走火焰伤害路线。"
+          ]
+        },
+        {
+          "key": "pros",
+          "title": "优点",
+          "items": [
+            "移动速度极快，清图流畅",
+            "闪打爽感十足",
+            "处刑者偷取回复强",
+            "火焰伤害类型",
+            "操作简单"
+          ]
+        },
+        {
+          "key": "cons",
+          "title": "缺点",
+          "items": [
+            "容易迷路/闪过头",
+            "近战相对较脆",
+            "需要狂怒球支撑",
+            "装备有一定要求"
+          ]
+        },
+        {
+          "key": "mechanics",
+          "title": "核心机制",
+          "items": [
+            "闪现打击击杀敌人后获得一次额外施放",
+            "狂怒球增加闪打伤害和次数",
+            "欧罗的贡品：击杀时获得火焰伤害加成",
+            "处刑者的Impact增加AOE",
+            "多重打击（辅）增加攻击次数"
+          ]
+        },
+        {
+          "key": "skills",
+          "title": "技能链接",
+          "items": [
+            "主技能6连",
+            "闪现打击（Flicker Strike） + 近战（辅）（Close Combat Support） + 武器元素伤害（辅）（Elemental Damage with Attacks Support） + 多重打击（辅）（Multistrike Support） + 火焰穿透（辅）（Fire Penetration Support） + ...",
+            "其他",
+            "狂野怒火（Blood Rage） + 精准（Precision）+ 赤嚣（辅）（Arrogance Support） + 暗影印记（Assassin's Mark） + 击中时施加印记（辅）（刺客印记+击中印记） + 愤怒（Anger） + 极地装甲（Arctic Armour）",
+            "位移技能",
+            "跃击（Leap Slam） + 快速攻击（辅）（跃击+快速攻击）",
+            "防御技能",
+            "钢铁之肤（Steelskin） + 自动化（Automation）（钢铁之肤+自动） + 坚决战吼（Enduring Cry） + 紧急号令（辅）（持续战吼+紧急命令）"
+          ]
+        },
+        {
+          "key": "equipment",
+          "title": "装备推荐",
+          "items": [
+            "武器",
+            "欧罗的贡品（Oro's Sacrifice，核心暗金）",
+            "胸甲",
+            "高生命+闪避+抗性",
+            "6连",
+            "其他",
+            "生命+抗性+闪避为主",
+            "攻击速度+暴击率"
+          ]
+        },
+        {
+          "key": "passives",
+          "title": "天赋要点",
+          "items": [
+            "剑伤害和暴击",
+            "火焰伤害",
+            "生命和闪避",
+            "暴击率和暴击伤害",
+            "狂怒球",
+            "攻击速度",
+            "法术压制"
+          ]
+        },
+        {
+          "key": "ascendancy",
+          "title": "升华顺序",
+          "items": [
+            "升华顺序：",
+            "Impact（冲击）",
+            "Bane of Legends（传奇克星）",
+            "Brutal Fervour（狂热）",
+            "Headsman（刽子手）",
+            "万神殿与盗贼",
+            "万神殿主神：待定",
+            "万神殿副神：待定",
+            "盗贼任务：待定",
+            "升级路线",
+            "参考处刑者近战升级路线",
+            "前期可用其他近战技能过渡",
+            "注意事项与FAQ",
+            "欧罗的贡品有什么用？",
+            "击杀敌人时获得火焰伤害加成，配合闪打的连续击杀可以持续增伤",
+            "闪打需要注意什么？",
+            "管理狂怒球数量，确保有足够的狂怒球来维持闪打连锁",
+            "POB链接"
+          ]
+        }
+      ],
+      "updatedAt": "2026-07-30T06:46:57.621Z"
+    }
+  ]
+}
