@@ -405,6 +405,8 @@ function getContentResearchSummary() {
     actionItems: Array.isArray(summary.actionItems) ? summary.actionItems.slice(0, 10) : [],
     topics,
     byMiniappPage,
+    trend: summary.trend || {},
+    history: summary.history || {},
     exports: summary.exports || {},
     note: summary.note || '',
   };

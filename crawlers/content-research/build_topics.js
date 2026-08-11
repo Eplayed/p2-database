@@ -8,6 +8,7 @@ const ROOT = path.join(__dirname, '..', '..');
 const RUNTIME_DIR = path.join(ROOT, 'dashboard', 'runtime');
 const OUTPUT_FILE = path.join(RUNTIME_DIR, 'content-research.json');
 const MARKDOWN_FILE = path.join(RUNTIME_DIR, 'content-research-topics.md');
+const HISTORY_FILE = path.join(RUNTIME_DIR, 'content-research-history.json');
 const FORUM_SUMMARY_FILE = path.join(RUNTIME_DIR, 'forum-content-scan.json');
 
 const SOURCE_CONFIGS = [
@@ -421,15 +422,92 @@ function createActionItems(topics) {
   }));
 }
 
+function createHistorySnapshot(output) {
+  return {
+    generatedAt: output.generatedAt,
+    status: output.status,
+    counters: output.counters,
+    topStableIds: output.topTopics.map(topic => topic.stableId),
+    topics: output.topics.map(topic => ({
+      stableId: topic.stableId,
+      title: topic.titleCn || topic.title,
+      game: topic.game,
+      source: topic.source,
+      score: topic.score,
+      miniappPage: topic.signals?.miniappPage || '内容观察',
+      url: topic.url,
+    })),
+  };
+}
+
+function loadHistory() {
+  const history = readJson(HISTORY_FILE, []);
+  return Array.isArray(history) ? history : [];
+}
+
+function createTrend(scoredTopics, previousSnapshot) {
+  const previousTopics = Array.isArray(previousSnapshot?.topics) ? previousSnapshot.topics : [];
+  const previousIds = new Set(previousTopics.map(topic => topic.stableId).filter(Boolean));
+  const currentIds = new Set(scoredTopics.map(topic => topic.stableId).filter(Boolean));
+  const newTopics = scoredTopics.filter(topic => !previousIds.has(topic.stableId));
+  const returningTopics = scoredTopics.filter(topic => previousIds.has(topic.stableId));
+  const disappearedTopics = previousTopics.filter(topic => !currentIds.has(topic.stableId));
+  return {
+    comparedWith: previousSnapshot?.generatedAt || '',
+    newCount: newTopics.length,
+    returningCount: returningTopics.length,
+    disappearedCount: disappearedTopics.length,
+    newTopics: newTopics.slice(0, 8).map(topic => ({
+      stableId: topic.stableId,
+      title: topic.titleCn || topic.title,
+      game: topic.game,
+      source: topic.source,
+      score: topic.score,
+      miniappPage: topic.signals?.miniappPage || '内容观察',
+      url: topic.url,
+    })),
+    persistentTopics: returningTopics.slice(0, 8).map(topic => ({
+      stableId: topic.stableId,
+      title: topic.titleCn || topic.title,
+      game: topic.game,
+      source: topic.source,
+      score: topic.score,
+      miniappPage: topic.signals?.miniappPage || '内容观察',
+      url: topic.url,
+    })),
+  };
+}
+
+function writeHistory(output, history) {
+  const nextHistory = [createHistorySnapshot(output), ...history]
+    .filter((item, index, items) => items.findIndex(other => other.generatedAt === item.generatedAt) === index)
+    .slice(0, 30);
+  writeJson(HISTORY_FILE, nextHistory);
+}
+
 function createMarkdown(output) {
   const lines = [];
   lines.push('# 内容研究选题池');
   lines.push('');
   lines.push(`生成时间：${output.generatedAt}`);
   lines.push(`选题数量：${output.counters.topics}，来源：${output.counters.sources}，失败来源：${output.counters.failedSources}`);
+  if (output.trend?.comparedWith) {
+    lines.push(
+      `趋势：新增 ${output.trend.newCount}，连续出现 ${output.trend.returningCount}，消失 ${output.trend.disappearedCount}`
+    );
+  }
   lines.push('');
   lines.push('> 只用于自媒体选题和小程序策略判断；论坛与海外攻略不是事实源，写作前需要二次核验。');
   lines.push('');
+  if (output.trend?.newTopics?.length) {
+    lines.push('## 本次新增');
+    lines.push('');
+    for (const topic of output.trend.newTopics) {
+      lines.push(`- ${topic.title}｜${topic.miniappPage}｜${topic.score} 分${topic.url ? `｜${topic.url}` : ''}`);
+    }
+    lines.push('');
+  }
+
   lines.push('## 优先写');
   lines.push('');
 
@@ -516,6 +594,9 @@ async function main() {
       };
     })
     .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
+  const history = loadHistory();
+  const previousSnapshot = history[0] || null;
+  const trend = createTrend(scoredTopics, previousSnapshot);
 
   const output = {
     generatedAt: new Date().toISOString(),
@@ -532,6 +613,11 @@ async function main() {
     sources: sourceReports,
     topTopics: scoredTopics.slice(0, 12),
     actionItems: createActionItems(scoredTopics),
+    trend,
+    history: {
+      file: path.relative(ROOT, HISTORY_FILE),
+      retainedRuns: Math.min(history.length + 1, 30),
+    },
     exports: {
       markdown: path.relative(ROOT, MARKDOWN_FILE),
     },
@@ -541,8 +627,12 @@ async function main() {
 
   writeJson(OUTPUT_FILE, output);
   writeText(MARKDOWN_FILE, createMarkdown(output));
+  writeHistory(output, history);
   console.log(`\n内容研究选题池已生成: ${path.relative(ROOT, OUTPUT_FILE)}`);
   console.log(`Markdown 已导出: ${path.relative(ROOT, MARKDOWN_FILE)}`);
+  console.log(
+    `趋势: 新增 ${output.trend.newCount} 个，连续出现 ${output.trend.returningCount} 个，消失 ${output.trend.disappearedCount} 个`
+  );
   console.log(
     `选题 ${output.counters.topics} 个，去重 ${output.counters.deduped} 个，来源 ${output.counters.sources} 个，失败来源 ${output.counters.failedSources} 个`
   );

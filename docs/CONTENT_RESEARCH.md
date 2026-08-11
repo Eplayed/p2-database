@@ -40,6 +40,7 @@ npm run research:content
 - `dashboard/runtime/forum-content-scan.json`
 - `dashboard/runtime/content-research.json`
 - `dashboard/runtime/content-research-topics.md`
+- `dashboard/runtime/content-research-history.json`
 
 `dashboard/runtime/*` 是本地运行态文件，不提交 Git。
 
@@ -132,6 +133,22 @@ Dashboard 会额外展示一块“内容研究看板”：
 2. 看 `今天优先写` 里是否有能承接小程序入口的题。
 3. 文章落点必须回到三条主线之一；如果只是 `内容观察`，优先写文章验证，不急着改小程序。
 4. 写作前打开来源链接做事实核验，不能直接把海外标题或论坛讨论当结论。
+
+## P2：趋势记忆
+
+内容研究每次运行后会把轻量快照写入 `dashboard/runtime/content-research-history.json`，默认保留最近 30 次。
+
+Dashboard 的“本次变化”会显示：
+
+- `新增选题`：上一次没有出现，这一次出现的标题。
+- `连续出现`：上一次和这一次都出现，通常比一次性标题更值得优先写。
+- `本次消失`：上一次出现但这次没出现，用于判断话题是否只是短期波动。
+
+判断原则：
+
+- 连续出现且能承接 `抄BD / 看行情 / 解卡点` 的选题，优先写文章或补小程序入口。
+- 只出现一次的海外标题，先当候选观察，除非它正好匹配公众号/头条文章计划。
+- 国内论坛问题如果连续出现，优先补“流放急救箱”或已有工具入口，而不是做大而全新功能。
 
 ## 使用原则
 

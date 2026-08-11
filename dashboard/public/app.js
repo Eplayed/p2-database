@@ -351,6 +351,16 @@ function renderResearchPillarCard(pillar, topics) {
   `;
 }
 
+function renderTrendTopic(topic) {
+  return `
+    <li>
+      <span>${escapeHtml(topic.miniappPage || '内容观察')}</span>
+      <strong>${escapeHtml(topic.title || '未命名选题')}</strong>
+      <em>${Number(topic.score || 0)}分</em>
+    </li>
+  `;
+}
+
 function renderTopicRow(topic) {
   const pillar = getTopicPillar(topic);
   const tags = Array.isArray(topic.tags) ? topic.tags.slice(0, 4) : [];
@@ -399,6 +409,7 @@ function renderContentResearchBoard() {
   const pillars = ['抄BD', '看行情', '解卡点', '内容观察'];
   const byPillar = research.byMiniappPage || {};
   const counters = research.counters || {};
+  const trend = research.trend || {};
 
   contentResearchBoard.className = 'content-research-board';
   contentResearchBoard.innerHTML = `
@@ -420,6 +431,29 @@ function renderContentResearchBoard() {
         <strong>${escapeHtml(research.exports?.markdown || '-')}</strong>
       </div>
     </div>
+    <section class="research-section">
+      <div class="research-section-head">
+        <h3>本次变化</h3>
+        <span>${trend.comparedWith ? `对比 ${formatTime(trend.comparedWith)}` : '首次记录，下一次运行后会出现对比'}</span>
+      </div>
+      <div class="research-trend-grid">
+        <article class="research-trend-card">
+          <span>新增选题</span>
+          <strong>${Number(trend.newCount || 0)}</strong>
+          <ul>${(trend.newTopics || []).slice(0, 4).map(renderTrendTopic).join('') || '<li>暂无新增</li>'}</ul>
+        </article>
+        <article class="research-trend-card">
+          <span>连续出现</span>
+          <strong>${Number(trend.returningCount || 0)}</strong>
+          <ul>${(trend.persistentTopics || []).slice(0, 4).map(renderTrendTopic).join('') || '<li>暂无连续选题</li>'}</ul>
+        </article>
+        <article class="research-trend-card compact">
+          <span>本次消失</span>
+          <strong>${Number(trend.disappearedCount || 0)}</strong>
+          <p>连续出现更值得写；只出现一次的标题先当候选观察。</p>
+        </article>
+      </div>
+    </section>
     <section class="research-section">
       <div class="research-section-head">
         <h3>今天优先写</h3>
