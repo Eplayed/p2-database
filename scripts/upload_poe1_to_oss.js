@@ -48,7 +48,9 @@ async function uploadPoe1Data() {
     await client.put(`${prefix}miniprogram_data/${file.relativePath}`, file.filePath, {
       headers: {
         'Content-Type': CONTENT_TYPES[file.ext],
-        'Cache-Control': isJson && file.relativePath === 'economy_digest.json' ? 'max-age=300' : 'max-age=900'
+        'Cache-Control': isJson && ['economy_digest.json', 'cn_economy_digest.json'].includes(file.relativePath)
+          ? 'max-age=300'
+          : 'max-age=900'
       }
     });
     console.log(`   ✅ ${prefix}miniprogram_data/${file.relativePath}`);

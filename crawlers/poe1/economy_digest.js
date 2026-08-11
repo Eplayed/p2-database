@@ -13,6 +13,10 @@ const categories = [
   { id: 'Oil', label: '圣油' }
 ];
 
+const LEAGUE_DISPLAY_NAME_MAP = {
+  Allflame: '永火之咒'
+};
+
 async function fetchJson(url) {
   const response = await fetch(url, { headers: { 'user-agent': 'poe-season-helper/1.0' } });
   if (!response.ok) throw new Error(`${response.status} ${url}`);
@@ -58,6 +62,7 @@ async function buildEconomyDigest() {
   const indexState = await fetchJson(`${API_ROOT}/data/index-state`);
   const league = selectPrimaryChallengeLeague(indexState.economyLeagues);
   if (!league) throw new Error('未找到当前 POE1 经济赛季');
+  const leagueDisplayName = LEAGUE_DISPLAY_NAME_MAP[league.name] || league.displayName || league.name;
   const payloads = await Promise.all(categories.map(async (category) => ({
     category,
     payload: await fetchJson(`${API_ROOT}/economy/exchange/current/overview?league=${encodeURIComponent(league.name)}&type=${category.id}`)
@@ -69,7 +74,7 @@ async function buildEconomyDigest() {
     schemaVersion: 1,
     updatedAt: new Date().toISOString(),
     source: { name: 'poe.ninja POE1 Economy', url: `https://poe.ninja/economy/${league.url}/currency` },
-    league: { name: league.name, url: league.url, displayName: league.displayName },
+    league: { name: league.name, url: league.url, displayName: leagueDisplayName },
     baseCurrency: { name: '混沌石', nameEn: 'Chaos Orb', chaosValue },
     exchange: divine ? {
       label: `1 神圣石 ≈ ${formatValue(divine.chaosValue)} 混沌石`,

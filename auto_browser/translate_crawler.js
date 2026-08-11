@@ -244,6 +244,8 @@ const ITEM_TERM_TRANSLATIONS = {
   "Stack Size": "堆叠数量",
   "Limited to": "限制",
   "Runic Ward": "符文护盾",
+  "Socketed Runes": "镶嵌符文",
+  "Runes": "符文",
   "Evasion Rating": "闪避值",
   Evasion: "闪避",
   "Energy Shield": "能量护盾",
@@ -324,6 +326,32 @@ const ITEM_TERM_TRANSLATIONS = {
   Wind: "风",
   Skills: "技能",
 };
+
+function normalizeLookupKey(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function findDictEntryByNormalizedKey(dict, rawKey) {
+  const normalizedRawKey = normalizeLookupKey(rawKey);
+  if (!normalizedRawKey) return null;
+  if (dict[rawKey]) return dict[rawKey];
+
+  for (const [key, value] of Object.entries(dict)) {
+    const normalizedKey = normalizeLookupKey(key);
+    if (
+      normalizedKey === normalizedRawKey ||
+      normalizedKey.includes(normalizedRawKey) ||
+      normalizedRawKey.includes(normalizedKey)
+    ) {
+      return value;
+    }
+  }
+  return null;
+}
 
 const RUNE_NAME_TRANSLATIONS = {
   "Greater Adept Rune": "高级行家符文",
@@ -724,40 +752,17 @@ function translateItemName(itemName, baseType, frameType) {
 
   if (frameType === 3) {
     // 传奇物品
-    const uniqueInfo = dictUnique[itemName];
+    const uniqueInfo = findDictEntryByNormalizedKey(dictUnique, itemName);
     let uniqueCn = null;
     
     if (uniqueInfo) {
       uniqueCn = uniqueInfo.cn;
-    } else {
-      // 如果找不到精确匹配，尝试模糊匹配
-      for (const [key, value] of Object.entries(dictUnique)) {
-        if (
-          key.toLowerCase().includes(itemName.toLowerCase()) ||
-          itemName.toLowerCase().includes(key.toLowerCase())
-        ) {
-          uniqueCn = value.cn;
-          break;
-        }
-      }
     }
 
     // 翻译基底类型
     let baseCn = null;
     if (baseType) {
-      baseCn = dictBase[baseType];
-      if (!baseCn) {
-        // 尝试模糊匹配基底类型
-        for (const [key, value] of Object.entries(dictBase)) {
-          if (
-            key.toLowerCase().includes(baseType.toLowerCase()) ||
-            baseType.toLowerCase().includes(key.toLowerCase())
-          ) {
-            baseCn = value;
-            break;
-          }
-        }
-      }
+      baseCn = findDictEntryByNormalizedKey(dictBase, baseType);
     }
 
     // 构建最终翻译：传奇名 + 正确的基底类型
@@ -983,6 +988,10 @@ function translateSingleMod(line) {
     { regex: /^Currently has ([\d.]+) Charges$/i, replace: "当前有 $1 充能" },
     { regex: /^Used when you become Stunned$/i, replace: "你被晕眩时自动使用" },
     { regex: /^Cannot be Stunned$/i, replace: "不会被晕眩" },
+    { regex: /^Reflects opposite Ring$/i, replace: "映射另一枚戒指" },
+    { regex: /^Only Runes can be Socketed in this item$/i, replace: "此物品只能镶嵌符文" },
+    { regex: /^([\d.]+)% increased effect of Socketed Runes$/i, replace: "镶嵌符文效果提高 $1%" },
+    { regex: /^\+([\d.]+) maximum Runic Ward$/i, replace: "+$1 最大符文护盾" },
     { regex: /^Also grants ([\d.]+) Guard$/i, replace: "同时获得 $1 护卫" },
     { regex: /^([\d.]+)% reduced Charges per use$/i, replace: "每次使用消耗的充能降低 $1%" },
     { regex: /^([\d.]+)% increased Charm Charges gained$/i, replace: "咒符获得的充能提高 $1%" },
@@ -1079,6 +1088,9 @@ function translateSingleMod(line) {
     { regex: /^Wand or Staff: (.+)$/i, replace: "魔杖或长杖：$1" },
     { regex: /^Bonded: Archon recovery period expires ([\d.]+)% faster$/i, replace: "羁绊：执政官恢复期结束速度加快 $1%" },
     { regex: /^Bonded: ([\d.]+)% increased Magnitude of Shock you inflict$/i, replace: "羁绊：你施加的感电幅度提高 $1%" },
+    { regex: /^Bonded: Leeches ([\d.]+)% of maximum Life when you Cast a Spell$/i, replace: "羁绊：施放法术时偷取最大生命的 $1%" },
+    { regex: /^Bonded: ([\d.]+)% chance to gain an additional Elemental Infusion of the same type when gaining Elemental Infusion$/i, replace: "羁绊：获得元素注能时，有 $1% 几率额外获得一个相同类型的元素注能" },
+    { regex: /^Bonded: Spell Critical Hits Break Armour equal to ([\d.]+)% of Physical Damage dealt$/i, replace: "羁绊：法术暴击粉碎护甲，数值等于造成物理伤害的 $1%" },
   ];
 
   for (const pattern of customPatterns) {

@@ -47,6 +47,32 @@ function loadDicts() {
 // 首次加载
 loadDicts();
 
+function normalizeLookupKey(value) {
+  return String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '');
+}
+
+function findDictEntryByNormalizedKey(dict, rawKey) {
+  const normalizedRawKey = normalizeLookupKey(rawKey);
+  if (!normalizedRawKey) return null;
+  if (dict[rawKey]) return dict[rawKey];
+
+  for (const [key, value] of Object.entries(dict)) {
+    const normalizedKey = normalizeLookupKey(key);
+    if (
+      normalizedKey === normalizedRawKey ||
+      normalizedKey.includes(normalizedRawKey) ||
+      normalizedRawKey.includes(normalizedKey)
+    ) {
+      return value;
+    }
+  }
+  return null;
+}
+
 /**
  * 翻译物品名称
  */
@@ -55,29 +81,17 @@ function translateItemName(itemName, baseType, frameType) {
 
   // 传奇物品 (frameType === 3)
   if (frameType === 3) {
-    const uniqueInfo = dictUnique[itemName];
+    const uniqueInfo = findDictEntryByNormalizedKey(dictUnique, itemName);
     if (uniqueInfo) {
       return typeof uniqueInfo === 'string' ? uniqueInfo : (uniqueInfo.cn || itemName);
-    }
-    // 模糊匹配
-    for (const [key, value] of Object.entries(dictUnique)) {
-      if (key.toLowerCase() === itemName.toLowerCase()) {
-        return typeof value === 'string' ? value : (value.cn || itemName);
-      }
     }
     return itemName;
   }
 
   // 普通物品 - 翻译基底类型
   const searchName = baseType || itemName;
-  if (dictBase[searchName]) return dictBase[searchName];
-
-  // 模糊匹配
-  for (const [key, value] of Object.entries(dictBase)) {
-    if (key.toLowerCase() === searchName.toLowerCase()) {
-      return value;
-    }
-  }
+  const baseInfo = findDictEntryByNormalizedKey(dictBase, searchName);
+  if (baseInfo) return baseInfo;
 
   return itemName;
 }

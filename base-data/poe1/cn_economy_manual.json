@@ -1,0 +1,52 @@
+{
+  "enabled": false,
+  "_notes": [
+    "POE1 国服核心通货人工校准入口。",
+    "只有当你人工核验国服公开行情后，才把 enabled 改为 true，并给具体 item 填入 chaosValue。",
+    "脚本会优先使用这里的同名物品覆盖自动源，禁止使用国际服比例冒充国服。"
+  ],
+  "source": {
+    "name": "人工校验国服通货",
+    "url": "",
+    "note": "请填写人工核验来源，例如官方市集、公开榜单或截图记录。"
+  },
+  "league": {
+    "name": "s30",
+    "displayName": "永火之咒"
+  },
+  "items": [
+    {
+      "enabled": false,
+      "name": "神圣石",
+      "nameEn": "Divine Orb",
+      "category": "通货",
+      "categoryId": "currency",
+      "chaosValue": 0,
+      "change7d": 0,
+      "volume": 0,
+      "icon": ""
+    },
+    {
+      "enabled": false,
+      "name": "混沌石",
+      "nameEn": "Chaos Orb",
+      "category": "通货",
+      "categoryId": "currency",
+      "chaosValue": 1,
+      "change7d": 0,
+      "volume": 0,
+      "icon": ""
+    },
+    {
+      "enabled": false,
+      "name": "崇高石",
+      "nameEn": "Exalted Orb",
+      "category": "通货",
+      "categoryId": "currency",
+      "chaosValue": 0,
+      "change7d": 0,
+      "volume": 0,
+      "icon": ""
+    }
+  ]
+}

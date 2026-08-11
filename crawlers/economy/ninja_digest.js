@@ -515,11 +515,17 @@ async function runNinjaEconomyDigest(options = {}) {
   }
 
   const allItems = categories.flatMap(category => category.items);
+  const currencyCategory = categories.find(category => category.type === 'Currency');
+  if (!allItems.length || !currencyCategory || !currencyCategory.items.length) {
+    throw new Error(
+      `poe.ninja 经济数据为空，已停止生成，避免覆盖线上有效数据。league=${league.name || league.displayName || league.url}`
+    );
+  }
+
   const selectedItems = dedupeItems(Object.values(buildSections(allItems)).flat());
   const iconStats = await downloadIcons(allItems, outputDir);
   console.log(`   图标: ${iconStats.total} 个国际服物品，新增保存 ${iconStats.saved} 个`);
 
-  const currencyCategory = categories.find(category => category.type === 'Currency');
   const coreRates = currencyCategory && currencyCategory.core && currencyCategory.core.rates
     ? {
         divineToExalted: round(currencyCategory.core.rates.exalted, 2),

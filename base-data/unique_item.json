@@ -3118,5 +3118,21 @@
     "desc": "地图首领额外具有 1 个词缀",
     "img": "https://cdn.poe2db.tw/image/Art/2DItems/Currency/PrecursorTablets/PrecursorTabletOverseerUnique2.webp",
     "type": "unique_item"
+  },
+  {
+    "en": "Kalandra's Touch",
+    "cn": "卡兰德之触",
+    "base": "戒指",
+    "desc": "映射另一枚戒指",
+    "img": "https://cdn.poe2db.tw/image/Art/2DItems/Rings/MirrorRing.webp",
+    "type": "unique_item"
+  },
+  {
+    "en": "Runeseeker's Call",
+    "cn": "符文猎手的呼唤",
+    "base": "符文之叉",
+    "desc": "只能镶嵌符文，并提高镶嵌符文效果",
+    "img": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9VbmlxdWVzL1J1bmljRGl2aW5lciIsInciOjIsImgiOjMsInNjYWxlIjoxLCJyZWFsbSI6InBvZTIifV0/df89e6455f/RunicDiviner.png",
+    "type": "unique_item"
   }
 ]
