@@ -20,6 +20,7 @@ const SOURCE_CONFIGS = [
     url: 'https://maxroll.gg/poe',
     maxItems: 12,
     defaultTags: ['海外参考'],
+    linkIncludes: ['/poe'],
   },
   {
     id: 'maxroll_poe_builds',
@@ -29,6 +30,7 @@ const SOURCE_CONFIGS = [
     url: 'https://maxroll.gg/poe/build-guides',
     maxItems: 24,
     defaultTags: ['海外参考', '抄BD', '开荒'],
+    linkIncludes: ['/poe'],
   },
   {
     id: 'maxroll_poe_currency',
@@ -38,6 +40,47 @@ const SOURCE_CONFIGS = [
     url: 'https://maxroll.gg/poe/category/currency',
     maxItems: 16,
     defaultTags: ['海外参考', '看行情'],
+    linkIncludes: ['/poe'],
+  },
+  {
+    id: 'maxroll_d4_news',
+    game: 'd4',
+    source: 'Maxroll Diablo 4 News',
+    sourceType: 'news_reference',
+    url: 'https://maxroll.gg/d4/news',
+    maxItems: 18,
+    defaultTags: ['海外参考', '新闻资讯', '热点信息', '暗黑破坏神'],
+    linkIncludes: ['/d4/news'],
+  },
+  {
+    id: 'maxroll_d4_home',
+    game: 'd4',
+    source: 'Maxroll Diablo 4',
+    sourceType: 'overseas_reference',
+    url: 'https://maxroll.gg/d4',
+    maxItems: 12,
+    defaultTags: ['海外参考', '热点信息', '暗黑破坏神'],
+    linkIncludes: ['/d4'],
+  },
+  {
+    id: 'wowhead_wow_news',
+    game: 'wow',
+    source: 'Wowhead WoW News',
+    sourceType: 'news_reference',
+    url: 'https://www.wowhead.com/news',
+    maxItems: 24,
+    defaultTags: ['海外参考', '新闻资讯', '热点信息', '魔兽世界'],
+    linkIncludes: ['/news'],
+  },
+  {
+    id: 'blizzard_wow_news',
+    game: 'wow',
+    source: 'Blizzard WoW News',
+    sourceType: 'official_news',
+    url: 'https://worldofwarcraft.blizzard.com/en-us/news',
+    maxItems: 16,
+    defaultTags: ['官方资讯', '新闻资讯', '热点信息', '魔兽世界'],
+    linkIncludes: ['/news'],
   },
 ];
 
@@ -65,6 +108,17 @@ const TERM_MAP = [
   ['Scion', '贵族'],
   ['Last Updated', '更新'],
   ['Path of Exile', '流放之路'],
+  ['Diablo IV', '暗黑破坏神4'],
+  ['Diablo 4', '暗黑破坏神4'],
+  ['World of Warcraft', '魔兽世界'],
+  ['WoW', '魔兽世界'],
+  ['News', '新闻'],
+  ['Patch Notes', '补丁说明'],
+  ['Patch', '补丁'],
+  ['Hotfixes', '热修'],
+  ['Hotfix', '热修'],
+  ['Season', '赛季'],
+  ['Midnight', '至暗之夜'],
 ];
 
 const TAG_RULES = [
@@ -73,9 +127,15 @@ const TAG_RULES = [
   { tag: '看行情', keywords: ['currency', 'farming', '通货', '行情', '搬砖'] },
   { tag: '解卡点', keywords: ['boss', 'mechanic', 'guide', '升华', '剧情', '异界', '卡点'] },
   { tag: '赛季', keywords: ['league', 'season', '3.29', 'allflame', '赛季'] },
+  { tag: '新闻资讯', keywords: ['news', 'announcement', 'announced', 'revealed', 'release', 'patch notes', '新闻', '公告', '发布'] },
+  { tag: '热点信息', keywords: ['hotfix', 'patch', 'ptr', 'buff', 'nerf', 'tier list', 'meta', 'campfire', '热点', '热修', '补丁', '改动'] },
+  { tag: '暗黑破坏神', keywords: ['diablo', '暗黑', 'd4'] },
+  { tag: '魔兽世界', keywords: ['wow', 'world of warcraft', 'warcraft', '魔兽'] },
 ];
 
 const MINIAPP_MAP = [
+  { page: '新闻资讯', keywords: ['新闻资讯', '新闻', '公告', 'news', 'announcement', 'revealed', 'release'] },
+  { page: '热点信息', keywords: ['热点信息', '热点', 'hotfix', 'patch', 'update', 'ptr', 'buff', 'nerf', 'meta', 'tier list'] },
   { page: '抄BD', keywords: ['开荒', '抄BD', '技能', '流派', 'build', 'league starter'] },
   { page: '看行情', keywords: ['看行情', '通货', 'currency', 'farming'] },
   { page: '解卡点', keywords: ['解卡点', 'boss', 'mechanic', '升华', '剧情', '异界'] },
@@ -96,6 +156,16 @@ const MINIAPP_PAGE_INFO = {
     pillar: '解卡点',
     status: 'existing',
     routeHint: '流放急救箱、剧情/升华/异界排查条目',
+  },
+  新闻资讯: {
+    pillar: '新闻资讯',
+    status: 'content',
+    routeHint: '公众号、头条号、论坛帖；写作前用官方公告或一手来源核验',
+  },
+  热点信息: {
+    pillar: '热点信息',
+    status: 'content',
+    routeHint: '公众号、头条号、论坛帖；适合做版本热点、改动解读和玩家讨论跟踪',
   },
   内容观察: {
     pillar: '内容观察',
@@ -182,6 +252,8 @@ function getMiniappInfo(page) {
 }
 
 function summarizeAngle(title, tags) {
+  if (tags.includes('新闻资讯')) return '适合整理成资讯快讯，注意核验发布时间、服务器和版本差异';
+  if (tags.includes('热点信息')) return '适合做热点追踪或改动解读，先判断国内玩家是否关心';
   if (tags.includes('开荒')) return '新赛季开荒选择与抄 BD 需求';
   if (tags.includes('看行情')) return '玩家关心通货变化、搬砖收益和物价波动';
   if (tags.includes('解卡点')) return '玩家遇到机制、Boss、剧情或升华卡点';
@@ -197,9 +269,13 @@ function scoreTopic(topic) {
     build: tags.includes('抄BD') ? 20 : 0,
     economy: tags.includes('看行情') ? 15 : 0,
     rescue: tags.includes('解卡点') ? 15 : 0,
+    news: tags.includes('新闻资讯') ? 20 : 0,
+    hot: tags.includes('热点信息') ? 18 : 0,
     season: tags.includes('赛季') ? 10 : 0,
-    domesticForum: topic.sourceType === 'forum' && (topic.game === 'poe1' || topic.game === 'poe2') ? 15 : 0,
+    domesticForum: topic.sourceType === 'forum' ? 15 : 0,
     overseasReference: topic.sourceType === 'overseas_reference' ? 5 : 0,
+    newsReference: topic.sourceType === 'news_reference' ? 8 : 0,
+    officialNews: topic.sourceType === 'official_news' ? 12 : 0,
     publishedAt: topic.publishedAt ? 5 : 0,
   };
   const total = Object.values(breakdown).reduce((sum, value) => sum + value, 0);
@@ -229,14 +305,37 @@ function extractLinks(html, source) {
     const url = normalizeUrl(match[1], source.url);
     const text = cleanText(match[2]);
     if (!url || seen.has(url)) continue;
-    if (!url.includes('/poe')) continue;
+    const linkIncludes = Array.isArray(source.linkIncludes) && source.linkIncludes.length ? source.linkIncludes : ['/poe'];
+    if (!linkIncludes.some(fragment => url.toLowerCase().includes(String(fragment).toLowerCase()))) continue;
     if (text.length < 8 || text.length > 220) continue;
-    if (/^(home|all|tools|store|news|path of exile)$/i.test(text)) continue;
+    if (isGenericNavText(text)) continue;
     seen.add(url);
     links.push({ url, title: text });
     if (links.length >= source.maxItems) break;
   }
   return links;
+}
+
+function isGenericNavText(text) {
+  const normalized = String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
+  if (/^(home|all|tools|store|news|path of exile|path of exile 2 arpg|path of exile arpg|diablo iv|world of warcraft)$/i.test(normalized)) {
+    return true;
+  }
+  if (
+    /^(build guides|bosses|currency|league starter|league starters|leveling|maxroll planners|community planners|atlas tree|passive tree|genesis tree|pob import\/export|tier lists|resources|database|planner)( \1)?$/i.test(
+      normalized
+    )
+  ) {
+    return true;
+  }
+  const parts = normalized.split(' ');
+  if (parts.length % 2 === 0) {
+    const half = parts.length / 2;
+    const first = parts.slice(0, half).join(' ');
+    const second = parts.slice(half).join(' ');
+    if (first === second) return true;
+  }
+  return false;
 }
 
 function extractPageMeta(html) {
@@ -257,7 +356,7 @@ function createTopic(source, item, index) {
     game: source.game,
     source: source.source,
     sourceType: source.sourceType,
-    lang: source.sourceType === 'overseas_reference' ? 'en' : 'zh',
+    lang: source.lang || (source.sourceType === 'overseas_reference' || source.sourceType === 'news_reference' || source.sourceType === 'official_news' ? 'en' : 'zh'),
     title: item.title,
     titleCn,
     url: item.url,
@@ -351,9 +450,10 @@ function createForumSourceReports() {
 }
 
 function createForumTopic(report) {
-  const tags = ['论坛', '解卡点'];
+  const tags = ['论坛', '解卡点', '热点信息'];
   if (report.game === 'poe2' || report.game === 'poe1') tags.push('抄BD');
-  const miniappPage = report.game === 'poe2' || report.game === 'poe1' ? '解卡点' : '内容观察';
+  if (report.game === 'd4') tags.push('暗黑破坏神');
+  const miniappPage = report.game === 'poe2' || report.game === 'poe1' ? '解卡点' : '热点信息';
   return {
     id: `${report.id}_summary`,
     game: report.game,
@@ -409,7 +509,27 @@ function countBy(items, getKey) {
 }
 
 function createActionItems(topics) {
-  return topics.slice(0, 10).map(topic => ({
+  const directions = ['新闻资讯', '热点信息', '抄BD', '看行情', '解卡点', '内容观察'];
+  const selected = [];
+  const seen = new Set();
+
+  for (const direction of directions) {
+    const matches = topics.filter(topic => (topic.signals?.miniappPage || '内容观察') === direction).slice(0, 2);
+    for (const topic of matches) {
+      if (seen.has(topic.stableId)) continue;
+      seen.add(topic.stableId);
+      selected.push(topic);
+    }
+  }
+
+  for (const topic of topics) {
+    if (selected.length >= 12) break;
+    if (seen.has(topic.stableId)) continue;
+    seen.add(topic.stableId);
+    selected.push(topic);
+  }
+
+  return selected.slice(0, 12).map(topic => ({
     title: topic.titleCn || topic.title,
     source: topic.source,
     url: topic.url,
@@ -418,8 +538,16 @@ function createActionItems(topics) {
     miniappPage: topic.signals?.miniappPage || '内容观察',
     routeHint: topic.signals?.miniapp?.routeHint || '',
     articleAngle: topic.signals?.articleAngle || '',
-    verify: topic.sourceType === 'overseas_reference' ? '核验国服适用性和版本差异' : '打开原帖核验玩家真实问题',
+    verify: getVerifyText(topic),
   }));
+}
+
+function getVerifyText(topic) {
+  if (topic.sourceType === 'official_news') return '核验官方原文、发布时间和国服适用性';
+  if (topic.sourceType === 'news_reference') return '核验资讯来源时间、版本和官方出处';
+  if (topic.sourceType === 'overseas_reference') return '核验国服适用性和版本差异';
+  if (topic.sourceType === 'forum') return '打开原帖核验玩家真实问题';
+  return '写作前核验版本、数值和来源';
 }
 
 function createHistorySnapshot(output) {
@@ -524,7 +652,7 @@ function createMarkdown(output) {
     lines.push('');
   }
 
-  const groups = ['抄BD', '看行情', '解卡点', '内容观察'];
+  const groups = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
   for (const group of groups) {
     const items = output.topics.filter(topic => topic.signals?.miniappPage === group).slice(0, 8);
     if (!items.length) continue;
@@ -542,7 +670,7 @@ function createMarkdown(output) {
 async function main() {
   const sourceReports = createForumSourceReports();
   const topics = sourceReports
-    .filter(report => report.type === 'forum' && (report.game === 'poe1' || report.game === 'poe2'))
+    .filter(report => report.type === 'forum')
     .map(createForumTopic);
 
   for (const source of SOURCE_CONFIGS) {

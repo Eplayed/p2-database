@@ -239,7 +239,9 @@ function renderTasks() {
         : '';
       return `最近研究：${escapeHtml(contentSummary.status)} · 选题 ${counters.topics || 0} 个 · 来源 ${counters.sources || 0} 个 · 抄BD ${
         byMiniappPage['抄BD'] || 0
-      } / 看行情 ${byMiniappPage['看行情'] || 0} / 解卡点 ${byMiniappPage['解卡点'] || 0}<br />${sourceText}${topicText} · ${formatTime(
+      } / 看行情 ${byMiniappPage['看行情'] || 0} / 解卡点 ${byMiniappPage['解卡点'] || 0} / 资讯 ${
+        byMiniappPage['新闻资讯'] || 0
+      } / 热点 ${byMiniappPage['热点信息'] || 0}<br />${sourceText}${topicText} · ${formatTime(
         contentSummary.generatedAt
       )}${exportText}`;
     }
@@ -314,9 +316,21 @@ function getTopicArticleAngle(topic) {
 
 function getTopicVerifyText(topic) {
   if (topic?.verify) return topic.verify;
+  if (topic?.sourceType === 'official_news') return '核验官方原文、发布时间和国服适用性';
+  if (topic?.sourceType === 'news_reference') return '核验资讯来源时间、版本和官方出处';
   if (topic?.sourceType === 'overseas_reference') return '核验国服适用性和版本差异';
   if (topic?.sourceType === 'forum') return '打开原帖核验玩家真实问题';
   return '写作前核验版本、数值和来源';
+}
+
+function getGameLabel(game) {
+  const labels = {
+    poe1: 'POE1',
+    poe2: 'POE2',
+    d4: '暗黑破坏神',
+    wow: '魔兽世界',
+  };
+  return labels[game] || String(game || '-').toUpperCase();
 }
 
 function createTopicUrl(topic) {
@@ -334,7 +348,7 @@ function renderActionItem(item, index) {
         <p>${escapeHtml(item.articleAngle || '')}</p>
         <div class="research-meta-line">
           <span>${escapeHtml(item.miniappPage || '内容观察')}</span>
-          <span>${escapeHtml(item.game || '-')}</span>
+          <span>${escapeHtml(getGameLabel(item.game))}</span>
           <strong>${Number(item.score || 0)} 分</strong>
           ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">来源</a>` : ''}
         </div>
@@ -386,7 +400,7 @@ function renderTopicRow(topic) {
         </div>
         <p>${escapeHtml(getTopicArticleAngle(topic))}</p>
         <div class="research-meta-line">
-          <span>${escapeHtml(topic.game || '-')}</span>
+          <span>${escapeHtml(getGameLabel(topic.game))}</span>
           <span>${escapeHtml(topic.source || '-')}</span>
           <span>${escapeHtml(getTopicVerifyText(topic))}</span>
           ${createTopicUrl(topic)}
@@ -418,7 +432,7 @@ function renderContentResearchBoard() {
     .filter(topic => selectedPillar === 'all' || getTopicPillar(topic) === selectedPillar)
     .filter(topic => selectedGame === 'all' || topic.game === selectedGame)
     .slice(0, 16);
-  const pillars = ['抄BD', '看行情', '解卡点', '内容观察'];
+  const pillars = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
   const byPillar = research.byMiniappPage || {};
   const counters = research.counters || {};
   const trend = research.trend || {};
@@ -469,16 +483,16 @@ function renderContentResearchBoard() {
     <section class="research-section">
       <div class="research-section-head">
         <h3>今天优先写</h3>
-        <span>先从高分、能承接小程序入口的选题开始</span>
+        <span>先从高分、可写成文章或能承接小程序入口的选题开始</span>
       </div>
       <div class="research-action-grid">
-        ${actionItems.slice(0, 4).map(renderActionItem).join('') || '<p class="content-research-empty">暂无优先选题</p>'}
+        ${actionItems.slice(0, 8).map(renderActionItem).join('') || '<p class="content-research-empty">暂无优先选题</p>'}
       </div>
     </section>
     <section class="research-section">
       <div class="research-section-head">
-        <h3>三条主线</h3>
-        <span>只服务抄BD、看行情、解卡点</span>
+        <h3>内容方向</h3>
+        <span>工具入口与自媒体选题一起看</span>
       </div>
       <div class="research-pillar-grid">
         ${pillars.map(pillar => renderResearchPillarCard(pillar, byPillar[pillar] || [])).join('')}
@@ -487,8 +501,8 @@ function renderContentResearchBoard() {
     <section class="research-section">
       <div class="research-section-head">
         <h3>筛选结果</h3>
-        <span>${filteredTopics.length} 条 · ${selectedPillar === 'all' ? '全部主线' : selectedPillar} · ${
-          selectedGame === 'all' ? '全部游戏' : selectedGame.toUpperCase()
+        <span>${filteredTopics.length} 条 · ${selectedPillar === 'all' ? '全部方向' : selectedPillar} · ${
+          selectedGame === 'all' ? '全部游戏' : getGameLabel(selectedGame)
         }</span>
       </div>
       <div class="research-topic-list">

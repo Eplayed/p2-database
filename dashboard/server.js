@@ -49,7 +49,7 @@ const TASKS = [
   {
     id: 'forum_content_scan',
     name: '更新论坛选题池',
-    description: '采集现有论坛选题池，并补充 POE1/POE2 内容研究摘要：国内论坛负责玩家问题，Maxroll 作为海外参考源。只用于自媒体选题和小程序策略，不上传 OSS，不进入小程序日常发布。',
+    description: '采集现有论坛选题池，并补充 POE1/POE2、暗黑破坏神、魔兽世界的资讯和热点参考。只用于自媒体选题和小程序策略，不上传 OSS，不进入小程序日常发布。',
     group: 'content_research',
     localOnly: true,
     command: ['bash', ['scripts/run_forum_content_scan.sh']],

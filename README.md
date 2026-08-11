@@ -126,7 +126,7 @@ npm run poe1:publish
 
 Dashboard 中也提供 `更新 POE1 抄 BD / 看行情` 一键任务，按“国服官方天梯 -> 官方入门流派 -> 玩家开荒 BD -> 开荒术语匹配 -> 剧情跑图导航 -> 天赋树截图 -> 国际服经济摘要 -> 国服行情接口 -> POE1 专用 OSS 上传”执行；它与 POE2 的日常/天梯任务相互隔离。
 
-内容研究跑完后，Dashboard 会显示“内容研究看板”，可按 `抄BD / 看行情 / 解卡点` 和 `POE1 / POE2` 筛选；Markdown 选题清单会导出到 `dashboard/runtime/content-research-topics.md`，仅供自媒体和产品策略使用，不上传 OSS。
+内容研究跑完后，Dashboard 会显示“内容研究看板”，可按 `抄BD / 看行情 / 解卡点 / 新闻资讯 / 热点信息` 和 `POE1 / POE2 / 暗黑破坏神 / 魔兽世界` 筛选；Markdown 选题清单会导出到 `dashboard/runtime/content-research-topics.md`，仅供自媒体和产品策略使用，不上传 OSS。
 
 ## 当前关键产物
 
@@ -227,7 +227,7 @@ translated-data/poe1/release/miniprogram_data/
 - `crawlers/economy/ninja_digest.js`：新经济物品中文映射。
 - `base-data/problem-guides/*.json`：流放急救箱问题、排查项和跳转入口。
 - `base-data/miniprogram_config/feature_survey.json`：功能调研问题与选项；赛季末通过 Dashboard 的“小程序功能调研”开关同步到 OSS。
-- `crawlers/content-research/build_topics.js`：内容研究选题池来源、标签和小程序承接方向；Maxroll 等海外来源只做参考，不搬运全文。
+- `crawlers/content-research/build_topics.js`：内容研究选题池来源、标签和文章/小程序承接方向；Maxroll、Wowhead、Blizzard 等外部来源只做参考，不搬运全文。
 - OSS 密钥与微信合法域名。
 
 历史保留但当前不维护：
