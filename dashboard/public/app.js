@@ -7,9 +7,15 @@ const state = {
   automation: {
     enabled: false,
     taskId: 'daily_publish',
+    taskIds: ['daily_publish'],
     intervalMinutes: 120,
     jitterMinutes: 10,
     nextRunAt: 0,
+  },
+  automationRunner: {
+    running: false,
+    currentIndex: -1,
+    total: 0,
   },
   countdown: null,
 };
@@ -25,6 +31,8 @@ const scrollLogBottomBtn = document.querySelector('#scrollLogBottomBtn');
 const refreshBtn = document.querySelector('#refreshBtn');
 const stopBtn = document.querySelector('#stopBtn');
 const automationTaskSelect = document.querySelector('#automationTaskSelect');
+const automationAddTaskBtn = document.querySelector('#automationAddTaskBtn');
+const automationQueueList = document.querySelector('#automationQueueList');
 const automationIntervalInput = document.querySelector('#automationIntervalInput');
 const automationJitterInput = document.querySelector('#automationJitterInput');
 const automationSaveBtn = document.querySelector('#automationSaveBtn');
@@ -92,6 +100,10 @@ function clampNumber(value, min, fallback) {
   const number = Number(value);
   if (!Number.isFinite(number)) return fallback;
   return Math.max(min, number);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => window.setTimeout(resolve, ms));
 }
 
 function statusClass(run) {
@@ -603,9 +615,12 @@ async function runTask(taskId, options = {}) {
     logTitle.textContent = `${data.run.taskName} · ${data.run.environment} · 启动中`;
     logOutput.textContent = '任务已启动，等待日志输出...';
     await loadStatus();
+    return data.run;
   } catch (error) {
     window.alert(error.message);
+    throw error;
   }
+  return null;
 }
 
 function loadAutomationSettings() {
@@ -616,6 +631,7 @@ function loadAutomationSettings() {
     state.automation = {
       ...state.automation,
       ...saved,
+      taskIds: normalizeAutomationTaskIds(saved.taskIds || (saved.taskId ? [saved.taskId] : [])),
       intervalMinutes: clampNumber(saved.intervalMinutes, 10, 120),
       jitterMinutes: clampNumber(saved.jitterMinutes, 0, 10),
       nextRunAt: Number(saved.nextRunAt) || 0,
@@ -629,22 +645,128 @@ function saveAutomationSettings() {
   window.localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automation));
 }
 
+function getSchedulableTasks() {
+  return state.tasks.filter(task => task.id);
+}
+
+function normalizeAutomationTaskIds(taskIds) {
+  const ids = Array.isArray(taskIds) ? taskIds : [];
+  const seen = new Set();
+  const normalized = ids
+    .map(id => String(id || ''))
+    .filter(Boolean)
+    .filter(id => {
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    });
+  return normalized.length ? normalized : ['daily_publish'];
+}
+
+function getAutomationQueue() {
+  const availableIds = new Set(getSchedulableTasks().map(task => task.id));
+  const queue = normalizeAutomationTaskIds(state.automation.taskIds).filter(taskId => availableIds.has(taskId));
+  if (!queue.length && getSchedulableTasks()[0]) queue.push(getSchedulableTasks()[0].id);
+  state.automation.taskIds = queue;
+  state.automation.taskId = queue[0] || state.automation.taskId;
+  return queue;
+}
+
 function renderAutomationTaskOptions() {
   if (!automationTaskSelect) return;
-  const schedulableTasks = state.tasks.filter(task => !task.localOnly);
+  const schedulableTasks = getSchedulableTasks();
   automationTaskSelect.innerHTML = schedulableTasks
     .map(task => `<option value="${task.id}">${task.name}</option>`)
     .join('');
+  getAutomationQueue();
   if (schedulableTasks.some(task => task.id === state.automation.taskId)) {
     automationTaskSelect.value = state.automation.taskId;
   } else if (schedulableTasks[0]) {
     state.automation.taskId = schedulableTasks[0].id;
     automationTaskSelect.value = state.automation.taskId;
   }
+  renderAutomationQueue();
 }
 
 function getAutomationTask() {
   return state.tasks.find(task => task.id === state.automation.taskId);
+}
+
+function renderAutomationQueue() {
+  if (!automationQueueList) return;
+  const queue = getAutomationQueue();
+  const currentRun = state.status && state.status.currentRun;
+  const disabled = state.automationRunner.running || Boolean(currentRun);
+  automationQueueList.innerHTML =
+    queue
+      .map((taskId, index) => {
+        const task = state.tasks.find(item => item.id === taskId);
+        if (!task) return '';
+        const isCurrent = state.automationRunner.running && state.automationRunner.currentIndex === index;
+        return `
+          <li class="automation-queue-item ${isCurrent ? 'running' : ''}" draggable="${disabled ? 'false' : 'true'}" data-index="${index}">
+            <span class="drag-handle" aria-hidden="true">☰</span>
+            <span class="queue-index">${index + 1}</span>
+            <div class="queue-copy">
+              <strong>${escapeHtml(task.name)}</strong>
+              <small>${task.localOnly ? '本地内容研究' : Array.isArray(task.steps) ? '流程任务' : '脚本任务'}</small>
+            </div>
+            <button class="queue-remove-btn" data-index="${index}" ${disabled || queue.length <= 1 ? 'disabled' : ''}>移除</button>
+          </li>
+        `;
+      })
+      .join('');
+
+  automationQueueList.querySelectorAll('.queue-remove-btn').forEach(button => {
+    button.addEventListener('click', () => removeAutomationTask(Number(button.dataset.index)));
+  });
+  automationQueueList.querySelectorAll('.automation-queue-item').forEach(item => {
+    item.addEventListener('dragstart', event => {
+      event.dataTransfer.setData('text/plain', item.dataset.index);
+      item.classList.add('dragging');
+    });
+    item.addEventListener('dragend', () => item.classList.remove('dragging'));
+    item.addEventListener('dragover', event => event.preventDefault());
+    item.addEventListener('drop', event => {
+      event.preventDefault();
+      const fromIndex = Number(event.dataTransfer.getData('text/plain'));
+      const toIndex = Number(item.dataset.index);
+      reorderAutomationTask(fromIndex, toIndex);
+    });
+  });
+}
+
+function addAutomationTask() {
+  const taskId = automationTaskSelect.value;
+  if (!taskId) return;
+  state.automation.taskIds = normalizeAutomationTaskIds([...getAutomationQueue(), taskId]);
+  state.automation.taskId = state.automation.taskIds[0];
+  saveAutomationSettings();
+  renderAutomationQueue();
+  updateAutomationUi();
+}
+
+function removeAutomationTask(index) {
+  const queue = getAutomationQueue();
+  if (queue.length <= 1) return;
+  queue.splice(index, 1);
+  state.automation.taskIds = normalizeAutomationTaskIds(queue);
+  state.automation.taskId = state.automation.taskIds[0];
+  saveAutomationSettings();
+  renderAutomationQueue();
+  updateAutomationUi();
+}
+
+function reorderAutomationTask(fromIndex, toIndex) {
+  const queue = getAutomationQueue();
+  if (fromIndex === toIndex || fromIndex < 0 || toIndex < 0 || fromIndex >= queue.length || toIndex >= queue.length) return;
+  const [moved] = queue.splice(fromIndex, 1);
+  queue.splice(toIndex, 0, moved);
+  state.automation.taskIds = normalizeAutomationTaskIds(queue);
+  state.automation.taskId = state.automation.taskIds[0];
+  saveAutomationSettings();
+  renderAutomationQueue();
+  updateAutomationUi();
 }
 
 function computeNextRunAt(from = Date.now()) {
@@ -662,19 +784,30 @@ function syncAutomationForm() {
 }
 
 function updateAutomationUi() {
-  const task = getAutomationTask();
+  const queue = getAutomationQueue();
+  const queueNames = queue
+    .map(taskId => state.tasks.find(task => task.id === taskId)?.name || taskId)
+    .join(' -> ');
   automationToggleBtn.textContent = state.automation.enabled ? '关闭自动运行' : '开启自动运行';
   automationToggleBtn.classList.toggle('active', state.automation.enabled);
-  automationStatusText.textContent = state.automation.enabled
-    ? `已开启：${task ? task.name : state.automation.taskId}`
-    : '未开启';
+  const currentRun = state.status && state.status.currentRun;
+  const queueEditingDisabled = state.automationRunner.running || Boolean(currentRun);
+  automationTaskSelect.disabled = queueEditingDisabled;
+  automationAddTaskBtn.disabled = queueEditingDisabled;
+  automationStatusText.textContent = state.automationRunner.running
+    ? `队列运行中：${state.automationRunner.currentIndex + 1}/${state.automationRunner.total}`
+    : state.automation.enabled
+      ? `已开启：${queue.length} 个任务`
+      : '未开启';
   automationNextText.textContent = state.automation.enabled
-    ? `下次：${formatDateTime(state.automation.nextRunAt)}`
+    ? `下次：${formatDateTime(state.automation.nextRunAt)} · ${queueNames || '-'}`
     : '下次：-';
+  renderAutomationQueue();
 }
 
 function applyAutomationForm() {
   state.automation.taskId = automationTaskSelect.value || state.automation.taskId;
+  state.automation.taskIds = getAutomationQueue();
   state.automation.intervalMinutes = clampNumber(automationIntervalInput.value, 10, 120);
   state.automation.jitterMinutes = clampNumber(automationJitterInput.value, 0, 10);
   if (state.automation.enabled) state.automation.nextRunAt = computeNextRunAt();
@@ -691,8 +824,11 @@ function toggleAutomation() {
   updateAutomationUi();
 }
 
-function getAutomationMessage(task) {
-  return '倒计时结束后会自动运行该任务；如不想执行，可以取消本次。';
+function getAutomationMessage(queue) {
+  const names = queue
+    .map(taskId => state.tasks.find(task => task.id === taskId)?.name || taskId)
+    .join(' -> ');
+  return `倒计时结束后会按顺序运行：${names}。如不想执行，可以取消本次。`;
 }
 
 function closeCountdown() {
@@ -702,20 +838,18 @@ function closeCountdown() {
 }
 
 async function executeCountdownTask() {
-  const taskId = state.countdown && state.countdown.taskId;
+  const taskIds = state.countdown && state.countdown.taskIds;
   closeCountdown();
-  if (!taskId) return;
-  await runTask(taskId, { skipConfirm: true });
-  state.automation.nextRunAt = computeNextRunAt();
-  saveAutomationSettings();
-  updateAutomationUi();
+  if (!taskIds || !taskIds.length) return;
+  await executeAutomationQueue(taskIds);
 }
 
-function startAutomationCountdown(task) {
-  if (!task || state.countdown) return;
+function startAutomationCountdown(taskIds) {
+  const queue = taskIds && taskIds.length ? taskIds : getAutomationQueue();
+  if (!queue.length || state.countdown) return;
   let seconds = 5;
-  countdownTitle.textContent = `即将运行：${task.name}`;
-  countdownMessage.textContent = getAutomationMessage(task);
+  countdownTitle.textContent = `即将运行自动队列（${queue.length} 个任务）`;
+  countdownMessage.textContent = getAutomationMessage(queue);
   countdownNumber.textContent = seconds;
   countdownMask.hidden = false;
 
@@ -726,7 +860,7 @@ function startAutomationCountdown(task) {
   }, 1000);
 
   state.countdown = {
-    taskId: task.id,
+    taskIds: queue,
     timer,
   };
 }
@@ -748,6 +882,7 @@ function tickAutomation() {
     return;
   }
   if (Date.now() < state.automation.nextRunAt) return;
+  if (state.automationRunner.running) return;
 
   const currentRun = state.status && state.status.currentRun;
   if (currentRun) {
@@ -757,7 +892,67 @@ function tickAutomation() {
     return;
   }
 
-  startAutomationCountdown(getAutomationTask());
+  startAutomationCountdown(getAutomationQueue());
+}
+
+function findRunFromStatus(runId, taskId) {
+  const status = state.status || {};
+  const history = (status.state && status.state.history) || [];
+  const fromHistory = history.find(run => run.runId === runId);
+  if (fromHistory) return fromHistory;
+  const fromRuns = status.state && status.state.runs && status.state.runs[taskId];
+  return fromRuns && fromRuns.runId === runId ? fromRuns : null;
+}
+
+async function waitForRunCompletion(runId, taskId) {
+  while (true) {
+    await sleep(2500);
+    await loadStatus();
+    const currentRun = state.status && state.status.currentRun;
+    if (currentRun && currentRun.runId === runId) continue;
+    const run = findRunFromStatus(runId, taskId);
+    if (!run) continue;
+    if (run.status === 'success') return run;
+    throw new Error(`任务「${run.taskName || taskId}」${statusText(run)}${run.error ? `：${run.error}` : ''}`);
+  }
+}
+
+async function executeAutomationQueue(taskIds) {
+  if (state.automationRunner.running) return;
+  const queue = taskIds.filter(taskId => state.tasks.some(task => task.id === taskId));
+  if (!queue.length) return;
+
+  state.automationRunner = {
+    running: true,
+    currentIndex: 0,
+    total: queue.length,
+  };
+  updateAutomationUi();
+
+  try {
+    for (let index = 0; index < queue.length; index += 1) {
+      state.automationRunner.currentIndex = index;
+      updateAutomationUi();
+      const run = await runTask(queue[index], { skipConfirm: true });
+      if (!run) throw new Error('任务未启动');
+      await waitForRunCompletion(run.runId, queue[index]);
+    }
+    state.automation.nextRunAt = computeNextRunAt();
+    logTitle.textContent = `自动队列 · ${state.env} · 完成`;
+  } catch (error) {
+    state.automation.enabled = false;
+    state.automation.nextRunAt = 0;
+    window.alert(`自动队列已中断：${error.message}`);
+  } finally {
+    state.automationRunner = {
+      running: false,
+      currentIndex: -1,
+      total: 0,
+    };
+    saveAutomationSettings();
+    updateAutomationUi();
+    await loadStatus();
+  }
 }
 
 function bindAutomation() {
@@ -768,6 +963,7 @@ function bindAutomation() {
     applyAutomationForm();
     window.alert('自动运行设置已保存');
   });
+  automationAddTaskBtn.addEventListener('click', addAutomationTask);
   automationToggleBtn.addEventListener('click', toggleAutomation);
   countdownCancelBtn.addEventListener('click', skipCurrentAutomationRun);
   countdownRunNowBtn.addEventListener('click', executeCountdownTask);
