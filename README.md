@@ -10,6 +10,7 @@
 
 - `docs/PROJECT_OVERVIEW.md`
 - `docs/DESIGN.md`
+- `docs/CONTENT_RESEARCH.md`
 - `AGENT.md`
 
 ## 当前产品决策
@@ -36,6 +37,7 @@
 - 流放急救箱：人工确认的问题排查清单，跳转到天梯、经济、清单等已有工具。
 - 翻译字典：poe2db 中文数据与人工映射。
 - poe.ninja 经济：首页轻量摘要与国际服分类通货参考；完整目录仅在用户打开国际服页时加载。
+- poe.ninja 经济生成会校验通货分类非空；抓到空数据时直接失败并停止 Dashboard 组合任务，避免覆盖线上有效行情。
 - 国服行情参考：DD373 公开样本换算。
 - 剧情地图：章节地图、点位、奖励和路线。
 
@@ -89,6 +91,9 @@ npm run build:daily-return:dev
 npm run build:follow-updates
 npm run build:follow-updates:dev
 
+# 内容研究选题池，仅本地自媒体/策略使用，不上传 OSS
+npm run research:content
+
 # 剧情地图，低频手动维护
 npm run crawl:story-guide
 npm run crawl:story-guide:upload
@@ -96,16 +101,21 @@ npm run crawl:story-guide:upload
 # 上传当前 release 产物
 NODE_ENV=production node -e "require('./auto_browser/upload_to_oss')()"
 
-# POE1 流放赛季助手：国服官方天梯 + 开荒 BD + 游戏内经济，生成后上传专用 OSS 前缀
+# POE1 流放赛季助手：国服官方天梯 + 开荒 BD + 剧情跑图 + 游戏内经济，生成后上传专用 OSS 前缀
 npm run poe1:ladder
+npm run poe1:official-starter
 npm run poe1:starter
 npm run poe1:starter:terms
+npm run poe1:story
 npm run poe1:economy
+npm run poe1:economy:cn
 npm run poe1:upload
 npm run poe1:publish
 ```
 
-Dashboard 中也提供 `更新 POE1 抄 BD / 看行情` 一键任务，按“国服官方天梯 -> 开荒 BD -> 开荒术语匹配 -> 天赋树截图 -> 经济摘要 -> POE1 专用 OSS 上传”执行；它与 POE2 的日常/天梯任务相互隔离。
+Dashboard 中也提供 `更新 POE1 抄 BD / 看行情` 一键任务，按“国服官方天梯 -> 官方入门流派 -> 玩家开荒 BD -> 开荒术语匹配 -> 剧情跑图导航 -> 天赋树截图 -> 国际服经济摘要 -> 国服行情接口 -> POE1 专用 OSS 上传”执行；它与 POE2 的日常/天梯任务相互隔离。
+
+内容研究跑完后，Dashboard 会显示“内容研究看板”，可按 `抄BD / 看行情 / 解卡点` 和 `POE1 / POE2` 筛选；Markdown 选题清单会导出到 `dashboard/runtime/content-research-topics.md`，仅供自媒体和产品策略使用，不上传 OSS。
 
 ## 当前关键产物
 
@@ -139,15 +149,19 @@ poe2-economy/cn_market_digest.json
 
 ## POE1 数据线
 
-POE1 当前服务独立小程序 `poe-mini` 的三条移动端主路径：`抄 BD`、`开荒 BD` 与 `看行情`。
+POE1 当前服务独立小程序 `poe-mini` 的四条移动端主路径：`抄 BD`、`开荒 BD`、`剧情跑图` 与 `看行情`。
 
 ```text
 translated-data/poe1/release/miniprogram_data/
 ├── ladder_digest.json       # 国服官方天梯角色、职业、主技能、装备、技能组合、关键天赋、天赋树和基础防御/DPS 摘要
+├── official_starter_builds.json # 国服官方推荐流派结构化入口，当前 S29 作为入门参考
 ├── starter_builds.json      # 人工校对 docx 生成的开荒 BD 结构化列表和详情
 ├── starter_terms_enrichment.json # 开荒 BD 技能/装备/天赋术语与国服官方天梯真实数据的匹配结果
+├── story_guide.json         # 剧情跑图导航：章节、步骤、点位、箭头和必拿/注意事项
+├── story/*.jpg              # 剧情章节地图/分镜压缩图，供小程序按需加载
 ├── passive_trees/*.jpg      # 天梯 BD 天赋树截图
-└── economy_digest.json      # 通货、碎片、精华、圣油的游戏内混沌石换算与 7 日变化
+├── economy_digest.json      # 国际服 poe.ninja：通货、碎片、精华、圣油的游戏内混沌石换算与 7 日变化
+└── cn_economy_digest.json   # 国服行情接口：DD373 S30 公开报价 + FilterEditor 公开源 + 人工校准入口，禁止混用国际服比例
 ```
 
 生产 OSS 前缀是 `poe1-season/release/miniprogram_data/`，缓存为经济 5 分钟、天梯 15 分钟。小程序读取失败时回退到本地真实快照，不应白屏。
@@ -155,18 +169,36 @@ translated-data/poe1/release/miniprogram_data/
 天梯源说明：
 
 - 主源是国服官方天梯 `https://poe.qq.com/act/a202010118poena/challenge/index.html` 公开 JSON。
-- S29 快照名为 `s29_normal`，赛季名「费西亚的遗产」。
-- S30 赛季「永火之咒」预计 2026-07-31 10:00 开放；脚本会优先尝试 `s30_normal`，官方 JSON 未开放时自动回退 S29。
+- S30 赛季「永火之咒」已开放；脚本会优先尝试 `s30_normal`，官方 JSON 未开放或数据异常时才回退历史快照。
+- S29 快照名为 `s29_normal`，赛季名「费西亚的遗产」，仅作为回退和历史参考。
 - 详情 JSON 通过官方账号与角色名哈希定位，生成时会跳过 404 或空详情，禁止因部分失败覆盖为空数据。
 
-开荒 BD 源说明：
+官方入门流派源说明：
+
+- 默认读取 `base-data/poe1/official_starter_builds_source.json`。
+- 当前来源是国服官方 S29 推荐流派活动页 `https://poe.qq.com/act/a20250711sect/`，前台必须标注为“官方入门/历史赛季参考”，不要当成当前赛季强度榜。
+- `crawlers/poe1/official_starter.js` 会校验官方活动页是否可访问，并生成 `official_starter_builds.json`。S30 官方推荐页出现后，优先替换 source URL 与结构化源内容，不需要改小程序页面结构。
+
+玩家开荒 BD 源说明：
 
 - 默认读取 `/Users/zhangyajun/Downloads/poe-bd-国服译名校对` 下的 `*.docx`。
 - 可用 `POE1_STARTER_SOURCE_DIR` 覆盖来源目录。
 - 生成器只做结构化清洗，不判定强度；新增 BD 时优先保证国服译名、职业、主技能、技能链接、装备、天赋、升华和升级流程清楚。
 - `starter_terms_enrichment.json` 是开荒 BD 真实数据增强的第一步：先抽取技能、装备、天赋和英文括注，优先匹配国服官方天梯中出现过的真实图标/标准名；未匹配项后续再进入 PoEDB 或人工映射，不直接在前台硬猜。
 
-数据边界：只展示公开游戏内数据和人工校对攻略；不抓取现实货币报价，也不提供第三方交易入口。
+剧情跑图源说明：
+
+- 默认读取 `/Users/zhangyajun/Documents/project/video2text/output/bilibili_POE_story_BV1W8411p7eX` 下的 B 站剧情整理稿和章节地图素材。
+- 可用 `POE1_STORY_SOURCE_DIR` 覆盖来源目录。
+- 第 1 章已生成地图点位和箭头；第 2-6 章已有地图图源，后续优先补点位坐标；第 7-10 章暂无独立章节地图，先使用视频分镜图和步骤导航。
+- 该数据低频维护，剧情路线大体通用；正式发布前应人工校验新赛季是否改动任务奖励、抗性惩罚和 `/passives` 天赋点检查。
+
+数据边界：只展示公开游戏内数据和人工校对攻略；不提供第三方交易入口。国服行情只作为公开行情参考，核心换算缺失时宁可显示待校准，也不能拿国际服比例冒充国服。
+
+行情源说明：
+
+- 国际服：`economy_digest.json` 来自 poe.ninja POE1 Economy API，展示游戏内混沌石比例和 7 日变化；当前 poe.ninja 返回挑战服 `Allflame`，前台中文展示为「永火之咒」。
+- 国服：`cn_economy_digest.json` 合并 DD373 S30 国服公开报价与 `https://price.filtereditor.cn/` 公开网页数据，并支持 `base-data/poe1/cn_economy_manual.json` 人工校准。`available` 表示是否有可展示行情，神圣石/混沌石等核心换算是否齐全看 `sourceHealth.coreCurrencyReady`；前台必须按来源展示，避免把国际服行情误标为国服。
 
 ## 自动化
 
@@ -184,6 +216,7 @@ translated-data/poe1/release/miniprogram_data/
 - `crawlers/economy/ninja_digest.js`：新经济物品中文映射。
 - `base-data/problem-guides/*.json`：流放急救箱问题、排查项和跳转入口。
 - `base-data/miniprogram_config/feature_survey.json`：功能调研问题与选项；赛季末通过 Dashboard 的“小程序功能调研”开关同步到 OSS。
+- `crawlers/content-research/build_topics.js`：内容研究选题池来源、标签和小程序承接方向；Maxroll 等海外来源只做参考，不搬运全文。
 - OSS 密钥与微信合法域名。
 
 历史保留但当前不维护：

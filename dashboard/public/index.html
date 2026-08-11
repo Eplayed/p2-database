@@ -84,6 +84,36 @@
         <div id="taskGrid"></div>
       </section>
 
+      <section class="panel content-research-panel" id="contentResearchPanel">
+        <div class="panel-head">
+          <div>
+            <h2>内容研究看板</h2>
+            <p>把论坛和海外参考源整理成可写文章、可承接小程序入口的选题池。</p>
+          </div>
+          <div class="panel-actions research-actions">
+            <label class="compact-field">
+              <span>主线</span>
+              <select id="researchPillarFilter">
+                <option value="all">全部</option>
+                <option value="抄BD">抄BD</option>
+                <option value="看行情">看行情</option>
+                <option value="解卡点">解卡点</option>
+                <option value="内容观察">内容观察</option>
+              </select>
+            </label>
+            <label class="compact-field">
+              <span>游戏</span>
+              <select id="researchGameFilter">
+                <option value="all">全部</option>
+                <option value="poe1">POE1</option>
+                <option value="poe2">POE2</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div id="contentResearchBoard" class="content-research-empty">还没有内容研究数据，先运行“更新论坛选题池”。</div>
+      </section>
+
       <section class="panel log-panel">
         <div class="panel-head">
           <div>

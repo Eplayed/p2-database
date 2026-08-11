@@ -13,6 +13,7 @@ const RUNTIME_DIR = path.join(__dirname, 'runtime');
 const LOG_DIR = path.join(RUNTIME_DIR, 'logs');
 const STATE_FILE = path.join(RUNTIME_DIR, 'state.json');
 const FORUM_SUMMARY_FILE = path.join(RUNTIME_DIR, 'forum-content-scan.json');
+const CONTENT_RESEARCH_FILE = path.join(RUNTIME_DIR, 'content-research.json');
 const PORT = Number(process.env.DASHBOARD_PORT || 5177);
 
 const MIME_TYPES = {
@@ -27,7 +28,7 @@ const TASKS = [
   {
     id: 'daily_publish',
     name: '一键更新日常数据并上传',
-    description: '日常推荐：poe.ninja 国际服通货参考、DD373 国服换算、流放急救箱、我的关注变化与首页复访摘要一起刷新，并上传 OSS。不抓新闻、天梯，不更新剧情攻略，不更新已下架的 0.5 资料、赛季开荒/热门 BD。',
+    description: '日常推荐：刷新小程序仍在使用的 POE2 国际服通货、DD373 国服换算、流放急救箱、我的关注变化与首页复访摘要；任一步失败会停止上传，避免空数据覆盖线上。不抓新闻、天梯、剧情攻略，也不更新已下架的 0.5 资料、赛季开荒/热门 BD。',
     group: 'recommended',
     steps: ['economy_digest', 'cn_market_dd373', 'problem_guides', 'follow_updates', 'daily_return_digest', 'upload'],
   },
@@ -41,14 +42,14 @@ const TASKS = [
   {
     id: 'poe1_publish',
     name: '更新 POE1 抄 BD / 看行情',
-    description: '刷新国服官方天梯、开荒 BD、开荒术语匹配、天赋树截图、热门主技能和游戏内通货行情，并上传 POE1 专用 OSS 路径；不会影响 POE2 数据。',
+    description: '刷新国服官方天梯、官方入门流派、玩家开荒 BD、剧情跑图导航、天赋树截图、国际服游戏内通货行情和国服行情接口，并上传 POE1 专用 OSS 路径；不会影响 POE2 数据。',
     group: 'recommended',
-    steps: ['poe1_ladder', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_passive_trees', 'poe1_economy', 'poe1_upload'],
+    steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_upload'],
   },
   {
     id: 'forum_content_scan',
     name: '更新论坛选题池',
-    description: '顺序采集 D2Core 暗黑4和踩蘑菇 POE2讨论，更新本地论坛数据与图片素材。使用独立采集浏览器，不关闭 Chrome 或 Dashboard。只用于自媒体选题研究，不上传 OSS，不进入小程序日常发布。',
+    description: '采集现有论坛选题池，并补充 POE1/POE2 内容研究摘要：国内论坛负责玩家问题，Maxroll 作为海外参考源。只用于自媒体选题和小程序策略，不上传 OSS，不进入小程序日常发布。',
     group: 'content_research',
     localOnly: true,
     command: ['bash', ['scripts/run_forum_content_scan.sh']],
@@ -78,6 +79,14 @@ const TASKS = [
     command: ['node', ['crawlers/poe1/starter_builds.js']],
   },
   {
+    id: 'poe1_official_starter',
+    name: '生成 POE1 官方入门流派',
+    description: '读取国服官方推荐流派结构化源，校验官方活动页可访问，生成 official_starter_builds.json。',
+    group: 'single',
+    hidden: true,
+    command: ['node', ['crawlers/poe1/official_starter.js']],
+  },
+  {
     id: 'poe1_starter_terms',
     name: '匹配 POE1 开荒术语',
     description: '抽取开荒 BD 中的技能、装备和英文括注，优先和国服官方天梯真实数据匹配，输出待补全清单。',
@@ -92,6 +101,22 @@ const TASKS = [
     group: 'single',
     hidden: true,
     command: ['node', ['crawlers/poe1/economy_digest.js']],
+  },
+  {
+    id: 'poe1_cn_economy',
+    name: '生成 POE1 国服行情接口',
+    description: '合并 DD373 S30 国服公开报价与 FilterEditor 公开物价源，生成 POE1 国服行情接口；可用 base-data/poe1/cn_economy_manual.json 人工核验补充。',
+    group: 'single',
+    hidden: true,
+    command: ['node', ['crawlers/poe1/cn_economy_digest.js']],
+  },
+  {
+    id: 'poe1_story_guide',
+    name: '生成 POE1 剧情跑图导航',
+    description: '读取本地 B 站剧情整理与章节地图素材，生成小程序剧情跑图 JSON 和轻量地图图。',
+    group: 'single',
+    hidden: true,
+    command: ['node', ['crawlers/poe1/story_guide.js']],
   },
   {
     id: 'poe1_passive_trees',
@@ -120,7 +145,7 @@ const TASKS = [
   {
     id: 'economy_digest',
     name: '抓取 poe.ninja 经济摘要',
-    description: '直接请求 poe.ninja PoE2 经济 API，生成首页摘要 economy_digest.json、国际服分类清单 international_market_catalog.json、兼容 economy.json 和展示图标。',
+    description: '直接请求 poe.ninja PoE2 当前赛季经济 API，生成首页摘要 economy_digest.json、国际服分类清单 international_market_catalog.json、兼容 economy.json 和展示图标；通货为空会直接失败，不覆盖线上数据。',
     group: 'single',
     hidden: true,
     command: ['node', ['crawlers/economy/ninja_digest.js']],
@@ -361,6 +386,30 @@ function getForumResearchSummary() {
   };
 }
 
+function getContentResearchSummary() {
+  const summary = readJson(CONTENT_RESEARCH_FILE, null);
+  if (!summary) return null;
+  const topics = Array.isArray(summary.topics) ? summary.topics.slice(0, 80) : [];
+  const byMiniappPage = topics.reduce((result, topic) => {
+    const page = topic.signals?.miniappPage || '内容观察';
+    if (!result[page]) result[page] = [];
+    result[page].push(topic);
+    return result;
+  }, {});
+  return {
+    generatedAt: summary.generatedAt || '',
+    status: summary.status || 'unknown',
+    counters: summary.counters || {},
+    sources: Array.isArray(summary.sources) ? summary.sources.slice(0, 12) : [],
+    topTopics: Array.isArray(summary.topTopics) ? summary.topTopics.slice(0, 8) : [],
+    actionItems: Array.isArray(summary.actionItems) ? summary.actionItems.slice(0, 10) : [],
+    topics,
+    byMiniappPage,
+    exports: summary.exports || {},
+    note: summary.note || '',
+  };
+}
+
 function appendLog(logFile, text) {
   fs.appendFileSync(logFile, text);
 }
@@ -535,6 +584,7 @@ async function handleApi(req, res, pathname, searchParams) {
       state: getState(),
       summary: getDataSummary(environment),
       forumResearch: getForumResearchSummary(),
+      contentResearch: getContentResearchSummary(),
     });
     return;
   }

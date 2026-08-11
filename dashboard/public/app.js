@@ -41,6 +41,9 @@ const surveyToggleBtn = document.querySelector('#surveyToggleBtn');
 const surveyControlStatus = document.querySelector('#surveyControlStatus');
 const surveyControlCampaign = document.querySelector('#surveyControlCampaign');
 const surveyControlHint = document.querySelector('#surveyControlHint');
+const contentResearchBoard = document.querySelector('#contentResearchBoard');
+const researchPillarFilter = document.querySelector('#researchPillarFilter');
+const researchGameFilter = document.querySelector('#researchGameFilter');
 
 function formatTime(value) {
   if (!value) return '无记录';
@@ -58,6 +61,15 @@ function formatDuration(ms) {
   if (!ms) return '';
   if (ms < 1000) return `${ms}ms`;
   return `${(ms / 1000).toFixed(1)}s`;
+}
+
+function escapeHtml(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function formatDateTime(timestamp) {
@@ -189,14 +201,36 @@ function renderTasks() {
     {
       id: 'content_research',
       title: '内容研究',
-      description: '为自媒体发现玩家问题和高讨论话题。结果只保存在本地选题素材，不会上传 OSS 或改变小程序数据。',
+      description: '为自媒体和小程序策略发现玩家问题、海外趋势和可写选题。结果只保存在本地，不上传 OSS。',
     },
   ];
 
   const forumSummary = state.status && state.status.forumResearch;
+  const contentSummary = state.status && state.status.contentResearch;
   const forumTaskMeta = task => {
     if (task.id !== 'forum_content_scan') return '';
-    if (!forumSummary) return '论坛选题池尚未通过 Dashboard 运行';
+    if (!forumSummary && !contentSummary) return '内容研究尚未通过 Dashboard 运行';
+    if (contentSummary) {
+      const counters = contentSummary.counters || {};
+      const sources = Array.isArray(contentSummary.sources) ? contentSummary.sources : [];
+      const topTopics = Array.isArray(contentSummary.topTopics) ? contentSummary.topTopics.slice(0, 3) : [];
+      const byMiniappPage = counters.byMiniappPage || {};
+      const exportText = contentSummary.exports?.markdown ? `<br />导出：${escapeHtml(contentSummary.exports.markdown)}` : '';
+      const sourceText = sources
+        .slice(0, 4)
+        .map(source => `${escapeHtml(source.name || source.id)}：${escapeHtml(source.status)} · ${source.topicCount || 0} 条`)
+        .join(' / ');
+      const topicText = topTopics.length
+        ? `<br />高价值选题：${topTopics
+            .map(topic => `${escapeHtml(topic.titleCn || topic.title)}(${escapeHtml(topic.signals?.miniappPage || '内容观察')})`)
+            .join('、')}`
+        : '';
+      return `最近研究：${escapeHtml(contentSummary.status)} · 选题 ${counters.topics || 0} 个 · 来源 ${counters.sources || 0} 个 · 抄BD ${
+        byMiniappPage['抄BD'] || 0
+      } / 看行情 ${byMiniappPage['看行情'] || 0} / 解卡点 ${byMiniappPage['解卡点'] || 0}<br />${sourceText}${topicText} · ${formatTime(
+        contentSummary.generatedAt
+      )}${exportText}`;
+    }
     const d4 = forumSummary.sources?.d2core;
     const poe2 = forumSummary.sources?.caimogu;
     const rows = forumSummary.excel || {};
@@ -254,6 +288,170 @@ function renderTasks() {
   });
 }
 
+function getTopicPillar(topic) {
+  return topic?.signals?.miniappPage || topic?.miniappPage || '内容观察';
+}
+
+function getTopicRouteHint(topic) {
+  return topic?.signals?.miniapp?.routeHint || topic?.routeHint || '';
+}
+
+function getTopicArticleAngle(topic) {
+  return topic?.signals?.articleAngle || topic?.articleAngle || topic?.summaryCn || '';
+}
+
+function getTopicVerifyText(topic) {
+  if (topic?.verify) return topic.verify;
+  if (topic?.sourceType === 'overseas_reference') return '核验国服适用性和版本差异';
+  if (topic?.sourceType === 'forum') return '打开原帖核验玩家真实问题';
+  return '写作前核验版本、数值和来源';
+}
+
+function createTopicUrl(topic) {
+  if (!topic?.url) return '';
+  return `<a href="${escapeHtml(topic.url)}" target="_blank" rel="noreferrer">打开来源</a>`;
+}
+
+function renderActionItem(item, index) {
+  const title = escapeHtml(item.title || item.titleCn || item.title || '未命名选题');
+  return `
+    <article class="research-action-card">
+      <span class="research-rank">${index + 1}</span>
+      <div>
+        <h4>${title}</h4>
+        <p>${escapeHtml(item.articleAngle || '')}</p>
+        <div class="research-meta-line">
+          <span>${escapeHtml(item.miniappPage || '内容观察')}</span>
+          <span>${escapeHtml(item.game || '-')}</span>
+          <strong>${Number(item.score || 0)} 分</strong>
+          ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">来源</a>` : ''}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderResearchPillarCard(pillar, topics) {
+  const top = topics.slice(0, 3);
+  const score = top[0]?.score || 0;
+  return `
+    <article class="research-pillar-card">
+      <div class="research-pillar-head">
+        <span>${pillar}</span>
+        <strong>${topics.length}</strong>
+      </div>
+      <p>${escapeHtml(getTopicRouteHint(top[0]) || '暂无明确小程序承接入口')}</p>
+      <ul>
+        ${top
+          .map(topic => `<li>${escapeHtml(topic.titleCn || topic.title)} <span>${Number(topic.score || 0)}分</span></li>`)
+          .join('')}
+      </ul>
+      <small>最高优先级 ${Number(score)} 分</small>
+    </article>
+  `;
+}
+
+function renderTopicRow(topic) {
+  const pillar = getTopicPillar(topic);
+  const tags = Array.isArray(topic.tags) ? topic.tags.slice(0, 4) : [];
+  return `
+    <article class="research-topic-row">
+      <div class="research-topic-score">${Number(topic.score || 0)}</div>
+      <div class="research-topic-main">
+        <div class="research-topic-title">
+          <span class="research-pill">${escapeHtml(pillar)}</span>
+          <h4>${escapeHtml(topic.titleCn || topic.title || '未命名选题')}</h4>
+        </div>
+        <p>${escapeHtml(getTopicArticleAngle(topic))}</p>
+        <div class="research-meta-line">
+          <span>${escapeHtml(topic.game || '-')}</span>
+          <span>${escapeHtml(topic.source || '-')}</span>
+          <span>${escapeHtml(getTopicVerifyText(topic))}</span>
+          ${createTopicUrl(topic)}
+        </div>
+        ${
+          tags.length
+            ? `<div class="research-tags">${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}</div>`
+            : ''
+        }
+      </div>
+    </article>
+  `;
+}
+
+function renderContentResearchBoard() {
+  if (!contentResearchBoard) return;
+  const research = state.status && state.status.contentResearch;
+  if (!research) {
+    contentResearchBoard.className = 'content-research-empty';
+    contentResearchBoard.textContent = '还没有内容研究数据，先运行“更新论坛选题池”。';
+    return;
+  }
+
+  const topics = Array.isArray(research.topics) ? research.topics : [];
+  const actionItems = Array.isArray(research.actionItems) ? research.actionItems : [];
+  const selectedPillar = researchPillarFilter?.value || 'all';
+  const selectedGame = researchGameFilter?.value || 'all';
+  const filteredTopics = topics
+    .filter(topic => selectedPillar === 'all' || getTopicPillar(topic) === selectedPillar)
+    .filter(topic => selectedGame === 'all' || topic.game === selectedGame)
+    .slice(0, 16);
+  const pillars = ['抄BD', '看行情', '解卡点', '内容观察'];
+  const byPillar = research.byMiniappPage || {};
+  const counters = research.counters || {};
+
+  contentResearchBoard.className = 'content-research-board';
+  contentResearchBoard.innerHTML = `
+    <div class="research-overview">
+      <div>
+        <span class="stat-label">生成时间</span>
+        <strong>${formatTime(research.generatedAt)}</strong>
+      </div>
+      <div>
+        <span class="stat-label">选题</span>
+        <strong>${counters.topics || topics.length || 0}</strong>
+      </div>
+      <div>
+        <span class="stat-label">来源</span>
+        <strong>${counters.sources || 0}</strong>
+      </div>
+      <div>
+        <span class="stat-label">导出</span>
+        <strong>${escapeHtml(research.exports?.markdown || '-')}</strong>
+      </div>
+    </div>
+    <section class="research-section">
+      <div class="research-section-head">
+        <h3>今天优先写</h3>
+        <span>先从高分、能承接小程序入口的选题开始</span>
+      </div>
+      <div class="research-action-grid">
+        ${actionItems.slice(0, 4).map(renderActionItem).join('') || '<p class="content-research-empty">暂无优先选题</p>'}
+      </div>
+    </section>
+    <section class="research-section">
+      <div class="research-section-head">
+        <h3>三条主线</h3>
+        <span>只服务抄BD、看行情、解卡点</span>
+      </div>
+      <div class="research-pillar-grid">
+        ${pillars.map(pillar => renderResearchPillarCard(pillar, byPillar[pillar] || [])).join('')}
+      </div>
+    </section>
+    <section class="research-section">
+      <div class="research-section-head">
+        <h3>筛选结果</h3>
+        <span>${filteredTopics.length} 条 · ${selectedPillar === 'all' ? '全部主线' : selectedPillar} · ${
+          selectedGame === 'all' ? '全部游戏' : selectedGame.toUpperCase()
+        }</span>
+      </div>
+      <div class="research-topic-list">
+        ${filteredTopics.map(renderTopicRow).join('') || '<p class="content-research-empty">当前筛选没有选题</p>'}
+      </div>
+    </section>
+  `;
+}
+
 async function loadTasks() {
   const data = await requestJson('/api/tasks');
   state.tasks = data.tasks;
@@ -267,6 +465,7 @@ async function loadStatus() {
   renderSummary(data.summary);
   renderSurveyControl(data.summary);
   renderTasks();
+  renderContentResearchBoard();
   stopBtn.disabled = !data.currentRun;
 
   const currentRun = data.currentRun;
@@ -563,6 +762,8 @@ async function boot() {
   stopBtn.addEventListener('click', stopCurrentTask);
   scrollLogBottomBtn.addEventListener('click', scrollLogToBottom);
   logOutput.addEventListener('scroll', handleLogScroll);
+  researchPillarFilter?.addEventListener('change', renderContentResearchBoard);
+  researchGameFilter?.addEventListener('change', renderContentResearchBoard);
   updateLogFollowUi();
   await loadTasks();
   await loadStatus();

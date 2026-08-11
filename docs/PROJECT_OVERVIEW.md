@@ -75,14 +75,17 @@ Dashboard 的“小程序功能调研”面板控制当前环境的 `feature_sur
 
 ### 自媒体内容研究
 
-Dashboard 另有独立的“更新论坛选题池”任务。它顺序采集 D2Core 暗黑4和踩蘑菇 POE2讨论，更新本地的 `论坛数据.xlsx` 与图片素材，供自媒体选题、截图和玩家痛点发现使用。
+Dashboard 另有独立的“更新论坛选题池”任务。它顺序采集现有 QClaw 论坛数据，并由 p2-database 补充 Maxroll POE 海外参考源，统一生成本地内容研究选题池，供自媒体选题、截图、玩家痛点发现和小程序策略复盘使用。
 
 - 不生成 `translated-data`，不上传 OSS，也不进入小程序日常发布。
 - Dashboard 启动时使用独立 Chromium for Testing 会话，只关闭采集标签；不会关闭用户的 Chrome 或 `localhost:5177` Dashboard 页面。
 - QClaw 定时任务和 Dashboard 手动运行共用同一把锁，防止争抢浏览器实例和 Excel。
 - 新增记录保留来源、原帖链接、抓取时间、内容质量和图片来源；Excel 通过临时文件原子替换，避免中断写坏工作簿。
 - 运行结果写入 `dashboard/runtime/forum-content-scan.json`，Dashboard 展示最近状态、两路来源的候选/跳过/新增统计和两个工作表的记录数。
+- 统一选题池写入 `dashboard/runtime/content-research.json`，Dashboard 展示来源状态、选题数量、抄 BD/看行情/解卡点归类和高价值选题；同时导出 `dashboard/runtime/content-research-topics.md`，供公众号、头条号和论坛发帖前筛选。
+- Dashboard 的“内容研究看板”支持按小程序主线和游戏筛选，分为“今天优先写”“三条主线”“筛选结果”，用于把选题直接落到文章导流和小程序入口。
 - 论坛内容属于玩家讨论来源；写文章前仍需用官方公告、游戏内文本或权威数据库核验具体事实。
+- 详细说明见 `docs/CONTENT_RESEARCH.md`。
 
 ## 数据质量红线
 

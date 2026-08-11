@@ -17,6 +17,7 @@ SUMMARY_PATH="$P2_ROOT/dashboard/runtime/forum-content-scan.json"
 D4_RESULT_PATH="$QCLAW_ROOT/workspace/forum-run-d2core.json"
 POE2_RESULT_PATH="$QCLAW_ROOT/workspace/forum-run-caimogu.json"
 QCLAW_NODE_BIN="/Applications/QClaw.app/Contents/Resources/node/node"
+NODE_BIN="${NODE_BIN:-node}"
 
 if [[ -x "$QCLAW_NODE_BIN" ]]; then
   export QCLAW_CLI_NODE_BINARY="$QCLAW_NODE_BIN"
@@ -182,4 +183,10 @@ case "$overall_status" in
 esac
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] ========== 论坛选题采集结束：$overall_status =========="
+echo "[content] 生成统一内容研究选题池"
+if command -v "$NODE_BIN" >/dev/null 2>&1; then
+  "$NODE_BIN" crawlers/content-research/build_topics.js || true
+else
+  echo "[content] 跳过：未找到 Node.js，可设置 NODE_BIN 后重试。"
+fi
 exit "$overall_exit"

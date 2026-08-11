@@ -8,6 +8,7 @@
 
 - `docs/PROJECT_OVERVIEW.md`
 - 涉及 Dashboard 时读 `docs/DESIGN.md`
+- 涉及自媒体选题或论坛研究时读 `docs/CONTENT_RESEARCH.md`
 
 ## 开发原则
 
@@ -38,7 +39,8 @@
 5. 首页复访摘要：聚合天梯、经济和急救箱，减少小程序多源请求。
 6. 我的关注变化：为已关注的技能、装备与国服通货生成轻量变化摘要。
 7. 低频剧情地图数据。
-8. POE1 赛季助手：国服官方天梯角色摘要、装备、技能组合、关键天赋、天赋树截图、基础防御/DPS、人工校对开荒 BD 与游戏内通货行情。
+8. POE1 赛季助手：国服官方天梯角色摘要、装备、技能组合、关键天赋、天赋树截图、基础防御/DPS、人工校对开荒 BD、剧情跑图导航与游戏内通货行情。
+9. 内容研究：论坛玩家问题与 Maxroll 等海外参考源的本地选题池，只服务文章和小程序策略，不进入 OSS。
 
 ## 已下架功能
 
@@ -66,20 +68,25 @@
 - 日常：poe.ninja 经济 -> DD373 -> 流放急救箱 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 - 天梯：poe.ninja 天梯 -> 玩家详情/BD解析 -> 聚合分析 -> 技能/装备查 BD 索引 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 - 剧情地图：低频手动刷新，不进入日常组合任务。
-- POE1：`poe1:ladder` -> `poe1:starter` -> `poe1:starter:terms` -> `poe1_passive_trees` -> `poe1:economy` -> `poe1:upload`，产物位于 `translated-data/poe1/{env}`，仅上传到 `poe1-season/{env}/`。
+- POE1：`poe1:ladder` -> `poe1:official-starter` -> `poe1:starter` -> `poe1:starter:terms` -> `poe1:story` -> `poe1_passive_trees` -> `poe1:economy` -> `poe1:economy:cn` -> `poe1:upload`，产物位于 `translated-data/poe1/{env}`，仅上传到 `poe1-season/{env}/`。
 
 ## 关键约束
 
 - 天梯抓到 0 个职业或 0 位玩家时必须失败，禁止覆盖 release 数据。
+- poe.ninja 经济抓取必须至少有通货分类和有效条目；空经济摘要必须失败，禁止覆盖线上 `economy_digest.json`。
 - 赛季中优先做兼容性改动，不随意改变 OSS JSON 结构。
 - 新英文残留优先补权威中文映射，不能用生硬逐词替换冒充准确翻译。
 - OSS 上传入口是 `auto_browser/upload_to_oss.js`。
 - POE1 不得调用 `auto_browser/upload_to_oss.js`；它只服务 POE2。POE1 使用 `scripts/upload_poe1_to_oss.js`。
 - POE1 天梯主源是国服官方天梯，不要把 poe.ninja 再作为 POE1 天梯主源；poe.ninja 目前只用于 POE1 游戏内经济。
+- POE1 `official_starter_builds.json` 来自国服官方推荐流派结构化源 `base-data/poe1/official_starter_builds_source.json`。当前源是 S29 活动页，必须标注“官方入门/历史赛季参考”，不要当成实时强度榜。
 - POE1 `starter_builds.json` 来自人工校对 docx，默认目录 `/Users/zhangyajun/Downloads/poe-bd-国服译名校对`，可通过 `POE1_STARTER_SOURCE_DIR` 覆盖。
 - POE1 `starter_terms_enrichment.json` 是开荒 BD 真实数据增强工作台。已匹配项可用于图标/标准名，未匹配项进入 PoEDB 或人工映射；不要把未匹配项当成可靠游戏资料展示。
+- POE1 `story_guide.json` 来自 `/Users/zhangyajun/Documents/project/video2text/output/bilibili_POE_story_BV1W8411p7eX`，可通过 `POE1_STORY_SOURCE_DIR` 覆盖；第 1 章已有点位和箭头，第 2-6 章先展示地图和步骤，第 7-10 章先展示分镜图和步骤。
 - POE1 `ladder_digest.json` 是移动端摘要；字段可以包含装备、技能和天赋树截图，但不要在前端需要之外盲目塞完整原始详情。
+- POE1 `economy_digest.json` 只代表国际服 poe.ninja 游戏内经济；`cn_economy_digest.json` 只代表国服行情接口。国服源当前合并 DD373 S30 国服公开报价和 FilterEditor 公开物价榜，并可通过 `base-data/poe1/cn_economy_manual.json` 人工校准核心通货；`available` 表示是否有可展示行情，神圣石/混沌石核心换算是否齐全看 `sourceHealth.coreCurrencyReady`，不允许用国际服数据冒充国服。
 - 急救箱内容源是 `base-data/problem-guides/*.json`，不要用 AI 直接生成未审核结论；前台只展示玩家问题、排查项和下一步工具。
+- 内容研究产物只允许写入 `dashboard/runtime/content-research.json`；Maxroll 等海外攻略只保存标题、链接、标签和短摘要，不能抓全文或直接当事实源。
 - 不要修改或删除用户尚未提交的 `base-data/starter` 历史数据。
 
 ## 常用命令
@@ -92,8 +99,12 @@
 - `npm run build:daily-return`
 - `npm run crawl:story-guide`
 - `npm run poe1:publish`
+- `npm run poe1:official-starter`
 - `npm run poe1:starter`
 - `npm run poe1:starter:terms`
+- `npm run poe1:story`
+- `npm run poe1:economy:cn`
+- `npm run research:content`
 
 ## 推荐工作方式
 
