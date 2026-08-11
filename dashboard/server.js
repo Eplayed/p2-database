@@ -264,6 +264,27 @@ function getAutomationSettings() {
   return sanitizeAutomationSettings(readJson(AUTOMATION_SETTINGS_FILE, { updatedAt: 0 }));
 }
 
+const RESEARCH_PILLARS = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
+
+function getTopicPillar(topic) {
+  return getTopicPillars(topic)[0] || '内容观察';
+}
+
+function getTopicPillars(topic) {
+  const direct = topic?.signals?.miniappPage || topic?.miniappPage || topic?.pillar || topic?.category || '';
+  const pillars = [];
+  if (RESEARCH_PILLARS.includes(direct)) pillars.push(direct);
+  const tags = [
+    ...(Array.isArray(topic?.tags) ? topic.tags : []),
+    ...(Array.isArray(topic?.signals?.tags) ? topic.signals.tags : []),
+  ];
+  RESEARCH_PILLARS.forEach(pillar => {
+    if (tags.includes(pillar) && !pillars.includes(pillar)) pillars.push(pillar);
+  });
+  if (pillars.length) return pillars;
+  return [direct || '内容观察'];
+}
+
 function setAutomationSettings(settings) {
   const nextSettings = sanitizeAutomationSettings({
     ...settings,
@@ -443,9 +464,10 @@ function getContentResearchSummary() {
   if (!summary) return null;
   const topics = Array.isArray(summary.topics) ? summary.topics.slice(0, 80) : [];
   const byMiniappPage = topics.reduce((result, topic) => {
-    const page = topic.signals?.miniappPage || '内容观察';
-    if (!result[page]) result[page] = [];
-    result[page].push(topic);
+    getTopicPillars(topic).forEach(page => {
+      if (!result[page]) result[page] = [];
+      result[page].push(topic);
+    });
     return result;
   }, {});
   return {

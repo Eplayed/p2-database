@@ -53,6 +53,7 @@ const contentResearchBoard = document.querySelector('#contentResearchBoard');
 const researchPillarFilter = document.querySelector('#researchPillarFilter');
 const researchGameFilter = document.querySelector('#researchGameFilter');
 const sideNavLinks = [...document.querySelectorAll('.side-nav-link')];
+const RESEARCH_PILLARS = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
 
 function formatTime(value) {
   if (!value) return '无记录';
@@ -304,7 +305,22 @@ function renderTasks() {
 }
 
 function getTopicPillar(topic) {
-  return topic?.signals?.miniappPage || topic?.miniappPage || '内容观察';
+  return getTopicPillars(topic)[0] || '内容观察';
+}
+
+function getTopicPillars(topic) {
+  const direct = topic?.signals?.miniappPage || topic?.miniappPage || topic?.pillar || topic?.category || '';
+  const pillars = [];
+  if (RESEARCH_PILLARS.includes(direct)) pillars.push(direct);
+  const tags = [
+    ...(Array.isArray(topic?.tags) ? topic.tags : []),
+    ...(Array.isArray(topic?.signals?.tags) ? topic.signals.tags : []),
+  ];
+  RESEARCH_PILLARS.forEach(pillar => {
+    if (tags.includes(pillar) && !pillars.includes(pillar)) pillars.push(pillar);
+  });
+  if (pillars.length) return pillars;
+  return [direct || '内容观察'];
 }
 
 function getTopicRouteHint(topic) {
@@ -325,13 +341,18 @@ function getTopicVerifyText(topic) {
 }
 
 function getGameLabel(game) {
+  const normalized = normalizeTopicGame(game);
   const labels = {
     poe1: 'POE1',
     poe2: 'POE2',
     d4: '暗黑破坏神',
     wow: '魔兽世界',
   };
-  return labels[game] || String(game || '-').toUpperCase();
+  return labels[normalized] || String(game || '-').toUpperCase();
+}
+
+function normalizeTopicGame(game) {
+  return String(game || '').trim().toLowerCase();
 }
 
 function createTopicUrl(topic) {
@@ -348,7 +369,7 @@ function renderActionItem(item, index) {
         <h4>${title}</h4>
         <p>${escapeHtml(item.articleAngle || '')}</p>
         <div class="research-meta-line">
-          <span>${escapeHtml(item.miniappPage || '内容观察')}</span>
+          <span>${escapeHtml(getTopicPillar(item))}</span>
           <span>${escapeHtml(getGameLabel(item.game))}</span>
           <strong>${Number(item.score || 0)} 分</strong>
           ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">来源</a>` : ''}
@@ -381,7 +402,7 @@ function renderResearchPillarCard(pillar, topics) {
 function renderTrendTopic(topic) {
   return `
     <li>
-      <span>${escapeHtml(topic.miniappPage || '内容观察')}</span>
+      <span>${escapeHtml(getTopicPillar(topic))}</span>
       <strong>${escapeHtml(topic.title || '未命名选题')}</strong>
       <em>${Number(topic.score || 0)}分</em>
     </li>
@@ -429,14 +450,26 @@ function renderContentResearchBoard() {
   const actionItems = Array.isArray(research.actionItems) ? research.actionItems : [];
   const selectedPillar = researchPillarFilter?.value || 'all';
   const selectedGame = researchGameFilter?.value || 'all';
-  const filteredTopics = topics
-    .filter(topic => selectedPillar === 'all' || getTopicPillar(topic) === selectedPillar)
-    .filter(topic => selectedGame === 'all' || topic.game === selectedGame)
+  const matchesResearchFilter = topic =>
+    (selectedPillar === 'all' || getTopicPillars(topic).includes(selectedPillar)) &&
+    (selectedGame === 'all' || normalizeTopicGame(topic.game) === selectedGame);
+  const matchedTopics = topics.filter(matchesResearchFilter);
+  const matchedActionItems = actionItems.filter(matchesResearchFilter);
+  const filteredTopics = matchedTopics
     .slice(0, 16);
-  const pillars = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
+  const filteredActionItems = matchedActionItems.slice(0, 8);
+  const filteredPillars = selectedPillar === 'all' ? RESEARCH_PILLARS : [selectedPillar];
+  const filteredByPillar = matchedTopics.reduce((result, topic) => {
+    getTopicPillars(topic).forEach(pillar => {
+      if (!result[pillar]) result[pillar] = [];
+      result[pillar].push(topic);
+    });
+    return result;
+  }, {});
   const byPillar = research.byMiniappPage || {};
   const counters = research.counters || {};
   const trend = research.trend || {};
+  const isFiltered = selectedPillar !== 'all' || selectedGame !== 'all';
 
   contentResearchBoard.className = 'content-research-board';
   contentResearchBoard.innerHTML = `
@@ -446,8 +479,8 @@ function renderContentResearchBoard() {
         <strong>${formatTime(research.generatedAt)}</strong>
       </div>
       <div>
-        <span class="stat-label">选题</span>
-        <strong>${counters.topics || topics.length || 0}</strong>
+        <span class="stat-label">${isFiltered ? '筛选选题' : '选题'}</span>
+        <strong>${isFiltered ? matchedTopics.length : counters.topics || topics.length || 0}</strong>
       </div>
       <div>
         <span class="stat-label">来源</span>
@@ -487,7 +520,7 @@ function renderContentResearchBoard() {
         <span>先从高分、可写成文章或能承接小程序入口的选题开始</span>
       </div>
       <div class="research-action-grid">
-        ${actionItems.slice(0, 8).map(renderActionItem).join('') || '<p class="content-research-empty">暂无优先选题</p>'}
+        ${filteredActionItems.map(renderActionItem).join('') || '<p class="content-research-empty">当前筛选没有优先选题</p>'}
       </div>
     </section>
     <section class="research-section">
@@ -496,7 +529,7 @@ function renderContentResearchBoard() {
         <span>工具入口与自媒体选题一起看</span>
       </div>
       <div class="research-pillar-grid">
-        ${pillars.map(pillar => renderResearchPillarCard(pillar, byPillar[pillar] || [])).join('')}
+        ${filteredPillars.map(pillar => renderResearchPillarCard(pillar, isFiltered ? filteredByPillar[pillar] || [] : byPillar[pillar] || [])).join('')}
       </div>
     </section>
     <section class="research-section">
@@ -1076,6 +1109,7 @@ function bindEnvSwitch() {
 async function boot() {
   bindEnvSwitch();
   bindWorkbenchNav();
+  await loadTasks();
   await loadAutomationSettings();
   bindAutomation();
   refreshBtn.addEventListener('click', loadStatus);
@@ -1086,7 +1120,6 @@ async function boot() {
   researchPillarFilter?.addEventListener('change', renderContentResearchBoard);
   researchGameFilter?.addEventListener('change', renderContentResearchBoard);
   updateLogFollowUi();
-  await loadTasks();
   await loadStatus();
   window.setInterval(loadStatus, 2500);
 }
