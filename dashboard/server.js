@@ -12,6 +12,7 @@ const PUBLIC_DIR = path.join(__dirname, 'public');
 const RUNTIME_DIR = path.join(__dirname, 'runtime');
 const LOG_DIR = path.join(RUNTIME_DIR, 'logs');
 const STATE_FILE = path.join(RUNTIME_DIR, 'state.json');
+const AUTOMATION_SETTINGS_FILE = path.join(RUNTIME_DIR, 'automation-settings.json');
 const FORUM_SUMMARY_FILE = path.join(RUNTIME_DIR, 'forum-content-scan.json');
 const CONTENT_RESEARCH_FILE = path.join(RUNTIME_DIR, 'content-research.json');
 const PORT = Number(process.env.DASHBOARD_PORT || 5177);
@@ -219,6 +220,57 @@ function writeJson(filePath, data) {
 function getState() {
   ensureRuntime();
   return readJson(STATE_FILE, { runs: {}, history: [] });
+}
+
+function normalizeAutomationTaskIds(taskIds) {
+  const availableIds = new Set(TASKS.filter(task => !task.hidden).map(task => task.id));
+  const seen = new Set();
+  const normalized = (Array.isArray(taskIds) ? taskIds : [])
+    .map(id => String(id || ''))
+    .filter(id => availableIds.has(id))
+    .filter(id => {
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    });
+  return normalized.length ? normalized : ['daily_publish'];
+}
+
+function clampNumber(value, min, fallback) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return fallback;
+  return Math.max(min, number);
+}
+
+function sanitizeAutomationSettings(settings) {
+  const taskIds = normalizeAutomationTaskIds(settings?.taskIds || (settings?.taskId ? [settings.taskId] : []));
+  const hasUpdatedAt = settings && Object.prototype.hasOwnProperty.call(settings, 'updatedAt');
+  return {
+    enabled: settings?.enabled === true,
+    taskId: taskIds[0],
+    taskIds,
+    intervalMinutes: clampNumber(settings?.intervalMinutes, 10, 120),
+    jitterMinutes: clampNumber(settings?.jitterMinutes, 0, 10),
+    nextRunAt: Number(settings?.nextRunAt) || 0,
+    updatedAt: hasUpdatedAt ? Number(settings.updatedAt) || 0 : Date.now(),
+  };
+}
+
+function getAutomationSettings() {
+  ensureRuntime();
+  if (!fs.existsSync(AUTOMATION_SETTINGS_FILE)) {
+    return sanitizeAutomationSettings({ updatedAt: 0 });
+  }
+  return sanitizeAutomationSettings(readJson(AUTOMATION_SETTINGS_FILE, { updatedAt: 0 }));
+}
+
+function setAutomationSettings(settings) {
+  const nextSettings = sanitizeAutomationSettings({
+    ...settings,
+    updatedAt: Date.now(),
+  });
+  writeJson(AUTOMATION_SETTINGS_FILE, nextSettings);
+  return nextSettings;
 }
 
 function setTaskState(run) {
@@ -588,6 +640,21 @@ async function handleApi(req, res, pathname, searchParams) {
       forumResearch: getForumResearchSummary(),
       contentResearch: getContentResearchSummary(),
     });
+    return;
+  }
+
+  if (req.method === 'GET' && pathname === '/api/automation-settings') {
+    sendJson(res, { automation: getAutomationSettings() });
+    return;
+  }
+
+  if (req.method === 'POST' && pathname === '/api/automation-settings') {
+    try {
+      const body = await parseBody(req);
+      sendJson(res, { automation: setAutomationSettings(body.automation || body) });
+    } catch (error) {
+      sendJson(res, { error: error.message }, 400);
+    }
     return;
   }
 

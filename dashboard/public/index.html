@@ -7,39 +7,40 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="shell">
-      <header class="hero">
-        <div>
+    <div class="workbench">
+      <aside class="sidebar">
+        <div class="brand">
           <p class="eyebrow">p2-database</p>
-          <h1>PoE2 数据控制台</h1>
-          <p class="subtle">本地抓取、生成、校验和上传 OSS 的可视化入口。</p>
+          <h1>数据工作台</h1>
+          <p>抓取、生成、研究和上传。</p>
         </div>
+        <nav class="side-nav" aria-label="工作台导航">
+          <a href="#overview" class="side-nav-link active" data-section="overview">总览</a>
+          <a href="#automation" class="side-nav-link" data-section="automation">自动运行</a>
+          <a href="#tasks" class="side-nav-link" data-section="tasks">任务流程</a>
+          <a href="#research" class="side-nav-link" data-section="research">内容研究</a>
+          <a href="#logs" class="side-nav-link" data-section="logs">运行日志</a>
+          <a href="#survey" class="side-nav-link" data-section="survey">功能调研</a>
+        </nav>
         <div class="env-switch" role="group" aria-label="环境选择">
           <button class="env-btn active" data-env="release">release</button>
           <button class="env-btn" data-env="dev">dev</button>
         </div>
-      </header>
+      </aside>
 
-      <section class="status-grid" id="summary"></section>
-
-      <section class="panel survey-control-panel">
-        <div class="panel-head">
+      <main class="shell">
+        <header class="hero" id="overview">
           <div>
-            <h2>小程序功能调研</h2>
-            <p>赛季末用真实玩家选择校准下一版方向。开关会立即同步到当前环境的 OSS 配置，无需重新发布小程序。</p>
+            <p class="eyebrow">PoE Data Dashboard</p>
+            <h2>数据控制台</h2>
+            <p class="subtle">本地抓取、生成、校验和上传 OSS 的可视化入口。</p>
           </div>
-          <div class="panel-actions">
-            <button class="danger-btn" id="surveyToggleBtn">加载中...</button>
-          </div>
-        </div>
-        <div class="survey-control-meta">
-          <span id="surveyControlStatus">当前状态：-</span>
-          <span id="surveyControlCampaign">调研批次：-</span>
-          <span id="surveyControlHint">每位玩家在同一调研批次只会提交一次。</span>
-        </div>
-      </section>
+          <button class="ghost-btn" id="refreshBtn">刷新状态</button>
+        </header>
 
-      <section class="panel automation-panel">
+        <section class="status-grid" id="summary"></section>
+
+      <section class="panel automation-panel" id="automation">
         <div class="panel-head">
           <div>
             <h2>本地自动运行</h2>
@@ -75,13 +76,13 @@
         <div class="automation-queue-wrap">
           <div class="automation-queue-head">
             <span>执行顺序</span>
-            <small>拖动排序；到点后按顺序一个接一个运行，失败会中断后续任务。</small>
+            <small>拖动排序；到点后按顺序一个接一个运行，失败会中断后续任务。队列会自动保存。</small>
           </div>
           <ol class="automation-queue" id="automationQueueList"></ol>
         </div>
       </section>
 
-      <section class="panel">
+      <section class="panel" id="tasks">
         <div class="panel-head">
           <div>
             <h2>任务</h2>
@@ -89,13 +90,12 @@
           </div>
           <div class="panel-actions">
             <button class="danger-btn" id="stopBtn" disabled>停止当前任务</button>
-            <button class="ghost-btn" id="refreshBtn">刷新状态</button>
           </div>
         </div>
         <div id="taskGrid"></div>
       </section>
 
-      <section class="panel content-research-panel" id="contentResearchPanel">
+      <section class="panel content-research-panel" id="research">
         <div class="panel-head">
           <div>
             <h2>内容研究看板</h2>
@@ -129,7 +129,7 @@
         <div id="contentResearchBoard" class="content-research-empty">还没有内容研究数据，先运行“更新论坛选题池”。</div>
       </section>
 
-      <section class="panel log-panel">
+      <section class="panel log-panel" id="logs">
         <div class="panel-head">
           <div>
             <h2>运行日志</h2>
@@ -142,7 +142,25 @@
         </div>
         <pre id="logOutput">选择并运行一个任务后，这里会显示日志。</pre>
       </section>
-    </main>
+
+      <section class="panel survey-control-panel" id="survey">
+        <div class="panel-head">
+          <div>
+            <h2>小程序功能调研</h2>
+            <p>赛季末用真实玩家选择校准下一版方向。开关会立即同步到当前环境的 OSS 配置，无需重新发布小程序。</p>
+          </div>
+          <div class="panel-actions">
+            <button class="danger-btn" id="surveyToggleBtn">加载中...</button>
+          </div>
+        </div>
+        <div class="survey-control-meta">
+          <span id="surveyControlStatus">当前状态：-</span>
+          <span id="surveyControlCampaign">调研批次：-</span>
+          <span id="surveyControlHint">每位玩家在同一调研批次只会提交一次。</span>
+        </div>
+      </section>
+      </main>
+    </div>
 
     <div class="countdown-mask" id="countdownMask" hidden>
       <div class="countdown-card">

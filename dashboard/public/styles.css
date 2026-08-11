@@ -33,10 +33,67 @@ button {
   font: inherit;
 }
 
-.shell {
-  width: min(1180px, calc(100vw - 32px));
+.workbench {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 22px;
+  width: min(1480px, calc(100vw - 32px));
   margin: 0 auto;
-  padding: 32px 0 44px;
+  padding: 24px 0 44px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  min-height: calc(100vh - 48px);
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(35, 32, 25, 0.96), rgba(14, 14, 14, 0.96));
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.12;
+}
+
+.brand p:not(.eyebrow) {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.side-nav {
+  display: grid;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.side-nav-link {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #d7d0c3;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.side-nav-link:hover,
+.side-nav-link.active {
+  border-color: rgba(212, 175, 55, 0.34);
+  color: #16130b;
+  background: var(--gold);
+  font-weight: 900;
+}
+
+.shell {
+  min-width: 0;
 }
 
 .hero,
@@ -48,10 +105,10 @@ button {
 
 .hero {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 28px;
+  padding: 22px;
   border-radius: 14px;
   background: linear-gradient(145deg, rgba(42, 38, 30, 0.92), rgba(22, 22, 22, 0.95));
 }
@@ -79,6 +136,11 @@ h2 {
   font-size: 22px;
 }
 
+.hero h2 {
+  font-size: 30px;
+  line-height: 1.12;
+}
+
 .subtle,
 .panel-head p {
   margin-top: 10px;
@@ -93,6 +155,11 @@ h2 {
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar .env-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .env-btn,
@@ -939,6 +1006,21 @@ h2 {
 }
 
 @media (max-width: 900px) {
+  .workbench {
+    grid-template-columns: 1fr;
+    width: min(100% - 24px, 900px);
+    padding-top: 12px;
+  }
+
+  .sidebar {
+    position: static;
+    min-height: 0;
+  }
+
+  .side-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .hero {
     align-items: stretch;
     flex-direction: column;
@@ -956,6 +1038,14 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .workbench {
+    width: min(100% - 16px, 640px);
+  }
+
+  .side-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .status-grid,
   .task-grid,
   .automation-grid,

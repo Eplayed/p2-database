@@ -52,6 +52,7 @@ const surveyControlHint = document.querySelector('#surveyControlHint');
 const contentResearchBoard = document.querySelector('#contentResearchBoard');
 const researchPillarFilter = document.querySelector('#researchPillarFilter');
 const researchGameFilter = document.querySelector('#researchGameFilter');
+const sideNavLinks = [...document.querySelectorAll('.side-nav-link')];
 
 function formatTime(value) {
   if (!value) return '无记录';
@@ -637,26 +638,69 @@ async function runTask(taskId, options = {}) {
   return null;
 }
 
-function loadAutomationSettings() {
+function normalizeAutomationSettingsInput(saved) {
+  if (!saved || typeof saved !== 'object') return null;
+  return {
+    ...state.automation,
+    ...saved,
+    taskIds: normalizeAutomationTaskIds(saved.taskIds || (saved.taskId ? [saved.taskId] : [])),
+    intervalMinutes: clampNumber(saved.intervalMinutes, 10, 120),
+    jitterMinutes: clampNumber(saved.jitterMinutes, 0, 10),
+    nextRunAt: Number(saved.nextRunAt) || 0,
+    updatedAt: Number(saved.updatedAt) || 0,
+  };
+}
+
+async function loadAutomationSettings() {
+  let localSettings = null;
+  let serverSettings = null;
   try {
     const raw = window.localStorage.getItem(AUTOMATION_STORAGE_KEY);
-    if (!raw) return;
-    const saved = JSON.parse(raw);
-    state.automation = {
-      ...state.automation,
-      ...saved,
-      taskIds: normalizeAutomationTaskIds(saved.taskIds || (saved.taskId ? [saved.taskId] : [])),
-      intervalMinutes: clampNumber(saved.intervalMinutes, 10, 120),
-      jitterMinutes: clampNumber(saved.jitterMinutes, 0, 10),
-      nextRunAt: Number(saved.nextRunAt) || 0,
-    };
+    if (raw) localSettings = normalizeAutomationSettingsInput(JSON.parse(raw));
   } catch (error) {
     console.warn('读取自动运行设置失败:', error);
+  }
+
+  try {
+    const data = await requestJson('/api/automation-settings');
+    serverSettings = normalizeAutomationSettingsInput(data.automation);
+  } catch (error) {
+    console.warn('读取服务端自动运行设置失败:', error);
+  }
+
+  const localUpdatedAt = Number(localSettings?.updatedAt || 0);
+  const serverUpdatedAt = Number(serverSettings?.updatedAt || 0);
+  const nextSettings = serverUpdatedAt > localUpdatedAt ? serverSettings : localSettings || serverSettings;
+  if (nextSettings) {
+    state.automation = nextSettings;
+    saveAutomationSettings();
   }
 }
 
 function saveAutomationSettings() {
+  state.automation.updatedAt = Date.now();
   window.localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automation));
+}
+
+async function syncAutomationSettingsToServer() {
+  try {
+    const data = await requestJson('/api/automation-settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ automation: state.automation }),
+    });
+    if (data.automation) {
+      state.automation = normalizeAutomationSettingsInput(data.automation) || state.automation;
+      window.localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automation));
+    }
+  } catch (error) {
+    console.warn('同步自动运行设置失败:', error);
+  }
+}
+
+function persistAutomationSettings() {
+  saveAutomationSettings();
+  syncAutomationSettingsToServer();
 }
 
 function getSchedulableTasks() {
@@ -755,7 +799,7 @@ function addAutomationTask() {
   if (!taskId) return;
   state.automation.taskIds = normalizeAutomationTaskIds([...getAutomationQueue(), taskId]);
   state.automation.taskId = state.automation.taskIds[0];
-  saveAutomationSettings();
+  persistAutomationSettings();
   renderAutomationQueue();
   updateAutomationUi();
 }
@@ -766,7 +810,7 @@ function removeAutomationTask(index) {
   queue.splice(index, 1);
   state.automation.taskIds = normalizeAutomationTaskIds(queue);
   state.automation.taskId = state.automation.taskIds[0];
-  saveAutomationSettings();
+  persistAutomationSettings();
   renderAutomationQueue();
   updateAutomationUi();
 }
@@ -778,7 +822,7 @@ function reorderAutomationTask(fromIndex, toIndex) {
   queue.splice(toIndex, 0, moved);
   state.automation.taskIds = normalizeAutomationTaskIds(queue);
   state.automation.taskId = state.automation.taskIds[0];
-  saveAutomationSettings();
+  persistAutomationSettings();
   renderAutomationQueue();
   updateAutomationUi();
 }
@@ -825,7 +869,7 @@ function applyAutomationForm() {
   state.automation.intervalMinutes = clampNumber(automationIntervalInput.value, 10, 120);
   state.automation.jitterMinutes = clampNumber(automationJitterInput.value, 0, 10);
   if (state.automation.enabled) state.automation.nextRunAt = computeNextRunAt();
-  saveAutomationSettings();
+  persistAutomationSettings();
   syncAutomationForm();
   updateAutomationUi();
 }
@@ -834,7 +878,7 @@ function toggleAutomation() {
   applyAutomationForm();
   state.automation.enabled = !state.automation.enabled;
   state.automation.nextRunAt = state.automation.enabled ? computeNextRunAt() : 0;
-  saveAutomationSettings();
+  persistAutomationSettings();
   updateAutomationUi();
 }
 
@@ -882,7 +926,7 @@ function startAutomationCountdown(taskIds) {
 function skipCurrentAutomationRun() {
   closeCountdown();
   state.automation.nextRunAt = computeNextRunAt();
-  saveAutomationSettings();
+  persistAutomationSettings();
   updateAutomationUi();
 }
 
@@ -891,7 +935,7 @@ function tickAutomation() {
   if (state.countdown) return;
   if (!state.automation.nextRunAt) {
     state.automation.nextRunAt = computeNextRunAt();
-    saveAutomationSettings();
+    persistAutomationSettings();
     updateAutomationUi();
     return;
   }
@@ -901,7 +945,7 @@ function tickAutomation() {
   const currentRun = state.status && state.status.currentRun;
   if (currentRun) {
     state.automation.nextRunAt = Date.now() + 5 * 60 * 1000;
-    saveAutomationSettings();
+    persistAutomationSettings();
     updateAutomationUi();
     return;
   }
@@ -963,28 +1007,59 @@ async function executeAutomationQueue(taskIds) {
       currentIndex: -1,
       total: 0,
     };
-    saveAutomationSettings();
+    persistAutomationSettings();
     updateAutomationUi();
     await loadStatus();
   }
 }
 
 function bindAutomation() {
-  loadAutomationSettings();
   syncAutomationForm();
   updateAutomationUi();
-  automationSaveBtn.addEventListener('click', () => {
+  automationSaveBtn.addEventListener('click', async () => {
     applyAutomationForm();
+    await syncAutomationSettingsToServer();
     window.alert('自动运行设置已保存');
   });
   automationAddTaskBtn.addEventListener('click', addAutomationTask);
   automationToggleBtn.addEventListener('click', toggleAutomation);
+  automationIntervalInput.addEventListener('change', applyAutomationForm);
+  automationJitterInput.addEventListener('change', applyAutomationForm);
   countdownCancelBtn.addEventListener('click', skipCurrentAutomationRun);
   countdownRunNowBtn.addEventListener('click', executeCountdownTask);
   window.setInterval(() => {
     tickAutomation();
     updateAutomationUi();
   }, 1000);
+}
+
+function bindWorkbenchNav() {
+  sideNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      sideNavLinks.forEach(item => item.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      const visible = sideNavLinks
+        .map(link => {
+          const section = document.querySelector(link.getAttribute('href'));
+          if (!section) return null;
+          return {
+            link,
+            top: Math.abs(section.getBoundingClientRect().top - 32),
+          };
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.top - b.top)[0];
+      if (!visible) return;
+      sideNavLinks.forEach(item => item.classList.toggle('active', item === visible.link));
+    },
+    { passive: true }
+  );
 }
 
 function bindEnvSwitch() {
@@ -1000,6 +1075,8 @@ function bindEnvSwitch() {
 
 async function boot() {
   bindEnvSwitch();
+  bindWorkbenchNav();
+  await loadAutomationSettings();
   bindAutomation();
   refreshBtn.addEventListener('click', loadStatus);
   surveyToggleBtn.addEventListener('click', toggleFeatureSurvey);
