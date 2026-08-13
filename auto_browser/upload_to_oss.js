@@ -13,12 +13,25 @@ const OSS_CONFIG = {
 
 function getAllFiles(dirPath, arrayOfFiles) {
     if (!fs.existsSync(dirPath)) return [];
-    const files = fs.readdirSync(dirPath);
+    let files = [];
+    try {
+        files = fs.readdirSync(dirPath);
+    } catch (error) {
+        if (error && error.code === 'ENOENT') return arrayOfFiles || [];
+        throw error;
+    }
     arrayOfFiles = arrayOfFiles || [];
     files.forEach(function(file) {
         if (file === '.DS_Store') return;
         const fullPath = path.join(dirPath, file);
-        if (fs.statSync(fullPath).isDirectory()) {
+        let stat;
+        try {
+            stat = fs.statSync(fullPath);
+        } catch (error) {
+            if (error && error.code === 'ENOENT') return;
+            throw error;
+        }
+        if (stat.isDirectory()) {
             arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
         } else {
             arrayOfFiles.push(fullPath);
@@ -71,6 +84,7 @@ module.exports = async function uploadAll() {
     for (const localPath of filesToUpload) {
         const relativePath = path.relative(DATA_DIR, localPath).split(path.sep).join('/');
         const remotePath = `${envConfig.ossPath}${relativePath}`;
+        const canonicalRemotePath = `poe2/${envConfig.isProd ? 'release' : 'dev'}/${relativePath}`;
         const ext = path.extname(localPath).toLowerCase();
 
         const options = {};
@@ -105,8 +119,13 @@ module.exports = async function uploadAll() {
 
         try {
             await client.put(remotePath, localPath, options);
+            await client.put(canonicalRemotePath, localPath, options);
             successCount++;
         } catch (e) {
+            if (e && e.code === 'ENOENT') {
+                console.warn(`   ⚠️  跳过已变更文件: ${relativePath}`);
+                continue;
+            }
             console.error(`   ❌ 失败: ${relativePath}`, e.message);
         }
     }
@@ -157,5 +176,6 @@ module.exports = async function uploadAll() {
         }
     }
 
+    console.log(`   ✅ 已同步新命名空间: poe2/${envConfig.isProd ? 'release' : 'dev'}/`);
     console.log(`📊 上传完成: ${successCount}/${filesToUpload.length}`);
 };

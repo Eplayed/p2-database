@@ -6,6 +6,7 @@ require('dotenv').config({ path: path.join(__dirname, '../auto_browser/.env') })
 const env = process.env.NODE_ENV === 'dev' ? 'dev' : 'release';
 const dataDir = path.join(__dirname, '../translated-data/poe1', env);
 const prefix = `poe1-season/${env}/`;
+const canonicalPrefix = `poe1/${env}/`;
 
 const CONTENT_TYPES = {
   '.json': 'application/json; charset=utf-8',
@@ -45,16 +46,19 @@ async function uploadPoe1Data() {
   if (!files.length) throw new Error('没有可上传的 POE1 小程序数据');
   for (const file of files) {
     const isJson = file.ext === '.json';
-    await client.put(`${prefix}miniprogram_data/${file.relativePath}`, file.filePath, {
+    const options = {
       headers: {
         'Content-Type': CONTENT_TYPES[file.ext],
         'Cache-Control': isJson && ['economy_digest.json', 'cn_economy_digest.json'].includes(file.relativePath)
           ? 'max-age=300'
           : 'max-age=900'
       }
-    });
+    };
+    await client.put(`${prefix}miniprogram_data/${file.relativePath}`, file.filePath, options);
+    await client.put(`${canonicalPrefix}miniprogram_data/${file.relativePath}`, file.filePath, options);
     console.log(`   ✅ ${prefix}miniprogram_data/${file.relativePath}`);
   }
+  console.log(`   ✅ 已同步新命名空间: ${canonicalPrefix}`);
   console.log(`📊 POE1 OSS 上传完成: ${files.length} 个文件`);
 }
 

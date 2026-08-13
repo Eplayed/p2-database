@@ -68,7 +68,15 @@
 - 日常：poe.ninja 经济 -> DD373 -> 流放急救箱 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 - 天梯：poe.ninja 天梯 -> 玩家详情/BD解析 -> 聚合分析 -> 技能/装备查 BD 索引 -> 我的关注变化 -> 首页复访摘要 -> OSS。
 - 剧情地图：低频手动刷新，不进入日常组合任务。
-- POE1：`poe1:ladder` -> `poe1:official-starter` -> `poe1:starter` -> `poe1:starter:terms` -> `poe1:story` -> `poe1_passive_trees` -> `poe1:economy` -> `poe1:economy:cn` -> `poe1:upload`，产物位于 `translated-data/poe1/{env}`，仅上传到 `poe1-season/{env}/`。
+- POE1：`poe1:ladder` -> `poe1:official-starter` -> `poe1:starter` -> `poe1:starter:terms` -> `poe1:story` -> `poe1_passive_trees` -> `poe1:economy` -> `poe1:economy:cn` -> `poe1_manifest` -> `poe1:upload`，产物位于 `translated-data/poe1/{env}`，上传到新路径 `poe1/{env}/`，并兼容同步旧路径 `poe1-season/{env}/`。
+
+## 合并小程序数据契约
+
+- POE2 本地数据根目录：`translated-data/{env}`；POE1 本地数据根目录：`translated-data/poe1/{env}`。
+- POE2 新 OSS 命名空间：`poe2/{env}/`；POE1 新 OSS 命名空间：`poe1/{env}/`。
+- 旧小程序兼容路径继续双写：POE2 `poe2-ladders/{env}/`，POE1 `poe1-season/{env}/`。
+- 每个游戏发布前必须生成 `miniprogram_data/manifest.json`；合并小程序应先读取 manifest，再按当前游戏选择对应数据文件。
+- 总索引为 `translated-data/manifest.{env}.json`，只用于 Dashboard 和未来合并入口识别两套数据健康状态。
 
 ## 关键约束
 
@@ -104,6 +112,9 @@
 - `npm run poe1:starter:terms`
 - `npm run poe1:story`
 - `npm run poe1:economy:cn`
+- `npm run build:manifests`
+- `npm run build:manifest:poe2`
+- `npm run build:manifest:poe1`
 - `npm run research:content`
 
 ## 推荐工作方式

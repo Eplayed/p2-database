@@ -6,6 +6,8 @@
 
 另有独立的 POE1「流放赛季助手」数据线：`国服官方天梯 / poe.ninja 游戏内经济 / 人工校对开荒 BD -> translated-data/poe1 -> poe1-season/{env}/ -> POE1 小程序`。它与 POE2 的生产目录、缓存和 OSS 路径完全隔离。
 
+2026-08 起进入“流放系列合并小程序”P0：先统一数据契约和 Dashboard，不直接把 POE1/POE2 数据揉在一起。新合并小程序后续只读取当前游戏的 manifest，再按需加载对应 JSON。
+
 首次接手先读：
 
 - `docs/PROJECT_OVERVIEW.md`
@@ -48,14 +50,16 @@ npm install
 npm run dashboard
 ```
 
-访问 `http://localhost:5177`。Dashboard 已改为工作台布局：左侧菜单用于切换总览、自动运行、任务流程、内容研究、运行日志和功能调研，右侧是当前操作内容。
+访问 `http://localhost:5177`。Dashboard 已改为工作台布局：左侧菜单用于切换总览、自动运行、任务流程、内容研究、运行日志和功能调研，右侧是当前操作内容。总览会同时展示 POE2 与 POE1 的数据健康状态、当前赛季、核心文件、OSS 新路径和兼容路径。
 
-当前只保留两类可见能力：
+当前推荐任务按游戏隔离：
 
-1. `一键更新日常数据并上传`
+1. `一键更新日常数据并上传`（POE2）
    poe.ninja 经济（首页摘要 + 国际服通货目录） -> DD373 -> 流放急救箱 -> 我的关注变化 -> 首页复访摘要 -> OSS。
-2. `刷新天梯/BD解析并上传`
+2. `刷新天梯/BD解析并上传`（POE2）
    天梯玩家详情 -> BD 解析 -> 趋势聚合 -> 技能/装备查 BD 索引 -> 我的关注变化 -> 首页复访摘要 -> OSS。
+3. `更新 POE1 抄 BD / 看行情`（POE1）
+   国服官方天梯 -> 官方入门流派 -> 玩家开荒 BD -> 开荒术语匹配 -> 剧情跑图导航 -> 天赋树截图 -> 国际服经济摘要 -> 国服行情接口 -> POE1 专用 OSS 上传。
 隐藏步骤仅供上述组合任务调用，不单独展示。
 
 剧情攻略变化很少，不在 Dashboard 日常任务中；需要时使用命令行单独刷新。
@@ -103,6 +107,11 @@ npm run build:daily-return:dev
 npm run build:follow-updates
 npm run build:follow-updates:dev
 
+# 双游戏 manifest，合并小程序数据入口
+npm run build:manifests
+npm run build:manifest:poe2
+npm run build:manifest:poe1
+
 # 内容研究选题池，仅本地自媒体/策略使用，不上传 OSS
 npm run research:content
 
@@ -130,6 +139,30 @@ Dashboard 中也提供 `更新 POE1 抄 BD / 看行情` 一键任务，按“国
 内容研究跑完后，Dashboard 会显示“内容研究看板”，可按 `抄BD / 看行情 / 解卡点 / 新闻资讯 / 热点信息` 和 `POE1 / POE2 / 暗黑破坏神 / 魔兽世界` 筛选；Markdown 选题清单会导出到 `dashboard/runtime/content-research-topics.md`，仅供自媒体和产品策略使用，不上传 OSS。
 
 ## 当前关键产物
+
+### 合并小程序数据契约
+
+新数据入口是每个游戏各自的 manifest：
+
+```text
+translated-data/release/miniprogram_data/manifest.json          # POE2，兼容旧本地目录
+translated-data/poe1/release/miniprogram_data/manifest.json     # POE1
+translated-data/manifest.release.json                           # 双游戏注册表，仅供 Dashboard/后续合并壳参考
+```
+
+生产 OSS 会双写：
+
+```text
+poe2/release/miniprogram_data/manifest.json          # 新合并小程序推荐读取
+poe2-ladders/release/miniprogram_data/manifest.json  # 兼容旧 POE2 路径
+
+poe1/release/miniprogram_data/manifest.json          # 新合并小程序推荐读取
+poe1-season/release/miniprogram_data/manifest.json   # 兼容旧 POE1 路径
+```
+
+每份 manifest 都包含 `game`、`gameName`、`env`、`miniprogram`、`canonicalOssPrefix`、`legacyOssPrefixes`、`summary`、`files` 和 `health.missingFiles`。合并小程序后，前端不要硬编码旧路径，应该先拉当前游戏的 `manifest.json`，再根据 `files` 读取对应 JSON。
+
+### POE2 当前关键产物
 
 ```text
 translated-data/release/
@@ -159,6 +192,13 @@ poe2-economy/economy_digest.json
 poe2-economy/cn_market_digest.json
 ```
 
+同时会同步新命名空间：
+
+```text
+poe2/release/
+poe2/dev/
+```
+
 ## POE1 数据线
 
 POE1 当前服务独立小程序 `poe-mini` 的四条移动端主路径：`抄 BD`、`开荒 BD`、`剧情跑图` 与 `看行情`。
@@ -176,7 +216,7 @@ translated-data/poe1/release/miniprogram_data/
 └── cn_economy_digest.json   # 国服行情接口：DD373 S30 公开报价 + FilterEditor 公开源 + 人工校准入口，禁止混用国际服比例
 ```
 
-生产 OSS 前缀是 `poe1-season/release/miniprogram_data/`，缓存为经济 5 分钟、天梯 15 分钟。小程序读取失败时回退到本地真实快照，不应白屏。
+生产 OSS 会双写到 `poe1-season/release/miniprogram_data/` 和 `poe1/release/miniprogram_data/`。前者兼容当前 `poe-mini`，后者给合并小程序使用。缓存为经济 5 分钟、天梯 15 分钟。小程序读取失败时回退到本地真实快照，不应白屏。
 
 天梯源说明：
 

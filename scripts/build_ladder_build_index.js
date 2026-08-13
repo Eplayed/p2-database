@@ -180,24 +180,25 @@ const writeLadderBuildIndex = (output, outputFile = OUTPUT_FILE) => {
   const outputDir = path.dirname(outputFile)
   const detailDir = path.join(outputDir, DETAIL_DIR_NAME)
   fs.mkdirSync(outputDir, { recursive: true })
-  fs.rmSync(detailDir, { recursive: true, force: true })
   fs.mkdirSync(detailDir, { recursive: true })
 
   const detailPath = id => `miniprogram_data/${DETAIL_DIR_NAME}/${id}.json`
+  const writtenDetailFiles = new Set()
+  const writeDetail = (id, payload) => {
+    const filename = `${id}.json`
+    const target = path.join(detailDir, filename)
+    const temp = path.join(detailDir, `.${filename}.${process.pid}.${Date.now()}.tmp`)
+    fs.writeFileSync(temp, JSON.stringify(payload), 'utf8')
+    fs.renameSync(temp, target)
+    writtenDetailFiles.add(filename)
+  }
+
   const skills = output.skills.map(({ players, supportSkills, ...item }) => {
-    fs.writeFileSync(
-      path.join(detailDir, `${item.id}.json`),
-      JSON.stringify({ ...item, type: 'skill', supportSkills, players }),
-      'utf8'
-    )
+    writeDetail(item.id, { ...item, type: 'skill', supportSkills, players })
     return { ...item, classes: item.classes.slice(0, 3), detailPath: detailPath(item.id) }
   })
   const equipment = output.equipment.map(({ players, relatedSkills, ...item }) => {
-    fs.writeFileSync(
-      path.join(detailDir, `${item.id}.json`),
-      JSON.stringify({ ...item, type: 'equipment', relatedSkills, players }),
-      'utf8'
-    )
+    writeDetail(item.id, { ...item, type: 'equipment', relatedSkills, players })
     return { ...item, classes: item.classes.slice(0, 3), detailPath: detailPath(item.id) }
   })
   const catalog = {
@@ -208,6 +209,15 @@ const writeLadderBuildIndex = (output, outputFile = OUTPUT_FILE) => {
     equipment
   }
   fs.writeFileSync(outputFile, JSON.stringify(catalog), 'utf8')
+  for (const filename of fs.readdirSync(detailDir)) {
+    if (filename === '.DS_Store' || filename.startsWith('.')) {
+      fs.rmSync(path.join(detailDir, filename), { force: true })
+      continue
+    }
+    if (filename.endsWith('.json') && !writtenDetailFiles.has(filename)) {
+      fs.rmSync(path.join(detailDir, filename), { force: true })
+    }
+  }
   return catalog
 }
 

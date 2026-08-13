@@ -31,27 +31,31 @@ const TASKS = [
     name: '一键更新日常数据并上传',
     description: '日常推荐：刷新小程序仍在使用的 POE2 国际服通货、DD373 国服换算、流放急救箱、我的关注变化与首页复访摘要；任一步失败会停止上传，避免空数据覆盖线上。不抓新闻、天梯、剧情攻略，也不更新已下架的 0.5 资料、赛季开荒/热门 BD。',
     group: 'recommended',
-    steps: ['economy_digest', 'cn_market_dd373', 'problem_guides', 'follow_updates', 'daily_return_digest', 'upload'],
+    game: 'poe2',
+    steps: ['economy_digest', 'cn_market_dd373', 'problem_guides', 'follow_updates', 'daily_return_digest', 'poe2_manifest', 'upload'],
   },
   {
     id: 'ladder_bd_publish',
     name: '刷新天梯/BD解析并上传',
     description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译、天梯分析及技能/装备查 BD 索引，并上传 OSS。',
     group: 'recommended',
-    steps: ['ladder', 'ladder_build_index', 'follow_updates', 'daily_return_digest', 'upload'],
+    game: 'poe2',
+    steps: ['ladder', 'ladder_build_index', 'follow_updates', 'daily_return_digest', 'poe2_manifest', 'upload'],
   },
   {
     id: 'poe1_publish',
     name: '更新 POE1 抄 BD / 看行情',
     description: '刷新国服官方天梯、官方入门流派、玩家开荒 BD、剧情跑图导航、天赋树截图、国际服游戏内通货行情和国服行情接口，并上传 POE1 专用 OSS 路径；不会影响 POE2 数据。',
     group: 'recommended',
-    steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_upload'],
+    game: 'poe1',
+    steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_manifest', 'poe1_upload'],
   },
   {
     id: 'forum_content_scan',
     name: '更新论坛选题池',
     description: '采集现有论坛选题池，并补充 POE1/POE2、暗黑破坏神、魔兽世界的资讯和热点参考。只用于自媒体选题和小程序策略，不上传 OSS，不进入小程序日常发布。',
     group: 'content_research',
+    game: 'all',
     localOnly: true,
     command: ['bash', ['scripts/run_forum_content_scan.sh']],
   },
@@ -60,6 +64,7 @@ const TASKS = [
     name: '抓取天梯 + 聚合分析',
     description: '抓取 poe.ninja 天梯玩家详情，生成 players/*.json、职业/技能/装备趋势分析；会刷新 BD 解析里的装备、技能、符文/镶嵌翻译。聚合阶段也会先生成一次查 BD 索引。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['crawlers/run.js', '--ladder']],
   },
@@ -68,6 +73,7 @@ const TASKS = [
     name: '生成 POE1 国服天梯摘要',
     description: '读取国服官方天梯公开数据，生成职业、主技能和可查看的代表 BD 摘要。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/build_digest.js']],
   },
@@ -76,6 +82,7 @@ const TASKS = [
     name: '生成 POE1 开荒 BD',
     description: '读取国服译名校对后的开荒 BD 文档或仓库结构化源数据，生成 starter_builds.json。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/starter_builds.js']],
   },
@@ -84,6 +91,7 @@ const TASKS = [
     name: '生成 POE1 官方入门流派',
     description: '读取国服官方推荐流派结构化源，校验官方活动页可访问，生成 official_starter_builds.json。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/official_starter.js']],
   },
@@ -92,6 +100,7 @@ const TASKS = [
     name: '匹配 POE1 开荒术语',
     description: '抽取开荒 BD 中的技能、装备和英文括注，优先和国服官方天梯真实数据匹配，输出待补全清单。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/starter_terms.js']],
   },
@@ -100,6 +109,7 @@ const TASKS = [
     name: '生成 POE1 经济摘要',
     description: '读取 poe.ninja POE1 当前赛季公开经济数据，生成通货、碎片、精华和圣油的游戏内换算及变化。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/economy_digest.js']],
   },
@@ -108,6 +118,7 @@ const TASKS = [
     name: '生成 POE1 国服行情接口',
     description: '合并 DD373 S30 国服公开报价与 FilterEditor 公开物价源，生成 POE1 国服行情接口；可用 base-data/poe1/cn_economy_manual.json 人工核验补充。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/cn_economy_digest.js']],
   },
@@ -116,6 +127,7 @@ const TASKS = [
     name: '生成 POE1 剧情跑图导航',
     description: '读取本地 B 站剧情整理与章节地图素材，生成小程序剧情跑图 JSON 和轻量地图图。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/story_guide.js']],
   },
@@ -124,14 +136,25 @@ const TASKS = [
     name: '截取 POE1 天赋树图片',
     description: '打开 poe.ninja 当前赛季 BD 详情页，截取天赋树 canvas 为图片，供小程序详情页直接展示。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/capture_passive_trees.js']],
+  },
+  {
+    id: 'poe1_manifest',
+    name: '生成 POE1 数据 manifest',
+    description: '为 POE1 小程序数据生成游戏级 manifest，供合并小程序和新版 Dashboard 读取。',
+    group: 'single',
+    game: 'poe1',
+    hidden: true,
+    command: ['node', ['scripts/build_game_manifests.js', '--game=poe1']],
   },
   {
     id: 'poe1_upload',
     name: '上传 POE1 数据到 OSS',
     description: '将 POE1 小程序摘要和天赋树图片上传到 poe1-season 独立前缀。',
     group: 'single',
+    game: 'poe1',
     hidden: true,
     command: ['node', ['scripts/upload_poe1_to_oss.js']],
   },
@@ -140,6 +163,7 @@ const TASKS = [
     name: '生成技能/装备查 BD 索引',
     description: '从当前 players/*.json 重新生成轻量目录和按需详情，确保小程序查询数据与本次天梯玩家详情一致。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['scripts/build_ladder_build_index.js']],
   },
@@ -148,6 +172,7 @@ const TASKS = [
     name: '抓取 poe.ninja 经济摘要',
     description: '直接请求 poe.ninja PoE2 当前赛季经济 API，生成首页摘要 economy_digest.json、国际服分类清单 international_market_catalog.json、兼容 economy.json 和展示图标；通货为空会直接失败，不覆盖线上数据。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['crawlers/economy/ninja_digest.js']],
   },
@@ -156,6 +181,7 @@ const TASKS = [
     name: '抓取 DD373 国服行情',
     description: '抓取 DD373 流放之路：降临奥杜尔秘符赛季核心通货公开商品列表，生成 cn_market_digest.json。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['crawlers/cn-market/dd373_currency.js']],
   },
@@ -164,6 +190,7 @@ const TASKS = [
     name: '生成流放急救箱',
     description: '合并人工整理的问题排查清单，生成小程序可动态读取的 problem_guides.json。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['scripts/build_problem_guides.js']],
   },
@@ -172,6 +199,7 @@ const TASKS = [
     name: '生成首页复访摘要',
     description: '基于经济、天梯和急救箱现有产物，生成首页今日变化 daily_return_digest.json。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['scripts/build_daily_return_digest.js']],
   },
@@ -180,14 +208,25 @@ const TASKS = [
     name: '生成我的关注变化摘要',
     description: '基于最新天梯索引和国服行情，对比上一版生成技能、装备、通货的关注变化 follow_updates.json。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['scripts/build_follow_updates.js']],
+  },
+  {
+    id: 'poe2_manifest',
+    name: '生成 POE2 数据 manifest',
+    description: '为 POE2 小程序数据生成游戏级 manifest，供合并小程序和新版 Dashboard 读取。',
+    group: 'single',
+    game: 'poe2',
+    hidden: true,
+    command: ['node', ['scripts/build_game_manifests.js', '--game=poe2']],
   },
   {
     id: 'upload',
     name: '上传 OSS',
     description: '上传当前环境 translated-data 到 OSS。',
     group: 'single',
+    game: 'poe2',
     hidden: true,
     command: ['node', ['-e', "require('./auto_browser/upload_to_oss')()"]],
   },
@@ -313,6 +352,12 @@ function getDataDir(environment) {
   return path.join(ROOT, 'translated-data', getEnvironmentName(environment));
 }
 
+function getGameDataDir(game, environment) {
+  const env = getEnvironmentName(environment);
+  if (game === 'poe1') return path.join(ROOT, 'translated-data', 'poe1', env);
+  return path.join(ROOT, 'translated-data', env);
+}
+
 function getSurveyConfigPath(environment) {
   return path.join(getDataDir(environment), 'miniprogram_config', 'feature_survey.json');
 }
@@ -379,6 +424,8 @@ function getArrayLength(data) {
   if (data && Array.isArray(data.data)) return data.data.length;
   if (data && Array.isArray(data.candidates)) return data.candidates.length;
   if (data && Array.isArray(data.guides)) return data.guides.length;
+  if (data && Array.isArray(data.builds)) return data.builds.length;
+  if (data && Array.isArray(data.chapters)) return data.chapters.length;
   if (data && data.counters && Number.isFinite(Number(data.counters.total))) return Number(data.counters.total);
   if (data && Array.isArray(data.categories)) {
     return data.categories.reduce((sum, item) => sum + Number(item.count || 0), 0);
@@ -395,6 +442,138 @@ function summarizeJson(filePath) {
     ...info,
     count: getArrayLength(data),
   };
+}
+
+function getGameFileSummary(dataDir, relativePath) {
+  const filePath = path.join(dataDir, relativePath);
+  const info = getFileInfo(filePath);
+  const data = info ? readJson(filePath, null) : null;
+  return {
+    path: relativePath,
+    exists: Boolean(info),
+    updatedAt: info ? info.updatedAt : '',
+    size: info ? info.size : 0,
+    count: data ? getArrayLength(data) : 0,
+  };
+}
+
+function getPoe2GameSummary(environment) {
+  const env = getEnvironmentName(environment);
+  const dataDir = getGameDataDir('poe2', env);
+  const ladderAnalysis = readJson(path.join(dataDir, 'ladder_analysis.json'), {});
+  const ladderBuildIndex = readJson(path.join(dataDir, 'miniprogram_data/ladder_build_index.json'), {});
+  const economyDigest = readJson(path.join(dataDir, 'miniprogram_data/economy_digest.json'), {});
+  const cnMarketDigest = readJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json'), {});
+  const problemGuides = readJson(path.join(dataDir, 'miniprogram_data/problem_guides.json'), {});
+  const files = {
+    manifest: getGameFileSummary(dataDir, 'miniprogram_data/manifest.json'),
+    ladderAnalysis: getGameFileSummary(dataDir, 'ladder_analysis.json'),
+    ladderBuildIndex: getGameFileSummary(dataDir, 'miniprogram_data/ladder_build_index.json'),
+    economyDigest: getGameFileSummary(dataDir, 'miniprogram_data/economy_digest.json'),
+    cnMarketDigest: getGameFileSummary(dataDir, 'miniprogram_data/cn_market_digest.json'),
+    dailyReturnDigest: getGameFileSummary(dataDir, 'miniprogram_data/daily_return_digest.json'),
+    followUpdates: getGameFileSummary(dataDir, 'miniprogram_data/follow_updates.json'),
+    problemGuides: getGameFileSummary(dataDir, 'miniprogram_data/problem_guides.json'),
+  };
+  const missingFiles = Object.entries(files).filter(([, file]) => !file.exists).map(([key]) => key);
+  const health = {
+    status: missingFiles.length ? 'warn' : 'ok',
+    fileCount: countFiles(dataDir),
+    miniprogramFileCount: countFiles(path.join(dataDir, 'miniprogram_data')),
+    missingFiles,
+  };
+  return {
+    game: 'poe2',
+    name: '流放之路2：降临',
+    shortName: 'POE2',
+    miniprogram: 'daily-talk',
+    environment: env,
+    dataDir: relativeToRoot(dataDir),
+    canonicalOssPrefix: `poe2/${env}/`,
+    legacyOssPrefixes: [`poe2-ladders/${env}/`],
+    exists: fs.existsSync(dataDir),
+    fileCount: health.fileCount,
+    missingFiles,
+    health,
+    files,
+    summary: {
+      seasonName: economyDigest.league?.displayName || economyDigest.league?.name || cnMarketDigest.game?.league || '',
+      updatedAt: [ladderAnalysis.updateTime, ladderBuildIndex.updatedAt, economyDigest.updatedAt, cnMarketDigest.updatedAt]
+        .filter(Boolean)
+        .sort()
+        .pop() || '',
+      ladderPlayers: Number(ladderAnalysis.totalPlayers || ladderBuildIndex.totalPlayers || 0),
+      sampledPlayers: Number(ladderAnalysis.sampledPlayers || 0),
+      classes: Array.isArray(ladderAnalysis.classDistribution) ? ladderAnalysis.classDistribution.length : 0,
+      skills: Array.isArray(ladderBuildIndex.skills) ? ladderBuildIndex.skills.length : 0,
+      equipment: Array.isArray(ladderBuildIndex.equipment) ? ladderBuildIndex.equipment.length : 0,
+      economyItems: Number(economyDigest.summary?.selectedItemCount || economyDigest.summary?.itemCount || 0),
+      cnMarketItems: Number(cnMarketDigest.summary?.availableCount || 0),
+      guides: Array.isArray(problemGuides.items) ? problemGuides.items.length : 0,
+    },
+  };
+}
+
+function getPoe1GameSummary(environment) {
+  const env = getEnvironmentName(environment);
+  const dataDir = getGameDataDir('poe1', env);
+  const ladderDigest = readJson(path.join(dataDir, 'miniprogram_data/ladder_digest.json'), {});
+  const economyDigest = readJson(path.join(dataDir, 'miniprogram_data/economy_digest.json'), {});
+  const cnEconomyDigest = readJson(path.join(dataDir, 'miniprogram_data/cn_economy_digest.json'), {});
+  const officialStarter = readJson(path.join(dataDir, 'miniprogram_data/official_starter_builds.json'), {});
+  const starterBuilds = readJson(path.join(dataDir, 'miniprogram_data/starter_builds.json'), {});
+  const storyGuide = readJson(path.join(dataDir, 'miniprogram_data/story_guide.json'), {});
+  const files = {
+    manifest: getGameFileSummary(dataDir, 'miniprogram_data/manifest.json'),
+    ladderDigest: getGameFileSummary(dataDir, 'miniprogram_data/ladder_digest.json'),
+    economyDigest: getGameFileSummary(dataDir, 'miniprogram_data/economy_digest.json'),
+    cnEconomyDigest: getGameFileSummary(dataDir, 'miniprogram_data/cn_economy_digest.json'),
+    officialStarterBuilds: getGameFileSummary(dataDir, 'miniprogram_data/official_starter_builds.json'),
+    starterBuilds: getGameFileSummary(dataDir, 'miniprogram_data/starter_builds.json'),
+    starterTermsEnrichment: getGameFileSummary(dataDir, 'miniprogram_data/starter_terms_enrichment.json'),
+    storyGuide: getGameFileSummary(dataDir, 'miniprogram_data/story_guide.json'),
+  };
+  const missingFiles = Object.entries(files).filter(([, file]) => !file.exists).map(([key]) => key);
+  const health = {
+    status: missingFiles.length ? 'warn' : 'ok',
+    fileCount: countFiles(dataDir),
+    miniprogramFileCount: countFiles(path.join(dataDir, 'miniprogram_data')),
+    missingFiles,
+  };
+  return {
+    game: 'poe1',
+    name: '流放之路',
+    shortName: 'POE1',
+    miniprogram: 'poe-mini',
+    environment: env,
+    dataDir: relativeToRoot(dataDir),
+    canonicalOssPrefix: `poe1/${env}/`,
+    legacyOssPrefixes: [`poe1-season/${env}/`],
+    exists: fs.existsSync(dataDir),
+    fileCount: health.fileCount,
+    missingFiles,
+    health,
+    files,
+    summary: {
+      seasonName: cnEconomyDigest.league?.displayName || economyDigest.league?.displayName || ladderDigest.league?.displayName || '',
+      updatedAt: [ladderDigest.updatedAt, economyDigest.updatedAt, cnEconomyDigest.updatedAt, officialStarter.updatedAt]
+        .filter(Boolean)
+        .sort()
+        .pop() || '',
+      ladderPlayers: Number(ladderDigest.totalCharacters || 0),
+      sampledPlayers: Array.isArray(ladderDigest.builds) ? ladderDigest.builds.length : 0,
+      classes: new Set((Array.isArray(ladderDigest.builds) ? ladderDigest.builds : []).map(item => item.className).filter(Boolean)).size,
+      skills: Array.isArray(ladderDigest.popularSkills) ? ladderDigest.popularSkills.length : 0,
+      equipment: 0,
+      economyItems: Number(economyDigest.core?.length || 0),
+      cnMarketItems: Number(cnEconomyDigest.core?.length || 0),
+      guides: getArrayLength(officialStarter) + getArrayLength(starterBuilds) + getArrayLength(storyGuide),
+    },
+  };
+}
+
+function getGameSummaries(environment) {
+  return [getPoe2GameSummary(environment), getPoe1GameSummary(environment)];
 }
 
 function getDataSummary(environment) {
@@ -444,6 +623,7 @@ function getDataSummary(environment) {
       cnMarketItems: readJson(path.join(dataDir, 'miniprogram_data/cn_market_digest.json'), null)?.summary?.availableCount || 0,
     },
     survey: getSurveySummary(environment),
+    games: getGameSummaries(environment),
   };
 }
 
@@ -825,7 +1005,7 @@ function startServer() {
   server.listen(activePort, () => {
     const address = server.address();
     const port = address && address.port ? address.port : activePort;
-    console.log(`\nPoE2 数据控制台已启动: http://localhost:${port}`);
+    console.log(`\n流放数据工作台已启动: http://localhost:${port}`);
     console.log('按 Ctrl+C 停止服务\n');
   });
 }

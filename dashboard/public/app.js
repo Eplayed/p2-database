@@ -36,6 +36,7 @@ const automationQueueList = document.querySelector('#automationQueueList');
 const automationIntervalInput = document.querySelector('#automationIntervalInput');
 const automationJitterInput = document.querySelector('#automationJitterInput');
 const automationSaveBtn = document.querySelector('#automationSaveBtn');
+const automationRunNowBtn = document.querySelector('#automationRunNowBtn');
 const automationToggleBtn = document.querySelector('#automationToggleBtn');
 const automationStatusText = document.querySelector('#automationStatusText');
 const automationNextText = document.querySelector('#automationNextText');
@@ -122,6 +123,7 @@ async function requestJson(url, options) {
 
 function renderSummary(summary) {
   const keyFiles = summary.keyFiles || {};
+  const games = Array.isArray(summary.games) ? summary.games : [];
   const cards = [
     {
       label: '环境',
@@ -173,7 +175,8 @@ function renderSummary(summary) {
     },
   ];
 
-  summaryEl.innerHTML = cards
+  const overviewCards = cards
+    .slice(0, 4)
     .map(
       card => `
         <article class="stat-card">
@@ -184,6 +187,43 @@ function renderSummary(summary) {
       `
     )
     .join('');
+
+  const gameCards = games
+    .map(game => {
+      const summary = game.summary || {};
+      const missing = Array.isArray(game.missingFiles) ? game.missingFiles : [];
+      const healthClass = missing.length ? 'warn' : 'ok';
+      return `
+        <article class="game-health-card ${healthClass}">
+          <div class="game-health-head">
+            <div>
+              <span class="game-badge">${escapeHtml(game.shortName)}</span>
+              <h3>${escapeHtml(game.name)}</h3>
+              <p>${escapeHtml(game.miniprogram)} · ${escapeHtml(game.dataDir)}</p>
+            </div>
+            <strong>${missing.length ? `${missing.length} 项缺失` : '健康'}</strong>
+          </div>
+          <div class="game-health-grid">
+            <span><em>赛季</em>${escapeHtml(summary.seasonName || '-')}</span>
+            <span><em>天梯</em>${Number(summary.ladderPlayers || 0)} / ${Number(summary.sampledPlayers || 0)}</span>
+            <span><em>查 BD</em>${Number(summary.skills || 0)} 技能 · ${Number(summary.equipment || 0)} 装备</span>
+            <span><em>行情</em>${Number(summary.economyItems || 0)} 国际 · ${Number(summary.cnMarketItems || 0)} 国服</span>
+            <span><em>攻略</em>${Number(summary.guides || 0)} 项</span>
+            <span><em>更新</em>${formatTime(summary.updatedAt)}</span>
+          </div>
+          <div class="game-paths">
+            <span>新路径：${escapeHtml(game.canonicalOssPrefix)}</span>
+            <span>兼容：${escapeHtml((game.legacyOssPrefixes || []).join('、'))}</span>
+          </div>
+        </article>
+      `;
+    })
+    .join('');
+
+  summaryEl.innerHTML = `
+    <div class="overview-grid">${overviewCards}</div>
+    <section class="game-health-grid-wrap">${gameCards}</section>
+  `;
 }
 
 function renderSurveyControl(summary) {
@@ -265,6 +305,7 @@ function renderTasks() {
           <div class="task-title-row">
             <span class="task-title">${task.name}</span>
             <span class="task-badges">
+              ${task.game ? `<span class="badge game-task-badge">${task.game === 'all' ? 'ALL' : task.game.toUpperCase()}</span>` : ''}
               ${isFlow ? '<span class="badge">流程</span>' : ''}
               ${task.dangerous ? '<span class="badge danger-badge">谨慎</span>' : ''}
             </span>
@@ -794,13 +835,14 @@ function renderAutomationQueue() {
         const task = state.tasks.find(item => item.id === taskId);
         if (!task) return '';
         const isCurrent = state.automationRunner.running && state.automationRunner.currentIndex === index;
+        const gameLabel = task.game === 'all' ? 'ALL' : String(task.game || '').toUpperCase();
         return `
           <li class="automation-queue-item ${isCurrent ? 'running' : ''}" draggable="${disabled ? 'false' : 'true'}" data-index="${index}">
             <span class="drag-handle" aria-hidden="true">☰</span>
             <span class="queue-index">${index + 1}</span>
             <div class="queue-copy">
               <strong>${escapeHtml(task.name)}</strong>
-              <small>${task.localOnly ? '本地内容研究' : Array.isArray(task.steps) ? '流程任务' : '脚本任务'}</small>
+              <small>${escapeHtml(gameLabel)} · ${task.localOnly ? '本地内容研究' : Array.isArray(task.steps) ? '流程任务' : '脚本任务'}</small>
             </div>
             <button class="queue-remove-btn" data-index="${index}" ${disabled || queue.length <= 1 ? 'disabled' : ''}>移除</button>
           </li>
@@ -885,6 +927,7 @@ function updateAutomationUi() {
   const queueEditingDisabled = state.automationRunner.running || Boolean(currentRun);
   automationTaskSelect.disabled = queueEditingDisabled;
   automationAddTaskBtn.disabled = queueEditingDisabled;
+  automationRunNowBtn.disabled = queueEditingDisabled || Boolean(state.countdown);
   automationStatusText.textContent = state.automationRunner.running
     ? `队列运行中：${state.automationRunner.currentIndex + 1}/${state.automationRunner.total}`
     : state.automation.enabled
@@ -912,6 +955,13 @@ function toggleAutomation() {
   state.automation.enabled = !state.automation.enabled;
   state.automation.nextRunAt = state.automation.enabled ? computeNextRunAt() : 0;
   persistAutomationSettings();
+  updateAutomationUi();
+}
+
+function runAutomationQueueNow() {
+  if (state.automationRunner.running || (state.status && state.status.currentRun)) return;
+  applyAutomationForm();
+  startAutomationCountdown(getAutomationQueue());
   updateAutomationUi();
 }
 
@@ -1055,6 +1105,7 @@ function bindAutomation() {
     window.alert('自动运行设置已保存');
   });
   automationAddTaskBtn.addEventListener('click', addAutomationTask);
+  automationRunNowBtn.addEventListener('click', runAutomationQueueNow);
   automationToggleBtn.addEventListener('click', toggleAutomation);
   automationIntervalInput.addEventListener('change', applyAutomationForm);
   automationJitterInput.addEventListener('change', applyAutomationForm);

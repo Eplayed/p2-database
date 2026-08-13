@@ -186,10 +186,22 @@ h2 {
 }
 
 .status-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
   margin: 18px 0;
+}
+
+.overview-grid,
+.game-health-grid-wrap {
+  display: grid;
+  gap: 14px;
+}
+
+.overview-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.game-health-grid-wrap {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 14px;
 }
 
 .stat-card {
@@ -219,6 +231,95 @@ h2 {
   color: #bcb6a8;
   font-size: 12px;
   line-height: 1.4;
+}
+
+.game-health-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    linear-gradient(145deg, rgba(19, 27, 27, 0.88), rgba(15, 15, 15, 0.94));
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+.game-health-card.warn {
+  border-color: rgba(255, 193, 7, 0.34);
+}
+
+.game-health-card.ok {
+  border-color: rgba(118, 210, 117, 0.28);
+}
+
+.game-health-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.game-health-head h3 {
+  margin: 8px 0 6px;
+  font-size: 22px;
+}
+
+.game-health-head p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.game-health-head strong {
+  align-self: flex-start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #15120a;
+  background: var(--gold);
+  white-space: nowrap;
+}
+
+.game-badge,
+.game-task-badge {
+  color: #15120a;
+  background: var(--gold-soft);
+}
+
+.game-badge {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.game-health-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.game-health-grid span {
+  display: grid;
+  gap: 5px;
+  min-height: 62px;
+  padding: 11px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.24);
+  color: #eee6d6;
+  font-weight: 800;
+}
+
+.game-health-grid em {
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.game-paths {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+  color: #aca69a;
+  font-size: 12px;
 }
 
 .panel {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PoE2 数据控制台</title>
+    <title>流放数据工作台</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -33,7 +33,7 @@
           <div>
             <p class="eyebrow">PoE Data Dashboard</p>
             <h2>数据控制台</h2>
-            <p class="subtle">本地抓取、生成、校验和上传 OSS 的可视化入口。</p>
+            <p class="subtle">POE2 与 POE1 数据分区抓取、生成、校验和上传 OSS 的可视化入口。</p>
           </div>
           <button class="ghost-btn" id="refreshBtn">刷新状态</button>
         </header>
@@ -48,6 +48,7 @@
           </div>
           <div class="panel-actions">
             <button class="ghost-btn" id="automationSaveBtn">保存设置</button>
+            <button class="ghost-btn" id="automationRunNowBtn">立即执行队列</button>
             <button class="danger-btn" id="automationToggleBtn">开启自动运行</button>
           </div>
         </div>
