@@ -140,5 +140,7 @@ Dashboard 另有独立的“更新论坛选题池”任务。它顺序采集现�
 
 - `ladder_build_index.json` 只包含名称、图标、使用人数、职业分布、代表 BD 和详情路径，控制首次下载体积；代表 BD 可直接跳转到对应天梯角色。
 - `ladder_build_details/{id}.json` 在用户查看搭配时按需加载，包含辅助技能/相关技能和更多代表玩家。
+- `ladder_build_details/{id}.json` 的 `players[].detailPath` 指向 `players/{file}.json`；小程序进入代表 BD 时再读取玩家详情，不要在列表页提前下载全部角色。
 - 技能按 `originalName` 去重，传奇装备按 `originalName` 去重，不使用中文显示名作为稳定键。
 - 数据完全来自当前抓取的真实玩家详情，不增加外部请求，也不使用人工推荐评分。
+- Dashboard 主流程通过 `auto_browser/upload_to_oss.js` 上传整个 release 目录，同步写入 `poe2-ladders/{env}/` 兼容路径和 `poe2/{env}/` 新路径；命令行兼容脚本 `scripts/upload_analysis.js` 也保持双写。

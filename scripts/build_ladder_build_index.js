@@ -78,7 +78,8 @@ const buildLadderBuildIndex = ({
       account: info.account || '',
       className: info.class || 'Unknown',
       classDisplayName: classNames.get(info.class) || info.class || 'Unknown',
-      level: Number(info.level) || 0
+      level: Number(info.level) || 0,
+      detailPath: detail.__detailPath || ''
     }
     if (!player.name || !player.account) continue
 
@@ -231,7 +232,10 @@ const buildFromCurrentData = () => {
   if (!fs.existsSync(playerDir)) throw new Error(`玩家目录不存在: ${playerDir}`)
   const playerDetails = fs.readdirSync(playerDir)
     .filter(file => file.endsWith('.json'))
-    .map(file => loadJson(path.join(playerDir, file)))
+    .map(file => ({
+      ...loadJson(path.join(playerDir, file)),
+      __detailPath: `players/${file}`
+    }))
   const classesFile = path.join(DATA_DIR, 'classes.json')
   const ladderFile = path.join(DATA_DIR, 'all_ladders_translated.json')
   const translations = loadTranslationMaps()

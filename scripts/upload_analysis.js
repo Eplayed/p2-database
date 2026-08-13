@@ -18,6 +18,8 @@ const client = new OSS({
 })
 
 const envPath = (process.env.OSS_PATH || (isProd ? 'release' : 'dev')).replace(/\/+$/, '')
+const legacyPrefix = `poe2-ladders/${envPath}/`
+const canonicalPrefix = `poe2/${envPath}/`
 const files = [
   {
     localPath: path.join(dataDir, 'ladder_analysis.json'),
@@ -28,6 +30,11 @@ const files = [
     ossKey: `poe2-ladders/${envPath}/miniprogram_data/ladder_build_index.json`
   }
 ]
+
+function getCanonicalKey(ossKey) {
+  if (!ossKey.startsWith(legacyPrefix)) return ''
+  return `${canonicalPrefix}${ossKey.slice(legacyPrefix.length)}`
+}
 
 const buildDetailDir = path.join(dataDir, 'miniprogram_data', 'ladder_build_details')
 if (fs.existsSync(buildDetailDir)) {
@@ -43,14 +50,18 @@ async function upload() {
   for (const file of files) {
     if (!fs.existsSync(file.localPath)) throw new Error(`找不到 ${file.localPath}`)
     console.log('  源文件:', file.localPath)
-    console.log('  上传到 OSS:', file.ossKey)
-    const result = await client.put(file.ossKey, file.localPath, {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Cache-Control': file.ossKey.includes('/ladder_build_details/') ? 'max-age=3600' : 'max-age=300'
-      }
-    })
-    console.log('  ✅ 上传成功:', result.url)
+    const headers = {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Cache-Control': file.ossKey.includes('/ladder_build_details/') ? 'max-age=3600' : 'max-age=300'
+    }
+    const keys = [file.ossKey, getCanonicalKey(file.ossKey)].filter(Boolean)
+    for (const ossKey of keys) {
+      console.log('  上传到 OSS:', ossKey)
+      const result = await client.put(ossKey, file.localPath, {
+        headers
+      })
+      console.log('  ✅ 上传成功:', result.url)
+    }
   }
 }
 
