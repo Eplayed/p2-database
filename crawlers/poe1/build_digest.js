@@ -323,6 +323,13 @@ function applyCharacterDetail(build, detail) {
   const skillGems = flattenSkillGems(skillGroups, mainSkill);
   const mainSkillGem = skillGems.find((gem) => gem.isMain) || skillGems[0];
   const passiveSelection = Array.isArray(detail.passiveSelection) ? detail.passiveSelection : [];
+  const keyPassives = compactKeyPassives(build, detail);
+  const detailSections = {
+    equipment: equipment.length + flasks.length + jewels.length,
+    skills: skillGroups.length || skillGems.length || (Array.isArray(build.skills) ? build.skills.length : 0),
+    passives: keyPassives.length,
+    passiveTree: Boolean(detail.passiveTreeImage || detail.passiveTreeUrl || passiveSelection.length)
+  };
   return {
     ...build,
     level: Number(detail.level || build.level) || build.level,
@@ -338,19 +345,29 @@ function applyCharacterDetail(build, detail) {
     equipment,
     flasks,
     jewels,
-    keyPassives: compactKeyPassives(build, detail),
+    keyPassives,
     passiveNodeCount: passiveSelection.length,
     passiveTreeName: '国服天赋树',
     passiveTreeUrl: detail.passiveTreeUrl || '',
     passiveTreeImage: detail.passiveTreeImage || '',
     sourceUrl: detail.passiveTreeUrl || build.sourceUrl,
     hasPathOfBuilding: Boolean(detail.pathOfBuildingExport),
-    itemCount: equipment.length + flasks.length + jewels.length
+    itemCount: equipment.length + flasks.length + jewels.length,
+    detailAvailable: detailSections.equipment > 0 || detailSections.skills > 0 || keyPassives.length > 0 || detailSections.passiveTree,
+    detailSections
   };
 }
 
 async function enrichBuildDetails(builds, snapshotName) {
-  const enriched = builds.map((build) => ({ ...build, equipment: [], flasks: [], jewels: [], itemCount: 0 }));
+  const enriched = builds.map((build) => ({
+    ...build,
+    equipment: [],
+    flasks: [],
+    jewels: [],
+    itemCount: 0,
+    detailAvailable: false,
+    detailSections: { equipment: 0, skills: Array.isArray(build.skills) ? build.skills.length : 0, passives: 0, passiveTree: false }
+  }));
   const total = Math.min(enriched.length, DETAIL_LIMIT);
   let cursor = 0;
 
