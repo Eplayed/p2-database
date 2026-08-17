@@ -56,6 +56,12 @@ function getJsonCacheControl(relativePath) {
     return 'max-age=60';
 }
 
+function isMissingLocalFileError(error) {
+    if (!error) return false;
+    const message = String(error.message || '');
+    return error.code === 'ENOENT' || message.includes('ENOENT') || message.includes('no such file or directory');
+}
+
 module.exports = async function uploadAll() {
     console.log(`\n🚀 [OSS上传] 环境: ${envConfig.isProd ? 'production' : 'dev'}`);
     console.log(`   本地目录: ${envConfig.dataDir}`);
@@ -86,6 +92,11 @@ module.exports = async function uploadAll() {
         const remotePath = `${envConfig.ossPath}${relativePath}`;
         const canonicalRemotePath = `poe2/${envConfig.isProd ? 'release' : 'dev'}/${relativePath}`;
         const ext = path.extname(localPath).toLowerCase();
+
+        if (!fs.existsSync(localPath)) {
+            console.warn(`   ⚠️  跳过已缺失文件: ${relativePath}`);
+            continue;
+        }
 
         const options = {};
 
@@ -122,8 +133,8 @@ module.exports = async function uploadAll() {
             await client.put(canonicalRemotePath, localPath, options);
             successCount++;
         } catch (e) {
-            if (e && e.code === 'ENOENT') {
-                console.warn(`   ⚠️  跳过已变更文件: ${relativePath}`);
+            if (isMissingLocalFileError(e)) {
+                console.warn(`   ⚠️  跳过已变更/缺失文件: ${relativePath}`);
                 continue;
             }
             console.error(`   ❌ 失败: ${relativePath}`, e.message);

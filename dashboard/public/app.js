@@ -681,6 +681,16 @@ function scrollLogToBottom() {
   updateLogFollowUi();
 }
 
+function appendDashboardWarning(message) {
+  const text = `[warn] ${message}`;
+  if (logOutput) {
+    logOutput.textContent = logOutput.textContent
+      ? `${logOutput.textContent}\n\n${text}`
+      : text;
+  }
+  console.warn(message);
+}
+
 function handleLogScroll() {
   state.logAutoFollow = isLogNearBottom();
   updateLogFollowUi();
@@ -706,7 +716,8 @@ async function runTask(taskId, options = {}) {
     await loadStatus();
     return data.run;
   } catch (error) {
-    window.alert(error.message);
+    if (options.skipConfirm) appendDashboardWarning(error.message);
+    else window.alert(error.message);
     throw error;
   }
   return null;
@@ -1083,7 +1094,8 @@ async function executeAutomationQueue(taskIds) {
   } catch (error) {
     state.automation.enabled = false;
     state.automation.nextRunAt = 0;
-    window.alert(`自动队列已中断：${error.message}`);
+    logTitle.textContent = `自动队列 · ${state.env} · 已中断`;
+    appendDashboardWarning(`自动队列已中断：${error.message}`);
   } finally {
     state.automationRunner = {
       running: false,
