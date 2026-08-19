@@ -19,6 +19,7 @@
           <a href="#automation" class="side-nav-link" data-section="automation">自动运行</a>
           <a href="#tasks" class="side-nav-link" data-section="tasks">任务流程</a>
           <a href="#research" class="side-nav-link" data-section="research">内容研究</a>
+          <a href="#dify" class="side-nav-link" data-section="dify">自媒体发文</a>
           <a href="#logs" class="side-nav-link" data-section="logs">运行日志</a>
           <a href="#survey" class="side-nav-link" data-section="survey">功能调研</a>
         </nav>
@@ -130,6 +131,87 @@
         <div id="contentResearchBoard" class="content-research-empty">还没有内容研究数据，先运行“更新论坛选题池”。</div>
       </section>
 
+      <section class="panel dify-panel" id="dify">
+        <div class="panel-head">
+          <div>
+            <h2>自媒体发文</h2>
+            <p id="difyHeadNote">Dify 工作流自动生成头条号文章：cron 每周一/三/五/日 9:00 各 2 篇，生成后人工核对再复制发布。</p>
+          </div>
+          <div class="panel-actions">
+            <button class="danger-btn" id="difyRunAllBtn">生成今日全部</button>
+          </div>
+        </div>
+        <div class="dify-meta" id="difyMeta">加载中...</div>
+
+        <div class="dify-custom-head">自定义生成（输入与 Dify 工作流一致，改动会自动保存）</div>
+        <div class="dify-form-grid">
+          <label class="field">
+            <span>选题</span>
+            <input id="difyTopicInput" type="text" placeholder="留空 = 自动找热点" />
+          </label>
+          <label class="field">
+            <span>参考公众号</span>
+            <select id="difyRefSelect">
+              <option>自动（默认艾泽拉斯前哨）</option>
+              <option>艾泽拉斯前哨</option>
+              <option>艾泽拉斯快讯</option>
+              <option>魔兽世界情报局</option>
+              <option>重返艾泽拉斯</option>
+              <option>大脚BIGFOOT</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>平台</span>
+            <select id="difyPlatformSelect">
+              <option>头条号</option>
+              <option>公众号</option>
+              <option>双平台</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>文章类型</span>
+            <select id="difyTypeSelect">
+              <option>魔兽资讯短文</option>
+              <option>数码资讯短文</option>
+              <option>汽车资讯短文</option>
+              <option>暗金短评</option>
+              <option>暗金观察长文</option>
+              <option>公众号收藏攻略</option>
+              <option>双平台错开选题</option>
+            </select>
+          </label>
+          <label class="field dify-form-wide">
+            <span>文章要帮读者做什么决定</span>
+            <input id="difyGoalInput" type="text" placeholder="例：帮读者判断现在回坑魔兽值不值" />
+          </label>
+          <label class="field dify-form-wide">
+            <span>产品/小程序入口</span>
+            <input id="difyProductInput" type="text" placeholder="可选，例：POE2 装备价格查询小程序" />
+          </label>
+          <label class="field dify-form-wide">
+            <span>素材和链接</span>
+            <textarea id="difySourcesInput" rows="2" placeholder="可选，粘贴新闻链接、公告原文等"></textarea>
+          </label>
+          <label class="field dify-form-wide">
+            <span>我的口述判断</span>
+            <textarea id="difyTranscriptInput" rows="2" placeholder="可选，用自己的话写核心观点，成稿会贴近你的说法"></textarea>
+          </label>
+          <label class="field dify-form-wide">
+            <span>风格参考文章</span>
+            <textarea id="difyStyleInput" rows="2" placeholder="可选，粘贴想模仿的文章全文（如艾泽拉斯前哨的写法）"></textarea>
+          </label>
+        </div>
+        <div class="dify-form-actions">
+          <button class="ghost-btn" id="difyResetFormBtn">恢复默认值</button>
+          <button class="danger-btn" id="difyCustomRunBtn">按表单生成文章</button>
+        </div>
+
+        <div class="dify-today-head" id="difyTodayHead">今日计划</div>
+        <div class="dify-today-grid" id="difyTodayGrid"></div>
+        <div class="dify-articles-head">近期稿件（点击查看，核对后复制到头条号）</div>
+        <div class="dify-article-list" id="difyArticleList"></div>
+      </section>
+
       <section class="panel log-panel" id="logs">
         <div class="panel-head">
           <div>
@@ -161,6 +243,23 @@
         </div>
       </section>
       </main>
+    </div>
+
+    <div class="dify-article-mask" id="difyArticleMask" hidden>
+      <div class="dify-article-card">
+        <div class="dify-article-card-head">
+          <div>
+            <span class="dify-article-eyebrow" id="difyArticleMeta">-</span>
+            <h2 id="difyArticleTitle">文章</h2>
+          </div>
+          <div class="dify-article-actions">
+            <button class="ghost-btn" id="difyCopyPublishBtn">复制发布稿</button>
+            <button class="ghost-btn" id="difyCopyAllBtn">复制全文</button>
+            <button class="danger-btn" id="difyCloseArticleBtn">关闭</button>
+          </div>
+        </div>
+        <pre id="difyArticleContent">加载中...</pre>
+      </div>
     </div>
 
     <div class="countdown-mask" id="countdownMask" hidden>

@@ -15,6 +15,16 @@ const STATE_FILE = path.join(RUNTIME_DIR, 'state.json');
 const AUTOMATION_SETTINGS_FILE = path.join(RUNTIME_DIR, 'automation-settings.json');
 const FORUM_SUMMARY_FILE = path.join(RUNTIME_DIR, 'forum-content-scan.json');
 const CONTENT_RESEARCH_FILE = path.join(RUNTIME_DIR, 'content-research.json');
+const DIFY_DIR = '/Users/zhangyajun/Documents/自媒体/_content_factory/dify/scheduler';
+const DIFY_SCRIPT = path.join(DIFY_DIR, 'dify_auto_publish.py');
+const DIFY_OUT_DIR = path.join(DIFY_DIR, 'auto_out');
+const DIFY_CRON_LOG = path.join(DIFY_DIR, 'cron.log');
+const DIFY_CUSTOM_INPUTS_FILE = path.join(RUNTIME_DIR, 'dify-custom-inputs.json');
+const DIFY_SELECT_OPTIONS = {
+  ref_account: ['自动（默认艾泽拉斯前哨）', '艾泽拉斯前哨', '艾泽拉斯快讯', '魔兽世界情报局', '重返艾泽拉斯', '大脚BIGFOOT'],
+  platform: ['头条号', '公众号', '双平台'],
+  article_type: ['暗金观察长文', '魔兽资讯短文', '数码资讯短文', '汽车资讯短文', '公众号收藏攻略', '双平台错开选题', '暗金短评'],
+};
 const PORT = Number(process.env.DASHBOARD_PORT || 5177);
 
 const MIME_TYPES = {
@@ -58,6 +68,46 @@ const TASKS = [
     game: 'all',
     localOnly: true,
     command: ['bash', ['scripts/run_forum_content_scan.sh']],
+  },
+  {
+    id: 'dify_publish_all',
+    name: 'Dify 生成今日全部文章',
+    description: '按今日计划生成全部头条号文章，输出到自媒体 auto_out 目录。',
+    group: 'dify',
+    game: 'all',
+    localOnly: true,
+    hidden: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT]],
+  },
+  {
+    id: 'dify_publish_1',
+    name: 'Dify 生成今日第 1 篇',
+    description: '只生成今日计划中的第 1 篇头条号文章。',
+    group: 'dify',
+    game: 'all',
+    localOnly: true,
+    hidden: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--only', '1']],
+  },
+  {
+    id: 'dify_publish_2',
+    name: 'Dify 生成今日第 2 篇',
+    description: '只生成今日计划中的第 2 篇头条号文章。',
+    group: 'dify',
+    game: 'all',
+    localOnly: true,
+    hidden: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--only', '2']],
+  },
+  {
+    id: 'dify_custom',
+    name: 'Dify 按表单生成文章',
+    description: '用自媒体发文面板的自定义表单输入生成一篇，输出到 auto_out 当天目录（custom_ 前缀）。',
+    group: 'dify',
+    game: 'all',
+    localOnly: true,
+    hidden: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--inputs-file', DIFY_CUSTOM_INPUTS_FILE]],
   },
   {
     id: 'ladder',
@@ -670,6 +720,200 @@ function appendLog(logFile, text) {
   fs.appendFileSync(logFile, text);
 }
 
+let difyPlanCache = { at: 0, data: null };
+let difyCronCache = { at: 0, data: null };
+
+function getDifyPlan() {
+  if (difyPlanCache.data && Date.now() - difyPlanCache.at < 10 * 60 * 1000) {
+    return difyPlanCache.data;
+  }
+  const fallback = { today: '', weekday: -1, plan: {} };
+  if (!fs.existsSync(DIFY_SCRIPT)) return fallback;
+  try {
+    const stdout = require('child_process').execFileSync('python3', [DIFY_SCRIPT, '--plan-json'], {
+      encoding: 'utf-8',
+      timeout: 15000,
+    });
+    const data = JSON.parse(stdout);
+    difyPlanCache = { at: Date.now(), data };
+    return data;
+  } catch (error) {
+    console.error('读取 Dify 计划失败:', error.message);
+    return difyPlanCache.data || fallback;
+  }
+}
+
+function parseDifyCronSchedule(crontabText) {
+  const line = (crontabText || '')
+    .split('\n')
+    .find(row => row.includes('dify_auto_publish.py') && !row.trim().startsWith('#'));
+  if (!line) return null;
+  const fields = line.trim().split(/\s+/);
+  if (fields.length < 5) return null;
+  const minute = Number(fields[0]);
+  const hour = Number(fields[1]);
+  const dowRaw = fields[4];
+  if (!Number.isInteger(minute) || !Number.isInteger(hour)) return null;
+  if (fields[2] !== '*' || fields[3] !== '*') return null;
+  let weekdays = null;
+  if (dowRaw !== '*') {
+    weekdays = dowRaw.split(',').map(Number).filter(Number.isInteger);
+  }
+  return { minute, hour, weekdays, raw: line.trim() };
+}
+
+function nextDifyRun(schedule) {
+  if (!schedule) return '';
+  const now = new Date();
+  for (let offset = 0; offset < 8; offset += 1) {
+    const candidate = new Date(now);
+    candidate.setDate(now.getDate() + offset);
+    candidate.setHours(schedule.hour, schedule.minute, 0, 0);
+    if (candidate <= now) continue;
+    if (schedule.weekdays && !schedule.weekdays.includes(candidate.getDay())) continue;
+    return candidate.toISOString();
+  }
+  return '';
+}
+
+function getDifyCronInfo() {
+  if (difyCronCache.data && Date.now() - difyCronCache.at < 60 * 1000) {
+    return difyCronCache.data;
+  }
+  const data = { installed: false, scheduleText: '', nextRun: '', logTail: '' };
+  try {
+    const crontab = require('child_process').execFileSync('crontab', ['-l'], {
+      encoding: 'utf-8',
+      timeout: 5000,
+    });
+    const schedule = parseDifyCronSchedule(crontab);
+    if (schedule) {
+      data.installed = true;
+      data.nextRun = nextDifyRun(schedule);
+      const dayNames = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+      const daysText = schedule.weekdays
+        ? schedule.weekdays.map(day => dayNames[day]).join('、')
+        : '每天';
+      data.scheduleText = `${daysText} ${String(schedule.hour).padStart(2, '0')}:${String(schedule.minute).padStart(2, '0')}`;
+    }
+  } catch (error) {
+    data.error = error.message;
+  }
+  if (fs.existsSync(DIFY_CRON_LOG)) {
+    try {
+      const stat = fs.statSync(DIFY_CRON_LOG);
+      const length = Math.min(stat.size, 8 * 1024);
+      const fd = fs.openSync(DIFY_CRON_LOG, 'r');
+      const buffer = Buffer.alloc(length);
+      fs.readSync(fd, buffer, 0, length, stat.size - length);
+      fs.closeSync(fd);
+      data.logTail = buffer
+        .toString('utf-8')
+        .trim()
+        .split('\n')
+        .slice(-15)
+        .join('\n');
+    } catch (error) {
+      data.logTail = '';
+    }
+  }
+  difyCronCache = { at: Date.now(), data };
+  return data;
+}
+
+function extractDifyArticleMeta(content, fileName) {
+  const statusMatch = content.match(/^发布状态：(.*)$/m);
+  const wordsMatch = content.match(/头条号正文：(\d+) 字/);
+  const titleMatch = content.match(/【标题候选】\s*\n1[.、]\s*(.*)/);
+  return {
+    fileName,
+    custom: fileName.startsWith('custom_'),
+    type: fileName
+      .replace(/^(\d+|custom)_/, '')
+      .replace(/^\d{6}_/, '')
+      .replace(/\.md$/, ''),
+    status: statusMatch ? statusMatch[1].trim() : '',
+    words: wordsMatch ? Number(wordsMatch[1]) : null,
+    title: titleMatch ? titleMatch[1].trim() : '',
+  };
+}
+
+function getDifyArticles() {
+  if (!fs.existsSync(DIFY_OUT_DIR)) return [];
+  const dates = fs
+    .readdirSync(DIFY_OUT_DIR)
+    .filter(name => /^\d{4}-\d{2}-\d{2}$/.test(name))
+    .sort((a, b) => (a < b ? 1 : -1))
+    .slice(0, 10);
+  const articles = [];
+  for (const date of dates) {
+    const dayDir = path.join(DIFY_OUT_DIR, date);
+    let files = [];
+    try {
+      files = fs
+        .readdirSync(dayDir)
+        .filter(name => name.endsWith('.md') && /^(\d+|custom)_/.test(name))
+        .sort();
+    } catch (error) {
+      continue;
+    }
+    for (const fileName of files) {
+      const filePath = path.join(dayDir, fileName);
+      try {
+        const stat = fs.statSync(filePath);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        articles.push({
+          date,
+          ...extractDifyArticleMeta(content, fileName),
+          bytes: stat.size,
+          updatedAt: stat.mtime.toISOString(),
+        });
+      } catch (error) {
+        continue;
+      }
+    }
+  }
+  return articles;
+}
+
+function getDifyStatus() {
+  const plan = getDifyPlan();
+  const todayKey = plan.weekday >= 0 ? String(plan.weekday) : '';
+  const todayPlan = (plan.plan && plan.plan[todayKey]) || [];
+  const articles = getDifyArticles();
+  const todayArticles = articles.filter(article => article.date === plan.today);
+  const pending = todayPlan.map((task, index) => {
+    const fileName = `${index + 1}_${task.article_type}.md`;
+    const exists = todayArticles.some(article => article.fileName === fileName);
+    return { index: index + 1, ...task, fileName, done: exists };
+  });
+  let configOk = false;
+  try {
+    const config = readJson(path.join(DIFY_DIR, 'config.json'), null);
+    configOk = Boolean(config && config.api_key && config.api_key.startsWith('app-'));
+  } catch (error) {
+    configOk = false;
+  }
+  return {
+    today: plan.today,
+    inSchedule: todayPlan.length > 0,
+    todayPlan: pending,
+    articles,
+    cron: getDifyCronInfo(),
+    configOk,
+    scriptExists: fs.existsSync(DIFY_SCRIPT),
+  };
+}
+
+function getDifyArticleFile(date, fileName) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^(\d+|custom)_[^/\\]+\.md$/.test(fileName)) {
+    return null;
+  }
+  const filePath = path.join(DIFY_OUT_DIR, date, fileName);
+  if (!filePath.startsWith(DIFY_OUT_DIR) || !fs.existsSync(filePath)) return null;
+  return filePath;
+}
+
 function createRun(taskId, environment) {
   const runId = `${Date.now()}_${taskId}_${Math.random().toString(16).slice(2, 8)}`;
   const logFile = path.join(LOG_DIR, `${runId}.log`);
@@ -819,7 +1063,10 @@ function serveStatic(req, res, pathname) {
     return;
   }
   const ext = path.extname(filePath);
-  res.writeHead(200, { 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' });
+  res.writeHead(200, {
+    'Content-Type': MIME_TYPES[ext] || 'application/octet-stream',
+    'Cache-Control': 'no-cache',
+  });
   fs.createReadStream(filePath).pipe(res);
 }
 
@@ -894,6 +1141,76 @@ async function handleApi(req, res, pathname, searchParams) {
       });
     } catch (error) {
       sendJson(res, { error: `功能调研配置已保存到本地，但上传 OSS 失败: ${error.message}` }, 500);
+    }
+    return;
+  }
+
+  if (req.method === 'GET' && pathname === '/api/dify/status') {
+    sendJson(res, getDifyStatus());
+    return;
+  }
+
+  if (req.method === 'GET' && pathname === '/api/dify/article') {
+    const date = searchParams.get('date') || '';
+    const fileName = searchParams.get('file') || '';
+    const filePath = getDifyArticleFile(date, fileName);
+    if (!filePath) {
+      sendJson(res, { error: '文章不存在' }, 404);
+      return;
+    }
+    sendJson(res, { content: fs.readFileSync(filePath, 'utf-8') });
+    return;
+  }
+
+  if (req.method === 'POST' && pathname === '/api/dify/custom-run') {
+    try {
+      if (currentRun) {
+        sendJson(res, { error: `已有任务运行中: ${currentRun.taskName}` }, 409);
+        return;
+      }
+      const body = await parseBody(req);
+      const clean = (key, maxLen) => String(body[key] || '').trim().slice(0, maxLen);
+      const platform = clean('platform', 48);
+      if (!DIFY_SELECT_OPTIONS.platform.includes(platform)) {
+        sendJson(res, { error: '平台必须是：头条号 / 公众号 / 双平台' }, 400);
+        return;
+      }
+      const articleType = clean('article_type', 80);
+      if (!DIFY_SELECT_OPTIONS.article_type.includes(articleType)) {
+        sendJson(res, { error: '文章类型不在可选项里' }, 400);
+        return;
+      }
+      let refAccount = clean('ref_account', 48);
+      if (!DIFY_SELECT_OPTIONS.ref_account.includes(refAccount)) {
+        refAccount = DIFY_SELECT_OPTIONS.ref_account[0];
+      }
+      const goal = clean('goal', 2000);
+      if (!goal) {
+        sendJson(res, { error: '「文章要帮读者做什么决定」必填' }, 400);
+        return;
+      }
+      const inputs = {
+        topic: clean('topic', 200),
+        ref_account: refAccount,
+        platform,
+        article_type: articleType,
+        product_entry: clean('product_entry', 500),
+        sources: clean('sources', 8000),
+        transcript: clean('transcript', 8000),
+        goal,
+        style_reference: clean('style_reference', 20000),
+      };
+      ensureRuntime();
+      writeJson(DIFY_CUSTOM_INPUTS_FILE, inputs);
+      const run = createRun('dify_custom', 'release');
+      currentRun = run;
+      setTaskState(run);
+      setImmediate(() => {
+        executeRun(run).catch(error => console.error('任务启动失败:', error));
+      });
+      sendJson(res, { run }, 202);
+    } catch (error) {
+      sendJson(res, { error: error.message }, 400);
     }
     return;
   }

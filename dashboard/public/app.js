@@ -18,10 +18,27 @@ const state = {
     total: 0,
   },
   countdown: null,
+  dify: {
+    status: null,
+    lastFetchAt: 0,
+    openArticle: null,
+  },
 };
 
 const LOG_BOTTOM_THRESHOLD = 32;
 const AUTOMATION_STORAGE_KEY = 'p2-dashboard-automation-v1';
+const DIFY_FORM_STORAGE_KEY = 'p2-dashboard-dify-form-v1';
+const DIFY_FORM_DEFAULTS = {
+  topic: '',
+  ref_account: '自动（默认艾泽拉斯前哨）',
+  platform: '头条号',
+  article_type: '魔兽资讯短文',
+  goal: '帮读者快速了解最新资讯，判断值不值得关注',
+  product_entry: '',
+  sources: '',
+  transcript: '',
+  style_reference: '',
+};
 const taskGrid = document.querySelector('#taskGrid');
 const summaryEl = document.querySelector('#summary');
 const logOutput = document.querySelector('#logOutput');
@@ -53,6 +70,40 @@ const surveyControlHint = document.querySelector('#surveyControlHint');
 const contentResearchBoard = document.querySelector('#contentResearchBoard');
 const researchPillarFilter = document.querySelector('#researchPillarFilter');
 const researchGameFilter = document.querySelector('#researchGameFilter');
+const difyMeta = document.querySelector('#difyMeta');
+const difyTodayHead = document.querySelector('#difyTodayHead');
+const difyTodayGrid = document.querySelector('#difyTodayGrid');
+const difyArticleList = document.querySelector('#difyArticleList');
+const difyRunAllBtn = document.querySelector('#difyRunAllBtn');
+const difyTopicInput = document.querySelector('#difyTopicInput');
+const difyRefSelect = document.querySelector('#difyRefSelect');
+const difyPlatformSelect = document.querySelector('#difyPlatformSelect');
+const difyTypeSelect = document.querySelector('#difyTypeSelect');
+const difyGoalInput = document.querySelector('#difyGoalInput');
+const difyProductInput = document.querySelector('#difyProductInput');
+const difySourcesInput = document.querySelector('#difySourcesInput');
+const difyTranscriptInput = document.querySelector('#difyTranscriptInput');
+const difyStyleInput = document.querySelector('#difyStyleInput');
+const difyResetFormBtn = document.querySelector('#difyResetFormBtn');
+const difyCustomRunBtn = document.querySelector('#difyCustomRunBtn');
+const difyArticleMask = document.querySelector('#difyArticleMask');
+const difyArticleMeta = document.querySelector('#difyArticleMeta');
+const difyArticleTitle = document.querySelector('#difyArticleTitle');
+const difyArticleContent = document.querySelector('#difyArticleContent');
+const difyCopyPublishBtn = document.querySelector('#difyCopyPublishBtn');
+const difyCopyAllBtn = document.querySelector('#difyCopyAllBtn');
+const difyCloseArticleBtn = document.querySelector('#difyCloseArticleBtn');
+const DIFY_FORM_FIELDS = [
+  ['topic', difyTopicInput],
+  ['ref_account', difyRefSelect],
+  ['platform', difyPlatformSelect],
+  ['article_type', difyTypeSelect],
+  ['goal', difyGoalInput],
+  ['product_entry', difyProductInput],
+  ['sources', difySourcesInput],
+  ['transcript', difyTranscriptInput],
+  ['style_reference', difyStyleInput],
+];
 const sideNavLinks = [...document.querySelectorAll('.side-nav-link')];
 const RESEARCH_PILLARS = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
 
@@ -114,11 +165,24 @@ function statusClass(run) {
   return `status-${run.status}`;
 }
 
-async function requestJson(url, options) {
-  const res = await fetch(url, options);
-  const data = await res.json();
-  if (!res.ok) throw new Error(data.error || `请求失败: ${res.status}`);
-  return data;
+const REQUEST_TIMEOUT_MS = 30000;
+
+async function requestJson(url, options = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const res = await fetch(url, { ...options, signal: controller.signal });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || `请求失败: ${res.status}`);
+    return data;
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      throw new Error(`请求超时（${Math.round(REQUEST_TIMEOUT_MS / 1000)} 秒）：${url}`);
+    }
+    throw error;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 function renderSummary(summary) {
@@ -601,6 +665,7 @@ async function loadStatus() {
   renderSurveyControl(data.summary);
   renderTasks();
   renderContentResearchBoard();
+  loadDifyStatus();
   stopBtn.disabled = !data.currentRun;
 
   const currentRun = data.currentRun;
@@ -721,6 +786,231 @@ async function runTask(taskId, options = {}) {
     throw error;
   }
   return null;
+}
+
+async function loadDifyStatus(force = false) {
+  const now = Date.now();
+  const difyRunning = Boolean(state.status && state.status.currentRun && String(state.status.currentRun.taskId).startsWith('dify_'));
+  if (!force && now - state.dify.lastFetchAt < (difyRunning ? 2500 : 15000)) return;
+  try {
+    state.dify.status = await requestJson('/api/dify/status');
+    state.dify.lastFetchAt = now;
+    renderDifyPanel();
+  } catch (error) {
+    state.dify.lastFetchAt = Date.now();
+    difyMeta.textContent = `自媒体状态加载失败：${error.message}`;
+  }
+}
+
+function renderDifyPanel() {
+  const status = state.dify.status;
+  if (!status) return;
+  const currentRun = state.status && state.status.currentRun;
+  const disabled = Boolean(currentRun);
+
+  const cronParts = [];
+  cronParts.push(status.configOk ? '<span class="dify-ok">API 密钥已配置</span>' : '<span class="dify-warn">缺 config.json 或 API Key</span>');
+  if (status.cron.installed) {
+    cronParts.push(`定时：${status.cron.scheduleText} · 下次 ${status.cron.nextRun ? formatTime(status.cron.nextRun) : '-'}`);
+  } else {
+    cronParts.push('<span class="dify-warn">crontab 未安装定时任务</span>');
+  }
+  if (status.cron.logTail) {
+    const lastLine = status.cron.logTail.split('\n').filter(Boolean).pop() || '';
+    cronParts.push(`最近一次：${escapeHtml(lastLine.slice(0, 80))}`);
+  }
+  difyMeta.innerHTML = cronParts.join('<span class="dify-meta-divider">·</span>');
+
+  const planCards = (status.todayPlan || []).map(task => `
+    <article class="dify-plan-card ${task.done ? 'done' : ''}">
+      <div class="dify-plan-head">
+        <span class="badge">篇${task.index}</span>
+        <strong>${escapeHtml(task.article_type)}</strong>
+        <span class="dify-plan-state">${task.done ? '已有稿件' : '待生成'}</span>
+      </div>
+      <p>${escapeHtml(task.goal || '')}</p>
+      ${task.ref_account ? `<p class="dify-plan-ref">参考公众号：${escapeHtml(task.ref_account)}</p>` : ''}
+      <div class="dify-plan-actions">
+        <button class="run-btn" data-dify-index="${task.index}" ${disabled ? 'disabled' : ''}>${task.done ? '重新生成' : '生成此篇'}</button>
+        ${task.done ? `<button class="ghost-btn" data-dify-view="${task.index}">查看</button>` : ''}
+      </div>
+    </article>
+  `).join('');
+  difyTodayGrid.innerHTML = planCards || '<p class="dify-empty">今天不在发布日程（一/三/五/日），可以随时手动运行。</p>';
+  difyTodayHead.textContent = status.today ? `今日计划（${status.today}${status.inSchedule ? '' : ' · 非发布日'}）` : '今日计划';
+  difyRunAllBtn.disabled = disabled || !status.inSchedule;
+  difyCustomRunBtn.disabled = disabled;
+  DIFY_FORM_FIELDS.forEach(([, element]) => {
+    if (element) element.disabled = disabled;
+  });
+
+  const articleRows = (status.articles || []).map(article => {
+    const statusClass = article.status.includes('可以发布') ? 'dify-ok' : 'dify-warn';
+    const customBadge = article.custom ? '<span class="badge dify-custom-badge">自定义</span>' : '';
+    return `
+      <button class="dify-article-row" data-dify-article-date="${article.date}" data-dify-article-file="${escapeHtml(article.fileName)}">
+        <span class="dify-article-date">${article.date.slice(5)}</span>
+        <span class="dify-article-title">${article.title ? escapeHtml(article.title) : escapeHtml(article.fileName)}</span>
+        <span class="dify-article-type">${customBadge}${escapeHtml(article.type)}</span>
+        <span class="${statusClass}">${escapeHtml(article.status || '未知')}</span>
+        <span class="dify-article-words">${article.words != null ? `${article.words} 字` : ''}</span>
+      </button>
+    `;
+  }).join('');
+  difyArticleList.innerHTML = articleRows || '<p class="dify-empty">还没有生成过文章。</p>';
+}
+
+async function runDifyTask(taskId, confirmText) {
+  if (!window.confirm(confirmText)) return;
+  try {
+    const data = await requestJson('/api/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ taskId, environment: state.env }),
+    });
+    state.activeRunId = data.run.runId;
+    state.logAutoFollow = true;
+    updateLogFollowUi();
+    logTitle.textContent = `${data.run.taskName} · ${data.run.environment} · 启动中`;
+    logOutput.textContent = '任务已启动，等待日志输出...';
+    await loadStatus();
+    await loadDifyStatus(true);
+  } catch (error) {
+    window.alert(error.message);
+  }
+}
+
+async function openDifyArticle(date, fileName) {
+  state.dify.openArticle = { date, fileName };
+  difyArticleMeta.textContent = `${date} · ${fileName.replace(/^\d+_/, '').replace(/\.md$/, '')}`;
+  difyArticleTitle.textContent = '加载中...';
+  difyArticleContent.textContent = '';
+  difyArticleMask.hidden = false;
+  try {
+    const data = await requestJson(`/api/dify/article?date=${encodeURIComponent(date)}&file=${encodeURIComponent(fileName)}`);
+    state.dify.openArticle.content = data.content;
+    difyArticleTitle.textContent = (data.content.match(/【标题候选】\s*\n1[.、]\s*(.*)/) || [])[1] || fileName;
+    difyArticleContent.textContent = data.content;
+  } catch (error) {
+    difyArticleTitle.textContent = '加载失败';
+    difyArticleContent.textContent = error.message;
+  }
+}
+
+async function copyDifyArticle(mode) {
+  const article = state.dify.openArticle;
+  if (!article || !article.content) return;
+  let text = article.content;
+  if (mode === 'publish') {
+    const divider = text.indexOf('\n\n---\n\n【审计报告】');
+    if (divider > 0) text = text.slice(0, divider);
+  }
+  try {
+    await navigator.clipboard.writeText(text.trim());
+    window.alert(mode === 'publish' ? '发布稿已复制，可粘贴到头条号编辑器。' : '全文已复制。');
+  } catch (error) {
+    window.alert(`复制失败：${error.message}`);
+  }
+}
+
+function loadDifyFormValues() {
+  let saved = {};
+  try {
+    saved = JSON.parse(window.localStorage.getItem(DIFY_FORM_STORAGE_KEY)) || {};
+  } catch (error) {
+    saved = {};
+  }
+  return { ...DIFY_FORM_DEFAULTS, ...saved };
+}
+
+function syncDifyForm() {
+  const values = loadDifyFormValues();
+  DIFY_FORM_FIELDS.forEach(([key, element]) => {
+    if (element) element.value = values[key] != null ? values[key] : '';
+  });
+}
+
+function collectDifyForm(persist = true) {
+  const values = {};
+  DIFY_FORM_FIELDS.forEach(([key, element]) => {
+    values[key] = element ? element.value.trim() : '';
+  });
+  if (persist) {
+    window.localStorage.setItem(DIFY_FORM_STORAGE_KEY, JSON.stringify(values));
+  }
+  return values;
+}
+
+async function runDifyCustom() {
+  const values = collectDifyForm();
+  if (!values.goal) {
+    window.alert('「文章要帮读者做什么决定」必填，请填写后再生成。');
+    difyGoalInput.focus();
+    return;
+  }
+  const topicText = values.topic ? `「${values.topic}」` : '自动找热点';
+  if (!window.confirm(`按表单生成文章？\n类型：${values.article_type} · 平台：${values.platform} · 选题：${topicText}\n约 1-3 分钟，消耗 Dify API 额度。`)) return;
+
+  try {
+    const data = await requestJson('/api/dify/custom-run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(values),
+    });
+    state.activeRunId = data.run.runId;
+    state.logAutoFollow = true;
+    updateLogFollowUi();
+    logTitle.textContent = `${data.run.taskName} · 启动中`;
+    logOutput.textContent = '任务已启动，等待日志输出...';
+    await loadStatus();
+    await loadDifyStatus(true);
+  } catch (error) {
+    window.alert(error.message);
+  }
+}
+
+function bindDifyPanel() {
+  syncDifyForm();
+  DIFY_FORM_FIELDS.forEach(([, element]) => {
+    element?.addEventListener('change', () => collectDifyForm());
+  });
+  difyResetFormBtn.addEventListener('click', () => {
+    window.localStorage.removeItem(DIFY_FORM_STORAGE_KEY);
+    syncDifyForm();
+  });
+  difyCustomRunBtn.addEventListener('click', runDifyCustom);
+  difyRunAllBtn.addEventListener('click', () => {
+    runDifyTask('dify_publish_all', '生成今日全部文章？每篇约 1-3 分钟，消耗 Dify API 额度。');
+  });
+  difyTodayGrid.addEventListener('click', event => {
+    const runButton = event.target.closest('[data-dify-index]');
+    if (runButton) {
+      const index = runButton.dataset.difyIndex;
+      runDifyTask(`dify_publish_${index}`, `生成今日第 ${index} 篇？约 1-3 分钟，消耗 Dify API 额度。`);
+      return;
+    }
+    const viewButton = event.target.closest('[data-dify-view]');
+    if (viewButton) {
+      const status = state.dify.status;
+      const task = status && status.todayPlan.find(item => String(item.index) === viewButton.dataset.difyView);
+      if (task) openDifyArticle(status.today, task.fileName);
+    }
+  });
+  difyArticleList.addEventListener('click', event => {
+    const row = event.target.closest('[data-dify-article-date]');
+    if (row) openDifyArticle(row.dataset.difyArticleDate, row.dataset.difyArticleFile);
+  });
+  difyCopyPublishBtn.addEventListener('click', () => copyDifyArticle('publish'));
+  difyCopyAllBtn.addEventListener('click', () => copyDifyArticle('all'));
+  difyCloseArticleBtn.addEventListener('click', () => {
+    difyArticleMask.hidden = true;
+  });
+  difyArticleMask.addEventListener('click', event => {
+    if (event.target === difyArticleMask) difyArticleMask.hidden = true;
+  });
+  window.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !difyArticleMask.hidden) difyArticleMask.hidden = true;
+  });
 }
 
 function normalizeAutomationSettingsInput(saved) {
@@ -1172,10 +1462,14 @@ function bindEnvSwitch() {
 async function boot() {
   bindEnvSwitch();
   bindWorkbenchNav();
+  bindDifyPanel();
   await loadTasks();
   await loadAutomationSettings();
   bindAutomation();
-  refreshBtn.addEventListener('click', loadStatus);
+  refreshBtn.addEventListener('click', () => {
+    loadStatus();
+    loadDifyStatus(true);
+  });
   surveyToggleBtn.addEventListener('click', toggleFeatureSurvey);
   stopBtn.addEventListener('click', stopCurrentTask);
   scrollLogBottomBtn.addEventListener('click', scrollLogToBottom);
@@ -1184,6 +1478,7 @@ async function boot() {
   researchGameFilter?.addEventListener('change', renderContentResearchBoard);
   updateLogFollowUi();
   await loadStatus();
+  await loadDifyStatus(true);
   window.setInterval(loadStatus, 2500);
 }
 
