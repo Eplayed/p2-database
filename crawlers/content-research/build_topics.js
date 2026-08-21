@@ -82,6 +82,266 @@ const SOURCE_CONFIGS = [
     defaultTags: ['官方资讯', '新闻资讯', '热点信息', '魔兽世界'],
     linkIncludes: ['/news'],
   },
+  {
+    id: 'd4_cn_news',
+    game: 'd4',
+    source: '暗黑破坏神4国服官网',
+    sourceType: 'official_news',
+    platformLane: 'toutiao',
+    sourceIntent: '头条号：暗黑4国服官方动态，适合转成普通玩家上车/消费/时间判断',
+    url: 'https://d4.blizzard.cn/news/',
+    maxItems: 12,
+    defaultTags: ['官方资讯', '新闻资讯', '热点信息', '暗黑破坏神', '国服'],
+    linkIncludes: ['/news/'],
+    lang: 'zh',
+  },
+  {
+    id: 'ithome_rss',
+    game: 'digital',
+    source: 'IT之家 RSS',
+    sourceType: 'news_reference',
+    sourceIntent: '中文科技资讯素材源，只有命中游戏、数码、汽车或普通人消费决策时才进入平台候选',
+    url: 'https://www.ithome.com/rss/',
+    format: 'rss',
+    maxItems: 24,
+    defaultTags: ['新闻资讯', '热点信息'],
+    lang: 'zh',
+  },
+  {
+    id: 'openai_news',
+    game: 'ai_tech',
+    source: 'OpenAI News',
+    sourceType: 'official_news',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技赛道，OpenAI 官方资讯',
+    url: 'https://openai.com/news/',
+    maxItems: 12,
+    defaultTags: ['AI科技', '官方资讯', '新闻资讯'],
+    linkIncludes: ['/news/'],
+  },
+  {
+    id: 'anthropic_news',
+    game: 'ai_tech',
+    source: 'Anthropic News',
+    sourceType: 'official_news',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技赛道，Anthropic 官方资讯',
+    url: 'https://www.anthropic.com/news',
+    maxItems: 12,
+    defaultTags: ['AI科技', '官方资讯', '新闻资讯'],
+    linkIncludes: ['/news'],
+  },
+  {
+    id: 'google_ai_blog',
+    game: 'ai_tech',
+    source: 'Google AI Blog',
+    sourceType: 'news_reference',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技赛道，Google AI 官方博客',
+    url: 'https://blog.google/technology/ai/',
+    maxItems: 12,
+    defaultTags: ['AI科技', '海外参考', '新闻资讯'],
+    linkIncludes: ['/technology/ai/'],
+  },
+  {
+    id: 'dify_blog',
+    game: 'ai_tech',
+    source: 'Dify Blog',
+    sourceType: 'news_reference',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技赛道，AI工作流和Agent产品更新',
+    url: 'https://dify.ai/blog',
+    maxItems: 12,
+    defaultTags: ['AI科技', 'AI工具', '工作流', '新闻资讯'],
+    linkIncludes: ['/blog'],
+  },
+  {
+    id: 'jiqizhixin_ai',
+    game: 'ai_tech',
+    source: '机器之心 AI资讯',
+    sourceType: 'news_reference',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技赛道，中文AI行业资讯',
+    url: 'https://www.jiqizhixin.com/',
+    maxItems: 12,
+    defaultTags: ['AI科技', '中文资讯', '新闻资讯'],
+    linkIncludes: ['jiqizhixin.com'],
+    lang: 'zh',
+  },
+  {
+    id: 'qbitai_ai',
+    game: 'ai_tech',
+    source: '量子位 AI资讯',
+    sourceType: 'news_reference',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技赛道，中文AI产品和行业资讯',
+    url: 'https://www.qbitai.com/',
+    maxItems: 12,
+    defaultTags: ['AI科技', '中文资讯', '新闻资讯'],
+    linkIncludes: ['qbitai.com'],
+    lang: 'zh',
+  },
+  {
+    id: 'mit_ai',
+    game: 'ai_tech',
+    source: 'MIT Technology Review AI',
+    sourceType: 'news_reference',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技赛道，海外AI行业观察',
+    url: 'https://www.technologyreview.com/topic/artificial-intelligence/',
+    maxItems: 10,
+    defaultTags: ['AI科技', '海外参考', '行业观察'],
+    linkIncludes: ['/s/'],
+  },
+  {
+    id: 'producthunt_feed',
+    game: 'ai_tech',
+    source: 'Product Hunt Feed',
+    sourceType: 'news_reference',
+    sourceIntent: '海外产品观察素材源，只有命中 AI 工具、Agent 或工作流时才进入公众号候选',
+    url: 'https://www.producthunt.com/feed',
+    format: 'rss',
+    maxItems: 16,
+    defaultTags: ['产品观察', '海外参考'],
+  },
+  {
+    id: 'sspai_feed',
+    game: 'ai_tech',
+    source: '少数派 RSS',
+    sourceType: 'news_reference',
+    sourceIntent: '中文效率工具素材源，只有命中 AI、工具工作流或普通人效率场景时才进入公众号候选',
+    url: 'https://sspai.com/feed',
+    format: 'rss',
+    maxItems: 18,
+    defaultTags: ['中文资讯'],
+    lang: 'zh',
+  },
+];
+
+const STATIC_TOPIC_SOURCES = [
+  {
+    id: 'toutiao_old_player_seed',
+    game: 'toutiao_core',
+    source: '头条号题材种子：游戏数码汽车硬核杂谈',
+    sourceType: 'seed_topic',
+    platformLane: 'toutiao',
+    sourceIntent: '头条号：游戏、数码、汽车、老玩家硬核杂谈',
+    defaultTags: ['内容观察', '老玩家杂谈'],
+    topics: [
+      {
+        title: '一款 ARPG 为什么让成年人玩不下去：不是难，是时间被切碎了',
+        description: '适合写成老玩家硬核杂谈，从下班时间、刷图成本、赛季追赶压力切入。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 22 },
+      },
+      {
+        title: '中年玩家最该警惕的不是买断价，是赛季游戏把晚上时间拆没了',
+        description: '从普通男性的时间账本写游戏选择，适合头条号观点文。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 20 },
+      },
+      {
+        title: '老电脑还要不要为了新游戏升级显卡：先算每周能玩几小时',
+        description: '数码消费判断，把显卡升级、游戏热度和实际使用时长放在一起算。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 18 },
+      },
+      {
+        title: '家庭年收入不高还想换新能源车，先把这几笔隐形成本算清楚',
+        description: '汽车普通人账本，适合从通勤、保险、折旧、充电条件落到决策。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 18 },
+      },
+    ],
+  },
+  {
+    id: 'xhs_female_workplace_seed',
+    game: 'xhs_life',
+    source: '小红书题材种子：女性玩家情绪职场',
+    sourceType: 'seed_topic',
+    platformLane: 'xhs',
+    sourceIntent: '小红书：女性玩家、情感共鸣、职场成长',
+    defaultTags: ['小红书', '女性玩家', '情感共鸣', '职场'],
+    topics: [
+      {
+        title: '女玩家为什么越来越不想开麦：不是玻璃心，是上班已经够累了',
+        description: '女性玩家情绪共鸣，适合做 2-3 张卡片：场景、感受、处理方式。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 24 },
+      },
+      {
+        title: '下班只想打两把游戏的人，最怕队友把娱乐玩成考核',
+        description: '情绪共鸣和职场疲惫结合，适合小红书收藏/转发。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 21 },
+      },
+      {
+        title: '女生玩游戏被问是不是代练，怎么回才不内耗',
+        description: '女性玩家社交场景，适合卡片化表达，不做硬核攻略。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 20 },
+      },
+      {
+        title: '职场新人别把 AI 当捷径：真正省时间的是固定工作流',
+        description: '职场成长卡片，适合女性职场赛道，讲具体工作流而不是炫技。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 19 },
+      },
+      {
+        title: '下班回家只想安静打一会儿游戏，不想再被人指挥',
+        description: '女性玩家情绪共鸣，适合做“开麦压力、队友控制欲、独处恢复能量”的卡片。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 22 },
+      },
+      {
+        title: '女生玩硬核游戏，最烦的不是打不过，是总有人来教你',
+        description: '女性玩家社交场景，带轻吐槽和边界感，适合评论互动。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 21 },
+      },
+      {
+        title: '上班后才懂，周末玩游戏也要做减法',
+        description: '职场疲惫和娱乐选择，适合收藏化：删日常、减社交、只保留放松感。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 20 },
+      },
+      {
+        title: '30岁以后买数码产品，别再为了参数熬夜',
+        description: '女性职场/生活消费，讲预算、使用频率和真实需求，适合小红书避雷卡片。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 19 },
+      },
+      {
+        title: '不想社交又怕错过机会，职场新人可以先把重复工作交给AI',
+        description: '职场成长和AI工具结合，适合做“邮件、纪要、资料整理”三张卡。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 21 },
+      },
+      {
+        title: '游戏里被催进度那一刻，我突然不想上线了',
+        description: '女性玩家/情绪共鸣，适合从“娱乐变成KPI”的场景切入。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 20 },
+      },
+    ],
+  },
+  {
+    id: 'wechat_ai_tech_seed',
+    game: 'ai_tech',
+    source: '公众号题材种子：AI科技工作流',
+    sourceType: 'seed_topic',
+    platformLane: 'wechat',
+    sourceIntent: '公众号：AI科技、工具实操、工作流、行业观察',
+    defaultTags: ['AI科技', 'AI工具', '工作流'],
+    topics: [
+      {
+        title: '普通人用 AI 写文章，真正要搭的是内容工作流',
+        description: '公众号 AI 科技长文，拆选题、资料、审稿、发布、复盘五个环节。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 24 },
+      },
+      {
+        title: 'Dify 工作流跑不出好稿，通常不是模型问题，是节点职责混在一起',
+        description: 'AI 工作流教程，适合结合自媒体生产案例做长期沉淀。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 22 },
+      },
+      {
+        title: 'AI Agent 适合个人工作室吗：先从可复用流程开始，不要先追全自动',
+        description: 'AI 行业观察和普通人应用，适合公众号。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 20 },
+      },
+      {
+        title: '用 Codex 做小程序和内容后台，一个人工作室最该先自动化哪几件事',
+        description: 'AI 工具实操，讲开发、数据抓取、内容研究、发文工作台。',
+        metrics: { views: 0, replies: 0, likes: 0, heat: 21 },
+      },
+    ],
+  },
 ];
 
 const TERM_MAP = [
@@ -119,6 +379,11 @@ const TERM_MAP = [
   ['Hotfix', '热修'],
   ['Season', '赛季'],
   ['Midnight', '至暗之夜'],
+  ['Artificial Intelligence', '人工智能'],
+  ['AI Agents', 'AI 智能体'],
+  ['Agent', '智能体'],
+  ['Workflow', '工作流'],
+  ['Automation', '自动化'],
 ];
 
 const TAG_RULES = [
@@ -131,6 +396,15 @@ const TAG_RULES = [
   { tag: '热点信息', keywords: ['hotfix', 'patch', 'ptr', 'buff', 'nerf', 'tier list', 'meta', 'campfire', '热点', '热修', '补丁', '改动'] },
   { tag: '暗黑破坏神', keywords: ['diablo', '暗黑', 'd4'] },
   { tag: '魔兽世界', keywords: ['wow', 'world of warcraft', 'warcraft', '魔兽'] },
+  { tag: 'AI科技', keywords: ['ai科技', 'artificial intelligence', '人工智能', '大模型', 'chatgpt', 'openai', 'claude', 'gemini', 'deepseek', 'dify', 'codex', 'agent', '智能体', '模型'] },
+  { tag: 'AI工具', keywords: ['ai工具', '工具', '产品', '实操', '教程', '效率', '自动化', 'workflow', '工作流'] },
+  { tag: '小红书', keywords: ['小红书', '女生', '姐妹', '女性', '女玩家', '情绪', '共鸣', '职场', '上班', '通勤', '避雷', '收藏'] },
+  { tag: '女性玩家', keywords: ['女性玩家', '女玩家', '女生', '姐妹', '外观', '幻化', '坐骑', '宠物', '截图', '开麦'] },
+  { tag: '情感共鸣', keywords: ['情绪', '共鸣', '焦虑', '治愈', '累', '压力', '内耗', '玻璃心'] },
+  { tag: '职场', keywords: ['职场', '上班', '下班', '通勤', '同事', '老板', '技能迁移', '工作流', '新人'] },
+  { tag: '数码', keywords: ['数码', '手机', '显卡', '电脑', 'ai设备', '耳机', '平板', '硬件'] },
+  { tag: '汽车', keywords: ['汽车', '新能源', '买车', '油耗', '续航', '保险', '折旧', '充电'] },
+  { tag: '老玩家杂谈', keywords: ['老玩家', '成年人', '中年', '上班', '下班', '时间', '钱', '生活', '职业', '值不值', '要不要', '回坑'] },
 ];
 
 const MINIAPP_MAP = [
@@ -230,6 +504,53 @@ function translateTitle(title) {
   return result.replace(/\s+\|\s+/g, ' · ').trim();
 }
 
+function cleanCandidateTitle(title, source = {}) {
+  let result = cleanText(title)
+    .replace(/\s+\|\s+/g, ' · ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+
+  if (source.id === 'dify_blog') {
+    result = result
+      .replace(/^How to\s+How to\s+/i, 'How to ')
+      .replace(/\s+In this guide,[\s\S]*$/i, '')
+      .replace(/\s+Step-by-step tutorial[\s\S]*$/i, '')
+      .replace(/\s+Dify\s+·\s+[A-Z][a-z]{2}\s+\d{1,2},\s+\d{4}$/i, '')
+      .trim();
+  }
+
+  if (source.id === 'producthunt_feed') {
+    result = result
+      .replace(/\s*-\s*Product Hunt$/i, '')
+      .replace(/\s*\|\s*Product Hunt$/i, '')
+      .trim();
+  }
+
+  if (source.id === 'sspai_feed') {
+    result = result
+      .replace(/\s*-\s*少数派$/i, '')
+      .replace(/\s*\|\s*少数派$/i, '')
+      .trim();
+  }
+
+  if (result.length > 96) {
+    const cutPoints = ['。', '：', ':', '，', ',', ' - ', ' · '];
+    for (const marker of cutPoints) {
+      const index = result.indexOf(marker);
+      if (index >= 18 && index <= 72) {
+        result = result.slice(0, index + (marker.trim() ? marker.length : 0)).trim();
+        break;
+      }
+    }
+  }
+
+  if (result.length > 96) {
+    result = `${result.slice(0, 92).trim()}…`;
+  }
+
+  return result;
+}
+
 function classifyTags(text, defaults = []) {
   const haystack = String(text || '').toLowerCase();
   const tags = new Set(defaults);
@@ -252,6 +573,13 @@ function getMiniappInfo(page) {
 }
 
 function summarizeAngle(title, tags) {
+  if (tags.includes('AI科技')) return '适合公众号 AI 科技稿，重点落到工具、工作流、行业变化或普通人应用';
+  if (tags.includes('小红书') || tags.includes('女性玩家') || tags.includes('情感共鸣') || tags.includes('职场')) {
+    return '适合小红书 2-3 张卡片，重点落到女性玩家、情绪共鸣、职场场景或收藏避雷';
+  }
+  if (tags.includes('数码') || tags.includes('汽车') || tags.includes('老玩家杂谈')) {
+    return '适合头条号硬核杂谈，把游戏、数码或汽车事件落到普通男性的时间、钱和生活决策';
+  }
   if (tags.includes('新闻资讯')) return '适合整理成资讯快讯，注意核验发布时间、服务器和版本差异';
   if (tags.includes('热点信息')) return '适合做热点追踪或改动解读，先判断国内玩家是否关心';
   if (tags.includes('开荒')) return '新赛季开荒选择与抄 BD 需求';
@@ -276,6 +604,9 @@ function scoreTopic(topic) {
     overseasReference: topic.sourceType === 'overseas_reference' ? 5 : 0,
     newsReference: topic.sourceType === 'news_reference' ? 8 : 0,
     officialNews: topic.sourceType === 'official_news' ? 12 : 0,
+    seedTopic: topic.sourceType === 'seed_topic' ? 10 : 0,
+    trendReference: topic.sourceType === 'trend_reference' ? 8 : 0,
+    platformLane: topic.platformLane ? 12 : 0,
     publishedAt: topic.publishedAt ? 5 : 0,
   };
   const total = Object.values(breakdown).reduce((sum, value) => sum + value, 0);
@@ -316,6 +647,48 @@ function extractLinks(html, source) {
   return links;
 }
 
+function extractXmlTag(block, tagName) {
+  const pattern = new RegExp(`<${tagName}\\b[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
+  const match = String(block || '').match(pattern);
+  if (!match) return '';
+  return cleanText(match[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1'));
+}
+
+function extractAtomLink(block) {
+  const hrefMatch = String(block || '').match(/<link\b[^>]*href=["']([^"']+)["'][^>]*>/i);
+  if (hrefMatch) return hrefMatch[1];
+  return extractXmlTag(block, 'link');
+}
+
+function extractFeedItems(xml, source) {
+  const items = [];
+  const seen = new Set();
+  const blocks = [];
+  const itemPattern = /<item\b[\s\S]*?<\/item>/gi;
+  const entryPattern = /<entry\b[\s\S]*?<\/entry>/gi;
+  let match;
+  while ((match = itemPattern.exec(xml))) blocks.push(match[0]);
+  while ((match = entryPattern.exec(xml))) blocks.push(match[0]);
+
+  for (const block of blocks) {
+    const title = extractXmlTag(block, 'title');
+    const rawUrl = extractAtomLink(block) || extractXmlTag(block, 'guid');
+    const url = normalizeUrl(rawUrl, source.url);
+    if (!title || !url || seen.has(url)) continue;
+    if (title.length < 4 || title.length > 220) continue;
+    if (isGenericNavText(title)) continue;
+    const description =
+      extractXmlTag(block, 'description') || extractXmlTag(block, 'summary') || extractXmlTag(block, 'content');
+    const publishedAt =
+      extractXmlTag(block, 'pubDate') || extractXmlTag(block, 'published') || extractXmlTag(block, 'updated');
+    seen.add(url);
+    items.push({ url, title, description, publishedAt });
+    if (items.length >= source.maxItems) break;
+  }
+
+  return items;
+}
+
 function isGenericNavText(text) {
   const normalized = String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
   if (/^(home|all|tools|store|news|path of exile|path of exile 2 arpg|path of exile arpg|diablo iv|world of warcraft)$/i.test(normalized)) {
@@ -347,17 +720,20 @@ function extractPageMeta(html) {
 }
 
 function createTopic(source, item, index) {
-  const tags = classifyTags(`${item.title} ${item.description || ''}`, source.defaultTags);
-  const titleCn = translateTitle(item.title);
-  const miniappPage = pickMiniappPage(item.title, tags);
+  const title = cleanCandidateTitle(item.title, source);
+  const tags = classifyTags(`${title} ${item.description || ''}`, source.defaultTags);
+  const titleCn = translateTitle(title);
+  const miniappPage = pickMiniappPage(title, tags);
   const miniapp = getMiniappInfo(miniappPage);
   return {
     id: `${source.id}_${index + 1}`,
     game: source.game,
     source: source.source,
     sourceType: source.sourceType,
+    platformLane: source.platformLane || '',
+    sourceIntent: source.sourceIntent || '',
     lang: source.lang || (source.sourceType === 'overseas_reference' || source.sourceType === 'news_reference' || source.sourceType === 'official_news' ? 'en' : 'zh'),
-    title: item.title,
+    title,
     titleCn,
     url: item.url,
     publishedAt: item.publishedAt || '',
@@ -365,15 +741,46 @@ function createTopic(source, item, index) {
     tags,
     metrics: item.metrics || { views: 0, replies: 0, likes: 0, heat: 0 },
     signals: {
-      painPoint: summarizeAngle(item.title, tags),
+      painPoint: summarizeAngle(title, tags),
       articleAngle: titleCn,
       miniappPage,
       miniapp,
-      confidence: source.sourceType === 'overseas_reference' ? 'reference' : 'candidate',
+      platformLane: source.platformLane || '',
+      sourceIntent: source.sourceIntent || '',
+      confidence: source.sourceType === 'seed_topic' ? 'seed' : source.sourceType === 'overseas_reference' ? 'reference' : 'candidate',
     },
     summaryCn:
       item.description ||
       `${source.source} 发现的 ${tags.filter(tag => tag !== '海外参考').join('、') || '内容'} 信号。写文章前需要核验版本、数值和国服适用性。`,
+  };
+}
+
+function createStaticSourceReport(source) {
+  const startedAt = new Date().toISOString();
+  const topics = (source.topics || []).map((item, index) =>
+    createTopic(
+      source,
+      {
+        url: item.url || source.url || '',
+        title: item.title,
+        description: item.description || '',
+        publishedAt: item.publishedAt || '',
+        metrics: item.metrics || { views: 0, replies: 0, likes: 0, heat: 10 },
+      },
+      index
+    )
+  );
+  return {
+    id: source.id,
+    name: source.source,
+    game: source.game,
+    type: source.sourceType,
+    url: source.url || '',
+    status: 'success',
+    startedAt,
+    finishedAt: new Date().toISOString(),
+    topicCount: topics.length,
+    topics,
   };
 }
 
@@ -383,7 +790,7 @@ async function fetchSource(source) {
     headers: {
       'User-Agent':
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
-      Accept: 'text/html,application/xhtml+xml',
+      Accept: 'text/html,application/xhtml+xml,application/rss+xml,application/atom+xml,application/xml;q=0.9,*/*;q=0.8',
     },
   });
   if (!response.ok) {
@@ -391,8 +798,9 @@ async function fetchSource(source) {
   }
 
   const html = await response.text();
-  const meta = extractPageMeta(html);
-  const links = extractLinks(html, source);
+  const isFeed = source.format === 'rss' || /<(rss|feed)\b/i.test(html.slice(0, 500));
+  const meta = isFeed ? { title: source.source, description: '' } : extractPageMeta(html);
+  const links = isFeed ? extractFeedItems(html, source) : extractLinks(html, source);
   const seedItems = links.length ? links : [{ url: source.url, title: meta.title, description: meta.description }];
   const topics = seedItems.map((item, index) => createTopic(source, item, index));
   return {
@@ -547,6 +955,7 @@ function getVerifyText(topic) {
   if (topic.sourceType === 'news_reference') return '核验资讯来源时间、版本和官方出处';
   if (topic.sourceType === 'overseas_reference') return '核验国服适用性和版本差异';
   if (topic.sourceType === 'forum') return '打开原帖核验玩家真实问题';
+  if (topic.sourceType === 'seed_topic') return '平台题材种子，只用于方向筛选；写作前必须补真实来源、截图或新闻链接';
   return '写作前核验版本、数值和来源';
 }
 
@@ -560,6 +969,7 @@ function createHistorySnapshot(output) {
       stableId: topic.stableId,
       title: topic.titleCn || topic.title,
       game: topic.game,
+      platformLane: topic.platformLane || '',
       source: topic.source,
       score: topic.score,
       miniappPage: topic.signals?.miniappPage || '内容观察',
@@ -589,6 +999,7 @@ function createTrend(scoredTopics, previousSnapshot) {
       stableId: topic.stableId,
       title: topic.titleCn || topic.title,
       game: topic.game,
+      platformLane: topic.platformLane || '',
       source: topic.source,
       score: topic.score,
       miniappPage: topic.signals?.miniappPage || '内容观察',
@@ -672,6 +1083,24 @@ async function main() {
   const topics = sourceReports
     .filter(report => report.type === 'forum')
     .map(createForumTopic);
+
+  for (const source of STATIC_TOPIC_SOURCES) {
+    const report = createStaticSourceReport(source);
+    sourceReports.push({
+      id: report.id,
+      name: report.name,
+      game: report.game,
+      type: report.type,
+      status: report.status,
+      url: report.url,
+      topicCount: report.topicCount,
+      newRows: 0,
+      skipped: 0,
+      note: source.sourceIntent || '平台题材种子：用于补齐候选池，写作前需要补充真实来源。',
+    });
+    topics.push(...report.topics);
+    console.log(`✅ ${report.name}: ${report.topicCount} 个平台候选题`);
+  }
 
   for (const source of SOURCE_CONFIGS) {
     try {

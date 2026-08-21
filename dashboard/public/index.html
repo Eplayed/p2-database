@@ -15,13 +15,39 @@
           <p>抓取、生成、研究和上传。</p>
         </div>
         <nav class="side-nav" aria-label="工作台导航">
-          <a href="#overview" class="side-nav-link active" data-section="overview">总览</a>
-          <a href="#automation" class="side-nav-link" data-section="automation">自动运行</a>
-          <a href="#tasks" class="side-nav-link" data-section="tasks">任务流程</a>
-          <a href="#research" class="side-nav-link" data-section="research">内容研究</a>
-          <a href="#dify" class="side-nav-link" data-section="dify">自媒体发文</a>
-          <a href="#logs" class="side-nav-link" data-section="logs">运行日志</a>
-          <a href="#survey" class="side-nav-link" data-section="survey">功能调研</a>
+          <a href="#overview" class="side-nav-link active" data-section="overview">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>总览</span>
+          </a>
+          <a href="#automation" class="side-nav-link" data-section="automation">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>自动运行</span>
+            <em class="nav-dot" id="automationNavDot" hidden title="自动运行已开启"></em>
+          </a>
+          <a href="#tasks" class="side-nav-link" data-section="tasks">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg>
+            <span>任务流程</span>
+          </a>
+          <a href="#logs" class="side-nav-link" data-section="logs">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+            <span>运行日志</span>
+          </a>
+          <a href="#history" class="side-nav-link" data-section="history">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+            <span>运行历史</span>
+          </a>
+          <a href="#research" class="side-nav-link" data-section="research">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <span>内容研究</span>
+          </a>
+          <a href="#dify" class="side-nav-link" data-section="dify">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            <span>自媒体发文</span>
+          </a>
+          <a href="#survey" class="side-nav-link" data-section="survey">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+            <span>功能调研</span>
+          </a>
         </nav>
         <div class="env-switch" role="group" aria-label="环境选择">
           <button class="env-btn active" data-env="release">release</button>
@@ -36,7 +62,11 @@
             <h2>数据控制台</h2>
             <p class="subtle">POE2 与 POE1 数据分区抓取、生成、校验和上传 OSS 的可视化入口。</p>
           </div>
-          <button class="ghost-btn" id="refreshBtn">刷新状态</button>
+          <div class="hero-side">
+            <span class="live-indicator"><em></em>自动刷新中</span>
+            <span class="hero-last-sync" id="lastSyncText">尚未同步</span>
+            <button class="ghost-btn" id="refreshBtn">刷新状态</button>
+          </div>
         </header>
 
         <section class="status-grid" id="summary"></section>
@@ -44,43 +74,109 @@
       <section class="panel automation-panel" id="automation">
         <div class="panel-head">
           <div>
-            <h2>本地自动运行</h2>
-            <p>页面保持打开时生效；到点会先弹出 5 秒倒计时，确认区服和页面状态后再运行。</p>
-          </div>
-          <div class="panel-actions">
-            <button class="ghost-btn" id="automationSaveBtn">保存设置</button>
-            <button class="ghost-btn" id="automationRunNowBtn">立即执行队列</button>
-            <button class="danger-btn" id="automationToggleBtn">开启自动运行</button>
+            <h2>自动运行</h2>
+            <p>游戏数据抓取和自媒体发文拆成两套队列，分别设置频率、开关和运行顺序。自动产稿只生成草稿，发布前仍然人工核对。</p>
           </div>
         </div>
-        <div class="automation-grid">
-          <label class="field">
-            <span>添加任务</span>
-            <select id="automationTaskSelect"></select>
-          </label>
-          <div class="field automation-add-field">
-            <span>队列</span>
-            <button class="ghost-btn" id="automationAddTaskBtn">添加到队列</button>
-          </div>
-          <label class="field">
-            <span>间隔（分钟）</span>
-            <input id="automationIntervalInput" type="number" min="10" step="5" value="120" />
-          </label>
-          <label class="field">
-            <span>浮动（分钟）</span>
-            <input id="automationJitterInput" type="number" min="0" step="1" value="10" />
-          </label>
-          <div class="automation-status">
-            <span id="automationStatusText">未开启</span>
-            <span id="automationNextText">下次：-</span>
-          </div>
-        </div>
-        <div class="automation-queue-wrap">
-          <div class="automation-queue-head">
-            <span>执行顺序</span>
-            <small>拖动排序；到点后按顺序一个接一个运行，失败会中断后续任务。队列会自动保存。</small>
-          </div>
-          <ol class="automation-queue" id="automationQueueList"></ol>
+
+        <div class="automation-groups">
+          <article class="automation-group" data-automation-kind="game_data">
+            <div class="automation-group-head">
+              <button class="automation-collapse-btn" type="button" data-automation-kind="game_data" aria-expanded="true">收起</button>
+              <div>
+                <h3>游戏数据自动运行</h3>
+                <p>只跑小程序/游戏数据更新，不混入论坛选题和 Dify 发文。</p>
+              </div>
+              <div class="panel-actions">
+                <button class="danger-btn" id="automationToggleBtn">开启自动运行</button>
+                <button class="ghost-btn" id="automationRunNowBtn">立即执行队列</button>
+                <button class="ghost-btn" id="automationSaveBtn">保存设置</button>
+              </div>
+            </div>
+            <div class="automation-body">
+              <div class="automation-main">
+                <div class="automation-add-row">
+                  <label class="field">
+                    <span>添加游戏数据任务</span>
+                    <select id="automationTaskSelect"></select>
+                  </label>
+                  <button class="ghost-btn automation-add-btn" id="automationAddTaskBtn">添加</button>
+                </div>
+                <div class="automation-queue-wrap">
+                  <div class="automation-queue-head">
+                    <span>游戏数据队列</span>
+                    <small>拖动排序；只包含小程序数据任务。</small>
+                  </div>
+                  <ol class="automation-queue" id="automationQueueList"></ol>
+                </div>
+              </div>
+              <div class="automation-side">
+                <label class="field">
+                  <span>运行间隔（分钟）</span>
+                  <input id="automationIntervalInput" type="number" min="10" step="5" value="120" />
+                </label>
+                <label class="field">
+                  <span>随机浮动（分钟）</span>
+                  <input id="automationJitterInput" type="number" min="0" step="1" value="10" />
+                </label>
+                <div class="automation-status">
+                  <span id="automationStatusText">未开启</span>
+                  <span id="automationNextText">下次：-</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="automation-group" data-automation-kind="self_media">
+            <div class="automation-group-head">
+              <button class="automation-collapse-btn" type="button" data-automation-kind="self_media" aria-expanded="true">收起</button>
+              <div>
+                <h3>自媒体发文自动运行</h3>
+                <p>调用 Dify 生成文章草稿。建议低频运行，生成后在“自媒体发文”面板打开、核对、复制发布。</p>
+              </div>
+              <div class="panel-actions">
+                <button class="danger-btn" id="mediaAutomationToggleBtn">开启自动运行</button>
+                <button class="ghost-btn" id="mediaAutomationRunNowBtn">立即执行队列</button>
+                <button class="ghost-btn" id="mediaAutomationSaveBtn">保存设置</button>
+              </div>
+            </div>
+            <div class="automation-body">
+              <div class="automation-main">
+                <div class="automation-add-row">
+                  <label class="field">
+                    <span>选择发文平台</span>
+                    <select id="mediaAutomationTaskSelect"></select>
+                  </label>
+                  <button class="ghost-btn automation-add-btn" id="mediaAutomationAddTaskBtn">添加</button>
+                </div>
+                <div class="automation-queue-wrap">
+                  <div class="automation-queue-head">
+                    <span>自媒体发文队列</span>
+                    <small>只生成草稿，不自动发布。拖动可调整顺序。</small>
+                  </div>
+                  <ol class="automation-queue" id="mediaAutomationQueueList"></ol>
+                </div>
+              </div>
+              <div class="automation-side">
+                <label class="field">
+                  <span>发布频率</span>
+                  <select id="mediaAutomationIntervalInput">
+                    <option value="1440">每天</option>
+                    <option value="2880">每隔一天</option>
+                    <option value="4320">每3天一次</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>随机延迟（分钟）</span>
+                  <input id="mediaAutomationJitterInput" type="number" min="0" step="5" value="30" />
+                </label>
+                <div class="automation-status">
+                  <span id="mediaAutomationStatusText">未开启</span>
+                  <span id="mediaAutomationNextText">下次：-</span>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -95,6 +191,37 @@
           </div>
         </div>
         <div id="taskGrid"></div>
+      </section>
+
+      <section class="panel log-panel" id="logs">
+        <div class="panel-head">
+          <div>
+            <h2>运行日志</h2>
+            <p id="logTitle">暂无运行任务</p>
+          </div>
+          <div class="panel-actions">
+            <span class="log-follow-status" id="logFollowStatus">自动跟随日志</span>
+            <button class="ghost-btn" id="scrollLogBottomBtn" hidden>回到底部</button>
+          </div>
+        </div>
+        <pre id="logOutput">选择并运行一个任务后，这里会显示日志。</pre>
+      </section>
+
+      <section class="panel" id="history">
+        <div class="panel-head">
+          <div>
+            <h2>运行历史</h2>
+            <p>最近 50 次运行记录，点击任意一条可以回看当时的完整日志。</p>
+          </div>
+          <div class="panel-actions">
+            <button class="panel-collapse-btn" type="button" data-collapse-target="historyBody" aria-expanded="false">展开</button>
+          </div>
+        </div>
+        <div class="panel-collapsible-body collapsed" id="historyBody">
+          <div class="history-list" id="historyList">
+            <p class="history-empty">还没有运行记录。</p>
+          </div>
+        </div>
       </section>
 
       <section class="panel content-research-panel" id="research">
@@ -126,104 +253,111 @@
                 <option value="wow">魔兽世界</option>
               </select>
             </label>
+            <button class="panel-collapse-btn" type="button" data-collapse-target="researchBody" aria-expanded="false">展开</button>
           </div>
         </div>
-        <div id="contentResearchBoard" class="content-research-empty">还没有内容研究数据，先运行“更新论坛选题池”。</div>
+        <div class="panel-collapsible-body collapsed" id="researchBody">
+          <div id="contentResearchBoard" class="content-research-empty">还没有内容研究数据，先运行“更新论坛选题池”。</div>
+        </div>
       </section>
 
       <section class="panel dify-panel" id="dify">
         <div class="panel-head">
           <div>
             <h2>自媒体发文</h2>
-            <p id="difyHeadNote">Dify 工作流自动生成头条号文章：cron 每周一/三/五/日 9:00 各 2 篇，生成后人工核对再复制发布。</p>
+            <p id="difyHeadNote">手动生成、核对和复制发布稿。自动定时去“自动运行”里排队；这里更适合临时输入选题、补来源、生成单篇稿。</p>
           </div>
           <div class="panel-actions">
-            <button class="danger-btn" id="difyRunAllBtn">生成今日全部</button>
+            <button class="ghost-btn" id="difyRunAllBtn">运行默认日程</button>
           </div>
         </div>
         <div class="dify-meta" id="difyMeta">加载中...</div>
 
-        <div class="dify-custom-head">自定义生成（输入与 Dify 工作流一致，改动会自动保存）</div>
-        <div class="dify-form-grid">
-          <label class="field">
-            <span>选题</span>
-            <input id="difyTopicInput" type="text" placeholder="留空 = 自动找热点" />
-          </label>
-          <label class="field">
-            <span>参考公众号</span>
-            <select id="difyRefSelect">
-              <option>自动（默认艾泽拉斯前哨）</option>
-              <option>艾泽拉斯前哨</option>
-              <option>艾泽拉斯快讯</option>
-              <option>魔兽世界情报局</option>
-              <option>重返艾泽拉斯</option>
-              <option>大脚BIGFOOT</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>平台</span>
-            <select id="difyPlatformSelect">
-              <option>头条号</option>
-              <option>公众号</option>
-              <option>双平台</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>文章类型</span>
-            <select id="difyTypeSelect">
-              <option>魔兽资讯短文</option>
-              <option>数码资讯短文</option>
-              <option>汽车资讯短文</option>
-              <option>暗金短评</option>
-              <option>暗金观察长文</option>
-              <option>公众号收藏攻略</option>
-              <option>双平台错开选题</option>
-            </select>
-          </label>
-          <label class="field dify-form-wide">
-            <span>文章要帮读者做什么决定</span>
-            <input id="difyGoalInput" type="text" placeholder="例：帮读者判断现在回坑魔兽值不值" />
-          </label>
-          <label class="field dify-form-wide">
-            <span>产品/小程序入口</span>
-            <input id="difyProductInput" type="text" placeholder="可选，例：POE2 装备价格查询小程序" />
-          </label>
-          <label class="field dify-form-wide">
-            <span>素材和链接</span>
-            <textarea id="difySourcesInput" rows="2" placeholder="可选，粘贴新闻链接、公告原文等"></textarea>
-          </label>
-          <label class="field dify-form-wide">
-            <span>我的口述判断</span>
-            <textarea id="difyTranscriptInput" rows="2" placeholder="可选，用自己的话写核心观点，成稿会贴近你的说法"></textarea>
-          </label>
-          <label class="field dify-form-wide">
-            <span>风格参考文章</span>
-            <textarea id="difyStyleInput" rows="2" placeholder="可选，粘贴想模仿的文章全文（如艾泽拉斯前哨的写法）"></textarea>
-          </label>
-        </div>
-        <div class="dify-form-actions">
-          <button class="ghost-btn" id="difyResetFormBtn">恢复默认值</button>
-          <button class="danger-btn" id="difyCustomRunBtn">按表单生成文章</button>
+        <div class="dify-workflow-note">
+          <span><strong>头条号</strong>：游戏 / 数码 / 汽车 / 老玩家硬核杂谈</span>
+          <span><strong>公众号</strong>：AI 科技 / 工具实操 / 工作流 / 行业观察</span>
+          <span><strong>小红书</strong>：女性玩家 / 情感共鸣 / 职场，2-3 张卡片</span>
         </div>
 
-        <div class="dify-today-head" id="difyTodayHead">今日计划</div>
-        <div class="dify-today-grid" id="difyTodayGrid"></div>
-        <div class="dify-articles-head">近期稿件（点击查看，核对后复制到头条号）</div>
-        <div class="dify-article-list" id="difyArticleList"></div>
-      </section>
+        <div class="dify-auto-card">
+          <div class="dify-auto-head">
+            <div>
+              <strong>自动采用 A 级题材</strong>
+              <p>从内容研究看板按平台赛道筛出的 A 级题材里直接生成。没有合适题材时不硬凑。</p>
+            </div>
+            <span>A 级题材</span>
+          </div>
+          <div class="dify-auto-grid">
+            <label class="field">
+              <span>选择 A 级题材</span>
+              <select id="difyAutoCandidateSelect">
+                <option value="">等待内容研究看板生成 A 级题材</option>
+              </select>
+            </label>
+            <button class="danger-btn" id="difyAutoCandidateRunBtn">采用 A 级题材生成</button>
+          </div>
+          <p class="dify-auto-meta" id="difyAutoCandidateMeta">自动运行只使用 A 级题材；如果没有 A 级题材，先去“内容研究看板”更新候选池。</p>
+        </div>
 
-      <section class="panel log-panel" id="logs">
-        <div class="panel-head">
+        <div class="dify-custom-head">
+          <span>手动生成（手动输入选题、平台和素材；不会自动采用 A 级候选）</span>
+          <button class="ghost-btn dify-form-toggle" id="difyFormToggleBtn" type="button">展开表单</button>
+        </div>
+        <div class="dify-custom-wrap" id="difyCustomWrap">
+          <div class="dify-form-grid">
+            <label class="field">
+              <span>渠道</span>
+              <select id="difyChannelSelect">
+                <option>头条号</option>
+                <option>公众号</option>
+                <option>小红书</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>选题</span>
+              <input id="difyTopicInput" type="text" placeholder="留空 = 自动找热点" />
+            </label>
+            <!-- 渠道专属字段：由 /api/dify/form-config 的渠道档案动态渲染，切换渠道时整体重建 -->
+            <div class="dify-channel-fields" id="difyChannelFields"></div>
+            <label class="field dify-form-wide">
+              <span id="difyGoalLabel">文章要帮读者做什么决定</span>
+              <input id="difyGoalInput" type="text" placeholder="例：帮读者判断现在回坑魔兽值不值" />
+            </label>
+            <label class="field dify-form-wide">
+              <span>产品/小程序入口</span>
+              <input id="difyProductInput" type="text" placeholder="可选，例：POE2 装备价格查询小程序" />
+            </label>
+            <label class="field dify-form-wide">
+              <span>素材和链接</span>
+              <textarea id="difySourcesInput" rows="2" placeholder="可选，粘贴新闻链接、公告原文等"></textarea>
+            </label>
+            <label class="field dify-form-wide">
+              <span>我的口述判断</span>
+              <textarea id="difyTranscriptInput" rows="2" placeholder="可选，用自己的话写核心观点，成稿会贴近你的说法"></textarea>
+            </label>
+            <label class="field dify-form-wide">
+              <span id="difyStyleLabel">风格参考文章</span>
+              <textarea id="difyStyleInput" rows="2" placeholder="可选，粘贴想模仿的文章全文（如艾泽拉斯前哨的写法）"></textarea>
+            </label>
+          </div>
+          <div class="dify-form-actions">
+            <button class="ghost-btn" id="difyResetFormBtn">恢复默认值</button>
+            <button class="danger-btn" id="difyCustomRunBtn">按表单生成</button>
+          </div>
+        </div>
+
+        <div class="dify-section-title">
           <div>
-            <h2>运行日志</h2>
-            <p id="logTitle">暂无运行任务</p>
+            <span class="dify-today-head" id="difyTodayHead">默认日程</span>
+            <small>旧的每日计划快捷入口，平时收起，避免和自动队列混在一起。</small>
           </div>
-          <div class="panel-actions">
-            <span class="log-follow-status" id="logFollowStatus">自动跟随日志</span>
-            <button class="ghost-btn" id="scrollLogBottomBtn" hidden>回到底部</button>
-          </div>
+          <button class="panel-collapse-btn" type="button" data-collapse-target="difyPlanBody" aria-expanded="false">展开</button>
         </div>
-        <pre id="logOutput">选择并运行一个任务后，这里会显示日志。</pre>
+        <div class="panel-collapsible-body collapsed" id="difyPlanBody">
+          <div class="dify-today-grid" id="difyTodayGrid"></div>
+        </div>
+        <div class="dify-articles-head">近期稿件（点击查看，核对后复制到对应平台发布）</div>
+        <div class="dify-article-list" id="difyArticleList"></div>
       </section>
 
       <section class="panel survey-control-panel" id="survey">
@@ -245,6 +379,16 @@
       </main>
     </div>
 
+    <div class="run-status-pill" id="runStatusPill" hidden>
+      <span class="pill-indicator" aria-hidden="true"></span>
+      <div class="pill-copy">
+        <strong id="pillTaskName">-</strong>
+        <small id="pillMeta">-</small>
+      </div>
+      <button class="pill-btn" id="pillLogBtn" type="button">日志</button>
+      <button class="pill-btn pill-stop-btn" id="pillStopBtn" type="button">停止</button>
+    </div>
+
     <div class="dify-article-mask" id="difyArticleMask" hidden>
       <div class="dify-article-card">
         <div class="dify-article-card-head">
@@ -253,6 +397,7 @@
             <h2 id="difyArticleTitle">文章</h2>
           </div>
           <div class="dify-article-actions">
+            <button class="ghost-btn" id="difyPreviewHtmlBtn" hidden>预览排版 HTML</button>
             <button class="ghost-btn" id="difyCopyPublishBtn">复制发布稿</button>
             <button class="ghost-btn" id="difyCopyAllBtn">复制全文</button>
             <button class="danger-btn" id="difyCloseArticleBtn">关闭</button>

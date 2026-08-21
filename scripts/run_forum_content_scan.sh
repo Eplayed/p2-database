@@ -17,10 +17,23 @@ SUMMARY_PATH="$P2_ROOT/dashboard/runtime/forum-content-scan.json"
 D4_RESULT_PATH="$QCLAW_ROOT/workspace/forum-run-d2core.json"
 POE2_RESULT_PATH="$QCLAW_ROOT/workspace/forum-run-caimogu.json"
 QCLAW_NODE_BIN="/Applications/QClaw.app/Contents/Resources/node/node"
-NODE_BIN="${NODE_BIN:-node}"
+CODEX_NODE_BIN="/Users/zhangyajun/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+NODE_BIN="${NODE_BIN:-}"
 
 if [[ -x "$QCLAW_NODE_BIN" ]]; then
   export QCLAW_CLI_NODE_BINARY="$QCLAW_NODE_BIN"
+fi
+
+if [[ -z "$NODE_BIN" ]]; then
+  if command -v node >/dev/null 2>&1; then
+    NODE_BIN="$(command -v node)"
+  elif [[ -x "$QCLAW_NODE_BIN" ]]; then
+    NODE_BIN="$QCLAW_NODE_BIN"
+  elif [[ -x "$CODEX_NODE_BIN" ]]; then
+    NODE_BIN="$CODEX_NODE_BIN"
+  else
+    NODE_BIN="node"
+  fi
 fi
 
 # Dashboard must keep the user's Chrome (including localhost:5177) untouched.

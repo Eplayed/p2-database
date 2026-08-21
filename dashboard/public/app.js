@@ -3,17 +3,32 @@ const state = {
   tasks: [],
   status: null,
   activeRunId: '',
+  pinnedLogRunId: '',
+  pinnedContextRunId: '',
   logAutoFollow: true,
-  automation: {
-    enabled: false,
-    taskId: 'daily_publish',
-    taskIds: ['daily_publish'],
-    intervalMinutes: 120,
-    jitterMinutes: 10,
-    nextRunAt: 0,
+  automations: {
+    game_data: {
+      enabled: false,
+      group: 'game_data',
+      taskId: 'daily_publish',
+      taskIds: ['daily_publish'],
+      intervalMinutes: 120,
+      jitterMinutes: 10,
+      nextRunAt: 0,
+    },
+    self_media: {
+      enabled: false,
+      group: 'self_media',
+      taskId: 'dify_publish_toutiao',
+      taskIds: ['dify_publish_toutiao'],
+      intervalMinutes: 1440,
+      jitterMinutes: 30,
+      nextRunAt: 0,
+    },
   },
   automationRunner: {
     running: false,
+    kind: '',
     currentIndex: -1,
     total: 0,
   },
@@ -26,18 +41,28 @@ const state = {
 };
 
 const LOG_BOTTOM_THRESHOLD = 32;
-const AUTOMATION_STORAGE_KEY = 'p2-dashboard-automation-v1';
-const DIFY_FORM_STORAGE_KEY = 'p2-dashboard-dify-form-v1';
-const DIFY_FORM_DEFAULTS = {
+const AUTOMATION_STORAGE_KEY = 'p2-dashboard-automation-v2';
+const DIFY_FORM_STORAGE_KEY = 'p2-dashboard-dify-form-v2';
+const DIFY_FORM_LEGACY_KEY = 'p2-dashboard-dify-form-v1';
+const SELF_MEDIA_INTERVAL_VALUES = [1440, 2880, 4320];
+const SELF_MEDIA_PLATFORM_TASK_IDS = ['dify_publish_toutiao', 'dify_publish_xhs', 'dify_publish_wechat'];
+// Dify 表单分两层：shared 跨渠道共用（选题、素材等），byChannel 按渠道独立记忆（下拉选项各渠道不同）。
+// 渠道档案（字段、选项、文案）由 /api/dify/form-config 下发，前端不硬编码。
+const DIFY_SHARED_DEFAULTS = {
   topic: '',
-  ref_account: '自动（默认艾泽拉斯前哨）',
-  platform: '头条号',
-  article_type: '魔兽资讯短文',
   goal: '帮读者快速了解最新资讯，判断值不值得关注',
   product_entry: '',
   sources: '',
   transcript: '',
   style_reference: '',
+};
+const DIFY_SHARED_FIELD_IDS = {
+  topic: '#difyTopicInput',
+  goal: '#difyGoalInput',
+  product_entry: '#difyProductInput',
+  sources: '#difySourcesInput',
+  transcript: '#difyTranscriptInput',
+  style_reference: '#difyStyleInput',
 };
 const taskGrid = document.querySelector('#taskGrid');
 const summaryEl = document.querySelector('#summary');
@@ -47,6 +72,7 @@ const logFollowStatus = document.querySelector('#logFollowStatus');
 const scrollLogBottomBtn = document.querySelector('#scrollLogBottomBtn');
 const refreshBtn = document.querySelector('#refreshBtn');
 const stopBtn = document.querySelector('#stopBtn');
+const lastSyncText = document.querySelector('#lastSyncText');
 const automationTaskSelect = document.querySelector('#automationTaskSelect');
 const automationAddTaskBtn = document.querySelector('#automationAddTaskBtn');
 const automationQueueList = document.querySelector('#automationQueueList');
@@ -57,6 +83,25 @@ const automationRunNowBtn = document.querySelector('#automationRunNowBtn');
 const automationToggleBtn = document.querySelector('#automationToggleBtn');
 const automationStatusText = document.querySelector('#automationStatusText');
 const automationNextText = document.querySelector('#automationNextText');
+const mediaAutomationTaskSelect = document.querySelector('#mediaAutomationTaskSelect');
+const mediaAutomationAddTaskBtn = document.querySelector('#mediaAutomationAddTaskBtn');
+const mediaAutomationQueueList = document.querySelector('#mediaAutomationQueueList');
+const mediaAutomationIntervalInput = document.querySelector('#mediaAutomationIntervalInput');
+const mediaAutomationJitterInput = document.querySelector('#mediaAutomationJitterInput');
+const mediaAutomationSaveBtn = document.querySelector('#mediaAutomationSaveBtn');
+const mediaAutomationRunNowBtn = document.querySelector('#mediaAutomationRunNowBtn');
+const mediaAutomationToggleBtn = document.querySelector('#mediaAutomationToggleBtn');
+const mediaAutomationStatusText = document.querySelector('#mediaAutomationStatusText');
+const mediaAutomationNextText = document.querySelector('#mediaAutomationNextText');
+const automationCollapseButtons = [...document.querySelectorAll('.automation-collapse-btn')];
+const panelCollapseButtons = [...document.querySelectorAll('.panel-collapse-btn')];
+const automationNavDot = document.querySelector('#automationNavDot');
+const historyList = document.querySelector('#historyList');
+const runStatusPill = document.querySelector('#runStatusPill');
+const pillTaskName = document.querySelector('#pillTaskName');
+const pillMeta = document.querySelector('#pillMeta');
+const pillLogBtn = document.querySelector('#pillLogBtn');
+const pillStopBtn = document.querySelector('#pillStopBtn');
 const countdownMask = document.querySelector('#countdownMask');
 const countdownTitle = document.querySelector('#countdownTitle');
 const countdownMessage = document.querySelector('#countdownMessage');
@@ -75,10 +120,14 @@ const difyTodayHead = document.querySelector('#difyTodayHead');
 const difyTodayGrid = document.querySelector('#difyTodayGrid');
 const difyArticleList = document.querySelector('#difyArticleList');
 const difyRunAllBtn = document.querySelector('#difyRunAllBtn');
+const difyChannelSelect = document.querySelector('#difyChannelSelect');
 const difyTopicInput = document.querySelector('#difyTopicInput');
-const difyRefSelect = document.querySelector('#difyRefSelect');
-const difyPlatformSelect = document.querySelector('#difyPlatformSelect');
-const difyTypeSelect = document.querySelector('#difyTypeSelect');
+const difyAutoCandidateSelect = document.querySelector('#difyAutoCandidateSelect');
+const difyAutoCandidateRunBtn = document.querySelector('#difyAutoCandidateRunBtn');
+const difyAutoCandidateMeta = document.querySelector('#difyAutoCandidateMeta');
+const difyChannelFieldsWrap = document.querySelector('#difyChannelFields');
+const difyGoalLabel = document.querySelector('#difyGoalLabel');
+const difyStyleLabel = document.querySelector('#difyStyleLabel');
 const difyGoalInput = document.querySelector('#difyGoalInput');
 const difyProductInput = document.querySelector('#difyProductInput');
 const difySourcesInput = document.querySelector('#difySourcesInput');
@@ -86,6 +135,8 @@ const difyTranscriptInput = document.querySelector('#difyTranscriptInput');
 const difyStyleInput = document.querySelector('#difyStyleInput');
 const difyResetFormBtn = document.querySelector('#difyResetFormBtn');
 const difyCustomRunBtn = document.querySelector('#difyCustomRunBtn');
+const difyCustomWrap = document.querySelector('#difyCustomWrap');
+const difyFormToggleBtn = document.querySelector('#difyFormToggleBtn');
 const difyArticleMask = document.querySelector('#difyArticleMask');
 const difyArticleMeta = document.querySelector('#difyArticleMeta');
 const difyArticleTitle = document.querySelector('#difyArticleTitle');
@@ -93,17 +144,7 @@ const difyArticleContent = document.querySelector('#difyArticleContent');
 const difyCopyPublishBtn = document.querySelector('#difyCopyPublishBtn');
 const difyCopyAllBtn = document.querySelector('#difyCopyAllBtn');
 const difyCloseArticleBtn = document.querySelector('#difyCloseArticleBtn');
-const DIFY_FORM_FIELDS = [
-  ['topic', difyTopicInput],
-  ['ref_account', difyRefSelect],
-  ['platform', difyPlatformSelect],
-  ['article_type', difyTypeSelect],
-  ['goal', difyGoalInput],
-  ['product_entry', difyProductInput],
-  ['sources', difySourcesInput],
-  ['transcript', difyTranscriptInput],
-  ['style_reference', difyStyleInput],
-];
+const difyPreviewHtmlBtn = document.querySelector('#difyPreviewHtmlBtn');
 const sideNavLinks = [...document.querySelectorAll('.side-nav-link')];
 const RESEARCH_PILLARS = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
 
@@ -123,6 +164,19 @@ function formatDuration(ms) {
   if (!ms) return '';
   if (ms < 1000) return `${ms}ms`;
   return `${(ms / 1000).toFixed(1)}s`;
+}
+
+function formatElapsed(ms) {
+  if (!Number.isFinite(ms) || ms < 0) return '-';
+  const totalSeconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  if (minutes >= 60) {
+    const hours = Math.floor(minutes / 60);
+    return `${hours} 时 ${minutes % 60} 分`;
+  }
+  if (minutes > 0) return `${minutes} 分 ${String(seconds).padStart(2, '0')} 秒`;
+  return `${seconds} 秒`;
 }
 
 function escapeHtml(value) {
@@ -186,75 +240,57 @@ async function requestJson(url, options = {}) {
 }
 
 function renderSummary(summary) {
-  const keyFiles = summary.keyFiles || {};
-  const games = Array.isArray(summary.games) ? summary.games : [];
+  const history = (state.status && state.status.state && state.status.state.history) || [];
+  const lastRun = history[0] || null;
+  const enabledAutomationKinds = getEnabledAutomationKinds();
+  const queueLength = enabledAutomationKinds.reduce((sum, kind) => sum + (getAutomation(kind).taskIds || []).length, 0);
+  const nextAutomation = getNextAutomationSchedule();
   const cards = [
     {
       label: '环境',
       value: summary.environment,
+      valueClass: '',
       note: summary.exists ? summary.dataDir : '数据目录不存在',
     },
     {
       label: '输出文件',
       value: summary.fileCount,
+      valueClass: '',
       note: 'translated-data 文件数量',
     },
     {
-      label: '天梯',
-      value: `${summary.ladder.players}`,
-      note: `${summary.ladder.classes} 个职业 · ${summary.ladder.updateTime || '无更新时间'}`,
+      label: '最近运行',
+      value: lastRun ? statusText(lastRun) : '无记录',
+      valueClass: lastRun ? statusClass(lastRun) : '',
+      note: lastRun
+        ? `${lastRun.taskName || lastRun.taskId} · ${formatTime(lastRun.finishedAt || lastRun.startedAt)}`
+        : '运行任务后这里会显示最近结果',
     },
     {
-      label: '天梯分析',
-      value: summary.ladderAnalysis.classes,
-      note: summary.ladderAnalysis.file ? formatTime(summary.ladderAnalysis.file.updatedAt) : '无文件',
-    },
-    {
-      label: '查 BD 索引',
-      value: `${summary.ladderBuildIndex.skills} / ${summary.ladderBuildIndex.equipment}`,
-      note: summary.ladderBuildIndex.file
-        ? `技能 / 传奇装备 · ${formatTime(summary.ladderBuildIndex.file.updatedAt)}`
-        : '无索引文件',
-    },
-    {
-      label: '经济摘要',
-      value: summary.economy?.items || keyFiles.economyDigest?.count || 0,
-      note: summary.economy?.updatedAt
-        ? `poe.ninja ${formatTime(summary.economy.updatedAt)}`
-        : keyFiles.economyDigest?.updatedAt
-          ? formatTime(keyFiles.economyDigest.updatedAt)
-          : '无经济摘要',
-    },
-    {
-      label: '国服行情',
-      value: summary.economy?.cnMarketItems || keyFiles.cnMarketDigest?.count || 0,
-      note: keyFiles.cnMarketDigest?.updatedAt
-        ? `DD373 更新 ${formatTime(keyFiles.cnMarketDigest.updatedAt)}`
-        : '无 DD373 行情',
-    },
-    {
-      label: '流放急救箱',
-      value: keyFiles.problemGuides?.count || 0,
-      note: keyFiles.problemGuides?.updatedAt ? formatTime(keyFiles.problemGuides.updatedAt) : '无文件',
+      label: '自动运行',
+      value: enabledAutomationKinds.length ? `已开启 · ${enabledAutomationKinds.length} 组 · ${queueLength} 个任务` : '未开启',
+      valueClass: enabledAutomationKinds.length ? 'status-success' : '',
+      note: nextAutomation
+        ? `${getAutomationConfig(nextAutomation.kind).label} · 下次 ${formatDateTime(nextAutomation.nextRunAt)}`
+        : '在下方「自动运行」里分别开启游戏数据或自媒体发文队列',
     },
   ];
 
   const overviewCards = cards
-    .slice(0, 4)
     .map(
       card => `
         <article class="stat-card">
           <span class="stat-label">${card.label}</span>
-          <span class="stat-value">${card.value}</span>
+          <span class="stat-value ${card.valueClass || ''}">${card.value}</span>
           <span class="stat-note">${card.note}</span>
         </article>
       `
     )
     .join('');
 
-  const gameCards = games
+  const gameCards = (Array.isArray(summary.games) ? summary.games : [])
     .map(game => {
-      const summary = game.summary || {};
+      const gameSummary = game.summary || {};
       const missing = Array.isArray(game.missingFiles) ? game.missingFiles : [];
       const healthClass = missing.length ? 'warn' : 'ok';
       return `
@@ -268,12 +304,12 @@ function renderSummary(summary) {
             <strong>${missing.length ? `${missing.length} 项缺失` : '健康'}</strong>
           </div>
           <div class="game-health-grid">
-            <span><em>赛季</em>${escapeHtml(summary.seasonName || '-')}</span>
-            <span><em>天梯</em>${Number(summary.ladderPlayers || 0)} / ${Number(summary.sampledPlayers || 0)}</span>
-            <span><em>查 BD</em>${Number(summary.skills || 0)} 技能 · ${Number(summary.equipment || 0)} 装备</span>
-            <span><em>行情</em>${Number(summary.economyItems || 0)} 国际 · ${Number(summary.cnMarketItems || 0)} 国服</span>
-            <span><em>攻略</em>${Number(summary.guides || 0)} 项</span>
-            <span><em>更新</em>${formatTime(summary.updatedAt)}</span>
+            <span><em>赛季</em>${escapeHtml(gameSummary.seasonName || '-')}</span>
+            <span><em>天梯</em>${Number(gameSummary.ladderPlayers || 0)} / ${Number(gameSummary.sampledPlayers || 0)}</span>
+            <span><em>查 BD</em>${Number(gameSummary.skills || 0)} 技能 · ${Number(gameSummary.equipment || 0)} 装备</span>
+            <span><em>行情</em>${Number(gameSummary.economyItems || 0)} 国际 · ${Number(gameSummary.cnMarketItems || 0)} 国服</span>
+            <span><em>攻略</em>${Number(gameSummary.guides || 0)} 项</span>
+            <span><em>更新</em>${formatTime(gameSummary.updatedAt)}</span>
           </div>
           <div class="game-paths">
             <span>新路径：${escapeHtml(game.canonicalOssPrefix)}</span>
@@ -312,14 +348,19 @@ function renderTasks() {
   const disabled = Boolean(currentRun);
   const groups = [
     {
-      id: 'recommended',
-      title: '一键更新',
-      description: '只保留当前最常用流程。底层脚本不单独展示，流程会按顺序执行并上传 OSS。',
+      id: 'game_data',
+      title: '游戏数据发布',
+      description: '只跑小程序需要的 POE/POE2 数据抓取、聚合和 OSS 上传。适合放进自动运行队列。',
     },
     {
       id: 'content_research',
       title: '内容研究',
       description: '为自媒体和小程序策略发现玩家问题、海外趋势和可写选题。结果只保存在本地，不上传 OSS。',
+    },
+    {
+      id: 'self_media',
+      title: '自媒体发文',
+      description: '运行 Dify 发文工作流，生成头条号、小红书、公众号草稿。适合放进自媒体自动运行队列，发布前仍要人工复核。',
     },
   ];
 
@@ -364,6 +405,7 @@ function renderTasks() {
   const renderTask = task => {
       const run = runs[task.id];
       const isFlow = Array.isArray(task.steps);
+      const metaHtml = forumTaskMeta(task);
       return `
         <article class="task-card ${isFlow ? 'flow' : ''} ${task.dangerous ? 'dangerous' : ''}">
           <div class="task-title-row">
@@ -379,11 +421,14 @@ function renderTasks() {
             状态：<span class="${statusClass(run)}">${statusText(run)}</span><br />
             上次：${run ? formatTime(run.finishedAt || run.startedAt) : '无记录'}
             ${run && run.durationMs ? ` · ${formatDuration(run.durationMs)}` : ''}
-            ${forumTaskMeta(task) ? `<br />${forumTaskMeta(task)}` : ''}
+            ${metaHtml ? `<br />${metaHtml}` : ''}
           </div>
-          <button class="run-btn" data-task-id="${task.id}" ${disabled ? 'disabled' : ''}>
-            ${currentRun && currentRun.taskId === task.id ? '运行中...' : '运行'}
-          </button>
+          <div class="task-actions">
+            <button class="run-btn" data-task-id="${task.id}" ${disabled ? 'disabled' : ''}>
+              ${currentRun && currentRun.taskId === task.id ? '运行中...' : '运行'}
+            </button>
+            ${run ? `<button class="task-log-btn" type="button" data-run-id="${escapeHtml(run.runId)}">日志</button>` : ''}
+          </div>
         </article>
       `;
   };
@@ -407,6 +452,86 @@ function renderTasks() {
   taskGrid.querySelectorAll('.run-btn').forEach(button => {
     button.addEventListener('click', () => runTask(button.dataset.taskId));
   });
+
+  taskGrid.querySelectorAll('.task-log-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const run = findRunFromStatus(button.dataset.runId, '');
+      if (run) viewRunLog(run);
+    });
+  });
+}
+
+function renderHistory() {
+  if (!historyList) return;
+  const history = (state.status && state.status.state && state.status.state.history) || [];
+  if (!history.length) {
+    historyList.innerHTML = '<p class="history-empty">还没有运行记录，先在「任务」里运行一个任务。</p>';
+    return;
+  }
+  historyList.innerHTML = history
+    .slice(0, 20)
+    .map((run, index) => `
+      <button class="history-row ${statusClass(run)}" type="button" data-run-id="${escapeHtml(run.runId)}">
+        <span class="history-index">${index + 1}</span>
+        <span class="history-task">${escapeHtml(run.taskName || run.taskId || '-')}</span>
+        <span class="history-env">${escapeHtml(run.environment || '-')}</span>
+        <span class="history-status ${statusClass(run)}">${statusText(run)}</span>
+        <span class="history-duration">${formatDuration(run.durationMs) || '-'}</span>
+        <span class="history-time">${formatTime(run.finishedAt || run.startedAt)}</span>
+      </button>
+    `)
+    .join('');
+}
+
+function bindHistory() {
+  historyList?.addEventListener('click', event => {
+    const row = event.target.closest('[data-run-id]');
+    if (!row) return;
+    const history = (state.status && state.status.state && state.status.state.history) || [];
+    const run = history.find(item => item.runId === row.dataset.runId);
+    if (run) viewRunLog(run);
+  });
+}
+
+function viewRunLog(run) {
+  if (!run || !run.runId) return;
+  state.activeRunId = run.runId;
+  state.pinnedLogRunId = run.runId;
+  state.pinnedContextRunId = (state.status && state.status.currentRun && state.status.currentRun.runId) || '';
+  state.logAutoFollow = true;
+  updateLogFollowUi();
+  const timeText = run.finishedAt || run.startedAt ? ` · ${formatTime(run.finishedAt || run.startedAt)}` : '';
+  logTitle.textContent = `${run.taskName || run.taskId} · ${run.environment || '-'} · ${statusText(run)}${timeText}`;
+  const logsSection = document.querySelector('#logs');
+  if (logsSection) logsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  loadLog(run.runId);
+}
+
+function updateRunStatusPill() {
+  if (!runStatusPill) return;
+  const currentRun = state.status && state.status.currentRun;
+  if (currentRun) {
+    runStatusPill.hidden = false;
+    runStatusPill.className = 'run-status-pill running';
+    pillTaskName.textContent = currentRun.taskName || currentRun.taskId || '任务运行中';
+    const elapsedMs = Date.now() - Date.parse(currentRun.startedAt);
+    pillMeta.textContent = `${currentRun.environment || '-'} · 已运行 ${formatElapsed(elapsedMs)}`;
+    pillStopBtn.hidden = false;
+    return;
+  }
+  const enabledAutomationKinds = getEnabledAutomationKinds();
+  if (enabledAutomationKinds.length) {
+    const nextAutomation = getNextAutomationSchedule();
+    runStatusPill.hidden = false;
+    runStatusPill.className = 'run-status-pill scheduled';
+    pillTaskName.textContent = `自动运行已开启 · ${enabledAutomationKinds.length} 组`;
+    pillMeta.textContent = nextAutomation
+      ? `${getAutomationConfig(nextAutomation.kind).label} 下次 ${formatDateTime(nextAutomation.nextRunAt)}`
+      : '等待排期';
+    pillStopBtn.hidden = true;
+    return;
+  }
+  runStatusPill.hidden = true;
 }
 
 function getTopicPillar(topic) {
@@ -542,6 +667,145 @@ function renderTopicRow(topic) {
   `;
 }
 
+function getPlatformCandidateBundle() {
+  return state.status?.contentResearch?.platformCandidates || null;
+}
+
+function getTopACandidates() {
+  const bundle = getPlatformCandidateBundle();
+  return Array.isArray(bundle?.topA) ? bundle.topA : [];
+}
+
+function getAllPlatformCandidates() {
+  const bundle = getPlatformCandidateBundle();
+  if (!Array.isArray(bundle?.platforms)) return [];
+  return bundle.platforms.flatMap(group => (Array.isArray(group.candidates) ? group.candidates : []));
+}
+
+function findPlatformCandidate(candidateId) {
+  if (!candidateId) return null;
+  return getAllPlatformCandidates().find(candidate => candidate.id === candidateId) || null;
+}
+
+function candidateGradeClass(grade) {
+  const normalized = String(grade || 'C').toLowerCase();
+  return ['a', 'b', 'c'].includes(normalized) ? `grade-${normalized}` : 'grade-c';
+}
+
+function renderPlatformCandidate(candidate, index = 0, compact = false) {
+  const tags = Array.isArray(candidate.tags) ? candidate.tags.slice(0, compact ? 2 : 4) : [];
+  const gradeClass = candidateGradeClass(candidate.grade);
+  const score = Number(candidate.score || 0).toFixed(1).replace(/\.0$/, '');
+  return `
+    <article class="research-candidate-card ${gradeClass}">
+      <div class="research-candidate-top">
+        <span class="research-grade ${gradeClass}">${escapeHtml(candidate.grade || 'C')}</span>
+        <span>${escapeHtml(candidate.platformLabel || candidate.platform || '-')}</span>
+        <strong>${score} 分</strong>
+      </div>
+      <h4>${escapeHtml(candidate.title || candidate.topic || `候选题材 ${index + 1}`)}</h4>
+      <p>${escapeHtml(candidate.articleAngle || '暂无角度说明')}</p>
+      <div class="research-meta-line">
+        <span>${escapeHtml(candidate.gameLabel || candidate.game || '综合')}</span>
+        <span>${escapeHtml(candidate.pillar || '-')}</span>
+        <span>${escapeHtml(candidate.source || '-')}</span>
+      </div>
+      ${candidate.platformRule ? `<small>${escapeHtml(candidate.platformRule)}</small>` : ''}
+      ${candidate.reason ? `<small>${escapeHtml(candidate.reason)}</small>` : ''}
+      ${
+        tags.length
+          ? `<div class="research-tags">${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}</div>`
+          : ''
+      }
+      <div class="research-candidate-actions">
+        <button class="ghost-btn research-use-candidate" type="button" data-candidate-id="${escapeHtml(candidate.id)}">采用题材</button>
+        ${candidate.url ? `<a class="research-candidate-source" href="${escapeHtml(candidate.url)}" target="_blank" rel="noreferrer">看来源</a>` : ''}
+      </div>
+    </article>
+  `;
+}
+
+function renderPlatformCandidateGroup(group) {
+  const candidates = Array.isArray(group.candidates) ? group.candidates : [];
+  const aCount = candidates.filter(candidate => candidate.grade === 'A').length;
+  return `
+    <article class="research-platform-column">
+      <div class="research-platform-head">
+        <h4>${escapeHtml(group.label || group.platform || '-')}</h4>
+        <span>${aCount} 个A / ${candidates.length} 条</span>
+      </div>
+      <div class="research-candidate-list">
+        ${candidates.map((candidate, index) => renderPlatformCandidate(candidate, index, true)).join('') || '<p class="content-research-empty">暂无候选题材</p>'}
+      </div>
+    </article>
+  `;
+}
+
+function buildCandidateOptionLabel(candidate) {
+  const score = Number(candidate.score || 0).toFixed(1).replace(/\.0$/, '');
+  const title = candidate.title || candidate.topic || '未命名题材';
+  return `${candidate.grade || 'C'}｜${candidate.platformLabel || candidate.platform || '-'}｜${score}分｜${title}`;
+}
+
+function renderDifyCandidateOptions(selectedId = '') {
+  if (!difyAutoCandidateSelect) return;
+  const candidates = getTopACandidates();
+  const currentValue = selectedId || difyAutoCandidateSelect.value;
+  difyAutoCandidateSelect.innerHTML = '<option value="">请选择 A 级题材</option>';
+  for (const candidate of candidates) {
+    const option = document.createElement('option');
+    option.value = candidate.id;
+    option.textContent = buildCandidateOptionLabel(candidate);
+    difyAutoCandidateSelect.appendChild(option);
+  }
+  if (currentValue && candidates.some(candidate => candidate.id === currentValue)) {
+    difyAutoCandidateSelect.value = currentValue;
+  }
+  renderDifyAutoCandidateMeta();
+}
+
+function renderDifyAutoCandidateMeta() {
+  if (!difyAutoCandidateMeta) return;
+  const candidate = findPlatformCandidate(difyAutoCandidateSelect?.value);
+  if (!candidate) {
+    const count = getTopACandidates().length;
+    difyAutoCandidateMeta.textContent = count
+      ? `已准备 ${count} 个 A 级题材，选择后可直接生成。`
+      : '自动运行只使用 A 级题材；如果没有 A 级题材，先去“内容研究看板”更新候选池。';
+    return;
+  }
+  const score = Number(candidate.score || 0).toFixed(1).replace(/\.0$/, '');
+  difyAutoCandidateMeta.textContent = `${candidate.platformLabel || candidate.platform} · ${score} 分 · ${candidate.articleAngle || candidate.reason || '已通过候选池评分'}`;
+}
+
+function applyCandidateToDifyForm(candidate) {
+  if (!candidate) return;
+  const formState = loadDifyFormState();
+  formState.channel = candidate.platform || formState.channel;
+  formState.shared = { ...DIFY_SHARED_DEFAULTS, ...formState.shared };
+  formState.shared.topic = candidate.topic || candidate.title || '';
+  formState.shared.goal = candidate.goal || formState.shared.goal || DIFY_SHARED_DEFAULTS.goal;
+  formState.shared.product_entry = candidate.productEntry || '';
+  formState.shared.sources = candidate.sources || candidate.url || '';
+  if (!formState.shared.transcript && candidate.articleAngle) {
+    formState.shared.transcript = candidate.articleAngle;
+  }
+  formState.byChannel = formState.byChannel || {};
+  formState.byChannel[formState.channel] = {
+    ...(formState.byChannel[formState.channel] || {}),
+    ...(candidate.channelFields || {}),
+  };
+  saveDifyFormState(formState);
+  syncDifyForm();
+  renderDifyCandidateOptions(candidate.id);
+  if (difyCustomWrap?.classList.contains('collapsed')) {
+    difyCustomWrap.classList.remove('collapsed');
+    syncDifyFormCollapse();
+  }
+  document.querySelector('#dify')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  difyTopicInput?.focus();
+}
+
 function renderContentResearchBoard() {
   if (!contentResearchBoard) return;
   const research = state.status && state.status.contentResearch;
@@ -574,6 +838,9 @@ function renderContentResearchBoard() {
   const byPillar = research.byMiniappPage || {};
   const counters = research.counters || {};
   const trend = research.trend || {};
+  const candidateBundle = research.platformCandidates || {};
+  const topACandidates = Array.isArray(candidateBundle.topA) ? candidateBundle.topA : [];
+  const candidateGroups = Array.isArray(candidateBundle.platforms) ? candidateBundle.platforms : [];
   const isFiltered = selectedPillar !== 'all' || selectedGame !== 'all';
 
   contentResearchBoard.className = 'content-research-board';
@@ -619,6 +886,25 @@ function renderContentResearchBoard() {
         </article>
       </div>
     </section>
+    <section class="research-section research-platform-candidates">
+      <div class="research-section-head">
+        <h3>三平台候选池</h3>
+        <span>${escapeHtml(candidateBundle.note || '每个平台取 10 条候选，按赛道硬门槛筛 A；不合适不硬凑')}</span>
+      </div>
+      <div class="research-candidate-hero">
+        <div class="research-candidate-summary">
+          <span class="stat-label">今日 A 级题材</span>
+          <strong>${topACandidates.length}</strong>
+          <p>按头条号、公众号、小红书各自赛道筛出来。点“采用题材”会带入手动表单；自动稿只采用 A 级，不会跨平台硬套。</p>
+        </div>
+        <div class="research-candidate-grid">
+          ${topACandidates.map((candidate, index) => renderPlatformCandidate(candidate, index)).join('') || '<p class="content-research-empty">今天还没有达到 A 级的题材，先观察，不硬写。</p>'}
+        </div>
+      </div>
+      <div class="research-candidate-platforms">
+        ${candidateGroups.map(renderPlatformCandidateGroup).join('') || '<p class="content-research-empty">暂无平台候选数据</p>'}
+      </div>
+    </section>
     <section class="research-section">
       <div class="research-section-head">
         <h3>今天优先写</h3>
@@ -649,33 +935,57 @@ function renderContentResearchBoard() {
       </div>
     </section>
   `;
+
+  contentResearchBoard.querySelectorAll('.research-use-candidate').forEach(button => {
+    button.addEventListener('click', () => {
+      applyCandidateToDifyForm(findPlatformCandidate(button.dataset.candidateId));
+    });
+  });
+  renderDifyCandidateOptions();
 }
 
 async function loadTasks() {
   const data = await requestJson('/api/tasks');
   state.tasks = data.tasks;
-  renderAutomationTaskOptions();
+  renderAutomationTaskOptions('game_data');
+  renderAutomationTaskOptions('self_media');
   renderTasks();
 }
 
 async function loadStatus() {
   const data = await requestJson(`/api/status?env=${state.env}`);
   state.status = data;
+  if (lastSyncText) {
+    lastSyncText.textContent = `同步于 ${new Date().toLocaleTimeString('zh-CN', { hour12: false })}`;
+  }
   renderSummary(data.summary);
   renderSurveyControl(data.summary);
   renderTasks();
+  renderHistory();
   renderContentResearchBoard();
   loadDifyStatus();
   stopBtn.disabled = !data.currentRun;
 
   const currentRun = data.currentRun;
-  if (currentRun) {
+  if (currentRun && state.pinnedContextRunId && currentRun.runId !== state.pinnedContextRunId) {
+    // 新任务开始了，自动退出历史日志回看
+    state.pinnedLogRunId = '';
+  }
+  if (state.pinnedLogRunId) {
+    if (currentRun && currentRun.runId === state.pinnedLogRunId) {
+      logTitle.textContent = `${currentRun.taskName} · ${currentRun.environment} · ${statusText(currentRun)}`;
+      await loadLog(currentRun.runId);
+    } else {
+      await loadLog(state.pinnedLogRunId);
+    }
+  } else if (currentRun) {
     state.activeRunId = currentRun.runId;
     logTitle.textContent = `${currentRun.taskName} · ${currentRun.environment} · ${statusText(currentRun)}`;
     await loadLog(currentRun.runId);
   } else if (state.activeRunId) {
     await loadLog(state.activeRunId);
   }
+  updateRunStatusPill();
 }
 
 async function toggleFeatureSurvey() {
@@ -774,6 +1084,8 @@ async function runTask(taskId, options = {}) {
       body: JSON.stringify({ taskId, environment: state.env }),
     });
     state.activeRunId = data.run.runId;
+    state.pinnedLogRunId = '';
+    state.pinnedContextRunId = '';
     state.logAutoFollow = true;
     updateLogFollowUi();
     logTitle.textContent = `${data.run.taskName} · ${data.run.environment} · 启动中`;
@@ -809,7 +1121,9 @@ function renderDifyPanel() {
   const disabled = Boolean(currentRun);
 
   const cronParts = [];
-  cronParts.push(status.configOk ? '<span class="dify-ok">API 密钥已配置</span>' : '<span class="dify-warn">缺 config.json 或 API Key</span>');
+  cronParts.push(status.configOk ? '<span class="dify-ok">头条号密钥已配置</span>' : '<span class="dify-warn">头条号缺 config.json 或 API Key</span>');
+  cronParts.push(status.wechatConfigOk ? '<span class="dify-ok">公众号密钥已配置</span>' : '<span class="dify-warn">公众号缺 wechat_api_key（导入 07 工作流后在 config.json 填入）</span>');
+  cronParts.push(status.xhsConfigOk ? '<span class="dify-ok">小红书密钥已配置</span>' : '<span class="dify-warn">小红书缺 xhs_api_key（导入 06 工作流后在 config.json 填入）</span>');
   if (status.cron.installed) {
     cronParts.push(`定时：${status.cron.scheduleText} · 下次 ${status.cron.nextRun ? formatTime(status.cron.nextRun) : '-'}`);
   } else {
@@ -840,24 +1154,32 @@ function renderDifyPanel() {
   difyTodayHead.textContent = status.today ? `今日计划（${status.today}${status.inSchedule ? '' : ' · 非发布日'}）` : '今日计划';
   difyRunAllBtn.disabled = disabled || !status.inSchedule;
   difyCustomRunBtn.disabled = disabled;
-  DIFY_FORM_FIELDS.forEach(([, element]) => {
-    if (element) element.disabled = disabled;
-  });
+  difyResetFormBtn.disabled = disabled;
+  // 表单控件由渠道档案动态渲染，锁定态走 class，避免与渲染时序耦合
+  difyCustomWrap.classList.toggle('is-locked', disabled);
 
   const articleRows = (status.articles || []).map(article => {
     const statusClass = article.status.includes('可以发布') ? 'dify-ok' : 'dify-warn';
     const customBadge = article.custom ? '<span class="badge dify-custom-badge">自定义</span>' : '';
+    const channelBadge =
+      article.channel === 'xhs'
+        ? '<span class="badge dify-xhs-badge">小红书</span>'
+        : article.channel === 'wechat'
+          ? '<span class="badge dify-wechat-badge">公众号</span>'
+          : '';
+    const htmlBadge = article.hasHtml ? '<span class="badge dify-wechat-badge">已排版</span>' : '';
     return `
-      <button class="dify-article-row" data-dify-article-date="${article.date}" data-dify-article-file="${escapeHtml(article.fileName)}">
+      <button class="dify-article-row" data-dify-article-date="${article.date}" data-dify-article-file="${escapeHtml(article.fileName)}" data-dify-article-html="${article.hasHtml ? '1' : ''}">
         <span class="dify-article-date">${article.date.slice(5)}</span>
         <span class="dify-article-title">${article.title ? escapeHtml(article.title) : escapeHtml(article.fileName)}</span>
-        <span class="dify-article-type">${customBadge}${escapeHtml(article.type)}</span>
+        <span class="dify-article-type">${channelBadge}${customBadge}${htmlBadge}${escapeHtml(article.type)}</span>
         <span class="${statusClass}">${escapeHtml(article.status || '未知')}</span>
         <span class="dify-article-words">${article.words != null ? `${article.words} 字` : ''}</span>
       </button>
     `;
   }).join('');
   difyArticleList.innerHTML = articleRows || '<p class="dify-empty">还没有生成过文章。</p>';
+  difyArticleList.classList.toggle('scrollable', (status.articles || []).length > 10);
 }
 
 async function runDifyTask(taskId, confirmText) {
@@ -869,6 +1191,8 @@ async function runDifyTask(taskId, confirmText) {
       body: JSON.stringify({ taskId, environment: state.env }),
     });
     state.activeRunId = data.run.runId;
+    state.pinnedLogRunId = '';
+    state.pinnedContextRunId = '';
     state.logAutoFollow = true;
     updateLogFollowUi();
     logTitle.textContent = `${data.run.taskName} · ${data.run.environment} · 启动中`;
@@ -880,16 +1204,17 @@ async function runDifyTask(taskId, confirmText) {
   }
 }
 
-async function openDifyArticle(date, fileName) {
-  state.dify.openArticle = { date, fileName };
-  difyArticleMeta.textContent = `${date} · ${fileName.replace(/^\d+_/, '').replace(/\.md$/, '')}`;
+async function openDifyArticle(date, fileName, hasHtml = false) {
+  state.dify.openArticle = { date, fileName, hasHtml };
+  difyArticleMeta.textContent = `${date} · ${fileName.replace(/^(\d+|custom|xhs_\w+|wechat_\w+)_/, '').replace(/\.md$/, '')}`;
   difyArticleTitle.textContent = '加载中...';
   difyArticleContent.textContent = '';
+  if (difyPreviewHtmlBtn) difyPreviewHtmlBtn.hidden = !hasHtml;
   difyArticleMask.hidden = false;
   try {
     const data = await requestJson(`/api/dify/article?date=${encodeURIComponent(date)}&file=${encodeURIComponent(fileName)}`);
     state.dify.openArticle.content = data.content;
-    difyArticleTitle.textContent = (data.content.match(/【标题候选】\s*\n1[.、]\s*(.*)/) || [])[1] || fileName;
+    difyArticleTitle.textContent = (data.content.match(/【标题候选[^】]*】\s*\n1[.、]\s*(.*)/) || [])[1] || fileName;
     difyArticleContent.textContent = data.content;
   } catch (error) {
     difyArticleTitle.textContent = '加载失败';
@@ -907,57 +1232,246 @@ async function copyDifyArticle(mode) {
   }
   try {
     await navigator.clipboard.writeText(text.trim());
-    window.alert(mode === 'publish' ? '发布稿已复制，可粘贴到头条号编辑器。' : '全文已复制。');
+    const isXhs = article.fileName.startsWith('xhs_');
+    const isWechat = article.fileName.startsWith('wechat_');
+    window.alert(mode === 'publish'
+      ? (isXhs
+          ? '发布稿已复制，可粘贴到小红书发布页（标题、卡片脚本、正文、标签都在里面）。'
+          : isWechat
+            ? '发布稿已复制，可粘贴到公众号编辑器。'
+            : '发布稿已复制，可粘贴到头条号编辑器。')
+      : '全文已复制。');
   } catch (error) {
     window.alert(`复制失败：${error.message}`);
   }
 }
 
-function loadDifyFormValues() {
-  let saved = {};
+// ── Dify 自定义表单 ─────────────────────────────────────────────
+// 渠道档案（字段/选项/文案）来自 /api/dify/form-config，是唯一事实来源；
+// 前端只做三件事：按档案渲染渠道专属下拉、按渠道分桶记忆、提交时原样回传。
+
+let difyChannels = [];
+let difyChannelSelects = {};
+
+function readJsonStorage(key) {
   try {
-    saved = JSON.parse(window.localStorage.getItem(DIFY_FORM_STORAGE_KEY)) || {};
+    return JSON.parse(window.localStorage.getItem(key)) || {};
   } catch (error) {
-    saved = {};
+    return {};
   }
-  return { ...DIFY_FORM_DEFAULTS, ...saved };
+}
+
+// v1 旧存储是单桶平铺，迁移为 v2 的按渠道分桶结构，迁移完即清除
+function migrateLegacyDifyForm() {
+  const legacy = readJsonStorage(DIFY_FORM_LEGACY_KEY);
+  if (!Object.keys(legacy).length) return null;
+  const legacyChannelKey = legacy.channel === '小红书' ? 'xhs' : legacy.channel === '公众号' ? 'wechat' : 'toutiao';
+  const legacyToChannelFields = {
+    toutiao: ['ref_account', 'platform', 'article_type'],
+    xhs: ['niche', 'note_type', 'ref_blogger'],
+    wechat: ['ref_account', 'article_type'],
+  };
+  const state = { channel: legacyChannelKey, shared: {}, byChannel: {} };
+  for (const [key, value] of Object.entries(legacy)) {
+    if (key === 'channel') continue;
+    const targetChannel = Object.keys(legacyToChannelFields).find(ch => legacyToChannelFields[ch].includes(key));
+    if (targetChannel) {
+      state.byChannel[targetChannel] = { ...state.byChannel[targetChannel], [key]: value };
+    } else {
+      state.shared[key] = value;
+    }
+  }
+  window.localStorage.removeItem(DIFY_FORM_LEGACY_KEY);
+  return state;
+}
+
+function loadDifyFormState() {
+  const migrated = migrateLegacyDifyForm();
+  const state = migrated || readJsonStorage(DIFY_FORM_STORAGE_KEY);
+  const fallback = difyChannels[0];
+  if (!difyChannels.some(profile => profile.key === state.channel)) state.channel = fallback ? fallback.key : '';
+  state.shared = { ...DIFY_SHARED_DEFAULTS, ...state.shared };
+  state.byChannel = state.byChannel || {};
+  return state;
+}
+
+function saveDifyFormState(state) {
+  window.localStorage.setItem(DIFY_FORM_STORAGE_KEY, JSON.stringify(state));
+}
+
+function currentDifyProfile(state) {
+  return difyChannels.find(profile => profile.key === state.channel) || difyChannels[0];
+}
+
+// 选项不在档案内（如旧存储的过时选项）时回落首项，与服务端 custom-run 的软校验一致
+function pickDifyOption(field, value) {
+  return field.options.includes(value) ? value : field.options[0];
+}
+
+function buildDifySelect(field, value) {
+  const select = document.createElement('select');
+  select.dataset.difyField = field.key;
+  for (const option of field.options) {
+    const optionEl = document.createElement('option');
+    optionEl.value = option;
+    optionEl.textContent = option;
+    select.appendChild(optionEl);
+  }
+  select.value = pickDifyOption(field, value);
+  return select;
+}
+
+// 切换渠道时整体重建：渠道下拉、渠道专属字段、goal/style 文案
+function renderDifyChannelUI(state) {
+  const profile = currentDifyProfile(state);
+  if (!profile) return;
+
+  difyChannelSelect.innerHTML = '';
+  for (const item of difyChannels) {
+    const optionEl = document.createElement('option');
+    optionEl.value = item.key;
+    optionEl.textContent = item.label;
+    optionEl.selected = item.key === profile.key;
+    difyChannelSelect.appendChild(optionEl);
+  }
+
+  difyChannelFieldsWrap.innerHTML = '';
+  difyChannelSelects = {};
+  const savedFields = state.byChannel[profile.key] || {};
+  for (const field of profile.fields) {
+    const label = document.createElement('label');
+    label.className = 'field';
+    const span = document.createElement('span');
+    span.textContent = field.label;
+    const select = buildDifySelect(field, savedFields[field.key]);
+    difyChannelSelects[field.key] = select;
+    label.append(span, select);
+    difyChannelFieldsWrap.appendChild(label);
+  }
+
+  difyGoalLabel.textContent = profile.copy.goalLabel;
+  difyGoalInput.placeholder = profile.copy.goalPlaceholder;
+  difyStyleLabel.textContent = profile.copy.styleLabel;
+  difyStyleInput.placeholder = profile.copy.stylePlaceholder;
+  difyCustomRunBtn.textContent = profile.copy.runButton;
+}
+
+function applyDifyFormValues(state) {
+  renderDifyChannelUI(state);
+  for (const [key, selector] of Object.entries(DIFY_SHARED_FIELD_IDS)) {
+    const element = document.querySelector(selector);
+    if (element) element.value = state.shared[key] != null ? state.shared[key] : '';
+  }
 }
 
 function syncDifyForm() {
-  const values = loadDifyFormValues();
-  DIFY_FORM_FIELDS.forEach(([key, element]) => {
-    if (element) element.value = values[key] != null ? values[key] : '';
-  });
+  applyDifyFormValues(loadDifyFormState());
 }
 
+function syncDifyFormCollapse() {
+  if (!difyCustomWrap || !difyFormToggleBtn) return;
+  difyFormToggleBtn.textContent = difyCustomWrap.classList.contains('collapsed') ? '展开表单' : '收起表单';
+}
+
+function initDifyFormCollapse() {
+  if (!difyCustomWrap) return;
+  // 下拉是记忆不是输入，只看 shared 内容是否有自定义来决定展开
+  const state = loadDifyFormState();
+  const hasCustomValues = Object.entries(state.shared)
+    .some(([key, value]) => value && value !== DIFY_SHARED_DEFAULTS[key]);
+  difyCustomWrap.classList.toggle('collapsed', !hasCustomValues);
+  syncDifyFormCollapse();
+}
+
+// 从 DOM 收集表单值：shared 跨渠道共用，渠道字段写入当前渠道的桶
 function collectDifyForm(persist = true) {
-  const values = {};
-  DIFY_FORM_FIELDS.forEach(([key, element]) => {
-    values[key] = element ? element.value.trim() : '';
-  });
-  if (persist) {
-    window.localStorage.setItem(DIFY_FORM_STORAGE_KEY, JSON.stringify(values));
+  const state = loadDifyFormState();
+  for (const key of Object.keys(DIFY_SHARED_DEFAULTS)) {
+    const element = document.querySelector(DIFY_SHARED_FIELD_IDS[key]);
+    state.shared[key] = element ? element.value.trim() : '';
   }
-  return values;
+  const profile = currentDifyProfile(state);
+  if (profile) {
+    const bucket = {};
+    for (const field of profile.fields) {
+      const select = difyChannelSelects[field.key];
+      bucket[field.key] = select ? select.value : pickDifyOption(field, '');
+    }
+    state.byChannel[profile.key] = bucket;
+  }
+  if (persist) saveDifyFormState(state);
+  return { state, profile };
 }
 
 async function runDifyCustom() {
-  const values = collectDifyForm();
-  if (!values.goal) {
-    window.alert('「文章要帮读者做什么决定」必填，请填写后再生成。');
+  const { state, profile } = collectDifyForm();
+  if (!profile) return;
+  if (!state.shared.goal) {
+    window.alert(`「${profile.copy.goalLabel}」必填，请填写后再生成。`);
     difyGoalInput.focus();
     return;
   }
-  const topicText = values.topic ? `「${values.topic}」` : '自动找热点';
-  if (!window.confirm(`按表单生成文章？\n类型：${values.article_type} · 平台：${values.platform} · 选题：${topicText}\n约 1-3 分钟，消耗 Dify API 额度。`)) return;
+  const payload = {
+    workflow: profile.key,
+    ...state.shared,
+    ...(state.byChannel[profile.key] || {}),
+  };
+  const topicText = state.shared.topic ? `「${state.shared.topic}」` : '自动找热点';
+  const typeText = profile.fields.map(field => `${field.label}：${payload[field.key]}`).join(' · ');
+  if (!window.confirm(`按表单生成${profile.copy.targetName}？\n${typeText} · 选题：${topicText}\n约 1-3 分钟，消耗 Dify API 额度。`)) return;
 
+  await submitDifyRun(payload);
+}
+
+function buildDifyPayloadFromCandidate(candidate) {
+  const profile = difyChannels.find(item => item.key === candidate.platform) || difyChannels[0];
+  if (!profile) return null;
+  return {
+    workflow: profile.key,
+    topic: candidate.topic || candidate.title || '',
+    goal: candidate.goal || `把「${candidate.title || candidate.topic || '候选题材'}」写成可发布文章。`,
+    product_entry: candidate.productEntry || '',
+    sources: candidate.sources || candidate.url || '',
+    transcript: candidate.articleAngle || candidate.reason || '',
+    style_reference: '',
+    candidate_id: candidate.id || '',
+    candidate_topic_id: candidate.topicId || '',
+    candidate_platform: candidate.platform || profile.key,
+    candidate_title: candidate.title || candidate.topic || '',
+    candidate_source: candidate.source || '',
+    candidate_url: candidate.url || '',
+    candidate_score: candidate.score || '',
+    candidate_reason: candidate.reason || '',
+    ...(candidate.channelFields || {}),
+  };
+}
+
+async function runDifyAutoCandidate() {
+  const candidate = findPlatformCandidate(difyAutoCandidateSelect?.value);
+  if (!candidate) {
+    window.alert('请先选择一个 A 级题材。');
+    return;
+  }
+  const payload = buildDifyPayloadFromCandidate(candidate);
+  if (!payload) {
+    window.alert('自媒体表单配置还没加载完成，请刷新后重试。');
+    return;
+  }
+  const score = Number(candidate.score || 0).toFixed(1).replace(/\.0$/, '');
+  if (!window.confirm(`采用 A 级题材直接生成？\n${candidate.platformLabel || candidate.platform} · ${score} 分\n${candidate.title || candidate.topic}\n约 1-3 分钟，消耗 Dify API 额度。`)) return;
+  await submitDifyRun(payload);
+}
+
+async function submitDifyRun(payload) {
   try {
     const data = await requestJson('/api/dify/custom-run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(values),
+      body: JSON.stringify(payload),
     });
     state.activeRunId = data.run.runId;
+    state.pinnedLogRunId = '';
+    state.pinnedContextRunId = '';
     state.logAutoFollow = true;
     updateLogFollowUi();
     logTitle.textContent = `${data.run.taskName} · 启动中`;
@@ -969,10 +1483,40 @@ async function runDifyCustom() {
   }
 }
 
-function bindDifyPanel() {
+// 渠道档案从服务端加载后初始化表单；加载失败则禁用生成入口，避免用过期选项提交
+async function bindDifyPanel() {
+  try {
+    const config = await requestJson('/api/dify/form-config');
+    difyChannels = config.channels || [];
+  } catch (error) {
+    difyChannels = [];
+    window.alert('自媒体表单配置加载失败，请刷新页面重试。');
+  }
+  const formReady = difyChannels.length > 0;
+  difyCustomRunBtn.disabled = !formReady;
+  difyResetFormBtn.disabled = !formReady;
+  if (!formReady) return;
+
   syncDifyForm();
-  DIFY_FORM_FIELDS.forEach(([, element]) => {
-    element?.addEventListener('change', () => collectDifyForm());
+  initDifyFormCollapse();
+  renderDifyCandidateOptions();
+  document.querySelectorAll('#difyCustomWrap input, #difyCustomWrap textarea').forEach(element => {
+    element.addEventListener('change', () => collectDifyForm());
+  });
+  difyAutoCandidateSelect?.addEventListener('change', renderDifyAutoCandidateMeta);
+  difyAutoCandidateRunBtn?.addEventListener('click', runDifyAutoCandidate);
+  difyChannelFieldsWrap.addEventListener('change', () => collectDifyForm());
+  difyChannelSelect?.addEventListener('change', () => {
+    // 先按存储里的旧渠道把 DOM 值落桶，再把存储切到新渠道并按其档案重建表单
+    collectDifyForm();
+    const state = loadDifyFormState();
+    state.channel = difyChannelSelect.value;
+    saveDifyFormState(state);
+    syncDifyForm();
+  });
+  difyFormToggleBtn?.addEventListener('click', () => {
+    difyCustomWrap.classList.toggle('collapsed');
+    syncDifyFormCollapse();
   });
   difyResetFormBtn.addEventListener('click', () => {
     window.localStorage.removeItem(DIFY_FORM_STORAGE_KEY);
@@ -998,7 +1542,13 @@ function bindDifyPanel() {
   });
   difyArticleList.addEventListener('click', event => {
     const row = event.target.closest('[data-dify-article-date]');
-    if (row) openDifyArticle(row.dataset.difyArticleDate, row.dataset.difyArticleFile);
+    if (row) openDifyArticle(row.dataset.difyArticleDate, row.dataset.difyArticleFile, row.dataset.difyArticleHtml === '1');
+  });
+  difyPreviewHtmlBtn?.addEventListener('click', () => {
+    const article = state.dify.openArticle;
+    if (!article) return;
+    const htmlFile = article.fileName.replace(/\.md$/, '.html');
+    window.open(`/api/dify/article-html?date=${encodeURIComponent(article.date)}&file=${encodeURIComponent(htmlFile)}`, '_blank');
   });
   difyCopyPublishBtn.addEventListener('click', () => copyDifyArticle('publish'));
   difyCopyAllBtn.addEventListener('click', () => copyDifyArticle('all'));
@@ -1013,17 +1563,145 @@ function bindDifyPanel() {
   });
 }
 
-function normalizeAutomationSettingsInput(saved) {
-  if (!saved || typeof saved !== 'object') return null;
+
+const AUTOMATION_KINDS = ['game_data', 'self_media'];
+const AUTOMATION_CONFIG = {
+  game_data: {
+    label: '游戏数据',
+    defaultTaskId: 'daily_publish',
+    selectors: {
+      taskSelect: automationTaskSelect,
+      addTaskBtn: automationAddTaskBtn,
+      queueList: automationQueueList,
+      intervalInput: automationIntervalInput,
+      jitterInput: automationJitterInput,
+      saveBtn: automationSaveBtn,
+      runNowBtn: automationRunNowBtn,
+      toggleBtn: automationToggleBtn,
+      statusText: automationStatusText,
+      nextText: automationNextText,
+    },
+  },
+  self_media: {
+    label: '自媒体发文',
+    defaultTaskId: 'dify_publish_toutiao',
+    selectors: {
+      taskSelect: mediaAutomationTaskSelect,
+      addTaskBtn: mediaAutomationAddTaskBtn,
+      queueList: mediaAutomationQueueList,
+      intervalInput: mediaAutomationIntervalInput,
+      jitterInput: mediaAutomationJitterInput,
+      saveBtn: mediaAutomationSaveBtn,
+      runNowBtn: mediaAutomationRunNowBtn,
+      toggleBtn: mediaAutomationToggleBtn,
+      statusText: mediaAutomationStatusText,
+      nextText: mediaAutomationNextText,
+    },
+  },
+};
+
+function getAutomationKind(kind) {
+  return AUTOMATION_KINDS.includes(kind) ? kind : 'game_data';
+}
+
+function normalizeAutomationInterval(value, kind = 'game_data', fallback = 120) {
+  const automationKind = getAutomationKind(kind);
+  const number = clampNumber(value, automationKind === 'self_media' ? 30 : 10, fallback);
+  if (automationKind === 'self_media' && !SELF_MEDIA_INTERVAL_VALUES.includes(number)) {
+    return SELF_MEDIA_INTERVAL_VALUES.includes(fallback) ? fallback : 1440;
+  }
+  return number;
+}
+
+function getAutomationConfig(kind) {
+  return AUTOMATION_CONFIG[getAutomationKind(kind)];
+}
+
+function createDefaultAutomationSettings(kind) {
+  const automationKind = getAutomationKind(kind);
+  const config = getAutomationConfig(automationKind);
   return {
-    ...state.automation,
+    enabled: false,
+    group: automationKind,
+    taskId: config.defaultTaskId,
+    taskIds: [config.defaultTaskId],
+    intervalMinutes: automationKind === 'self_media' ? 1440 : 120,
+    jitterMinutes: automationKind === 'self_media' ? 30 : 10,
+    nextRunAt: 0,
+    updatedAt: 0,
+  };
+}
+
+function migrateAutomationTaskId(taskId) {
+  if (taskId === 'dify_publish_all' || taskId === 'dify_publish_1' || taskId === 'dify_publish_2') return 'dify_publish_toutiao';
+  return taskId;
+}
+
+function getAutomation(kind) {
+  const automationKind = getAutomationKind(kind);
+  if (!state.automations[automationKind]) {
+    state.automations[automationKind] = createDefaultAutomationSettings(automationKind);
+  }
+  return state.automations[automationKind];
+}
+
+function getEnabledAutomationKinds() {
+  return AUTOMATION_KINDS.filter(kind => getAutomation(kind).enabled === true);
+}
+
+function getNextAutomationSchedule() {
+  return getEnabledAutomationKinds()
+    .map(kind => ({ kind, nextRunAt: Number(getAutomation(kind).nextRunAt || 0) }))
+    .filter(item => item.nextRunAt > 0)
+    .sort((a, b) => a.nextRunAt - b.nextRunAt)[0] || null;
+}
+
+function normalizeAutomationTaskIds(taskIds, kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const availableIds = new Set(getSchedulableTasks(automationKind).map(task => task.id));
+  const seen = new Set();
+  const normalized = (Array.isArray(taskIds) ? taskIds : [])
+    .map(id => String(id || ''))
+    .map(migrateAutomationTaskId)
+    .filter(id => availableIds.has(id))
+    .filter(id => {
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    });
+  const fallback = getAutomationConfig(automationKind).defaultTaskId;
+  return normalized.length ? normalized : [fallback];
+}
+
+function normalizeAutomationSettingsInput(saved, kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const defaults = createDefaultAutomationSettings(automationKind);
+  if (!saved || typeof saved !== 'object') return defaults;
+  const taskIds = normalizeAutomationTaskIds(saved.taskIds || (saved.taskId ? [saved.taskId] : []), automationKind);
+  return {
+    ...defaults,
     ...saved,
-    taskIds: normalizeAutomationTaskIds(saved.taskIds || (saved.taskId ? [saved.taskId] : [])),
-    intervalMinutes: clampNumber(saved.intervalMinutes, 10, 120),
-    jitterMinutes: clampNumber(saved.jitterMinutes, 0, 10),
+    group: automationKind,
+    taskId: taskIds[0],
+    taskIds,
+    intervalMinutes: normalizeAutomationInterval(saved.intervalMinutes, automationKind, defaults.intervalMinutes),
+    jitterMinutes: clampNumber(saved.jitterMinutes, 0, defaults.jitterMinutes),
     nextRunAt: Number(saved.nextRunAt) || 0,
     updatedAt: Number(saved.updatedAt) || 0,
   };
+}
+
+function normalizeAutomationBundleInput(saved) {
+  const raw = saved && typeof saved === 'object' ? saved : {};
+  const isLegacyFlat = raw.taskId || raw.taskIds || raw.intervalMinutes || raw.enabled || raw.nextRunAt;
+  return {
+    game_data: normalizeAutomationSettingsInput(isLegacyFlat ? raw : raw.game_data, 'game_data'),
+    self_media: normalizeAutomationSettingsInput(isLegacyFlat ? {} : raw.self_media, 'self_media'),
+  };
+}
+
+function storeAutomationSettingsLocal() {
+  window.localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automations));
 }
 
 async function loadAutomationSettings() {
@@ -1031,30 +1709,31 @@ async function loadAutomationSettings() {
   let serverSettings = null;
   try {
     const raw = window.localStorage.getItem(AUTOMATION_STORAGE_KEY);
-    if (raw) localSettings = normalizeAutomationSettingsInput(JSON.parse(raw));
+    if (raw) localSettings = normalizeAutomationBundleInput(JSON.parse(raw));
   } catch (error) {
     console.warn('读取自动运行设置失败:', error);
   }
 
   try {
     const data = await requestJson('/api/automation-settings');
-    serverSettings = normalizeAutomationSettingsInput(data.automation);
+    serverSettings = normalizeAutomationBundleInput(data.automation);
   } catch (error) {
     console.warn('读取服务端自动运行设置失败:', error);
   }
 
-  const localUpdatedAt = Number(localSettings?.updatedAt || 0);
-  const serverUpdatedAt = Number(serverSettings?.updatedAt || 0);
-  const nextSettings = serverUpdatedAt > localUpdatedAt ? serverSettings : localSettings || serverSettings;
-  if (nextSettings) {
-    state.automation = nextSettings;
-    saveAutomationSettings();
-  }
+  AUTOMATION_KINDS.forEach(kind => {
+    const local = localSettings && localSettings[kind];
+    const server = serverSettings && serverSettings[kind];
+    const localUpdatedAt = Number(local?.updatedAt || 0);
+    const serverUpdatedAt = Number(server?.updatedAt || 0);
+    state.automations[kind] = serverUpdatedAt > localUpdatedAt ? server : local || server || createDefaultAutomationSettings(kind);
+  });
+  storeAutomationSettingsLocal();
 }
 
-function saveAutomationSettings() {
-  state.automation.updatedAt = Date.now();
-  window.localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automation));
+function saveAutomationSettings(kind) {
+  if (kind) getAutomation(kind).updatedAt = Date.now();
+  storeAutomationSettingsLocal();
 }
 
 async function syncAutomationSettingsToServer() {
@@ -1062,99 +1741,98 @@ async function syncAutomationSettingsToServer() {
     const data = await requestJson('/api/automation-settings', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ automation: state.automation }),
+      body: JSON.stringify({ automation: state.automations }),
     });
     if (data.automation) {
-      state.automation = normalizeAutomationSettingsInput(data.automation) || state.automation;
-      window.localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automation));
+      state.automations = normalizeAutomationBundleInput(data.automation);
+      storeAutomationSettingsLocal();
     }
   } catch (error) {
     console.warn('同步自动运行设置失败:', error);
   }
 }
 
-function persistAutomationSettings() {
-  saveAutomationSettings();
+function persistAutomationSettings(kind) {
+  saveAutomationSettings(kind);
   syncAutomationSettingsToServer();
 }
 
-function getSchedulableTasks() {
-  return state.tasks.filter(task => task.id);
+function getSchedulableTasks(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const tasks = state.tasks.filter(task => task.id && task.group === automationKind);
+  if (automationKind !== 'self_media') return tasks;
+  const byId = new Map(tasks.map(task => [task.id, task]));
+  return SELF_MEDIA_PLATFORM_TASK_IDS.map(id => byId.get(id)).filter(Boolean);
 }
 
-function normalizeAutomationTaskIds(taskIds) {
-  const ids = Array.isArray(taskIds) ? taskIds : [];
-  const seen = new Set();
-  const normalized = ids
-    .map(id => String(id || ''))
-    .filter(Boolean)
-    .filter(id => {
-      if (seen.has(id)) return false;
-      seen.add(id);
-      return true;
-    });
-  return normalized.length ? normalized : ['daily_publish'];
-}
-
-function getAutomationQueue() {
-  const availableIds = new Set(getSchedulableTasks().map(task => task.id));
-  const queue = normalizeAutomationTaskIds(state.automation.taskIds).filter(taskId => availableIds.has(taskId));
-  if (!queue.length && getSchedulableTasks()[0]) queue.push(getSchedulableTasks()[0].id);
-  state.automation.taskIds = queue;
-  state.automation.taskId = queue[0] || state.automation.taskId;
+function getAutomationQueue(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const settings = getAutomation(automationKind);
+  const availableIds = new Set(getSchedulableTasks(automationKind).map(task => task.id));
+  const queue = normalizeAutomationTaskIds(settings.taskIds, automationKind).filter(taskId => availableIds.has(taskId));
+  if (!queue.length && getSchedulableTasks(automationKind)[0]) queue.push(getSchedulableTasks(automationKind)[0].id);
+  settings.taskIds = queue;
+  settings.taskId = queue[0] || settings.taskId;
   return queue;
 }
 
-function renderAutomationTaskOptions() {
-  if (!automationTaskSelect) return;
-  const schedulableTasks = getSchedulableTasks();
-  automationTaskSelect.innerHTML = schedulableTasks
+function renderAutomationTaskOptions(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const elements = getAutomationConfig(automationKind).selectors;
+  if (!elements.taskSelect) return;
+  const settings = getAutomation(automationKind);
+  const schedulableTasks = getSchedulableTasks(automationKind);
+  elements.taskSelect.innerHTML = schedulableTasks
     .map(task => `<option value="${task.id}">${task.name}</option>`)
     .join('');
-  getAutomationQueue();
-  if (schedulableTasks.some(task => task.id === state.automation.taskId)) {
-    automationTaskSelect.value = state.automation.taskId;
+  getAutomationQueue(automationKind);
+  if (schedulableTasks.some(task => task.id === settings.taskId)) {
+    elements.taskSelect.value = settings.taskId;
   } else if (schedulableTasks[0]) {
-    state.automation.taskId = schedulableTasks[0].id;
-    automationTaskSelect.value = state.automation.taskId;
+    settings.taskId = schedulableTasks[0].id;
+    elements.taskSelect.value = settings.taskId;
   }
-  renderAutomationQueue();
+  renderAutomationQueue(automationKind);
 }
 
-function getAutomationTask() {
-  return state.tasks.find(task => task.id === state.automation.taskId);
-}
-
-function renderAutomationQueue() {
-  if (!automationQueueList) return;
-  const queue = getAutomationQueue();
+function renderAutomationQueue(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const elements = getAutomationConfig(automationKind).selectors;
+  if (!elements.queueList) return;
+  const queue = getAutomationQueue(automationKind);
   const currentRun = state.status && state.status.currentRun;
   const disabled = state.automationRunner.running || Boolean(currentRun);
-  automationQueueList.innerHTML =
-    queue
-      .map((taskId, index) => {
-        const task = state.tasks.find(item => item.id === taskId);
-        if (!task) return '';
-        const isCurrent = state.automationRunner.running && state.automationRunner.currentIndex === index;
-        const gameLabel = task.game === 'all' ? 'ALL' : String(task.game || '').toUpperCase();
-        return `
-          <li class="automation-queue-item ${isCurrent ? 'running' : ''}" draggable="${disabled ? 'false' : 'true'}" data-index="${index}">
-            <span class="drag-handle" aria-hidden="true">☰</span>
-            <span class="queue-index">${index + 1}</span>
-            <div class="queue-copy">
-              <strong>${escapeHtml(task.name)}</strong>
-              <small>${escapeHtml(gameLabel)} · ${task.localOnly ? '本地内容研究' : Array.isArray(task.steps) ? '流程任务' : '脚本任务'}</small>
-            </div>
-            <button class="queue-remove-btn" data-index="${index}" ${disabled || queue.length <= 1 ? 'disabled' : ''}>移除</button>
-          </li>
-        `;
-      })
-      .join('');
+  elements.queueList.innerHTML = queue
+    .map((taskId, index) => {
+      const task = state.tasks.find(item => item.id === taskId);
+      if (!task) return '';
+      const isCurrent = state.automationRunner.running && state.automationRunner.kind === automationKind && state.automationRunner.currentIndex === index;
+      const gameLabel = task.game === 'all' ? 'ALL' : String(task.game || '').toUpperCase();
+      const taskType = automationKind === 'self_media'
+        ? '生成草稿'
+        : task.localOnly
+          ? '本地内容研究'
+          : Array.isArray(task.steps)
+            ? '流程任务'
+            : '脚本任务';
+      return `
+        <li class="automation-queue-item ${isCurrent ? 'running' : ''}" draggable="${disabled ? 'false' : 'true'}" data-kind="${automationKind}" data-index="${index}">
+          <span class="drag-handle" aria-hidden="true">☰</span>
+          <span class="queue-index">${index + 1}</span>
+          <div class="queue-copy">
+            <strong>${escapeHtml(task.name)}</strong>
+            <small>${escapeHtml(gameLabel)} · ${taskType}</small>
+          </div>
+          <button class="queue-remove-btn" data-kind="${automationKind}" data-index="${index}" ${disabled || queue.length <= 1 ? 'disabled' : ''}>移除</button>
+        </li>
+      `;
+    })
+    .join('');
 
-  automationQueueList.querySelectorAll('.queue-remove-btn').forEach(button => {
-    button.addEventListener('click', () => removeAutomationTask(Number(button.dataset.index)));
+  elements.queueList.querySelectorAll('.queue-remove-btn').forEach(button => {
+    button.addEventListener('click', () => removeAutomationTask(button.dataset.kind, Number(button.dataset.index)));
   });
-  automationQueueList.querySelectorAll('.automation-queue-item').forEach(item => {
+  elements.queueList.querySelectorAll('.automation-queue-item').forEach(item => {
     item.addEventListener('dragstart', event => {
       event.dataTransfer.setData('text/plain', item.dataset.index);
       item.classList.add('dragging');
@@ -1165,112 +1843,137 @@ function renderAutomationQueue() {
       event.preventDefault();
       const fromIndex = Number(event.dataTransfer.getData('text/plain'));
       const toIndex = Number(item.dataset.index);
-      reorderAutomationTask(fromIndex, toIndex);
+      reorderAutomationTask(item.dataset.kind, fromIndex, toIndex);
     });
   });
 }
 
-function addAutomationTask() {
-  const taskId = automationTaskSelect.value;
+function addAutomationTask(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const elements = getAutomationConfig(automationKind).selectors;
+  const settings = getAutomation(automationKind);
+  const taskId = elements.taskSelect && elements.taskSelect.value;
   if (!taskId) return;
-  state.automation.taskIds = normalizeAutomationTaskIds([...getAutomationQueue(), taskId]);
-  state.automation.taskId = state.automation.taskIds[0];
-  persistAutomationSettings();
-  renderAutomationQueue();
+  settings.taskIds = normalizeAutomationTaskIds([...getAutomationQueue(automationKind), taskId], automationKind);
+  settings.taskId = settings.taskIds[0];
+  persistAutomationSettings(automationKind);
+  renderAutomationQueue(automationKind);
   updateAutomationUi();
 }
 
-function removeAutomationTask(index) {
-  const queue = getAutomationQueue();
+function removeAutomationTask(kind, index) {
+  const automationKind = getAutomationKind(kind);
+  const settings = getAutomation(automationKind);
+  const queue = getAutomationQueue(automationKind);
   if (queue.length <= 1) return;
   queue.splice(index, 1);
-  state.automation.taskIds = normalizeAutomationTaskIds(queue);
-  state.automation.taskId = state.automation.taskIds[0];
-  persistAutomationSettings();
-  renderAutomationQueue();
+  settings.taskIds = normalizeAutomationTaskIds(queue, automationKind);
+  settings.taskId = settings.taskIds[0];
+  persistAutomationSettings(automationKind);
+  renderAutomationQueue(automationKind);
   updateAutomationUi();
 }
 
-function reorderAutomationTask(fromIndex, toIndex) {
-  const queue = getAutomationQueue();
+function reorderAutomationTask(kind, fromIndex, toIndex) {
+  const automationKind = getAutomationKind(kind);
+  const settings = getAutomation(automationKind);
+  const queue = getAutomationQueue(automationKind);
   if (fromIndex === toIndex || fromIndex < 0 || toIndex < 0 || fromIndex >= queue.length || toIndex >= queue.length) return;
   const [moved] = queue.splice(fromIndex, 1);
   queue.splice(toIndex, 0, moved);
-  state.automation.taskIds = normalizeAutomationTaskIds(queue);
-  state.automation.taskId = state.automation.taskIds[0];
-  persistAutomationSettings();
-  renderAutomationQueue();
+  settings.taskIds = normalizeAutomationTaskIds(queue, automationKind);
+  settings.taskId = settings.taskIds[0];
+  persistAutomationSettings(automationKind);
+  renderAutomationQueue(automationKind);
   updateAutomationUi();
 }
 
-function computeNextRunAt(from = Date.now()) {
-  const intervalMs = state.automation.intervalMinutes * 60 * 1000;
-  const jitterMs = state.automation.jitterMinutes * 60 * 1000;
+function computeNextRunAt(kind = 'game_data', from = Date.now()) {
+  const settings = getAutomation(kind);
+  const intervalMs = settings.intervalMinutes * 60 * 1000;
+  const jitterMs = settings.jitterMinutes * 60 * 1000;
   const offset = jitterMs ? Math.round((Math.random() * 2 - 1) * jitterMs) : 0;
   return from + Math.max(10 * 60 * 1000, intervalMs + offset);
 }
 
-function syncAutomationForm() {
-  if (!automationTaskSelect) return;
-  automationTaskSelect.value = state.automation.taskId;
-  automationIntervalInput.value = state.automation.intervalMinutes;
-  automationJitterInput.value = state.automation.jitterMinutes;
+function syncAutomationForm(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const settings = getAutomation(automationKind);
+  const elements = getAutomationConfig(automationKind).selectors;
+  if (!elements.taskSelect) return;
+  elements.taskSelect.value = settings.taskId;
+  elements.intervalInput.value = settings.intervalMinutes;
+  elements.jitterInput.value = settings.jitterMinutes;
 }
 
 function updateAutomationUi() {
-  const queue = getAutomationQueue();
-  const queueNames = queue
-    .map(taskId => state.tasks.find(task => task.id === taskId)?.name || taskId)
-    .join(' -> ');
-  automationToggleBtn.textContent = state.automation.enabled ? '关闭自动运行' : '开启自动运行';
-  automationToggleBtn.classList.toggle('active', state.automation.enabled);
-  const currentRun = state.status && state.status.currentRun;
-  const queueEditingDisabled = state.automationRunner.running || Boolean(currentRun);
-  automationTaskSelect.disabled = queueEditingDisabled;
-  automationAddTaskBtn.disabled = queueEditingDisabled;
-  automationRunNowBtn.disabled = queueEditingDisabled || Boolean(state.countdown);
-  automationStatusText.textContent = state.automationRunner.running
-    ? `队列运行中：${state.automationRunner.currentIndex + 1}/${state.automationRunner.total}`
-    : state.automation.enabled
-      ? `已开启：${queue.length} 个任务`
-      : '未开启';
-  automationNextText.textContent = state.automation.enabled
-    ? `下次：${formatDateTime(state.automation.nextRunAt)} · ${queueNames || '-'}`
-    : '下次：-';
-  renderAutomationQueue();
+  AUTOMATION_KINDS.forEach(kind => {
+    const settings = getAutomation(kind);
+    const config = getAutomationConfig(kind);
+    const elements = config.selectors;
+    const queue = getAutomationQueue(kind);
+    const queueNames = queue
+      .map(taskId => state.tasks.find(task => task.id === taskId)?.name || taskId)
+      .join(' -> ');
+    if (!elements.toggleBtn) return;
+    elements.toggleBtn.textContent = settings.enabled ? '关闭自动运行' : '开启自动运行';
+    elements.toggleBtn.classList.toggle('active', settings.enabled);
+    const currentRun = state.status && state.status.currentRun;
+    const queueEditingDisabled = state.automationRunner.running || Boolean(currentRun);
+    elements.taskSelect.disabled = queueEditingDisabled;
+    elements.addTaskBtn.disabled = queueEditingDisabled;
+    elements.runNowBtn.disabled = queueEditingDisabled || Boolean(state.countdown);
+    elements.statusText.textContent = state.automationRunner.running && state.automationRunner.kind === kind
+      ? `队列运行中：${state.automationRunner.currentIndex + 1}/${state.automationRunner.total}`
+      : settings.enabled
+        ? `已开启：${queue.length} 个任务`
+        : '未开启';
+    elements.nextText.textContent = settings.enabled
+      ? `下次：${formatDateTime(settings.nextRunAt)} · ${queueNames || '-'}`
+      : '下次：-';
+    renderAutomationQueue(kind);
+  });
+  if (automationNavDot) automationNavDot.hidden = getEnabledAutomationKinds().length === 0;
 }
 
-function applyAutomationForm() {
-  state.automation.taskId = automationTaskSelect.value || state.automation.taskId;
-  state.automation.taskIds = getAutomationQueue();
-  state.automation.intervalMinutes = clampNumber(automationIntervalInput.value, 10, 120);
-  state.automation.jitterMinutes = clampNumber(automationJitterInput.value, 0, 10);
-  if (state.automation.enabled) state.automation.nextRunAt = computeNextRunAt();
-  persistAutomationSettings();
-  syncAutomationForm();
+function applyAutomationForm(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const settings = getAutomation(automationKind);
+  const elements = getAutomationConfig(automationKind).selectors;
+  settings.taskId = (elements.taskSelect && elements.taskSelect.value) || settings.taskId;
+  settings.taskIds = getAutomationQueue(automationKind);
+  settings.intervalMinutes = normalizeAutomationInterval(elements.intervalInput.value, automationKind, settings.intervalMinutes);
+  settings.jitterMinutes = clampNumber(elements.jitterInput.value, 0, settings.jitterMinutes);
+  if (settings.enabled) settings.nextRunAt = computeNextRunAt(automationKind);
+  persistAutomationSettings(automationKind);
+  syncAutomationForm(automationKind);
   updateAutomationUi();
 }
 
-function toggleAutomation() {
-  applyAutomationForm();
-  state.automation.enabled = !state.automation.enabled;
-  state.automation.nextRunAt = state.automation.enabled ? computeNextRunAt() : 0;
-  persistAutomationSettings();
+function toggleAutomation(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  applyAutomationForm(automationKind);
+  const settings = getAutomation(automationKind);
+  settings.enabled = !settings.enabled;
+  settings.nextRunAt = settings.enabled ? computeNextRunAt(automationKind) : 0;
+  persistAutomationSettings(automationKind);
   updateAutomationUi();
+  updateRunStatusPill();
 }
 
-function runAutomationQueueNow() {
+function runAutomationQueueNow(kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
   if (state.automationRunner.running || (state.status && state.status.currentRun)) return;
-  applyAutomationForm();
-  startAutomationCountdown(getAutomationQueue());
+  applyAutomationForm(automationKind);
+  startAutomationCountdown(getAutomationQueue(automationKind), automationKind);
   updateAutomationUi();
 }
 
-function getAutomationMessage(queue) {
+function getAutomationMessage(queue, kind = 'game_data') {
   const names = queue
     .map(taskId => state.tasks.find(task => task.id === taskId)?.name || taskId)
     .join(' -> ');
-  return `倒计时结束后会按顺序运行：${names}。如不想执行，可以取消本次。`;
+  return `倒计时结束后会运行「${getAutomationConfig(kind).label}」队列：${names}。如不想执行，可以取消本次。`;
 }
 
 function closeCountdown() {
@@ -1281,17 +1984,19 @@ function closeCountdown() {
 
 async function executeCountdownTask() {
   const taskIds = state.countdown && state.countdown.taskIds;
+  const kind = state.countdown && state.countdown.kind;
   closeCountdown();
   if (!taskIds || !taskIds.length) return;
-  await executeAutomationQueue(taskIds);
+  await executeAutomationQueue(taskIds, kind);
 }
 
-function startAutomationCountdown(taskIds) {
-  const queue = taskIds && taskIds.length ? taskIds : getAutomationQueue();
+function startAutomationCountdown(taskIds, kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  const queue = taskIds && taskIds.length ? taskIds : getAutomationQueue(automationKind);
   if (!queue.length || state.countdown) return;
   let seconds = 5;
-  countdownTitle.textContent = `即将运行自动队列（${queue.length} 个任务）`;
-  countdownMessage.textContent = getAutomationMessage(queue);
+  countdownTitle.textContent = `即将运行${getAutomationConfig(automationKind).label}队列（${queue.length} 个任务）`;
+  countdownMessage.textContent = getAutomationMessage(queue, automationKind);
   countdownNumber.textContent = seconds;
   countdownMask.hidden = false;
 
@@ -1302,39 +2007,142 @@ function startAutomationCountdown(taskIds) {
   }, 1000);
 
   state.countdown = {
+    kind: automationKind,
     taskIds: queue,
     timer,
   };
 }
 
 function skipCurrentAutomationRun() {
+  const kind = state.countdown && state.countdown.kind;
   closeCountdown();
-  state.automation.nextRunAt = computeNextRunAt();
-  persistAutomationSettings();
+  if (kind) {
+    getAutomation(kind).nextRunAt = computeNextRunAt(kind);
+    persistAutomationSettings(kind);
+  }
   updateAutomationUi();
 }
 
 function tickAutomation() {
-  if (!state.automation.enabled) return;
-  if (state.countdown) return;
-  if (!state.automation.nextRunAt) {
-    state.automation.nextRunAt = computeNextRunAt();
-    persistAutomationSettings();
-    updateAutomationUi();
-    return;
-  }
-  if (Date.now() < state.automation.nextRunAt) return;
-  if (state.automationRunner.running) return;
-
+  if (state.countdown || state.automationRunner.running) return;
   const currentRun = state.status && state.status.currentRun;
-  if (currentRun) {
-    state.automation.nextRunAt = Date.now() + 5 * 60 * 1000;
-    persistAutomationSettings();
-    updateAutomationUi();
-    return;
+  for (const kind of AUTOMATION_KINDS) {
+    const settings = getAutomation(kind);
+    if (!settings.enabled) continue;
+    if (!settings.nextRunAt) {
+      settings.nextRunAt = computeNextRunAt(kind);
+      persistAutomationSettings(kind);
+      updateAutomationUi();
+      continue;
+    }
+    if (Date.now() < settings.nextRunAt) continue;
+    if (currentRun) {
+      settings.nextRunAt = Date.now() + 5 * 60 * 1000;
+      persistAutomationSettings(kind);
+      updateAutomationUi();
+      continue;
+    }
+    startAutomationCountdown(getAutomationQueue(kind), kind);
+    break;
   }
+}
 
-  startAutomationCountdown(getAutomationQueue());
+async function executeAutomationQueue(taskIds, kind = 'game_data') {
+  const automationKind = getAutomationKind(kind);
+  if (state.automationRunner.running) return;
+  const queue = taskIds.filter(taskId => state.tasks.some(task => task.id === taskId));
+  if (!queue.length) return;
+
+  state.automationRunner = {
+    running: true,
+    kind: automationKind,
+    currentIndex: 0,
+    total: queue.length,
+  };
+  updateAutomationUi();
+
+  try {
+    for (let index = 0; index < queue.length; index += 1) {
+      state.automationRunner.currentIndex = index;
+      updateAutomationUi();
+      const run = await runTask(queue[index], { skipConfirm: true });
+      if (!run) throw new Error('任务未启动');
+      await waitForRunCompletion(run.runId, queue[index]);
+    }
+    getAutomation(automationKind).nextRunAt = computeNextRunAt(automationKind);
+    logTitle.textContent = `${getAutomationConfig(automationKind).label}自动队列 · ${state.env} · 完成`;
+  } catch (error) {
+    getAutomation(automationKind).enabled = false;
+    getAutomation(automationKind).nextRunAt = 0;
+    logTitle.textContent = `${getAutomationConfig(automationKind).label}自动队列 · ${state.env} · 已中断`;
+    appendDashboardWarning(`${getAutomationConfig(automationKind).label}自动队列已中断：${error.message}`);
+  } finally {
+    state.automationRunner = {
+      running: false,
+      kind: '',
+      currentIndex: -1,
+      total: 0,
+    };
+    persistAutomationSettings(automationKind);
+    updateAutomationUi();
+    await loadStatus();
+  }
+}
+
+function bindAutomation() {
+  AUTOMATION_KINDS.forEach(kind => {
+    const elements = getAutomationConfig(kind).selectors;
+    syncAutomationForm(kind);
+    if (!elements.saveBtn) return;
+    elements.saveBtn.addEventListener('click', async () => {
+      applyAutomationForm(kind);
+      await syncAutomationSettingsToServer();
+      window.alert(`${getAutomationConfig(kind).label}自动运行设置已保存`);
+    });
+    elements.addTaskBtn.addEventListener('click', () => addAutomationTask(kind));
+    elements.runNowBtn.addEventListener('click', () => runAutomationQueueNow(kind));
+    elements.toggleBtn.addEventListener('click', () => toggleAutomation(kind));
+    elements.intervalInput.addEventListener('change', () => applyAutomationForm(kind));
+    elements.jitterInput.addEventListener('change', () => applyAutomationForm(kind));
+  });
+  automationCollapseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const kind = getAutomationKind(button.dataset.automationKind);
+      const group = document.querySelector(`.automation-group[data-automation-kind="${kind}"]`);
+      if (!group) return;
+      const collapsed = group.classList.toggle('collapsed');
+      button.textContent = collapsed ? '展开' : '收起';
+      button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    });
+  });
+  updateAutomationUi();
+  countdownCancelBtn.addEventListener('click', skipCurrentAutomationRun);
+  countdownRunNowBtn.addEventListener('click', executeCountdownTask);
+  window.setInterval(() => {
+    tickAutomation();
+    updateAutomationUi();
+    updateRunStatusPill();
+  }, 1000);
+}
+
+function bindPanelCollapses() {
+  panelCollapseButtons.forEach(button => {
+    const targetId = button.dataset.collapseTarget;
+    const target = targetId ? document.getElementById(targetId) : null;
+    if (target) {
+      const collapsed = target.classList.contains('collapsed');
+      button.textContent = collapsed ? '展开' : '收起';
+      button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    }
+    button.addEventListener('click', () => {
+      const targetId = button.dataset.collapseTarget;
+      const target = targetId ? document.getElementById(targetId) : null;
+      if (!target) return;
+      const collapsed = target.classList.toggle('collapsed');
+      button.textContent = collapsed ? '展开' : '收起';
+      button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    });
+  });
 }
 
 function findRunFromStatus(runId, taskId) {
@@ -1357,66 +2165,6 @@ async function waitForRunCompletion(runId, taskId) {
     if (run.status === 'success') return run;
     throw new Error(`任务「${run.taskName || taskId}」${statusText(run)}${run.error ? `：${run.error}` : ''}`);
   }
-}
-
-async function executeAutomationQueue(taskIds) {
-  if (state.automationRunner.running) return;
-  const queue = taskIds.filter(taskId => state.tasks.some(task => task.id === taskId));
-  if (!queue.length) return;
-
-  state.automationRunner = {
-    running: true,
-    currentIndex: 0,
-    total: queue.length,
-  };
-  updateAutomationUi();
-
-  try {
-    for (let index = 0; index < queue.length; index += 1) {
-      state.automationRunner.currentIndex = index;
-      updateAutomationUi();
-      const run = await runTask(queue[index], { skipConfirm: true });
-      if (!run) throw new Error('任务未启动');
-      await waitForRunCompletion(run.runId, queue[index]);
-    }
-    state.automation.nextRunAt = computeNextRunAt();
-    logTitle.textContent = `自动队列 · ${state.env} · 完成`;
-  } catch (error) {
-    state.automation.enabled = false;
-    state.automation.nextRunAt = 0;
-    logTitle.textContent = `自动队列 · ${state.env} · 已中断`;
-    appendDashboardWarning(`自动队列已中断：${error.message}`);
-  } finally {
-    state.automationRunner = {
-      running: false,
-      currentIndex: -1,
-      total: 0,
-    };
-    persistAutomationSettings();
-    updateAutomationUi();
-    await loadStatus();
-  }
-}
-
-function bindAutomation() {
-  syncAutomationForm();
-  updateAutomationUi();
-  automationSaveBtn.addEventListener('click', async () => {
-    applyAutomationForm();
-    await syncAutomationSettingsToServer();
-    window.alert('自动运行设置已保存');
-  });
-  automationAddTaskBtn.addEventListener('click', addAutomationTask);
-  automationRunNowBtn.addEventListener('click', runAutomationQueueNow);
-  automationToggleBtn.addEventListener('click', toggleAutomation);
-  automationIntervalInput.addEventListener('change', applyAutomationForm);
-  automationJitterInput.addEventListener('change', applyAutomationForm);
-  countdownCancelBtn.addEventListener('click', skipCurrentAutomationRun);
-  countdownRunNowBtn.addEventListener('click', executeCountdownTask);
-  window.setInterval(() => {
-    tickAutomation();
-    updateAutomationUi();
-  }, 1000);
 }
 
 function bindWorkbenchNav() {
@@ -1462,7 +2210,9 @@ function bindEnvSwitch() {
 async function boot() {
   bindEnvSwitch();
   bindWorkbenchNav();
+  bindPanelCollapses();
   bindDifyPanel();
+  bindHistory();
   await loadTasks();
   await loadAutomationSettings();
   bindAutomation();
@@ -1472,6 +2222,16 @@ async function boot() {
   });
   surveyToggleBtn.addEventListener('click', toggleFeatureSurvey);
   stopBtn.addEventListener('click', stopCurrentTask);
+  pillStopBtn?.addEventListener('click', stopCurrentTask);
+  pillLogBtn?.addEventListener('click', () => {
+    const currentRun = state.status && state.status.currentRun;
+    if (currentRun) {
+      viewRunLog(currentRun);
+    } else {
+      const logsSection = document.querySelector('#logs');
+      if (logsSection) logsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
   scrollLogBottomBtn.addEventListener('click', scrollLogToBottom);
   logOutput.addEventListener('scroll', handleLogScroll);
   researchPillarFilter?.addEventListener('change', renderContentResearchBoard);

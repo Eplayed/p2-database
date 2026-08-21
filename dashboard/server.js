@@ -15,17 +15,83 @@ const STATE_FILE = path.join(RUNTIME_DIR, 'state.json');
 const AUTOMATION_SETTINGS_FILE = path.join(RUNTIME_DIR, 'automation-settings.json');
 const FORUM_SUMMARY_FILE = path.join(RUNTIME_DIR, 'forum-content-scan.json');
 const CONTENT_RESEARCH_FILE = path.join(RUNTIME_DIR, 'content-research.json');
+const CONTENT_RESEARCH_HISTORY_FILE = path.join(RUNTIME_DIR, 'content-research-history.json');
+const CONTENT_TOPIC_USAGE_FILE = path.join(RUNTIME_DIR, 'content-topic-usage.json');
+const ARTICLE_FEEDBACK_FILE = path.join(RUNTIME_DIR, 'article-performance-feedback.json');
 const DIFY_DIR = '/Users/zhangyajun/Documents/自媒体/_content_factory/dify/scheduler';
 const DIFY_SCRIPT = path.join(DIFY_DIR, 'dify_auto_publish.py');
 const DIFY_OUT_DIR = path.join(DIFY_DIR, 'auto_out');
 const DIFY_CRON_LOG = path.join(DIFY_DIR, 'cron.log');
 const DIFY_CUSTOM_INPUTS_FILE = path.join(RUNTIME_DIR, 'dify-custom-inputs.json');
-const DIFY_SELECT_OPTIONS = {
-  ref_account: ['自动（默认艾泽拉斯前哨）', '艾泽拉斯前哨', '艾泽拉斯快讯', '魔兽世界情报局', '重返艾泽拉斯', '大脚BIGFOOT'],
-  platform: ['头条号', '公众号', '双平台'],
-  article_type: ['暗金观察长文', '魔兽资讯短文', '数码资讯短文', '汽车资讯短文', '公众号收藏攻略', '双平台错开选题', '暗金短评'],
-};
+const DIFY_XHS_CUSTOM_INPUTS_FILE = path.join(RUNTIME_DIR, 'dify-xhs-custom-inputs.json');
+const DIFY_WECHAT_CUSTOM_INPUTS_FILE = path.join(RUNTIME_DIR, 'dify-wechat-custom-inputs.json');
+const TOPIC_USAGE_COOLDOWN_DAYS = 5;
+// 渠道档案：每个渠道的表单字段（选项，首项即默认值）、固定输入与文案。
+// dashboard 自媒体表单由 /api/dify/form-config 下发渲染，custom-run 用同一份校验——选项只在这里维护。
+const DIFY_CHANNEL_PROFILES = [
+  {
+    key: 'toutiao',
+    label: '头条号',
+    taskId: 'dify_custom',
+    inputsFile: DIFY_CUSTOM_INPUTS_FILE,
+    fixedInputs: {},
+    fields: [
+      { key: 'ref_account', label: '参考账号', options: ['自动（暗金观察）', '暗金观察', '老玩家硬核杂谈', '游戏低粉爆款号', '数码汽车观点号'] },
+      { key: 'platform', label: '平台', options: ['头条号'] },
+      { key: 'article_type', label: '文章类型', options: ['游戏硬核杂谈', '老玩家热点短评', '数码消费判断', '汽车普通人账本', '魔兽资讯短文', '暗金短评'] },
+    ],
+    copy: {
+      goalLabel: '文章要帮读者做什么决定',
+      goalPlaceholder: '例：帮读者判断现在回坑魔兽值不值',
+      styleLabel: '风格参考文章',
+      stylePlaceholder: '可选，粘贴想模仿的文章全文（如艾泽拉斯前哨的写法）',
+      runButton: '按表单生成文章',
+      targetName: '文章',
+    },
+  },
+  {
+    key: 'xhs',
+    label: '小红书',
+    taskId: 'dify_xhs_custom',
+    inputsFile: DIFY_XHS_CUSTOM_INPUTS_FILE,
+    fixedInputs: {},
+    fields: [
+      { key: 'niche', label: '账号赛道', options: ['女性玩家', '情感共鸣', '职场成长', '生活消费', '游戏外观收藏'] },
+      { key: 'note_type', label: '笔记类型', options: ['情绪共鸣日常', '女性玩家避雷', '职场经验卡片', '好物种草清单', '外观合集'] },
+      { key: 'ref_blogger', label: '对标风格', options: ['自动（按账号定位）', '低粉爆款拆解型', '收藏卡片型', '活泼种草型', '干货攻略型', '情绪共鸣型', '精致合集型'] },
+    ],
+    copy: {
+      goalLabel: '笔记要帮读者做什么决定',
+      goalPlaceholder: '例：帮姐妹判断这套幻化值不值得刷 / 帮新手避开第一次买错仓库页',
+      styleLabel: '风格参考笔记',
+      stylePlaceholder: '可选，粘贴对标博主的笔记全文（多篇更好），只学文风不搬内容',
+      runButton: '按表单生成笔记',
+      targetName: '小红书笔记',
+    },
+  },
+  {
+    key: 'wechat',
+    label: '公众号',
+    taskId: 'dify_wechat_custom',
+    inputsFile: DIFY_WECHAT_CUSTOM_INPUTS_FILE,
+    fixedInputs: { platform: '公众号' },
+    fields: [
+      { key: 'ref_account', label: '参考公众号', options: ['自动（AI科技）', '程序员鱼皮', '量子位', '机器之心', '新智元', 'AI产品实操号'] },
+      { key: 'article_type', label: '文章类型', options: ['AI科技资讯', 'AI工具实操', 'AI行业观察', 'AI工作流教程', '普通人AI应用', 'AI产品评测'] },
+    ],
+    copy: {
+      goalLabel: '公众号文章要沉淀什么价值',
+      goalPlaceholder: '例：把某个 AI 工具/工作流/行业变化写成读者以后还能翻出来查的实操稿',
+      styleLabel: '风格参考文章',
+      stylePlaceholder: '可选，粘贴想模仿的 AI 科技公众号文章全文，只学结构和语气，不搬内容',
+      runButton: '按表单生成公众号文章',
+      targetName: '公众号文章',
+    },
+  },
+];
 const PORT = Number(process.env.DASHBOARD_PORT || 5177);
+const SELF_MEDIA_INTERVAL_VALUES = [1440, 2880, 4320];
+const SELF_MEDIA_PLATFORM_TASK_IDS = ['dify_publish_toutiao', 'dify_publish_xhs', 'dify_publish_wechat'];
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -40,7 +106,7 @@ const TASKS = [
     id: 'daily_publish',
     name: '一键更新日常数据并上传',
     description: '日常推荐：刷新小程序仍在使用的 POE2 国际服通货、DD373 国服换算、流放急救箱、我的关注变化与首页复访摘要；任一步失败会停止上传，避免空数据覆盖线上。不抓新闻、天梯、剧情攻略，也不更新已下架的 0.5 资料、赛季开荒/热门 BD。',
-    group: 'recommended',
+    group: 'game_data',
     game: 'poe2',
     steps: ['economy_digest', 'cn_market_dd373', 'problem_guides', 'follow_updates', 'daily_return_digest', 'poe2_manifest', 'upload'],
   },
@@ -48,7 +114,7 @@ const TASKS = [
     id: 'ladder_bd_publish',
     name: '刷新天梯/BD解析并上传',
     description: '重新抓取 poe.ninja 天梯玩家详情，刷新装备、技能、符文/镶嵌翻译、天梯分析及技能/装备查 BD 索引，并上传 OSS。',
-    group: 'recommended',
+    group: 'game_data',
     game: 'poe2',
     steps: ['ladder', 'ladder_build_index', 'follow_updates', 'daily_return_digest', 'poe2_manifest', 'upload'],
   },
@@ -56,7 +122,7 @@ const TASKS = [
     id: 'poe1_publish',
     name: '更新 POE1 抄 BD / 看行情',
     description: '刷新国服官方天梯、官方入门流派、玩家开荒 BD、剧情跑图导航、天赋树截图、国际服游戏内通货行情和国服行情接口，并上传 POE1 专用 OSS 路径；不会影响 POE2 数据。',
-    group: 'recommended',
+    group: 'game_data',
     game: 'poe1',
     steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_manifest', 'poe1_upload'],
   },
@@ -70,9 +136,36 @@ const TASKS = [
     command: ['bash', ['scripts/run_forum_content_scan.sh']],
   },
   {
+    id: 'dify_publish_toutiao',
+    name: '头条号',
+    description: '自动寻找适合头条号的题材并生成草稿：游戏、数码、汽车、老玩家硬核杂谈。输出到自媒体 auto_out 目录，只生成草稿，不自动发布。',
+    group: 'self_media',
+    game: 'all',
+    localOnly: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--auto-platform', 'toutiao']],
+  },
+  {
+    id: 'dify_publish_xhs',
+    name: '小红书',
+    description: '自动寻找适合小红书的题材并生成图文卡片草稿：女性玩家、情感共鸣、职场成长。输出到自媒体 auto_out 目录，只生成草稿，不自动发布。',
+    group: 'self_media',
+    game: 'all',
+    localOnly: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--auto-platform', 'xhs']],
+  },
+  {
+    id: 'dify_publish_wechat',
+    name: '公众号',
+    description: '自动寻找适合公众号的 AI 科技题材并生成草稿：AI工具、工作流、行业观察、产品实操。输出到自媒体 auto_out 目录，只生成草稿，不自动发布。',
+    group: 'self_media',
+    game: 'all',
+    localOnly: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--auto-platform', 'wechat']],
+  },
+  {
     id: 'dify_publish_all',
     name: 'Dify 生成今日全部文章',
-    description: '按今日计划生成全部头条号文章，输出到自媒体 auto_out 目录。',
+    description: '按今日计划生成各平台草稿，输出到自媒体 auto_out 目录。生成后仍需人工核对发布。',
     group: 'dify',
     game: 'all',
     localOnly: true,
@@ -82,7 +175,7 @@ const TASKS = [
   {
     id: 'dify_publish_1',
     name: 'Dify 生成今日第 1 篇',
-    description: '只生成今日计划中的第 1 篇头条号文章。',
+    description: '只生成今日计划中的第 1 篇自媒体文章。',
     group: 'dify',
     game: 'all',
     localOnly: true,
@@ -92,7 +185,7 @@ const TASKS = [
   {
     id: 'dify_publish_2',
     name: 'Dify 生成今日第 2 篇',
-    description: '只生成今日计划中的第 2 篇头条号文章。',
+    description: '只生成今日计划中的第 2 篇自媒体文章。',
     group: 'dify',
     game: 'all',
     localOnly: true,
@@ -102,12 +195,32 @@ const TASKS = [
   {
     id: 'dify_custom',
     name: 'Dify 按表单生成文章',
-    description: '用自媒体发文面板的自定义表单输入生成一篇，输出到 auto_out 当天目录（custom_ 前缀）。',
+    description: '用自媒体发文面板的自定义表单输入生成一篇头条号文章，输出到 auto_out 当天目录（custom_ 前缀）。',
     group: 'dify',
     game: 'all',
     localOnly: true,
     hidden: true,
     command: ['/usr/bin/python3', [DIFY_SCRIPT, '--inputs-file', DIFY_CUSTOM_INPUTS_FILE]],
+  },
+  {
+    id: 'dify_xhs_custom',
+    name: 'Dify 按表单生成小红书笔记',
+    description: '用自媒体发文面板的小红书表单输入生成一篇笔记（06-xiaohongshu-integrated-publishing-v1 工作流），输出到 auto_out 当天目录（xhs_custom_ 前缀）。',
+    group: 'dify',
+    game: 'all',
+    localOnly: true,
+    hidden: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--inputs-file', DIFY_XHS_CUSTOM_INPUTS_FILE, '--workflow', 'xhs']],
+  },
+  {
+    id: 'dify_wechat_custom',
+    name: 'Dify 按表单生成公众号文章',
+    description: '用自媒体发文面板的公众号表单输入生成一篇 AI 科技文章（07-wechat-integrated-publishing-v1 工作流），输出到 auto_out 当天目录（wechat_custom_ 前缀）。',
+    group: 'dify',
+    game: 'all',
+    localOnly: true,
+    hidden: true,
+    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--inputs-file', DIFY_WECHAT_CUSTOM_INPUTS_FILE, '--workflow', 'wechat']],
   },
   {
     id: 'ladder',
@@ -311,18 +424,40 @@ function getState() {
   return readJson(STATE_FILE, { runs: {}, history: [] });
 }
 
-function normalizeAutomationTaskIds(taskIds) {
-  const availableIds = new Set(TASKS.filter(task => !task.hidden).map(task => task.id));
+const AUTOMATION_GROUPS = ['game_data', 'self_media'];
+
+function getAutomationGroup(value) {
+  return AUTOMATION_GROUPS.includes(value) ? value : 'game_data';
+}
+
+function getAutomationDefaultTaskId(group) {
+  return getAutomationGroup(group) === 'self_media' ? 'dify_publish_toutiao' : 'daily_publish';
+}
+
+function migrateAutomationTaskId(taskId) {
+  if (taskId === 'dify_publish_all' || taskId === 'dify_publish_1' || taskId === 'dify_publish_2') return 'dify_publish_toutiao';
+  return taskId;
+}
+
+function normalizeAutomationTaskIds(taskIds, group = 'game_data') {
+  const automationGroup = getAutomationGroup(group);
+  const taskList = TASKS.filter(task => !task.hidden && task.group === automationGroup);
+  const availableIds = new Set(
+    automationGroup === 'self_media'
+      ? taskList.filter(task => SELF_MEDIA_PLATFORM_TASK_IDS.includes(task.id)).map(task => task.id)
+      : taskList.map(task => task.id),
+  );
   const seen = new Set();
   const normalized = (Array.isArray(taskIds) ? taskIds : [])
     .map(id => String(id || ''))
+    .map(migrateAutomationTaskId)
     .filter(id => availableIds.has(id))
     .filter(id => {
       if (seen.has(id)) return false;
       seen.add(id);
       return true;
     });
-  return normalized.length ? normalized : ['daily_publish'];
+  return normalized.length ? normalized : [getAutomationDefaultTaskId(automationGroup)];
 }
 
 function clampNumber(value, min, fallback) {
@@ -331,26 +466,48 @@ function clampNumber(value, min, fallback) {
   return Math.max(min, number);
 }
 
-function sanitizeAutomationSettings(settings) {
-  const taskIds = normalizeAutomationTaskIds(settings?.taskIds || (settings?.taskId ? [settings.taskId] : []));
+function normalizeAutomationInterval(value, group, fallback) {
+  const automationGroup = getAutomationGroup(group);
+  const number = clampNumber(value, automationGroup === 'self_media' ? 30 : 10, fallback);
+  if (automationGroup === 'self_media' && !SELF_MEDIA_INTERVAL_VALUES.includes(number)) {
+    return SELF_MEDIA_INTERVAL_VALUES.includes(fallback) ? fallback : 1440;
+  }
+  return number;
+}
+
+function sanitizeAutomationSettings(settings, group = 'game_data') {
+  const automationGroup = getAutomationGroup(group);
+  const defaultIntervalMinutes = automationGroup === 'self_media' ? 1440 : 120;
+  const defaultJitterMinutes = automationGroup === 'self_media' ? 30 : 10;
+  const taskIds = normalizeAutomationTaskIds(settings?.taskIds || (settings?.taskId ? [settings.taskId] : []), automationGroup);
   const hasUpdatedAt = settings && Object.prototype.hasOwnProperty.call(settings, 'updatedAt');
   return {
     enabled: settings?.enabled === true,
+    group: automationGroup,
     taskId: taskIds[0],
     taskIds,
-    intervalMinutes: clampNumber(settings?.intervalMinutes, 10, 120),
-    jitterMinutes: clampNumber(settings?.jitterMinutes, 0, 10),
+    intervalMinutes: normalizeAutomationInterval(settings?.intervalMinutes, automationGroup, defaultIntervalMinutes),
+    jitterMinutes: clampNumber(settings?.jitterMinutes, 0, defaultJitterMinutes),
     nextRunAt: Number(settings?.nextRunAt) || 0,
     updatedAt: hasUpdatedAt ? Number(settings.updatedAt) || 0 : Date.now(),
+  };
+}
+
+function sanitizeAutomationBundle(settings) {
+  const raw = settings && typeof settings === 'object' ? settings : {};
+  const isLegacyFlat = raw.taskId || raw.taskIds || raw.intervalMinutes || raw.enabled || raw.nextRunAt;
+  return {
+    game_data: sanitizeAutomationSettings(isLegacyFlat ? raw : raw.game_data, 'game_data'),
+    self_media: sanitizeAutomationSettings(isLegacyFlat ? {} : raw.self_media, 'self_media'),
   };
 }
 
 function getAutomationSettings() {
   ensureRuntime();
   if (!fs.existsSync(AUTOMATION_SETTINGS_FILE)) {
-    return sanitizeAutomationSettings({ updatedAt: 0 });
+    return sanitizeAutomationBundle({ game_data: { updatedAt: 0 }, self_media: { updatedAt: 0 } });
   }
-  return sanitizeAutomationSettings(readJson(AUTOMATION_SETTINGS_FILE, { updatedAt: 0 }));
+  return sanitizeAutomationBundle(readJson(AUTOMATION_SETTINGS_FILE, { updatedAt: 0 }));
 }
 
 const RESEARCH_PILLARS = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
@@ -375,10 +532,32 @@ function getTopicPillars(topic) {
 }
 
 function setAutomationSettings(settings) {
-  const nextSettings = sanitizeAutomationSettings({
-    ...settings,
-    updatedAt: Date.now(),
-  });
+  const existing = getAutomationSettings();
+  const raw = settings && typeof settings === 'object' ? settings : {};
+  const isLegacyFlat = raw.taskId || raw.taskIds || raw.intervalMinutes || raw.enabled || raw.nextRunAt;
+  const nextSettings = sanitizeAutomationBundle(
+    isLegacyFlat
+      ? {
+          ...existing,
+          game_data: {
+            ...existing.game_data,
+            ...raw,
+            updatedAt: Date.now(),
+          },
+        }
+      : {
+          game_data: {
+            ...existing.game_data,
+            ...(raw.game_data || {}),
+            updatedAt: raw.game_data ? Date.now() : existing.game_data.updatedAt,
+          },
+          self_media: {
+            ...existing.self_media,
+            ...(raw.self_media || {}),
+            updatedAt: raw.self_media ? Date.now() : existing.self_media.updatedAt,
+          },
+        }
+  );
   writeJson(AUTOMATION_SETTINGS_FILE, nextSettings);
   return nextSettings;
 }
@@ -689,10 +868,676 @@ function getForumResearchSummary() {
   };
 }
 
+const PLATFORM_CANDIDATE_CONFIG = {
+  toutiao: {
+    label: '头条号',
+    strategy: '暗金观察：游戏、数码、汽车、老玩家硬核杂谈。要有观点、痛点或消费判断，不做泛泛公告搬运。',
+    limit: 10,
+    fitKeywords: ['游戏', '暗黑', '魔兽', '流放', 'poe', 'lol', '数码', 'AI设备', '手机', '显卡', '汽车', '新能源', '老玩家', '硬核', '怀旧', '回坑', '氪金', '肝', '值不值', '要不要'],
+  },
+  xhs: {
+    label: '小红书',
+    strategy: '小红书：女性玩家、情感共鸣、职场成长。2-3张卡片，重情绪、收藏、避雷和生活场景。',
+    limit: 10,
+    fitKeywords: ['女性', '女生', '姐妹', '女玩家', '女性玩家', '情绪', '共鸣', '职场', '上班', '通勤', '焦虑', '治愈', '成长', '外观', '幻化', '坐骑', '收藏', '避雷', '清单'],
+  },
+  wechat: {
+    label: '公众号',
+    strategy: '公众号：AI科技赛道。写 AI 工具、AI工作流、行业观察、产品实操和普通人应用，重长期搜索和收藏。',
+    limit: 10,
+    fitKeywords: ['AI', '人工智能', '大模型', 'ChatGPT', 'Claude', 'Gemini', 'DeepSeek', '豆包', 'Dify', 'Codex', 'Agent', '工作流', '自动化', '提示词', 'API', '工具', '科技', '效率'],
+  },
+};
+
+const CANDIDATE_KEYWORDS = {
+  heat: ['更新', '公告', '蓝帖', '热修', '上线', '赛季', '开服', '新', '今日', '昨天', 'patch', 'hotfix', '直播', '活动', '奖励'],
+  pain: ['卡', '亏', '装不上', '刷不动', '断图', '避坑', '别乱', '失败', '掉线', '买错', '贵', '砸', '难', '坑', '限制', '削弱', 'nerf'],
+  decision: ['要不要', '怎么', '先', '值得', '选择', '推荐', '路线', '买', '刷', '练', '回坑', '做', '换', '该不该'],
+  conversion: ['小程序', 'BD', '天梯', '技能', '装备', '行情', '急救箱', '清单', '通货', '词缀', '仓库', '查'],
+};
+
+const PLATFORM_RULE_KEYWORDS = {
+  toutiaoLane: ['游戏', '暗黑', 'diablo', '流放', 'poe', 'poe2', '魔兽', 'wow', '火炬', 'lol', '英雄联盟', 'bd', '补丁', '赛季', '开服', '数码', 'ai设备', '手机', '显卡', '电脑', '主机', '外设', '耳机', '平板', '汽车', '新能源', '油耗', '买车'],
+  oldPlayerTalk: ['老玩家', '硬核', '怀旧', '回坑', '成年人', '中年', '上班', '下班', '肝', '氪', '氪金', '值不值', '要不要', '亏', '贵', '免费', '白嫖', '主播', '论坛', '争议', '吐槽'],
+  xhsFit: ['女生', '姐妹', '女性', '女玩家', '女性玩家', '颜值', '外观', '坐骑', '宠物', '幻化', '截图', '壁纸', '搭配', '穿搭', '美妆', '家居', '母婴', '情绪', '共鸣', '治愈', '焦虑', '职场', '上班', '通勤', '成长', '省钱', '避雷', '清单', '收藏', '好物'],
+  hardGameGuide: ['bd', 'pob', '升华', '天赋', '装备', '技能', '地图', '词缀', '开荒', '毕业', '路线', '攻略', '通货', '天梯', 'dps', '流派'],
+  wechatAiTech: ['ai科技', 'ai工具', 'ai工作流', '人工智能', '大模型', 'chatgpt', 'openai', 'claude', 'gemini', 'deepseek', '豆包', 'kimi', '通义', 'dify', 'codex', 'agent', 'mcp', '工作流', '自动化', '提示词', 'api', '模型', '效率工具', '小程序开发', '低代码', '知识库'],
+};
+
+function normalizeCandidateText(value) {
+  return String(value || '').toLowerCase();
+}
+
+function candidateHasAny(text, keywords) {
+  return keywords.some(keyword => text.includes(normalizeCandidateText(keyword)));
+}
+
+function readContentResearchHistory() {
+  const history = readJson(CONTENT_RESEARCH_HISTORY_FILE, []);
+  return Array.isArray(history) ? history : [];
+}
+
+function readContentTopicUsage() {
+  const usage = readJson(CONTENT_TOPIC_USAGE_FILE, []);
+  if (Array.isArray(usage)) return usage;
+  if (Array.isArray(usage?.items)) return usage.items;
+  return [];
+}
+
+function readArticleFeedbackItems() {
+  const feedback = readJson(ARTICLE_FEEDBACK_FILE, null);
+  if (Array.isArray(feedback)) return feedback;
+  if (Array.isArray(feedback?.items)) return feedback.items;
+  return [];
+}
+
+function getCandidateTopicKey(topic) {
+  return String(topic?.stableId || topic?.id || topic?.url || getCandidateTitle(topic) || '').trim();
+}
+
+function getTopicUsageKey(platform, topicKey) {
+  return `${platform || 'unknown'}::${normalizeCandidateText(topicKey)}`;
+}
+
+function buildTopicCooldownMap(history) {
+  const map = new Map();
+  const recentRuns = history.slice(0, 5);
+  recentRuns.forEach((run, runIndex) => {
+    const seenInRun = new Set();
+    const keys = [
+      ...(Array.isArray(run?.topStableIds) ? run.topStableIds : []),
+      ...(Array.isArray(run?.topics) ? run.topics.map(getCandidateTopicKey) : []),
+    ].filter(Boolean);
+    keys.forEach(key => {
+      if (seenInRun.has(key)) return;
+      seenInRun.add(key);
+      const current = map.get(key) || { count: 0, lastSeenAt: '', lastRunIndex: runIndex };
+      current.count += 1;
+      current.lastSeenAt = current.lastSeenAt || run?.generatedAt || run?.createdAt || '';
+      current.lastRunIndex = Math.min(current.lastRunIndex, runIndex);
+      map.set(key, current);
+    });
+  });
+  return map;
+}
+
+function buildUsedTopicCooldownMap(usageItems) {
+  const map = new Map();
+  const now = Date.now();
+  const maxAgeMs = TOPIC_USAGE_COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
+  usageItems.forEach(item => {
+    const usedAtMs = Date.parse(item?.usedAt || item?.createdAt || '');
+    if (!Number.isFinite(usedAtMs) || now - usedAtMs > maxAgeMs) return;
+    const platform = String(item?.platform || '').trim();
+    const topicKey = String(item?.topicKey || item?.topicId || item?.title || item?.topic || '').trim();
+    if (!platform || !topicKey) return;
+    const key = getTopicUsageKey(platform, topicKey);
+    const current = map.get(key) || { count: 0, lastUsedAt: '', daysAgo: TOPIC_USAGE_COOLDOWN_DAYS };
+    current.count += 1;
+    if (!current.lastUsedAt || Date.parse(item.usedAt || item.createdAt || '') > Date.parse(current.lastUsedAt)) {
+      current.lastUsedAt = item.usedAt || item.createdAt || '';
+      current.daysAgo = Math.max(0, Math.floor((now - usedAtMs) / (24 * 60 * 60 * 1000)));
+    }
+    map.set(key, current);
+  });
+  return map;
+}
+
+function recordContentTopicUsage(payload = {}) {
+  const platform = String(payload.platform || payload.workflow || '').trim();
+  const title = String(payload.title || payload.topic || '').trim();
+  const topicKey = String(payload.topicKey || payload.topicId || payload.url || title).trim();
+  if (!platform || !topicKey) return null;
+  const usage = readContentTopicUsage();
+  const record = {
+    id: `${Date.now()}_${Math.random().toString(16).slice(2, 8)}`,
+    usedAt: new Date().toISOString(),
+    platform,
+    topicKey,
+    topicId: String(payload.topicId || '').trim(),
+    title,
+    source: String(payload.source || '').trim(),
+    url: String(payload.url || '').trim(),
+    score: Number(payload.score || 0) || 0,
+    reason: String(payload.reason || '').trim(),
+    action: String(payload.action || 'dify_custom_run').trim(),
+  };
+  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
+  const next = [record, ...usage]
+    .filter(item => {
+      const at = Date.parse(item?.usedAt || item?.createdAt || '');
+      return Number.isFinite(at) ? at >= cutoff : true;
+    })
+    .slice(0, 300);
+  writeJson(CONTENT_TOPIC_USAGE_FILE, next);
+  return record;
+}
+
+function getCandidateEvidenceState(topic) {
+  const verifyText = normalizeCandidateText(getCandidateVerifyText(topic));
+  const hasSource = Boolean(topic?.url || topic?.source);
+  const risky = candidateHasAny(verifyText, ['存疑', '谣言', '误读', '无法确认', '未核', '待核', '需要补充', '二手', '转载']);
+  return { hasSource, risky };
+}
+
+function findTopicFeedback(topic, platform, feedbackItems) {
+  const topicKey = getCandidateTopicKey(topic);
+  const title = normalizeCandidateText(getCandidateTitle(topic));
+  return feedbackItems.find(item => {
+    if (item?.platform && item.platform !== platform) return false;
+    const itemKeys = [
+      item?.topicId,
+      item?.stableId,
+      item?.url,
+      item?.title,
+      item?.topic,
+    ].map(value => normalizeCandidateText(value));
+    return itemKeys.includes(normalizeCandidateText(topicKey)) || (title && itemKeys.includes(title));
+  }) || null;
+}
+
+function getTopicFeedbackLift(feedback) {
+  if (!feedback) return { value: 0, label: '暂无数据回填' };
+  const ctr = Number(feedback.ctr24h ?? feedback.clickRate24h ?? feedback.ctr ?? 0);
+  const reads = Number(feedback.reads24h ?? feedback.read24h ?? feedback.reads ?? feedback.read ?? 0);
+  const interactions =
+    Number(feedback.comments24h ?? feedback.comments ?? 0) +
+    Number(feedback.likes24h ?? feedback.likes ?? 0) +
+    Number(feedback.shares24h ?? feedback.shares ?? 0) +
+    Number(feedback.saves24h ?? feedback.saves ?? 0);
+  if (feedback.status === 'bad' || (ctr > 0 && ctr < 0.035 && reads < 300)) {
+    return { value: -0.7, label: '历史表现偏弱' };
+  }
+  if (feedback.status === 'good' || ctr >= 0.08 || reads >= 1000 || interactions >= 8) {
+    return { value: 0.8, label: '历史表现较好' };
+  }
+  if (ctr >= 0.055 || reads >= 500 || interactions >= 3) {
+    return { value: 0.35, label: '历史表现可跟进' };
+  }
+  return { value: 0, label: '历史表现一般' };
+}
+
+function getCandidateTitle(topic) {
+  return topic?.titleCn || topic?.title || '未命名选题';
+}
+
+function getCandidateArticleAngle(topic) {
+  return topic?.signals?.articleAngle || topic?.articleAngle || topic?.summaryCn || getCandidateTitle(topic);
+}
+
+function getCandidateRouteHint(topic) {
+  return topic?.signals?.miniapp?.routeHint || topic?.routeHint || topic?.signals?.painPoint || '';
+}
+
+function getCandidateVerifyText(topic) {
+  return topic?.verify || topic?.signals?.confidence || topic?.sourceType || '';
+}
+
+function getCandidateCombinedText(topic) {
+  return normalizeCandidateText([
+    getCandidateTitle(topic),
+    topic?.title || '',
+    getCandidateArticleAngle(topic),
+    topic?.summaryCn || '',
+    getCandidateRouteHint(topic),
+    topic?.source || '',
+    topic?.platformLane || '',
+    topic?.sourceIntent || '',
+    topic?.signals?.platformLane || '',
+    topic?.signals?.sourceIntent || '',
+    topic?.game || '',
+    ...(Array.isArray(topic?.tags) ? topic.tags : []),
+  ].join(' '));
+}
+
+function evaluatePlatformFit(topic, platform) {
+  const text = getCandidateCombinedText(topic);
+  const lane = normalizeCandidateText(topic?.platformLane || topic?.signals?.platformLane || '');
+  const laneMatches = lane === platform;
+  if (lane && !laneMatches) {
+    const label = PLATFORM_CANDIDATE_CONFIG[lane]?.label || lane;
+    return {
+      eligibleForA: false,
+      fitScore: 0,
+      reason: `来源已标记为${label}赛道，不跨平台硬塞`,
+    };
+  }
+
+  if (platform === 'toutiao') {
+    const hasLane = candidateHasAny(text, PLATFORM_RULE_KEYWORDS.toutiaoLane);
+    const hasOldPlayerAngle = candidateHasAny(text, PLATFORM_RULE_KEYWORDS.oldPlayerTalk);
+    const eligibleForA = laneMatches || (hasLane && (hasOldPlayerAngle || candidateHasAny(text, CANDIDATE_KEYWORDS.pain) || candidateHasAny(text, CANDIDATE_KEYWORDS.decision)));
+    const fitScore = laneMatches ? 2.1 : eligibleForA ? 1.85 : hasLane ? 0.9 : 0.2;
+    const reason = eligibleForA
+      ? laneMatches
+        ? '来源已标记为头条号赛道：游戏/数码/汽车/老玩家硬核杂谈'
+        : '命中头条号赛道：游戏/数码/汽车/老玩家硬核杂谈，且有痛点或判断'
+      : hasLane
+        ? '只命中题材，不够像老玩家硬核杂谈或消费判断，暂不进头条A'
+        : '不符合头条号当前赛道：游戏、数码、汽车、老玩家硬核杂谈';
+    return { eligibleForA, fitScore, reason };
+  }
+
+  if (platform === 'xhs') {
+    const hasXhsFit = candidateHasAny(text, PLATFORM_RULE_KEYWORDS.xhsFit);
+    const isHardcoreGuide = candidateHasAny(text, PLATFORM_RULE_KEYWORDS.hardGameGuide) && !candidateHasAny(text, ['外观', '幻化', '坐骑', '宠物', '女性玩家', '女生', '姐妹']);
+    const eligibleForA = laneMatches || (hasXhsFit && !isHardcoreGuide);
+    const fitScore = laneMatches ? 2.1 : eligibleForA ? 1.8 : hasXhsFit ? 1 : 0.2;
+    const reason = eligibleForA
+      ? laneMatches
+        ? '来源已标记为小红书赛道：女性玩家/情感共鸣/职场'
+        : '命中小红书赛道：女性玩家/情感共鸣/职场或收藏卡片场景'
+      : isHardcoreGuide
+        ? '硬核BD/POB/天梯资料不适合直接做小红书A，除非改成女性玩家或收藏卡片场景'
+        : '当前素材缺少小红书女性玩家、情感共鸣或职场切口';
+    return { eligibleForA, fitScore, reason };
+  }
+
+  if (platform === 'wechat') {
+    const hasAiTech = candidateHasAny(text, PLATFORM_RULE_KEYWORDS.wechatAiTech);
+    const eligibleForA = laneMatches || hasAiTech;
+    const fitScore = laneMatches ? 2.1 : eligibleForA ? 1.8 : 0.2;
+    const reason = eligibleForA
+      ? laneMatches
+        ? '来源已标记为公众号赛道：AI科技、工具、工作流或行业观察'
+        : '命中公众号赛道：AI科技、工具、工作流或行业观察'
+      : '不符合公众号AI科技赛道，不能进公众号A';
+    return { eligibleForA, fitScore, reason };
+  }
+
+  return { eligibleForA: false, fitScore: 0, reason: '未知平台规则' };
+}
+
+function getPlatformSourceAdjustment(topic, platform) {
+  const sourceType = normalizeCandidateText(topic?.sourceType || '');
+  const source = normalizeCandidateText(topic?.source || '');
+  const text = getCandidateCombinedText(topic);
+  const labels = [];
+  let value = 0;
+
+  if (platform === 'toutiao') {
+    const isOverseasBuildGuide =
+      sourceType === 'overseas_reference' &&
+      (candidateHasAny(source, ['maxroll', 'mobalytics', 'icy veins']) ||
+        candidateHasAny(text, ['build guide', 'build guides', 'league starter', 'pob', 'bd 攻略', '升级 bd 攻略']));
+    const isOverseasCurrency = sourceType === 'overseas_reference' && candidateHasAny(text, ['currency', '通货', '行情']);
+    if (isOverseasBuildGuide) {
+      value -= 1.8;
+      labels.push('海外BD页只作资料源，头条A降权');
+    } else if (isOverseasCurrency) {
+      value -= 0.8;
+      labels.push('海外行情页需转成本土消费/收益角度');
+    }
+    if (sourceType === 'forum') {
+      value += 1;
+      labels.push('本土论坛真实玩家问题加权');
+    }
+    if (sourceType === 'official_news') {
+      value += 0.55;
+      labels.push('官方来源加权');
+    }
+    if (sourceType === 'news_reference' && candidateHasAny(source, ['it之家', 'ithome'])) {
+      value += 0.45;
+      labels.push('中文数码资讯源加权');
+    }
+    if (sourceType === 'news_reference' && candidateHasAny(text, ['国服', '网易', '腾讯', '官方', '公告'])) {
+      value += 0.35;
+      labels.push('中文/国服资讯加权');
+    }
+  }
+
+  if (platform === 'xhs') {
+    if (sourceType === 'seed_topic') {
+      value += 0.25;
+      labels.push('小红书赛道种子可做卡片测试');
+    }
+    if (sourceType === 'forum' && candidateHasAny(text, ['外观', '幻化', '坐骑', '女生', '情绪', '上班'])) {
+      value += 0.55;
+      labels.push('论坛素材可转情绪/收藏卡片');
+    }
+    if (sourceType === 'trend_reference') {
+      value += 0.35;
+      labels.push('热榜素材只作小红书情绪切口观察');
+    }
+  }
+
+  if (platform === 'wechat') {
+    if (sourceType === 'official_news') {
+      value += 0.65;
+      labels.push('AI官方来源加权');
+    }
+    if (
+      sourceType === 'news_reference' &&
+      !candidateHasAny(source, ['it之家', 'ithome']) &&
+      candidateHasAny(text, ['ai', '人工智能', '大模型', 'agent', 'dify', '工作流'])
+    ) {
+      value += 0.45;
+      labels.push('AI行业来源加权');
+    }
+    if (sourceType === 'news_reference' && candidateHasAny(source, ['it之家', 'ithome'])) {
+      value -= 0.35;
+      labels.push('宽泛科技资讯只作公众号备选');
+    }
+    if (sourceType === 'news_reference' && candidateHasAny(source, ['product hunt', '少数派'])) {
+      value += 0.45;
+      labels.push('AI工具/效率产品来源加权');
+    }
+  }
+
+  return { value, labels };
+}
+
+function normalizeCandidateGame(game) {
+  const raw = normalizeCandidateText(game);
+  if (raw.includes('poe1') || raw === 'poe' || raw.includes('流放之路')) return 'poe1';
+  if (raw.includes('poe2') || raw.includes('流放之路2')) return 'poe2';
+  if (raw.includes('d4') || raw.includes('diablo') || raw.includes('暗黑')) return 'd4';
+  if (raw.includes('wow') || raw.includes('warcraft') || raw.includes('魔兽')) return 'wow';
+  if (raw.includes('torchlight') || raw.includes('火炬')) return 'torchlight';
+  if (raw.includes('ai_tech') || raw.includes('人工智能') || raw.includes('ai科技')) return 'ai_tech';
+  if (raw.includes('xhs_life') || raw.includes('小红书')) return 'xhs_life';
+  if (raw.includes('digital')) return 'digital';
+  if (raw.includes('auto')) return 'auto';
+  if (raw.includes('toutiao_core')) return 'toutiao_core';
+  return raw || 'other';
+}
+
+function getCandidateGameLabel(game) {
+  const normalized = normalizeCandidateGame(game);
+  if (normalized === 'poe1') return '流放之路';
+  if (normalized === 'poe2') return '流放之路2';
+  if (normalized === 'd4') return '暗黑破坏神';
+  if (normalized === 'wow') return '魔兽世界';
+  if (normalized === 'torchlight') return '火炬之光';
+  if (normalized === 'ai_tech') return 'AI科技';
+  if (normalized === 'xhs_life') return '小红书生活/职场';
+  if (normalized === 'digital') return '数码';
+  if (normalized === 'auto') return '汽车';
+  if (normalized === 'toutiao_core') return '暗金观察核心赛道';
+  return game || '其他';
+}
+
+function inferCandidateProductEntry(topic, platform) {
+  if (platform === 'xhs' || platform === 'wechat') return '';
+  const text = getCandidateCombinedText(topic);
+  const game = normalizeCandidateGame(topic?.game);
+  if (game === 'poe1') return '流放之路小程序：S30 天梯热门职业、热门技能、代表角色、技能查 BD、装备查 BD';
+  if (game === 'poe2') return '流放之路2小程序：天梯榜、技能查 BD、装备查 BD、通货换算、流放急救箱';
+  if (text.includes('bd') || text.includes('技能') || text.includes('装备') || text.includes('天梯')) {
+    return '小程序承接方向：技能查 BD / 装备查 BD / 天梯榜';
+  }
+  return '';
+}
+
+function inferCandidateArticleType(topic, platform) {
+  const text = getCandidateCombinedText(topic);
+  const game = normalizeCandidateGame(topic?.game);
+  if (platform === 'xhs') {
+    if (candidateHasAny(text, ['职场', '上班', '通勤', '成长'])) return '职场经验卡片';
+    if (candidateHasAny(text, ['情绪', '焦虑', '治愈', '共鸣'])) return '情绪共鸣日常';
+    if (candidateHasAny(text, ['外观', '幻化', '坐骑', '宠物'])) return '外观合集';
+    if (candidateHasAny(text, ['避坑', '买错', '亏', '省钱'])) return '女性玩家避雷';
+    return '好物种草清单';
+  }
+  if (platform === 'wechat') {
+    if (candidateHasAny(text, ['dify', 'codex', '工作流', '自动化', '提示词', 'agent'])) return 'AI工作流教程';
+    if (candidateHasAny(text, ['工具', '产品', '实操', '教程'])) return 'AI工具实操';
+    if (candidateHasAny(text, ['行业', '融资', '公司', '发布会', '模型'])) return 'AI行业观察';
+    return 'AI科技资讯';
+  }
+  if (game === 'wow' && candidateHasAny(text, ['公告', '蓝帖', '活动', '上线', '维护', '机制'])) return '魔兽资讯短文';
+  if (candidateHasAny(text, ['数码', '手机', '显卡', '电脑', 'AI设备'])) return '数码消费判断';
+  if (candidateHasAny(text, ['汽车', '新能源', '油耗', '买车'])) return '汽车普通人账本';
+  if (candidateHasAny(text, ['观点', '争议', '要不要', '值不值', '怀旧', '老玩家'])) return '老玩家热点短评';
+  return '游戏硬核杂谈';
+}
+
+function buildCandidateSources(topic) {
+  return [
+    `标题：${getCandidateTitle(topic)}`,
+    topic?.source ? `来源：${topic.source}` : '',
+    topic?.sourceIntent || topic?.signals?.sourceIntent ? `来源定位：${topic.sourceIntent || topic.signals.sourceIntent}` : '',
+    topic?.url ? `链接：${topic.url}` : '',
+    getCandidateVerifyText(topic) ? `核验提示：${getCandidateVerifyText(topic)}` : '',
+  ].filter(Boolean).join('\n');
+}
+
+function scoreTopicForPlatform(topic, platform, index = 0, context = {}) {
+  const config = PLATFORM_CANDIDATE_CONFIG[platform] || PLATFORM_CANDIDATE_CONFIG.toutiao;
+  const text = getCandidateCombinedText(topic);
+  const lane = normalizeCandidateText(topic?.platformLane || topic?.signals?.platformLane || '');
+  const platformFit = evaluatePlatformFit(topic, platform);
+  const topicKey = getCandidateTopicKey(topic);
+  const cooldown = context.cooldownMap?.get(topicKey) || null;
+  const usedCooldown =
+    context.usedCooldownMap?.get(getTopicUsageKey(platform, topicKey)) ||
+    context.usedCooldownMap?.get(getTopicUsageKey(platform, getCandidateTitle(topic))) ||
+    null;
+  const feedback = findTopicFeedback(topic, platform, context.feedbackItems || []);
+  const feedbackLift = getTopicFeedbackLift(feedback);
+  const evidenceState = getCandidateEvidenceState(topic);
+  const sourceAdjustment = getPlatformSourceAdjustment(topic, platform);
+  const sourceScore = Math.min(2, Number(topic?.score || 0) / 50);
+  const breakdown = {
+    source: Number(sourceScore.toFixed(1)),
+    evidence: topic?.url || topic?.source ? 1 : 0,
+    heat: candidateHasAny(text, CANDIDATE_KEYWORDS.heat) ? 1.2 : 0,
+    pain: candidateHasAny(text, CANDIDATE_KEYWORDS.pain) ? 1.4 : 0,
+    decision: candidateHasAny(text, CANDIDATE_KEYWORDS.decision) ? 1.2 : 0,
+    conversion: candidateHasAny(text, CANDIDATE_KEYWORDS.conversion) ? 1 : 0,
+    platformFit: platformFit.fitScore,
+    laneSource: lane === platform ? 0.6 : 0,
+    recency: topic?.publishedAt || topic?.crawledAt ? 0.6 : 0,
+    feedback: feedbackLift.value,
+    sourceAdjustment: sourceAdjustment.value,
+    cooldown: cooldown ? -Math.min(1.2, 0.45 + cooldown.count * 0.25) : 0,
+    usedCooldown: usedCooldown ? -Math.min(2.4, 1.4 + usedCooldown.count * 0.35) : 0,
+  };
+  const rawScore = Object.values(breakdown).reduce((sum, value) => sum + value, 0) + Math.max(0, 0.5 - index * 0.01);
+  const strategyCappedScore = platformFit.eligibleForA ? rawScore : Math.min(rawScore, 5.4);
+  const cappedScore = !evidenceState.hasSource
+    ? Math.min(strategyCappedScore, 4.1)
+    : evidenceState.risky
+      ? Math.min(strategyCappedScore, 5)
+      : strategyCappedScore;
+  const score = Math.max(0, Math.min(10, Math.round(cappedScore * 10) / 10));
+  const grade = score >= 6.8 ? 'A' : score >= 5.1 ? 'B' : score >= 3.3 ? 'C' : '不建议';
+  const reasons = [];
+  if (breakdown.heat) reasons.push('有时间窗口');
+  if (breakdown.pain) reasons.push('带玩家痛点');
+  if (breakdown.decision) reasons.push('能落到具体决策');
+  if (breakdown.conversion) reasons.push('可承接小程序/工具入口');
+  if (breakdown.platformFit) reasons.push(platformFit.reason);
+  if (feedbackLift.value > 0) reasons.push(feedbackLift.label);
+  if (feedbackLift.value < 0) reasons.push(feedbackLift.label);
+  sourceAdjustment.labels.forEach(label => reasons.push(label));
+  if (cooldown) reasons.push(`近5次研究出现${cooldown.count}次，已降权`);
+  if (usedCooldown) reasons.push(`近${TOPIC_USAGE_COOLDOWN_DAYS}天已生成/入队，已降权`);
+  if (!evidenceState.hasSource) reasons.push('来源不足，仅作备选');
+  if (evidenceState.risky) reasons.push('核验提示有风险，不能直接定稿');
+  if (!reasons.length) reasons.push('需要人工确认角度');
+  return { score, grade, breakdown, reason: reasons.join('、'), eligibleForA: platformFit.eligibleForA, platformRule: platformFit.reason };
+}
+
+function buildPlatformCandidate(topic, platform, index, context = {}) {
+  const config = PLATFORM_CANDIDATE_CONFIG[platform] || PLATFORM_CANDIDATE_CONFIG.toutiao;
+  const scoring = scoreTopicForPlatform(topic, platform, index, context);
+  const title = getCandidateTitle(topic);
+  const articleType = inferCandidateArticleType(topic, platform);
+  const productEntry = inferCandidateProductEntry(topic, platform);
+  const channelFields =
+    platform === 'xhs'
+      ? {
+          niche: candidateHasAny(getCandidateCombinedText(topic), ['职场', '上班', '通勤'])
+            ? '职场成长'
+            : candidateHasAny(getCandidateCombinedText(topic), ['情绪', '焦虑', '共鸣'])
+              ? '情感共鸣'
+              : '女性玩家',
+          note_type: articleType,
+          ref_blogger: '低粉爆款拆解型',
+        }
+      : platform === 'wechat'
+        ? {
+            ref_account: '自动（AI科技）',
+            article_type: articleType,
+          }
+        : {
+            ref_account: '自动（暗金观察）',
+            platform: '头条号',
+            article_type: articleType,
+          };
+  return {
+    id: `${platform}_${topic?.stableId || topic?.id || index}`,
+    topicId: topic?.stableId || topic?.id || '',
+    platform,
+    platformLabel: config.label,
+    title,
+    topic: title,
+    game: normalizeCandidateGame(topic?.game),
+    gameLabel: getCandidateGameLabel(topic?.game),
+    platformLane: topic?.platformLane || topic?.signals?.platformLane || '',
+    sourceIntent: topic?.sourceIntent || topic?.signals?.sourceIntent || '',
+    source: topic?.source || '',
+    sourceType: topic?.sourceType || '',
+    url: topic?.url || '',
+    pillar: getTopicPillar(topic),
+    tags: Array.isArray(topic?.tags) ? topic.tags.slice(0, 6) : [],
+    articleAngle: getCandidateArticleAngle(topic),
+    routeHint: getCandidateRouteHint(topic),
+    verify: getCandidateVerifyText(topic),
+    goal: `${config.label}选题：按该平台赛道把「${title}」写成可发布内容，不跨平台硬套。`,
+    productEntry,
+    sources: buildCandidateSources(topic),
+    channelFields,
+    ...scoring,
+  };
+}
+
+function buildPlatformCandidates(summary) {
+  const aScoreThreshold = 6;
+  const history = readContentResearchHistory();
+  const usedTopics = readContentTopicUsage();
+  const feedbackItems = readArticleFeedbackItems();
+  const context = {
+    cooldownMap: buildTopicCooldownMap(history),
+    usedCooldownMap: buildUsedTopicCooldownMap(usedTopics),
+    feedbackItems,
+  };
+  // topics contains full source metadata; actionItems are often a trimmed view.
+  // Keep topics first so platform scoring can see sourceType/platformLane/tags.
+  const rawTopics = [
+    ...(Array.isArray(summary.topics) ? summary.topics : []),
+    ...(Array.isArray(summary.actionItems) ? summary.actionItems : []),
+  ];
+  const seen = new Set();
+  const topics = rawTopics.filter(topic => {
+    const keys = [topic?.url, topic?.stableId, topic?.id, getCandidateTitle(topic)].filter(Boolean);
+    if (!keys.length || keys.some(key => seen.has(key))) return false;
+    keys.forEach(key => seen.add(key));
+    return true;
+  });
+  const basePlatforms = Object.entries(PLATFORM_CANDIDATE_CONFIG).map(([platform, config]) => {
+    const candidates = topics
+      .map((topic, index) => buildPlatformCandidate(topic, platform, index, context))
+      .sort((a, b) => b.score - a.score || String(b.topicId || '').localeCompare(String(a.topicId || '')))
+      .slice(0, config.limit);
+    return {
+      key: platform,
+      label: config.label,
+      limit: config.limit,
+      count: candidates.length,
+      candidates,
+    };
+  });
+  const topTopicSeen = new Set();
+  const topAKeys = new Set();
+  const makePlatformTopicKey = (platform, candidate) => `${platform}::${candidate.topicId || candidate.title}`;
+  const makeTopTopicKey = candidate => normalizeCandidateText(candidate.title || candidate.topic || candidate.topicId || '');
+  basePlatforms.forEach(group => {
+    const candidate = group.candidates.find(item => {
+      const topicKey = makeTopTopicKey(item);
+      return item.eligibleForA && item.score >= aScoreThreshold && !topTopicSeen.has(topicKey);
+    }) || group.candidates.find(item => item.eligibleForA && item.score >= aScoreThreshold);
+    if (!candidate) return;
+    const topicKey = makeTopTopicKey(candidate);
+    topTopicSeen.add(topicKey);
+    topAKeys.add(makePlatformTopicKey(group.key, candidate));
+  });
+  const platforms = basePlatforms.map(group => {
+    const candidates = group.candidates.map(candidate => {
+      const key = makePlatformTopicKey(group.key, candidate);
+      const grade = topAKeys.has(key)
+        ? 'A'
+        : candidate.eligibleForA && candidate.score >= 5.4
+          ? 'B'
+          : candidate.score >= 4.2
+            ? 'C'
+            : '不建议';
+      return { ...candidate, grade };
+    });
+    return {
+      ...group,
+      aCount: candidates.filter(item => item.grade === 'A').length,
+      candidates,
+    };
+  });
+  const topA = platforms
+    .flatMap(group => group.candidates)
+    .filter(candidate => candidate.grade === 'A')
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+  const platformGaps = platforms
+    .filter(group => !group.aCount)
+    .map(group => {
+      const strategy = PLATFORM_CANDIDATE_CONFIG[group.key]?.strategy || `${group.label}暂无 A 级题材`;
+      return `${group.label}暂无A：${strategy}`;
+    });
+  return {
+    generatedAt: summary.generatedAt || '',
+    topA,
+    platforms,
+    diagnostics: {
+      cooldown: {
+        file: CONTENT_RESEARCH_HISTORY_FILE,
+        runs: history.length,
+        recentRunsUsed: Math.min(history.length, 5),
+      },
+      topicUsage: {
+        file: CONTENT_TOPIC_USAGE_FILE,
+        items: usedTopics.length,
+        cooldownDays: TOPIC_USAGE_COOLDOWN_DAYS,
+        note: usedTopics.length ? '已生成/入队题材会短期降权' : '暂无题材使用记录',
+      },
+      feedback: {
+        file: ARTICLE_FEEDBACK_FILE,
+        items: feedbackItems.length,
+        note: feedbackItems.length ? '已纳入文章表现回填' : '暂无文章表现回填，按来源与题材信号评分',
+      },
+      platformGaps,
+      platformStrategies: Object.fromEntries(
+        Object.entries(PLATFORM_CANDIDATE_CONFIG).map(([key, config]) => [key, config.strategy])
+      ),
+    },
+    note: topA.length
+      ? `当前筛出 ${topA.length} 个 A 级题材；未达标平台不硬凑`
+      : '当前没有符合平台赛道的 A 级题材，建议补充对应来源',
+  };
+}
+
 function getContentResearchSummary() {
   const summary = readJson(CONTENT_RESEARCH_FILE, null);
   if (!summary) return null;
-  const topics = Array.isArray(summary.topics) ? summary.topics.slice(0, 80) : [];
+  const allTopics = Array.isArray(summary.topics) ? summary.topics : [];
+  const topicSeen = new Set();
+  const topics = allTopics
+    .filter((topic, index) => index < 80 || topic?.platformLane || topic?.signals?.platformLane)
+    .filter(topic => {
+      const key = topic?.stableId || topic?.id || topic?.url || getCandidateTitle(topic);
+      if (!key || topicSeen.has(key)) return false;
+      topicSeen.add(key);
+      return true;
+    });
+  const actionItems = Array.isArray(summary.actionItems) ? summary.actionItems.slice(0, 10) : [];
   const byMiniappPage = topics.reduce((result, topic) => {
     getTopicPillars(topic).forEach(page => {
       if (!result[page]) result[page] = [];
@@ -706,9 +1551,14 @@ function getContentResearchSummary() {
     counters: summary.counters || {},
     sources: Array.isArray(summary.sources) ? summary.sources.slice(0, 12) : [],
     topTopics: Array.isArray(summary.topTopics) ? summary.topTopics.slice(0, 8) : [],
-    actionItems: Array.isArray(summary.actionItems) ? summary.actionItems.slice(0, 10) : [],
+    actionItems,
     topics,
     byMiniappPage,
+    platformCandidates: buildPlatformCandidates({
+      ...summary,
+      actionItems,
+      topics,
+    }),
     trend: summary.trend || {},
     history: summary.history || {},
     exports: summary.exports || {},
@@ -823,15 +1673,22 @@ function getDifyCronInfo() {
 
 function extractDifyArticleMeta(content, fileName) {
   const statusMatch = content.match(/^发布状态：(.*)$/m);
-  const wordsMatch = content.match(/头条号正文：(\d+) 字/);
-  const titleMatch = content.match(/【标题候选】\s*\n1[.、]\s*(.*)/);
+  const isXhs = fileName.startsWith('xhs_');
+  const isWechat = fileName.startsWith('wechat_');
+  // 头条审计行「头条号正文：N 字」；小红书审计行「正文：N 字」
+  const wordsMatch = isXhs
+    ? content.match(/^正文：(\d+) 字/m)
+    : content.match(/(?:头条号|公众号)正文：(\d+) 字/);
+  const titleMatch = content.match(/【标题候选[^】]*】\s*\n1[.、]\s*(.*)/);
+  const typeBase = fileName
+    .replace(/^(\d+|custom|xhs_\w+?|wechat_\w+?)_/, '')
+    .replace(/^\d{6}_/, '')
+    .replace(/\.md$/, '');
   return {
     fileName,
-    custom: fileName.startsWith('custom_'),
-    type: fileName
-      .replace(/^(\d+|custom)_/, '')
-      .replace(/^\d{6}_/, '')
-      .replace(/\.md$/, ''),
+    channel: isXhs ? 'xhs' : isWechat ? 'wechat' : 'toutiao',
+    custom: fileName.startsWith('custom_') || fileName.startsWith('xhs_custom_') || fileName.startsWith('wechat_custom_'),
+    type: typeBase,
     status: statusMatch ? statusMatch[1].trim() : '',
     words: wordsMatch ? Number(wordsMatch[1]) : null,
     title: titleMatch ? titleMatch[1].trim() : '',
@@ -852,7 +1709,7 @@ function getDifyArticles() {
     try {
       files = fs
         .readdirSync(dayDir)
-        .filter(name => name.endsWith('.md') && /^(\d+|custom)_/.test(name))
+        .filter(name => name.endsWith('.md') && /^(\d+|custom|xhs_\w+|wechat_\w+)_/.test(name))
         .sort();
     } catch (error) {
       continue;
@@ -862,9 +1719,12 @@ function getDifyArticles() {
       try {
         const stat = fs.statSync(filePath);
         const content = fs.readFileSync(filePath, 'utf-8');
+        // 同名 .html 是公众号排版产物（dify_auto_publish.py 自动生成），存在时前端提供「预览排版」入口
+        const hasHtml = fs.existsSync(path.join(dayDir, fileName.replace(/\.md$/, '.html')));
         articles.push({
           date,
           ...extractDifyArticleMeta(content, fileName),
+          hasHtml,
           bytes: stat.size,
           updatedAt: stat.mtime.toISOString(),
         });
@@ -888,9 +1748,13 @@ function getDifyStatus() {
     return { index: index + 1, ...task, fileName, done: exists };
   });
   let configOk = false;
+  let xhsConfigOk = false;
+  let wechatConfigOk = false;
   try {
     const config = readJson(path.join(DIFY_DIR, 'config.json'), null);
     configOk = Boolean(config && config.api_key && config.api_key.startsWith('app-'));
+    xhsConfigOk = Boolean(config && config.xhs_api_key && config.xhs_api_key.startsWith('app-'));
+    wechatConfigOk = Boolean(config && config.wechat_api_key && config.wechat_api_key.startsWith('app-'));
   } catch (error) {
     configOk = false;
   }
@@ -901,12 +1765,14 @@ function getDifyStatus() {
     articles,
     cron: getDifyCronInfo(),
     configOk,
+    xhsConfigOk,
+    wechatConfigOk,
     scriptExists: fs.existsSync(DIFY_SCRIPT),
   };
 }
 
 function getDifyArticleFile(date, fileName) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^(\d+|custom)_[^/\\]+\.md$/.test(fileName)) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^(\d+|custom|xhs_\w+|wechat_\w+)_[^/\\]+\.(md|html)$/.test(fileName)) {
     return null;
   }
   const filePath = path.join(DIFY_OUT_DIR, date, fileName);
@@ -1150,6 +2016,12 @@ async function handleApi(req, res, pathname, searchParams) {
     return;
   }
 
+  // 渠道档案：dashboard 自媒体表单的字段/选项/文案（唯一事实来源，前端据此动态渲染）
+  if (req.method === 'GET' && pathname === '/api/dify/form-config') {
+    sendJson(res, { channels: DIFY_CHANNEL_PROFILES });
+    return;
+  }
+
   if (req.method === 'GET' && pathname === '/api/dify/article') {
     const date = searchParams.get('date') || '';
     const fileName = searchParams.get('file') || '';
@@ -1162,6 +2034,23 @@ async function handleApi(req, res, pathname, searchParams) {
     return;
   }
 
+  // 公众号排版 HTML 预览：新标签页直接渲染（内联样式，样式全在标签上，可全选复制进公众号编辑器）
+  if (req.method === 'GET' && pathname === '/api/dify/article-html') {
+    const date = searchParams.get('date') || '';
+    const fileName = searchParams.get('file') || '';
+    if (!fileName.endsWith('.html')) {
+      sendText(res, '仅支持 .html 排版文件', 400);
+      return;
+    }
+    const filePath = getDifyArticleFile(date, fileName);
+    if (!filePath) {
+      sendText(res, '排版文件不存在', 404);
+      return;
+    }
+    sendText(res, fs.readFileSync(filePath, 'utf-8'), 200, 'text/html; charset=utf-8');
+    return;
+  }
+
   if (req.method === 'POST' && pathname === '/api/dify/custom-run') {
     try {
       if (currentRun) {
@@ -1170,39 +2059,49 @@ async function handleApi(req, res, pathname, searchParams) {
       }
       const body = await parseBody(req);
       const clean = (key, maxLen) => String(body[key] || '').trim().slice(0, maxLen);
-      const platform = clean('platform', 48);
-      if (!DIFY_SELECT_OPTIONS.platform.includes(platform)) {
-        sendJson(res, { error: '平台必须是：头条号 / 公众号 / 双平台' }, 400);
-        return;
-      }
-      const articleType = clean('article_type', 80);
-      if (!DIFY_SELECT_OPTIONS.article_type.includes(articleType)) {
-        sendJson(res, { error: '文章类型不在可选项里' }, 400);
-        return;
-      }
-      let refAccount = clean('ref_account', 48);
-      if (!DIFY_SELECT_OPTIONS.ref_account.includes(refAccount)) {
-        refAccount = DIFY_SELECT_OPTIONS.ref_account[0];
-      }
+      const requestedWorkflow = clean('workflow', 16);
+      const profile = DIFY_CHANNEL_PROFILES.find(p => p.key === requestedWorkflow) || DIFY_CHANNEL_PROFILES[0];
       const goal = clean('goal', 2000);
       if (!goal) {
-        sendJson(res, { error: '「文章要帮读者做什么决定」必填' }, 400);
+        sendJson(res, { error: `「${profile.copy.goalLabel}」必填` }, 400);
         return;
+      }
+      // 渠道专属下拉统一软校验：不在选项内一律回落首项（首项即默认值）
+      const channelInputs = {};
+      for (const field of profile.fields) {
+        const value = clean(field.key, 80);
+        channelInputs[field.key] = field.options.includes(value) ? value : field.options[0];
       }
       const inputs = {
         topic: clean('topic', 200),
-        ref_account: refAccount,
-        platform,
-        article_type: articleType,
+        ...channelInputs,
+        ...profile.fixedInputs,
         product_entry: clean('product_entry', 500),
         sources: clean('sources', 8000),
         transcript: clean('transcript', 8000),
         goal,
         style_reference: clean('style_reference', 20000),
       };
-      ensureRuntime();
-      writeJson(DIFY_CUSTOM_INPUTS_FILE, inputs);
-      const run = createRun('dify_custom', 'release');
+      const workflow = profile.key;
+      const taskId = profile.taskId;
+      const inputsFile = profile.inputsFile;
+      writeJson(inputsFile, inputs);
+      const candidateTitle = clean('candidate_title', 300);
+      const candidateTopicId = clean('candidate_topic_id', 300);
+      if (candidateTitle || candidateTopicId) {
+        recordContentTopicUsage({
+          platform: clean('candidate_platform', 40) || workflow,
+          topicKey: candidateTopicId || clean('candidate_url', 1000) || candidateTitle,
+          topicId: candidateTopicId,
+          title: candidateTitle || inputs.topic,
+          source: clean('candidate_source', 300),
+          url: clean('candidate_url', 1000),
+          score: clean('candidate_score', 20),
+          reason: clean('candidate_reason', 1000),
+          action: 'dify_candidate_run',
+        });
+      }
+      const run = createRun(taskId, 'release');
       currentRun = run;
       setTaskState(run);
       setImmediate(() => {
