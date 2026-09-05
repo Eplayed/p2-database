@@ -117,13 +117,13 @@ async function fetchClassList(buildId) {
     ];
     return knownClasses.map(name => ({
       name,
-      link: `https://poe.ninja/poe2/builds/vaal?class=${encodeURIComponent(name)}`,
+      link: `https://poe.ninja/poe2/builds/${require('../../league.config').urlSlug}?class=${encodeURIComponent(name)}`,
     }));
   }
 
   return Array.from(classes).map(name => ({
     name,
-    link: `https://poe.ninja/poe2/builds/vaal?class=${encodeURIComponent(name)}`,
+    link: `https://poe.ninja/poe2/builds/${require('../../league.config').urlSlug}?class=${encodeURIComponent(name)}`,
   }));
 }
 
@@ -132,7 +132,7 @@ async function fetchClassList(buildId) {
  * 使用 poe.ninja 的 overview API
  */
 async function fetchPlayerList(buildId, className, limit) {
-  const league = 'fate-of-the-vaal';
+  const league = require('../../league.config').snapshotName;
   const url = `https://poe.ninja/poe2/api/builds/${buildId}/overview?overview=${encodeURIComponent(league)}&class=${encodeURIComponent(className)}&sort=depth`;
 
   for (let retry = 0; retry < API_RETRY; retry++) {
@@ -178,7 +178,7 @@ async function fetchPlayerList(buildId, className, limit) {
  * 获取单个玩家的详细数据
  */
 async function fetchPlayerDetail(buildId, account, charName) {
-  const league = 'fate-of-the-vaal';
+  const league = require('../../league.config').snapshotName;
   const url = `https://poe.ninja/poe2/api/builds/${buildId}/character?account=${encodeURIComponent(account)}&name=${encodeURIComponent(charName)}&overview=${encodeURIComponent(league)}`;
 
   for (let retry = 0; retry < API_RETRY; retry++) {

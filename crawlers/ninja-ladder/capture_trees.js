@@ -25,7 +25,7 @@ const readline = require('readline');
 const PLAYER_DIR = path.join(__dirname, '../../translated-data/release/players');
 const OUTPUT_DIR = PLAYER_DIR;
 const COOKIE_FILE = path.join(__dirname, 'poe_ninja_cookies.json');
-const LEAGUE = 'fate-of-the-vaal';
+const LEAGUE = require('../../league.config').urlSlug;
 const VIEWPORT = { width: 1600, height: 1000 };
 
 // 解析参数

@@ -11,9 +11,10 @@ const OUTPUT_DIR = path.join(__dirname, '..', 'data');
 const API_CONCURRENCY = 3; // 🔧 API 并发数
 const API_RETRY = 3;       // 🔧 API 重试次数
 
-// 赛季映射
+// 赛季映射（slug 统一走 league.config.js，赛季切换只改那一处）
+const LEAGUE_CONFIG = require('../league.config');
 const LEAGUE_MAP = {
-  'vaal': 'fate-of-the-vaal',
+  'current': LEAGUE_CONFIG.urlSlug,
   'standard': 'poe2',
   'hardcore': 'poe2_hc'
 };
@@ -57,7 +58,7 @@ async function getLatestBuildId() {
   if (cachedBuildId) return cachedBuildId;
 
   console.log('🔑 正在获取最新 Build ID...');
-  const res = await makeRequest('https://poe.ninja/poe2/builds/vaal');
+  const res = await makeRequest(`https://poe.ninja/poe2/builds/${LEAGUE_CONFIG.urlSlug}`);
 
   const regex = /([0-9]{4}-[0-9]{8}-[0-9]{5})/;
   const match = res.data ? res.data.match(regex) : null;
@@ -72,7 +73,7 @@ async function getLatestBuildId() {
 
 // 通过 API 获取玩家详情
 async function fetchPlayerDetail(account, charName, buildId) {
-  const league = LEAGUE_MAP['vaal'] || 'fate-of-the-vaal';
+  const league = LEAGUE_MAP['current'];
   const apiUrl = `https://poe.ninja/poe2/api/builds/${buildId}/character?account=${encodeURIComponent(account)}&name=${encodeURIComponent(charName)}&overview=${encodeURIComponent(league)}`;
 
   for (let retry = 0; retry < API_RETRY; retry++) {

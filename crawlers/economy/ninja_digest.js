@@ -6,7 +6,7 @@ const envConfig = require('../../auto_browser/env-config');
 const NINJA_BASE_URL = 'https://poe.ninja';
 const POECDN_BASE_URL = 'https://web.poecdn.com';
 const OSS_PUBLIC_BASE_URL = 'https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com';
-const DEFAULT_LEAGUE_URL = 'runesofaldur';
+const DEFAULT_LEAGUE_URL = require('../../league.config').urlSlug;
 const OUTPUT_FILE = 'economy_digest.json';
 const CATALOG_FILE = 'international_market_catalog.json';
 const LEGACY_FILE = 'economy.json';
@@ -239,7 +239,14 @@ async function getActiveLeague() {
   const configured = process.env.POE_NINJA_ECONOMY_LEAGUE || DEFAULT_LEAGUE_URL;
   const indexState = await requestJson(`${NINJA_BASE_URL}/poe2/api/data/index-state`);
   const leagues = indexState.economyLeagues || [];
-  const league = leagues.find(item => item.url === configured)
+  // 配置的赛季必须「已在索引」：新赛季上线当天 poe.ninja 数据未就绪时
+  // （如 2026-09-05 Forbidden Rites 上线首小时 indexed:false 且 0 条数据），
+  // 安全回退到当前已索引赛季，避免空数据覆盖 OSS；就绪后自动切到新赛季。
+  // 需要强行使用未就绪赛季时设 POE_NINJA_LEAGUE_FORCE=1。
+  const league = leagues.find(item => item.url === configured && item.indexed)
+    || (process.env.POE_NINJA_LEAGUE_FORCE === '1'
+        ? leagues.find(item => item.url === configured && !item.hardcore)
+        : null)
     || leagues.find(item => item.indexed && !item.hardcore)
     || leagues[0];
   if (!league) throw new Error('未找到 poe.ninja PoE2 经济赛季');
