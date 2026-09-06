@@ -18,80 +18,21 @@ const CONTENT_RESEARCH_FILE = path.join(RUNTIME_DIR, 'content-research.json');
 const CONTENT_RESEARCH_HISTORY_FILE = path.join(RUNTIME_DIR, 'content-research-history.json');
 const CONTENT_TOPIC_USAGE_FILE = path.join(RUNTIME_DIR, 'content-topic-usage.json');
 const ARTICLE_FEEDBACK_FILE = path.join(RUNTIME_DIR, 'article-performance-feedback.json');
-const DIFY_DIR = '/Users/zhangyajun/Documents/自媒体/_content_factory/dify/scheduler';
-const DIFY_SCRIPT = path.join(DIFY_DIR, 'dify_auto_publish.py');
-const DIFY_OUT_DIR = path.join(DIFY_DIR, 'auto_out');
-const DIFY_CRON_LOG = path.join(DIFY_DIR, 'cron.log');
-const DIFY_CUSTOM_INPUTS_FILE = path.join(RUNTIME_DIR, 'dify-custom-inputs.json');
-const DIFY_XHS_CUSTOM_INPUTS_FILE = path.join(RUNTIME_DIR, 'dify-xhs-custom-inputs.json');
-const DIFY_WECHAT_CUSTOM_INPUTS_FILE = path.join(RUNTIME_DIR, 'dify-wechat-custom-inputs.json');
 const TOPIC_USAGE_COOLDOWN_DAYS = 5;
-// 渠道档案：每个渠道的表单字段（选项，首项即默认值）、固定输入与文案。
-// dashboard 自媒体表单由 /api/dify/form-config 下发渲染，custom-run 用同一份校验——选项只在这里维护。
-const DIFY_CHANNEL_PROFILES = [
-  {
-    key: 'toutiao',
-    label: '头条号',
-    taskId: 'dify_custom',
-    inputsFile: DIFY_CUSTOM_INPUTS_FILE,
-    fixedInputs: {},
-    fields: [
-      { key: 'ref_account', label: '参考账号', options: ['自动（暗金观察）', '暗金观察', '老玩家硬核杂谈', '游戏低粉爆款号', '数码汽车观点号'] },
-      { key: 'platform', label: '平台', options: ['头条号'] },
-      { key: 'article_type', label: '文章类型', options: ['游戏硬核杂谈', '老玩家热点短评', '数码消费判断', '汽车普通人账本', '魔兽资讯短文', '暗金短评'] },
-    ],
-    copy: {
-      goalLabel: '文章要帮读者做什么决定',
-      goalPlaceholder: '例：帮读者判断现在回坑魔兽值不值',
-      styleLabel: '风格参考文章',
-      stylePlaceholder: '可选，粘贴想模仿的文章全文（如艾泽拉斯前哨的写法）',
-      runButton: '按表单生成文章',
-      targetName: '文章',
-    },
-  },
-  {
-    key: 'xhs',
-    label: '小红书',
-    taskId: 'dify_xhs_custom',
-    inputsFile: DIFY_XHS_CUSTOM_INPUTS_FILE,
-    fixedInputs: {},
-    fields: [
-      { key: 'niche', label: '账号赛道', options: ['女性玩家', '情感共鸣', '职场成长', '生活消费', '游戏外观收藏'] },
-      { key: 'note_type', label: '笔记类型', options: ['情绪共鸣日常', '女性玩家避雷', '职场经验卡片', '好物种草清单', '外观合集'] },
-      { key: 'ref_blogger', label: '对标风格', options: ['自动（按账号定位）', '低粉爆款拆解型', '收藏卡片型', '活泼种草型', '干货攻略型', '情绪共鸣型', '精致合集型'] },
-    ],
-    copy: {
-      goalLabel: '笔记要帮读者做什么决定',
-      goalPlaceholder: '例：帮姐妹判断这套幻化值不值得刷 / 帮新手避开第一次买错仓库页',
-      styleLabel: '风格参考笔记',
-      stylePlaceholder: '可选，粘贴对标博主的笔记全文（多篇更好），只学文风不搬内容',
-      runButton: '按表单生成笔记',
-      targetName: '小红书笔记',
-    },
-  },
-  {
-    key: 'wechat',
-    label: '公众号',
-    taskId: 'dify_wechat_custom',
-    inputsFile: DIFY_WECHAT_CUSTOM_INPUTS_FILE,
-    fixedInputs: { platform: '公众号' },
-    fields: [
-      { key: 'ref_account', label: '参考公众号', options: ['自动（AI科技）', '程序员鱼皮', '量子位', '机器之心', '新智元', 'AI产品实操号'] },
-      { key: 'article_type', label: '文章类型', options: ['AI科技资讯', 'AI工具实操', 'AI行业观察', 'AI工作流教程', '普通人AI应用', 'AI产品评测'] },
-    ],
-    copy: {
-      goalLabel: '公众号文章要沉淀什么价值',
-      goalPlaceholder: '例：把某个 AI 工具/工作流/行业变化写成读者以后还能翻出来查的实操稿',
-      styleLabel: '风格参考文章',
-      stylePlaceholder: '可选，粘贴想模仿的 AI 科技公众号文章全文，只学结构和语气，不搬内容',
-      runButton: '按表单生成公众号文章',
-      targetName: '公众号文章',
-    },
-  },
-];
+// 自媒体发文已抽离到 media-workbench（端口 5180）：
+// - 渠道表单/生成/登记/样本库/自动运行 → /Users/zhangyajun/Documents/project/media-workbench
+// - 本工作台仍保留选题池采集（forum_content_scan）与候选池排序（/api/status 的 contentResearch），
+//   以及选题冷却/表现回填两个共享文件的读取（media-workbench 负责写入）。
 const PORT = Number(process.env.DASHBOARD_PORT || 5177);
-const SELF_MEDIA_INTERVAL_VALUES = [1440, 2880, 4320];
-const SELF_MEDIA_PLATFORM_TASK_IDS = ['dify_publish_toutiao', 'dify_publish_xhs', 'dify_publish_wechat'];
+// 任务看板：跨会话的任务进度台账，数据在 runtime/kanban-tasks.json，列定义前后端共用（GET /api/kanban 下发）。
+// 约定：会话中任务进度有变化时，同步更新这份文件（或调看板 API）。
+const KANBAN_FILE = path.join(RUNTIME_DIR, 'kanban-tasks.json');
+const KANBAN_STATUSES = [
+  { key: 'todo', label: '待办' },
+  { key: 'doing', label: '进行中' },
+  { key: 'blocked', label: '等待中' },
+  { key: 'done', label: '已完成' },
+];
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -134,93 +75,6 @@ const TASKS = [
     game: 'all',
     localOnly: true,
     command: ['bash', ['scripts/run_forum_content_scan.sh']],
-  },
-  {
-    id: 'dify_publish_toutiao',
-    name: '头条号',
-    description: '自动寻找适合头条号的题材并生成草稿：游戏、数码、汽车、老玩家硬核杂谈。输出到自媒体 auto_out 目录，只生成草稿，不自动发布。',
-    group: 'self_media',
-    game: 'all',
-    localOnly: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--auto-platform', 'toutiao']],
-  },
-  {
-    id: 'dify_publish_xhs',
-    name: '小红书',
-    description: '自动寻找适合小红书的题材并生成图文卡片草稿：女性玩家、情感共鸣、职场成长。输出到自媒体 auto_out 目录，只生成草稿，不自动发布。',
-    group: 'self_media',
-    game: 'all',
-    localOnly: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--auto-platform', 'xhs']],
-  },
-  {
-    id: 'dify_publish_wechat',
-    name: '公众号',
-    description: '自动寻找适合公众号的 AI 科技题材并生成草稿：AI工具、工作流、行业观察、产品实操。输出到自媒体 auto_out 目录，只生成草稿，不自动发布。',
-    group: 'self_media',
-    game: 'all',
-    localOnly: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--auto-platform', 'wechat']],
-  },
-  {
-    id: 'dify_publish_all',
-    name: 'Dify 生成今日全部文章',
-    description: '按今日计划生成各平台草稿，输出到自媒体 auto_out 目录。生成后仍需人工核对发布。',
-    group: 'dify',
-    game: 'all',
-    localOnly: true,
-    hidden: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT]],
-  },
-  {
-    id: 'dify_publish_1',
-    name: 'Dify 生成今日第 1 篇',
-    description: '只生成今日计划中的第 1 篇自媒体文章。',
-    group: 'dify',
-    game: 'all',
-    localOnly: true,
-    hidden: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--only', '1']],
-  },
-  {
-    id: 'dify_publish_2',
-    name: 'Dify 生成今日第 2 篇',
-    description: '只生成今日计划中的第 2 篇自媒体文章。',
-    group: 'dify',
-    game: 'all',
-    localOnly: true,
-    hidden: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--only', '2']],
-  },
-  {
-    id: 'dify_custom',
-    name: 'Dify 按表单生成文章',
-    description: '用自媒体发文面板的自定义表单输入生成一篇头条号文章，输出到 auto_out 当天目录（custom_ 前缀）。',
-    group: 'dify',
-    game: 'all',
-    localOnly: true,
-    hidden: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--inputs-file', DIFY_CUSTOM_INPUTS_FILE]],
-  },
-  {
-    id: 'dify_xhs_custom',
-    name: 'Dify 按表单生成小红书笔记',
-    description: '用自媒体发文面板的小红书表单输入生成一篇笔记（06-xiaohongshu-integrated-publishing-v1 工作流），输出到 auto_out 当天目录（xhs_custom_ 前缀）。',
-    group: 'dify',
-    game: 'all',
-    localOnly: true,
-    hidden: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--inputs-file', DIFY_XHS_CUSTOM_INPUTS_FILE, '--workflow', 'xhs']],
-  },
-  {
-    id: 'dify_wechat_custom',
-    name: 'Dify 按表单生成公众号文章',
-    description: '用自媒体发文面板的公众号表单输入生成一篇 AI 科技文章（07-wechat-integrated-publishing-v1 工作流），输出到 auto_out 当天目录（wechat_custom_ 前缀）。',
-    group: 'dify',
-    game: 'all',
-    localOnly: true,
-    hidden: true,
-    command: ['/usr/bin/python3', [DIFY_SCRIPT, '--inputs-file', DIFY_WECHAT_CUSTOM_INPUTS_FILE, '--workflow', 'wechat']],
   },
   {
     id: 'ladder',
@@ -424,33 +278,63 @@ function getState() {
   return readJson(STATE_FILE, { runs: {}, history: [] });
 }
 
-const AUTOMATION_GROUPS = ['game_data', 'self_media'];
+const AUTOMATION_GROUPS = ['game_data'];
 
 function getAutomationGroup(value) {
   return AUTOMATION_GROUPS.includes(value) ? value : 'game_data';
 }
 
 function getAutomationDefaultTaskId(group) {
-  return getAutomationGroup(group) === 'self_media' ? 'dify_publish_toutiao' : 'daily_publish';
+  return 'daily_publish';
 }
 
-function migrateAutomationTaskId(taskId) {
-  if (taskId === 'dify_publish_all' || taskId === 'dify_publish_1' || taskId === 'dify_publish_2') return 'dify_publish_toutiao';
-  return taskId;
+// ── 任务看板 ─────────────────────────────────────────────
+function getKanbanStatusKey(value) {
+  return KANBAN_STATUSES.some(status => status.key === value) ? value : 'todo';
+}
+
+function getKanbanState() {
+  return readJson(KANBAN_FILE, { tasks: [] });
+}
+
+function createKanbanTask(title, detail, status) {
+  const now = new Date().toISOString();
+  return {
+    id: `t_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`,
+    title,
+    detail,
+    status,
+    order: 0,
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+// 把任务移动到目标列的 index 位置（末尾传 Infinity），并重排该列 order
+function moveKanbanTask(tasks, taskId, status, index) {
+  const taskIndex = tasks.findIndex(task => task.id === taskId);
+  if (taskIndex === -1) return false;
+  const [task] = tasks.splice(taskIndex, 1);
+  task.status = status;
+  // filter 得到的是副本：在这里排好序、插好位置、编好 order，
+  // 再用「其余任务 + 新列顺序」整体替换 tasks（渲染按 status+order 分组，数组内顺序无关）
+  const columnTasks = tasks.filter(item => item.status === status).sort((a, b) => a.order - b.order);
+  const clamped = Math.max(0, Math.min(index, columnTasks.length));
+  columnTasks.splice(clamped, 0, task);
+  columnTasks.forEach((item, order) => { item.order = order; });
+  const others = tasks.filter(item => item.status !== status);
+  tasks.length = 0;
+  tasks.push(...others, ...columnTasks);
+  return true;
 }
 
 function normalizeAutomationTaskIds(taskIds, group = 'game_data') {
   const automationGroup = getAutomationGroup(group);
   const taskList = TASKS.filter(task => !task.hidden && task.group === automationGroup);
-  const availableIds = new Set(
-    automationGroup === 'self_media'
-      ? taskList.filter(task => SELF_MEDIA_PLATFORM_TASK_IDS.includes(task.id)).map(task => task.id)
-      : taskList.map(task => task.id),
-  );
+  const availableIds = new Set(taskList.map(task => task.id));
   const seen = new Set();
   const normalized = (Array.isArray(taskIds) ? taskIds : [])
     .map(id => String(id || ''))
-    .map(migrateAutomationTaskId)
     .filter(id => availableIds.has(id))
     .filter(id => {
       if (seen.has(id)) return false;
@@ -467,18 +351,11 @@ function clampNumber(value, min, fallback) {
 }
 
 function normalizeAutomationInterval(value, group, fallback) {
-  const automationGroup = getAutomationGroup(group);
-  const number = clampNumber(value, automationGroup === 'self_media' ? 30 : 10, fallback);
-  if (automationGroup === 'self_media' && !SELF_MEDIA_INTERVAL_VALUES.includes(number)) {
-    return SELF_MEDIA_INTERVAL_VALUES.includes(fallback) ? fallback : 1440;
-  }
-  return number;
+  return clampNumber(value, 10, fallback);
 }
 
 function sanitizeAutomationSettings(settings, group = 'game_data') {
   const automationGroup = getAutomationGroup(group);
-  const defaultIntervalMinutes = automationGroup === 'self_media' ? 1440 : 120;
-  const defaultJitterMinutes = automationGroup === 'self_media' ? 30 : 10;
   const taskIds = normalizeAutomationTaskIds(settings?.taskIds || (settings?.taskId ? [settings.taskId] : []), automationGroup);
   const hasUpdatedAt = settings && Object.prototype.hasOwnProperty.call(settings, 'updatedAt');
   return {
@@ -486,8 +363,8 @@ function sanitizeAutomationSettings(settings, group = 'game_data') {
     group: automationGroup,
     taskId: taskIds[0],
     taskIds,
-    intervalMinutes: normalizeAutomationInterval(settings?.intervalMinutes, automationGroup, defaultIntervalMinutes),
-    jitterMinutes: clampNumber(settings?.jitterMinutes, 0, defaultJitterMinutes),
+    intervalMinutes: normalizeAutomationInterval(settings?.intervalMinutes, automationGroup, 120),
+    jitterMinutes: clampNumber(settings?.jitterMinutes, 0, 10),
     nextRunAt: Number(settings?.nextRunAt) || 0,
     updatedAt: hasUpdatedAt ? Number(settings.updatedAt) || 0 : Date.now(),
   };
@@ -498,14 +375,13 @@ function sanitizeAutomationBundle(settings) {
   const isLegacyFlat = raw.taskId || raw.taskIds || raw.intervalMinutes || raw.enabled || raw.nextRunAt;
   return {
     game_data: sanitizeAutomationSettings(isLegacyFlat ? raw : raw.game_data, 'game_data'),
-    self_media: sanitizeAutomationSettings(isLegacyFlat ? {} : raw.self_media, 'self_media'),
   };
 }
 
 function getAutomationSettings() {
   ensureRuntime();
   if (!fs.existsSync(AUTOMATION_SETTINGS_FILE)) {
-    return sanitizeAutomationBundle({ game_data: { updatedAt: 0 }, self_media: { updatedAt: 0 } });
+    return sanitizeAutomationBundle({ game_data: { updatedAt: 0 } });
   }
   return sanitizeAutomationBundle(readJson(AUTOMATION_SETTINGS_FILE, { updatedAt: 0 }));
 }
@@ -550,11 +426,6 @@ function setAutomationSettings(settings) {
             ...existing.game_data,
             ...(raw.game_data || {}),
             updatedAt: raw.game_data ? Date.now() : existing.game_data.updatedAt,
-          },
-          self_media: {
-            ...existing.self_media,
-            ...(raw.self_media || {}),
-            updatedAt: raw.self_media ? Date.now() : existing.self_media.updatedAt,
           },
         }
   );
@@ -981,36 +852,6 @@ function buildUsedTopicCooldownMap(usageItems) {
     map.set(key, current);
   });
   return map;
-}
-
-function recordContentTopicUsage(payload = {}) {
-  const platform = String(payload.platform || payload.workflow || '').trim();
-  const title = String(payload.title || payload.topic || '').trim();
-  const topicKey = String(payload.topicKey || payload.topicId || payload.url || title).trim();
-  if (!platform || !topicKey) return null;
-  const usage = readContentTopicUsage();
-  const record = {
-    id: `${Date.now()}_${Math.random().toString(16).slice(2, 8)}`,
-    usedAt: new Date().toISOString(),
-    platform,
-    topicKey,
-    topicId: String(payload.topicId || '').trim(),
-    title,
-    source: String(payload.source || '').trim(),
-    url: String(payload.url || '').trim(),
-    score: Number(payload.score || 0) || 0,
-    reason: String(payload.reason || '').trim(),
-    action: String(payload.action || 'dify_custom_run').trim(),
-  };
-  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
-  const next = [record, ...usage]
-    .filter(item => {
-      const at = Date.parse(item?.usedAt || item?.createdAt || '');
-      return Number.isFinite(at) ? at >= cutoff : true;
-    })
-    .slice(0, 300);
-  writeJson(CONTENT_TOPIC_USAGE_FILE, next);
-  return record;
 }
 
 function getCandidateEvidenceState(topic) {
@@ -1570,215 +1411,6 @@ function appendLog(logFile, text) {
   fs.appendFileSync(logFile, text);
 }
 
-let difyPlanCache = { at: 0, data: null };
-let difyCronCache = { at: 0, data: null };
-
-function getDifyPlan() {
-  if (difyPlanCache.data && Date.now() - difyPlanCache.at < 10 * 60 * 1000) {
-    return difyPlanCache.data;
-  }
-  const fallback = { today: '', weekday: -1, plan: {} };
-  if (!fs.existsSync(DIFY_SCRIPT)) return fallback;
-  try {
-    const stdout = require('child_process').execFileSync('python3', [DIFY_SCRIPT, '--plan-json'], {
-      encoding: 'utf-8',
-      timeout: 15000,
-    });
-    const data = JSON.parse(stdout);
-    difyPlanCache = { at: Date.now(), data };
-    return data;
-  } catch (error) {
-    console.error('读取 Dify 计划失败:', error.message);
-    return difyPlanCache.data || fallback;
-  }
-}
-
-function parseDifyCronSchedule(crontabText) {
-  const line = (crontabText || '')
-    .split('\n')
-    .find(row => row.includes('dify_auto_publish.py') && !row.trim().startsWith('#'));
-  if (!line) return null;
-  const fields = line.trim().split(/\s+/);
-  if (fields.length < 5) return null;
-  const minute = Number(fields[0]);
-  const hour = Number(fields[1]);
-  const dowRaw = fields[4];
-  if (!Number.isInteger(minute) || !Number.isInteger(hour)) return null;
-  if (fields[2] !== '*' || fields[3] !== '*') return null;
-  let weekdays = null;
-  if (dowRaw !== '*') {
-    weekdays = dowRaw.split(',').map(Number).filter(Number.isInteger);
-  }
-  return { minute, hour, weekdays, raw: line.trim() };
-}
-
-function nextDifyRun(schedule) {
-  if (!schedule) return '';
-  const now = new Date();
-  for (let offset = 0; offset < 8; offset += 1) {
-    const candidate = new Date(now);
-    candidate.setDate(now.getDate() + offset);
-    candidate.setHours(schedule.hour, schedule.minute, 0, 0);
-    if (candidate <= now) continue;
-    if (schedule.weekdays && !schedule.weekdays.includes(candidate.getDay())) continue;
-    return candidate.toISOString();
-  }
-  return '';
-}
-
-function getDifyCronInfo() {
-  if (difyCronCache.data && Date.now() - difyCronCache.at < 60 * 1000) {
-    return difyCronCache.data;
-  }
-  const data = { installed: false, scheduleText: '', nextRun: '', logTail: '' };
-  try {
-    const crontab = require('child_process').execFileSync('crontab', ['-l'], {
-      encoding: 'utf-8',
-      timeout: 5000,
-    });
-    const schedule = parseDifyCronSchedule(crontab);
-    if (schedule) {
-      data.installed = true;
-      data.nextRun = nextDifyRun(schedule);
-      const dayNames = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-      const daysText = schedule.weekdays
-        ? schedule.weekdays.map(day => dayNames[day]).join('、')
-        : '每天';
-      data.scheduleText = `${daysText} ${String(schedule.hour).padStart(2, '0')}:${String(schedule.minute).padStart(2, '0')}`;
-    }
-  } catch (error) {
-    data.error = error.message;
-  }
-  if (fs.existsSync(DIFY_CRON_LOG)) {
-    try {
-      const stat = fs.statSync(DIFY_CRON_LOG);
-      const length = Math.min(stat.size, 8 * 1024);
-      const fd = fs.openSync(DIFY_CRON_LOG, 'r');
-      const buffer = Buffer.alloc(length);
-      fs.readSync(fd, buffer, 0, length, stat.size - length);
-      fs.closeSync(fd);
-      data.logTail = buffer
-        .toString('utf-8')
-        .trim()
-        .split('\n')
-        .slice(-15)
-        .join('\n');
-    } catch (error) {
-      data.logTail = '';
-    }
-  }
-  difyCronCache = { at: Date.now(), data };
-  return data;
-}
-
-function extractDifyArticleMeta(content, fileName) {
-  const statusMatch = content.match(/^发布状态：(.*)$/m);
-  const isXhs = fileName.startsWith('xhs_');
-  const isWechat = fileName.startsWith('wechat_');
-  // 头条审计行「头条号正文：N 字」；小红书审计行「正文：N 字」
-  const wordsMatch = isXhs
-    ? content.match(/^正文：(\d+) 字/m)
-    : content.match(/(?:头条号|公众号)正文：(\d+) 字/);
-  const titleMatch = content.match(/【标题候选[^】]*】\s*\n1[.、]\s*(.*)/);
-  const typeBase = fileName
-    .replace(/^(\d+|custom|xhs_\w+?|wechat_\w+?)_/, '')
-    .replace(/^\d{6}_/, '')
-    .replace(/\.md$/, '');
-  return {
-    fileName,
-    channel: isXhs ? 'xhs' : isWechat ? 'wechat' : 'toutiao',
-    custom: fileName.startsWith('custom_') || fileName.startsWith('xhs_custom_') || fileName.startsWith('wechat_custom_'),
-    type: typeBase,
-    status: statusMatch ? statusMatch[1].trim() : '',
-    words: wordsMatch ? Number(wordsMatch[1]) : null,
-    title: titleMatch ? titleMatch[1].trim() : '',
-  };
-}
-
-function getDifyArticles() {
-  if (!fs.existsSync(DIFY_OUT_DIR)) return [];
-  const dates = fs
-    .readdirSync(DIFY_OUT_DIR)
-    .filter(name => /^\d{4}-\d{2}-\d{2}$/.test(name))
-    .sort((a, b) => (a < b ? 1 : -1))
-    .slice(0, 10);
-  const articles = [];
-  for (const date of dates) {
-    const dayDir = path.join(DIFY_OUT_DIR, date);
-    let files = [];
-    try {
-      files = fs
-        .readdirSync(dayDir)
-        .filter(name => name.endsWith('.md') && /^(\d+|custom|xhs_\w+|wechat_\w+)_/.test(name))
-        .sort();
-    } catch (error) {
-      continue;
-    }
-    for (const fileName of files) {
-      const filePath = path.join(dayDir, fileName);
-      try {
-        const stat = fs.statSync(filePath);
-        const content = fs.readFileSync(filePath, 'utf-8');
-        // 同名 .html 是公众号排版产物（dify_auto_publish.py 自动生成），存在时前端提供「预览排版」入口
-        const hasHtml = fs.existsSync(path.join(dayDir, fileName.replace(/\.md$/, '.html')));
-        articles.push({
-          date,
-          ...extractDifyArticleMeta(content, fileName),
-          hasHtml,
-          bytes: stat.size,
-          updatedAt: stat.mtime.toISOString(),
-        });
-      } catch (error) {
-        continue;
-      }
-    }
-  }
-  return articles;
-}
-
-function getDifyStatus() {
-  const plan = getDifyPlan();
-  const todayKey = plan.weekday >= 0 ? String(plan.weekday) : '';
-  const todayPlan = (plan.plan && plan.plan[todayKey]) || [];
-  const articles = getDifyArticles();
-  const todayArticles = articles.filter(article => article.date === plan.today);
-  const pending = todayPlan.map((task, index) => {
-    const fileName = `${index + 1}_${task.article_type}.md`;
-    const exists = todayArticles.some(article => article.fileName === fileName);
-    return { index: index + 1, ...task, fileName, done: exists };
-  });
-  let configOk = false;
-  let xhsConfigOk = false;
-  let wechatConfigOk = false;
-  try {
-    const config = readJson(path.join(DIFY_DIR, 'config.json'), null);
-    configOk = Boolean(config && config.api_key && config.api_key.startsWith('app-'));
-    xhsConfigOk = Boolean(config && config.xhs_api_key && config.xhs_api_key.startsWith('app-'));
-    wechatConfigOk = Boolean(config && config.wechat_api_key && config.wechat_api_key.startsWith('app-'));
-  } catch (error) {
-    configOk = false;
-  }
-  return {
-    today: plan.today,
-    inSchedule: todayPlan.length > 0,
-    todayPlan: pending,
-    articles,
-    cron: getDifyCronInfo(),
-    configOk,
-    xhsConfigOk,
-    wechatConfigOk,
-    scriptExists: fs.existsSync(DIFY_SCRIPT),
-  };
-}
-
-function getDifyArticleFile(date, fileName) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^(\d+|custom|xhs_\w+|wechat_\w+)_[^/\\]+\.(md|html)$/.test(fileName)) {
-    return null;
-  }
-  const filePath = path.join(DIFY_OUT_DIR, date, fileName);
-  if (!filePath.startsWith(DIFY_OUT_DIR) || !fs.existsSync(filePath)) return null;
-  return filePath;
-}
 
 function createRun(taskId, environment) {
   const runId = `${Date.now()}_${taskId}_${Math.random().toString(16).slice(2, 8)}`;
@@ -1946,6 +1578,86 @@ async function handleApi(req, res, pathname, searchParams) {
     return;
   }
 
+  // ── 任务看板 ──
+  if (req.method === 'GET' && pathname === '/api/kanban') {
+    sendJson(res, { statuses: KANBAN_STATUSES, tasks: getKanbanState().tasks });
+    return;
+  }
+
+  if (req.method === 'POST' && pathname === '/api/kanban/tasks') {
+    try {
+      const body = await parseBody(req);
+      const title = String(body.title || '').trim().slice(0, 200);
+      if (!title) {
+        sendJson(res, { error: '任务标题必填' }, 400);
+        return;
+      }
+      const state = getKanbanState();
+      const status = getKanbanStatusKey(body.status);
+      const task = createKanbanTask(title, String(body.detail || '').trim().slice(0, 2000), status);
+      // 新任务插到目标列顶部：原列内任务整体后移
+      state.tasks.filter(item => item.status === status).forEach(item => { item.order += 1; });
+      state.tasks.push(task);
+      writeJson(KANBAN_FILE, state);
+      sendJson(res, { task }, 201);
+    } catch (error) {
+      sendJson(res, { error: error.message }, 400);
+    }
+    return;
+  }
+
+  if (pathname.startsWith('/api/kanban/tasks/')) {
+    const taskId = pathname.slice('/api/kanban/tasks/'.length);
+    const state = getKanbanState();
+    const task = state.tasks.find(item => item.id === taskId);
+
+    if (req.method === 'DELETE') {
+      if (!task) {
+        sendJson(res, { error: '任务不存在' }, 404);
+        return;
+      }
+      state.tasks = state.tasks.filter(item => item.id !== taskId);
+      writeJson(KANBAN_FILE, state);
+      sendJson(res, { ok: true });
+      return;
+    }
+
+    if (req.method === 'PATCH') {
+      try {
+        if (!task) {
+          sendJson(res, { error: '任务不存在' }, 404);
+          return;
+        }
+        const body = await parseBody(req);
+        if (body.title !== undefined) {
+          const title = String(body.title || '').trim().slice(0, 200);
+          if (!title) {
+            sendJson(res, { error: '任务标题不能为空' }, 400);
+            return;
+          }
+          task.title = title;
+        }
+        if (body.detail !== undefined) {
+          task.detail = String(body.detail || '').trim().slice(0, 2000);
+        }
+        const nextStatus = body.status !== undefined ? getKanbanStatusKey(body.status) : '';
+        if (nextStatus) {
+          const index = Number.isFinite(Number(body.index)) ? Math.floor(Number(body.index)) : Infinity;
+          if (!moveKanbanTask(state.tasks, taskId, nextStatus, index)) {
+            sendJson(res, { error: '任务不存在' }, 404);
+            return;
+          }
+        }
+        task.updatedAt = new Date().toISOString();
+        writeJson(KANBAN_FILE, state);
+        sendJson(res, { task });
+      } catch (error) {
+        sendJson(res, { error: error.message }, 400);
+      }
+      return;
+    }
+  }
+
   if (req.method === 'GET' && pathname === '/api/status') {
     const environment = searchParams.get('env') || 'release';
     sendJson(res, {
@@ -2007,109 +1719,6 @@ async function handleApi(req, res, pathname, searchParams) {
       });
     } catch (error) {
       sendJson(res, { error: `功能调研配置已保存到本地，但上传 OSS 失败: ${error.message}` }, 500);
-    }
-    return;
-  }
-
-  if (req.method === 'GET' && pathname === '/api/dify/status') {
-    sendJson(res, getDifyStatus());
-    return;
-  }
-
-  // 渠道档案：dashboard 自媒体表单的字段/选项/文案（唯一事实来源，前端据此动态渲染）
-  if (req.method === 'GET' && pathname === '/api/dify/form-config') {
-    sendJson(res, { channels: DIFY_CHANNEL_PROFILES });
-    return;
-  }
-
-  if (req.method === 'GET' && pathname === '/api/dify/article') {
-    const date = searchParams.get('date') || '';
-    const fileName = searchParams.get('file') || '';
-    const filePath = getDifyArticleFile(date, fileName);
-    if (!filePath) {
-      sendJson(res, { error: '文章不存在' }, 404);
-      return;
-    }
-    sendJson(res, { content: fs.readFileSync(filePath, 'utf-8') });
-    return;
-  }
-
-  // 公众号排版 HTML 预览：新标签页直接渲染（内联样式，样式全在标签上，可全选复制进公众号编辑器）
-  if (req.method === 'GET' && pathname === '/api/dify/article-html') {
-    const date = searchParams.get('date') || '';
-    const fileName = searchParams.get('file') || '';
-    if (!fileName.endsWith('.html')) {
-      sendText(res, '仅支持 .html 排版文件', 400);
-      return;
-    }
-    const filePath = getDifyArticleFile(date, fileName);
-    if (!filePath) {
-      sendText(res, '排版文件不存在', 404);
-      return;
-    }
-    sendText(res, fs.readFileSync(filePath, 'utf-8'), 200, 'text/html; charset=utf-8');
-    return;
-  }
-
-  if (req.method === 'POST' && pathname === '/api/dify/custom-run') {
-    try {
-      if (currentRun) {
-        sendJson(res, { error: `已有任务运行中: ${currentRun.taskName}` }, 409);
-        return;
-      }
-      const body = await parseBody(req);
-      const clean = (key, maxLen) => String(body[key] || '').trim().slice(0, maxLen);
-      const requestedWorkflow = clean('workflow', 16);
-      const profile = DIFY_CHANNEL_PROFILES.find(p => p.key === requestedWorkflow) || DIFY_CHANNEL_PROFILES[0];
-      const goal = clean('goal', 2000);
-      if (!goal) {
-        sendJson(res, { error: `「${profile.copy.goalLabel}」必填` }, 400);
-        return;
-      }
-      // 渠道专属下拉统一软校验：不在选项内一律回落首项（首项即默认值）
-      const channelInputs = {};
-      for (const field of profile.fields) {
-        const value = clean(field.key, 80);
-        channelInputs[field.key] = field.options.includes(value) ? value : field.options[0];
-      }
-      const inputs = {
-        topic: clean('topic', 200),
-        ...channelInputs,
-        ...profile.fixedInputs,
-        product_entry: clean('product_entry', 500),
-        sources: clean('sources', 8000),
-        transcript: clean('transcript', 8000),
-        goal,
-        style_reference: clean('style_reference', 20000),
-      };
-      const workflow = profile.key;
-      const taskId = profile.taskId;
-      const inputsFile = profile.inputsFile;
-      writeJson(inputsFile, inputs);
-      const candidateTitle = clean('candidate_title', 300);
-      const candidateTopicId = clean('candidate_topic_id', 300);
-      if (candidateTitle || candidateTopicId) {
-        recordContentTopicUsage({
-          platform: clean('candidate_platform', 40) || workflow,
-          topicKey: candidateTopicId || clean('candidate_url', 1000) || candidateTitle,
-          topicId: candidateTopicId,
-          title: candidateTitle || inputs.topic,
-          source: clean('candidate_source', 300),
-          url: clean('candidate_url', 1000),
-          score: clean('candidate_score', 20),
-          reason: clean('candidate_reason', 1000),
-          action: 'dify_candidate_run',
-        });
-      }
-      const run = createRun(taskId, 'release');
-      currentRun = run;
-      setTaskState(run);
-      setImmediate(() => {
-        executeRun(run).catch(error => console.error('任务启动失败:', error));
-      });
-      sendJson(res, { run }, 202);
-    } catch (error) {
-      sendJson(res, { error: error.message }, 400);
     }
     return;
   }

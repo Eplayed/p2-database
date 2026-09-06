@@ -30,3 +30,6 @@ config/
 # Legacy
 auto_browser/*.json
 !auto_browser/package.json
+
+# Dashboard refactor safety backups (local only)
+dashboard/public/.backup*

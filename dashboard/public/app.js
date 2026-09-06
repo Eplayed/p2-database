@@ -16,15 +16,6 @@ const state = {
       jitterMinutes: 10,
       nextRunAt: 0,
     },
-    self_media: {
-      enabled: false,
-      group: 'self_media',
-      taskId: 'dify_publish_toutiao',
-      taskIds: ['dify_publish_toutiao'],
-      intervalMinutes: 1440,
-      jitterMinutes: 30,
-      nextRunAt: 0,
-    },
   },
   automationRunner: {
     running: false,
@@ -33,37 +24,18 @@ const state = {
     total: 0,
   },
   countdown: null,
-  dify: {
-    status: null,
-    lastFetchAt: 0,
-    openArticle: null,
+  kanban: {
+    statuses: [],
+    tasks: [],
+    composingStatus: '',
+    editingTaskId: '',
+    expandedTaskIds: new Set(),
+    collapsedColumns: new Set(JSON.parse(localStorage.getItem('p2-kanban-collapsed') || '[]')),
   },
 };
 
 const LOG_BOTTOM_THRESHOLD = 32;
 const AUTOMATION_STORAGE_KEY = 'p2-dashboard-automation-v2';
-const DIFY_FORM_STORAGE_KEY = 'p2-dashboard-dify-form-v2';
-const DIFY_FORM_LEGACY_KEY = 'p2-dashboard-dify-form-v1';
-const SELF_MEDIA_INTERVAL_VALUES = [1440, 2880, 4320];
-const SELF_MEDIA_PLATFORM_TASK_IDS = ['dify_publish_toutiao', 'dify_publish_xhs', 'dify_publish_wechat'];
-// Dify 表单分两层：shared 跨渠道共用（选题、素材等），byChannel 按渠道独立记忆（下拉选项各渠道不同）。
-// 渠道档案（字段、选项、文案）由 /api/dify/form-config 下发，前端不硬编码。
-const DIFY_SHARED_DEFAULTS = {
-  topic: '',
-  goal: '帮读者快速了解最新资讯，判断值不值得关注',
-  product_entry: '',
-  sources: '',
-  transcript: '',
-  style_reference: '',
-};
-const DIFY_SHARED_FIELD_IDS = {
-  topic: '#difyTopicInput',
-  goal: '#difyGoalInput',
-  product_entry: '#difyProductInput',
-  sources: '#difySourcesInput',
-  transcript: '#difyTranscriptInput',
-  style_reference: '#difyStyleInput',
-};
 const taskGrid = document.querySelector('#taskGrid');
 const summaryEl = document.querySelector('#summary');
 const logOutput = document.querySelector('#logOutput');
@@ -83,16 +55,6 @@ const automationRunNowBtn = document.querySelector('#automationRunNowBtn');
 const automationToggleBtn = document.querySelector('#automationToggleBtn');
 const automationStatusText = document.querySelector('#automationStatusText');
 const automationNextText = document.querySelector('#automationNextText');
-const mediaAutomationTaskSelect = document.querySelector('#mediaAutomationTaskSelect');
-const mediaAutomationAddTaskBtn = document.querySelector('#mediaAutomationAddTaskBtn');
-const mediaAutomationQueueList = document.querySelector('#mediaAutomationQueueList');
-const mediaAutomationIntervalInput = document.querySelector('#mediaAutomationIntervalInput');
-const mediaAutomationJitterInput = document.querySelector('#mediaAutomationJitterInput');
-const mediaAutomationSaveBtn = document.querySelector('#mediaAutomationSaveBtn');
-const mediaAutomationRunNowBtn = document.querySelector('#mediaAutomationRunNowBtn');
-const mediaAutomationToggleBtn = document.querySelector('#mediaAutomationToggleBtn');
-const mediaAutomationStatusText = document.querySelector('#mediaAutomationStatusText');
-const mediaAutomationNextText = document.querySelector('#mediaAutomationNextText');
 const automationCollapseButtons = [...document.querySelectorAll('.automation-collapse-btn')];
 const panelCollapseButtons = [...document.querySelectorAll('.panel-collapse-btn')];
 const automationNavDot = document.querySelector('#automationNavDot');
@@ -115,36 +77,6 @@ const surveyControlHint = document.querySelector('#surveyControlHint');
 const contentResearchBoard = document.querySelector('#contentResearchBoard');
 const researchPillarFilter = document.querySelector('#researchPillarFilter');
 const researchGameFilter = document.querySelector('#researchGameFilter');
-const difyMeta = document.querySelector('#difyMeta');
-const difyTodayHead = document.querySelector('#difyTodayHead');
-const difyTodayGrid = document.querySelector('#difyTodayGrid');
-const difyArticleList = document.querySelector('#difyArticleList');
-const difyRunAllBtn = document.querySelector('#difyRunAllBtn');
-const difyChannelSelect = document.querySelector('#difyChannelSelect');
-const difyTopicInput = document.querySelector('#difyTopicInput');
-const difyAutoCandidateSelect = document.querySelector('#difyAutoCandidateSelect');
-const difyAutoCandidateRunBtn = document.querySelector('#difyAutoCandidateRunBtn');
-const difyAutoCandidateMeta = document.querySelector('#difyAutoCandidateMeta');
-const difyChannelFieldsWrap = document.querySelector('#difyChannelFields');
-const difyGoalLabel = document.querySelector('#difyGoalLabel');
-const difyStyleLabel = document.querySelector('#difyStyleLabel');
-const difyGoalInput = document.querySelector('#difyGoalInput');
-const difyProductInput = document.querySelector('#difyProductInput');
-const difySourcesInput = document.querySelector('#difySourcesInput');
-const difyTranscriptInput = document.querySelector('#difyTranscriptInput');
-const difyStyleInput = document.querySelector('#difyStyleInput');
-const difyResetFormBtn = document.querySelector('#difyResetFormBtn');
-const difyCustomRunBtn = document.querySelector('#difyCustomRunBtn');
-const difyCustomWrap = document.querySelector('#difyCustomWrap');
-const difyFormToggleBtn = document.querySelector('#difyFormToggleBtn');
-const difyArticleMask = document.querySelector('#difyArticleMask');
-const difyArticleMeta = document.querySelector('#difyArticleMeta');
-const difyArticleTitle = document.querySelector('#difyArticleTitle');
-const difyArticleContent = document.querySelector('#difyArticleContent');
-const difyCopyPublishBtn = document.querySelector('#difyCopyPublishBtn');
-const difyCopyAllBtn = document.querySelector('#difyCopyAllBtn');
-const difyCloseArticleBtn = document.querySelector('#difyCloseArticleBtn');
-const difyPreviewHtmlBtn = document.querySelector('#difyPreviewHtmlBtn');
 const sideNavLinks = [...document.querySelectorAll('.side-nav-link')];
 const RESEARCH_PILLARS = ['抄BD', '看行情', '解卡点', '新闻资讯', '热点信息', '内容观察'];
 
@@ -355,12 +287,7 @@ function renderTasks() {
     {
       id: 'content_research',
       title: '内容研究',
-      description: '为自媒体和小程序策略发现玩家问题、海外趋势和可写选题。结果只保存在本地，不上传 OSS。',
-    },
-    {
-      id: 'self_media',
-      title: '自媒体发文',
-      description: '运行 Dify 发文工作流，生成头条号、小红书、公众号草稿。适合放进自媒体自动运行队列，发布前仍要人工复核。',
+      description: '为自媒体和小程序策略发现玩家问题、海外趋势和可写选题。结果只保存在本地，不上传 OSS。自媒体发文已迁至 media-workbench。',
     },
   ];
 
@@ -481,6 +408,286 @@ function renderHistory() {
       </button>
     `)
     .join('');
+}
+
+// ── 任务看板 ─────────────────────────────────────────────
+// 数据在服务端 runtime/kanban-tasks.json（GET/POST/PATCH/DELETE /api/kanban*）。
+// 列状态、composing/editing 属于界面临时态，存 state.kanban，刷新即清。
+
+const kanbanBoard = document.querySelector('#kanbanBoard');
+const kanbanAddBtn = document.querySelector('#kanbanAddBtn');
+const kanbanNavDot = document.querySelector('#kanbanNavDot');
+
+async function loadKanban() {
+  try {
+    const data = await requestJson('/api/kanban');
+    state.kanban.statuses = data.statuses || [];
+    state.kanban.tasks = data.tasks || [];
+    renderKanban();
+  } catch (error) {
+    if (kanbanBoard) kanbanBoard.innerHTML = `<p class="kanban-empty">看板加载失败：${escapeHtml(error.message)}</p>`;
+  }
+}
+
+function kanbanColumns() {
+  return state.kanban.statuses.map(status => ({
+    ...status,
+    tasks: state.kanban.tasks
+      .filter(task => task.status === status.key)
+      .sort((a, b) => a.order - b.order),
+  }));
+}
+
+function renderKanban() {
+  if (!kanbanBoard) return;
+  kanbanBoard.innerHTML = kanbanColumns().map(column => `
+    <div class="kanban-column${state.kanban.collapsedColumns.has(column.key) ? ' is-collapsed' : ''}" data-status="${column.key}">
+      <div class="kanban-column-head">
+        <button class="kanban-icon-btn kanban-column-toggle" data-toggle-column="${column.key}" type="button" title="展开/收起该列">${state.kanban.collapsedColumns.has(column.key) ? '▸' : '▾'}</button>
+        <span class="kanban-column-title">${escapeHtml(column.label)}</span>
+        <em class="kanban-count">${column.tasks.length}</em>
+        <button class="kanban-icon-btn kanban-column-add" data-add-status="${column.key}" type="button" title="在此列新建任务">+</button>
+      </div>
+      <div class="kanban-card-list" data-status="${column.key}">
+        ${state.kanban.composingStatus === column.key ? renderKanbanComposer(column.key) : ''}
+        ${column.tasks.map(task => renderKanbanCard(task)).join('') || (state.kanban.composingStatus === column.key ? '' : '<p class="kanban-empty">拖卡片到这里</p>')}
+      </div>
+    </div>
+  `).join('');
+  if (kanbanNavDot) kanbanNavDot.hidden = !state.kanban.tasks.some(task => task.status === 'doing');
+  const composer = kanbanBoard.querySelector('.kanban-composer input[name="title"]');
+  if (composer) composer.focus();
+}
+
+function renderKanbanCard(task) {
+  if (state.kanban.editingTaskId === task.id) return renderKanbanEditor(task);
+  return `
+    <article class="kanban-card" draggable="true" data-task-id="${task.id}">
+      <div class="kanban-card-head">
+        <span class="kanban-card-title">${escapeHtml(task.title)}</span>
+        <span class="kanban-card-actions">
+          <button class="kanban-icon-btn" data-edit="${task.id}" type="button" title="编辑">改</button>
+          <button class="kanban-icon-btn kanban-danger" data-delete="${task.id}" type="button" title="删除">删</button>
+        </span>
+      </div>
+      ${task.detail ? `<p class="kanban-card-detail${state.kanban.expandedTaskIds.has(task.id) ? ' is-expanded' : ''}" data-toggle-detail="${task.id}" title="点击展开/收起">${escapeHtml(task.detail)}</p>` : ''}
+      <time class="kanban-card-time" datetime="${task.updatedAt}">${formatTime(task.updatedAt)}</time>
+    </article>
+  `;
+}
+
+function renderKanbanComposer(status) {
+  return `
+    <form class="kanban-composer" data-compose-status="${status}">
+      <input class="kanban-input" name="title" maxlength="200" placeholder="任务标题（必填）" required />
+      <textarea class="kanban-textarea" name="detail" rows="2" maxlength="2000" placeholder="补充说明（可选）：背景、下一步、验收标准"></textarea>
+      <div class="kanban-composer-actions">
+        <button class="ghost-btn" type="submit">保存</button>
+        <button class="ghost-btn" type="button" data-cancel-compose="1">取消</button>
+      </div>
+    </form>
+  `;
+}
+
+function renderKanbanEditor(task) {
+  return `
+    <form class="kanban-composer" data-edit-task-id="${task.id}">
+      <input class="kanban-input" name="title" maxlength="200" value="${escapeHtml(task.title)}" required />
+      <textarea class="kanban-textarea" name="detail" rows="2" maxlength="2000">${escapeHtml(task.detail || '')}</textarea>
+      <div class="kanban-composer-actions">
+        <button class="ghost-btn" type="submit">保存</button>
+        <button class="ghost-btn" type="button" data-cancel-edit="1">取消</button>
+      </div>
+    </form>
+  `;
+}
+
+// 计算落点索引：拖拽卡片相对各卡片中点的位置（排除自身，避免同列移动时把自己算进去）
+function computeKanbanDropIndex(list, clientY, taskId) {
+  const cards = [...list.querySelectorAll('.kanban-card')].filter(card => card.dataset.taskId !== taskId);
+  for (let index = 0; index < cards.length; index += 1) {
+    const rect = cards[index].getBoundingClientRect();
+    if (clientY < rect.top + rect.height / 2) return index;
+  }
+  return cards.length;
+}
+
+async function moveKanbanTaskUi(taskId, status, index) {
+  const task = state.kanban.tasks.find(item => item.id === taskId);
+  if (!task) return;
+  // 乐观更新：本地先按目标列重排，失败再回源重载
+  const columnTasks = state.kanban.tasks
+    .filter(item => item.status === status && item.id !== taskId)
+    .sort((a, b) => a.order - b.order);
+  const clamped = Math.max(0, Math.min(index, columnTasks.length));
+  columnTasks.splice(clamped, 0, task);
+  task.status = status;
+  columnTasks.forEach((item, order) => { item.order = order; });
+  renderKanban();
+  try {
+    await requestJson(`/api/kanban/tasks/${taskId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status, index: clamped }),
+    });
+  } catch (error) {
+    window.alert(`移动失败：${error.message}`);
+    await loadKanban();
+  }
+}
+
+async function saveKanbanComposer(form) {
+  const status = form.dataset.composeStatus;
+  const title = form.elements.title.value.trim();
+  if (!title) return;
+  try {
+    await requestJson('/api/kanban/tasks', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, detail: form.elements.detail.value.trim(), status }),
+    });
+    state.kanban.composingStatus = '';
+    await loadKanban();
+  } catch (error) {
+    window.alert(`保存失败：${error.message}`);
+  }
+}
+
+async function saveKanbanEditor(form) {
+  const taskId = form.dataset.editTaskId;
+  const title = form.elements.title.value.trim();
+  if (!title) return;
+  try {
+    await requestJson(`/api/kanban/tasks/${taskId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, detail: form.elements.detail.value.trim() }),
+    });
+    state.kanban.editingTaskId = '';
+    await loadKanban();
+  } catch (error) {
+    window.alert(`保存失败：${error.message}`);
+  }
+}
+
+async function deleteKanbanTask(taskId) {
+  const task = state.kanban.tasks.find(item => item.id === taskId);
+  if (!task) return;
+  if (!window.confirm(`删除任务「${task.title}」？`)) return;
+  try {
+    await requestJson(`/api/kanban/tasks/${taskId}`, { method: 'DELETE' });
+    state.kanban.tasks = state.kanban.tasks.filter(item => item.id !== taskId);
+    renderKanban();
+  } catch (error) {
+    window.alert(`删除失败：${error.message}`);
+  }
+}
+
+function bindKanban() {
+  if (!kanbanBoard) return;
+
+  kanbanAddBtn?.addEventListener('click', () => {
+    state.kanban.composingStatus = 'todo';
+    state.kanban.editingTaskId = '';
+    renderKanban();
+  });
+
+  kanbanBoard.addEventListener('click', event => {
+    const columnToggle = event.target.closest('[data-toggle-column]');
+    if (columnToggle) {
+      const key = columnToggle.dataset.toggleColumn;
+      if (state.kanban.collapsedColumns.has(key)) {
+        state.kanban.collapsedColumns.delete(key);
+      } else {
+        state.kanban.collapsedColumns.add(key);
+      }
+      localStorage.setItem('p2-kanban-collapsed', JSON.stringify([...state.kanban.collapsedColumns]));
+      renderKanban();
+      return;
+    }
+    const detailToggle = event.target.closest('[data-toggle-detail]');
+    if (detailToggle) {
+      const taskId = detailToggle.dataset.toggleDetail;
+      if (state.kanban.expandedTaskIds.has(taskId)) {
+        state.kanban.expandedTaskIds.delete(taskId);
+      } else {
+        state.kanban.expandedTaskIds.add(taskId);
+      }
+      renderKanban();
+      return;
+    }
+    const addButton = event.target.closest('[data-add-status]');
+    if (addButton) {
+      state.kanban.composingStatus = addButton.dataset.addStatus;
+      state.kanban.editingTaskId = '';
+      renderKanban();
+      return;
+    }
+    if (event.target.closest('[data-cancel-compose]')) {
+      state.kanban.composingStatus = '';
+      renderKanban();
+      return;
+    }
+    if (event.target.closest('[data-cancel-edit]')) {
+      state.kanban.editingTaskId = '';
+      renderKanban();
+      return;
+    }
+    const editButton = event.target.closest('[data-edit]');
+    if (editButton) {
+      state.kanban.editingTaskId = editButton.dataset.edit;
+      state.kanban.composingStatus = '';
+      renderKanban();
+      return;
+    }
+    const deleteButton = event.target.closest('[data-delete]');
+    if (deleteButton) {
+      deleteKanbanTask(deleteButton.dataset.delete);
+    }
+  });
+
+  kanbanBoard.addEventListener('submit', event => {
+    const form = event.target.closest('form.kanban-composer');
+    if (!form) return;
+    event.preventDefault();
+    if (form.dataset.composeStatus) saveKanbanComposer(form);
+    else if (form.dataset.editTaskId) saveKanbanEditor(form);
+  });
+
+  // 拖拽换状态/排序：原生 HTML5 DnD，委托到看板容器
+  kanbanBoard.addEventListener('dragstart', event => {
+    const card = event.target.closest('.kanban-card');
+    if (!card) return;
+    event.dataTransfer.setData('text/plain', card.dataset.taskId);
+    event.dataTransfer.effectAllowed = 'move';
+    card.classList.add('is-dragging');
+  });
+
+  kanbanBoard.addEventListener('dragend', () => {
+    kanbanBoard.querySelectorAll('.kanban-card.is-dragging').forEach(card => card.classList.remove('is-dragging'));
+    kanbanBoard.querySelectorAll('.kanban-column.is-drag-over').forEach(column => column.classList.remove('is-drag-over'));
+  });
+
+  kanbanBoard.addEventListener('dragover', event => {
+    const list = event.target.closest('.kanban-card-list');
+    if (!list) return;
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+    kanbanBoard.querySelectorAll('.kanban-column.is-drag-over').forEach(column => {
+      if (column.dataset.status !== list.dataset.status) column.classList.remove('is-drag-over');
+    });
+    list.closest('.kanban-column').classList.add('is-drag-over');
+  });
+
+  kanbanBoard.addEventListener('drop', event => {
+    const list = event.target.closest('.kanban-card-list');
+    if (!list) return;
+    event.preventDefault();
+    const taskId = event.dataTransfer.getData('text/plain');
+    if (!taskId) return;
+    const index = computeKanbanDropIndex(list, event.clientY, taskId);
+    moveKanbanTaskUi(taskId, list.dataset.status, index);
+  });
 }
 
 function bindHistory() {
@@ -667,26 +874,6 @@ function renderTopicRow(topic) {
   `;
 }
 
-function getPlatformCandidateBundle() {
-  return state.status?.contentResearch?.platformCandidates || null;
-}
-
-function getTopACandidates() {
-  const bundle = getPlatformCandidateBundle();
-  return Array.isArray(bundle?.topA) ? bundle.topA : [];
-}
-
-function getAllPlatformCandidates() {
-  const bundle = getPlatformCandidateBundle();
-  if (!Array.isArray(bundle?.platforms)) return [];
-  return bundle.platforms.flatMap(group => (Array.isArray(group.candidates) ? group.candidates : []));
-}
-
-function findPlatformCandidate(candidateId) {
-  if (!candidateId) return null;
-  return getAllPlatformCandidates().find(candidate => candidate.id === candidateId) || null;
-}
-
 function candidateGradeClass(grade) {
   const normalized = String(grade || 'C').toLowerCase();
   return ['a', 'b', 'c'].includes(normalized) ? `grade-${normalized}` : 'grade-c';
@@ -717,10 +904,11 @@ function renderPlatformCandidate(candidate, index = 0, compact = false) {
           ? `<div class="research-tags">${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}</div>`
           : ''
       }
-      <div class="research-candidate-actions">
-        <button class="ghost-btn research-use-candidate" type="button" data-candidate-id="${escapeHtml(candidate.id)}">采用题材</button>
-        ${candidate.url ? `<a class="research-candidate-source" href="${escapeHtml(candidate.url)}" target="_blank" rel="noreferrer">看来源</a>` : ''}
-      </div>
+      ${
+        candidate.url
+          ? `<div class="research-candidate-actions"><a class="research-candidate-source" href="${escapeHtml(candidate.url)}" target="_blank" rel="noreferrer">看来源</a></div>`
+          : ''
+      }
     </article>
   `;
 }
@@ -739,71 +927,6 @@ function renderPlatformCandidateGroup(group) {
       </div>
     </article>
   `;
-}
-
-function buildCandidateOptionLabel(candidate) {
-  const score = Number(candidate.score || 0).toFixed(1).replace(/\.0$/, '');
-  const title = candidate.title || candidate.topic || '未命名题材';
-  return `${candidate.grade || 'C'}｜${candidate.platformLabel || candidate.platform || '-'}｜${score}分｜${title}`;
-}
-
-function renderDifyCandidateOptions(selectedId = '') {
-  if (!difyAutoCandidateSelect) return;
-  const candidates = getTopACandidates();
-  const currentValue = selectedId || difyAutoCandidateSelect.value;
-  difyAutoCandidateSelect.innerHTML = '<option value="">请选择 A 级题材</option>';
-  for (const candidate of candidates) {
-    const option = document.createElement('option');
-    option.value = candidate.id;
-    option.textContent = buildCandidateOptionLabel(candidate);
-    difyAutoCandidateSelect.appendChild(option);
-  }
-  if (currentValue && candidates.some(candidate => candidate.id === currentValue)) {
-    difyAutoCandidateSelect.value = currentValue;
-  }
-  renderDifyAutoCandidateMeta();
-}
-
-function renderDifyAutoCandidateMeta() {
-  if (!difyAutoCandidateMeta) return;
-  const candidate = findPlatformCandidate(difyAutoCandidateSelect?.value);
-  if (!candidate) {
-    const count = getTopACandidates().length;
-    difyAutoCandidateMeta.textContent = count
-      ? `已准备 ${count} 个 A 级题材，选择后可直接生成。`
-      : '自动运行只使用 A 级题材；如果没有 A 级题材，先去“内容研究看板”更新候选池。';
-    return;
-  }
-  const score = Number(candidate.score || 0).toFixed(1).replace(/\.0$/, '');
-  difyAutoCandidateMeta.textContent = `${candidate.platformLabel || candidate.platform} · ${score} 分 · ${candidate.articleAngle || candidate.reason || '已通过候选池评分'}`;
-}
-
-function applyCandidateToDifyForm(candidate) {
-  if (!candidate) return;
-  const formState = loadDifyFormState();
-  formState.channel = candidate.platform || formState.channel;
-  formState.shared = { ...DIFY_SHARED_DEFAULTS, ...formState.shared };
-  formState.shared.topic = candidate.topic || candidate.title || '';
-  formState.shared.goal = candidate.goal || formState.shared.goal || DIFY_SHARED_DEFAULTS.goal;
-  formState.shared.product_entry = candidate.productEntry || '';
-  formState.shared.sources = candidate.sources || candidate.url || '';
-  if (!formState.shared.transcript && candidate.articleAngle) {
-    formState.shared.transcript = candidate.articleAngle;
-  }
-  formState.byChannel = formState.byChannel || {};
-  formState.byChannel[formState.channel] = {
-    ...(formState.byChannel[formState.channel] || {}),
-    ...(candidate.channelFields || {}),
-  };
-  saveDifyFormState(formState);
-  syncDifyForm();
-  renderDifyCandidateOptions(candidate.id);
-  if (difyCustomWrap?.classList.contains('collapsed')) {
-    difyCustomWrap.classList.remove('collapsed');
-    syncDifyFormCollapse();
-  }
-  document.querySelector('#dify')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  difyTopicInput?.focus();
 }
 
 function renderContentResearchBoard() {
@@ -895,7 +1018,7 @@ function renderContentResearchBoard() {
         <div class="research-candidate-summary">
           <span class="stat-label">今日 A 级题材</span>
           <strong>${topACandidates.length}</strong>
-          <p>按头条号、公众号、小红书各自赛道筛出来。点“采用题材”会带入手动表单；自动稿只采用 A 级，不会跨平台硬套。</p>
+          <p>按头条号、公众号、小红书各自赛道筛出来。发文生成在 media-workbench（端口 5180）操作，这里只做候选池观察与排序。</p>
         </div>
         <div class="research-candidate-grid">
           ${topACandidates.map((candidate, index) => renderPlatformCandidate(candidate, index)).join('') || '<p class="content-research-empty">今天还没有达到 A 级的题材，先观察，不硬写。</p>'}
@@ -935,20 +1058,12 @@ function renderContentResearchBoard() {
       </div>
     </section>
   `;
-
-  contentResearchBoard.querySelectorAll('.research-use-candidate').forEach(button => {
-    button.addEventListener('click', () => {
-      applyCandidateToDifyForm(findPlatformCandidate(button.dataset.candidateId));
-    });
-  });
-  renderDifyCandidateOptions();
 }
 
 async function loadTasks() {
   const data = await requestJson('/api/tasks');
   state.tasks = data.tasks;
   renderAutomationTaskOptions('game_data');
-  renderAutomationTaskOptions('self_media');
   renderTasks();
 }
 
@@ -963,7 +1078,6 @@ async function loadStatus() {
   renderTasks();
   renderHistory();
   renderContentResearchBoard();
-  loadDifyStatus();
   stopBtn.disabled = !data.currentRun;
 
   const currentRun = data.currentRun;
@@ -1100,471 +1214,7 @@ async function runTask(taskId, options = {}) {
   return null;
 }
 
-async function loadDifyStatus(force = false) {
-  const now = Date.now();
-  const difyRunning = Boolean(state.status && state.status.currentRun && String(state.status.currentRun.taskId).startsWith('dify_'));
-  if (!force && now - state.dify.lastFetchAt < (difyRunning ? 2500 : 15000)) return;
-  try {
-    state.dify.status = await requestJson('/api/dify/status');
-    state.dify.lastFetchAt = now;
-    renderDifyPanel();
-  } catch (error) {
-    state.dify.lastFetchAt = Date.now();
-    difyMeta.textContent = `自媒体状态加载失败：${error.message}`;
-  }
-}
-
-function renderDifyPanel() {
-  const status = state.dify.status;
-  if (!status) return;
-  const currentRun = state.status && state.status.currentRun;
-  const disabled = Boolean(currentRun);
-
-  const cronParts = [];
-  cronParts.push(status.configOk ? '<span class="dify-ok">头条号密钥已配置</span>' : '<span class="dify-warn">头条号缺 config.json 或 API Key</span>');
-  cronParts.push(status.wechatConfigOk ? '<span class="dify-ok">公众号密钥已配置</span>' : '<span class="dify-warn">公众号缺 wechat_api_key（导入 07 工作流后在 config.json 填入）</span>');
-  cronParts.push(status.xhsConfigOk ? '<span class="dify-ok">小红书密钥已配置</span>' : '<span class="dify-warn">小红书缺 xhs_api_key（导入 06 工作流后在 config.json 填入）</span>');
-  if (status.cron.installed) {
-    cronParts.push(`定时：${status.cron.scheduleText} · 下次 ${status.cron.nextRun ? formatTime(status.cron.nextRun) : '-'}`);
-  } else {
-    cronParts.push('<span class="dify-warn">crontab 未安装定时任务</span>');
-  }
-  if (status.cron.logTail) {
-    const lastLine = status.cron.logTail.split('\n').filter(Boolean).pop() || '';
-    cronParts.push(`最近一次：${escapeHtml(lastLine.slice(0, 80))}`);
-  }
-  difyMeta.innerHTML = cronParts.join('<span class="dify-meta-divider">·</span>');
-
-  const planCards = (status.todayPlan || []).map(task => `
-    <article class="dify-plan-card ${task.done ? 'done' : ''}">
-      <div class="dify-plan-head">
-        <span class="badge">篇${task.index}</span>
-        <strong>${escapeHtml(task.article_type)}</strong>
-        <span class="dify-plan-state">${task.done ? '已有稿件' : '待生成'}</span>
-      </div>
-      <p>${escapeHtml(task.goal || '')}</p>
-      ${task.ref_account ? `<p class="dify-plan-ref">参考公众号：${escapeHtml(task.ref_account)}</p>` : ''}
-      <div class="dify-plan-actions">
-        <button class="run-btn" data-dify-index="${task.index}" ${disabled ? 'disabled' : ''}>${task.done ? '重新生成' : '生成此篇'}</button>
-        ${task.done ? `<button class="ghost-btn" data-dify-view="${task.index}">查看</button>` : ''}
-      </div>
-    </article>
-  `).join('');
-  difyTodayGrid.innerHTML = planCards || '<p class="dify-empty">今天不在发布日程（一/三/五/日），可以随时手动运行。</p>';
-  difyTodayHead.textContent = status.today ? `今日计划（${status.today}${status.inSchedule ? '' : ' · 非发布日'}）` : '今日计划';
-  difyRunAllBtn.disabled = disabled || !status.inSchedule;
-  difyCustomRunBtn.disabled = disabled;
-  difyResetFormBtn.disabled = disabled;
-  // 表单控件由渠道档案动态渲染，锁定态走 class，避免与渲染时序耦合
-  difyCustomWrap.classList.toggle('is-locked', disabled);
-
-  const articleRows = (status.articles || []).map(article => {
-    const statusClass = article.status.includes('可以发布') ? 'dify-ok' : 'dify-warn';
-    const customBadge = article.custom ? '<span class="badge dify-custom-badge">自定义</span>' : '';
-    const channelBadge =
-      article.channel === 'xhs'
-        ? '<span class="badge dify-xhs-badge">小红书</span>'
-        : article.channel === 'wechat'
-          ? '<span class="badge dify-wechat-badge">公众号</span>'
-          : '';
-    const htmlBadge = article.hasHtml ? '<span class="badge dify-wechat-badge">已排版</span>' : '';
-    return `
-      <button class="dify-article-row" data-dify-article-date="${article.date}" data-dify-article-file="${escapeHtml(article.fileName)}" data-dify-article-html="${article.hasHtml ? '1' : ''}">
-        <span class="dify-article-date">${article.date.slice(5)}</span>
-        <span class="dify-article-title">${article.title ? escapeHtml(article.title) : escapeHtml(article.fileName)}</span>
-        <span class="dify-article-type">${channelBadge}${customBadge}${htmlBadge}${escapeHtml(article.type)}</span>
-        <span class="${statusClass}">${escapeHtml(article.status || '未知')}</span>
-        <span class="dify-article-words">${article.words != null ? `${article.words} 字` : ''}</span>
-      </button>
-    `;
-  }).join('');
-  difyArticleList.innerHTML = articleRows || '<p class="dify-empty">还没有生成过文章。</p>';
-  difyArticleList.classList.toggle('scrollable', (status.articles || []).length > 10);
-}
-
-async function runDifyTask(taskId, confirmText) {
-  if (!window.confirm(confirmText)) return;
-  try {
-    const data = await requestJson('/api/run', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ taskId, environment: state.env }),
-    });
-    state.activeRunId = data.run.runId;
-    state.pinnedLogRunId = '';
-    state.pinnedContextRunId = '';
-    state.logAutoFollow = true;
-    updateLogFollowUi();
-    logTitle.textContent = `${data.run.taskName} · ${data.run.environment} · 启动中`;
-    logOutput.textContent = '任务已启动，等待日志输出...';
-    await loadStatus();
-    await loadDifyStatus(true);
-  } catch (error) {
-    window.alert(error.message);
-  }
-}
-
-async function openDifyArticle(date, fileName, hasHtml = false) {
-  state.dify.openArticle = { date, fileName, hasHtml };
-  difyArticleMeta.textContent = `${date} · ${fileName.replace(/^(\d+|custom|xhs_\w+|wechat_\w+)_/, '').replace(/\.md$/, '')}`;
-  difyArticleTitle.textContent = '加载中...';
-  difyArticleContent.textContent = '';
-  if (difyPreviewHtmlBtn) difyPreviewHtmlBtn.hidden = !hasHtml;
-  difyArticleMask.hidden = false;
-  try {
-    const data = await requestJson(`/api/dify/article?date=${encodeURIComponent(date)}&file=${encodeURIComponent(fileName)}`);
-    state.dify.openArticle.content = data.content;
-    difyArticleTitle.textContent = (data.content.match(/【标题候选[^】]*】\s*\n1[.、]\s*(.*)/) || [])[1] || fileName;
-    difyArticleContent.textContent = data.content;
-  } catch (error) {
-    difyArticleTitle.textContent = '加载失败';
-    difyArticleContent.textContent = error.message;
-  }
-}
-
-async function copyDifyArticle(mode) {
-  const article = state.dify.openArticle;
-  if (!article || !article.content) return;
-  let text = article.content;
-  if (mode === 'publish') {
-    const divider = text.indexOf('\n\n---\n\n【审计报告】');
-    if (divider > 0) text = text.slice(0, divider);
-  }
-  try {
-    await navigator.clipboard.writeText(text.trim());
-    const isXhs = article.fileName.startsWith('xhs_');
-    const isWechat = article.fileName.startsWith('wechat_');
-    window.alert(mode === 'publish'
-      ? (isXhs
-          ? '发布稿已复制，可粘贴到小红书发布页（标题、卡片脚本、正文、标签都在里面）。'
-          : isWechat
-            ? '发布稿已复制，可粘贴到公众号编辑器。'
-            : '发布稿已复制，可粘贴到头条号编辑器。')
-      : '全文已复制。');
-  } catch (error) {
-    window.alert(`复制失败：${error.message}`);
-  }
-}
-
-// ── Dify 自定义表单 ─────────────────────────────────────────────
-// 渠道档案（字段/选项/文案）来自 /api/dify/form-config，是唯一事实来源；
-// 前端只做三件事：按档案渲染渠道专属下拉、按渠道分桶记忆、提交时原样回传。
-
-let difyChannels = [];
-let difyChannelSelects = {};
-
-function readJsonStorage(key) {
-  try {
-    return JSON.parse(window.localStorage.getItem(key)) || {};
-  } catch (error) {
-    return {};
-  }
-}
-
-// v1 旧存储是单桶平铺，迁移为 v2 的按渠道分桶结构，迁移完即清除
-function migrateLegacyDifyForm() {
-  const legacy = readJsonStorage(DIFY_FORM_LEGACY_KEY);
-  if (!Object.keys(legacy).length) return null;
-  const legacyChannelKey = legacy.channel === '小红书' ? 'xhs' : legacy.channel === '公众号' ? 'wechat' : 'toutiao';
-  const legacyToChannelFields = {
-    toutiao: ['ref_account', 'platform', 'article_type'],
-    xhs: ['niche', 'note_type', 'ref_blogger'],
-    wechat: ['ref_account', 'article_type'],
-  };
-  const state = { channel: legacyChannelKey, shared: {}, byChannel: {} };
-  for (const [key, value] of Object.entries(legacy)) {
-    if (key === 'channel') continue;
-    const targetChannel = Object.keys(legacyToChannelFields).find(ch => legacyToChannelFields[ch].includes(key));
-    if (targetChannel) {
-      state.byChannel[targetChannel] = { ...state.byChannel[targetChannel], [key]: value };
-    } else {
-      state.shared[key] = value;
-    }
-  }
-  window.localStorage.removeItem(DIFY_FORM_LEGACY_KEY);
-  return state;
-}
-
-function loadDifyFormState() {
-  const migrated = migrateLegacyDifyForm();
-  const state = migrated || readJsonStorage(DIFY_FORM_STORAGE_KEY);
-  const fallback = difyChannels[0];
-  if (!difyChannels.some(profile => profile.key === state.channel)) state.channel = fallback ? fallback.key : '';
-  state.shared = { ...DIFY_SHARED_DEFAULTS, ...state.shared };
-  state.byChannel = state.byChannel || {};
-  return state;
-}
-
-function saveDifyFormState(state) {
-  window.localStorage.setItem(DIFY_FORM_STORAGE_KEY, JSON.stringify(state));
-}
-
-function currentDifyProfile(state) {
-  return difyChannels.find(profile => profile.key === state.channel) || difyChannels[0];
-}
-
-// 选项不在档案内（如旧存储的过时选项）时回落首项，与服务端 custom-run 的软校验一致
-function pickDifyOption(field, value) {
-  return field.options.includes(value) ? value : field.options[0];
-}
-
-function buildDifySelect(field, value) {
-  const select = document.createElement('select');
-  select.dataset.difyField = field.key;
-  for (const option of field.options) {
-    const optionEl = document.createElement('option');
-    optionEl.value = option;
-    optionEl.textContent = option;
-    select.appendChild(optionEl);
-  }
-  select.value = pickDifyOption(field, value);
-  return select;
-}
-
-// 切换渠道时整体重建：渠道下拉、渠道专属字段、goal/style 文案
-function renderDifyChannelUI(state) {
-  const profile = currentDifyProfile(state);
-  if (!profile) return;
-
-  difyChannelSelect.innerHTML = '';
-  for (const item of difyChannels) {
-    const optionEl = document.createElement('option');
-    optionEl.value = item.key;
-    optionEl.textContent = item.label;
-    optionEl.selected = item.key === profile.key;
-    difyChannelSelect.appendChild(optionEl);
-  }
-
-  difyChannelFieldsWrap.innerHTML = '';
-  difyChannelSelects = {};
-  const savedFields = state.byChannel[profile.key] || {};
-  for (const field of profile.fields) {
-    const label = document.createElement('label');
-    label.className = 'field';
-    const span = document.createElement('span');
-    span.textContent = field.label;
-    const select = buildDifySelect(field, savedFields[field.key]);
-    difyChannelSelects[field.key] = select;
-    label.append(span, select);
-    difyChannelFieldsWrap.appendChild(label);
-  }
-
-  difyGoalLabel.textContent = profile.copy.goalLabel;
-  difyGoalInput.placeholder = profile.copy.goalPlaceholder;
-  difyStyleLabel.textContent = profile.copy.styleLabel;
-  difyStyleInput.placeholder = profile.copy.stylePlaceholder;
-  difyCustomRunBtn.textContent = profile.copy.runButton;
-}
-
-function applyDifyFormValues(state) {
-  renderDifyChannelUI(state);
-  for (const [key, selector] of Object.entries(DIFY_SHARED_FIELD_IDS)) {
-    const element = document.querySelector(selector);
-    if (element) element.value = state.shared[key] != null ? state.shared[key] : '';
-  }
-}
-
-function syncDifyForm() {
-  applyDifyFormValues(loadDifyFormState());
-}
-
-function syncDifyFormCollapse() {
-  if (!difyCustomWrap || !difyFormToggleBtn) return;
-  difyFormToggleBtn.textContent = difyCustomWrap.classList.contains('collapsed') ? '展开表单' : '收起表单';
-}
-
-function initDifyFormCollapse() {
-  if (!difyCustomWrap) return;
-  // 下拉是记忆不是输入，只看 shared 内容是否有自定义来决定展开
-  const state = loadDifyFormState();
-  const hasCustomValues = Object.entries(state.shared)
-    .some(([key, value]) => value && value !== DIFY_SHARED_DEFAULTS[key]);
-  difyCustomWrap.classList.toggle('collapsed', !hasCustomValues);
-  syncDifyFormCollapse();
-}
-
-// 从 DOM 收集表单值：shared 跨渠道共用，渠道字段写入当前渠道的桶
-function collectDifyForm(persist = true) {
-  const state = loadDifyFormState();
-  for (const key of Object.keys(DIFY_SHARED_DEFAULTS)) {
-    const element = document.querySelector(DIFY_SHARED_FIELD_IDS[key]);
-    state.shared[key] = element ? element.value.trim() : '';
-  }
-  const profile = currentDifyProfile(state);
-  if (profile) {
-    const bucket = {};
-    for (const field of profile.fields) {
-      const select = difyChannelSelects[field.key];
-      bucket[field.key] = select ? select.value : pickDifyOption(field, '');
-    }
-    state.byChannel[profile.key] = bucket;
-  }
-  if (persist) saveDifyFormState(state);
-  return { state, profile };
-}
-
-async function runDifyCustom() {
-  const { state, profile } = collectDifyForm();
-  if (!profile) return;
-  if (!state.shared.goal) {
-    window.alert(`「${profile.copy.goalLabel}」必填，请填写后再生成。`);
-    difyGoalInput.focus();
-    return;
-  }
-  const payload = {
-    workflow: profile.key,
-    ...state.shared,
-    ...(state.byChannel[profile.key] || {}),
-  };
-  const topicText = state.shared.topic ? `「${state.shared.topic}」` : '自动找热点';
-  const typeText = profile.fields.map(field => `${field.label}：${payload[field.key]}`).join(' · ');
-  if (!window.confirm(`按表单生成${profile.copy.targetName}？\n${typeText} · 选题：${topicText}\n约 1-3 分钟，消耗 Dify API 额度。`)) return;
-
-  await submitDifyRun(payload);
-}
-
-function buildDifyPayloadFromCandidate(candidate) {
-  const profile = difyChannels.find(item => item.key === candidate.platform) || difyChannels[0];
-  if (!profile) return null;
-  return {
-    workflow: profile.key,
-    topic: candidate.topic || candidate.title || '',
-    goal: candidate.goal || `把「${candidate.title || candidate.topic || '候选题材'}」写成可发布文章。`,
-    product_entry: candidate.productEntry || '',
-    sources: candidate.sources || candidate.url || '',
-    transcript: candidate.articleAngle || candidate.reason || '',
-    style_reference: '',
-    candidate_id: candidate.id || '',
-    candidate_topic_id: candidate.topicId || '',
-    candidate_platform: candidate.platform || profile.key,
-    candidate_title: candidate.title || candidate.topic || '',
-    candidate_source: candidate.source || '',
-    candidate_url: candidate.url || '',
-    candidate_score: candidate.score || '',
-    candidate_reason: candidate.reason || '',
-    ...(candidate.channelFields || {}),
-  };
-}
-
-async function runDifyAutoCandidate() {
-  const candidate = findPlatformCandidate(difyAutoCandidateSelect?.value);
-  if (!candidate) {
-    window.alert('请先选择一个 A 级题材。');
-    return;
-  }
-  const payload = buildDifyPayloadFromCandidate(candidate);
-  if (!payload) {
-    window.alert('自媒体表单配置还没加载完成，请刷新后重试。');
-    return;
-  }
-  const score = Number(candidate.score || 0).toFixed(1).replace(/\.0$/, '');
-  if (!window.confirm(`采用 A 级题材直接生成？\n${candidate.platformLabel || candidate.platform} · ${score} 分\n${candidate.title || candidate.topic}\n约 1-3 分钟，消耗 Dify API 额度。`)) return;
-  await submitDifyRun(payload);
-}
-
-async function submitDifyRun(payload) {
-  try {
-    const data = await requestJson('/api/dify/custom-run', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    state.activeRunId = data.run.runId;
-    state.pinnedLogRunId = '';
-    state.pinnedContextRunId = '';
-    state.logAutoFollow = true;
-    updateLogFollowUi();
-    logTitle.textContent = `${data.run.taskName} · 启动中`;
-    logOutput.textContent = '任务已启动，等待日志输出...';
-    await loadStatus();
-    await loadDifyStatus(true);
-  } catch (error) {
-    window.alert(error.message);
-  }
-}
-
-// 渠道档案从服务端加载后初始化表单；加载失败则禁用生成入口，避免用过期选项提交
-async function bindDifyPanel() {
-  try {
-    const config = await requestJson('/api/dify/form-config');
-    difyChannels = config.channels || [];
-  } catch (error) {
-    difyChannels = [];
-    window.alert('自媒体表单配置加载失败，请刷新页面重试。');
-  }
-  const formReady = difyChannels.length > 0;
-  difyCustomRunBtn.disabled = !formReady;
-  difyResetFormBtn.disabled = !formReady;
-  if (!formReady) return;
-
-  syncDifyForm();
-  initDifyFormCollapse();
-  renderDifyCandidateOptions();
-  document.querySelectorAll('#difyCustomWrap input, #difyCustomWrap textarea').forEach(element => {
-    element.addEventListener('change', () => collectDifyForm());
-  });
-  difyAutoCandidateSelect?.addEventListener('change', renderDifyAutoCandidateMeta);
-  difyAutoCandidateRunBtn?.addEventListener('click', runDifyAutoCandidate);
-  difyChannelFieldsWrap.addEventListener('change', () => collectDifyForm());
-  difyChannelSelect?.addEventListener('change', () => {
-    // 先按存储里的旧渠道把 DOM 值落桶，再把存储切到新渠道并按其档案重建表单
-    collectDifyForm();
-    const state = loadDifyFormState();
-    state.channel = difyChannelSelect.value;
-    saveDifyFormState(state);
-    syncDifyForm();
-  });
-  difyFormToggleBtn?.addEventListener('click', () => {
-    difyCustomWrap.classList.toggle('collapsed');
-    syncDifyFormCollapse();
-  });
-  difyResetFormBtn.addEventListener('click', () => {
-    window.localStorage.removeItem(DIFY_FORM_STORAGE_KEY);
-    syncDifyForm();
-  });
-  difyCustomRunBtn.addEventListener('click', runDifyCustom);
-  difyRunAllBtn.addEventListener('click', () => {
-    runDifyTask('dify_publish_all', '生成今日全部文章？每篇约 1-3 分钟，消耗 Dify API 额度。');
-  });
-  difyTodayGrid.addEventListener('click', event => {
-    const runButton = event.target.closest('[data-dify-index]');
-    if (runButton) {
-      const index = runButton.dataset.difyIndex;
-      runDifyTask(`dify_publish_${index}`, `生成今日第 ${index} 篇？约 1-3 分钟，消耗 Dify API 额度。`);
-      return;
-    }
-    const viewButton = event.target.closest('[data-dify-view]');
-    if (viewButton) {
-      const status = state.dify.status;
-      const task = status && status.todayPlan.find(item => String(item.index) === viewButton.dataset.difyView);
-      if (task) openDifyArticle(status.today, task.fileName);
-    }
-  });
-  difyArticleList.addEventListener('click', event => {
-    const row = event.target.closest('[data-dify-article-date]');
-    if (row) openDifyArticle(row.dataset.difyArticleDate, row.dataset.difyArticleFile, row.dataset.difyArticleHtml === '1');
-  });
-  difyPreviewHtmlBtn?.addEventListener('click', () => {
-    const article = state.dify.openArticle;
-    if (!article) return;
-    const htmlFile = article.fileName.replace(/\.md$/, '.html');
-    window.open(`/api/dify/article-html?date=${encodeURIComponent(article.date)}&file=${encodeURIComponent(htmlFile)}`, '_blank');
-  });
-  difyCopyPublishBtn.addEventListener('click', () => copyDifyArticle('publish'));
-  difyCopyAllBtn.addEventListener('click', () => copyDifyArticle('all'));
-  difyCloseArticleBtn.addEventListener('click', () => {
-    difyArticleMask.hidden = true;
-  });
-  difyArticleMask.addEventListener('click', event => {
-    if (event.target === difyArticleMask) difyArticleMask.hidden = true;
-  });
-  window.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !difyArticleMask.hidden) difyArticleMask.hidden = true;
-  });
-}
-
-
-const AUTOMATION_KINDS = ['game_data', 'self_media'];
+const AUTOMATION_KINDS = ['game_data'];
 const AUTOMATION_CONFIG = {
   game_data: {
     label: '游戏数据',
@@ -1582,22 +1232,6 @@ const AUTOMATION_CONFIG = {
       nextText: automationNextText,
     },
   },
-  self_media: {
-    label: '自媒体发文',
-    defaultTaskId: 'dify_publish_toutiao',
-    selectors: {
-      taskSelect: mediaAutomationTaskSelect,
-      addTaskBtn: mediaAutomationAddTaskBtn,
-      queueList: mediaAutomationQueueList,
-      intervalInput: mediaAutomationIntervalInput,
-      jitterInput: mediaAutomationJitterInput,
-      saveBtn: mediaAutomationSaveBtn,
-      runNowBtn: mediaAutomationRunNowBtn,
-      toggleBtn: mediaAutomationToggleBtn,
-      statusText: mediaAutomationStatusText,
-      nextText: mediaAutomationNextText,
-    },
-  },
 };
 
 function getAutomationKind(kind) {
@@ -1605,12 +1239,7 @@ function getAutomationKind(kind) {
 }
 
 function normalizeAutomationInterval(value, kind = 'game_data', fallback = 120) {
-  const automationKind = getAutomationKind(kind);
-  const number = clampNumber(value, automationKind === 'self_media' ? 30 : 10, fallback);
-  if (automationKind === 'self_media' && !SELF_MEDIA_INTERVAL_VALUES.includes(number)) {
-    return SELF_MEDIA_INTERVAL_VALUES.includes(fallback) ? fallback : 1440;
-  }
-  return number;
+  return clampNumber(value, 10, fallback);
 }
 
 function getAutomationConfig(kind) {
@@ -1625,16 +1254,11 @@ function createDefaultAutomationSettings(kind) {
     group: automationKind,
     taskId: config.defaultTaskId,
     taskIds: [config.defaultTaskId],
-    intervalMinutes: automationKind === 'self_media' ? 1440 : 120,
-    jitterMinutes: automationKind === 'self_media' ? 30 : 10,
+    intervalMinutes: 120,
+    jitterMinutes: 10,
     nextRunAt: 0,
     updatedAt: 0,
   };
-}
-
-function migrateAutomationTaskId(taskId) {
-  if (taskId === 'dify_publish_all' || taskId === 'dify_publish_1' || taskId === 'dify_publish_2') return 'dify_publish_toutiao';
-  return taskId;
 }
 
 function getAutomation(kind) {
@@ -1662,7 +1286,6 @@ function normalizeAutomationTaskIds(taskIds, kind = 'game_data') {
   const seen = new Set();
   const normalized = (Array.isArray(taskIds) ? taskIds : [])
     .map(id => String(id || ''))
-    .map(migrateAutomationTaskId)
     .filter(id => availableIds.has(id))
     .filter(id => {
       if (seen.has(id)) return false;
@@ -1696,7 +1319,6 @@ function normalizeAutomationBundleInput(saved) {
   const isLegacyFlat = raw.taskId || raw.taskIds || raw.intervalMinutes || raw.enabled || raw.nextRunAt;
   return {
     game_data: normalizeAutomationSettingsInput(isLegacyFlat ? raw : raw.game_data, 'game_data'),
-    self_media: normalizeAutomationSettingsInput(isLegacyFlat ? {} : raw.self_media, 'self_media'),
   };
 }
 
@@ -1759,10 +1381,7 @@ function persistAutomationSettings(kind) {
 
 function getSchedulableTasks(kind = 'game_data') {
   const automationKind = getAutomationKind(kind);
-  const tasks = state.tasks.filter(task => task.id && task.group === automationKind);
-  if (automationKind !== 'self_media') return tasks;
-  const byId = new Map(tasks.map(task => [task.id, task]));
-  return SELF_MEDIA_PLATFORM_TASK_IDS.map(id => byId.get(id)).filter(Boolean);
+  return state.tasks.filter(task => task.id && task.group === automationKind);
 }
 
 function getAutomationQueue(kind = 'game_data') {
@@ -1808,13 +1427,11 @@ function renderAutomationQueue(kind = 'game_data') {
       if (!task) return '';
       const isCurrent = state.automationRunner.running && state.automationRunner.kind === automationKind && state.automationRunner.currentIndex === index;
       const gameLabel = task.game === 'all' ? 'ALL' : String(task.game || '').toUpperCase();
-      const taskType = automationKind === 'self_media'
-        ? '生成草稿'
-        : task.localOnly
-          ? '本地内容研究'
-          : Array.isArray(task.steps)
-            ? '流程任务'
-            : '脚本任务';
+      const taskType = task.localOnly
+        ? '本地内容研究'
+        : Array.isArray(task.steps)
+          ? '流程任务'
+          : '脚本任务';
       return `
         <li class="automation-queue-item ${isCurrent ? 'running' : ''}" draggable="${disabled ? 'false' : 'true'}" data-kind="${automationKind}" data-index="${index}">
           <span class="drag-handle" aria-hidden="true">☰</span>
@@ -2211,14 +1828,14 @@ async function boot() {
   bindEnvSwitch();
   bindWorkbenchNav();
   bindPanelCollapses();
-  bindDifyPanel();
+  bindKanban();
   bindHistory();
+  await loadKanban();
   await loadTasks();
   await loadAutomationSettings();
   bindAutomation();
   refreshBtn.addEventListener('click', () => {
     loadStatus();
-    loadDifyStatus(true);
   });
   surveyToggleBtn.addEventListener('click', toggleFeatureSurvey);
   stopBtn.addEventListener('click', stopCurrentTask);
@@ -2238,7 +1855,6 @@ async function boot() {
   researchGameFilter?.addEventListener('change', renderContentResearchBoard);
   updateLogFollowUi();
   await loadStatus();
-  await loadDifyStatus(true);
   window.setInterval(loadStatus, 2500);
 }
 
