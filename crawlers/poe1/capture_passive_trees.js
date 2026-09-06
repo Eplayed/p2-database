@@ -16,6 +16,7 @@ const publicBaseUrl = (process.env.OSS_PUBLIC_BASE_URL || `https://${bucket}.${r
 const remotePrefix = `poe1-season/${env}/miniprogram_data/passive-trees`;
 const passiveIconRemotePrefix = `poe1-season/${env}/miniprogram_data/passive-icons`;
 const TREE_PANEL_SELECTOR = '.relative.col-span-5.mb-0.p-6.lg\\:col-span-3.bg-coolgrey-1050';
+const FULLSCREEN_PASSIVE_RE = /fullscreen-passive-skill-tree|poe\.game\.qq\.com/;
 
 const args = process.argv.slice(2);
 const limitArg = args.find((arg) => arg.startsWith('--limit='));
@@ -76,7 +77,29 @@ async function findTreeCanvas(page) {
   return best;
 }
 
+
+async function findLargestCanvas(page) {
+  const canvases = await page.$$('canvas');
+  let best = null;
+  let bestArea = 0;
+  for (const canvas of canvases) {
+    const box = await canvas.boundingBox();
+    if (!box) continue;
+    const area = box.width * box.height;
+    if (area > bestArea) {
+      best = canvas;
+      bestArea = area;
+    }
+  }
+  return best;
+}
+
 async function captureOne(page, build, index, total) {
+  const isFullscreenType = build.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(build.passiveTreeUrl || '');
+  if (isFullscreenType && !build.passiveTreeImage) {
+    return captureOneFullscreenPage(page, build, index, total);
+  }
+
   const fileName = makeImageFileName(build);
   const outputPath = path.join(outputDir, fileName);
   const publicUrl = makePublicUrl(fileName);
@@ -110,6 +133,43 @@ async function captureOne(page, build, index, total) {
 
   build.passiveTreeImage = publicUrl;
   console.log(`   ${index}/${total} 截图完成 ${build.character}`);
+  return true;
+}
+
+
+async function captureOneFullscreenPage(page, build, index, total) {
+  const fileName = makeImageFileName(build);
+  const outputPath = path.join(outputDir, fileName);
+  const publicUrl = makePublicUrl(fileName);
+
+  if (!force && fs.existsSync(outputPath)) {
+    build.passiveTreeImage = publicUrl;
+    delete build.passiveTreeIsFullscreenPage;
+    console.log(`   ${index}/${total} 已存在 [国服全屏天赋] ${build.character}`);
+    return true;
+  }
+  const isFullscreen = build.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(build.passiveTreeUrl || '');
+  if (!isFullscreen || !build.passiveTreeUrl) {
+    console.warn(`   ${index}/${total} 跳过 [国服全屏天赋] ${build.character}: 条件不匹配或缺少 passiveTreeUrl`);
+    return false;
+  }
+
+  await page.goto(build.passiveTreeUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+  await sleep(1500);
+
+  const canvas = await findLargestCanvas(page);
+  if (!canvas) throw new Error('国服全屏天赋未找到最大 canvas');
+
+  await canvas.screenshot({
+    path: outputPath,
+    type: 'jpeg',
+    quality: 82,
+    omitBackground: false
+  });
+
+  build.passiveTreeImage = publicUrl;
+  delete build.passiveTreeIsFullscreenPage;
+  console.log(`   ${index}/${total} 截图完成 [国服全屏天赋] ${build.character}`);
   return true;
 }
 
@@ -233,7 +293,10 @@ async function capturePassiveTrees() {
     for (let index = 0; index < targets.length; index += 1) {
       const build = targets[index];
       try {
-        const success = await captureOne(page, build, index + 1, targets.length);
+        const isFullscreenType = build.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(build.passiveTreeUrl || '');
+        const success = isFullscreenType
+          ? await captureOneFullscreenPage(page, build, index + 1, targets.length)
+          : await captureOne(page, build, index + 1, targets.length);
         if (success) ok += 1;
       } catch (error) {
         failed += 1;

@@ -1453,7 +1453,10 @@ async function restartBrowserSession(browser, initialUrl = '') {
 
 // ========== 新 API 辅助函数 ==========
 
-async function getBuildId(preferredLeagueUrl = process.env.POE_NINJA_LEAGUE || '') {
+// 赛季单一配置源（league.config.js）；env 可覆盖
+const CONFIGURED_LEAGUE_URL = require('../league.config').urlSlug;
+
+async function getBuildId(preferredLeagueUrl = process.env.POE_NINJA_LEAGUE || CONFIGURED_LEAGUE_URL || '') {
   return new Promise((resolve, reject) => {
     const url = 'https://poe.ninja/poe2/api/data/index-state';
     https.get(url, {
@@ -1471,8 +1474,17 @@ async function getBuildId(preferredLeagueUrl = process.env.POE_NINJA_LEAGUE || '
           const indexedLeague = json.economyLeagues?.find(
             league => league.indexed && !league.hardcore
           );
-          const leagueUrl = preferredLeagueUrl || indexedLeague?.url;
-          const sv = json.snapshotVersions?.find(s => s.url === leagueUrl);
+          let leagueUrl = preferredLeagueUrl || indexedLeague?.url;
+          let sv = json.snapshotVersions?.find(s => s.url === leagueUrl);
+          // 配置的赛季天梯快照未就绪时，回退到当前已索引赛季（与 ninja_digest 守卫一致）
+          if (!sv && preferredLeagueUrl && indexedLeague?.url && leagueUrl !== indexedLeague.url) {
+            const configured = leagueUrl;
+            leagueUrl = indexedLeague.url;
+            sv = json.snapshotVersions?.find(s => s.url === leagueUrl);
+            if (sv) {
+              console.log(`   ⚠️ 配置赛季 ${configured} 天梯快照未就绪，回退到 ${leagueUrl}`);
+            }
+          }
           if (sv) {
             console.log(`   📌 Build ID: ${sv.version} (${sv.snapshotName})`);
             console.log(`   🏷️  当前赛季: ${sv.name} (${sv.url})`);

@@ -16,6 +16,8 @@ const GAMES = {
     legacyOssPrefixes: [`poe2-ladders/${ENV_NAME}/`],
     miniprogram: 'daily-talk',
     files: {
+      allLaddersTranslated: 'all_ladders_translated.json',
+      classes: 'classes.json',
       ladderAnalysis: 'ladder_analysis.json',
       ladderBuildIndex: 'miniprogram_data/ladder_build_index.json',
       economyDigest: 'miniprogram_data/economy_digest.json',
@@ -25,6 +27,12 @@ const GAMES = {
       followUpdates: 'miniprogram_data/follow_updates.json',
       problemGuides: 'miniprogram_data/problem_guides.json',
       problemGuidesManifest: 'miniprogram_data/problem_guides_manifest.json',
+      storyGuides: 'miniprogram_data/story_guides.json',
+    },
+    directories: {
+      players: 'players/',
+      ladderBuildDetails: 'miniprogram_data/ladder_build_details/',
+      economyIcons: 'miniprogram_data/economy-icons/',
     },
   },
   poe1: {
@@ -43,6 +51,11 @@ const GAMES = {
       starterBuilds: 'miniprogram_data/starter_builds.json',
       starterTermsEnrichment: 'miniprogram_data/starter_terms_enrichment.json',
       storyGuide: 'miniprogram_data/story_guide.json',
+    },
+    directories: {
+      story: 'miniprogram_data/story/',
+      passiveTrees: 'miniprogram_data/passive-trees/',
+      passiveIcons: 'miniprogram_data/passive-icons/',
     },
   },
 };
@@ -111,6 +124,22 @@ function summarizeKnownFile(config, key, relativePath) {
     size: info ? info.size : 0,
     updatedAt: info ? info.updatedAt : '',
     count: data ? arrayLength(data, ['items', 'builds', 'skills', 'equipment', 'guides', 'categories']) : 0,
+  };
+}
+
+function summarizeDirectory(config, key, relativePath) {
+  const dirPath = path.join(config.dataDir, relativePath);
+  let exists = false;
+  try {
+    exists = fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory();
+  } catch (error) {
+    exists = false;
+  }
+  return {
+    key,
+    path: relativePath,
+    exists,
+    fileCount: exists ? countFiles(dirPath) : 0,
   };
 }
 
@@ -188,6 +217,11 @@ function createManifest(gameId) {
   if (!config) throw new Error(`未知游戏: ${gameId}`);
   const miniprogramDir = path.join(config.dataDir, 'miniprogram_data');
   const fileEntries = Object.entries(config.files).map(([key, relativePath]) => summarizeKnownFile(config, key, relativePath));
+  const dirEntries = Object.entries(config.directories || {}).map(([key, relativePath]) => summarizeDirectory(config, key, relativePath));
+  const missingKeys = [
+    ...fileEntries.filter(item => !item.exists).map(item => item.key),
+    ...dirEntries.filter(item => !item.exists).map(item => `dir:${item.key}`),
+  ];
   const manifest = {
     schemaVersion: 1,
     game: config.id,
@@ -202,13 +236,16 @@ function createManifest(gameId) {
     miniprogramDataPrefix: `${config.canonicalOssPrefix}miniprogram_data/`,
     summary: gameId === 'poe2' ? createPoe2Summary(config) : createPoe1Summary(config),
     files: Object.fromEntries(fileEntries.map(item => [item.key, item.path])),
+    directories: Object.fromEntries(dirEntries.map(item => [item.key, item.path])),
     health: {
-      status: fileEntries.some(item => !item.exists) ? 'warn' : 'ok',
+      status: missingKeys.length ? 'warn' : 'ok',
       exists: fs.existsSync(config.dataDir),
       fileCount: countFiles(config.dataDir),
       miniprogramFileCount: countFiles(miniprogramDir),
       missingFiles: fileEntries.filter(item => !item.exists).map(item => item.key),
+      missingDirectories: dirEntries.filter(item => !item.exists).map(item => item.key),
       knownFiles: fileEntries,
+      knownDirectories: dirEntries,
     },
   };
 
@@ -232,6 +269,7 @@ function createRegistryEntry(manifest) {
       fileCount: manifest.health.fileCount,
       miniprogramFileCount: manifest.health.miniprogramFileCount,
       missingFiles: manifest.health.missingFiles,
+      missingDirectories: manifest.health.missingDirectories,
     },
   };
 }
@@ -261,7 +299,7 @@ if (require.main === module) {
   console.log(`✅ 游戏 manifest 已生成: ${manifests.map(item => item.game).join(', ')}`);
   console.log(`   环境: ${registry.env}`);
   manifests.forEach(manifest => {
-    console.log(`   - ${manifest.shortName}: ${manifest.health.miniprogramFileCount} 个小程序数据文件，缺失 ${manifest.health.missingFiles.length} 项`);
+    console.log(`   - ${manifest.shortName}: ${manifest.health.miniprogramFileCount} 个小程序数据文件，缺失文件 ${manifest.health.missingFiles.length} 项、缺失目录 ${manifest.health.missingDirectories.length} 项`);
   });
 }
 

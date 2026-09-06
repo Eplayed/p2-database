@@ -350,6 +350,11 @@ function applyCharacterDetail(build, detail) {
     passiveTreeName: '国服天赋树',
     passiveTreeUrl: detail.passiveTreeUrl || '',
     passiveTreeImage: detail.passiveTreeImage || '',
+    passiveTreeIsFullscreenPage: Boolean(
+      !detail.passiveTreeImage &&
+      typeof detail.passiveTreeUrl === 'string' &&
+      /fullscreen-passive-skill-tree|poe\.game\.qq\.com/.test(detail.passiveTreeUrl)
+    ),
     sourceUrl: detail.passiveTreeUrl || build.sourceUrl,
     hasPathOfBuilding: Boolean(detail.pathOfBuildingExport),
     itemCount: equipment.length + flasks.length + jewels.length,
