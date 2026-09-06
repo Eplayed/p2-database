@@ -55,7 +55,7 @@ log(){ echo "[$(date '+%H:%M:%S')] $*" | tee -a "$RUN_LOG"; }
 
 # ---------- 1. 确保 Dashboard 服务在运行 ----------
 SERVER_STARTED=0
-api_alive(){ curl -sf -m 5 "$API/api/tasks" >/dev/null 2>&1; }
+api_alive(){ curl -sf --noproxy '*' -m 5 "$API/api/tasks" >/dev/null 2>&1; }
 
 if ! api_alive; then
   log "Dashboard 未运行，拉起中…"
@@ -70,7 +70,7 @@ if ! api_alive; then
 fi
 
 # ---------- 2. 依次触发任务 ----------
-get_json(){ curl -sf -m 10 "$1" 2>/dev/null; }
+get_json(){ curl -sf --noproxy '*' -m 10 "$1" 2>/dev/null; }
 
 run_id_of(){ # $1=task -> 当前 state 里记录的 runId
   get_json "$API/api/status" | python3 -c "
@@ -79,14 +79,40 @@ try: print(json.load(sys.stdin)['state']['runs'].get('$1',{}).get('runId',''))
 except Exception: print('')" 2>/dev/null
 }
 
-trigger_task(){ # $1=task -> 0 成功触发
-  local code
-  code=$(curl -s -m 10 -o /tmp/p2_run_resp.json -w "%{http_code}" -X POST "$API/api/run" \
-    -H 'Content-Type: application/json' \
-    -d "{\"taskId\":\"$1\",\"environment\":\"$ENV_NAME\"}")
-  if [ "$code" = "202" ]; then return 0; fi
-  log "  触发失败 (HTTP $code): $(head -c 200 /tmp/p2_run_resp.json 2>/dev/null)"
-  return 1
+trigger_task(){ # $1=task -> 0 成功触发；409（其他任务运行中）时等待释放后重试
+  local task="$1" code wait_elapsed=0 retry=0
+  local max_wait="${TASK_WAIT_TIMEOUT:-7200}" # 409 等待上限（ladder 最长约80分钟，默认2小时）
+  while :; do
+    code=$(curl -s --noproxy '*' -m 10 -o /tmp/p2_run_resp.json -w "%{http_code}" -X POST "$API/api/run" \
+      -H 'Content-Type: application/json' \
+      -d "{\"taskId\":\"$task\",\"environment\":\"$ENV_NAME\"}")
+    if [ "$code" = "202" ]; then return 0; fi
+    if [ "$code" = "409" ]; then
+      if [ "$wait_elapsed" = "0" ]; then
+        local holder; holder=$(python3 -c "
+import json
+try: print(json.load(open('/tmp/p2_run_resp.json')).get('error','未知任务'))
+except Exception: print('未知任务')" 2>/dev/null)
+        log "  任务被占用（${holder}），等待释放后重试（上限 ${max_wait}s）"
+      fi
+      if [ "$wait_elapsed" -ge "$max_wait" ]; then
+        log "  等待 ${wait_elapsed}s 后仍被占用，跳过 $task"
+        return 1
+      fi
+      sleep 30; wait_elapsed=$((wait_elapsed+30))
+      if [ $((wait_elapsed % 600)) = "0" ]; then log "  …已等待 ${wait_elapsed}s（占用中）"; fi
+      continue
+    fi
+    # 其他错误（网络抖动/服务重启等）快速重试 3 次
+    retry=$((retry+1))
+    if [ "$retry" -le "3" ]; then
+      log "  触发失败 (HTTP $code)，第 ${retry}/3 次重试…"
+      sleep 10
+      continue
+    fi
+    log "  触发失败 (HTTP $code): $(head -c 200 /tmp/p2_run_resp.json 2>/dev/null)"
+    return 1
+  done
 }
 
 wait_task(){ # $1=task $2=timeout秒 ; 轮询直到 state 里出现新 runId 且无运行中任务
