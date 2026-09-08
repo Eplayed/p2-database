@@ -1,9 +1,8 @@
 name: Update PoE2 Economy
 
 on:
-  schedule:
-    # 北京时间每天 4:00, 10:00, 16:00, 22:00 运行 (UTC 时间)
-    - cron: '0 20,2,8,14 * * *'
+  # 定时执行已关闭（2026-09-08）：日常数据刷新由本地 dashboard 定时任务负责。
+  # 此处仅保留手动触发作为应急备用。
   workflow_dispatch: # 允许手动点击按钮触发
 
 jobs:

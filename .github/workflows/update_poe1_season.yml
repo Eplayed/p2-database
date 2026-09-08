@@ -1,9 +1,8 @@
 name: Update POE1 Season Data
 
 on:
-  schedule:
-    # 每两小时刷新一次；新赛季数据出现在 poe.ninja 后会自动切换，不需要改小程序代码。
-    - cron: '17 */2 * * *'
+  # 定时执行已关闭（2026-09-08）：日常数据刷新由本地 dashboard 定时任务负责。
+  # 此处仅保留手动触发作为应急备用。
   workflow_dispatch:
 
 concurrency:

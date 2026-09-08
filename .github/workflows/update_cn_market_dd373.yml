@@ -1,10 +1,8 @@
 name: Update CN Market DD373
 
 on:
-  schedule:
-    # 试运行：每 15 分钟触发一次，任务内随机等待 0-300 秒后抓取。
-    # 实际访问间隔约 10-20 分钟浮动，用于降低固定频率访问风险。
-    - cron: '*/15 * * * *'
+  # 定时执行已关闭（2026-09-08）：日常数据刷新由本地 dashboard 定时任务负责。
+  # 此处仅保留手动触发作为应急备用。
   workflow_dispatch:
     inputs:
       environment:
