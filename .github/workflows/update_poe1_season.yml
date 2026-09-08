@@ -33,6 +33,12 @@ jobs:
           NODE_ENV: production
         run: npm run poe1:ladder && npm run poe1:economy
 
+      - name: Preserve passive tree screenshot refs
+        # 云端重新生成的 digest 不含天赋截图；从 OSS 现有版本回填引用，避免覆盖本地截图
+        env:
+          NODE_ENV: production
+        run: node scripts/poe1_preserve_tree_refs.js
+
       - name: Upload POE1 data to OSS
         env:
           NODE_ENV: production

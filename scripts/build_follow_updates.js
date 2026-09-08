@@ -140,6 +140,31 @@ const buildFollowUpdates = ({ ladderBuildIndex = {}, cnMarket = {}, previousDige
   }
 }
 
+// 云端 CI 检出里没有本地天梯/行情数据时，从 OSS 公开地址回退读取，
+// 避免用空数据构建 follow_updates 覆盖 OSS 上的完整版本。
+const readInputWithRemoteFallback = async (filePath, remoteUrl, label) => {
+  const local = readJson(filePath, null)
+  if (local && Object.keys(local).length) return local
+  if (typeof fetch !== 'function') return {}
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), 8000)
+  try {
+    const response = await fetch(remoteUrl, { signal: controller.signal })
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    const remote = await response.json()
+    if (remote && Object.keys(remote).length) {
+      console.log(`ℹ️ 本地 ${label} 缺失，已从 OSS 回退读取`)
+      return remote
+    }
+    return {}
+  } catch (error) {
+    console.warn(`⚠️ ${label} 本地与 OSS 均不可用（${error.message}），按空数据处理`)
+    return {}
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
 const readPreviousRemote = async () => {
   if (typeof fetch !== 'function') return {}
   const controller = new AbortController()
@@ -160,10 +185,23 @@ const buildFromCurrentData = async () => {
   const localPrevious = readJson(OUTPUT_FILE, null)
   const previousDigest = localPrevious || await readPreviousRemote()
   const digest = buildFollowUpdates({
-    ladderBuildIndex: readJson(path.join(OUTPUT_DIR, 'ladder_build_index.json'), {}),
-    cnMarket: readJson(path.join(OUTPUT_DIR, 'cn_market_digest.json'), {}),
+    ladderBuildIndex: await readInputWithRemoteFallback(
+      path.join(OUTPUT_DIR, 'ladder_build_index.json'),
+      `${OSS_BASE}/poe2-ladders/${ENV_NAME}/miniprogram_data/ladder_build_index.json`,
+      '天梯 BD 索引'
+    ),
+    cnMarket: await readInputWithRemoteFallback(
+      path.join(OUTPUT_DIR, 'cn_market_digest.json'),
+      `${OSS_BASE}/poe2-ladders/${ENV_NAME}/miniprogram_data/cn_market_digest.json`,
+      '国服行情'
+    ),
     previousDigest,
   })
+  if (!digest.items.length) {
+    // 空数据保护：输入异常时保留现有文件，避免空覆盖
+    console.warn('⚠️ 本次可关注项为 0，跳过写入（防止空数据覆盖现有 follow_updates）')
+    return digest
+  }
   fs.mkdirSync(OUTPUT_DIR, { recursive: true })
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(digest, null, 2))
   console.log('🔔 我的关注变化摘要已生成')
