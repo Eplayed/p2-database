@@ -7,6 +7,7 @@ const {
   getBrowserRestartInterval,
   isRecoverableBrowserError,
 } = require("./puppeteer_resilience");
+const { lookupOfficialStat } = require("../crawlers/shared/officialDict");
 
 // 加载翻译字典
 let dictBase = {},
@@ -981,6 +982,11 @@ function translateSingleMod(line) {
     const prefix = applyTermTranslations(prefixMatch[1]);
     return `${prefix}：${translateSingleMod(prefixMatch[2])}`;
   }
+
+  // 官方词缀优先：国服交易站与国际服交易站共用同一套 stat id，按 id 配对后
+  // 可拿到国服官方译名。命中即返回，未命中再走下方的自定义正则与关键词兜底。
+  const officialStat = lookupOfficialStat(text);
+  if (officialStat) return officialStat;
 
   const customPatterns = [
     { regex: /^Lasts ([\d.]+) Seconds$/i, replace: "持续 $1 秒" },
@@ -2009,4 +2015,4 @@ if (require.main === module) {
   runTask();
 }
 
-module.exports = { runTask };
+module.exports = { runTask, translateSingleMod, translateMods };

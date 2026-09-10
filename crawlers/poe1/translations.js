@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { lookupOfficialStat } = require('../shared/officialDict');
 
 function readJson(fileName, fallback) {
   try {
@@ -376,6 +377,12 @@ function replaceKeywords(text) {
 function translateStatText(value) {
   if (!value) return '';
   const text = `${value}`.trim();
+
+  // 官方词缀优先：国服交易站与国际服交易站共用同一套 stat id，按 id 配对后
+  // 可拿到国服官方译名。命中即返回，未命中再走下方的自定义正则与关键词兜底。
+  const officialStat = lookupOfficialStat(text, 'poe1');
+  if (officialStat) return officialStat;
+
   const customPatterns = [
     [/^Quality(?: \((.+) Modifiers\))?: ([+-]?[\d.]+%)$/, (_, type, number) => `品质${type ? `（${replaceKeywords(type)}词缀）` : ''}: ${number}`],
     [/^Armour: ([\d,]+)$/, (_, number) => `护甲: ${number}`],
