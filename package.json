@@ -11,6 +11,8 @@
     "crawl:all": "node crawlers/run.js --all",
     "crawl:dict": "node crawlers/run.js --dict",
     "build:dict": "cd base-data && node merge_data.js",
+    "build:official-dict": "node scripts/build_official_dict.js",
+    "report:official-dict": "node scripts/report_official_dict_impact.js",
     "crawl:ladder": "NODE_ENV=production node crawlers/run.js --ladder",
     "crawl:ladder:dev": "NODE_ENV=dev node crawlers/run.js --ladder",
     "refresh:ladder-distribution": "NODE_ENV=production node scripts/refresh_ladder_distribution.js && NODE_ENV=production node scripts/aggregate_analysis.js && NODE_ENV=production node scripts/upload_analysis.js",
