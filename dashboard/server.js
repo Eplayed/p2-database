@@ -1110,27 +1110,31 @@ function inferCandidateProductEntry(topic, platform) {
   return '';
 }
 
+// 候选文章类型推断。产出值必须与 media-workbench server.js DIFY_CHANNEL_PROFILES 的
+// article_type/note_type 权威枚举一致（2026-09-16 对齐：旧「数码消费判断」等自造枚举
+// 会被工作台软校验静默回落成默认类型，导致科技题材被硬塞游戏类型、主编闸门 hold）。
+// 权威源漂移时优先改这里；media-workbench 侧另有别名映射表兜底历史落盘数据。
 function inferCandidateArticleType(topic, platform) {
   const text = getCandidateCombinedText(topic);
   const game = normalizeCandidateGame(topic?.game);
   if (platform === 'xhs') {
-    if (candidateHasAny(text, ['职场', '上班', '通勤', '成长'])) return '职场经验卡片';
+    if (candidateHasAny(text, ['职场', '上班', '通勤', '成长'])) return '情绪共鸣日常';
     if (candidateHasAny(text, ['情绪', '焦虑', '治愈', '共鸣'])) return '情绪共鸣日常';
     if (candidateHasAny(text, ['外观', '幻化', '坐骑', '宠物'])) return '外观合集';
-    if (candidateHasAny(text, ['避坑', '买错', '亏', '省钱'])) return '女性玩家避雷';
+    if (candidateHasAny(text, ['避坑', '买错', '亏', '省钱'])) return '新手避雷攻略';
     return '好物种草清单';
   }
   if (platform === 'wechat') {
-    if (candidateHasAny(text, ['dify', 'codex', '工作流', '自动化', '提示词', 'agent'])) return 'AI工作流教程';
-    if (candidateHasAny(text, ['工具', '产品', '实操', '教程'])) return 'AI工具实操';
+    if (candidateHasAny(text, ['dify', 'codex', '工作流', '自动化', '提示词', 'agent'])) return 'AI教程实操';
+    if (candidateHasAny(text, ['工具', '产品', '实操', '教程'])) return 'AI教程实操';
     if (candidateHasAny(text, ['行业', '融资', '公司', '发布会', '模型'])) return 'AI行业观察';
-    return 'AI科技资讯';
+    return 'AI资讯解读';
   }
   if (game === 'wow' && candidateHasAny(text, ['公告', '蓝帖', '活动', '上线', '维护', '机制'])) return '魔兽资讯短文';
-  if (candidateHasAny(text, ['数码', '手机', '显卡', '电脑', 'AI设备'])) return '数码消费判断';
-  if (candidateHasAny(text, ['汽车', '新能源', '油耗', '买车'])) return '汽车普通人账本';
-  if (candidateHasAny(text, ['观点', '争议', '要不要', '值不值', '怀旧', '老玩家'])) return '老玩家热点短评';
-  return '游戏硬核杂谈';
+  if (candidateHasAny(text, ['数码', '手机', '显卡', '电脑', 'AI设备'])) return '数码资讯短文';
+  if (candidateHasAny(text, ['汽车', '新能源', '油耗', '买车'])) return '汽车资讯短文';
+  if (candidateHasAny(text, ['观点', '争议', '要不要', '值不值', '怀旧', '老玩家'])) return '暗金短评';
+  return '暗金观察长文';
 }
 
 function buildCandidateSources(topic) {
@@ -1209,21 +1213,22 @@ function buildPlatformCandidate(topic, platform, index, context = {}) {
   const channelFields =
     platform === 'xhs'
       ? {
+          // niche 枚举权威源：media-workbench DIFY_CHANNEL_PROFILES（['游戏·女性玩家','情感成长',…]）
           niche: candidateHasAny(getCandidateCombinedText(topic), ['职场', '上班', '通勤'])
-            ? '职场成长'
+            ? '情感成长'
             : candidateHasAny(getCandidateCombinedText(topic), ['情绪', '焦虑', '共鸣'])
-              ? '情感共鸣'
-              : '女性玩家',
+              ? '情感成长'
+              : '游戏·女性玩家',
           note_type: articleType,
-          ref_blogger: '低粉爆款拆解型',
+          ref_blogger: '干货攻略型',
         }
       : platform === 'wechat'
         ? {
-            ref_account: '自动（AI科技）',
+            ref_account: '自动（默认程序员鱼皮）',
             article_type: articleType,
           }
         : {
-            ref_account: '自动（暗金观察）',
+            ref_account: '自动（默认艾泽拉斯前哨）',
             platform: '头条号',
             article_type: articleType,
           };
