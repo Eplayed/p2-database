@@ -8,6 +8,7 @@ const fs = require('fs')
 const https = require('https')
 const path = require('path')
 const puppeteer = require('puppeteer')
+const { ensureChrome } = require('../crawlers/shared/chromeGuard')
 
 const isDev = process.env.NODE_ENV === 'dev'
 const dataDir = path.join(__dirname, '..', 'translated-data', isDev ? 'dev' : 'release')
@@ -56,6 +57,7 @@ async function main() {
   const targetUrl = `https://poe.ninja/poe2/builds/${leagueUrl}`
   console.log(`刷新职业真实分布: ${targetUrl}`)
 
+  await ensureChrome(puppeteer)
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']

@@ -18,6 +18,7 @@
  */
 
 const puppeteer = require('puppeteer');
+const { ensureChrome } = require('../shared/chromeGuard');
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
@@ -119,6 +120,7 @@ async function main() {
 
   // 启动浏览器（headless=false 方便手动登录）
   console.log('🚀 启动 Chromium...');
+  await ensureChrome(puppeteer);
   const browser = await puppeteer.launch({
     headless: false,  // 首次需要看到窗口
     args: [

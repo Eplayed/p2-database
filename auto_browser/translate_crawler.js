@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+const { ensureChrome } = require("../crawlers/shared/chromeGuard");
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
@@ -634,9 +635,11 @@ async function createBrowser(retryCount = 0) {
     ],
   };
   
-  // 只有明确指定路径时才使用
+  // 只有明确指定路径时才使用；否则预检默认缓存里的 Chrome，缺失则自动重装
   if (CHROME_PATH) {
     launchOptions.executablePath = CHROME_PATH;
+  } else {
+    await ensureChrome(puppeteer);
   }
   
   try {

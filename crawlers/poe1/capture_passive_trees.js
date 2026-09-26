@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
+const { ensureChrome } = require('../shared/chromeGuard');
 require('dotenv').config({ path: path.join(__dirname, '../../auto_browser/.env') });
 
 const env = process.env.NODE_ENV === 'dev' ? 'dev' : 'release';
@@ -269,6 +270,7 @@ async function capturePassiveTrees() {
   console.log(`   目标: ${Number.isFinite(limit) ? targets.length : '全部'} / ${builds.length}`);
   console.log(`   输出: ${outputDir}`);
 
+  await ensureChrome(puppeteer);
   const browser = await puppeteer.launch({
     headless: 'new',
     args: [
