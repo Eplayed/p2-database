@@ -24,15 +24,6 @@ const TOPIC_USAGE_COOLDOWN_DAYS = 5;
 // - 本工作台仍保留选题池采集（forum_content_scan）与候选池排序（/api/status 的 contentResearch），
 //   以及选题冷却/表现回填两个共享文件的读取（media-workbench 负责写入）。
 const PORT = Number(process.env.DASHBOARD_PORT || 5177);
-// 任务看板：跨会话的任务进度台账，数据在 runtime/kanban-tasks.json，列定义前后端共用（GET /api/kanban 下发）。
-// 约定：会话中任务进度有变化时，同步更新这份文件（或调看板 API）。
-const KANBAN_FILE = path.join(RUNTIME_DIR, 'kanban-tasks.json');
-const KANBAN_STATUSES = [
-  { key: 'todo', label: '待办' },
-  { key: 'doing', label: '进行中' },
-  { key: 'blocked', label: '等待中' },
-  { key: 'done', label: '已完成' },
-];
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -286,46 +277,6 @@ function getAutomationGroup(value) {
 
 function getAutomationDefaultTaskId(group) {
   return 'daily_publish';
-}
-
-// ── 任务看板 ─────────────────────────────────────────────
-function getKanbanStatusKey(value) {
-  return KANBAN_STATUSES.some(status => status.key === value) ? value : 'todo';
-}
-
-function getKanbanState() {
-  return readJson(KANBAN_FILE, { tasks: [] });
-}
-
-function createKanbanTask(title, detail, status) {
-  const now = new Date().toISOString();
-  return {
-    id: `t_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`,
-    title,
-    detail,
-    status,
-    order: 0,
-    createdAt: now,
-    updatedAt: now,
-  };
-}
-
-// 把任务移动到目标列的 index 位置（末尾传 Infinity），并重排该列 order
-function moveKanbanTask(tasks, taskId, status, index) {
-  const taskIndex = tasks.findIndex(task => task.id === taskId);
-  if (taskIndex === -1) return false;
-  const [task] = tasks.splice(taskIndex, 1);
-  task.status = status;
-  // filter 得到的是副本：在这里排好序、插好位置、编好 order，
-  // 再用「其余任务 + 新列顺序」整体替换 tasks（渲染按 status+order 分组，数组内顺序无关）
-  const columnTasks = tasks.filter(item => item.status === status).sort((a, b) => a.order - b.order);
-  const clamped = Math.max(0, Math.min(index, columnTasks.length));
-  columnTasks.splice(clamped, 0, task);
-  columnTasks.forEach((item, order) => { item.order = order; });
-  const others = tasks.filter(item => item.status !== status);
-  tasks.length = 0;
-  tasks.push(...others, ...columnTasks);
-  return true;
 }
 
 function normalizeAutomationTaskIds(taskIds, group = 'game_data') {
@@ -1581,86 +1532,6 @@ async function handleApi(req, res, pathname, searchParams) {
         .map(({ command, hidden, ...task }) => task),
     });
     return;
-  }
-
-  // ── 任务看板 ──
-  if (req.method === 'GET' && pathname === '/api/kanban') {
-    sendJson(res, { statuses: KANBAN_STATUSES, tasks: getKanbanState().tasks });
-    return;
-  }
-
-  if (req.method === 'POST' && pathname === '/api/kanban/tasks') {
-    try {
-      const body = await parseBody(req);
-      const title = String(body.title || '').trim().slice(0, 200);
-      if (!title) {
-        sendJson(res, { error: '任务标题必填' }, 400);
-        return;
-      }
-      const state = getKanbanState();
-      const status = getKanbanStatusKey(body.status);
-      const task = createKanbanTask(title, String(body.detail || '').trim().slice(0, 2000), status);
-      // 新任务插到目标列顶部：原列内任务整体后移
-      state.tasks.filter(item => item.status === status).forEach(item => { item.order += 1; });
-      state.tasks.push(task);
-      writeJson(KANBAN_FILE, state);
-      sendJson(res, { task }, 201);
-    } catch (error) {
-      sendJson(res, { error: error.message }, 400);
-    }
-    return;
-  }
-
-  if (pathname.startsWith('/api/kanban/tasks/')) {
-    const taskId = pathname.slice('/api/kanban/tasks/'.length);
-    const state = getKanbanState();
-    const task = state.tasks.find(item => item.id === taskId);
-
-    if (req.method === 'DELETE') {
-      if (!task) {
-        sendJson(res, { error: '任务不存在' }, 404);
-        return;
-      }
-      state.tasks = state.tasks.filter(item => item.id !== taskId);
-      writeJson(KANBAN_FILE, state);
-      sendJson(res, { ok: true });
-      return;
-    }
-
-    if (req.method === 'PATCH') {
-      try {
-        if (!task) {
-          sendJson(res, { error: '任务不存在' }, 404);
-          return;
-        }
-        const body = await parseBody(req);
-        if (body.title !== undefined) {
-          const title = String(body.title || '').trim().slice(0, 200);
-          if (!title) {
-            sendJson(res, { error: '任务标题不能为空' }, 400);
-            return;
-          }
-          task.title = title;
-        }
-        if (body.detail !== undefined) {
-          task.detail = String(body.detail || '').trim().slice(0, 2000);
-        }
-        const nextStatus = body.status !== undefined ? getKanbanStatusKey(body.status) : '';
-        if (nextStatus) {
-          const index = Number.isFinite(Number(body.index)) ? Math.floor(Number(body.index)) : Infinity;
-          if (!moveKanbanTask(state.tasks, taskId, nextStatus, index)) {
-            sendJson(res, { error: '任务不存在' }, 404);
-            return;
-          }
-        }
-        task.updatedAt = new Date().toISOString();
-        writeJson(KANBAN_FILE, state);
-        sendJson(res, { task });
-      } catch (error) {
-        sendJson(res, { error: error.message }, 400);
-      }
-      return;
-    }
   }
 
   if (req.method === 'GET' && pathname === '/api/status') {

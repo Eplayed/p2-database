@@ -24,11 +24,6 @@
             <span>自动运行</span>
             <em class="nav-dot" id="automationNavDot" hidden title="自动运行已开启"></em>
           </a>
-          <a href="#kanban" class="side-nav-link" data-section="kanban">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"/><path d="M19 3v18"/><path d="M12 3v10"/><rect width="4" height="6" x="3" y="7" rx="1"/><rect width="4" height="6" x="10" y="7" rx="1"/><rect width="4" height="6" x="17" y="7" rx="1"/></svg>
-            <span>任务看板</span>
-            <em class="nav-dot" id="kanbanNavDot" hidden title="有进行中的任务"></em>
-          </a>
           <a href="#tasks" class="side-nav-link" data-section="tasks">
             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg>
             <span>任务流程</span>
@@ -128,19 +123,6 @@
             </div>
           </article>
         </div>
-      </section>
-
-      <section class="panel kanban-panel" id="kanban">
-        <div class="panel-head">
-          <div>
-            <h2>任务看板</h2>
-            <p>记录跨天的工作进度，拖动卡片换状态。每天开工先看这里，避免方向偏差。</p>
-          </div>
-          <div class="panel-actions">
-            <button class="ghost-btn" id="kanbanAddBtn" type="button">新建任务</button>
-          </div>
-        </div>
-        <div class="kanban-board" id="kanbanBoard"></div>
       </section>
 
       <section class="panel" id="tasks">
