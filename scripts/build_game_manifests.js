@@ -28,6 +28,7 @@ const GAMES = {
       problemGuides: 'miniprogram_data/problem_guides.json',
       problemGuidesManifest: 'miniprogram_data/problem_guides_manifest.json',
       storyGuides: 'miniprogram_data/story_guides.json',
+      initialChapters: 'miniprogram_data/initial_chapters.json',
     },
     directories: {
       players: 'players/',

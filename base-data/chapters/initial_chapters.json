@@ -1,0 +1,788 @@
+[
+  {
+    "id": 1,
+    "name": "第一章：海岸开端",
+    "description": "从污流河畔到欧甘庄园，击败吉诺恩伯爵",
+    "tasks": [
+      {
+        "id": 1,
+        "name": "击杀浮肿伐木工",
+        "description": "击败污流河畔区域的boss浮肿伐木工",
+        "priority": "high",
+        "reward": "经验值",
+        "tips": "boss位于污流河畔，击败后进入克里费尔营地",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-1.png"]
+      },
+      {
+        "id": 2,
+        "name": "激活克里费尔传送点",
+        "description": "找到贝拉并激活克里费尔传送点",
+        "priority": "high",
+        "reward": "10%冰抗",
+        "tips": "腐败兽群的贝拉位于地图偏中部",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-2-1.png", "https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-2-2.png"]
+      },
+      {
+        "id": 3,
+        "name": "击杀暴噬虫",
+        "description": "在泥穴击杀头目暴噬虫",
+        "priority": "medium",
+        "reward": "1级辅助宝石",
+        "tips": "击杀后回城对话蓝礼获得辅助宝石",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-3.png"]
+      },
+      {
+        "id": 4,
+        "name": "探索韧木森林",
+        "description": "找到阴森网道、红谷入口并激活传送点",
+        "priority": "high",
+        "reward": "主线进度",
+        "tips": "阴森网道在中部发光石头附近，红谷在地图边缘",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-4.png"]
+      },
+      {
+        "id": 5,
+        "name": "完成红谷任务",
+        "description": "收集3个激活点道具并击败boss",
+        "priority": "medium",
+        "reward": "任务奖励",
+        "tips": "激活点分布在地图各处，需要仔细寻找",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-4-2.png"]
+      },
+      {
+        "id": 6,
+        "name": "解放兜帽密师",
+        "description": "在韧木森林解放兜帽密师",
+        "priority": "high",
+        "reward": "主线推进",
+        "tips": "完成后回城对话推进剧情",
+        "completed": false
+      },
+      {
+        "id": 7,
+        "name": "击杀腐烂的德鲁伊",
+        "description": "在阴森网道击杀boss",
+        "priority": "low",
+        "reward": "1级辅助宝石",
+        "tips": "可选择击杀，必定掉落辅助宝石",
+        "completed": false
+      },
+      {
+        "id": 8,
+        "name": "探索永恒园林",
+        "description": "完成执政官地宫、伴侣寝宫boss战",
+        "priority": "high",
+        "reward": "1级辅助宝石",
+        "tips": "配偶墓室精英怪必定掉落辅助宝石",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-8.png"]
+      },
+      {
+        "id": 9,
+        "name": "击杀悬铃巨鸦",
+        "description": "在猎场击败boss悬铃巨鸦",
+        "priority": "high",
+        "reward": "2点天赋点",
+        "tips": "boss位于地图角落，建议先激活传送点",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-9.png"]
+      },
+      {
+        "id": 10,
+        "name": "迷雾之王挑战",
+        "description": "在茂荆深林完成侠义祭坛召唤boss",
+        "priority": "high",
+        "reward": "30精魂、4级精魂宝石、护符三选一",
+        "tips": "需要激活3个侠义祭坛点",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-10.png"]
+      },
+      {
+        "id": 11,
+        "name": "寻找乌娜的鲁特琴",
+        "description": "在欧甘农地寻找支线道具",
+        "priority": "medium",
+        "reward": "2天赋点",
+        "tips": "位置偏中，房屋内道具无需战斗",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-11.png"]
+      },
+      {
+        "id": 12,
+        "name": "击败惩罚者Boss",
+        "description": "在欧甘村庄击杀boss",
+        "priority": "high",
+        "reward": "5级技能宝石",
+        "tips": "boss在左上方，击败后开启庄园城壁",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-12.png"]
+      },
+      {
+        "id": 13,
+        "name": "开启回收台",
+        "description": "完成欧甘村庄支线任务",
+        "priority": "medium",
+        "reward": "回收台功能",
+        "tips": "寻找任务道具回城对话开启",
+        "completed": false
+      },
+      {
+        "id": 14,
+        "name": "击败烛火雕像活化者",
+        "description": "在欧甘庄园第一层击杀boss",
+        "priority": "medium",
+        "reward": "20点最大生命值",
+        "tips": "建议冰冷抗性40%以上挑战",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-13.png"]
+      },
+      {
+        "id": 15,
+        "name": "击败吉诺恩伯爵",
+        "description": "第一章最终boss战",
+        "priority": "high",
+        "reward": "章节完成",
+        "tips": "位于欧甘庄园第三层，击败后对话兜帽密师",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/1-14.png"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "第二章：荒漠征程",
+    "description": "从瓦斯提里外沿到无畏战车，最终boss为闪电伤害",
+    "tasks": [
+      {
+        "id": 16,
+        "name": "击败摧寨魔Boss",
+        "description": "在瓦斯提里外沿击杀boss",
+        "priority": "high",
+        "reward": "5级技能宝石",
+        "tips": "与npc对话后再出去打，上车队移动",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-1.png"]
+      },
+      {
+        "id": 17,
+        "name": "哈拉妮之门剧情",
+        "description": "完成哈拉妮之门的对话和返回任务",
+        "priority": "high",
+        "reward": "主线推进",
+        "tips": "下车跑对话返回车队，移动至莫丹采石场",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-2.png"]
+      },
+      {
+        "id": 18,
+        "name": "击败工程师Boss",
+        "description": "在莫丹矿场击杀boss",
+        "priority": "medium",
+        "reward": "主线推进",
+        "tips": "击杀后释放npc，回城对话",
+        "completed": false
+      },
+      {
+        "id": 19,
+        "name": "击败贝尔巴拉",
+        "description": "在叛徒小径击杀boss",
+        "priority": "medium",
+        "reward": "贝尔巴拉的巴雅",
+        "tips": "古代封印石碑附近，可开启试炼关卡",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-3.png"]
+      },
+      {
+        "id": 20,
+        "name": "击杀亚曼拉复生之王",
+        "description": "在哈拉妮之门击败boss",
+        "priority": "high",
+        "reward": "7级技能石",
+        "tips": "boss二阶段会跑路，触发记录点后回城",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-4.png"]
+      },
+      {
+        "id": 21,
+        "name": "获取烈日部族遗物",
+        "description": "在遗迹深坑刷取任务道具",
+        "priority": "high",
+        "reward": "2级辅助宝石",
+        "tips": "一定要掉落道具后再打boss，可反复刷",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-5.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-6.png"]
+      },
+      {
+        "id": 22,
+        "name": "获取部落浮雕纹饰",
+        "description": "在克斯城刷取任务道具",
+        "priority": "high",
+        "reward": "2天赋点",
+        "tips": "必须刷出来才能推进掩埋的殿堂剧情",
+        "completed": false
+      },
+      {
+        "id": 23,
+        "name": "击杀狂蟒女王卡巴菈",
+        "description": "在克斯城击败boss",
+        "priority": "high",
+        "reward": "2点天赋",
+        "tips": "找到后进入失落之城",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-7.png"]
+      },
+      {
+        "id": 24,
+        "name": "激活墓室和画廊",
+        "description": "在失落之城获取特殊掉落",
+        "priority": "low",
+        "reward": "7级精魂宝石、珠宝",
+        "tips": "墓室掉落精魂宝石，画廊甲虫掉落珠宝",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-8.png"]
+      },
+      {
+        "id": 25,
+        "name": "获取可疑石棺奖励",
+        "description": "在掩埋的殿堂开启石棺",
+        "priority": "medium",
+        "reward": "2级辅助宝石",
+        "tips": "小怪很多，推荐选择闪电抗戒指",
+        "completed": false
+      },
+      {
+        "id": 26,
+        "name": "击杀忘却之子",
+        "description": "在克斯之心击败boss",
+        "priority": "high",
+        "reward": "2级辅助宝石",
+        "tips": "击败后等待烧完再捡任务道具",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-9.png"]
+      },
+      {
+        "id": 27,
+        "name": "激活巨人之谷神殿",
+        "description": "找到3个触发神殿",
+        "priority": "high",
+        "reward": "护符栏位",
+        "tips": "绕地图跑一圈点亮，可获得重要增益",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-10.png"]
+      },
+      {
+        "id": 28,
+        "name": "击杀巨像Boss",
+        "description": "在巨人石窟最终boss战",
+        "priority": "high",
+        "reward": "2级辅助宝石",
+        "tips": "获得合成道具，车队前往哈尼拉之门",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-11.png"]
+      },
+      {
+        "id": 29,
+        "name": "完成徳沙尔任务线",
+        "description": "徳沙尔到高塔的完整任务",
+        "priority": "high",
+        "reward": "+10%闪电抗性",
+        "tips": "警惕双子boss建议逐个击破",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-12.png"]
+      },
+      {
+        "id": 30,
+        "name": "无畏队战车先锋",
+        "description": "第二章最终boss战",
+        "priority": "high",
+        "reward": "章节完成",
+        "tips": "高闪电抗性挑战，击败后对话开启第三章",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/2-13.png"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "第三章：丛林探秘",
+    "description": "从飞沙沼泽到乌札尔，最终boss为火焰闪电伤害",
+    "tasks": [
+      {
+        "id": 31,
+        "name": "击杀奥洛克篝火",
+        "description": "在飞沙沼泽挑战精英怪",
+        "priority": "high",
+        "reward": "低阶工匠石",
+        "tips": "一定要去打，提升很大",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-1.png"]
+      },
+      {
+        "id": 32,
+        "name": "击败威猛银拳",
+        "description": "在丛林废墟击杀boss",
+        "priority": "medium",
+        "reward": "2点天赋",
+        "tips": "先激活记录点，容易被秒",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-2.png"]
+      },
+      {
+        "id": 33,
+        "name": "收集蛇毒地窟道具",
+        "description": "在丛林废墟获取任务道具",
+        "priority": "medium",
+        "reward": "属性三选一",
+        "tips": "眩晕门槛、元素异常门槛、法力回复率",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-3.png"]
+      },
+      {
+        "id": 34,
+        "name": "丛林石碑奖励",
+        "description": "召唤npc二选一腰带",
+        "priority": "low",
+        "reward": "未鉴定稀有腰带",
+        "tips": "位置在传送点附近",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-4.png"]
+      },
+      {
+        "id": 35,
+        "name": "击杀沼泽老妪",
+        "description": "在阿札卡泥沼击败boss",
+        "priority": "medium",
+        "reward": "30最大精魂、10级精魂宝石",
+        "tips": "完成后回城获得护符奖励",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-5.png"]
+      },
+      {
+        "id": 36,
+        "name": "击杀奇美拉赛克鲁西安",
+        "description": "在幻缈湿地击败boss",
+        "priority": "high",
+        "reward": "混沌大殿门票",
+        "tips": "往左跑，boss在左边，击败后进入机械迷城",
+        "completed": false
+      },
+      {
+        "id": 37,
+        "name": "探索佳华尼的机械迷城",
+        "description": "完成机关解谜和boss战",
+        "priority": "high",
+        "reward": "10%火焰抗性",
+        "tips": "需要3个小灵核开门，先找小型核心",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-6.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-7.png"]
+      },
+      {
+        "id": 38,
+        "name": "击杀护核卫士",
+        "description": "佳华尼密殿boss战",
+        "priority": "high",
+        "reward": "任务道具",
+        "tips": "需要中型核心激活发电机，等电路通过",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-8.png"]
+      },
+      {
+        "id": 39,
+        "name": "夸帕特的机关",
+        "description": "使用任务道具污染装备",
+        "priority": "medium",
+        "reward": "装备污染",
+        "tips": "了解装备污染机制",
+        "completed": false
+      },
+      {
+        "id": 40,
+        "name": "完成马特兰水道",
+        "description": "启动机关通过水道",
+        "priority": "medium",
+        "reward": "主线推进",
+        "tips": "水退了往哪走，启动最后一个大开关",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-9.png"]
+      },
+      {
+        "id": 41,
+        "name": "激活熔火宝库",
+        "description": "在淹没之城激活传送点",
+        "priority": "low",
+        "reward": "10级技能宝石",
+        "tips": "boss较难，可后续解决，先激活传送点",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-11.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-12.png"]
+      },
+      {
+        "id": 42,
+        "name": "击杀污秽女王",
+        "description": "在污垢巅峰击败boss",
+        "priority": "high",
+        "reward": "主线推进",
+        "tips": "拾取道具后继续下楼梯交任务",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-13.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-14.png"]
+      },
+      {
+        "id": 43,
+        "name": "科佩克之殿Boss战",
+        "description": "完成科佩克之殿",
+        "priority": "high",
+        "reward": "主线推进",
+        "tips": "击杀boss对话回城",
+        "completed": false
+      },
+      {
+        "id": 44,
+        "name": "击杀蝰蛇娜帕奇",
+        "description": "在乌札尔击败boss",
+        "priority": "high",
+        "reward": "奉献之核",
+        "tips": "巨大地图，小怪掉落奉献之核",
+        "completed": false
+      },
+      {
+        "id": 45,
+        "name": "阿戈拉特奉献之台",
+        "description": "使用奉献之台获得天赋",
+        "priority": "high",
+        "reward": "2点天赋",
+        "tips": "需要2个奉献之核，在固定地图",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-15.png"]
+      },
+      {
+        "id": 46,
+        "name": "暗胧殿堂最终Boss",
+        "description": "第三章最终boss战",
+        "priority": "high",
+        "reward": "章节完成",
+        "tips": "二阶段多伤害类型，注意躲避技能",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/3-16.png"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "第四章：岛屿探索",
+    "description": "探索各个岛屿，完成酋长塔瓦凯挑战",
+    "tasks": [
+      {
+        "id": 47,
+        "name": "落锚湾任务线",
+        "description": "寻找亡者之箱，击杀哈特林船长",
+        "priority": "medium",
+        "reward": "维金长钉任务",
+        "tips": "与NPC对话接任务，完成后续击杀",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-1.png", "https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-2.png"]
+      },
+      {
+        "id": 48,
+        "name": "瓦卡帕努岛探索",
+        "description": "寻找石化海盗，完成冥曲洞窟",
+        "priority": "medium",
+        "reward": "11级宝石/珍珠项链",
+        "tips": "伟大之白掉落鲨鱼鳍，可兑换宝石。找到【呼唤之蚌】：交互→击杀怪物→再次交互获取【嗡鸣珍珠】",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-3.png"]
+      },
+      {
+        "id": 49,
+        "name": "废弃监牢挑战",
+        "description": "获取教堂钥匙，完成遗世监禁",
+        "priority": "medium",
+        "reward": "药剂持续时间选项",
+        "tips": "先找钥匙激活正义女神进入下级地图【遗世监禁】，击杀 BOSS【囚犯】",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-4.png"]
+      },
+      {
+        "id": 50,
+        "name": "百舌岛任务",
+        "description": "寻找尸巢，击杀天空灾星",
+        "priority": "medium",
+        "reward": "地图碎片",
+        "tips": "集齐4张碎片推进剧情",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-5.png"]
+      },
+      {
+        "id": 51,
+        "name": "亲眷岛挑战",
+        "description": "击杀盲眼巨兽，解救NPC",
+        "priority": "medium",
+        "reward": "染怒之书(2点武器技能点)",
+        "tips": "完成熔火院落后激活辛格拉之眼",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-6.png"]
+      },
+      {
+        "id": 52,
+        "name": "阿拉塔斯岛剧情",
+        "description": "完成教堂剧情，击杀托维安",
+        "priority": "high",
+        "reward": "3个崇高石",
+        "tips": "托维安boss需先杀小怪打断buff",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-7.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-8.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-9.png"]
+      },
+      {
+        "id": 53,
+        "name": "首席使者Boss战",
+        "description": "在挖掘场击败boss",
+        "priority": "high",
+        "reward": "主线推进",
+        "tips": "击败后观看剧情回城",
+        "completed": false
+      },
+      {
+        "id": 54,
+        "name": "酋长塔瓦凯",
+        "description": "第四章最终boss战",
+        "priority": "high",
+        "reward": "章节完成",
+        "tips": "1-4章最难boss，充分准备",
+        "completed": false
+      },
+      {
+        "id": 55,
+        "name": "辛格拉之眼试炼",
+        "description": "完成亡者之殿试炼",
+        "priority": "medium",
+        "reward": "属性点+5或三抗+5%",
+        "tips": "每项可二选一，击败白之雅玛后开启祖灵试炼",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-10.png"]
+      },
+      {
+        "id": 75,
+        "name": "掠夺者之角炸坟",
+        "description": "完成炸坟任务获取NPC",
+        "priority": "medium",
+        "reward": "3位炸坟NPC",
+        "tips": "可以全放最近区域快速完成",
+        "completed": false,
+         "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/8-2.png"]
+      },
+      {
+        "id": 56,
+        "name": "祖灵的试炼",
+        "description": "完成祖灵试炼获得刺青",
+        "priority": "medium",
+        "reward": "先祖刺青(2点技能天赋点)",
+        "tips": "永久属性提升，值得完成",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-11.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/4-12.png"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "间章一：避难所",
+    "description": "焦土农田到霍尔顿庄园的挑战",
+    "tasks": [
+      {
+        "id": 57,
+        "name": "击败瑟尔之石boss",
+        "description": "激活5个符文巨石，击败迷雾之刃",
+        "priority": "high",
+        "reward": "增益Buff",
+        "tips": "与乌娜对话获得buff",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/5-1.png"]
+      },
+      {
+        "id": 58,
+        "name": "击杀双子Boss",
+        "description": "在黑木林到霍尔顿路径上",
+        "priority": "high",
+        "reward": "2点天赋点",
+        "tips": "双子boss配合攻击",
+        "completed": false
+      },
+      {
+        "id": 59,
+        "name": "击败奥斯温",
+        "description": "在狼堡击杀boss",
+        "priority": "high",
+        "reward": "2点天赋点",
+        "tips": "注意boss技能模式",
+        "completed": false
+      },
+      {
+        "id": 60,
+        "name": "击败政务官夫妇",
+        "description": "霍尔顿庄园最终boss",
+        "priority": "high",
+        "reward": "2点天赋点,14级技能宝石",
+        "tips": "配合默契的boss组合",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "间章二：卡莉集市",
+    "description": "卡莉渡口到奇玛尔的探索",
+    "tasks": [
+      {
+        "id": 61,
+        "name": "击杀沙漠生物",
+        "description": "在卡莉渡口击败沙虫和毒蝎",
+        "priority": "medium",
+        "reward": "2点天赋点",
+        "tips": "回城对话NPC获得奖励",
+        "completed": false
+      },
+      {
+        "id": 62,
+        "name": "获取永久生命属性",
+        "description": "探索卡莉集市其余入口",
+        "priority": "high",
+        "reward": "5%生命上限",
+        "tips": "永久属性提升必做",
+        "completed": false
+      },
+      {
+        "id": 63,
+        "name": "塞卡莉圣所收集",
+        "description": "收集巨灵之币兑换奖励",
+        "priority": "medium",
+        "reward": "项链/戒指/珠宝三选一",
+        "tips": "祭坛兑换稀有装备",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/6-1.png"]
+      },
+      {
+        "id": 64,
+        "name": "击杀眼镜蛇领主",
+        "description": "在加莱之门击败boss",
+        "priority": "high",
+        "reward": "主线推进",
+        "tips": "击败后进入奇玛尔",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/6-2.png"]
+      },
+      {
+        "id": 65,
+        "name": "奇玛尔柱子选择",
+        "description": "探索奇玛尔寻找7根柱子",
+        "priority": "high",
+        "reward": "职业属性7选1",
+        "tips": "选择最适合自己职业的属性",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/6-3.png"]
+      },
+      {
+        "id": 66,
+        "name": "神圣之井奖励",
+        "description": "在奇玛尔水库激活圣水魔瓶",
+        "priority": "medium",
+        "reward": "通货奖励",
+        "tips": "有圣水魔瓶才能激活",
+        "completed": false,
+        "imgs": ["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/6-4.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/6-5.png"]
+      },
+      {
+        "id": 67,
+        "name": "击杀法里登王子",
+        "description": "奇玛尔最终boss",
+        "priority": "high",
+        "reward": "间章完成",
+        "tips": "高难度boss，建议冰抗>50%",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "间章三：林间空地",
+    "description": "从灰烬森林到库阿奇克宝库",
+    "tasks": [
+      {
+        "id": 68,
+        "name": "击败迷失长锋",
+        "description": "在克里亚村击杀蛇女变体",
+        "priority": "medium",
+        "reward": "40点最大精魂",
+        "tips": "蛇女变体boss，注意技能",
+        "completed": false
+      },
+      {
+        "id": 69,
+        "name": "击杀冻结之爪",
+        "description": "在冰川池塘击败boss",
+        "priority": "medium",
+        "reward": "寒冰獠牙",
+        "tips": "冰系boss，准备相应抗性",
+        "completed": false
+      },
+      {
+        "id": 70,
+        "name": "击杀怪异雪兽",
+        "description": "在嚎叫洞穴击败boss",
+        "priority": "medium",
+        "reward": "寒冰獠牙",
+        "tips": "回城交付获得2点天赋点",
+        "completed": false,
+        "imgs":["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/7-1.png"]
+      },
+      {
+        "id": 71,
+        "name": "击杀风暴血魔",
+        "description": "在刻蚀峡谷击败boss",
+        "priority": "high",
+        "reward": "主线推进",
+        "tips": "击败后进入库阿奇克宝库",
+        "completed": false,
+        "imgs":["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/7-2.png","https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/7-3.png"]
+      },
+      {
+        "id": 72,
+        "name": "鲜血双祭司Boss",
+        "description": "库阿奇克宝库最终boss",
+        "priority": "high",
+        "reward": "间章完成",
+        "tips": "双boss协同攻击，注意配合",
+        "completed": false,
+        "imgs":["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/7-4.png"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "终局准备",
+    "description": "完成最后的准备，开启终局内容",
+    "tasks": [
+      {
+        "id": 73,
+        "name": "完成第四章收尾",
+        "description": "返回城区与兜帽密师对话",
+        "priority": "high",
+        "reward": "最后2点天赋",
+        "tips": "确保所有任务完成后再对话",
+        "completed": false
+     
+      },
+      {
+        "id": 74,
+        "name": "前往奥利亚",
+        "description": "开启终局内容",
+        "priority": "high",
+        "reward": "终局解锁",
+        "tips": "完成所有前期准备后前往",
+        "completed": false,
+           "imgs":["https://poe2-all-class.oss-cn-hangzhou.aliyuncs.com/png/chapters/8-1.png"]
+      }
+    ]
+  }
+]

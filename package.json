@@ -32,6 +32,8 @@
     "crawl:cn-market:dd373:dev": "NODE_ENV=dev node crawlers/cn-market/dd373_currency.js",
     "build:problem-guides": "NODE_ENV=production node scripts/build_problem_guides.js",
     "build:problem-guides:dev": "NODE_ENV=dev node scripts/build_problem_guides.js",
+    "build:chapters": "NODE_ENV=production node scripts/build_initial_chapters.js",
+    "build:chapters:dev": "NODE_ENV=dev node scripts/build_initial_chapters.js",
     "build:daily-return": "NODE_ENV=production node scripts/build_daily_return_digest.js",
     "build:daily-return:dev": "NODE_ENV=dev node scripts/build_daily_return_digest.js",
     "build:follow-updates": "NODE_ENV=production node scripts/build_follow_updates.js",
