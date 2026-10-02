@@ -38,6 +38,8 @@
     "build:daily-return:dev": "NODE_ENV=dev node scripts/build_daily_return_digest.js",
     "build:follow-updates": "NODE_ENV=production node scripts/build_follow_updates.js",
     "build:follow-updates:dev": "NODE_ENV=dev node scripts/build_follow_updates.js",
+    "build:currency-daily": "NODE_ENV=production node scripts/build_currency_daily_change.js",
+    "build:currency-daily:dev": "NODE_ENV=dev node scripts/build_currency_daily_change.js",
     "build:manifests": "NODE_ENV=production node scripts/build_game_manifests.js",
     "build:manifests:dev": "NODE_ENV=dev node scripts/build_game_manifests.js",
     "build:manifest:poe2": "NODE_ENV=production node scripts/build_game_manifests.js --game=poe2",

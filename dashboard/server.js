@@ -40,7 +40,7 @@ const TASKS = [
     description: '日常推荐：刷新小程序仍在使用的 POE2 国际服通货、DD373 国服换算、流放急救箱、我的关注变化与首页复访摘要；任一步失败会停止上传，避免空数据覆盖线上。不抓新闻、天梯、剧情攻略，也不更新已下架的 0.5 资料、赛季开荒/热门 BD。',
     group: 'game_data',
     game: 'poe2',
-    steps: ['economy_digest', 'cn_market_dd373', 'problem_guides', 'follow_updates', 'daily_return_digest', 'poe2_manifest', 'upload'],
+    steps: ['economy_digest', 'cn_market_dd373', 'currency_daily_change', 'problem_guides', 'follow_updates', 'daily_return_digest', 'poe2_manifest', 'upload'],
   },
   {
     id: 'ladder_bd_publish',
@@ -56,7 +56,7 @@ const TASKS = [
     description: '刷新国服官方天梯、官方入门流派、玩家开荒 BD、剧情跑图导航、天赋树截图、国际服游戏内通货行情和国服行情接口，并上传 POE1 专用 OSS 路径；不会影响 POE2 数据。',
     group: 'game_data',
     game: 'poe1',
-    steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_manifest', 'poe1_upload'],
+    steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_currency_daily_change', 'poe1_manifest', 'poe1_upload'],
   },
   {
     id: 'forum_content_scan',
@@ -192,6 +192,24 @@ const TASKS = [
     game: 'poe2',
     hidden: true,
     command: ['node', ['crawlers/cn-market/dd373_currency.js']],
+  },
+  {
+    id: 'currency_daily_change',
+    name: '生成 POE2 通货日涨幅',
+    description: '把本次 DD373 国服中位单价按日存快照（只存 dashboard/runtime，不上传），与最近一个更早日期比较，生成首页今日换算用的 currency_daily_change.json；行情为空会失败，不覆盖线上产物。',
+    group: 'single',
+    game: 'poe2',
+    hidden: true,
+    command: ['node', ['scripts/build_currency_daily_change.js', 'poe2']],
+  },
+  {
+    id: 'poe1_currency_daily_change',
+    name: '生成 POE1 通货日涨幅',
+    description: '把本次国服行情的混沌计价按日存快照（只存 dashboard/runtime，不上传），与最近一个更早日期比较，生成 POE1 首页今日换算用的 currency_daily_change.json。',
+    group: 'single',
+    game: 'poe1',
+    hidden: true,
+    command: ['node', ['scripts/build_currency_daily_change.js', 'poe1']],
   },
   {
     id: 'problem_guides',
