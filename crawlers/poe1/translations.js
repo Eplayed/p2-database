@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { lookupOfficialStat } = require('../shared/officialDict');
+const { lookupOfficialStat, lookupOfficialStatic } = require('../shared/officialDict');
 
 function readJson(fileName, fallback) {
   try {
@@ -471,7 +471,11 @@ function translateStatText(value) {
 }
 
 function translateCurrency(value) {
-  return CURRENCY_NAMES[value] || value || '未命名通货';
+  if (!value) return '未命名通货';
+  // 小表放前面：这几条是玩家习惯叫法，和官方译名不一致（例如 Sacred Orb 也叫神圣石），
+  // 不能让字典覆盖掉。其余名称走 1375 条官方译名字典 —— 这张字典此前只在词缀侧接了，
+  // 名称侧漏接，导致 106 条通货里有 102 条直接显示英文原名。
+  return CURRENCY_NAMES[value] || lookupOfficialStatic(value, 'poe1') || value;
 }
 
 function translateKeyPassive(value) {
