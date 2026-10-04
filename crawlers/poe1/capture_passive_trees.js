@@ -38,7 +38,7 @@ function readDigest() {
 }
 
 function writeDigest(data) {
-  fs.writeFileSync(digestPath, `${JSON.stringify(data, null, 2)}\n`);
+  fs.writeFileSync(digestPath, `${JSON.stringify(data)}\n`);
 }
 
 /**
@@ -74,7 +74,7 @@ function patchBuildDetail(build, patch) {
   try {
     const detail = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     Object.assign(detail, patch);
-    fs.writeFileSync(filePath, `${JSON.stringify(detail, null, 2)}\n`);
+    fs.writeFileSync(filePath, `${JSON.stringify(detail)}\n`);
     return true;
   } catch (error) {
     console.warn(`   详情文件写回失败 ${build.id}: ${error.message}`);

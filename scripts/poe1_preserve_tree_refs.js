@@ -45,11 +45,29 @@ function fetchJson(url, timeoutMs = 15000) {
   });
 }
 
+function setTreeImage(digestDir, build, image) {
+  build.passiveTreeImage = image;
+  delete build.passiveTreeIsFullscreenPage;
+  // 摘要拆成轻字段后，前端是「摘要 + 详情文件」合成一条 BD。
+  // 只写摘要会被详情文件里的空值覆盖掉，所以两处都要写。
+  if (!build.detailFile) return;
+  const detailPath = path.join(digestDir, build.detailFile);
+  if (!fs.existsSync(detailPath)) return;
+  try {
+    const detail = JSON.parse(fs.readFileSync(detailPath, 'utf8'));
+    detail.passiveTreeImage = image;
+    fs.writeFileSync(detailPath, `${JSON.stringify(detail)}\n`);
+  } catch (error) {
+    console.warn(`⚠️ 详情文件回填失败 ${build.detailFile}: ${error.message}`);
+  }
+}
+
 async function main() {
   if (!fs.existsSync(digestPath)) {
     console.error(`❌ 本地 digest 不存在: ${digestPath}`);
     process.exit(1);
   }
+  const digestDir = path.dirname(digestPath);
   const digest = JSON.parse(fs.readFileSync(digestPath, 'utf8'));
   const builds = Array.isArray(digest.builds) ? digest.builds : [];
   if (!builds.length) {
@@ -70,8 +88,7 @@ async function main() {
       if (!build || build.passiveTreeImage) continue;
       const image = remoteById.get(build.id);
       if (image) {
-        build.passiveTreeImage = image;
-        delete build.passiveTreeIsFullscreenPage;
+        setTreeImage(digestDir, build, image);
         restoredFromRemote += 1;
       }
     }
@@ -101,7 +118,7 @@ async function main() {
     if (!build || build.passiveTreeImage) continue;
     const fileName = treeFileName(build);
     if (!fileNames.has(fileName)) continue;
-    build.passiveTreeImage = `${prefix}${fileName}`;
+    setTreeImage(digestDir, build, `${prefix}${fileName}`);
     restoredFromFile += 1;
   }
 
@@ -110,7 +127,7 @@ async function main() {
     console.log(`ℹ️ 无需回填，当前 ${total} 个 build 有天赋图引用`);
     return;
   }
-  fs.writeFileSync(digestPath, `${JSON.stringify(digest, null, 2)}\n`);
+  fs.writeFileSync(digestPath, `${JSON.stringify(digest)}\n`);
   console.log(
     `✅ 天赋截图引用回填：远端 ${restoredFromRemote} 个、本地图片 ${restoredFromFile} 个；` +
     `现共 ${total}/${builds.length} 个 build 有图（本地图片文件 ${fileNames.size} 个）`
