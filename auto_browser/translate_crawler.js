@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+const ninjaClient = require("../crawlers/shared/ninja/client");
 const { ensureChrome } = require("../crawlers/shared/chromeGuard");
 const fs = require("fs");
 const path = require("path");
@@ -61,6 +62,9 @@ try {
 
 // 配置
 const BASE_URL = "https://poe.ninja/poe2/builds";
+// poe.ninja 的角色详情接口有 Cloudflare 限流，实测 Retry-After 可以到 50 分钟以上。
+// 超过这个时长就停止整轮抓取，不要用半套详情去覆盖线上数据。
+const RATE_LIMIT_STOP_SECONDS = 300;
 
 const isDev = process.env.NODE_ENV === "dev";
 const isCI = process.env.CI === "true";  // 检测是否在 CI 环境
@@ -1513,28 +1517,65 @@ async function getBuildId(preferredLeagueUrl = process.env.POE_NINJA_LEAGUE || C
   });
 }
 
+let lastCharacterRequestAt = 0;
+
+/** 角色详情接口全局限速：两次请求至少间隔 NINJA_REQUEST_INTERVAL_MS 毫秒 */
+async function throttleCharacterRequest() {
+  const minGap = Number(process.env.NINJA_REQUEST_INTERVAL_MS || 1500);
+  const elapsed = Date.now() - lastCharacterRequestAt;
+  if (elapsed < minGap) {
+    await new Promise((resolve) => setTimeout(resolve, minGap - elapsed));
+  }
+  lastCharacterRequestAt = Date.now();
+}
+
 async function fetchCharacterData(buildId, account, name, overview, leagueUrl) {
-  return new Promise((resolve, reject) => {
-    const params = `account=${encodeURIComponent(account)}&name=${encodeURIComponent(name)}&overview=${overview}&timeMachine=`;
-    const url = `https://poe.ninja/poe2/api/builds/${buildId}/character?${params}`;
-    https.get(url, {
-      headers: {
-        'User-Agent': USER_AGENT,
-        'Referer': `${BASE_URL}/${leagueUrl}/character/${encodeURIComponent(account)}/${encodeURIComponent(name)}`,
-        'Accept': 'application/json',
+  const params = `account=${encodeURIComponent(account)}&name=${encodeURIComponent(name)}&overview=${overview}&timeMachine=`;
+  const url = `https://poe.ninja/poe2/api/builds/${buildId}/character?${params}`;
+  const referer = `${BASE_URL}/${leagueUrl}/character/${encodeURIComponent(account)}/${encodeURIComponent(name)}`;
+  // 详情接口会被 Cloudflare 限流，返回的是 "error code: 1015" 而不是 JSON。
+  // 原来一次失败就丢一个玩家，这里退避重试；仍失败才让调用方按失败处理。
+  const MAX_ATTEMPTS = 4;
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt += 1) {
+    await throttleCharacterRequest();
+    const result = await new Promise((resolve) => {
+      https
+        .get(url, {
+          headers: {
+            'User-Agent': USER_AGENT,
+            Referer: referer,
+            Accept: 'application/json',
+          },
+        }, (res) => {
+          let data = '';
+          res.on('data', (chunk) => (data += chunk));
+          res.on('end', () =>
+            resolve({
+              status: res.statusCode,
+              body: data,
+              retryAfter: Number(res.headers['retry-after']) || 0,
+            })
+          );
+        })
+        .on('error', (error) => resolve({ status: 0, body: '', error: error.message }));
+    });
+    if (result.status === 200) {
+      try {
+        return JSON.parse(result.body);
+      } catch (e) {
+        if (attempt === MAX_ATTEMPTS - 1) throw new Error(`Character API parse error: ${e.message}`);
       }
-    }, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        try {
-          resolve(JSON.parse(data));
-        } catch (e) {
-          reject(new Error(`Character API parse error: ${e.message}`));
-        }
-      });
-    }).on('error', reject);
-  });
+    } else if (result.status === 429 && result.retryAfter > RATE_LIMIT_STOP_SECONDS) {
+      // Retry-After 长达几十分钟，继续重试只会把封禁时间往后推，标记后让上层停手
+      const error = new Error(`详情接口被限流，需等待 ${Math.round(result.retryAfter / 60)} 分钟`);
+      error.rateLimited = true;
+      throw error;
+    } else if (result.status !== 429 && result.status !== 0 && attempt < MAX_ATTEMPTS - 1) {
+      console.warn(`   ⚠️ [${name}] 详情 HTTP ${result.status}，重试 ${attempt + 1}/${MAX_ATTEMPTS - 1}`);
+    }
+    await new Promise((resolve) => setTimeout(resolve, 3000 * Math.pow(2, attempt)));
+  }
+  throw new Error(`Character API 连续 ${MAX_ATTEMPTS} 次失败: ${account}/${name}`);
 }
 
 async function runTask() {
@@ -1561,36 +1602,48 @@ async function runTask() {
     browser = await createBrowser();
     page = await createPage(browser);
     
+    // 阶段 1: 职业列表改走 API。
+    // 原来是用 Puppeteer 读页面上的 [role="option"]，但 poe.ninja 已改成客户端渲染，
+    // 那个选择器随时会抓空（抓空时下面会直接抛错、整轮失败）。
     console.log("\n1️⃣  获取职业列表...");
-    await page.goto(leagueBaseUrl, {
-      waitUntil: "domcontentloaded",
-      timeout: 120000,
-    });
-
-    try {
-      await page.waitForSelector('[role="option"] .class-name', { timeout: 30000 });
-    } catch (e) {}
-
-    let classList = await page.evaluate((activeLeagueUrl) => {
-      const results = [];
-      const options = Array.from(document.querySelectorAll('[role="option"]'));
-      options.forEach((option) => {
-        const name = option.querySelector(".class-name")?.innerText.trim() || "";
-        const percentageText = option.querySelector(".class-percentage")?.innerText.trim() || "";
-        const percentageMatch = option.style.borderImageSource.match(/([\d.]+)%/);
-        const percent = percentageMatch
-          ? Number(percentageMatch[1])
-          : Number.parseFloat(percentageText);
-        if (name && !results.find((result) => result.name === name)) {
-          results.push({
-            name,
-            link: `${location.origin}/poe2/builds/${activeLeagueUrl}?class=${encodeURIComponent(name)}`,
-            percent: Number.isFinite(percent) ? percent : 0,
-          });
+    const leagueInfo = { url: leagueUrl, snapshotName: overview, version: buildId };
+    const leagueTotal = (await ninjaClient.searchBuilds("poe2", { info: leagueInfo, limit: 1 })).total || 0;
+    let classList = [];
+    let classTotal = 0;
+    // 职业名单取榜单自带的 class 字典：写死名单会漏掉没选进阶的角色，
+    // 而且新赛季加新进阶时不会自己跟上。
+    const classNames = (await ninjaClient.getClassNames("poe2", { info: leagueInfo })).names;
+    for (const className of classNames) {
+      try {
+        const one = await ninjaClient.searchBuilds("poe2", { info: leagueInfo, clazz: className, limit: 1 });
+        if (!one.total) {
+          console.warn(`   ⚠️ 职业 ${className} 在榜单里没有任何角色，跳过`);
+          continue;
         }
-      });
-      return results;
-    }, leagueUrl);
+        classTotal += one.total;
+        classList.push({
+          name: className,
+          link: `${BASE_URL}/${leagueUrl}?class=${encodeURIComponent(className)}`,
+          percent: leagueTotal ? (one.total / leagueTotal) * 100 : 0,
+        });
+      } catch (e) {
+        console.warn(`   ⚠️ 职业 ${className} 查询失败: ${e.message}`);
+      }
+    }
+    // 页面上的职业下拉本来就是按占比降序给的，保持同样的顺序，
+    // 否则换源后 ladders 里的职业顺序会整体打乱。
+    classList.sort((a, b) => b.percent - a.percent);
+    // 职业名单是写死的（榜单接口只给字典编号，字典本身解不出来）。
+    // 用「各职业人数之和 ≈ 全联盟人数」兜底：上游新增职业时这里会先响，而不是静默漏人。
+    if (leagueTotal) {
+      const coverage = classTotal / leagueTotal;
+      if (coverage < 0.95) {
+        console.warn(
+          `   ⚠️ 职业名单可能过期：已覆盖 ${classTotal}/${leagueTotal}（${(coverage * 100).toFixed(1)}%），` +
+            `请检查 crawlers/shared/ninja/games.js 是否缺新职业`
+        );
+      }
+    }
     if (MAX_CLASSES > 0) {
       classList = classList.slice(0, MAX_CLASSES);
     }
@@ -1607,79 +1660,28 @@ async function runTask() {
     for (const cls of classList) {
       console.log(`\n2️⃣  处理职业: ${cls.name}`);
 
-      try {
-        await page.goto(cls.link, {
-          waitUntil: "domcontentloaded",
-          timeout: 120000,
-        });
-        await page.waitForFunction(
-          () => {
-            const rows = document.querySelectorAll("tbody tr");
-            return rows.length > 0 && rows[0].querySelector("a");
-          },
-          { timeout: 15000 }
-        );
-      } catch (e) {
-        if (isRecoverableBrowserError(e)) {
-          console.warn(`   ⚠️ [${cls.name}] 浏览器会话异常，重建后重试职业列表: ${e.message}`);
-          try {
-            ({ browser, page } = await restartBrowserSession(browser, leagueBaseUrl));
-            await page.goto(cls.link, {
-              waitUntil: "domcontentloaded",
-              timeout: 120000,
-            });
-            await page.waitForFunction(
-              () => document.querySelectorAll("tbody tr").length > 0,
-              { timeout: 15000 }
-            );
-          } catch (retryError) {
-            console.warn(`   ⚠️ [${cls.name}] 重建浏览器后仍无法读取列表: ${retryError.message}`);
-            continue;
-          }
-        } else {
-          console.warn(`   ⚠️ [${cls.name}] 等待列表超时，尝试强行抓取`);
-        }
-      }
-
+      // 榜单列表改走 API：一次请求拿一个职业，不再开浏览器点页面
+      // 注意不传 sort，实测默认排序才与既有产物一致（传 sort=depth 会错位）
       let players = [];
       try {
-        players = await page.evaluate((limit) => {
-        const rows = Array.from(document.querySelectorAll("tbody tr"));
-        const validRows = rows.filter((r) =>
-          r.querySelector("td:nth-child(1) a")
-        );
-        return validRows
-          .slice(0, limit)
-          .map((row, i) => {
-            const a = row.querySelector("td:nth-child(1) a");
-            if (!a) return null;
-            const imgs = Array.from(row.querySelectorAll("img"));
-            let skillIcon = "";
-            if (imgs.length > 0) skillIcon = imgs[imgs.length - 1].src;
-
-            // 解析账号名
-            let account = "";
-            try {
-              const parts = a.href.split("/character/");
-              if (parts.length > 1)
-                account = decodeURIComponent(parts[1].split("/")[0]);
-            } catch (e) {}
-
-            return {
-              rank: i + 1,
-              name: a.innerText.trim(),
-              link: a.href,
-              account: account,
-              level: parseInt(
-                row.querySelector("td:nth-child(2)")?.innerText || 0
-              ),
-              mainSkillIcon: skillIcon,
-            };
-          })
-          .filter((p) => p !== null);
-      }, MAX_RANK);
+        const listed = await ninjaClient.searchBuilds("poe2", {
+          info: leagueInfo,
+          clazz: cls.name,
+          limit: MAX_RANK,
+        });
+        players = listed.rows
+          .filter(row => row.name && row.account)
+          .map((row, i) => ({
+            rank: i + 1,
+            name: row.name,
+            account: row.account,
+            level: Number(row.level) || 0,
+            // 列表接口里的技能是字典下标，图标改由角色详情补
+            mainSkillIcon: "",
+            link: `${BASE_URL}/${leagueUrl}/character/${encodeURIComponent(row.account)}/${encodeURIComponent(row.name)}`,
+          }));
       } catch (e) {
-        console.warn(`   ⚠️ [${cls.name}] 提取玩家列表失败: ${e.message}`);
+        console.warn(`   ⚠️ [${cls.name}] 拉取玩家列表失败: ${e.message}`);
         continue;
       }
 
@@ -1855,10 +1857,29 @@ async function runTask() {
           if (!player.account && capturedData.account)
             player.account = capturedData.account;
 
+          // 列表接口给不了技能图标，这里从角色详情补第一个技能组的第一个宝石图标
+          // 注意图标在 gem.itemData.icon 上，gem.icon 是空的
+          if (!player.mainSkillIcon) {
+            const groups = Array.isArray(capturedData.skills) ? capturedData.skills : [];
+            for (const group of groups) {
+              const gems = Array.isArray(group && group.allGems) ? group.allGems : [];
+              const icon = gems
+                .map(gem => (gem && (gem.icon || (gem.itemData && gem.itemData.icon))) || '')
+                .find(Boolean);
+              if (icon) {
+                player.mainSkillIcon = icon;
+                break;
+              }
+            }
+          }
+
           detailedPlayers.push(player);
           console.log(`      ✅ 成功 ${player.name}`);
         } catch (err) {
           console.error(`      ❌ 失败: ${err.message}`);
+          if (err.rateLimited) {
+            throw new Error(`poe.ninja 详情接口限流，停止本轮抓取: ${err.message}`);
+          }
           if (isRecoverableBrowserError(err)) {
             console.warn("      🔄 浏览器会话失效，重建后继续下一位玩家");
             try {
