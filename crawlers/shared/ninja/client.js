@@ -12,34 +12,79 @@ const { getGame } = require('./games')
 
 const USER_AGENT = 'poe-season-helper/1.0'
 const REQUEST_TIMEOUT_MS = 20000
-const RETRY = 3
+const RETRY = 4
+// poe.ninja 前面的 Cloudflare 对角色详情接口限流很紧（HTTP 429 / error code 1015）。
+// 实测并发或连续快请求会成批失败，所以这里串行化并留最小间隔，而不是靠多试几次硬闯。
+const MIN_REQUEST_INTERVAL_MS = Number(process.env.NINJA_REQUEST_INTERVAL_MS || 1200)
+// Retry-After 超过这个时长说明已经进入长冷却，重试没有意义，交给调用方停手
+const FAST_STOP_AFTER_SECONDS = 5
 const dictionaryCache = new Map()
 const indexStateCache = new Map()
+let lastRequestAt = 0
+let requestChain = Promise.resolve()
 
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function request(url, { json = true } = {}) {
-  let lastError = null
-  for (let attempt = 0; attempt < RETRY; attempt += 1) {
-    const controller = new AbortController()
-    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
+/** 全局串行 + 限速：同一时刻只允许一个请求在飞，且两次请求至少间隔 MIN_REQUEST_INTERVAL_MS */
+function throttle(task) {
+  const run = requestChain.then(async () => {
+    const elapsed = Date.now() - lastRequestAt
+    if (elapsed < MIN_REQUEST_INTERVAL_MS) await wait(MIN_REQUEST_INTERVAL_MS - elapsed)
     try {
-      const response = await fetch(url, {
-        headers: { 'user-agent': USER_AGENT },
-        signal: controller.signal
-      })
-      clearTimeout(timer)
-      if (!response.ok) throw new Error(`HTTP ${response.status} ${url}`)
-      return json ? await response.json() : Buffer.from(await response.arrayBuffer())
-    } catch (error) {
-      clearTimeout(timer)
-      lastError = error
-      await wait(400 * (attempt + 1))
+      return await task()
+    } finally {
+      lastRequestAt = Date.now()
     }
-  }
-  throw lastError || new Error(`请求失败: ${url}`)
+  })
+  // 单次失败不能卡死整条队列
+  requestChain = run.catch(() => {})
+  return run
+}
+
+/**
+ * 抓一个 URL。
+ * 命中 poe.ninja 的 Cloudflare 限流（HTTP 429）时不再盲目重试：
+ * 响应头里的 Retry-After 实测可以到 3000 秒以上，继续打只会把封禁时间往后推。
+ * 这时直接抛出带 retryAfter 的错误，让调用方停止整轮抓取。
+ */
+async function request(url, { json = true, headers = {} } = {}) {
+  return throttle(async () => {
+    let lastError = null
+    for (let attempt = 0; attempt < RETRY; attempt += 1) {
+      const controller = new AbortController()
+      const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS)
+      try {
+        const response = await fetch(url, {
+          headers: { 'user-agent': USER_AGENT, ...headers },
+          signal: controller.signal
+        })
+        clearTimeout(timer)
+        if (response.status === 429) {
+          const retryAfter = Number(response.headers.get('retry-after')) || 0
+          if (retryAfter > FAST_STOP_AFTER_SECONDS * 60) {
+            const error = new Error(`上游限流，需要等待 ${Math.round(retryAfter / 60)} 分钟: ${url}`)
+            error.retryAfter = retryAfter
+            error.rateLimited = true
+            throw error
+          }
+          lastError = new Error(`HTTP 429 ${url}`)
+          lastError.rateLimited = true
+          await wait(Math.min(retryAfter * 1000 || 0, 3000 * Math.pow(2, attempt)) || 3000 * Math.pow(2, attempt))
+          continue
+        }
+        if (!response.ok) throw new Error(`HTTP ${response.status} ${url}`)
+        return json ? await response.json() : Buffer.from(await response.arrayBuffer())
+      } catch (error) {
+        clearTimeout(timer)
+        if (error.rateLimited) throw error
+        lastError = error
+        await wait(400 * (attempt + 1))
+      }
+    }
+    throw lastError || new Error(`请求失败: ${url}`)
+  })
 }
 
 /** index-state 里含各联赛的 version（builds 接口路径里要用），每天变化，不能写死 */
@@ -138,6 +183,9 @@ async function searchBuilds(gameId, options = {}) {
     if (options.clazz) row.class = options.clazz
     if (row.name || row.account) rows.push(row)
   }
+  // search 端点会忽略 limit，永远返回 100 行。不截断的话 dev 冒烟和
+  // 「每个职业只看前几名」的场景会真的去抓 100 份角色详情，白白跑十几分钟。
+  if (options.limit && rows.length > options.limit) rows.length = options.limit
   return { total: decoded.total, rows, league: info, columns: decoded.columns.map(column => column.id) }
 }
 
@@ -157,7 +205,9 @@ async function getCharacter(gameId, { account, name, league, info } = {}) {
   const game = getGame(gameId)
   const target = info || (await resolveLeague(gameId, { league }))
   const url = `${game.apiBase}/builds/${target.version}/character?account=${encodeURIComponent(account)}&name=${encodeURIComponent(name)}&overview=${encodeURIComponent(target.snapshotName)}`
-  return request(url)
+  // 详情接口限流最严，带上页面 Referer 更接近真实浏览行为
+  const referer = `${game.apiBase.replace('/api', '')}/${target.url}/character/${encodeURIComponent(account)}/${encodeURIComponent(name)}`
+  return request(url, { headers: { referer } })
 }
 
 /** 经济数据：两个游戏同一个端点，只差前缀与分类名 */
