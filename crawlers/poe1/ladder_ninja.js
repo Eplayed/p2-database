@@ -368,7 +368,10 @@ async function main() {
   const info = await resolveLeague('poe1', { league })
   const leagueName = LEAGUE_DISPLAY_NAME_MAP[info.name] || info.name
   // 职业名单来自榜单自带的 class 字典：写死的名单会漏掉没选进阶的角色（实测少 25% 人）
-  const { names: classes } = await getClassNames('poe1', { info })
+  let classes = (await getClassNames('poe1', { info })).names
+  // 只想快速验证一个职业时用它，不必等整轮 28 个职业跑完
+  const only = (process.env.POE1_NINJA_CLASSES || '').split(',').map(item => item.trim()).filter(Boolean)
+  if (only.length) classes = classes.filter(name => only.includes(name))
   console.log(`[poe1-ladder] 联赛 ${info.name}(${info.url}) 显示名 ${leagueName} version=${info.version}`)
   console.log(`[poe1-ladder] 职业 ${classes.length} 个，每职业摘要 ${PER_CLASS} 名、详情 ${DETAIL_PER_CLASS} 名`)
 
@@ -446,7 +449,7 @@ async function main() {
   }
 
   const totalCharacters = classStats.reduce((sum, item) => sum + item.total, 0)
-  if (leagueTotal && totalCharacters < leagueTotal * 0.95) {
+  if (!only.length && leagueTotal && totalCharacters < leagueTotal * 0.95) {
     // 职业名单写死在 games.js，上游加新职业时这里先响，而不是静默漏掉一批玩家
     console.warn(
       `   ⚠️ 职业名单可能过期：已覆盖 ${totalCharacters}/${leagueTotal}，` +
