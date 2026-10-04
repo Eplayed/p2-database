@@ -56,7 +56,7 @@ const TASKS = [
     description: '刷新 poe.ninja 天梯 BD（职业榜单、主技能、装备与天赋详情）、官方入门流派、玩家开荒 BD、剧情跑图导航、天赋树截图、国际服游戏内通货行情和国服行情接口，并上传 POE1 专用 OSS 路径；不会影响 POE2 数据。',
     group: 'game_data',
     game: 'poe1',
-    steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_currency_daily_change', 'poe1_ladder_check', 'poe1_manifest', 'poe1_upload'],
+    steps: ['poe1_ladder', 'poe1_official_starter', 'poe1_starter_builds', 'poe1_starter_terms', 'poe1_story_guide', 'poe1_passive_trees', 'poe1_economy', 'poe1_cn_economy', 'poe1_currency_daily_change', 'poe1_ladder_check', 'poe1_coverage_check', 'poe1_manifest', 'poe1_upload'],
   },
   {
     id: 'forum_content_scan',
@@ -84,6 +84,15 @@ const TASKS = [
     game: 'poe1',
     hidden: true,
     command: ['node', ['crawlers/poe1/ladder_ninja.js']],
+  },
+  {
+    id: 'poe1_coverage_check',
+    name: '检查 POE1 中文译名覆盖率',
+    description: '只读统计天梯产物里技能名、传奇装备名、职业名和词缀行的中文覆盖率，低于门槛就中断上传。缺的名字必须有权威中文出处，不允许逐词硬造。',
+    group: 'single',
+    game: 'poe1',
+    hidden: true,
+    command: ['node', ['scripts/report_poe1_translation_coverage.js']],
   },
   {
     id: 'poe1_ladder_official',

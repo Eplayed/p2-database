@@ -48,6 +48,11 @@ const LOCAL_STAT_KEYWORDS = {
   Armour: '护甲',
   Attack: '攻击',
   Attacks: '攻击',
+  Abyss: '深渊',
+  Block: '格挡',
+  Charge: '充能',
+  Charges: '充能',
+  Lasts: '持续',
   Chance: '几率',
   Chaos: '混沌',
   Cold: '冰霜',
@@ -420,6 +425,22 @@ const PROPERTY_NAME_CN = {
   'Requires': '需要'
 };
 
+/**
+ * 整行就是一个词的属性（武器类别要求），单独映射。
+ * 中文取自资料站自己的类别页标题（Sceptres→权杖、Staves→长杖、Wands→法杖）
+ * 和字典里已出现的说法（弓、爪、匕首）。
+ * 没查到出处的（One Handed Sword、Abyss）保留英文，不做逐词拼装。
+ */
+const PROPERTY_LINE_CN = {
+  Bow: '弓',
+  Claw: '爪',
+  Dagger: '匕首',
+  Staff: '长杖',
+  Wand: '法杖',
+  Sceptre: '权杖',
+  Abyss: '深渊'
+};
+
 const PROPERTY_WORD_CN = {
   metres: '米',
   meters: '米',
@@ -488,8 +509,19 @@ function translateProperties(properties) {
       // Weapon Range 的 "{0} metres"），宁可不显示，也别留一行半英半空的垃圾给玩家。
       if (values.some(value => /\{\d+\}/.test(value))) return '';
       const cnName = PROPERTY_NAME_CN[name];
-      const display = cnName || name;
+      // 名字里带 {0} 占位符时数值已经填进 filled，不能再把原始值拼一遍，
+      // 否则会输出 "Weapon Range: {0} 米: 1.1" 这种半英半空的行。
+      const hadPlaceholder = /\{\d+\}/.test(name);
+      if (hadPlaceholder) {
+        // 名字形如 "Weapon Range: {0} metres" 时，冒号前那段才是属性名
+        const labelPart = filled.split(':')[0].trim();
+        const cnLabel = PROPERTY_NAME_CN[labelPart];
+        const line = cnLabel ? filled.replace(labelPart, cnLabel) : filled;
+        return translatePropertyWords(translateStatText(line));
+      }
+      const display = cnName || filled;
       const line = values.length ? `${display}: ${values.join(' ')}` : display;
+      if (PROPERTY_LINE_CN[line.trim()]) return PROPERTY_LINE_CN[line.trim()];
       return translatePropertyWords(translateStatText(line));
     })
     .filter(line => line && !/object Object/.test(line));
@@ -547,7 +579,10 @@ function replaceKeywords(text) {
   let value = text;
   const entries = Object.entries({ ...(DIST_STATS.keywords || {}), ...LOCAL_STAT_KEYWORDS }).sort((a, b) => b[0].length - a[0].length);
   for (const [en, cn] of entries) {
-    value = value.replace(new RegExp(en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), cn);
+    const escaped = en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // 纯英文关键词要带词边界，否则 Charge 会把 Charger 也换成「充能r」
+    const pattern = /^[A-Za-z]/.test(en) ? `\\b${escaped}\\b` : escaped;
+    value = value.replace(new RegExp(pattern, 'g'), cn);
   }
   return value;
 }

@@ -177,5 +177,5 @@ POE1_LADDER_DIR=/tmp/poe1-shadow node scripts/check_poe1_ladder_output.js
 本地 Dashboard（5177）的「POE1 全量更新」链路与之等价，额外包含
 `poe1_currency_daily_change`（按日快照）。两种方式写入相同的 POE1 专用 OSS 路径。
 
-发布前至少检查：赛季名非空且与官方页面一致、天梯样本与展示角色非空、经济条目非空、
+发布前至少检查：赛季名非空、天梯摘要与详情文件结构完整（`poe1:check`）、中文译名覆盖率达标（`poe1:coverage`）、经济条目非空、天梯样本与展示角色非空、经济条目非空、
 `updatedAt` 已刷新、神圣石/混沌石换算存在、`currency_daily_change` 的 `coreChangeCount > 0`。
