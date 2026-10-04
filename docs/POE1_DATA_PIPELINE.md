@@ -39,6 +39,35 @@
 - 通货中文名走 `crawlers/shared/officialDict.js` 的 1375 条官方译名字典，
   字典没有的名称保留英文，禁止逐词硬造译名。
 
+## poe.ninja builds 接入（2026-10-04 实测，尚未接线）
+
+用户已决定把 POE1 天梯主源换成 poe.ninja，国服官方天梯不再作为主源。以下是实测出来的入口与结构，
+实现时照此接，不要重新逆向：
+
+1. 联盟与索引号：`GET https://poe.ninja/poe1/api/data/index-state`
+   → `snapshotVersions[]` 里取 `url=allflame && type=exp` 那条的 `version`（形如 `0533-20261004-14633`，
+   每天变化，不能写死）。
+2. 榜单：`GET https://poe.ninja/poe1/api/builds/{version}/search?overview=allflame&type=exp[&class=职业名]`
+   返回 **protobuf**（不是 JSON；poe2 用的 `/overview` 端点在 poe1 是 404）。
+   实测 `total = 124393` 条 build，对比国服官方只有 282 个角色。
+3. 响应结构是**按列存**的：外层 `1 -> {1: total, 6: 字典引用[], 7/8: 字段定义[], 12: 列[]}`；
+   每列 `{1: 列名, 2: 类型, 7: 该列各行的值}`。实测 28 列，含
+   `name / account / class / skills / keypassives / level / life / energyshield / ehp / dps.* /
+   rate.total / critchance.total / critmulti.total / hitchance.total / aoeradius.total ...`，
+   默认一次返回 100 行。
+4. `class`、`skills` 这类列存的是字典编号，需要配 `GET /poe1/api/builds/dictionary/{sha1}` 解析；
+   search 响应里的字典共 16 个：`class, gem, keypassive, secondascendancy, weaponmode, bandit,
+   item, mercenaryclass, skilltrait, anointed, atlasskill, mastery, runegraft, tattoo,
+   vestigialmod, pantheon`。
+5. 仓库里 `crawlers/poe1/ninja_search_proto.js` 有现成 protobufjs schema，但字段号与实际不符
+   （它按 `value_lists=5` 取行，实际行在 `12`），接线时要按上面的实测结构修正。
+6. 单个角色的装备/天赋详情端点确认存在：`/poe1/api/builds/{version}/character?account=&name=&overview=`
+   参数留空返回 **400**（不是 404），说明路径正确，参数从 search 的 `name`/`account` 列取。
+   这条还没跑通，是迁移的主要待验证项。
+7. 天赋树截图：poe.ninja 的 BD 页自带天赋树渲染，迁移后按它的截图来，不再用本机截国服页面
+   （国服页面截图那条链在换源后要一并停掉）。
+8. 换源的已知代价：角色名与账号是英文；装备/技能名需要接 `crawlers/shared/officialDict.js` 译名字典。
+
 ## 输出与发布
 
 ```text
