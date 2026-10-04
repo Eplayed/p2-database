@@ -22,7 +22,7 @@
 
 const fs = require('fs')
 const path = require('path')
-const { searchBuilds, resolveLeague, listClasses, getCharacter } = require('../shared/ninja/client')
+const { searchBuilds, resolveLeague, getClassNames, getCharacter } = require('../shared/ninja/client')
 const {
   translateClass,
   translateSkill,
@@ -38,26 +38,32 @@ const OUTPUT_DIR = process.env.POE1_NINJA_OUTPUT_DIR
   ? path.resolve(process.env.POE1_NINJA_OUTPUT_DIR)
   : path.join(ROOT, 'translated-data/poe1', env, 'miniprogram_data')
 const BUILD_DIR_NAME = 'poe1_builds'
-const PER_CLASS = Number(process.env.POE1_NINJA_PER_CLASS || 10)
+// 每职业 6 条：28 个职业约 168 条，摘要压到 1MB 上下（换源前是 3.7MB，且其中 206 条根本没有详情）。
+// 想加样本量用 POE1_NINJA_PER_CLASS 覆盖，注意详情是按条串行抓的，翻倍就多花一倍时间。
+const PER_CLASS = Number(process.env.POE1_NINJA_PER_CLASS || 6)
 const DETAIL_PER_CLASS = Number(process.env.POE1_NINJA_DETAIL || PER_CLASS)
 const REQUEST_GAP_MS = 120
 // 国服玩家习惯看到的联盟中文名，poe.ninja 只给英文
 const LEAGUE_DISPLAY_NAME_MAP = { Allflame: '永火之咒', Mirage: '沙海幻境' }
 const FRAME_RARITY = { Unique: 10, Rare: 2, Magic: 1, Normal: 0, Gem: 0, Quest: 0 }
 
+// poe.ninja 角色详情里部位写在 itemData.inventoryId 上，实测取值是
+// Helm / BodyArmour / Gloves / Boots / Weapon(2) / Offhand(2) / Quiver / Amulet /
+// Ring(2) / Belt / Trinket / Flask / PassiveJewels 这一组，不带空格。
 const SLOT_BY_PREFIX = [
   [/^helm/i, '头部'],
   [/^body/i, '胸甲'],
   [/^gloves/i, '手套'],
-  [/^boots|^energyshield/i, '鞋子'],
+  [/^boots/i, '鞋子'],
   [/^weapon/i, '武器'],
   [/^offhand/i, '副手'],
   [/^quiver/i, '箭袋'],
   [/^amulet/i, '项链'],
   [/^ring/i, '戒指'],
+  [/^trinket/i, '饰品'],
   [/^belt|^inventory1$/i, '腰带'],
   [/^flask/i, '药剂'],
-  [/^jewel|^jewellery/i, '珠宝'],
+  [/^jewel|^passivejewel|^jewellery/i, '珠宝'],
   [/^oracle|^pantheon/i, '特殊'],
 ]
 
@@ -196,7 +202,13 @@ function buildStats(character) {
     attackSpeed: pick('attackSpeed'),
     critChance: pick('critChance'),
     critMultiplier: pick('critMultiplier'),
-    accuracy: pick('accuracy')
+    accuracy: pick('accuracy'),
+    // 实测 poe.ninja 的抗性字段叫 fireResistance / chaosResistance…，
+    // 之前按 fireResist 取一律取不到，小程序的抗性格子整排显示「-」
+    fireResist: pick('fireResistance', 'fireResist'),
+    coldResist: pick('coldResistance', 'coldResist'),
+    lightningResist: pick('lightningResistance', 'lightningResist'),
+    chaosResist: pick('chaosResistance', 'chaosResist')
   }
 }
 
@@ -206,14 +218,16 @@ function mapCharacterToBuild(character, meta) {
   const classNameEn = character.ascendancyClassName || character.class || meta.class || ''
   const gems = collectGems(character)
   const mainGem = gems.find(gem => !gem.isSupport) || gems[0] || null
+  // 部位优先用 itemData.inventoryId；entry.itemSlot 是数字枚举，直接拿去匹配前缀会全部落到「其他」
+  const slotOf = entry => resolveSlot((entry && entry.itemData && entry.itemData.inventoryId) || (entry && entry.itemSlot))
   const equipment = (Array.isArray(character.items) ? character.items : [])
-    .map(entry => mapItem(entry.itemData, '装备', resolveSlot(entry.itemSlot)))
+    .map(entry => mapItem(entry.itemData, '装备', slotOf(entry)))
     .filter(Boolean)
   const flasks = (Array.isArray(character.flasks) ? character.flasks : [])
-    .map(entry => mapItem(entry.itemData, '药剂', resolveSlot(entry.itemSlot)))
+    .map(entry => mapItem(entry.itemData, '药剂', slotOf(entry)))
     .filter(Boolean)
   const jewels = (Array.isArray(character.jewels) ? character.jewels : [])
-    .map(entry => mapItem(entry.itemData, '珠宝', resolveSlot(entry.itemSlot)))
+    .map(entry => mapItem(entry.itemData, '珠宝', slotOf(entry)))
     .filter(Boolean)
   const keyPassives = (Array.isArray(character.keyStones) ? character.keyStones : []).slice(0, 12).map(keystone => ({
     name: translateKeyPassive(keystone.name) || keystone.name,
@@ -262,9 +276,10 @@ function mapCharacterToBuild(character, meta) {
 }
 
 // 摘要里只保留列表页真正要用的字段：词条明细（properties/mods/sockets）、药剂、珠宝、
-// 关键天赋全部放进 poe1_builds/{id}.json，玩家点进 BD 详情才拉。
+// 关键天赋、面板数值全部放进 poe1_builds/{id}.json，玩家点进 BD 详情才拉。
 // 装备与技能名必须留在摘要里——天梯页的「装备查 BD / 技能查 BD」索引是前端从 builds 算出来的。
-const LIGHT_ITEM_FIELDS = ['slot', 'name', 'nameEn', 'typeLine', 'rarity', 'icon']
+// skillGems 不放：技能索引只读 skills + skillGroups，留一份等于同一批名字存两遍。
+const LIGHT_ITEM_FIELDS = ['slot', 'name', 'nameEn', 'typeLine', 'baseType', 'rarity', 'icon']
 const LIGHT_GEM_FIELDS = ['name', 'nameEn', 'icon', 'isSupport']
 
 function pickFields(record, fields) {
@@ -292,17 +307,14 @@ function summarizeBuild(build) {
     mainSkillIcon: build.mainSkillIcon,
     skills: build.skills,
     equipment: (Array.isArray(build.equipment) ? build.equipment : []).map(item => pickFields(item, LIGHT_ITEM_FIELDS)),
-    skillGems: (Array.isArray(build.skillGems) ? build.skillGems : []).map(gem => pickFields(gem, LIGHT_GEM_FIELDS)),
     skillGroups: (Array.isArray(build.skillGroups) ? build.skillGroups : []).map(group => ({
       slot: group.slot || group.name || '',
       gems: (Array.isArray(group.gems) ? group.gems : []).map(gem => pickFields(gem, LIGHT_GEM_FIELDS))
     })),
     itemCount: build.itemCount,
-    passiveNodeCount: build.passiveNodeCount,
     detailAvailable: build.noDetail ? false : true,
     detailFile: build.noDetail ? '' : `${BUILD_DIR_NAME}/${encodeURIComponent(build.id)}.json`,
-    buildUpdatedUtc: build.buildUpdatedUtc,
-    stats: build.stats
+    buildUpdatedUtc: build.buildUpdatedUtc
   }
 }
 
@@ -325,12 +337,14 @@ async function main() {
   const league = process.env.POE1_NINJA_LEAGUE || undefined
   const info = await resolveLeague('poe1', { league })
   const leagueName = LEAGUE_DISPLAY_NAME_MAP[info.name] || info.name
-  const classes = listClasses('poe1')
+  // 职业名单来自榜单自带的 class 字典：写死的名单会漏掉没选进阶的角色（实测少 25% 人）
+  const { names: classes } = await getClassNames('poe1', { info })
   console.log(`[poe1-ladder] 联赛 ${info.name}(${info.url}) 显示名 ${leagueName} version=${info.version}`)
   console.log(`[poe1-ladder] 职业 ${classes.length} 个，每职业摘要 ${PER_CLASS} 名、详情 ${DETAIL_PER_CLASS} 名`)
 
   fs.mkdirSync(path.join(OUTPUT_DIR, BUILD_DIR_NAME), { recursive: true })
 
+  const leagueTotal = (await searchBuilds('poe1', { info, limit: 1 })).total || 0
   const summaries = []
   const classStats = []
   let detailFailed = 0
@@ -384,7 +398,8 @@ async function main() {
         })
         fs.writeFileSync(
           path.join(OUTPUT_DIR, BUILD_DIR_NAME, `${encodeURIComponent(build.id)}.json`),
-          `${JSON.stringify(build, null, 2)}\n`,
+          // 缩进版会胖三成以上，这是给手机读的，直接压成一行
+          `${JSON.stringify(build)}\n`,
           'utf8'
         )
         summaries.push(summarizeBuild(build))
@@ -401,6 +416,13 @@ async function main() {
   }
 
   const totalCharacters = classStats.reduce((sum, item) => sum + item.total, 0)
+  if (leagueTotal && totalCharacters < leagueTotal * 0.95) {
+    // 职业名单写死在 games.js，上游加新职业时这里先响，而不是静默漏掉一批玩家
+    console.warn(
+      `   ⚠️ 职业名单可能过期：已覆盖 ${totalCharacters}/${leagueTotal}，` +
+        `请检查 crawlers/shared/ninja/games.js 的 poe1.classes`
+    )
+  }
   const digest = {
     schemaVersion: '3',
     updatedAt: new Date().toISOString(),
@@ -415,7 +437,7 @@ async function main() {
 
   if (!summaries.length) throw new Error('未抓到任何角色，拒绝写出空产物')
 
-  fs.writeFileSync(path.join(OUTPUT_DIR, 'ladder_digest.json'), `${JSON.stringify(digest, null, 2)}\n`, 'utf8')
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'ladder_digest.json'), `${JSON.stringify(digest)}\n`, 'utf8')
   const digestBytes = fs.statSync(path.join(OUTPUT_DIR, 'ladder_digest.json')).size
   console.log(`[poe1-ladder] 摘要 ${summaries.length} 条，${(digestBytes / 1024).toFixed(0)} KB；详情失败 ${detailFailed} 个`)
   console.log(`[poe1-ladder] 输出目录: ${OUTPUT_DIR}`)

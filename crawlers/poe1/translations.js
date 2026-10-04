@@ -343,8 +343,20 @@ function translateBaseItem(value) {
 }
 
 function translateRareName(value) {
-  const translated = `${value || ''}`.split(/\s+/).map((word) => RARE_WORDS[word] || word).join('');
-  return translated && translated !== value ? translated : value;
+  const text = `${value || ''}`;
+  let hits = 0;
+  const translated = text
+    .split(/\s+/)
+    .map((word) => {
+      if (!RARE_WORDS[word]) return word;
+      hits += 1;
+      return RARE_WORDS[word];
+    })
+    .join('');
+  // 一个词都没命中时不能去掉空格：否则 "March of the Legion" 会变成
+  // 谁也看不懂的 "MarchoftheLegion"，还不如原样保留英文名。
+  if (!hits) return text;
+  return translated;
 }
 
 function translateFlaskName(value) {

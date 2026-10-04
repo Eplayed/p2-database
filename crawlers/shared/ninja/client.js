@@ -7,7 +7,7 @@
  * fetchPlayerList() 拿到 0 条）。
  */
 
-const { decodeSearch, decodeDictionary } = require('./proto')
+const { decodeSearch, decodeNdicNames } = require('./proto')
 const { getGame } = require('./games')
 
 const USER_AGENT = 'poe-season-helper/1.0'
@@ -131,14 +131,14 @@ async function resolveLeague(gameId, { league } = {}) {
 
 /** 拉一个字典（列里存的是下标，要靠它还原成名称），进程内缓存 */
 async function getDictionary(gameId, hash) {
-  if (!hash) return { id: '', values: [], properties: {} }
+  if (!hash) return []
   const key = `${gameId}:${hash}`
   if (dictionaryCache.has(key)) return dictionaryCache.get(key)
   const game = getGame(gameId)
   const buffer = await request(`${game.apiBase}/builds/dictionary/${hash}`, { json: false })
-  const dict = decodeDictionary(buffer)
-  dictionaryCache.set(key, dict)
-  return dict
+  const names = decodeNdicNames(buffer)
+  dictionaryCache.set(key, names)
+  return names
 }
 
 /**
@@ -186,7 +186,13 @@ async function searchBuilds(gameId, options = {}) {
   // search 端点会忽略 limit，永远返回 100 行。不截断的话 dev 冒烟和
   // 「每个职业只看前几名」的场景会真的去抓 100 份角色详情，白白跑十几分钟。
   if (options.limit && rows.length > options.limit) rows.length = options.limit
-  return { total: decoded.total, rows, league: info, columns: decoded.columns.map(column => column.id) }
+  return {
+    total: decoded.total,
+    rows,
+    league: info,
+    columns: decoded.columns.map(column => column.id),
+    dictionaries: decoded.dictionaries || []
+  }
 }
 
 /**
@@ -198,6 +204,32 @@ async function searchBuilds(gameId, options = {}) {
 function listClasses(gameId) {
   const game = getGame(gameId)
   return Array.from(new Set((game.classes || []).filter(Boolean)))
+}
+
+/**
+ * 从榜单响应自带的 class 字典里取职业名单。
+ *
+ * 为什么不能用写死的名单：字典里除了进阶（Deadeye、Occultist…）还有
+ * 还没选进阶的角色所属的基础职业（Marauder、Witch…），漏掉这部分人实测
+ * 会少掉约四分之一的天梯角色，而且新赛季加新进阶时写死名单不会自己跟上。
+ * 解不出来（NDIC 布局变了）就退回写死名单，并让调用方的覆盖率检查报警。
+ *
+ * @returns {Promise<{names: string[], fromApi: boolean}>}
+ */
+async function getClassNames(gameId, { info } = {}) {
+  const target = info || (await resolveLeague(gameId))
+  try {
+    const listed = await searchBuilds(gameId, { info: target, limit: 1 })
+    const ref = (listed.dictionaries || []).find(item => item.id === 'class')
+    if (!ref) throw new Error('榜单响应里没有 class 字典引用')
+    const names = await getDictionary(gameId, ref.hash)
+    const unique = Array.from(new Set(names.filter(Boolean)))
+    if (!unique.length) throw new Error('class 字典解出 0 个职业')
+    return { names: unique, fromApi: true }
+  } catch (error) {
+    console.warn(`[ninja] 职业字典解析失败，退回写死名单: ${error.message}`)
+    return { names: listClasses(gameId), fromApi: false }
+  }
 }
 
 /** 单个角色的完整详情（装备/技能/天赋/防御/DPS），返回 JSON */
@@ -224,6 +256,7 @@ async function getEconomy(gameId, { league, type } = {}) {
 module.exports = {
   getIndexState,
   listClasses,
+  getClassNames,
   pickLeague,
   resolveLeague,
   getDictionary,

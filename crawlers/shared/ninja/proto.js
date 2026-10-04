@@ -143,25 +143,47 @@ function decodeSearch(buffer) {
 }
 
 /**
- * 解析字典响应：列里存的是下标，要靠它还原成名称。
- * @param {Buffer} buffer 原始 protobuf 字节
- * @returns {{id: string, values: string[], properties: Object}}
+ * 解析字典响应。
+ *
+ * 实测它不是 protobuf，而是 poe.ninja 自定义的 NDIC 二进制：
+ *   0  'NDIC' 魔数
+ *   4  u32 版本号
+ *   12 u32 条目数
+ *   52 每条目名字节长度（条目数个字节）
+ *   52+条目数 起是所有名字首尾相接的字符串块
+ *
+ * 这个布局只对「没有附加属性」的字典（class 职业表）完全成立，带属性的
+ * （keypassive / item）长度数组里还含属性字节数。所以解完必须严格自检：
+ * 名字长度之和要正好等于剩余字节、每个名字要像正常词。任何一条不满足就抛错，
+ * 让调用方退回写死的名单，绝不返回半截或错位的数据。
+ *
+ * @param {Buffer} buffer NDIC 原始字节
+ * @returns {string[]} 按列里下标顺序排列的名字
  */
-function decodeDictionary(buffer) {
-  const fields = listFields(buffer, 0, buffer.length)
-  const groups = groupByField(fields)
-  const properties = {}
-  ;(groups[3] || []).forEach(entry => {
-    const sub = groupByField(listFields(buffer, entry.start, entry.start + entry.length))
-    if (!sub[1]) return
-    const key = asText(buffer, sub[1][0])
-    properties[key] = (sub[2] || []).map(item => asText(buffer, item))
-  })
-  return {
-    id: groups[1] ? asText(buffer, groups[1][0]) : '',
-    values: (groups[2] || []).map(item => asText(buffer, item)),
-    properties
+function decodeNdicNames(buffer) {
+  if (!buffer || buffer.length < 56 || buffer.slice(0, 4).toString('latin1') !== 'NDIC') {
+    throw new Error('不是 NDIC 字典响应')
   }
+  const count = buffer.readUInt32LE(12)
+  if (!count || count > 5000) throw new Error(`NDIC 条目数异常: ${count}`)
+  if (buffer.length < 52 + count) throw new Error('NDIC 长度表越界')
+
+  const lengths = Array.from(buffer.slice(52, 52 + count))
+  const total = lengths.reduce((sum, value) => sum + value, 0)
+  if (total !== buffer.length - 52 - count) {
+    throw new Error(`NDIC 布局不适用：名字共 ${total} 字节，剩余 ${buffer.length - 52 - count} 字节`)
+  }
+
+  let cursor = 52 + count
+  const names = lengths.map(length => {
+    const name = buffer.slice(cursor, cursor + length).toString('utf8')
+    cursor += length
+    return name
+  })
+  if (names.some(name => !/^[\p{L}\p{N} ,'’().:6-]+$/u.test(name))) {
+    throw new Error('NDIC 解出的名字含非法字符，判定为错位')
+  }
+  return names
 }
 
-module.exports = { decodeSearch, decodeDictionary, readFields, listFields, readVarint }
+module.exports = { decodeSearch, decodeNdicNames, readFields, listFields, readVarint }
