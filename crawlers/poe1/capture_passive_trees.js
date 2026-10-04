@@ -41,6 +41,47 @@ function writeDigest(data) {
   fs.writeFileSync(digestPath, `${JSON.stringify(data, null, 2)}\n`);
 }
 
+/**
+ * 摘要与 BD 详情拆成两份文件后，sourceUrl 和 keyPassives 只在 poe1_builds/{id}.json 里，
+ * 截图结果却要让首屏也能直接用。这里统一成一套读写口径：
+ * 读的时候把详情和摘要合成一个记录，写的时候两份都写。
+ */
+function detailPathOf(build) {
+  if (!build || !build.detailFile) return '';
+  return path.join(dataDir, build.detailFile);
+}
+
+function readBuildDetail(build) {
+  const filePath = detailPathOf(build);
+  if (!filePath || !fs.existsSync(filePath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch (error) {
+    console.warn(`   详情文件读取失败 ${build.id}: ${error.message}`);
+    return null;
+  }
+}
+
+function loadBuildRecord(build) {
+  const detail = readBuildDetail(build);
+  if (!detail) return { ...build };
+  return { ...detail, ...build };
+}
+
+function patchBuildDetail(build, patch) {
+  const filePath = detailPathOf(build);
+  if (!filePath || !fs.existsSync(filePath)) return false;
+  try {
+    const detail = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    Object.assign(detail, patch);
+    fs.writeFileSync(filePath, `${JSON.stringify(detail, null, 2)}\n`);
+    return true;
+  } catch (error) {
+    console.warn(`   详情文件写回失败 ${build.id}: ${error.message}`);
+    return false;
+  }
+}
+
 function makeImageFileName(build) {
   return `${String(build.id || `${build.account}-${build.character}`).replace(/[^a-zA-Z0-9_-]/g, '_').toLowerCase()}.jpg`;
 }
@@ -95,8 +136,14 @@ async function findLargestCanvas(page) {
   return best;
 }
 
+function applyTreeImage(build, publicUrl) {
+  applyTreeImage(build, publicUrl);
+  patchBuildDetail(build, { passiveTreeImage: publicUrl });
+}
+
 async function captureOne(page, build, index, total) {
-  const isFullscreenType = build.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(build.passiveTreeUrl || '');
+  const record = loadBuildRecord(build);
+  const isFullscreenType = record.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(record.passiveTreeUrl || '');
   if (isFullscreenType && !build.passiveTreeImage) {
     return captureOneFullscreenPage(page, build, index, total);
   }
@@ -106,16 +153,17 @@ async function captureOne(page, build, index, total) {
   const publicUrl = makePublicUrl(fileName);
 
   if (!force && fs.existsSync(outputPath)) {
-    build.passiveTreeImage = publicUrl;
+    applyTreeImage(build, publicUrl);
     console.log(`   ${index}/${total} 已存在 ${build.character}`);
     return true;
   }
-  if (!build.sourceUrl) {
+  const sourceUrl = build.sourceUrl || record.sourceUrl || '';
+  if (!sourceUrl) {
     console.warn(`   ${index}/${total} 跳过 ${build.character}: 缺少 poe.ninja 链接`);
     return false;
   }
 
-  await page.goto(build.sourceUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+  await page.goto(sourceUrl, { waitUntil: 'networkidle2', timeout: 60000 });
   await page.evaluate(() => {
     const el = document.querySelector('.relative.col-span-5.mb-0.p-6.lg\\:col-span-3.bg-coolgrey-1050') || document.querySelector('canvas');
     if (el) el.scrollIntoView({ block: 'center', inline: 'center' });
@@ -132,30 +180,32 @@ async function captureOne(page, build, index, total) {
     omitBackground: false
   });
 
-  build.passiveTreeImage = publicUrl;
+  applyTreeImage(build, publicUrl);
   console.log(`   ${index}/${total} 截图完成 ${build.character}`);
   return true;
 }
 
 
 async function captureOneFullscreenPage(page, build, index, total) {
+  const record = loadBuildRecord(build);
   const fileName = makeImageFileName(build);
   const outputPath = path.join(outputDir, fileName);
   const publicUrl = makePublicUrl(fileName);
 
   if (!force && fs.existsSync(outputPath)) {
-    build.passiveTreeImage = publicUrl;
+    applyTreeImage(build, publicUrl);
     delete build.passiveTreeIsFullscreenPage;
     console.log(`   ${index}/${total} 已存在 [国服全屏天赋] ${build.character}`);
     return true;
   }
-  const isFullscreen = build.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(build.passiveTreeUrl || '');
-  if (!isFullscreen || !build.passiveTreeUrl) {
+  const treeUrl = build.passiveTreeUrl || record.passiveTreeUrl || '';
+  const isFullscreen = build.passiveTreeIsFullscreenPage || record.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(treeUrl);
+  if (!isFullscreen || !treeUrl) {
     console.warn(`   ${index}/${total} 跳过 [国服全屏天赋] ${build.character}: 条件不匹配或缺少 passiveTreeUrl`);
     return false;
   }
 
-  await page.goto(build.passiveTreeUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+  await page.goto(treeUrl, { waitUntil: 'networkidle2', timeout: 60000 });
   await sleep(1500);
 
   const canvas = await findLargestCanvas(page);
@@ -168,7 +218,7 @@ async function captureOneFullscreenPage(page, build, index, total) {
     omitBackground: false
   });
 
-  build.passiveTreeImage = publicUrl;
+  applyTreeImage(build, publicUrl);
   delete build.passiveTreeIsFullscreenPage;
   console.log(`   ${index}/${total} 截图完成 [国服全屏天赋] ${build.character}`);
   return true;
@@ -220,8 +270,14 @@ async function cachePassiveIcons(digest, browser) {
   fs.mkdirSync(passiveIconDir, { recursive: true });
   const page = await browser.newPage();
   const seen = new Map();
+  // 拆分后关键天赋只存在 BD 详情文件里，先按 BD 取出来再全局去重
+  const passivesByBuild = new Map();
   for (const build of digest.builds || []) {
-    for (const passive of build.keyPassives || []) {
+    const inDigest = Array.isArray(build.keyPassives) ? build.keyPassives : [];
+    const passives = inDigest.length ? inDigest : loadBuildRecord(build).keyPassives || [];
+    if (!Array.isArray(passives) || !passives.length) continue;
+    passivesByBuild.set(String(build.id), passives);
+    for (const passive of passives) {
       if (!passive.icon) continue;
       const key = passive.nameEn || passive.name || passive.icon;
       if (!seen.has(key)) seen.set(key, passive);
@@ -242,10 +298,17 @@ async function cachePassiveIcons(digest, browser) {
 
   const iconUrlByKey = new Map(Array.from(seen.values()).map((passive) => [passive.nameEn || passive.name || passive.icon, passive.icon]));
   for (const build of digest.builds || []) {
-    for (const passive of build.keyPassives || []) {
+    const passives = passivesByBuild.get(String(build.id)) || (Array.isArray(build.keyPassives) ? build.keyPassives : []);
+    let changed = false;
+    for (const passive of passives) {
       const nextIcon = iconUrlByKey.get(passive.nameEn || passive.name || passive.icon);
-      if (nextIcon) passive.icon = nextIcon;
+      if (nextIcon && passive.icon !== nextIcon) {
+        passive.icon = nextIcon;
+        changed = true;
+      }
     }
+    // 详情文件才是真正给前端读的那一份
+    if (changed) patchBuildDetail(build, { keyPassives: passives });
   }
   digest.passiveIconImages = {
     updatedAt: new Date().toISOString(),

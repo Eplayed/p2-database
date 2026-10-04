@@ -59,6 +59,8 @@ const GAMES = {
       story: 'miniprogram_data/story/',
       passiveTrees: 'miniprogram_data/passive-trees/',
       passiveIcons: 'miniprogram_data/passive-icons/',
+      // 天梯摘要只带轻字段，点开 BD 才读这里那一份完整详情；缺目录等于详情页全空
+      buildDetails: 'miniprogram_data/poe1_builds/',
     },
   },
 };

@@ -39,10 +39,11 @@
 - 通货中文名走 `crawlers/shared/officialDict.js` 的 1375 条官方译名字典，
   字典没有的名称保留英文，禁止逐词硬造译名。
 
-## poe.ninja builds 接入（2026-10-04 实测，尚未接线）
+## poe.ninja builds 接入（2026-10-04 实测，已接线为 `crawlers/poe1/ladder_ninja.js`）
 
-用户已决定把 POE1 天梯主源换成 poe.ninja，国服官方天梯不再作为主源。以下是实测出来的入口与结构，
-实现时照此接，不要重新逆向：
+用户已决定把 POE1 天梯主源换成 poe.ninja，国服官方天梯不再作为主源，只保留
+`crawlers/poe1/build_digest.js`（`npm run poe1:ladder:official`）作为回退与对照。
+以下是实测出来的入口与结构，改动时照此接，不要重新逆向：
 
 1. 联盟与索引号：`GET https://poe.ninja/poe1/api/data/index-state`
    → `snapshotVersions[]` 里取 `url=allflame && type=exp` 那条的 `version`（形如 `0533-20261004-14633`，
@@ -74,12 +75,35 @@
    仓库里已有 `crawlers/ninja-ladder/capture_trees.js` 给 POE2 干过同样的事，迁移时复用它的路子
    给 POE1 出图；国服页面截图那条链在换源后一并停掉。
 8. 换源的已知代价：角色名与账号是英文；装备/技能名需要接 `crawlers/shared/officialDict.js` 译名字典。
+   2026-10-04 实测 18 个进阶名里只有 `Reliquarian` 没有权威中文名，按「禁止猜译」保留英文，
+   `scripts/check_poe1_ladder_output.js` 会把这类残留报成提醒。
+
+## 首屏拆分与上游限速（2026-10-04）
+
+- 摘要 `ladder_digest.json` 只带列表页要用的字段：榜单信息、主技能、以及**轻字段版**的
+  装备名/技能名（`slot/name/nameEn/typeLine/baseType/rarity/icon`）。
+  天梯页的「装备查 BD / 技能查 BD」索引是前端从 `builds` 算出来的，所以这几列必须留在摘要里。
+- 装备词缀、孔位宝石、药剂、珠宝、关键天赋全部写进
+  `miniprogram_data/poe1_builds/{id}.json`，玩家点进某条 BD 才拉那一份
+  （旧版一个摘要塞 282 条完整 BD，实测 3.7 MB，其中 95% 体积是详情字段）。
+- `capture_passive_trees.js` 和 `starter_terms.js` 都已改成「摘要 + 详情文件合成一条记录」，
+  截图结果和关键天赋图标会同时写回两份文件，否则换源后这两步会静默退化。
+- **上游限速是硬约束**：poe.ninja 的角色详情接口有 Cloudflare 限流，实测并发/快请求触发后
+  `HTTP 429` 的 `Retry-After` 到过 **3133 秒（约 52 分钟）**，期间 `search` 与 `index-state` 仍正常，
+  只有 `character` 被限。因此 `crawlers/shared/ninja/client.js` 做了全局串行 + 最小间隔
+  （`NINJA_REQUEST_INTERVAL_MS`，默认 1200ms），`auto_browser/translate_crawler.js` 对详情请求同样限速。
+  `Retry-After` 超过 5 分钟时**直接停整轮**，不要重试：继续打只会延长封禁，半套产物还可能覆盖线上数据。
+- 两个爬虫不要同时跑（同一出口 IP 共享限额）。日常节奏：详情类抓取一次跑完，
+  POE1 每职业 10 条摘要、10 条详情，约 180 次详情请求 ≈ 4 分钟。
 
 ## 输出与发布
 
 ```text
 translated-data/poe1/{dev|release}/miniprogram_data/
-├── ladder_digest.json          天梯与 BD
+├── ladder_digest.json          天梯首屏摘要（轻字段，含 detailFile 指针）
+├── poe1_builds/{id}.json       单条 BD 完整详情，点开才拉
+├── passive-trees/              天赋树截图
+├── passive-icons/              关键天赋图标
 ├── economy_digest.json         国际服通货（混沌计价）
 ├── cn_economy_digest.json      国服通货（米粒计价）
 ├── currency_daily_change.json  按日快照算出的较昨日涨跌

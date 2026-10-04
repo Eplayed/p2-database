@@ -25,6 +25,24 @@ function readJson(filePath, fallback = null) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
+/**
+ * 天梯摘要拆分后只带列表页要用的轻字段，药剂、珠宝和关键天赋都在
+ * miniprogram_data/poe1_builds/{id}.json 里。术语匹配要看全这些数据，
+ * 否则开荒 BD 中的药剂和天赋会大面积匹配不上。
+ */
+function withBuildDetails(ladder) {
+  const builds = Array.isArray(ladder && ladder.builds) ? ladder.builds : [];
+  if (!builds.length) return { builds: [] };
+  return {
+    ...ladder,
+    builds: builds.map((build) => {
+      if (!build || !build.detailFile) return build;
+      const detail = readJson(path.join(outputDir, build.detailFile), null);
+      return detail ? { ...build, ...detail } : build;
+    })
+  };
+}
+
 function normalizeName(value) {
   return String(value || '')
     .toLowerCase()
@@ -248,7 +266,7 @@ function findMatch(term, officialIndex) {
     if (!matches || !matches.length) continue;
     const preferred = matches.find((item) => term.category === 'unknown' || item.type === term.category) || matches[0];
     return {
-      source: '国服官方天梯',
+      source: 'poe.ninja 天梯',
       type: preferred.type,
       name: preferred.name,
       nameEn: preferred.nameEn,
@@ -265,7 +283,7 @@ function findMatch(term, officialIndex) {
 function buildStarterTermsEnrichment() {
   const starterData = readJson(sourcePath);
   if (!starterData || !Array.isArray(starterData.builds)) throw new Error(`缺少开荒 BD 源数据: ${sourcePath}`);
-  const ladder = readJson(ladderPath, { builds: [] });
+  const ladder = withBuildDetails(readJson(ladderPath, { builds: [] }));
   const officialIndex = buildOfficialIndex(ladder);
   const terms = extractStarterTerms(starterData).map((term) => {
     const match = findMatch(term, officialIndex);
@@ -284,7 +302,7 @@ function buildStarterTermsEnrichment() {
     source: {
       starterBuilds: sourcePath,
       officialLadder: ladderPath,
-      note: '第一版只用国服官方天梯详情做真实数据匹配；未匹配项后续进入 PoEDB 或人工映射。'
+      note: '只用天梯真实 BD 数据做匹配（现为 poe.ninja，换源前是国服官方天梯）；未匹配项后续进入 PoEDB 或人工映射。'
     },
     stats: {
       totalTerms: terms.length,
