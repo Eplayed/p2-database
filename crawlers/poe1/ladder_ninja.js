@@ -231,6 +231,38 @@ function buildStats(character) {
   }
 }
 
+const DAMAGE_TYPE_LABELS = {
+  physical: '物理',
+  lightning: '闪电',
+  cold: '冰霜',
+  fire: '火焰',
+  chaos: '混沌'
+}
+
+/**
+ * 面板要直接能读的数字。
+ *
+ * 角色详情的 breakdowns 里 DPS/暴击这些键是内部编号，解不出含义；
+ * 而榜单行本身就是 poe.ninja 网页上显示的那份文本（"3.7M"、"76%"、"2.61"），
+ * 拿来当展示值最不容易出错。这里只做搬运和伤害类型归并，不做任何换算。
+ */
+function buildHeadline(row) {
+  if (!row) return null
+  const mix = Object.keys(DAMAGE_TYPE_LABELS)
+    .map(key => ({ key, value: toNumber(row[`dps.${key}`]) }))
+    .filter(item => item.value > 0)
+    .sort((left, right) => right.value - left.value)
+  return {
+    dps: String(row['dps.total'] || ''),
+    attackSpeed: String(row['rate.total'] || ''),
+    critChance: String(row['critchance.total'] || ''),
+    critMultiplier: String(row['critmulti.total'] || ''),
+    accuracy: String(row['hitchance.total'] || ''),
+    effectiveHealthPool: String(row.ehp__str || ''),
+    mainDamageType: mix.length ? DAMAGE_TYPE_LABELS[mix[0].key] : ''
+  }
+}
+
 function mapCharacterToBuild(character, meta) {
   const accountRaw = character.account || meta.account || ''
   const name = character.name || meta.name || ''
@@ -273,6 +305,7 @@ function mapCharacterToBuild(character, meta) {
     skillGroups: buildSkillGroups(character),
     keyPassives,
     stats: buildStats(character),
+    headline: buildHeadline(meta.row),
     summary: `${meta.leagueName} 天梯 ${classNameEn} 第 ${meta.rank} 名`,
     sourceUrl: `https://poe.ninja/poe1/builds/${meta.leagueUrl}/character/${encodeURIComponent(accountRaw)}/${encodeURIComponent(name)}`,
     equipment,
@@ -426,6 +459,7 @@ async function main() {
           name: row.name,
           level: row.level,
           class: className,
+          row,
           leagueName,
           leagueUrl: info.url
         })
