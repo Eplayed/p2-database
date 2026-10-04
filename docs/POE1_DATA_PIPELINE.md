@@ -61,11 +61,18 @@
    vestigialmod, pantheon`。
 5. 仓库里 `crawlers/poe1/ninja_search_proto.js` 有现成 protobufjs schema，但字段号与实际不符
    （它按 `value_lists=5` 取行，实际行在 `12`），接线时要按上面的实测结构修正。
-6. 单个角色的装备/天赋详情端点确认存在：`/poe1/api/builds/{version}/character?account=&name=&overview=`
-   参数留空返回 **400**（不是 404），说明路径正确，参数从 search 的 `name`/`account` 列取。
-   这条还没跑通，是迁移的主要待验证项。
-7. 天赋树截图：poe.ninja 的 BD 页自带天赋树渲染，迁移后按它的截图来，不再用本机截国服页面
-   （国服页面截图那条链在换源后要一并停掉）。
+6. 单个角色的完整详情：`GET /poe1/api/builds/{version}/character?account={账号}&name={角色名}&overview=allflame`
+   返回 **JSON**（实测单角色 220 KB），字段包含
+   `items[] / flasks[] / jewels[] / keyStones[]`（每件带 `sockets` 与 `socketedItems`，即真实孔位宝石）、
+   `skills[]`（带 `itemSlot` + `allGems` + `dps`，能正确还原技能链接，不需要再猜）、
+   `passiveSelection[]`（实测 94 个节点）+ `passiveTreeName`（`PassiveTree-3.29`）、
+   `defensiveStats`、`breakdowns`、`masteries/runegrafts/tattoos/clusterJewels`、
+   `banditChoice/pantheonMajor/pantheonMinor`、`ascendancyClassName` 与 `secondaryAscendancyClassName`、
+   `pathOfBuildingExport`，以及 `updatedUtc/lastSeenUtc/lastCheckedUtc` 可以直接判断数据新鲜度。
+   对比：同一个角色国服官方只上报了 2 件装备，这里 11 件装备 + 5 药剂 + 19 珠宝。
+7. 天赋树截图：poe.ninja 是用 `passiveSelection` 前端渲染的图，不是现成 PNG。
+   仓库里已有 `crawlers/ninja-ladder/capture_trees.js` 给 POE2 干过同样的事，迁移时复用它的路子
+   给 POE1 出图；国服页面截图那条链在换源后一并停掉。
 8. 换源的已知代价：角色名与账号是英文；装备/技能名需要接 `crawlers/shared/officialDict.js` 译名字典。
 
 ## 输出与发布
