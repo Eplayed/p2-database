@@ -111,7 +111,7 @@ function columnValue(column, index) {
 /**
  * 抓榜单。
  * @param {string} gameId 'poe1' | 'poe2'
- * @param {{league?: string, clazz?: string, type?: string, limit?: number, info?: Object}} options
+ * @param {{league?: string, clazz?: string, type?: string, sort?: string, limit?: number, info?: Object}} options
  * @returns {Promise<{total: number, rows: Array<Object>, league: Object, columns: string[]}>}
  */
 async function searchBuilds(gameId, options = {}) {
@@ -119,6 +119,8 @@ async function searchBuilds(gameId, options = {}) {
   const info = options.info || (await resolveLeague(gameId, { league: options.league }))
   const type = options.type || 'exp'
   const params = [`overview=${encodeURIComponent(info.snapshotName)}`, `type=${encodeURIComponent(type)}`]
+  // 排序键要和现有产物一致，否则同一批人会以不同顺序上榜，diff 出来全是假差异
+  if (options.sort) params.push(`sort=${encodeURIComponent(options.sort)}`)
   if (options.clazz) params.push(`class=${encodeURIComponent(options.clazz)}`)
   if (options.limit) params.push(`limit=${encodeURIComponent(options.limit)}`)
   const url = `${game.apiBase}/builds/${info.version}/search?${params.join('&')}`
