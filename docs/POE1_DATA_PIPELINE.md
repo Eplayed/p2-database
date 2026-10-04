@@ -60,6 +60,12 @@
    search 响应里的字典共 16 个：`class, gem, keypassive, secondascendancy, weaponmode, bandit,
    item, mercenaryclass, skilltrait, anointed, atlasskill, mastery, runegraft, tattoo,
    vestigialmod, pantheon`。
+   字典响应**不是 protobuf**，是自定义的 `NDIC` 二进制，实测布局：
+   `0 魔数 NDIC / 4 u32 版本 / 12 u32 条目数 / 52 起每条目名字节长度 / 长度表后紧跟名字字符串块`。
+   `crawlers/shared/ninja/proto.js` 的 `decodeNdicNames()` 已按此还原，并做严格自检
+   （长度和要正好等于剩余字节、字符要正常）：带附加属性的字典（keypassive/item）布局不同，
+   自检会失败并抛错，调用方退回写死名单。目前只用它取 **class 名单**——
+   写死名单会漏掉还没选进阶的基础职业，实测少 25% 角色（93530/124391）。
 5. 仓库里 `crawlers/poe1/ninja_search_proto.js` 有现成 protobufjs schema，但字段号与实际不符
    （它按 `value_lists=5` 取行，实际行在 `12`），接线时要按上面的实测结构修正。
 6. 单个角色的完整详情：`GET /poe1/api/builds/{version}/character?account={账号}&name={角色名}&overview=allflame`
@@ -117,10 +123,20 @@ translated-data/poe1/{dev|release}/miniprogram_data/
 ## 命令
 
 ```bash
-npm run poe1:ladder      # 天梯 + BD 详情
-npm run poe1:economy     # 国际服通货
-npm run poe1:economy:cn  # 国服通货（DD373 + FilterEditor）
-npm run poe1:publish     # 全链路（含日快照与 manifest）+ 上传
+npm run poe1:ladder           # 天梯 + BD 详情（poe.ninja）
+npm run poe1:ladder:official  # 旧链路：国服官方天梯，只作对照与应急回退
+npm run poe1:check            # 发布前只读检查产物（摘要字段、详情文件、体积、译名）
+npm run poe1:economy          # 国际服通货
+npm run poe1:economy:cn       # 国服通货（DD373 + FilterEditor）
+npm run poe1:publish          # 全链路（含日快照、产物检查与 manifest）+ 上传
+```
+
+抓取规模与输出目录可用环境变量覆盖，先在影子目录验证再写 release：
+
+```bash
+POE1_NINJA_OUTPUT_DIR=/tmp/poe1-shadow POE1_NINJA_PER_CLASS=3 POE1_NINJA_DETAIL=2 \
+  node crawlers/poe1/ladder_ninja.js
+POE1_LADDER_DIR=/tmp/poe1-shadow node scripts/check_poe1_ladder_output.js
 ```
 
 ## 自动更新
