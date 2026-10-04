@@ -35,9 +35,12 @@ const SLOT_NAMES = {
   13: '副手',
   14: '药剂'
 };
+// 兜底用的赛季名。国服天梯的赛季名以官方页面为准（见 fetchCurrentSeason），
+// 这里只在页面读不到时兜底 —— 此前这里是唯一的来源且写错了：
+// s29_normal 被写成「费西亚的遗产」，而官方页面现在给的是「沙海幻境 / Mirage」，
+// 导致 BD 详情、天梯卡片上的赛季名一直是错的。
 const SEASON_LABELS = {
-  s29_normal: '费西亚的遗产',
-  s30_normal: '永火之咒'
+  s29_normal: '沙海幻境'
 };
 
 async function fetchWithTimeout(url, options = {}) {
@@ -82,14 +85,48 @@ function getPreferredSnapshotName() {
   return DEFAULT_SEASON;
 }
 
+/**
+ * 从官方天梯页面读当前赛季。页面里的 window.buildLeagues 会列出可查联盟，
+ * 快照名藏在 url 的 ?url= 参数里，displayName 就是国服官方中文名。
+ * @returns {Promise<{snapshotName: string, displayName: string, name: string}|null>}
+ */
+async function fetchCurrentSeason() {
+  try {
+    const response = await fetchWithTimeout(`${QQ_ROOT}/challenge/index.html`, {
+      headers: { 'user-agent': 'poe-season-helper/1.0', referer: `${QQ_ROOT}/challenge/index.html` }
+    })
+    const html = await response.text()
+    const matched = html.match(/window\.buildLeagues\s*=\s*(\[[\s\S]*?\]);/)
+    if (!matched) return null
+    const leagues = JSON.parse(matched[1])
+    const current =
+      leagues.find(item => item && !item.hardcore && item.indexed) || leagues.find(item => item && !item.hardcore)
+    if (!current) return null
+    const snapshotName = decodeURIComponent(String(current.url || '').split('url=').pop() || '')
+    if (!snapshotName) return null
+    return { snapshotName, displayName: current.displayName || '', name: current.name || '' }
+  } catch (error) {
+    console.warn(`   读取官方赛季失败，回退硬编码：${error.message}`)
+    return null
+  }
+}
+
 async function fetchRankInfo() {
+  const pageSeason = await fetchCurrentSeason()
+  if (pageSeason) {
+    console.log(`   官方当前赛季: ${pageSeason.snapshotName} ${pageSeason.displayName}（${pageSeason.name}）`)
+  }
   const preferred = getPreferredSnapshotName();
-  const candidates = Array.from(new Set([preferred, DEFAULT_SEASON, 's29_normal']));
+  // 页面给出的快照排在最前，硬编码只作兜底：换赛季时不再需要手改常量
+  const candidates = Array.from(
+    new Set([pageSeason && pageSeason.snapshotName, preferred, DEFAULT_SEASON, 's29_normal'].filter(Boolean))
+  );
   for (const snapshotName of candidates) {
     const url = `${QQ_ROOT}/js/rankinfo_${encodeURIComponent(snapshotName)}.json`;
     const data = await tryFetchJson(url);
     if (data && Array.isArray(data.names) && Array.isArray(data.accounts)) {
-      return { snapshotName, url, data };
+      const label = pageSeason && pageSeason.snapshotName === snapshotName ? pageSeason.displayName : ''
+      return { snapshotName, url, data, displayName: label, pageSeason };
     }
     console.warn(`   国服天梯快照暂不可用: ${snapshotName}`);
   }
@@ -264,7 +301,7 @@ async function fetchCharacterDetail(snapshotName, build) {
   return fetchJson(url);
 }
 
-function makeInitialBuilds(rankInfo, snapshotName) {
+function makeInitialBuilds(rankInfo, snapshotName, leagueName) {
   const limit = Math.min(rankInfo.names.length, 300);
   const builds = [];
   for (let index = 0; index < limit; index += 1) {
@@ -287,7 +324,7 @@ function makeInitialBuilds(rankInfo, snapshotName) {
       level: Number(getArrayValue(rankInfo.levels, index, 0)) || 0,
       className: translateClass(classNameEn),
       classNameEn,
-      leagueName: SEASON_LABELS[snapshotName] || snapshotName,
+      leagueName: leagueName || SEASON_LABELS[snapshotName] || snapshotName,
       mainSkill: translateSkill(mainSkillData?.name || skills[0] || ''),
       mainSkillEn: mainSkillData?.name || '',
       mainSkillIcon: mainSkillData?.icon || '',
@@ -413,8 +450,9 @@ function makePopularSkills(rankInfo) {
     .slice(0, 12);
 }
 
-function makeLeague(snapshotName, rankInfo) {
-  const displayName = SEASON_LABELS[snapshotName] || SEASON_LABELS[rankInfo.season] || rankInfo.season || snapshotName;
+function makeLeague(snapshotName, rankInfo, officialDisplayName) {
+  // 官方页面的 displayName 最权威，硬编码表只在读不到页面时兜底
+  const displayName = officialDisplayName || SEASON_LABELS[snapshotName] || SEASON_LABELS[rankInfo.season] || rankInfo.season || snapshotName;
   return {
     name: rankInfo.season || snapshotName,
     url: snapshotName,
@@ -423,9 +461,9 @@ function makeLeague(snapshotName, rankInfo) {
 }
 
 async function buildDigest() {
-  const { snapshotName, url, data: rankInfo } = await fetchRankInfo();
-  const league = makeLeague(snapshotName, rankInfo);
-  const builds = await enrichBuildDetails(makeInitialBuilds(rankInfo, snapshotName), snapshotName);
+  const { snapshotName, url, data: rankInfo, displayName } = await fetchRankInfo();
+  const league = makeLeague(snapshotName, rankInfo, displayName);
+  const builds = await enrichBuildDetails(makeInitialBuilds(rankInfo, snapshotName, league.displayName), snapshotName);
   const output = {
     schemaVersion: 2,
     updatedAt: new Date().toISOString(),
