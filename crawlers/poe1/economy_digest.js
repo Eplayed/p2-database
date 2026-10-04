@@ -48,7 +48,9 @@ function mergeCategory(category, payload) {
       displayValue: formatValue(line.primaryValue),
       change7d: round(line.sparkline?.totalChange, 1),
       volume: round(line.volumePrimaryValue, 0),
-      icon: item.image ? `https://poe.ninja${item.image}` : ''
+      // 图标改用 poecdn：poe.ninja 的 /gen/image 外链实测整体 404，
+      // 同一串编码路径在 web.poecdn.com 上仍是 200 的 PNG。
+      icon: item.image ? `https://web.poecdn.com${item.image}` : ''
     };
   });
 }

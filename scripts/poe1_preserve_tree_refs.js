@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 /**
- * POE1 天梯 digest 天赋截图引用保留
+ * POE1 天梯 digest 天赋截图引用保留 / 回填
  *
- * 背景：云端 GitHub Actions（update_poe1_season.yml，每 2 小时）重新生成
- * ladder_digest.json 时不含天赋截图步骤，会把本地 poe1_publish 写入的
- * passiveTreeImage 引用清空并上传覆盖。小程序天梯详情从该字段加载天赋图，
- * 导致一天中大部分时间天赋图不显示。
+ * 背景有两层：
+ * 1. 云端重建 ladder_digest.json 时不含天赋截图步骤，会把本地 poe1_publish 写入的
+ *    passiveTreeImage 引用清空并上传覆盖（该工作流现在是手动触发，但历史清空仍留在产物里）。
+ * 2. capture_passive_trees.js 的 limit 默认 30，只截前 30 个 BD；后续全量跑批留下的图片
+ *    比 digest 里的引用多。实测 282 个 build 里 92 个有对应本地图片，却只有 29 条引用生效。
  *
- * 本脚本在云端「生成之后、上传之前」运行：下载 OSS 上现有的 digest，
- * 把其中的 passiveTreeImage 按 build id 回填到新生成的 digest，
- * 保证高频刷新不丢截图引用。
+ * 因此本脚本做两轮回填，在「生成之后、上传之前」运行：
+ * - 第一轮：下载 OSS 现有 digest，按 build id 把已有引用补回来。
+ * - 第二轮：按截图脚本的文件命名规则，用本地 passive-trees/ 里已存在的图片补引用。
+ * 只填空字段，不覆盖已有值；不修改图片文件本身。
  */
 const fs = require('fs');
 const path = require('path');
@@ -55,35 +57,64 @@ async function main() {
     process.exit(1);
   }
 
-  let remote;
+  // 第一轮：OSS 现有 digest 里已生效的引用，按 build id 补回来
+  let restoredFromRemote = 0;
   try {
-    remote = await fetchJson(remoteUrl);
+    const remote = await fetchJson(remoteUrl);
+    const remoteById = new Map(
+      (Array.isArray(remote.builds) ? remote.builds : [])
+        .filter((b) => b && b.id && b.passiveTreeImage)
+        .map((b) => [b.id, b.passiveTreeImage])
+    );
+    for (const build of builds) {
+      if (!build || build.passiveTreeImage) continue;
+      const image = remoteById.get(build.id);
+      if (image) {
+        build.passiveTreeImage = image;
+        delete build.passiveTreeIsFullscreenPage;
+        restoredFromRemote += 1;
+      }
+    }
   } catch (error) {
-    console.warn(`⚠️ 无法读取 OSS 现有 digest（${error.message}），跳过截图引用回填`);
-    return;
-  }
-  const remoteById = new Map(
-    (Array.isArray(remote.builds) ? remote.builds : [])
-      .filter((b) => b && b.id && b.passiveTreeImage)
-      .map((b) => [b.id, b.passiveTreeImage])
-  );
-  if (!remoteById.size) {
-    console.log('ℹ️ OSS 现有 digest 无天赋截图引用，无需回填');
-    return;
+    console.warn(`⚠️ 无法读取 OSS 现有 digest（${error.message}），跳过远端回填，继续本地图片回填`);
   }
 
-  let restored = 0;
+  // 第二轮：按截图脚本的命名规则，用本地已存在的图片补引用。
+  // 远端回填只能救回"曾经生效过"的引用，跑批新增的图必须靠这一轮。
+  const treesDir = path.join(path.dirname(digestPath), 'passive-trees');
+  const treeFileName = build =>
+    `${String(build.id || `${build.account}-${build.character}`)
+      .replace(/[^a-zA-Z0-9_-]/g, '_')
+      .toLowerCase()}.jpg`;
+  let fileNames;
+  try {
+    fileNames = new Set(fs.readdirSync(treesDir));
+  } catch (error) {
+    console.warn(`⚠️ 本地天赋图目录不可用（${error.message}），跳过图片回填`);
+    fileNames = new Set();
+  }
+  const prefix = (digest.passiveTreeImages && digest.passiveTreeImages.prefix)
+    || `${OSS_PUBLIC_BASE}/poe1-season/${env}/miniprogram_data/passive-trees/`;
+
+  let restoredFromFile = 0;
   for (const build of builds) {
     if (!build || build.passiveTreeImage) continue;
-    const image = remoteById.get(build.id);
-    if (image) {
-      build.passiveTreeImage = image;
-      delete build.passiveTreeIsFullscreenPage;
-      restored += 1;
-    }
+    const fileName = treeFileName(build);
+    if (!fileNames.has(fileName)) continue;
+    build.passiveTreeImage = `${prefix}${fileName}`;
+    restoredFromFile += 1;
+  }
+
+  const total = builds.filter(b => b && b.passiveTreeImage).length;
+  if (!restoredFromRemote && !restoredFromFile) {
+    console.log(`ℹ️ 无需回填，当前 ${total} 个 build 有天赋图引用`);
+    return;
   }
   fs.writeFileSync(digestPath, `${JSON.stringify(digest, null, 2)}\n`);
-  console.log(`✅ 已回填天赋截图引用: ${restored} 个 build（OSS 现有 ${remoteById.size} 个）`);
+  console.log(
+    `✅ 天赋截图引用回填：远端 ${restoredFromRemote} 个、本地图片 ${restoredFromFile} 个；` +
+    `现共 ${total}/${builds.length} 个 build 有图（本地图片文件 ${fileNames.size} 个）`
+  );
 }
 
 main().catch((error) => {
