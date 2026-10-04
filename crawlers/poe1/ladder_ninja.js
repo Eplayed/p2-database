@@ -80,10 +80,29 @@ function toNumber(value) {
   return Number.isFinite(number) ? number : 0
 }
 
+/**
+ * poe.ninja 的 properties 是 { name, values: [[文本, 类型]] } 结构，
+ * 直接塞进翻译函数会得到 "[object Object]" 显示给玩家。
+ * 这里先还原成 "名称: 数值" 的一行文字，名字形如 [A|B] 的取 B。
+ */
+function statLineToText(line) {
+  if (typeof line === 'string') return line
+  if (!line || typeof line !== 'object') return ''
+  const rawName = String(line.name || '')
+  const bracket = rawName.match(/^\[[^|]+\|([^\]]+)\]$/)
+  const name = bracket ? bracket[1] : rawName
+  const values = (Array.isArray(line.values) ? line.values : [])
+    .map(value => (Array.isArray(value) ? value[0] : value))
+    .filter(item => item !== undefined && item !== null && item !== '')
+    .join(' ')
+  if (!name) return values
+  return values ? `${name}: ${values}` : name
+}
+
 function translateMods(list) {
   return (Array.isArray(list) ? list : [])
-    .map(line => translateStatText(line) || '')
-    .filter(Boolean)
+    .map(line => translateStatText(statLineToText(line)) || '')
+    .filter(line => line && line !== '[object Object]')
 }
 
 function mapItem(itemData, section, slot) {
@@ -279,7 +298,7 @@ function mapCharacterToBuild(character, meta) {
 // 关键天赋、面板数值全部放进 poe1_builds/{id}.json，玩家点进 BD 详情才拉。
 // 装备与技能名必须留在摘要里——天梯页的「装备查 BD / 技能查 BD」索引是前端从 builds 算出来的。
 // skillGems 不放：技能索引只读 skills + skillGroups，留一份等于同一批名字存两遍。
-const LIGHT_ITEM_FIELDS = ['slot', 'name', 'nameEn', 'typeLine', 'baseType', 'rarity', 'icon']
+const LIGHT_ITEM_FIELDS = ['slot', 'name', 'nameEn', 'typeLine', 'rarity', 'icon']
 const LIGHT_GEM_FIELDS = ['name', 'nameEn', 'icon', 'isSupport']
 
 function pickFields(record, fields) {
@@ -292,6 +311,20 @@ function pickFields(record, fields) {
 }
 
 function summarizeBuild(build) {
+  // 技能组在详情里是按链接组存的，同一个宝石会在多个组里重复出现；
+  // 而前端「技能查 BD」索引是按宝石名去重的，重复项一点用没有，却占了摘要一半以上体积。
+  // 所以摘要里压成一组去重后的宝石，索引结果不变。
+  const uniqueGems = []
+  const seenGems = new Set()
+  ;(Array.isArray(build.skillGroups) ? build.skillGroups : []).forEach(group => {
+    ;(Array.isArray(group.gems) ? group.gems : []).forEach(gem => {
+      const light = pickFields(gem, LIGHT_GEM_FIELDS)
+      const key = light.name || light.nameEn
+      if (!key || seenGems.has(key)) return
+      seenGems.add(key)
+      uniqueGems.push(light)
+    })
+  })
   return {
     id: build.id,
     rank: build.rank,
@@ -307,10 +340,7 @@ function summarizeBuild(build) {
     mainSkillIcon: build.mainSkillIcon,
     skills: build.skills,
     equipment: (Array.isArray(build.equipment) ? build.equipment : []).map(item => pickFields(item, LIGHT_ITEM_FIELDS)),
-    skillGroups: (Array.isArray(build.skillGroups) ? build.skillGroups : []).map(group => ({
-      slot: group.slot || group.name || '',
-      gems: (Array.isArray(group.gems) ? group.gems : []).map(gem => pickFields(gem, LIGHT_GEM_FIELDS))
-    })),
+    skillGroups: uniqueGems.length ? [{ slot: '技能', gems: uniqueGems }] : [],
     itemCount: build.itemCount,
     detailAvailable: build.noDetail ? false : true,
     detailFile: build.noDetail ? '' : `${BUILD_DIR_NAME}/${encodeURIComponent(build.id)}.json`,
@@ -431,7 +461,15 @@ async function main() {
     snapshotName: info.url,
     totalCharacters,
     classes: classStats,
-    builds: summaries.sort((left, right) => left.classRank - right.classRank),
+    builds: (() => {
+      // 榜单是按职业分别取前几名的，直接沿用职业内名次会出现一排「第 1 名」。
+      // rank 改成整份摘要里的唯一序号（玩家看到的是列表顺序），职业内名次留在 classRank。
+      const ordered = summaries.sort((left, right) => left.classRank - right.classRank)
+      ordered.forEach((build, index) => {
+        build.rank = index + 1
+      })
+      return ordered
+    })(),
     popularSkills: buildPopularSkills(summaries)
   }
 
@@ -443,7 +481,11 @@ async function main() {
   console.log(`[poe1-ladder] 输出目录: ${OUTPUT_DIR}`)
 }
 
-main().catch(error => {
-  console.error('❌ 流放1 天梯抓取失败:', error.message)
-  process.exitCode = 1
-})
+if (require.main === module) {
+  main().catch(error => {
+    console.error('❌ 流放1 天梯抓取失败:', error.message)
+    process.exitCode = 1
+  })
+}
+
+module.exports = { summarizeBuild, buildPopularSkills, mapCharacterToBuild }

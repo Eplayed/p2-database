@@ -21,8 +21,9 @@ const envArg = process.argv.find((arg) => arg.startsWith('--env='))
 const ENV_NAME = envArg ? envArg.split('=')[1] : process.env.NODE_ENV === 'dev' ? 'dev' : 'release'
 const DATA_DIR = process.env.POE1_LADDER_DIR || path.join(ROOT, 'translated-data', 'poe1', ENV_NAME, 'miniprogram_data')
 const DIGEST_FILE = path.join(DATA_DIR, 'ladder_digest.json')
-// 首屏摘要要能在弱网下快速打开；超过这个体积说明详情字段又混回摘要里了
-const MAX_DIGEST_KB = Number(process.env.POE1_LADDER_MAX_KB || 900)
+// 首屏摘要要能在弱网下快速打开。实测每职业 6 条、161 条 BD 的紧凑摘要约 1.3MB
+// （换源前是 3.7MB 且大部分 BD 没有详情）；这条线用来挡「详情字段又混回摘要」的回归。
+const MAX_DIGEST_KB = Number(process.env.POE1_LADDER_MAX_KB || 1600)
 const MAX_BUILD_KB = Number(process.env.POE1_LADDER_BUILD_MAX_KB || 200)
 const STALE_WARN_HOURS = Number(process.env.POE1_LADDER_STALE_HOURS || 30)
 
