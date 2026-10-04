@@ -3,8 +3,8 @@
  * 包括主动技能和辅助宝石
  */
 
-const { fetchWithRetry } = require('./http_client');
-const { parseGems } = require('./parser');
+const { fetchWithRetry } = require('../shared/wikiDict/http_client');
+const { parseGems } = require('../shared/wikiDict/parser');
 
 const BASE_URL = 'https://poe2db.tw/cn';
 

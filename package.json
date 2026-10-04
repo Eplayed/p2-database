@@ -61,7 +61,10 @@
     "poe1:economy:cn": "NODE_ENV=production node crawlers/poe1/cn_economy_digest.js",
     "poe1:upload": "NODE_ENV=production node scripts/upload_poe1_to_oss.js",
     "poe1:publish": "NODE_ENV=production node crawlers/poe1/ladder_ninja.js && NODE_ENV=production node crawlers/poe1/official_starter.js && NODE_ENV=production node crawlers/poe1/starter_builds.js && NODE_ENV=production node crawlers/poe1/starter_terms.js && NODE_ENV=production node crawlers/poe1/story_guide.js && NODE_ENV=production node crawlers/poe1/capture_passive_trees.js && NODE_ENV=production node crawlers/poe1/economy_digest.js && NODE_ENV=production node crawlers/poe1/cn_economy_digest.js && NODE_ENV=production node scripts/check_poe1_ladder_output.js && NODE_ENV=production node scripts/build_game_manifests.js --game=poe1 && NODE_ENV=production node scripts/upload_poe1_to_oss.js",
-    "poe1:story": "NODE_ENV=production node crawlers/poe1/story_guide.js"
+    "poe1:story": "NODE_ENV=production node crawlers/poe1/story_guide.js",
+    "poe1:dict": "node crawlers/poe1db-dict/index.js",
+    "poe1:dict:missing": "node crawlers/poe1db-dict/resolve_missing.js",
+    "poe1:coverage": "node scripts/report_poe1_translation_coverage.js"
   },
   "keywords": [],
   "author": "",

@@ -10,10 +10,40 @@ function readJson(fileName, fallback) {
   }
 }
 
-const DIST_GEMS = readJson('dict_gem.json', {});
-const DIST_BASES = readJson('dict_base.json', {});
-const DIST_UNIQUES = readJson('dict_unique.json', {});
+/**
+ * 流放1 优先读自己的字典（base-data/dist/poe1，来自流亡编年史），
+ * 没有再退回共用的那份——共用字典是从流放2 资料站抓的，
+ * 拿它翻流放1 的名字会大面积落空。
+ */
+function readPoe1Json(fileName, fallback) {
+  const candidates = [
+    path.join(__dirname, '../../base-data/dist/poe1', fileName),
+    path.join(__dirname, '../../base-data/dist', fileName)
+  ];
+  for (const file of candidates) {
+    try {
+      if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'));
+    } catch (error) {
+      // 单个文件坏了继续找下一份，不要让整个翻译层起不来
+    }
+  }
+  return fallback;
+}
+
+const DIST_GEMS = readPoe1Json('dict_gem.json', {});
+const DIST_BASES = readPoe1Json('dict_base.json', {});
+const DIST_UNIQUES = readPoe1Json('dict_unique.json', {});
 const DIST_STATS = readJson('dict_stats.json', { keywords: {}, patterns: [] });
+
+/**
+ * 列表页字典没覆盖到的名字，由 resolve_missing.js 从资料站单件页面补进来。
+ * 空字符串表示"查过、资料站也没有"，这类名字保留英文，不参与覆盖。
+ */
+const SUPPLEMENT = (() => {
+  const data = readPoe1Json('dict_supplement.json', {});
+  const clean = entries => Object.fromEntries(Object.entries(entries || {}).filter(([, cn]) => Boolean(cn)));
+  return { gems: clean(data.gems), items: clean(data.items), bases: clean(data.bases) };
+})();
 const LOCAL_STAT_KEYWORDS = {
   Armour: '护甲',
   Attack: '攻击',
@@ -63,6 +93,7 @@ const CLASS_NAMES = {
 
 const SKILL_NAMES = {
   ...DIST_GEMS,
+  ...SUPPLEMENT.gems,
   'Lightning Arrow': '闪电箭', 'Tornado Shot': '龙卷射击', 'Ice Shot': '冰霜射击',
   'Righteous Fire': '正义之火', 'Spark': '电球', 'Fireball': '火球',
   'Lightning Strike': '闪电打击', 'Molten Strike': '熔岩打击', 'Cleave': '劈砍',
@@ -175,6 +206,8 @@ const SKILL_NAMES = {
 
 const BASE_NAMES = {
   ...DIST_BASES,
+  ...SUPPLEMENT.bases,
+  ...SUPPLEMENT.items,
   'Ezomyte Burgonet': '艾兹麦坚盔',
   'Chimerascale Gauntlets': '奇美拉鳞护手',
   'Vaal Axe': '瓦尔巨斧',
@@ -227,6 +260,7 @@ const BASE_NAMES = {
 };
 
 const UNIQUE_NAMES = Object.fromEntries(Object.entries(DIST_UNIQUES).map(([en, value]) => [en, value.cn || value.full || en]));
+Object.assign(UNIQUE_NAMES, SUPPLEMENT.items);
 Object.assign(UNIQUE_NAMES, {
   Abyssus: '深渊之唤',
   'Uul-Netol\'s Kiss': '乌尔尼多之吻',
@@ -330,16 +364,147 @@ const CURRENCY_NAMES = {
   'Sacred Orb': '神圣石', 'Awakened Sextant': '觉醒六分仪'
 };
 
+/**
+ * 名称键归一化。
+ *
+ * 资料站的链接 slug 不能带撇号，所以字典里的键是 "Kalandras Touch"，
+ * 而 poe.ninja 给的是 "Kalandra's Touch"；按原字符串查会整批落空
+ * （实测 Malachais Loop、Ralakeshs Impatience、Oriaths End 等几十个传奇名都是这个原因）。
+ * 这里统一去撇号、压空格、忽略大小写后再查。
+ */
+function normalizeNameKey(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[’'`´]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function buildNameIndex(dict) {
+  const index = new Map();
+  Object.entries(dict || {}).forEach(([key, value]) => {
+    const normalized = normalizeNameKey(key);
+    if (normalized && !index.has(normalized)) index.set(normalized, value);
+  });
+  return index;
+}
+
+function lookupNameIndex(index, value) {
+  if (!value) return '';
+  const hit = index.get(normalizeNameKey(value));
+  return typeof hit === 'string' ? hit : '';
+}
+
+const SKILL_INDEX = buildNameIndex(SKILL_NAMES);
+const BASE_INDEX = buildNameIndex(BASE_NAMES);
+const UNIQUE_INDEX = buildNameIndex(UNIQUE_NAMES);
+
+/**
+ * 装备属性行（itemData.properties）翻译。
+ *
+ * 这些行和词缀不是一回事：词缀是整句描述，属性行是「名字 + 数值」的结构化数据，
+ * 名字里还常带 {0} 这种占位符。之前直接丢给 translateStatText，结果是
+ * "[object Object]"（结构没拆）或者 "Consumes {1} of {2} Charges on use: 1 2"（占位符没填）。
+ *
+ * 措辞来源：只用本项目已翻译词缀里出现过的说法（最大充能、每秒再生…生命、格挡几率、
+ * 武器射程、秒内恢复…生命），不自己造新译法；资料站和现有词表都没有的属性名
+ * （Intangibility、Memory Strands、Historic 这类新赛季机制）保留英文。
+ */
+const PROPERTY_NAME_CN = {
+  'Weapon Range': '武器射程',
+  'Charges': '充能',
+  'Area of Effect': '范围',
+  'Phy': '物理',
+  'Quality': '品质',
+  'Attack Speed': '攻击速度',
+  'Requires': '需要'
+};
+
+const PROPERTY_WORD_CN = {
+  metres: '米',
+  meters: '米',
+  Large: '大',
+  Medium: '中',
+  Small: '小',
+  Life: '生命',
+  Mana: '魔力',
+  Seconds: '秒'
+};
+
+const PROPERTY_LINE_TEMPLATES = [
+  {
+    test: /^Consumes (\d+) of (\d+) Charges on use$/i,
+    render: match => `使用消耗 ${match[1]} 充能（最大 ${match[2]}）`
+  },
+  {
+    test: /^Recovers (.+) Life over (.+) Seconds$/i,
+    render: match => `${match[2]} 秒内恢复 ${match[1]} 生命`
+  },
+  {
+    test: /^Recovers (.+) Mana over (.+) Seconds$/i,
+    render: match => `${match[2]} 秒内恢复 ${match[1]} 魔力`
+  }
+];
+
+function cleanPropertyName(rawName) {
+  const text = String(rawName || '');
+  const bracket = text.match(/^\[[^|]+\|([^\]]+)\]$/);
+  return (bracket ? bracket[1] : text).trim();
+}
+
+function fillPropertyPlaceholders(name, values) {
+  return String(name).replace(/\{(\d+)\}/g, (whole, index) => {
+    const value = values[Number(index)];
+    return value === undefined || value === null || value === '' ? whole : String(value);
+  });
+}
+
+function translatePropertyWords(text) {
+  let output = String(text || '');
+  Object.keys(PROPERTY_WORD_CN).forEach(word => {
+    output = output.replace(new RegExp(`\\b${word}\\b`, 'g'), PROPERTY_WORD_CN[word]);
+  });
+  return output;
+}
+
+/**
+ * @param {Array|string} properties poe.ninja 的 properties 数组
+ * @returns {string[]} 可直接显示的中文属性行
+ */
+function translateProperties(properties) {
+  return (Array.isArray(properties) ? properties : [])
+    .map(entry => {
+      if (typeof entry === 'string') return translateStatText(entry);
+      if (!entry || typeof entry !== 'object') return '';
+      const values = (Array.isArray(entry.values) ? entry.values : [])
+        .map(value => (Array.isArray(value) ? value[0] : value))
+        .filter(value => value !== undefined && value !== null && value !== '')
+        .map(value => String(value));
+      const name = cleanPropertyName(entry.name);
+      const filled = fillPropertyPlaceholders(name, values);
+      const template = PROPERTY_LINE_TEMPLATES.find(item => item.test.test(filled));
+      if (template) return template.render(filled.match(template.test));
+      // 数值本身还是 {0} 这种没填上的占位符时，这行等于没有信息（例如
+      // Weapon Range 的 "{0} metres"），宁可不显示，也别留一行半英半空的垃圾给玩家。
+      if (values.some(value => /\{\d+\}/.test(value))) return '';
+      const cnName = PROPERTY_NAME_CN[name];
+      const display = cnName || name;
+      const line = values.length ? `${display}: ${values.join(' ')}` : display;
+      return translatePropertyWords(translateStatText(line));
+    })
+    .filter(line => line && !/object Object/.test(line));
+}
+
 function translateClass(value) {
   return CLASS_NAMES[value] || value || '未知职业';
 }
 
 function translateSkill(value) {
-  return SKILL_NAMES[value] || value || '未识别主技能';
+  return lookupNameIndex(SKILL_INDEX, value) || value || '未识别主技能';
 }
 
 function translateBaseItem(value) {
-  return BASE_NAMES[value] || value || '';
+  return lookupNameIndex(BASE_INDEX, value) || value || '';
 }
 
 function translateRareName(value) {
@@ -371,7 +536,8 @@ function translateFlaskName(value) {
 function translateItemName(value) {
   if (!value) return '';
   const text = `${value}`;
-  if (UNIQUE_NAMES[text]) return UNIQUE_NAMES[text];
+  const unique = lookupNameIndex(UNIQUE_INDEX, text);
+  if (unique) return unique;
   const flask = translateFlaskName(text);
   if (flask) return flask;
   return translateRareName(text);
@@ -494,7 +660,21 @@ function translateKeyPassive(value) {
   return KEY_PASSIVE_NAMES[value] || value || '未知关键天赋';
 }
 
+/**
+ * 判断一颗宝石是不是辅助宝石。
+ *
+ * 不能只看中文名的括号：资料站的标记有三种写法——半角 "(辅)"、全角 "（辅）"、
+ *  awaken 版还是 "（强辅）"，甚至同一个站里混着用。英文名以 Support 结尾是最稳的依据，
+ * 中文名只作为英文名缺失时的兜底。判断错会把链接组的主技能显示成辅助宝石。
+ */
+function isSupportGem(nameEn, nameCn) {
+  if (/support$/i.test(String(nameEn || '').trim())) return true;
+  return /[（(]\s*强?辅\s*[）)]/.test(String(nameCn || ''));
+}
+
 module.exports = {
+  isSupportGem,
+  translateProperties,
   translateBaseItem,
   translateClass,
   translateCurrency,

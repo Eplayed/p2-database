@@ -24,6 +24,8 @@ const fs = require('fs')
 const path = require('path')
 const { searchBuilds, resolveLeague, getClassNames, getCharacter } = require('../shared/ninja/client')
 const {
+  isSupportGem,
+  translateProperties,
   translateClass,
   translateSkill,
   translateItemName,
@@ -43,6 +45,12 @@ const BUILD_DIR_NAME = 'poe1_builds'
 const PER_CLASS = Number(process.env.POE1_NINJA_PER_CLASS || 6)
 const DETAIL_PER_CLASS = Number(process.env.POE1_NINJA_DETAIL || PER_CLASS)
 const REQUEST_GAP_MS = 120
+// 角色原始详情本地缓存。上游详情接口限流很重（实测 Retry-After 到过 52 分钟），
+// 而补译名、改字段映射这类事根本不需要重新联网：缓存命中就直接本地重算。
+const RAW_CACHE_DIR = process.env.POE1_NINJA_RAW_CACHE_DIR
+  ? path.resolve(process.env.POE1_NINJA_RAW_CACHE_DIR)
+  : path.join(ROOT, 'translated-data/poe1/.ninja_raw_cache')
+const USE_RAW_CACHE = process.env.POE1_NINJA_REFRESH_RAW !== '1'
 // 国服玩家习惯看到的联盟中文名，poe.ninja 只给英文
 const LEAGUE_DISPLAY_NAME_MAP = { Allflame: '永火之咒', Mirage: '沙海幻境' }
 const FRAME_RARITY = { Unique: 10, Rare: 2, Magic: 1, Normal: 0, Gem: 0, Quest: 0 }
@@ -146,7 +154,7 @@ function mapItem(itemData, section, slot) {
     corrupted: Boolean(itemData.corrupted),
     fractured: Boolean(itemData.fractured),
     sockets,
-    properties: translateMods(itemData.properties),
+    properties: translateProperties(itemData.properties),
     implicitMods: translateMods(itemData.implicitMods),
     explicitMods: translateMods(itemData.explicitMods),
     craftedMods: translateMods(itemData.craftedMods),
@@ -172,7 +180,7 @@ function collectGems(character) {
         nameEn: raw,
         icon: (gem.itemData && gem.itemData.icon) || '',
         level: toNumber(gem.level || (gem.itemData && gem.itemData.ilvl)),
-        isSupport: /（辅）|\(support\)/i.test(translated) || /support$/i.test(raw)
+        isSupport: isSupportGem(raw, translated)
       })
     })
   })
@@ -192,7 +200,7 @@ function buildSkillGroups(character) {
         name: translated,
         nameEn: raw,
         icon: (gem.itemData && gem.itemData.icon) || '',
-        isSupport: /（辅）|\(support\)/i.test(translated) || /support$/i.test(raw)
+        isSupport: isSupportGem(raw, translated)
       }
     })
   }))
@@ -261,6 +269,27 @@ function buildHeadline(row) {
     effectiveHealthPool: String(row.ehp__str || ''),
     mainDamageType: mix.length ? DAMAGE_TYPE_LABELS[mix[0].key] : ''
   }
+}
+
+/** 读一个角色的原始详情，命中本地缓存就不请求上游 */
+async function loadCharacterRaw(info, row) {
+  const key = `${info.version}_${String(row.account).replace(/[^\w-]/g, '_')}_${String(row.name).replace(/[^\w-]/g, '_')}`.slice(0, 180)
+  const file = path.join(RAW_CACHE_DIR, `${key}.json`)
+  if (USE_RAW_CACHE && fs.existsSync(file)) {
+    try {
+      return { payload: JSON.parse(fs.readFileSync(file, 'utf8')), fromCache: true }
+    } catch (error) {
+      console.warn(`      ⚠️ 原始缓存损坏，改为重新抓取 ${row.name}: ${error.message}`)
+    }
+  }
+  const payload = await getCharacter('poe1', { info, account: row.account, name: row.name })
+  try {
+    fs.mkdirSync(RAW_CACHE_DIR, { recursive: true })
+    fs.writeFileSync(file, JSON.stringify(payload))
+  } catch (error) {
+    console.warn(`      ⚠️ 原始缓存写入失败（不影响产物）: ${error.message}`)
+  }
+  return { payload, fromCache: false }
 }
 
 function mapCharacterToBuild(character, meta) {
@@ -448,11 +477,7 @@ async function main() {
         continue
       }
       try {
-        const character = await getCharacter('poe1', {
-          info,
-          account: row.account,
-          name: row.name
-        })
+        const { payload: character } = await loadCharacterRaw(info, row)
         const build = mapCharacterToBuild(character, {
           rank: index + 1,
           account: row.account,

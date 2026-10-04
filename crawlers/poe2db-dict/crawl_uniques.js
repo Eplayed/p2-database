@@ -3,8 +3,8 @@
  * 传奇物品在各物品类别页面的 "传奇" 区块中
  */
 
-const { fetchWithRetry } = require('./http_client');
-const { parseUniques } = require('./parser');
+const { fetchWithRetry } = require('../shared/wikiDict/http_client');
+const { parseUniques } = require('../shared/wikiDict/parser');
 
 const BASE_URL = 'https://poe2db.tw/cn';
 

@@ -1,0 +1,168 @@
+{
+  "source": "https://poedb.tw/cn",
+  "generatedAt": "2026-10-04T11:42:22.008Z",
+  "pages": {
+    "gems": [
+      {
+        "slug": "Skill_Gems",
+        "name": "技能宝石",
+        "parsed": 554,
+        "added": 554
+      },
+      {
+        "slug": "Support_Gems",
+        "name": "辅助宝石",
+        "parsed": 262,
+        "added": 261
+      }
+    ],
+    "unique": [
+      {
+        "slug": "Unique_item",
+        "name": "传奇物品总表",
+        "parsed": 1232,
+        "added": 1232
+      }
+    ],
+    "bases": [
+      {
+        "slug": "Body_Armours",
+        "name": "胸甲",
+        "parsed": 124,
+        "added": 124
+      },
+      {
+        "slug": "Helmets",
+        "name": "头盔",
+        "parsed": 96,
+        "added": 96
+      },
+      {
+        "slug": "Gloves",
+        "name": "手套",
+        "parsed": 80,
+        "added": 80
+      },
+      {
+        "slug": "Boots",
+        "name": "鞋子",
+        "parsed": 81,
+        "added": 81
+      },
+      {
+        "slug": "Shields",
+        "name": "盾牌",
+        "parsed": 95,
+        "added": 95
+      },
+      {
+        "slug": "Belts",
+        "name": "腰带",
+        "parsed": 16,
+        "added": 16
+      },
+      {
+        "slug": "Amulets",
+        "name": "项链",
+        "parsed": 90,
+        "added": 90
+      },
+      {
+        "slug": "Rings",
+        "name": "戒指",
+        "parsed": 45,
+        "added": 45
+      },
+      {
+        "slug": "Flasks",
+        "name": "药剂",
+        "parsed": 48,
+        "added": 48
+      },
+      {
+        "slug": "Quivers",
+        "name": "箭袋",
+        "parsed": 15,
+        "added": 15
+      },
+      {
+        "slug": "Jewels",
+        "name": "珠宝",
+        "parsed": 8,
+        "added": 8
+      },
+      {
+        "slug": "One_Hand_Swords",
+        "name": "单手剑",
+        "parsed": 31,
+        "added": 31
+      },
+      {
+        "slug": "Two_Hand_Swords",
+        "name": "双手剑",
+        "parsed": 25,
+        "added": 24
+      },
+      {
+        "slug": "One_Hand_Maces",
+        "name": "单手锤",
+        "parsed": 27,
+        "added": 27
+      },
+      {
+        "slug": "Two_Hand_Maces",
+        "name": "双手锤",
+        "parsed": 24,
+        "added": 24
+      },
+      {
+        "slug": "One_Hand_Axes",
+        "name": "单手斧",
+        "parsed": 27,
+        "added": 27
+      },
+      {
+        "slug": "Two_Hand_Axes",
+        "name": "双手斧",
+        "parsed": 24,
+        "added": 24
+      },
+      {
+        "slug": "Bows",
+        "name": "弓",
+        "parsed": 29,
+        "added": 29
+      },
+      {
+        "slug": "Staves",
+        "name": "长杖",
+        "parsed": 15,
+        "added": 15
+      },
+      {
+        "slug": "Claws",
+        "name": "爪",
+        "parsed": 27,
+        "added": 27
+      },
+      {
+        "slug": "Daggers",
+        "name": "匕首",
+        "parsed": 13,
+        "added": 13
+      },
+      {
+        "slug": "Wands",
+        "name": "法杖",
+        "parsed": 28,
+        "added": 28
+      }
+    ]
+  },
+  "counts": {
+    "gems": 815,
+    "uniques": 1232,
+    "bases": 967
+  },
+  "failedPages": []
+}

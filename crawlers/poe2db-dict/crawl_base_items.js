@@ -3,8 +3,8 @@
  * 覆盖所有武器、防具、饰品类型
  */
 
-const { fetchWithRetry } = require('./http_client');
-const { parseBaseItems } = require('./parser');
+const { fetchWithRetry } = require('../shared/wikiDict/http_client');
+const { parseBaseItems } = require('../shared/wikiDict/parser');
 
 const BASE_URL = 'https://poe2db.tw/cn';
 

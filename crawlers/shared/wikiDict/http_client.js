@@ -41,7 +41,16 @@ function fetchPage(url) {
     https.get(url, options, (res) => {
       // 处理重定向
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetchPage(res.headers.location).then(resolve).catch(reject);
+        res.resume();
+        // 站点有时回相对地址（如 ?page=2），直接拿去请求会抛 Invalid URL，
+        // 必须先按当前地址解析成绝对地址
+        let next = res.headers.location;
+        try {
+          next = new URL(next, url).toString();
+        } catch (error) {
+          return reject(new Error(`重定向地址不可解析: ${res.headers.location}`));
+        }
+        return fetchPage(next).then(resolve).catch(reject);
       }
 
       if (res.statusCode !== 200) {

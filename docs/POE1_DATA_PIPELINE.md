@@ -102,6 +102,35 @@
 - 两个爬虫不要同时跑（同一出口 IP 共享限额）。日常节奏：详情类抓取一次跑完，
   POE1 每职业 10 条摘要、10 条详情，约 180 次详情请求 ≈ 4 分钟。
 
+## 中文译名字典（2026-10-04 补齐）
+
+换源到 poe.ninja 后英文名会直接进界面，实测缺口是 247 个技能名、560 个装备名。
+原因是 `base-data/dist/dict_*.json` 来自**流放2**资料站（poe2db.tw），流放1 的翻译层一直借用它。
+
+现在流放1 有自己的三层字典，全部来自流亡编年史 `poedb.tw/cn`（流放1 中文站，与 poe2db 同一套程序，解析器共用）：
+
+| 层 | 来源 | 落盘位置 |
+|---|---|---|
+| 列表页字典 | `npm run poe1:dict` 抓技能/辅助宝石、传奇总表、各部位基础类型 | `base-data/dist/poe1/dict_{gem,base,unique}.json` |
+| 单件补齐 | `npm run poe1:dict:missing -- --dir=<产物目录>` 按名字查单件页面标题 | `base-data/dist/poe1/dict_supplement.json` |
+| 人工校对 | `crawlers/poe1/translations.js` 里手写的映射表 | 盖在字典之上 |
+
+- 优先级：人工校对 > 单件补齐 > 列表页字典。查不到的**保留英文**，不逐词硬造译名。
+- 变体前缀只有两条规则，且都有出处：`Foulborn` → 「污秽」取自项目已有校对结果
+  （`Foulborn Uul-Netol's Kiss` → 污秽乌尔尼多之吻），`Replica` → 「【仿品】」取自资料站自己的标题写法。
+- 名称键做了归一化（去撇号、压空格、忽略大小写）：资料站 slug 不能带撇号，
+  字典里是 `Kalandras Touch`，poe.ninja 给的是 `Kalandra's Touch`，不归一化会整批落空。
+- 辅助宝石判定以英文名结尾 `Support` 为准，中文括号只作兜底——资料站的标记有
+  半角 `(辅)`、全角 `（辅）`、觉醒版 `（强辅）` 三种写法，只看一种会把主技能标成辅助。
+- 装备属性行（`itemData.properties`）单独走 `translateProperties()`：它是「名字 + 数值」结构，
+  名字里还有 `{0}` 占位符。数值没填上的行（如 `Weapon Range: {0} metres`）直接不显示，
+  别留半英半空的垃圾行。
+- 覆盖率用 `npm run poe1:coverage -- --dir=<产物目录>` 量化，输出技能/装备/职业名/词缀行
+  四项比例和最高频缺口，低于门槛（默认技能 90%、装备 85%）退出码非 0。
+- 角色原始详情缓存在 `translated-data/poe1/.ninja_raw_cache`（已 gitignore）。
+  上游详情接口限流重，补译名、改字段映射这类不联网的改动直接命中缓存重算，
+  设 `POE1_NINJA_REFRESH_RAW=1` 才强制重新抓取。
+
 ## 输出与发布
 
 ```text
@@ -125,7 +154,10 @@ translated-data/poe1/{dev|release}/miniprogram_data/
 ```bash
 npm run poe1:ladder           # 天梯 + BD 详情（poe.ninja）
 npm run poe1:ladder:official  # 旧链路：国服官方天梯，只作对照与应急回退
-npm run poe1:check            # 发布前只读检查产物（摘要字段、详情文件、体积、译名）
+npm run poe1:check            # 发布前只读产物检查（摘要字段、详情文件、体积）
+npm run poe1:coverage         # 中文译名覆盖率与最高频缺口
+npm run poe1:dict             # 重抓流放1 中文译名字典（流亡编年史）
+npm run poe1:dict:missing     # 按产物里实际缺的名字补单件译名
 npm run poe1:economy          # 国际服通货
 npm run poe1:economy:cn       # 国服通货（DD373 + FilterEditor）
 npm run poe1:publish          # 全链路（含日快照、产物检查与 manifest）+ 上传
