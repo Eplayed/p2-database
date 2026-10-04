@@ -205,7 +205,7 @@ const TASKS = [
   {
     id: 'poe1_currency_daily_change',
     name: '生成 POE1 通货日涨幅',
-    description: '把本次国服行情的混沌计价按日存快照（只存 dashboard/runtime，不上传），与最近一个更早日期比较，生成 POE1 首页今日换算用的 currency_daily_change.json。',
+    description: '把本次国际服行情的混沌计价按日存快照（只存 dashboard/runtime，不上传），与最近一个更早日期比较，生成 POE1 首页今日换算用的 currency_daily_change.json；数据源与小程序 poe1 各页一致，不用国服 DD373 那份。',
     group: 'single',
     game: 'poe1',
     hidden: true,
