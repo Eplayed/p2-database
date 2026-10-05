@@ -169,11 +169,11 @@ const TASKS = [
   {
     id: 'poe1_passive_trees',
     name: '截取 POE1 天赋树图片',
-    description: '打开 poe.ninja 当前赛季 BD 详情页，截取天赋树 canvas 为图片，供小程序详情页直接展示。',
+    description: '打开 poe.ninja 当前赛季 BD 详情页，截取天赋树 canvas 为图片，供小程序详情页直接展示。已有图片会跳过，所以首轮最慢（161 条约 40 分钟），之后只补新增角色。',
     group: 'single',
     game: 'poe1',
     hidden: true,
-    command: ['node', ['crawlers/poe1/capture_passive_trees.js']],
+    command: ['node', ['crawlers/poe1/capture_passive_trees.js', '--all']],
   },
   {
     id: 'poe1_manifest',

@@ -78,8 +78,10 @@
    `pathOfBuildingExport`，以及 `updatedUtc/lastSeenUtc/lastCheckedUtc` 可以直接判断数据新鲜度。
    对比：同一个角色国服官方只上报了 2 件装备，这里 11 件装备 + 5 药剂 + 19 珠宝。
 7. 天赋树截图：poe.ninja 是用 `passiveSelection` 前端渲染的图，不是现成 PNG。
-   仓库里已有 `crawlers/ninja-ladder/capture_trees.js` 给 POE2 干过同样的事，迁移时复用它的路子
-   给 POE1 出图；国服页面截图那条链在换源后一并停掉。
+   `capture_passive_trees.js` 直接用 Puppeteer 打开角色页截 canvas，实测能拍到带玩家点亮的
+   黄色路径（`passive-trees/{id}.jpg`）。右下角 Open / Enlarge 两个按钮要在 canvas 出现之后
+   再隐藏——它们和树是同一帧渲染的，早一步 DOM 里还没有。
+   这一步是整条链最慢的（161 条约 40 分钟），已有图片会跳过，所以只有首轮慢。
 8. 换源的已知代价：角色名与账号是英文；装备/技能名需要接 `crawlers/shared/officialDict.js` 译名字典。
    2026-10-04 实测 18 个进阶名里只有 `Reliquarian` 没有权威中文名，按「禁止猜译」保留英文，
    `scripts/check_poe1_ladder_output.js` 会把这类残留报成提醒。

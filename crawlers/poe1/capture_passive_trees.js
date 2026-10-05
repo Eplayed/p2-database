@@ -137,7 +137,7 @@ async function findLargestCanvas(page) {
 }
 
 function applyTreeImage(build, publicUrl) {
-  applyTreeImage(build, publicUrl);
+  build.passiveTreeImage = publicUrl;
   patchBuildDetail(build, { passiveTreeImage: publicUrl });
 }
 
@@ -172,6 +172,18 @@ async function captureOne(page, build, index, total) {
 
   const canvas = await findTreeCanvas(page);
   if (!canvas) throw new Error('未找到天赋树 canvas');
+
+  // poe.ninja 把 Open / Enlarge 两个按钮叠在天赋树右下角，截图会一起拍进来。
+  // 必须在 canvas 出现之后再隐藏：按钮是跟树一起渲染的，早一步 DOM 里还没有。
+  await page.evaluate(() => {
+    const holder = document.querySelector('.absolute.right-8.bottom-8');
+    if (holder) holder.style.display = 'none';
+    Array.from(document.querySelectorAll('button')).forEach((el) => {
+      const text = (el.textContent || '').trim().toLowerCase();
+      if (text === 'open' || text === 'enlarge') el.style.display = 'none';
+    });
+  });
+  await sleep(150);
 
   await canvas.screenshot({
     path: outputPath,
