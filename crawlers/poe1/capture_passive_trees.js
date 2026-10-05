@@ -177,14 +177,35 @@ async function captureOne(page, build, index, total) {
   const hash = String(record.passiveTreeHash || '');
   const known = treeIndex[fileName];
   const imageExists = fs.existsSync(outputPath);
-  // 三种情况分别处理：
-  // - 指纹一致 → 复用
-  // - 指纹变了 → 重拍
-  // - 换源前的老产物没有指纹、也没截图记录 → 沿用旧图，别为了补指纹把 160 张全重拍
-  if (!force && imageExists && ((hash && known && known.hash === hash) || (!hash && !known))) {
+  let imageMtimeMs = 0;
+  try {
+    if (imageExists) imageMtimeMs = fs.statSync(outputPath).mtimeMs;
+  } catch (error) {
+    imageMtimeMs = 0;
+  }
+  const buildUpdatedMs = Date.parse(record.buildUpdatedUtc || '') || 0;
+  let canReuse = false;
+  if (imageExists) {
+    if (known) {
+      // 有指纹记录：指纹一致才复用；老记录没指纹时沿用旧图
+      canReuse = !hash || !known.hash || known.hash === hash;
+    } else {
+      // 没有指纹记录（换源前的老产物，或索引文件被清掉）：拿角色自己的改点时间兜底，
+      // 图截在他最后一次改天赋之后才能沿用。只看文件在不在的话，索引一丢就再也发现不了树已经改了。
+      canReuse = !buildUpdatedMs || buildUpdatedMs <= imageMtimeMs;
+    }
+  }
+  if (!force && canReuse) {
     applyTreeImage(build, publicUrl);
+    if (!known && hash) {
+      treeIndex[fileName] = {
+        hash,
+        capturedAt: imageMtimeMs ? new Date(imageMtimeMs).toISOString() : new Date().toISOString()
+      };
+      writeTreeIndex(treeIndex);
+    }
     console.log(`   ${index}/${total} 天赋未变，复用旧图 ${build.character}`);
-    return true;
+    return 'reused';
   }
   if (hash && known && known.hash !== hash && imageExists) {
     console.log(`   ${index}/${total} 天赋已改，重拍 ${build.character}`);
@@ -405,9 +426,10 @@ async function capturePassiveTrees() {
   try {
     for (let index = 0; index < targets.length; index += 1) {
       const build = targets[index];
+      let success = false;
       try {
         const isFullscreenType = build.passiveTreeIsFullscreenPage || FULLSCREEN_PASSIVE_RE.test(build.passiveTreeUrl || '');
-        const success = isFullscreenType
+        success = isFullscreenType
           ? await captureOneFullscreenPage(page, build, index + 1, targets.length)
           : await captureOne(page, build, index + 1, targets.length);
         if (success) ok += 1;
@@ -415,7 +437,8 @@ async function capturePassiveTrees() {
         failed += 1;
         console.warn(`   ${index + 1}/${targets.length} 失败 ${build.character}: ${error.message}`);
       }
-      if (delayMs > 0) await sleep(delayMs);
+      // 复用旧图没访问上游，不需要节流；只有真截了图才要隔开
+      if (delayMs > 0 && success !== 'reused') await sleep(delayMs);
       writeDigest(digest);
     }
     await cachePassiveIcons(digest, browser);
