@@ -572,6 +572,10 @@ function translateItemName(value) {
   if (unique) return unique;
   const flask = translateFlaskName(text);
   if (flask) return flask;
+  // 魔法/稀有装备上游只给基底名（Quicksilver Flask 这种），基底字典能直接查到官方译名。
+  // 不先查字典就逐词拼，只会拼出「Quicksilver 药剂」这类半英文。
+  const base = translateBaseItem(text);
+  if (base && base !== text) return base;
   return translateRareName(text);
 }
 
