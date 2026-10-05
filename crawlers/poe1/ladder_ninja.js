@@ -23,7 +23,7 @@
 const fs = require('fs')
 const path = require('path')
 const { searchBuilds, resolveLeague, getClassNames, getCharacter } = require('../shared/ninja/client')
-const { passiveTreeHash } = require('../shared/passiveTreeHash')
+const { passiveTreeHash, djb2Hash } = require('../shared/passiveTreeHash')
 const {
   isSupportGem,
   translateProperties,
@@ -42,6 +42,20 @@ const OUTPUT_DIR = process.env.POE1_NINJA_OUTPUT_DIR
   ? path.resolve(process.env.POE1_NINJA_OUTPUT_DIR)
   : path.join(ROOT, 'translated-data/poe1', env, 'miniprogram_data')
 const BUILD_DIR_NAME = 'poe1_builds'
+/**
+ * 单条 BD 详情文件名，必须纯 ASCII。
+ * poe.ninja 的角色名大量是俄文/韩文/中文，之前用 encodeURIComponent 命名，
+ * 传到 OSS 后 %XX 会被解一次码，取回来 404（实测 162 条里 28 条点不开）。
+ * 尾巴带整串 id 的哈希，避免不同角色清洗后撞成同一个文件。
+ */
+function detailFileName(id) {
+  const slug = String(id)
+    .replace(/[^a-zA-Z0-9_-]/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .slice(0, 72)
+  return `${BUILD_DIR_NAME}/${slug}-${djb2Hash(id)}.json`
+}
 // 每职业 6 条：28 个职业约 168 条，摘要压到 1MB 上下（换源前是 3.7MB，且其中 206 条根本没有详情）。
 // 想加样本量用 POE1_NINJA_PER_CLASS 覆盖，注意详情是按条串行抓的，翻倍就多花一倍时间。
 const PER_CLASS = Number(process.env.POE1_NINJA_PER_CLASS || 6)
@@ -438,7 +452,7 @@ function summarizeBuild(build) {
     skillGroups: uniqueGems.length ? [{ slot: '技能', gems: uniqueGems }] : [],
     itemCount: build.itemCount,
     detailAvailable: build.noDetail ? false : true,
-    detailFile: build.noDetail ? '' : `${BUILD_DIR_NAME}/${encodeURIComponent(build.id)}.json`,
+    detailFile: build.noDetail ? '' : detailFileName(build.id),
     buildUpdatedUtc: build.buildUpdatedUtc
   }
 }
@@ -522,7 +536,7 @@ async function main() {
           leagueUrl: info.url
         })
         fs.writeFileSync(
-          path.join(OUTPUT_DIR, BUILD_DIR_NAME, `${encodeURIComponent(build.id)}.json`),
+          path.join(OUTPUT_DIR, detailFileName(build.id)),
           // 缩进版会胖三成以上，这是给手机读的，直接压成一行
           `${JSON.stringify(build)}\n`,
           'utf8'
