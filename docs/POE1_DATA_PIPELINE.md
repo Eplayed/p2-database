@@ -81,7 +81,9 @@
    `capture_passive_trees.js` 直接用 Puppeteer 打开角色页截 canvas，实测能拍到带玩家点亮的
    黄色路径（`passive-trees/{id}.jpg`）。右下角 Open / Enlarge 两个按钮要在 canvas 出现之后
    再隐藏——它们和树是同一帧渲染的，早一步 DOM 里还没有。
-   这一步是整条链最慢的（161 条约 40 分钟），已有图片会跳过，所以只有首轮慢。
+   截图按**天赋树指纹**（点亮节点集合 + 树版本，记在 `passive-trees/index.json`）决定重拍：
+   树没变直接复用旧图，所以只有首轮慢（161 条约 40 分钟），日常约 3 分钟。
+   没有指纹的老产物沿用旧图，不会因为补指纹白重拍一轮。
 8. 换源的已知代价：角色名与账号是英文；装备/技能名需要接 `crawlers/shared/officialDict.js` 译名字典。
    2026-10-04 实测 18 个进阶名里只有 `Reliquarian` 没有权威中文名，按「禁止猜译」保留英文，
    `scripts/check_poe1_ladder_output.js` 会把这类残留报成提醒。
@@ -102,7 +104,9 @@
   （`NINJA_REQUEST_INTERVAL_MS`，默认 1200ms），`auto_browser/translate_crawler.js` 对详情请求同样限速。
   `Retry-After` 超过 5 分钟时**直接停整轮**，不要重试：继续打只会延长封禁，半套产物还可能覆盖线上数据。
 - 两个爬虫不要同时跑（同一出口 IP 共享限额）。日常节奏：详情类抓取一次跑完，
-  POE1 每职业 10 条摘要、10 条详情，约 180 次详情请求 ≈ 4 分钟。
+  POE1 每职业 6 条约 160 次详情请求 ≈ 12 分钟（命中本地原始缓存时 1 分钟）。
+- 角色原始详情缓存在 `translated-data/poe1/.ninja_raw_cache`（不入库）。
+  改字段映射、补译名这类不联网的操作用它直接重算；`POE1_NINJA_REFRESH_RAW=1` 才强制重抓。
 
 ## 中文译名字典（2026-10-04 补齐）
 
