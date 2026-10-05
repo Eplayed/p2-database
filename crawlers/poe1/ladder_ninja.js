@@ -36,7 +36,8 @@ const {
 } = require('./translations')
 
 const ROOT = path.join(__dirname, '../..')
-const env = process.env.POE1_NINJA_GAME === 'dev' ? 'dev' : 'release'
+// dev 判定与其他环节（截图/检查/覆盖率/上传）保持一致，漏设一个变量就会写进不同目录
+const env = (process.env.POE1_NINJA_GAME === 'dev' || process.env.NODE_ENV === 'dev') ? 'dev' : 'release'
 const OUTPUT_DIR = process.env.POE1_NINJA_OUTPUT_DIR
   ? path.resolve(process.env.POE1_NINJA_OUTPUT_DIR)
   : path.join(ROOT, 'translated-data/poe1', env, 'miniprogram_data')
@@ -52,6 +53,11 @@ const RAW_CACHE_DIR = process.env.POE1_NINJA_RAW_CACHE_DIR
   ? path.resolve(process.env.POE1_NINJA_RAW_CACHE_DIR)
   : path.join(ROOT, 'translated-data/poe1/.ninja_raw_cache')
 const USE_RAW_CACHE = process.env.POE1_NINJA_REFRESH_RAW !== '1'
+// 跨快照宽限小时数：默认 0，也就是只认同一次快照的详情，日常发布照样拿新数据。
+// 补译名、改字段映射时用 POE1_NINJA_RAW_STALE_HOURS=72 之类的值，就能完全不联网重算。
+const RAW_STALE_HOURS = Number(process.env.POE1_NINJA_RAW_STALE_HOURS || 0)
+let rawCacheHits = 0
+let rawStaleHits = 0
 // 国服玩家习惯看到的联盟中文名，poe.ninja 只给英文
 const LEAGUE_DISPLAY_NAME_MAP = { Allflame: '永火之咒', Mirage: '沙海幻境' }
 const FRAME_RARITY = { Unique: 10, Rare: 2, Magic: 1, Normal: 0, Gem: 0, Quest: 0 }
@@ -274,11 +280,22 @@ function buildHeadline(row) {
 
 /** 读一个角色的原始详情，命中本地缓存就不请求上游 */
 async function loadCharacterRaw(info, row) {
-  const key = `${info.version}_${String(row.account).replace(/[^\w-]/g, '_')}_${String(row.name).replace(/[^\w-]/g, '_')}`.slice(0, 180)
+  // key 不带快照版本号：版本号一天滚好几次，带上它等于每天首次运行全部落空，
+  // 而「补译名、改字段映射」根本不该联网。版本改存在文件里，读的时候再判断能不能用。
+  const key = `${String(row.account).replace(/[^\w-]/g, '_')}_${String(row.name).replace(/[^\w-]/g, '_')}`.slice(0, 180)
   const file = path.join(RAW_CACHE_DIR, `${key}.json`)
   if (USE_RAW_CACHE && fs.existsSync(file)) {
     try {
-      return { payload: JSON.parse(fs.readFileSync(file, 'utf8')), fromCache: true }
+      const entry = JSON.parse(fs.readFileSync(file, 'utf8'))
+      if (entry && entry.payload) {
+        const ageHours = entry.capturedAt ? (Date.now() - Date.parse(entry.capturedAt)) / 3600000 : Infinity
+        const sameSnapshot = entry.version === info.version
+        if (sameSnapshot || (RAW_STALE_HOURS > 0 && ageHours <= RAW_STALE_HOURS)) {
+          rawCacheHits += 1
+          if (!sameSnapshot) rawStaleHits += 1
+          return { payload: entry.payload, fromCache: true }
+        }
+      }
     } catch (error) {
       console.warn(`      ⚠️ 原始缓存损坏，改为重新抓取 ${row.name}: ${error.message}`)
     }
@@ -286,7 +303,11 @@ async function loadCharacterRaw(info, row) {
   const payload = await getCharacter('poe1', { info, account: row.account, name: row.name })
   try {
     fs.mkdirSync(RAW_CACHE_DIR, { recursive: true })
-    fs.writeFileSync(file, JSON.stringify(payload))
+    fs.writeFileSync(file, JSON.stringify({
+      version: info.version,
+      capturedAt: new Date().toISOString(),
+      payload
+    }))
   } catch (error) {
     console.warn(`      ⚠️ 原始缓存写入失败（不影响产物）: ${error.message}`)
   }
@@ -552,6 +573,7 @@ async function main() {
   fs.writeFileSync(path.join(OUTPUT_DIR, 'ladder_digest.json'), `${JSON.stringify(digest)}\n`, 'utf8')
   const digestBytes = fs.statSync(path.join(OUTPUT_DIR, 'ladder_digest.json')).size
   console.log(`[poe1-ladder] 摘要 ${summaries.length} 条，${(digestBytes / 1024).toFixed(0)} KB；详情失败 ${detailFailed} 个`)
+  console.log(`[poe1-ladder] 原始详情缓存命中 ${rawCacheHits}/${summaries.length}${rawStaleHits ? `（其中跨快照 ${rawStaleHits}）` : ''}`)
   console.log(`[poe1-ladder] 输出目录: ${OUTPUT_DIR}`)
 }
 
