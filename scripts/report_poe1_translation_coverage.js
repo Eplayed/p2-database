@@ -17,9 +17,12 @@ const path = require('path')
 
 const ROOT = path.join(__dirname, '..')
 const dirArg = process.argv.find(arg => arg.startsWith('--dir='))
+// 和发布前检查、截图、上传同一套 dev/release 口径。写死 release 的话，
+// dev 链路跑完这道门统计的是上一版线上数据，等于没检查。
+const ENV_NAME = process.env.NODE_ENV === 'dev' ? 'dev' : 'release'
 const DATA_DIR = dirArg
   ? path.resolve(dirArg.split('=')[1])
-  : path.join(ROOT, 'translated-data/poe1/release/miniprogram_data')
+  : path.join(ROOT, 'translated-data/poe1', ENV_NAME, 'miniprogram_data')
 const BUILD_DIR = path.join(DATA_DIR, 'poe1_builds')
 const MIN_SKILL_COVERAGE = Number(process.env.MIN_SKILL_COVERAGE || 90)
 const MIN_ITEM_COVERAGE = Number(process.env.MIN_ITEM_COVERAGE || 85)
