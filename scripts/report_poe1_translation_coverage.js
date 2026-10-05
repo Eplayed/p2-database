@@ -31,13 +31,30 @@ const TOP_N = Number(process.env.COVERAGE_TOP || 15)
 const HAS_CN = /[\u4e00-\u9fa5]/
 
 function readBuilds() {
+  // 只统计摘要真正指向的详情文件。目录里会留着掉出榜单角色的旧文件，
+  // 玩家看不到它们，算进分母等于把覆盖率数字算低。
+  const digestPath = path.join(DATA_DIR, 'ladder_digest.json')
+  if (fs.existsSync(BUILD_DIR) && fs.existsSync(digestPath)) {
+    const detailFiles = JSON.parse(fs.readFileSync(digestPath, 'utf8')).builds || []
+    const builds = []
+    detailFiles.forEach(build => {
+      if (!build || !build.detailFile) return
+      const filePath = path.join(DATA_DIR, build.detailFile)
+      if (!fs.existsSync(filePath)) return
+      try {
+        builds.push(JSON.parse(fs.readFileSync(filePath, 'utf8')))
+      } catch (error) {
+        console.warn(`详情文件读取失败 ${build.detailFile}: ${error.message}`)
+      }
+    })
+    if (builds.length) return builds
+  }
   if (fs.existsSync(BUILD_DIR)) {
     return fs.readdirSync(BUILD_DIR)
       .filter(name => name.endsWith('.json'))
       .map(name => JSON.parse(fs.readFileSync(path.join(BUILD_DIR, name), 'utf8')))
   }
   // 旧格式：详情直接内联在摘要里
-  const digestPath = path.join(DATA_DIR, 'ladder_digest.json')
   if (!fs.existsSync(digestPath)) throw new Error(`找不到天梯产物: ${digestPath}`)
   const digest = JSON.parse(fs.readFileSync(digestPath, 'utf8'))
   return Array.isArray(digest.builds) ? digest.builds : []
