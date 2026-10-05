@@ -292,6 +292,15 @@ async function loadCharacterRaw(info, row) {
   return { payload, fromCache: false }
 }
 
+/**
+ * 上游给的是内部标识 "PassiveTree-3.29"，直接显示到界面上就是一串代码名。
+ * 能认出「哪个版本的天赋树」就翻成人话，认不出就留空，让界面显示「天赋树」。
+ */
+function describePassiveTree(rawName) {
+  const match = String(rawName || '').match(/^(?:PassiveTree|Tree)[-_ ](\d+\.\d+)/i)
+  return match ? `${match[1]} 版天赋树` : ''
+}
+
 function mapCharacterToBuild(character, meta) {
   const accountRaw = character.account || meta.account || ''
   const name = character.name || meta.name || ''
@@ -344,7 +353,7 @@ function mapCharacterToBuild(character, meta) {
     detailAvailable: true,
     detailSections: ['装备', '技能', '天赋'],
     passiveNodeCount: Array.isArray(character.passiveSelection) ? character.passiveSelection.length : 0,
-    passiveTreeName: character.passiveTreeName || '',
+    passiveTreeName: describePassiveTree(character.passiveTreeName),
     passiveTreeUrl: '',
     // 天赋树截图由 capture_passive_trees 那一步补，这里先留空，不写假引用
     passiveTreeImage: '',
