@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
 const ninjaClient = require("../crawlers/shared/ninja/client");
+const { passiveTreeHash } = require("../crawlers/shared/passiveTreeHash");
 const { ensureChrome } = require("../crawlers/shared/chromeGuard");
 const fs = require("fs");
 const path = require("path");
@@ -1578,6 +1579,169 @@ async function fetchCharacterData(buildId, account, name, overview, leagueUrl) {
   throw new Error(`Character API 连续 ${MAX_ATTEMPTS} 次失败: ${account}/${name}`);
 }
 
+const TREE_CACHE_ENABLED = process.env.TREE_SKIP_UNCHANGED !== '0';
+let playerTreeIndex = null;
+
+const TREE_INDEX_FILE_NAME = "tree_index.json";
+
+function treeIndexFile() {
+  return path.join(OUTPUT_DIR, "players", TREE_INDEX_FILE_NAME);
+}
+
+function loadTreeIndex() {
+  if (playerTreeIndex) return playerTreeIndex;
+  try {
+    playerTreeIndex = JSON.parse(fs.readFileSync(treeIndexFile(), "utf8"));
+  } catch (e) {
+    playerTreeIndex = {};
+  }
+  return playerTreeIndex;
+}
+
+function saveTreeIndex() {
+  try {
+    fs.mkdirSync(path.join(OUTPUT_DIR, "players"), { recursive: true });
+    fs.writeFileSync(treeIndexFile(), JSON.stringify(loadTreeIndex(), null, 0));
+  } catch (e) {
+    console.warn("   ⚠️ 天赋截图索引写入失败:", e.message);
+  }
+}
+
+function makeTreeFileName(player) {
+  return generateUniqueFileName(player.account, player.name, Date.now()).replace(/\.json$/, "") + "_tree.jpg";
+}
+
+/** 指纹一致且图片还在，才允许复用；拿不到指纹就老老实实重拍 */
+function findReusableTreeImage(fileName, capturedData) {
+  if (!TREE_CACHE_ENABLED) return false;
+  const hash = passiveTreeHash(capturedData);
+  if (!hash) return false;
+  const known = loadTreeIndex()[fileName];
+  if (!known || known.hash !== hash) return false;
+  return fs.existsSync(path.join(OUTPUT_DIR, "players", fileName));
+}
+
+const TREE_FILE_MAX_AGE_DAYS = 14;
+
+/** 掉出榜单的角色，天赋图留两周后清掉，避免目录无限长大 */
+function pruneStaleTreeImages(playersDir, keptFiles) {
+  if (!TREE_CACHE_ENABLED) return;
+  const index = loadTreeIndex();
+  let removed = 0;
+  const deadline = Date.now() - TREE_FILE_MAX_AGE_DAYS * 86400000;
+  Object.keys(index).forEach((fileName) => {
+    if (keptFiles.has(fileName)) return;
+    const entry = index[fileName] || {};
+    if (entry.at && entry.at > deadline) return;
+    try {
+      fs.rmSync(path.join(playersDir, fileName), { force: true });
+    } catch (e) {
+      // 文件本来就不在，忽略
+    }
+    delete index[fileName];
+    removed += 1;
+  });
+  if (removed) {
+    saveTreeIndex();
+    console.log(`   🧹 清理 ${removed} 张掉出榜单角色的天赋图`);
+  }
+}
+
+function rememberTreeImage(fileName, capturedData, captured) {
+  if (!captured) return;
+  const hash = passiveTreeHash(capturedData);
+  if (!hash) return;
+  const index = loadTreeIndex();
+  index[fileName] = { hash, at: Date.now() };
+  saveTreeIndex();
+}
+
+async function capturePlayerTreeImage(page, player) {
+            // 导航到角色页面（仅用于天赋树截图，数据已通过 API 获取）
+            try {
+              await page.goto(player.link, {
+                waitUntil: "domcontentloaded",
+                timeout: 60000,
+              });
+              await page.waitForSelector('[data-tooltip-canvas="true"] canvas, svg', { timeout: 15000 }).catch(() => {});
+            } catch (e) {
+              console.warn("   ⚠️ 天赋树页面加载超时，跳过截图");
+            }
+
+            // 截图天赋 - 方案1: 用 Puppeteer page.screenshot 截取天赋树区域 (兼容 WebGL)
+            // 🔧 修复：必须使用绝对坐标（相对坐标 + 滚动位置）
+            let treeImgBase64 = null;
+
+            // 获取天赋树区域坐标（使用绝对坐标）
+            const readTreeRect = () => {
+              const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
+              if (!tooltipCanvas) return null;
+
+              const rect = tooltipCanvas.getBoundingClientRect();
+              if (!rect || rect.width < 100 || rect.height < 100) return null;
+
+              const canvasEl = tooltipCanvas.querySelector('canvas');
+              let canvasType = 'unknown';
+              if (canvasEl) {
+                if (canvasEl.getContext('webgl2') || canvasEl.getContext('webgl')) canvasType = 'webgl';
+                else if (canvasEl.getContext('2d')) canvasType = '2d';
+              }
+
+              // 使用绝对坐标：相对位置 + 滚动偏移
+              return {
+                x: Math.round(rect.x + window.scrollX),
+                y: Math.round(rect.y + window.scrollY),
+                width: Math.round(rect.width),
+                height: Math.round(rect.height),
+                canvasType,
+                // 调试信息
+                relX: Math.round(rect.x),
+                relY: Math.round(rect.y),
+                scrollX: window.scrollX,
+                scrollY: window.scrollY
+              };
+            };
+
+            // 天赋树容器要等前端渲染出尺寸才拍得到。原来不管三七二十一固定等 3 秒
+            // （217 个角色就是 11 分钟），但机器慢的时候 3 秒也不够。
+            // 改成轮询同一个查询：拿到有效矩形立刻走，最多再等 9 秒。
+            let treeRect = null;
+            const rectDeadline = Date.now() + 9000;
+            for (;;) {
+              treeRect = await page.evaluate(readTreeRect).catch(() => null);
+              if (treeRect && treeRect.width > 0) break;
+              if (Date.now() > rectDeadline) break;
+              await new Promise((r) => setTimeout(r, 400));
+            }
+
+            if (treeRect && treeRect.width > 0) {
+              try {
+                // 确保页面滚动到正确位置
+                await page.evaluate(() => window.scrollTo(0, 0));
+                await new Promise(r => setTimeout(r, 250));
+
+                const imgBuffer = await page.screenshot({
+                  type: 'jpeg',
+                  quality: 80,
+                  clip: {
+                    x: treeRect.x,
+                    y: treeRect.y,
+                    width: Math.min(treeRect.width, 1200),
+                    height: Math.min(treeRect.height, 1200)
+                  },
+                });
+                treeImgBase64 = `data:image/jpeg;base64,${Buffer.from(imgBuffer).toString('base64')}`;
+                console.log(`天赋树截图成功: ${treeImgBase64.length} 字符 (${treeRect.canvasType})`);
+              } catch (e) {
+                console.warn('page.screenshot 失败:', e.message);
+              }
+            } else {
+              console.warn('未找到天赋树区域，跳过截图');
+            }
+
+  return treeImgBase64;
+}
+
 async function runTask() {
   console.log(`🚀 启动翻译爬虫 | 深度: ${MAX_RANK}`);
   console.log(`   输出目录: ${OUTPUT_DIR}`);
@@ -1698,75 +1862,17 @@ async function runTask() {
           capturedData = await fetchCharacterData(buildId, player.account, player.name, overview, leagueUrl);
           if (!capturedData) throw new Error("Character API 返回空数据");
 
-          // 导航到角色页面（仅用于天赋树截图，数据已通过 API 获取）
-          try {
-            await page.goto(player.link, {
-              waitUntil: "domcontentloaded",
-              timeout: 60000,
-            });
-            await page.waitForSelector('[data-tooltip-canvas="true"] canvas, svg', { timeout: 15000 }).catch(() => {});
-            await new Promise(r => setTimeout(r, 3000));
-          } catch (e) {
-            console.warn("   ⚠️ 天赋树页面加载超时，跳过截图");
-          }
-
-          // 截图天赋 - 方案1: 用 Puppeteer page.screenshot 截取天赋树区域 (兼容 WebGL)
-          // 🔧 修复：必须使用绝对坐标（相对坐标 + 滚动位置）
+          // 天赋树截图是整条链最慢的一步（每个角色都要开一次页面等渲染）。
+          // 树没变就直接复用上一张，只有新上榜或改了天赋的角色才开浏览器。
+          const treeFileName = makeTreeFileName(player);
+          const cachedTree = findReusableTreeImage(treeFileName, capturedData);
           let treeImgBase64 = null;
-
-          // 获取天赋树区域坐标（使用绝对坐标）
-          const treeRect = await page.evaluate(() => {
-            const tooltipCanvas = document.querySelector('[data-tooltip-canvas="true"]');
-            if (!tooltipCanvas) return null;
-
-            const rect = tooltipCanvas.getBoundingClientRect();
-            if (!rect || rect.width < 100 || rect.height < 100) return null;
-
-            const canvasEl = tooltipCanvas.querySelector('canvas');
-            let canvasType = 'unknown';
-            if (canvasEl) {
-              if (canvasEl.getContext('webgl2') || canvasEl.getContext('webgl')) canvasType = 'webgl';
-              else if (canvasEl.getContext('2d')) canvasType = '2d';
-            }
-
-            // 使用绝对坐标：相对位置 + 滚动偏移
-            return {
-              x: Math.round(rect.x + window.scrollX),
-              y: Math.round(rect.y + window.scrollY),
-              width: Math.round(rect.width),
-              height: Math.round(rect.height),
-              canvasType,
-              // 调试信息
-              relX: Math.round(rect.x),
-              relY: Math.round(rect.y),
-              scrollX: window.scrollX,
-              scrollY: window.scrollY
-            };
-          });
-
-          if (treeRect && treeRect.width > 0) {
-            try {
-              // 确保页面滚动到正确位置
-              await page.evaluate(() => window.scrollTo(0, 0));
-              await new Promise(r => setTimeout(r, 500));
-
-              const imgBuffer = await page.screenshot({
-                type: 'jpeg',
-                quality: 80,
-                clip: {
-                  x: treeRect.x,
-                  y: treeRect.y,
-                  width: Math.min(treeRect.width, 1200),
-                  height: Math.min(treeRect.height, 1200)
-                },
-              });
-              treeImgBase64 = `data:image/jpeg;base64,${Buffer.from(imgBuffer).toString('base64')}`;
-              console.log(`天赋树截图成功: ${treeImgBase64.length} 字符 (${treeRect.canvasType})`);
-            } catch (e) {
-              console.warn('page.screenshot 失败:', e.message);
-            }
+          if (cachedTree) {
+            player.reusedTreeImage = `players/${treeFileName}`;
+            console.log(`      ♻️ 天赋未变，复用旧图`);
           } else {
-            console.warn('未找到天赋树区域，跳过截图');
+            treeImgBase64 = await capturePlayerTreeImage(page, player);
+            rememberTreeImage(treeFileName, capturedData, Boolean(treeImgBase64));
           }
 
           // 数据清洗 + 翻译
@@ -1851,6 +1957,7 @@ async function runTask() {
               }
             })(),
             passiveTreeImage: treeImgBase64,
+            passiveTreeImageUrl: player.reusedTreeImage || '',
           };
 
           player.detail = detailData;
@@ -1920,13 +2027,21 @@ async function runTask() {
     }
 
     const PLAYER_DATA_DIR = path.join(OUTPUT_DIR, "players");
-    // 如果有翻译数据，则删除旧的翻译数据
+    // 只清上一轮的详情 JSON（每轮都会重写）。天赋图 jpg 和截图索引必须留着：
+    // 全删了「天赋没变就复用旧图」永远命中不到，每个角色又得重新开一次浏览器。
     if (fs.existsSync(PLAYER_DATA_DIR)) {
-      fs.rmSync(PLAYER_DATA_DIR, { recursive: true, force: true });
+      fs.readdirSync(PLAYER_DATA_DIR).forEach((name) => {
+        // 截图索引必须留着：它记的是"哪个角色的哪棵树已经拍过"，删了就等于每次全重拍
+        if (name === TREE_INDEX_FILE_NAME) return;
+        if (name.endsWith(".json")) {
+          fs.rmSync(path.join(PLAYER_DATA_DIR, name), { force: true });
+        }
+      });
     }
     fs.mkdirSync(PLAYER_DATA_DIR, { recursive: true });
 
     const lightLadders = {};
+    const keptTreeFiles = new Set();
 
     for (const clsName in allLadders) {
       lightLadders[clsName] = allLadders[clsName].map((p) => {
@@ -1954,7 +2069,11 @@ async function runTask() {
               // 存 OSS 路径（相对路径，前端拼接 OSS 域名）
               p.detail.passiveTreeImageUrl = `players/${imgFileName}`;
               delete p.detail.passiveTreeImage;
+              keptTreeFiles.add(imgFileName);
             }
+          }
+          if (p.detail.passiveTreeImageUrl) {
+            keptTreeFiles.add(path.basename(p.detail.passiveTreeImageUrl));
           }
           fs.writeFileSync(
             path.join(PLAYER_DATA_DIR, detailFileName),
@@ -1974,6 +2093,8 @@ async function runTask() {
         };
       });
     }
+
+    pruneStaleTreeImages(PLAYER_DATA_DIR, keptTreeFiles);
 
     // 保存主索引文件
     const lightData = {

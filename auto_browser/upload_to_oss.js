@@ -8,6 +8,8 @@ const envConfig = require('./env-config');
 // 已下架功能的历史产物（新闻流 2026-07-07 下架、0.5 资料 2026-07-06 下架）：
 // 本地目录保留用于复盘，但不再每天跟着全量重传；小程序与看板都没有读它们的地方。
 const SKIP_UPLOAD_DIRS = ['news_detail', 'patch-0.5', 'economy-history'];
+// 截图索引是本地跑批用的中间文件，小程序不读，没必要发布出去
+const SKIP_UPLOAD_FILES = ['players/tree_index.json'];
 // 怀疑 OSS 侧缺文件或被清空时，用 OSS_FORCE_FULL_UPLOAD=1 回到全量重传。
 const FORCE_FULL_UPLOAD = process.env.OSS_FORCE_FULL_UPLOAD === '1';
 // 只看会传哪些、传多少，不真的写 OSS。
@@ -21,6 +23,7 @@ const OSS_CONFIG = {
 };
 
 function isSkippedDir(relativePath) {
+    if (SKIP_UPLOAD_FILES.includes(relativePath)) return true;
     return SKIP_UPLOAD_DIRS.some(dir => relativePath === dir || relativePath.startsWith(`${dir}/`));
 }
 

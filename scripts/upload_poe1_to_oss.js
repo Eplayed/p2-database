@@ -37,10 +37,14 @@ const CONTENT_TYPES = {
   '.webp': 'image/webp'
 };
 
+// 截图索引是本地跑批用的中间文件（记录"哪个角色的哪棵树拍过"），小程序不读，不发布
+const SKIP_UPLOAD_FILES = ['miniprogram_data/passive-trees/index.json'];
+
 function collectUploadFiles(dirPath, baseDir = dirPath) {
   if (!fs.existsSync(dirPath)) return [];
   return fs.readdirSync(dirPath).flatMap((name) => {
     if (name === '.DS_Store') return [];
+    if (SKIP_UPLOAD_FILES.includes(path.relative(baseDir, path.join(dirPath, name)).split(path.sep).join('/'))) return [];
     const filePath = path.join(dirPath, name);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) return collectUploadFiles(filePath, baseDir);

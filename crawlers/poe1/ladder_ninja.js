@@ -23,6 +23,7 @@
 const fs = require('fs')
 const path = require('path')
 const { searchBuilds, resolveLeague, getClassNames, getCharacter } = require('../shared/ninja/client')
+const { passiveTreeHash } = require('../shared/passiveTreeHash')
 const {
   isSupportGem,
   translateProperties,
@@ -353,6 +354,8 @@ function mapCharacterToBuild(character, meta) {
     detailAvailable: true,
     detailSections: ['装备', '技能', '天赋'],
     passiveNodeCount: Array.isArray(character.passiveSelection) ? character.passiveSelection.length : 0,
+    // 天赋树指纹：截图步骤靠它判断"这棵树和上次一样"，从而跳过开浏览器
+    passiveTreeHash: passiveTreeHash(character),
     passiveTreeName: describePassiveTree(character.passiveTreeName),
     passiveTreeUrl: '',
     // 天赋树截图由 capture_passive_trees 那一步补，这里先留空，不写假引用

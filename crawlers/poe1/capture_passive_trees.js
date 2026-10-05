@@ -82,6 +82,28 @@ function patchBuildDetail(build, patch) {
   }
 }
 
+// 已截图的天赋树指纹。没有这份记录时，"文件已存在"只能按角色名判断，
+// 玩家改了天赋也会一直显示旧图；有了指纹就能在树变化时自动重拍。
+const TREE_INDEX_FILE = path.join(outputDir, 'index.json');
+
+function readTreeIndex() {
+  try {
+    return JSON.parse(fs.readFileSync(TREE_INDEX_FILE, 'utf8'));
+  } catch (error) {
+    return {};
+  }
+}
+
+function writeTreeIndex(index) {
+  try {
+    fs.writeFileSync(TREE_INDEX_FILE, JSON.stringify(index, null, 2));
+  } catch (error) {
+    console.warn(`   天赋截图索引写入失败: ${error.message}`)
+  }
+}
+
+const treeIndex = readTreeIndex();
+
 function makeImageFileName(build) {
   return `${String(build.id || `${build.account}-${build.character}`).replace(/[^a-zA-Z0-9_-]/g, '_').toLowerCase()}.jpg`;
 }
@@ -152,10 +174,20 @@ async function captureOne(page, build, index, total) {
   const outputPath = path.join(outputDir, fileName);
   const publicUrl = makePublicUrl(fileName);
 
-  if (!force && fs.existsSync(outputPath)) {
+  const hash = String(record.passiveTreeHash || '');
+  const known = treeIndex[fileName];
+  const imageExists = fs.existsSync(outputPath);
+  // 三种情况分别处理：
+  // - 指纹一致 → 复用
+  // - 指纹变了 → 重拍
+  // - 换源前的老产物没有指纹、也没截图记录 → 沿用旧图，别为了补指纹把 160 张全重拍
+  if (!force && imageExists && ((hash && known && known.hash === hash) || (!hash && !known))) {
     applyTreeImage(build, publicUrl);
-    console.log(`   ${index}/${total} 已存在 ${build.character}`);
+    console.log(`   ${index}/${total} 天赋未变，复用旧图 ${build.character}`);
     return true;
+  }
+  if (hash && known && known.hash !== hash && imageExists) {
+    console.log(`   ${index}/${total} 天赋已改，重拍 ${build.character}`);
   }
   const sourceUrl = build.sourceUrl || record.sourceUrl || '';
   if (!sourceUrl) {
@@ -193,6 +225,10 @@ async function captureOne(page, build, index, total) {
   });
 
   applyTreeImage(build, publicUrl);
+  if (hash) {
+    treeIndex[fileName] = { hash, capturedAt: new Date().toISOString() };
+    writeTreeIndex(treeIndex);
+  }
   console.log(`   ${index}/${total} 截图完成 ${build.character}`);
   return true;
 }
