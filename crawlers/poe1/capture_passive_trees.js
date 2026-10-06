@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
 const { ensureChrome } = require('../shared/chromeGuard');
+const { djb2Hash } = require('../shared/passiveTreeHash');
 require('dotenv').config({ path: path.join(__dirname, '../../auto_browser/.env') });
 
 const env = process.env.NODE_ENV === 'dev' ? 'dev' : 'release';
@@ -112,9 +113,25 @@ function makePublicUrl(fileName) {
   return `${publicBaseUrl}/${remotePrefix}/${fileName}`;
 }
 
+/**
+ * 上游关键天赋的 icon 只是游戏内相对路径（Art/2DArt/SkillIcons/passives/xxx.webp）。
+ * GGG 的图要签名路径，直连 CDN 拿不到；流亡编年史的图片站直接吃原始 art 路径，
+ * 实测能出图，所以用它当取图来源，截成自己的 jpg 再上传。
+ */
+const PASSIVE_ICON_ART_BASE = 'https://cdn.poedb.tw/image';
+
+function resolveIconSource(passive) {
+  const art = passive.iconArt || passive.icon || '';
+  if (/^https?:\/\//.test(art)) return art;
+  if (/^Art\//i.test(art)) return `${PASSIVE_ICON_ART_BASE}/${art}`;
+  return '';
+}
+
 function makePassiveIconFileName(passive) {
   const raw = passive.nameEn || passive.name || path.basename(String(passive.icon || ''), path.extname(String(passive.icon || '')));
-  return `${String(raw).replace(/[^a-zA-Z0-9_-]/g, '_').toLowerCase()}.jpg`;
+  // 尾巴带名字哈希：中文天赋名清洗后会全变成下划线，几个「星」会撞成同一个文件互相覆盖
+  const slug = String(raw).replace(/[^a-zA-Z0-9_-]/g, '_').toLowerCase().replace(/_+/g, '_').replace(/^_|_$/g, '').slice(0, 60);
+  return `${slug || 'passive'}-${djb2Hash(String(raw)).slice(0, 6)}.jpg`;
 }
 
 function makePassiveIconPublicUrl(fileName) {
@@ -294,18 +311,23 @@ async function captureOneFullscreenPage(page, build, index, total) {
 }
 
 async function cachePassiveIcon(page, passive) {
-  const iconUrl = passive.icon || '';
-  if (!/^https?:\/\//.test(iconUrl) || iconUrl.startsWith(`${publicBaseUrl}/${passiveIconRemotePrefix}/`)) {
-    return Boolean(iconUrl);
-  }
-
   const fileName = makePassiveIconFileName(passive);
   const outputPath = path.join(passiveIconDir, fileName);
   const publicUrl = makePassiveIconPublicUrl(fileName);
+  const ownUrlPrefix = `${publicBaseUrl}/${passiveIconRemotePrefix}/`;
+  // 原始来源要留一份：icon 换成我们自己的地址后，图被清掉还能重截
+  if (passive.icon && !passive.icon.startsWith(ownUrlPrefix)) {
+    passive.iconArt = passive.icon;
+  }
   if (fs.existsSync(outputPath) && !force) {
     passive.icon = publicUrl;
     return true;
   }
+
+  const iconUrl = resolveIconSource(passive);
+  // 没有可用来源就如实算失败。原来这里对非 http 的 icon 直接 return true，
+  // 于是上游改成相对路径之后，日志里的「40 成功」全是假的，界面上是一排空框。
+  if (!iconUrl) return false;
 
   await page.setViewport({ width: 96, height: 96, deviceScaleFactor: 2 });
   await page.setContent(`
@@ -365,19 +387,23 @@ async function cachePassiveIcons(digest, browser) {
   }
   await page.close();
 
-  const iconUrlByKey = new Map(Array.from(seen.values()).map((passive) => [passive.nameEn || passive.name || passive.icon, passive.icon]));
+  const iconKey = passive => passive.nameEn || passive.name || passive.iconArt || '';
+  const iconUrlByKey = new Map(Array.from(seen.values()).map((passive) => [iconKey(passive), passive.icon]));
   for (const build of digest.builds || []) {
     const passives = passivesByBuild.get(String(build.id)) || (Array.isArray(build.keyPassives) ? build.keyPassives : []);
-    let changed = false;
+    if (!passives.length) continue;
     for (const passive of passives) {
-      const nextIcon = iconUrlByKey.get(passive.nameEn || passive.name || passive.icon);
-      if (nextIcon && passive.icon !== nextIcon) {
-        passive.icon = nextIcon;
-        changed = true;
-      }
+      const key = iconKey(passive);
+      const nextIcon = iconUrlByKey.get(key);
+      if (nextIcon) passive.icon = nextIcon;
+      // 原始 art 路径只有去重后那一份对象上有，逐条补回去，
+      // 这样任何一个详情文件都是自描述的，图被清掉还能重截
+      const source = seen.get(key);
+      if (source && source.iconArt && !passive.iconArt) passive.iconArt = source.iconArt;
     }
-    // 详情文件才是真正给前端读的那一份
-    if (changed) patchBuildDetail(build, { keyPassives: passives });
+    // 无条件写回。之前是「值变了才写」，但去重保留下来的那份对象常常就是这个 BD 自己的对象，
+    // 内存里已经改好、比较时又相等，结果文件从没被更新，界面上是一排空图标。
+    patchBuildDetail(build, { keyPassives: passives });
   }
   digest.passiveIconImages = {
     updatedAt: new Date().toISOString(),
