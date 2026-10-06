@@ -18,7 +18,13 @@ const fs = require('fs')
 const path = require('path')
 const { fetchWithRetry } = require('../shared/wikiDict/http_client')
 const { BASE_URL } = require('./pages')
-const { translateSkill, translateBaseItem, translateItemName } = require('../poe1/translations')
+const {
+  translateSkill,
+  translateBaseItem,
+  translateItemName,
+  translateClass,
+  translateKeyPassive
+} = require('../poe1/translations')
 
 const OUTPUT_FILE = path.join(__dirname, '../../base-data/dist/poe1/dict_supplement.json')
 const HAS_CN = /[一-龥]/
@@ -41,6 +47,20 @@ const DATA_DIR = dirArg
 const limitArg = process.argv.find(arg => arg.startsWith('--limit='))
 const LIMIT = limitArg ? Number(limitArg.split('=')[1]) : Infinity
 
+/**
+ * 词缀行开头的机制/天赋名词，例如「Intangibility: 7% …」「Memory Strands: 16」。
+ * 这类词在资料站有关键词页，取到就能让整行不再是半英半中。
+ */
+const KEYWORD_HEAD = /^([A-Z][A-Za-z'’-]*(?:[ ]+[A-Z][A-Za-z'’-]*){0,2})[ ]*[:：]/
+
+function collectKeyword(text, sink) {
+  const match = KEYWORD_HEAD.exec(String(text || '').trim())
+  if (!match) return
+  const phrase = match[1].trim()
+  if (!/[A-Za-z]{3}/.test(phrase)) return
+  sink.add(phrase)
+}
+
 function readBuilds() {
   const buildDir = path.join(DATA_DIR, 'poe1_builds')
   if (fs.existsSync(buildDir)) {
@@ -53,12 +73,16 @@ function readBuilds() {
 }
 
 function slugVariants(name) {
-  const base = String(name || '').trim().replace(/\s+/g, '_')
-  const noApostrophe = base.replace(/[’'`´]/g, '')
+  const raw = String(name || '').trim()
   // 瓦尔宝石会带一个括号说明具体变种（Vaal Lightning Strike (Lightning Strike of Arcing)），
-  // 资料站没有变种页，退到父技能名至少能给出「瓦尔闪电箭」而不是整串英文
-  const noParen = base.replace(/\s*\([^)]*\)/, '').trim()
-  return Array.from(new Set([base, noApostrophe, noParen, noParen.replace(/[’'`´]/g, '')]))
+  // 资料站没有变种页，退到父技能名至少能给出「瓦尔：闪电箭」而不是整串英文。
+  // 必须在把空格换成下划线之前剥括号，否则括号前是 "_" ，正则永远匹配不上。
+  const noParen = raw.replace(/\s*\([^)]*\)/, '').trim()
+  const variants = [raw, noParen]
+    .flatMap(value => [value, value.replace(/[’'`´]/g, '')])
+    .map(value => value.replace(/\s+/g, '_'))
+    .filter(Boolean)
+  return Array.from(new Set(variants))
 }
 
 /** 从 "中文名 基础类型 - 流亡编年史…" 里取出物品名；纯中文尾巴且还有前段才当基础类型丢掉 */
@@ -121,8 +145,20 @@ async function main() {
   const gemNames = new Set()
   const itemNames = new Set()
   const baseNames = new Set()
+  const classNames = new Set()
+  const passiveNames = new Set()
+  const keywordNames = new Set()
 
   builds.forEach(build => {
+    // 职业名和副升华血脉名：资料站的升华职业页 / 血脉职业页都有官方写法
+    if (build.classNameEn && !HAS_CN.test(build.className || '')) classNames.add(build.classNameEn)
+    if (build.secondaryAscendancy && !HAS_CN.test(build.secondaryAscendancy)) {
+      classNames.add(build.secondaryAscendancy)
+    }
+    ;(build.keyPassives || []).forEach(keystone => {
+      const en = keystone.nameEn || keystone.name
+      if (en && !HAS_CN.test(keystone.name || '')) passiveNames.add(en)
+    })
     ;(build.skillGems || []).forEach(gem => {
       if (gem.nameEn && !HAS_CN.test(gem.name || '')) gemNames.add(gem.nameEn)
     })
@@ -133,6 +169,8 @@ async function main() {
       // 基础类型（珠宝、药剂这类）是固定名词，缺了就整批漏；先补它，收益比随机稀有词高得多
       const baseEn = item.baseTypeEn || item.typeLineEn
       if (baseEn && !HAS_CN.test(item.baseType || item.typeLine || '')) baseNames.add(baseEn)
+      ;[].concat(item.explicitMods || [], item.implicitMods || [], item.craftedMods || [], item.properties || [])
+        .forEach(line => collectKeyword(line, keywordNames))
       const en = item.nameEn
       if (!en || HAS_CN.test(item.name || '')) return
       // 稀有装备的名字是随机前缀+后缀，属于外观词，资料站没有对应页面；
@@ -154,19 +192,32 @@ async function main() {
     const translated = translateBaseItem(name)
     if (translated !== name && HAS_CN.test(translated)) baseNames.delete(name)
   })
+  Array.from(classNames).forEach(name => {
+    if (translateClass(name) !== name && HAS_CN.test(translateClass(name))) classNames.delete(name)
+  })
+  Array.from(passiveNames).forEach(name => {
+    if (translateKeyPassive(name) !== name && HAS_CN.test(translateKeyPassive(name))) passiveNames.delete(name)
+  })
 
   const supplement = fs.existsSync(OUTPUT_FILE)
     ? JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'))
     : { gems: {}, items: {}, bases: {}, meta: {} }
   if (!supplement.bases) supplement.bases = {}
+  if (!supplement.classes) supplement.classes = {}
+  if (!supplement.passives) supplement.passives = {}
+  if (!supplement.keywords) supplement.keywords = {}
 
   const pending = [
+    ...Array.from(classNames).map(en => ({ kind: 'classes', en })),
+    ...Array.from(passiveNames).map(en => ({ kind: 'passives', en })),
+    ...Array.from(keywordNames).map(en => ({ kind: 'keywords', en })),
     ...Array.from(baseNames).map(en => ({ kind: 'bases', en })),
     ...Array.from(gemNames).map(en => ({ kind: 'gems', en })),
     ...Array.from(itemNames).map(en => ({ kind: 'items', en }))
   ].filter(entry => !supplement[entry.kind] || supplement[entry.kind][entry.en] === undefined)
 
-  console.log(`待补：基础类型 ${baseNames.size} 个、技能 ${gemNames.size} 个、传奇装备 ${itemNames.size} 个，本轮处理 ${Math.min(pending.length, LIMIT)} 个`)
+  console.log(`待补：职业 ${classNames.size}、关键天赋 ${passiveNames.size}、机制关键词 ${keywordNames.size}、`
+    + `基础类型 ${baseNames.size}、技能 ${gemNames.size}、传奇装备 ${itemNames.size}；本轮处理 ${Math.min(pending.length, LIMIT)} 个`)
   let resolved = 0
   let processed = 0
   for (const entry of pending.slice(0, LIMIT)) {
@@ -175,9 +226,9 @@ async function main() {
     supplement[entry.kind][entry.en] = cn || ''
     if (cn) {
       resolved += 1
-      console.log(`   ✅ ${entry.en} → ${cn}`)
+      console.log(`   ✅ [${entry.kind}] ${entry.en} → ${cn}`)
     } else {
-      console.log(`   ⬜ ${entry.en} 资料站没有对应页面，保留英文`)
+      console.log(`   ⬜ [${entry.kind}] ${entry.en} 资料站没有对应页面，保留英文`)
     }
   }
 
@@ -187,12 +238,16 @@ async function main() {
     note: '由 resolve_missing.js 从流亡编年史单件页面标题补齐；空字符串表示查过但没有，保留英文',
     gems: Object.keys(supplement.gems).length,
     items: Object.keys(supplement.items).length,
-    bases: Object.keys(supplement.bases).length
+    bases: Object.keys(supplement.bases).length,
+    classes: Object.keys(supplement.classes).length,
+    passives: Object.keys(supplement.passives).length,
+    keywords: Object.keys(supplement.keywords).length
   }
   fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true })
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(supplement, null, 2))
   console.log(`\n完成：处理 ${processed} 个，补到 ${resolved} 个 → ${OUTPUT_FILE}`)
-  console.log(`累计：基础类型 ${supplement.meta.bases} 条、技能 ${supplement.meta.gems} 条、装备 ${supplement.meta.items} 条`)
+  console.log(`累计：职业 ${supplement.meta.classes}、关键天赋 ${supplement.meta.passives}、机制词 ${supplement.meta.keywords}、`
+    + `基础类型 ${supplement.meta.bases}、技能 ${supplement.meta.gems}、装备 ${supplement.meta.items}`)
 }
 
 main().catch(error => {
