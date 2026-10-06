@@ -23,9 +23,9 @@
     "Call the Pyre": "苍焰火柱",
     "Aspect of Arakaali": "阿拉卡力之势",
     "Death Aura": "陨命光环",
-    "Vaal Lightning Strike (Lightning Strike of Arcing)": "",
-    "Vaal Reave (Reave of Refraction)": "",
-    "Vaal Ice Nova (Ice Nova of Frostbolts)": ""
+    "Vaal Lightning Strike (Lightning Strike of Arcing)": "瓦尔：闪电打击",
+    "Vaal Reave (Reave of Refraction)": "瓦尔：冲击波",
+    "Vaal Ice Nova (Ice Nova of Frostbolts)": "瓦尔：冰霜新星"
   },
   "items": {
     "Foulborn Romira's Banquet": "污秽罗米拉的潜力之环",
@@ -68,15 +68,19 @@
     "Foulborn Lori's Lantern": "污秽罗里的幸运之灯",
     "Foulborn Death's Oath": "污秽冥使之体",
     "Foulborn Xoph's Heart": "污秽索伏之心",
-    "Foulborn The Surrender": "污秽降伏"
+    "Foulborn The Surrender": "污秽降伏",
+    "Foulborn Presence of Chayula": "污秽夏乌拉之印"
   },
   "meta": {
-    "updatedAt": "2026-10-04T12:28:14.242Z",
+    "updatedAt": "2026-10-06T02:01:26.067Z",
     "source": "https://poedb.tw/cn",
     "note": "由 resolve_missing.js 从流亡编年史单件页面标题补齐；空字符串表示查过但没有，保留英文",
     "gems": 26,
-    "items": 41,
-    "bases": 40
+    "items": 42,
+    "bases": 40,
+    "classes": 13,
+    "passives": 30,
+    "keywords": 3
   },
   "bases": {
     "Rosethorn Tincture": "玫棘酊剂",
@@ -119,5 +123,57 @@
     "Platinum Sceptre": "白金短杖",
     "Royal Skean": "皇家短匕",
     "Maelström Staff": "风暴长杖"
+  },
+  "classes": {
+    "Nameless Bloodline": "无名血脉",
+    "Lycia Bloodline": "莉西娅血脉",
+    "Aul Bloodline": "奥尔血脉",
+    "Velka Bloodline": "维尔卡血脉",
+    "Reliquarian": "守藏者",
+    "Luminary": "光明使者",
+    "Delirious Bloodline": "迷雾血脉",
+    "Chaos Bloodline": "混沌血脉",
+    "Catarina Bloodline": "卡塔莉娜血脉",
+    "Abyssal Bloodline": "深渊血脉",
+    "Farrul Bloodline": "法瑞尔血脉",
+    "Breachlord Bloodline": "裂隙领主血脉",
+    "Oshabi Bloodline": "欧莱娜血脉"
+  },
+  "passives": {
+    "Inner Conviction": "内在信念",
+    "Zealot's Oath": "狂热誓言",
+    "Roiling Tempest": "翻涌雷暴",
+    "Wicked Ward": "恶毒结界",
+    "Tempered by War": "战争锤炼",
+    "Iron Will": "钢铁意志",
+    "Runebinder": "符文绑定者",
+    "Mind Over Matter": "心灵升华",
+    "Blood Magic": "祭血术",
+    "Eternal Youth": "青春永驻",
+    "Corrupted Soul": "腐化的灵魂",
+    "Divine Shield": "神威之盾",
+    "Elemental Overload": "元素超载",
+    "Precise Technique": "技艺精湛",
+    "Point Blank": "零点射击",
+    "Ghost Reaver": "灵能护体",
+    "Resolute Technique": "坚毅之心",
+    "Bitter Frost": "苦寒之霜",
+    "Immortal Ambition": "不朽野望",
+    "Magebane": "法师克星",
+    "Lethe Shade": "忘川之影",
+    "Overwhelming Hate": "滔天憎恨",
+    "Acrobatics": "移形换影",
+    "Vaal Pact": "瓦尔冥约",
+    "Second Sight": "慧眼",
+    "The Traitor": "背叛者",
+    "Supreme Decadence": "无上衰败",
+    "Bloodsoaked Blade": "喋血之刃",
+    "The Agnostic": "惘信者",
+    "Ancestral Bond": "先祖魂约"
+  },
+  "keywords": {
+    "Intangibility": "虚化",
+    "Ward": "结界",
+    "Memory Strands": ""
   }
 }
