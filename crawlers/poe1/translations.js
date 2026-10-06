@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const { lookupOfficialStat, lookupOfficialStatic } = require('../shared/officialDict');
+const {
+  lookupOfficialStat,
+  lookupOfficialStatic,
+  normalizeStatKey,
+  fillTemplate,
+  extractNumbers,
+  loadDict
+} = require('../shared/officialDict');
 
 function readJson(fileName, fallback) {
   try {
@@ -51,6 +58,40 @@ const SUPPLEMENT = (() => {
     keywords: clean(data.keywords)
   };
 })();
+/**
+ * 官方词缀表的宽松匹配。
+ *
+ * poe.ninja 给的是它自己归一化过的句子，和国服交易站的模板往往只差单复数这类细节
+ * （"Has 1 Abyssal Socket" 对官方表的 "has # abyssal sockets"），严格键会整批漏掉。
+ * 这里只在流放1 这侧再建一层「折叠复数」的索引，不改 officialDict 的共享行为，
+ * 免得把流放2 已经跑出来的结果一起带偏。
+ */
+const OFFICIAL_POE1 = (() => {
+  try {
+    return loadDict('poe1') || {};
+  } catch (error) {
+    return {};
+  }
+})();
+const foldPlural = key => String(key).replace(/\b([a-z]{3,})s\b/g, '$1');
+const OFFICIAL_POE1_FOLDED = (() => {
+  const map = new Map();
+  Object.entries(OFFICIAL_POE1.statsByEn || {}).forEach(([key, entry]) => {
+    if (!entry || !entry.cn) return;
+    const folded = foldPlural(key);
+    if (folded !== key && !map.has(folded)) map.set(folded, entry);
+  });
+  return map;
+})();
+
+function lookupOfficialStatLoose(text) {
+  const strict = lookupOfficialStat(text, 'poe1');
+  if (strict) return strict;
+  const entry = OFFICIAL_POE1_FOLDED.get(foldPlural(normalizeStatKey(text)));
+  if (!entry) return null;
+  return fillTemplate(entry.cn, extractNumbers(text));
+}
+
 const LOCAL_STAT_KEYWORDS = {
   Armour: '护甲',
   Attack: '攻击',
@@ -445,7 +486,17 @@ const PROPERTY_LINE_CN = {
   Staff: '长杖',
   Wand: '法杖',
   Sceptre: '权杖',
-  Abyss: '深渊'
+  Abyss: '深渊',
+  // 武器类型整行（ninja 在 properties 里直接给 "One Handed Sword" 这种），
+  // 中文名取自流亡编年史对应分类页的标题（单手剑 ← One_Hand_Swords 页），不是自己拼的
+  'One Handed Sword': '单手剑',
+  'Two Handed Sword': '双手剑',
+  'One Handed Mace': '单手锤',
+  'Two Handed Mace': '双手锤',
+  'One Handed Axe': '单手斧',
+  'Two Handed Axe': '双手斧',
+  Warstaff: '战杖',
+  'Rune Dagger': '符文匕首'
 };
 
 const PROPERTY_WORD_CN = {
@@ -499,6 +550,28 @@ function translatePropertyWords(text) {
  * @param {Array|string} properties poe.ninja 的 properties 数组
  * @returns {string[]} 可直接显示的中文属性行
  */
+/**
+ * 属性值本身可能是个官方条目名（"Limited to: 1 Historic" 里的 Historic）。
+ * 只在整段值（或去掉前面的数量后剩下的整段）正好是官方条目时才替换，
+ * 不做逐词拆句，免得把句子里的同形词换成不相干的名字。
+ */
+function lookupOfficialTerm(text) {
+  return lookupOfficialStatic(text, 'poe1') || lookupOfficialStatLoose(text) || '';
+}
+
+function translatePropertyValue(raw) {
+  const text = String(raw).trim();
+  if (!text || /[\u4e00-\u9fa5]/.test(text)) return text;
+  const whole = lookupOfficialTerm(text);
+  if (whole) return whole;
+  const counted = /^(\d[\d,.]*)\s+([A-Za-z][A-Za-z '’-]*)$/.exec(text);
+  if (counted) {
+    const inner = lookupOfficialTerm(counted[2].trim());
+    if (inner) return `${counted[1]} ${inner}`;
+  }
+  return text;
+}
+
 function translateProperties(properties) {
   return (Array.isArray(properties) ? properties : [])
     .map(entry => {
@@ -507,7 +580,7 @@ function translateProperties(properties) {
       const values = (Array.isArray(entry.values) ? entry.values : [])
         .map(value => (Array.isArray(value) ? value[0] : value))
         .filter(value => value !== undefined && value !== null && value !== '')
-        .map(value => String(value));
+        .map(value => translatePropertyValue(String(value)));
       const name = cleanPropertyName(entry.name);
       const filled = fillPropertyPlaceholders(name, values);
       const template = PROPERTY_LINE_TEMPLATES.find(item => item.test.test(filled));
@@ -611,8 +684,15 @@ function translateStatText(value) {
 
   // 官方词缀优先：国服交易站与国际服交易站共用同一套 stat id，按 id 配对后
   // 可拿到国服官方译名。命中即返回，未命中再走下方的自定义正则与关键词兜底。
-  const officialStat = lookupOfficialStat(text, 'poe1');
+  const officialStat = lookupOfficialStatLoose(text);
   if (officialStat) return officialStat;
+
+  // 整行只是一个英文标签时（如新机制词 "Historic"），直接查官方静态名。
+  // 限定成「无数字、三个词以内」，避免把长句里的某个词误当成条目名整行替换。
+  if (!/\d/.test(text) && text.split(/\s+/).length <= 3) {
+    const staticName = lookupOfficialStatic(text, 'poe1');
+    if (staticName) return staticName;
+  }
 
   const customPatterns = [
     [/^Quality(?: \((.+) Modifiers\))?: ([+-]?[\d.]+%)$/, (_, type, number) => `品质${type ? `（${replaceKeywords(type)}词缀）` : ''}: ${number}`],
