@@ -75,6 +75,7 @@ let rawStaleHits = 0
 // 国服玩家习惯看到的联盟中文名，poe.ninja 只给英文
 const LEAGUE_DISPLAY_NAME_MAP = { Allflame: '永火之咒', Mirage: '沙海幻境' }
 const FRAME_RARITY = { Unique: 10, Rare: 2, Magic: 1, Normal: 0, Gem: 0, Quest: 0 }
+const HAS_CN_TEXT = /[\u4e00-\u9fa5]/
 
 // poe.ninja 角色详情里部位写在 itemData.inventoryId 上，实测取值是
 // Helm / BodyArmour / Gloves / Boots / Weapon(2) / Offhand(2) / Quiver / Amulet /
@@ -139,9 +140,19 @@ function mapItem(itemData, section, slot) {
   const nameEn = itemData.name || itemData.baseType || ''
   const baseEn = itemData.baseType || ''
   const frameType = itemData.frameTypeId || ''
-  const name = nameEn ? translateItemName(nameEn, baseEn, frameType) || nameEn : ''
   const baseType = baseEn ? translateBaseItem(baseEn) || baseEn : ''
-  const typeLine = itemData.typeLine ? translateBaseItem(itemData.typeLine) || itemData.typeLine : ''
+  let name = nameEn ? translateItemName(nameEn, baseEn, frameType) || nameEn : ''
+  let typeLine = itemData.typeLine ? translateBaseItem(itemData.typeLine) || itemData.typeLine : ''
+  // 魔法/稀有装备的随机外观词没有权威中文（资料站也没有英中对照的词缀名表），
+  // 主名和基底行退回中文基底名，英文原名留在 nameEn / typeLineEn 供检索。
+  // 不这么做的话装备页一整排英文，玩家以为没翻译。
+  if (HAS_CN_TEXT.test(baseType)) {
+    if (!HAS_CN_TEXT.test(name)) name = baseType
+    if (!HAS_CN_TEXT.test(typeLine)) typeLine = baseType
+  }
+  // 界面是「名字 / 部位 · 基底」两段式：主名已经退回基底名时，
+  // 第二行别再重复一遍同样的字，否则会读成「水银药剂 … 药剂 · 水银药剂」
+  const displayTypeLine = typeLine === name ? '' : typeLine || baseType
   const sockets = (Array.isArray(itemData.sockets) ? itemData.sockets : []).map((socket, index) => {
     const socketed = (Array.isArray(itemData.socketedItems) ? itemData.socketedItems : [])
       .find(gem => gem && Number(gem.socket) === index)
@@ -166,7 +177,7 @@ function mapItem(itemData, section, slot) {
     section,
     name: name || baseType || '未知装备',
     nameEn: nameEn || baseEn,
-    typeLine: typeLine || baseType,
+    typeLine: displayTypeLine,
     typeLineEn: itemData.typeLine || baseEn,
     baseType: baseType || nameEn,
     baseTypeEn: baseEn || nameEn,
