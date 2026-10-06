@@ -42,7 +42,14 @@ const DIST_STATS = readJson('dict_stats.json', { keywords: {}, patterns: [] });
 const SUPPLEMENT = (() => {
   const data = readPoe1Json('dict_supplement.json', {});
   const clean = entries => Object.fromEntries(Object.entries(entries || {}).filter(([, cn]) => Boolean(cn)));
-  return { gems: clean(data.gems), items: clean(data.items), bases: clean(data.bases) };
+  return {
+    gems: clean(data.gems),
+    items: clean(data.items),
+    bases: clean(data.bases),
+    classes: clean(data.classes),
+    passives: clean(data.passives),
+    keywords: clean(data.keywords)
+  };
 })();
 const LOCAL_STAT_KEYWORDS = {
   Armour: '护甲',
@@ -528,7 +535,9 @@ function translateProperties(properties) {
 }
 
 function translateClass(value) {
-  return CLASS_NAMES[value] || value || '未知职业';
+  // 资料站的升华职业页 / 血脉职业页有官方写法，新职业（Luminary、Reliquarian）
+  // 和副升华（Velka Bloodline）都从这里取，不自己造名
+  return CLASS_NAMES[value] || SUPPLEMENT.classes[value] || value || '未知职业';
 }
 
 function translateSkill(value) {
@@ -581,7 +590,12 @@ function translateItemName(value) {
 
 function replaceKeywords(text) {
   let value = text;
-  const entries = Object.entries({ ...(DIST_STATS.keywords || {}), ...LOCAL_STAT_KEYWORDS }).sort((a, b) => b[0].length - a[0].length);
+  // 资料站补齐的机制关键词（Intangibility → 虚化）优先级最高，放在最后覆盖内置表
+  const entries = Object.entries({
+    ...(DIST_STATS.keywords || {}),
+    ...LOCAL_STAT_KEYWORDS,
+    ...(SUPPLEMENT.keywords || {})
+  }).sort((a, b) => b[0].length - a[0].length);
   for (const [en, cn] of entries) {
     const escaped = en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     // 纯英文关键词要带词边界，否则 Charge 会把 Charger 也换成「充能r」
@@ -696,7 +710,8 @@ function translateCurrency(value) {
 }
 
 function translateKeyPassive(value) {
-  return KEY_PASSIVE_NAMES[value] || value || '未知关键天赋';
+  // 关键天赋名资料站每个都有单页（Zealot's Oath → 狂热誓言），查得到就用，查不到留英文
+  return KEY_PASSIVE_NAMES[value] || SUPPLEMENT.passives[value] || value || '未知关键天赋';
 }
 
 /**

@@ -399,7 +399,9 @@ function mapCharacterToBuild(character, meta) {
     // 上游数据新鲜度：poe.ninja 记录角色最后一次上传 BD 的时间，可以直接给玩家看
     buildUpdatedUtc: character.updatedUtc || '',
     lastSeenUtc: character.lastSeenUtc || '',
-    secondaryAscendancy: character.secondaryAscendancyClassName || ''
+    secondaryAscendancy: character.secondaryAscendancyClassName
+      ? translateClass(character.secondaryAscendancyClassName)
+      : ''
   }
 }
 
