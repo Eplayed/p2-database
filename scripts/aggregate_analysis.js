@@ -242,7 +242,12 @@ const main = async () => {
   const topKeystones = toSortedArray(stats.keystoneCount)
     .map(k => ({
       ...k,
-      icon: k.icon ? `https://assets.poe.ninja/poe2/tree/${k.icon}` : '',
+      // 上游给的 icon 现在本身就是完整地址（https://cdn.poe2db.tw/image/Art/...），
+      // 再拼一次前缀会得到 assets.poe.ninja/poe2/tree/https://cdn... 这种取不到的 URL，
+      // 实测热门核心天赋 TOP10 十张图全是坏的。只有相对路径才需要拼。
+      icon: k.icon
+        ? (/^https?:\/\//.test(k.icon) ? k.icon : `https://assets.poe.ninja/poe2/tree/${k.icon}`)
+        : '',
       percent: (k.count / sampledCount) * 100
     }))
 
