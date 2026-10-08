@@ -72,7 +72,7 @@
     "Foulborn Presence of Chayula": "污秽夏乌拉之印"
   },
   "meta": {
-    "updatedAt": "2026-10-06T02:01:26.067Z",
+    "updatedAt": "2026-10-06T04:33:43.924Z",
     "source": "https://poedb.tw/cn",
     "note": "由 resolve_missing.js 从流亡编年史单件页面标题补齐；空字符串表示查过但没有，保留英文",
     "gems": 26,
