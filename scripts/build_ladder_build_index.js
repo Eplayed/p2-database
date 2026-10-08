@@ -177,6 +177,54 @@ const buildLadderBuildIndex = ({
   return { version: 2, updatedAt: updatedAt || new Date().toISOString(), totalPlayers, skills, equipment }
 }
 
+// 列表页要能在不打开详情的情况下看出"这套 BD 长什么样"，所以索引里保留少量搭配预览。
+// 只取前 3 个：再多首屏索引体积涨得太快，而用户扫一眼只需要 3 个名字。
+const PREVIEW_LIMIT = 3
+
+// 图标 URL 平均 200 字符且重复极高（实测 1180 个预览项只有 249 个不同图标）。
+// 预览项若各自内联 URL，索引会从 295KB 涨到 571KB；改成顶层字典 + 下标引用后只涨约 30%。
+const createIconDict = () => {
+  const urls = []
+  const positions = new Map()
+  return {
+    add(url) {
+      const value = String(url || '')
+      if (!value) return -1
+      if (!positions.has(value)) {
+        positions.set(value, urls.length)
+        urls.push(value)
+      }
+      return positions.get(value)
+    },
+    urls
+  }
+}
+
+const toPreview = (items, iconDict) => (Array.isArray(items) ? items : [])
+  .slice(0, PREVIEW_LIMIT)
+  .map(item => ({ name: item.name || '', iconRef: iconDict.add(item.icon) }))
+
+// 装备行的预览按"特色度"排，不按人数排。
+// 实测按人数排时前 6 件装备的第一个搭配全是「魔力残片」——它谁都在用，
+// 等于没告诉用户这件装备到底配什么。改用提升度 lift = 该装备内的使用率 / 全服使用率，
+// 并至少 3 人用过才算数，避免 1 个人的偶然搭配被顶成"特色"。
+const SIGNATURE_MIN_COUNT = 3
+
+const toSignaturePreview = (entry, iconDict, globalRate) => {
+  const related = Array.isArray(entry.relatedSkills) ? entry.relatedSkills : []
+  const total = Number(entry.count) || 0
+  const ranked = related
+    .filter(item => item.count >= SIGNATURE_MIN_COUNT && total > 0)
+    .map(item => {
+      const base = globalRate.get(stableKey(item.originalName || item.name)) || 0
+      return { item, lift: base > 0 ? (item.count / total) / base : 0 }
+    })
+    .filter(row => Number.isFinite(row.lift) && row.lift > 0)
+    .sort((a, b) => b.lift - a.lift || b.item.count - a.item.count)
+  const picked = ranked.length ? ranked.map(row => row.item) : related
+  return toPreview(picked, iconDict)
+}
+
 const writeLadderBuildIndex = (output, outputFile = OUTPUT_FILE) => {
   const outputDir = path.dirname(outputFile)
   const detailDir = path.join(outputDir, DETAIL_DIR_NAME)
@@ -194,18 +242,34 @@ const writeLadderBuildIndex = (output, outputFile = OUTPUT_FILE) => {
     writtenDetailFiles.add(filename)
   }
 
+  const iconDict = createIconDict()
+  const globalRate = new Map(output.skills.map(skill => [
+    stableKey(skill.originalName || skill.name),
+    (Number(skill.count) || 0) / (Number(output.totalPlayers) || 1)
+  ]))
   const skills = output.skills.map(({ players, supportSkills, ...item }) => {
     writeDetail(item.id, { ...item, type: 'skill', supportSkills, players })
-    return { ...item, classes: item.classes.slice(0, 3), detailPath: detailPath(item.id) }
+    return {
+      ...item,
+      classes: item.classes.slice(0, 3),
+      topSupports: toPreview(supportSkills, iconDict),
+      detailPath: detailPath(item.id)
+    }
   })
   const equipment = output.equipment.map(({ players, relatedSkills, ...item }) => {
     writeDetail(item.id, { ...item, type: 'equipment', relatedSkills, players })
-    return { ...item, classes: item.classes.slice(0, 3), detailPath: detailPath(item.id) }
+    return {
+      ...item,
+      classes: item.classes.slice(0, 3),
+      topSkills: toSignaturePreview({ count: item.count, relatedSkills }, iconDict, globalRate),
+      detailPath: detailPath(item.id)
+    }
   })
   const catalog = {
     version: output.version,
     updatedAt: output.updatedAt,
     totalPlayers: output.totalPlayers,
+    iconDict: iconDict.urls,
     skills,
     equipment
   }
