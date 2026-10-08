@@ -59,6 +59,18 @@ function parseGems(html) {
     }
   }
 
+  // 另一种排版：技能总表页（Skill_Gems）每行用 class="gemitem"，先图标后中文名，
+  // 上面那条 gem_red/green/blue 规则盖不到它。实测少了这条，
+  // 跃击 / 树肤术 / 狼群 / 群星召唤这批非武器来源的技能名全是英文。
+  const itemPattern = /class="gemitem"[^>]*href="\/cn\/([A-Za-z0-9_'%-]+)"[^>]*>\s*([\u4e00-\u9fa5][^<]{1,28}?)\s*<\/a>/g;
+  while ((match = itemPattern.exec(html)) !== null) {
+    const enName = decodeURIComponent(match[1]).replace(/_/g, ' ').trim();
+    const cnName = match[2].trim();
+    if (enName && cnName && !dict[enName]) {
+      dict[enName] = cnName;
+    }
+  }
+
   return dict;
 }
 

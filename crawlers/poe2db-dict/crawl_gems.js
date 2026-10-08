@@ -12,6 +12,9 @@ const BASE_URL = 'https://poe2db.tw/cn';
 const GEM_PAGES = [
   { slug: 'Support_Gems', name: '辅助宝石' },
   { slug: 'Uncut_Skill_Gem', name: '技能宝石(总览)' },
+  // 全量技能列表页。缺了它，非武器来源的技能名（跃击、树皮、永恒之怒、狼群）
+  // 一个都进不来——实测技能查 BD 里有 58/284 个名字还是英文。
+  { slug: 'Skill_Gems', name: '技能宝石(全列表)' },
   // 各职业/武器类型的技能宝石页面
   { slug: 'Bows', name: '弓类技能' },
   { slug: 'Crossbows', name: '战弩技能' },
@@ -19,7 +22,13 @@ const GEM_PAGES = [
   { slug: 'Two_Hand_Swords', name: '双手剑技能' },
   { slug: 'One_Hand_Maces', name: '单手锤技能' },
   { slug: 'Two_Hand_Maces', name: '双手锤技能' },
+  { slug: 'One_Hand_Axes', name: '单手斧技能' },
+  { slug: 'Two_Hand_Axes', name: '双手斧技能' },
+  { slug: 'Claws', name: '爪类技能' },
+  { slug: 'Wands', name: '法杖技能' },
+  { slug: 'Sceptres', name: '权杖技能' },
   { slug: 'Daggers', name: '匕首技能' },
+  { slug: 'Runic_Daggers', name: '符文匕首技能' },
   { slug: 'Staves', name: '长杖技能' },
   { slug: 'Quarterstaves', name: '节杖技能' },
   { slug: 'Spears', name: '战矛技能' },
